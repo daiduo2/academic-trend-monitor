@@ -37,7 +37,10 @@ jobs:
       - name: Copy data files
         run: |
           mkdir -p frontend/public/data
-          cp data/output/*.json frontend/public/data/ || echo "No data files yet"
+          cp data/output/*.json frontend/public/data/ || echo "No root json files"
+          cp -r data/output/bertopic frontend/public/data/ || echo "No bertopic files"
+          cp -r data/output/hierarchy frontend/public/data/ || echo "No hierarchy files"
+          ls -la frontend/public/data/
 
       - name: Build
         run: |
