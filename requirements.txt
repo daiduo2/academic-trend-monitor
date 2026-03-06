@@ -17,3 +17,8 @@ openai>=1.0.0
 # Visualization (for pipeline debugging)
 matplotlib>=3.7.0
 plotly>=5.15.0
+
+# RSS & Daily Pipeline
+faiss-cpu>=1.7.4
+feedparser>=6.0.0
+requests>=2.31.0
