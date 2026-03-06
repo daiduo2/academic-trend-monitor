@@ -1,12 +1,13 @@
+# pipeline/daily_update.py
 """Daily update script for fetching and tagging new papers."""
 import json
 import os
 from datetime import datetime, timedelta
 from pathlib import Path
 
-from daily_fetch import get_date_range, fetch_arxiv_papers
-from tag_papers import tag_papers
-from utils.compact_format import compact_paper
+from pipeline.daily_fetch import get_date_range, fetch_arxiv_papers
+from pipeline.tag_papers import tag_papers
+from pipeline.utils.compact_format import compact_paper
 
 
 def load_recent_papers(filepath: str, days: int = 7) -> list:
