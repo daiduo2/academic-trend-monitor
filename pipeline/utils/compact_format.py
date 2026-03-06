@@ -40,5 +40,6 @@ def compact_paper(paper: dict) -> dict:
         "a": paper.get("authors", [])[:3],
         "c": cat_code,
         "p": date_str,
-        "g": paper.get("tags", [])
+        "g": paper.get("tags", []),
+        "s": paper.get("scores", [])  # Add scores for each tag
     }

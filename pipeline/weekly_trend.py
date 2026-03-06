@@ -38,38 +38,59 @@ def calculate_trend(current: int, previous: int) -> dict:
     }
 
 
+def parse_compact_date(date_str: str) -> datetime:
+    """Parse compact date format (YYMMDD) to datetime."""
+    # Prefix with '20' to get full year (assumes 2000-2099)
+    year = 2000 + int(date_str[:2])
+    month = int(date_str[2:4])
+    day = int(date_str[4:6])
+    return datetime(year, month, day)
+
+
 def analyze_weekly_trends(recent_file: str, topics_file: str) -> dict:
     """Analyze weekly trends from recent papers."""
     # Load papers
     papers = []
-    with open(recent_file) as f:
-        for line in f:
-            papers.append(json.loads(line.strip()))
+    try:
+        with open(recent_file) as f:
+            for line in f:
+                if line.strip():
+                    papers.append(json.loads(line.strip()))
+    except FileNotFoundError:
+        print(f"Warning: {recent_file} not found, using empty list")
 
     # Load topics
-    with open(topics_file) as f:
-        topics_data = json.load(f)
-        topics = topics_data.get("topics", {})
+    try:
+        with open(topics_file) as f:
+            topics_data = json.load(f)
+            topics = topics_data.get("topics", {})
+    except FileNotFoundError:
+        print(f"Warning: {topics_file} not found, using empty topics")
+        topics = {}
 
     # Get date ranges
     today = datetime.now()
-    this_week_start = (today - timedelta(days=today.weekday())).strftime("%y%m%d")
-    last_week_start = (today - timedelta(days=today.weekday() + 7)).strftime("%y%m%d")
+    this_week_start = today - timedelta(days=today.weekday())  # Monday of this week
+    last_week_start = this_week_start - timedelta(days=7)  # Monday of last week
 
     # Count papers per tag for each week
     this_week_counts = defaultdict(int)
     last_week_counts = defaultdict(int)
 
     for paper in papers:
-        paper_date = paper["p"]
-        tags = paper.get("g", [])
+        try:
+            paper_date = parse_compact_date(paper["p"])
+            tags = paper.get("g", [])
 
-        for tag in tags:
-            tag_id = str(tag)
-            if paper_date >= this_week_start:
-                this_week_counts[tag_id] += 1
-            elif paper_date >= last_week_start:
-                last_week_counts[tag_id] += 1
+            for tag in tags:
+                tag_id = str(tag)
+                if paper_date >= this_week_start:
+                    this_week_counts[tag_id] += 1
+                elif paper_date >= last_week_start:
+                    last_week_counts[tag_id] += 1
+        except (KeyError, ValueError) as e:
+            print(f"Warning: Skipping paper with invalid date: {e}")
+            continue
 
     # Build trend report
     report = {

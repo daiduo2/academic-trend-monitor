@@ -74,6 +74,10 @@ export function usePreferences() {
     setPreferences(prev => ({ ...prev, minScore: score }));
   }, []);
 
+  const updateDigestMode = useCallback((mode: 'daily' | 'realtime') => {
+    setPreferences(prev => ({ ...prev, digestMode: mode }));
+  }, []);
+
   return {
     preferences,
     loaded,
@@ -82,5 +86,6 @@ export function usePreferences() {
     toggleTag,
     updateFormat,
     updateMinScore,
+    updateDigestMode,
   };
 }

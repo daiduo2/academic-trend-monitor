@@ -12,7 +12,7 @@ export function RSSSubscription() {
   const { topics, loading: topicsLoading } = useTopics();
   const { papers, loading: papersLoading } = useRecentPapers();
   const { report: weeklyReport, loading: trendsLoading } = useWeeklyTrends();
-  const { preferences, loaded: prefsLoaded, toggleTag, updateFormat } = usePreferences();
+  const { preferences, loaded: prefsLoaded, toggleTag, updateFormat, updateMinScore, updateDigestMode } = usePreferences();
 
   // Calculate paper counts per topic
   const paperCounts = useMemo(() => {
@@ -26,13 +26,20 @@ export function RSSSubscription() {
     return counts;
   }, [papers]);
 
-  // Filter papers by subscribed tags
+  // Filter papers by subscribed tags and min score
   const filteredPapers = useMemo(() => {
     if (!preferences.subscribedTags.length) return [];
-    return papers.filter(paper =>
-      paper.g.some(tagId => preferences.subscribedTags.includes(String(tagId)))
-    );
-  }, [papers, preferences.subscribedTags]);
+    return papers.filter(paper => {
+      // Check if paper has any of the subscribed tags
+      return paper.g.some((tagId, index) => {
+        const tagIdStr = String(tagId);
+        if (!preferences.subscribedTags.includes(tagIdStr)) return false;
+        // Check if score meets minimum threshold
+        const score = paper.s?.[index] || 0.8; // Default score if not available
+        return score >= preferences.minScore;
+      });
+    });
+  }, [papers, preferences.subscribedTags, preferences.minScore]);
 
   const handleGenerateRSS = () => {
     if (!topics) return;
@@ -90,6 +97,34 @@ export function RSSSubscription() {
             >
               <option value="atom">Atom/XML (RSS Readers)</option>
               <option value="json">JSON Feed (Apps)</option>
+            </select>
+          </div>
+
+          <div className="setting">
+            <label>Minimum Match Score: {preferences.minScore.toFixed(1)}</label>
+            <input
+              type="range"
+              min="0.3"
+              max="0.9"
+              step="0.1"
+              value={preferences.minScore}
+              onChange={e => updateMinScore(parseFloat(e.target.value))}
+              className="slider"
+            />
+            <span className="slider-labels">
+              <span>0.3 (More papers)</span>
+              <span>0.9 (Stricter)</span>
+            </span>
+          </div>
+
+          <div className="setting">
+            <label>Digest Mode:</label>
+            <select
+              value={preferences.digestMode}
+              onChange={e => updateDigestMode(e.target.value)}
+            >
+              <option value="daily">Daily Digest</option>
+              <option value="realtime">Real-time (All papers)</option>
             </select>
           </div>
 

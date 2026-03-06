@@ -7,6 +7,7 @@ export interface CompactPaper {
   c: string;    // category code
   p: string;    // published date (YYMMDD)
   g: number[];  // topic tags
+  s?: number[]; // scores for each tag (optional for backward compatibility)
 }
 
 export interface CompactTopic {
