@@ -1,11 +1,19 @@
 /**
- * 从 trend history 获取最新周期的论文数
+ * 从 trend history 获取指定周期的论文数
  * @param {Object} trend - 趋势数据
- * @returns {number} 最新论文数
+ * @param {string} period - 指定周期，不传则获取最新周期
+ * @returns {number} 论文数
  */
-function getLatestPaperCount(trend) {
+function getPaperCountForPeriod(trend, period = null) {
   if (!trend?.history || trend.history.length === 0) return 0;
-  // Get the last period's paper count
+
+  if (period) {
+    // 查找指定周期的数据
+    const entry = trend.history.find(h => h.period === period);
+    return entry?.paper_count || 0;
+  }
+
+  // 不传 period 则返回最新周期
   const lastEntry = trend.history[trend.history.length - 1];
   return lastEntry?.paper_count || 0;
 }
@@ -14,9 +22,10 @@ function getLatestPaperCount(trend) {
  * 为树节点添加论文数量（根据 topic_ids 从 trends 中计算）
  * @param {Object} node - 树节点
  * @param {Object} trends - 趋势数据对象
+ * @param {string} period - 指定周期，不传则获取最新周期
  * @returns {Object} 处理后的节点
  */
-export function enrichTreeWithPaperCounts(node, trends) {
+export function enrichTreeWithPaperCounts(node, trends, period = null) {
   if (!node) return null;
 
   const result = {
@@ -31,7 +40,7 @@ export function enrichTreeWithPaperCounts(node, trends) {
     result.paper_count = result.topic_ids.reduce((sum, id) => {
       const trendKey = `global_${id}`;
       const trend = trends[trendKey];
-      return sum + getLatestPaperCount(trend);
+      return sum + getPaperCountForPeriod(trend, period);
     }, 0);
   } else {
     result.paper_count = 0;
@@ -40,7 +49,7 @@ export function enrichTreeWithPaperCounts(node, trends) {
   // Process children recursively
   if (node.children && node.children.length > 0) {
     result.children = node.children.map(child =>
-      enrichTreeWithPaperCounts(child, trends)
+      enrichTreeWithPaperCounts(child, trends, period)
     ).sort((a, b) => b.paper_count - a.paper_count);
 
     // Sum children's paper counts for intermediate nodes

@@ -56,8 +56,16 @@ export default function DomainDashboard() {
   }, [data, selectedLayer1, selectedLayer2]);
 
   const sortedTopics = useMemo(() => {
-    return [...topics].sort((a, b) => b.latest_paper_count - a.latest_paper_count);
-  }, [topics]);
+    return [...topics]
+      .map(topic => {
+        // 根据 selectedPeriod 获取对应月份的论文数
+        const trend = data?.trends?.trends?.[topic.id];
+        const periodData = trend?.history?.find(h => h.period === selectedPeriod);
+        const paper_count = periodData?.paper_count ?? topic.latest_paper_count;
+        return { ...topic, paper_count };
+      })
+      .sort((a, b) => b.paper_count - a.paper_count);
+  }, [topics, data?.trends?.trends, selectedPeriod]);
 
   const layer1Options = useMemo(() => {
     return layer1List.map(l1 => ({
@@ -83,8 +91,8 @@ export default function DomainDashboard() {
   // Use hierarchy.tree as the hierarchy tree (from API data)
   const hierarchyTree = useMemo(() => {
     if (!hierarchy?.tree) return null;
-    return enrichTreeWithPaperCounts(hierarchy.tree, data.trends?.trends);
-  }, [hierarchy, data]);
+    return enrichTreeWithPaperCounts(hierarchy.tree, data.trends?.trends, selectedPeriod);
+  }, [hierarchy, data, selectedPeriod]);
 
   // Get nodes for current drill-down level
   const currentLevelNodes = useMemo(() => {
@@ -315,7 +323,7 @@ export default function DomainDashboard() {
                 </div>
                 <div className="text-right">
                   <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
-                    {topic.latest_paper_count} 篇
+                    {topic.paper_count} 篇
                   </span>
                   <p className="text-xs text-gray-400 mt-1">活跃 {topic.active_months} 个月</p>
                 </div>
