@@ -1,0 +1,8444 @@
+{
+  "periods": [
+    "2025-02",
+    "2025-03",
+    "2025-04",
+    "2025-05",
+    "2025-06",
+    "2025-07",
+    "2025-08",
+    "2025-09",
+    "2025-10",
+    "2025-11",
+    "2025-12",
+    "2026-01",
+    "2026-02"
+  ],
+  "total_topics": 374,
+  "trends": {
+    "topic_0": {
+      "name": "无线MIMO信道感知",
+      "keywords": [
+        "channel",
+        "ris",
+        "wireless",
+        "sensing",
+        "mimo",
+        "antenna",
+        "communication",
+        "beamforming",
+        "isac",
+        "csi"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 499
+        }
+      ]
+    },
+    "topic_1": {
+      "name": "强化推理奖励机制",
+      "keywords": [
+        "reasoning",
+        "reward",
+        "rl",
+        "reinforcement",
+        "cot",
+        "training",
+        "llms",
+        "thought",
+        "rewards",
+        "language"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 521
+        }
+      ]
+    },
+    "topic_2": {
+      "name": "强化学习策略推理",
+      "keywords": [
+        "reasoning",
+        "rlvr",
+        "rl",
+        "grpo",
+        "policy",
+        "reinforcement",
+        "reward",
+        "rewards",
+        "training",
+        "cot"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 449
+        }
+      ]
+    },
+    "topic_3": {
+      "name": "夸克胶子碰撞物理",
+      "keywords": [
+        "qcd",
+        "quark",
+        "collisions",
+        "bar",
+        "gluon",
+        "decays",
+        "heavy",
+        "meson",
+        "mesons",
+        "production"
+      ],
+      "category": "hep-ph",
+      "history": [
+        {
+          "period": "2025-11",
+          "paper_count": 356
+        }
+      ]
+    },
+    "topic_4": {
+      "name": "夸克QCD对撞物理",
+      "keywords": [
+        "collisions",
+        "qcd",
+        "quark",
+        "bar",
+        "gev",
+        "heavy",
+        "nucleon",
+        "gluon",
+        "proton",
+        "meson"
+      ],
+      "category": "hep-ph",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 388
+        }
+      ]
+    },
+    "topic_5": {
+      "name": "图顶点结构研究",
+      "keywords": [
+        "graphs",
+        "graph",
+        "vertex",
+        "vertices",
+        "every",
+        "number",
+        "edges",
+        "if",
+        "edge",
+        "subgraph"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 371
+        }
+      ]
+    },
+    "topic_6": {
+      "name": "活性液滴剪切流",
+      "keywords": [
+        "active",
+        "shear",
+        "droplet",
+        "flow",
+        "particles",
+        "polymer",
+        "particle",
+        "mechanical",
+        "liquid",
+        "elastic"
+      ],
+      "category": "cond-mat",
+      "history": [
+        {
+          "period": "2025-11",
+          "paper_count": 305
+        },
+        {
+          "period": "2026-01",
+          "paper_count": 44
+        }
+      ]
+    },
+    "topic_7": {
+      "name": "活性液滴剪切流变",
+      "keywords": [
+        "droplet",
+        "active",
+        "shear",
+        "fluid",
+        "stress",
+        "surface",
+        "liquid",
+        "droplets",
+        "elastic",
+        "flow"
+      ],
+      "category": "cond-mat",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 334
+        }
+      ]
+    },
+    "topic_8": {
+      "name": "语音音乐说话人识别",
+      "keywords": [
+        "audio",
+        "speech",
+        "music",
+        "speaker",
+        "asr",
+        "voice",
+        "acoustic",
+        "video",
+        "generation",
+        "text"
+      ],
+      "category": "eess",
+      "history": [
+        {
+          "period": "2025-12",
+          "paper_count": 412
+        }
+      ]
+    },
+    "topic_9": {
+      "name": "活性液滴颗粒研究",
+      "keywords": [
+        "particles",
+        "particle",
+        "active",
+        "droplet",
+        "liquid",
+        "stress",
+        "shear",
+        "cell",
+        "droplets",
+        "dynamics"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 254
+        }
+      ]
+    },
+    "topic_10": {
+      "name": "有限元数值阶方法",
+      "keywords": [
+        "element",
+        "numerical",
+        "finite",
+        "method",
+        "order",
+        "galerkin",
+        "scheme",
+        "discrete",
+        "equation",
+        "equations"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 278
+        }
+      ]
+    },
+    "topic_11": {
+      "name": "5G无人机网络时延",
+      "keywords": [
+        "network",
+        "networks",
+        "uav",
+        "5g",
+        "latency",
+        "wireless",
+        "allocation",
+        "communication",
+        "satellite",
+        "service"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 205
+        }
+      ]
+    },
+    "topic_12": {
+      "name": "自旋磁化与霍尔效应",
+      "keywords": [
+        "spin",
+        "magnetic",
+        "hall",
+        "_2",
+        "magnetization",
+        "antiferromagnetic",
+        "materials",
+        "topological",
+        "effect",
+        "spintronic"
+      ],
+      "category": "cond-mat",
+      "history": [
+        {
+          "period": "2025-10",
+          "paper_count": 281
+        },
+        {
+          "period": "2025-12",
+          "paper_count": 170
+        },
+        {
+          "period": "2026-01",
+          "paper_count": 256
+        },
+        {
+          "period": "2026-02",
+          "paper_count": 55
+        }
+      ]
+    },
+    "topic_13": {
+      "name": "交变磁体磁化特性",
+      "keywords": [
+        "spin",
+        "magnetic",
+        "altermagnets",
+        "altermagnetic",
+        "magnetization",
+        "hall",
+        "_2",
+        "ferromagnetic",
+        "symmetry",
+        "antiferromagnets"
+      ],
+      "category": "cond-mat",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 200
+        }
+      ]
+    },
+    "topic_14": {
+      "name": "临床医疗与大语言模型",
+      "keywords": [
+        "clinical",
+        "medical",
+        "patient",
+        "health",
+        "llms",
+        "healthcare",
+        "diagnostic",
+        "language",
+        "ai",
+        "patients"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 187
+        },
+        {
+          "period": "2026-02",
+          "paper_count": 137
+        }
+      ]
+    },
+    "topic_15": {
+      "name": "脉冲星射电辐射",
+      "keywords": [
+        "ray",
+        "pulsar",
+        "emission",
+        "radio",
+        "pulsars",
+        "frb",
+        "gamma",
+        "sources",
+        "accretion",
+        "observations"
+      ],
+      "category": "astro-ph",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 198
+        }
+      ]
+    },
+    "topic_16": {
+      "name": "伽马射线暴辐射机制",
+      "keywords": [
+        "ray",
+        "gamma",
+        "radio",
+        "emission",
+        "grb",
+        "burst",
+        "pulsar",
+        "jet",
+        "rays",
+        "tev"
+      ],
+      "category": "astro-ph",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 181
+        },
+        {
+          "period": "2026-02",
+          "paper_count": 27
+        }
+      ]
+    },
+    "topic_17": {
+      "name": "医学肿瘤CT分割",
+      "keywords": [
+        "segmentation",
+        "medical",
+        "tumor",
+        "ct",
+        "pathology",
+        "cancer",
+        "images",
+        "clinical",
+        "slide",
+        "imaging"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 180
+        }
+      ]
+    },
+    "topic_18": {
+      "name": "分子间势机器学习",
+      "keywords": [
+        "materials",
+        "machine",
+        "molecular",
+        "interatomic",
+        "potentials",
+        "chemical",
+        "crystal",
+        "mlips",
+        "learning",
+        "molecules"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 178
+        }
+      ]
+    },
+    "topic_19": {
+      "name": "超导材料特性",
+      "keywords": [
+        "superconductivity",
+        "superconducting",
+        "superconductor",
+        "superconductors",
+        "_2",
+        "la",
+        "ni",
+        "pairing",
+        "_3",
+        "temperature"
+      ],
+      "category": "cond-mat",
+      "history": [
+        {
+          "period": "2025-12",
+          "paper_count": 166
+        },
+        {
+          "period": "2026-01",
+          "paper_count": 71
+        },
+        {
+          "period": "2026-02",
+          "paper_count": 141
+        }
+      ]
+    },
+    "topic_20": {
+      "name": "引力波双黑洞",
+      "keywords": [
+        "gravitational",
+        "black",
+        "gw",
+        "wave",
+        "binary",
+        "hole",
+        "merger",
+        "holes",
+        "mergers",
+        "ligo"
+      ],
+      "category": "astro-ph",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 172
+        },
+        {
+          "period": "2026-02",
+          "paper_count": 117
+        }
+      ]
+    },
+    "topic_21": {
+      "name": "黎曼流形曲率度量",
+      "keywords": [
+        "curvature",
+        "manifolds",
+        "riemannian",
+        "ricci",
+        "metric",
+        "surfaces",
+        "manifold",
+        "hyperbolic",
+        "conformal",
+        "flow"
+      ],
+      "category": "math-ph",
+      "history": [
+        {
+          "period": "2025-09",
+          "paper_count": 140
+        },
+        {
+          "period": "2025-10",
+          "paper_count": 155
+        },
+        {
+          "period": "2025-11",
+          "paper_count": 62
+        },
+        {
+          "period": "2026-01",
+          "paper_count": 28
+        },
+        {
+          "period": "2026-02",
+          "paper_count": 161
+        }
+      ]
+    },
+    "topic_22": {
+      "name": "量子混沌纠缠动力学",
+      "keywords": [
+        "quantum",
+        "hermitian",
+        "entanglement",
+        "dynamics",
+        "chaotic",
+        "mpemba",
+        "systems",
+        "chaos",
+        "non",
+        "body"
+      ],
+      "category": "quant-ph",
+      "history": [
+        {
+          "period": "2025-12",
+          "paper_count": 139
+        }
+      ]
+    },
+    "topic_23": {
+      "name": "凸优化梯度收敛",
+      "keywords": [
+        "convex",
+        "convergence",
+        "optimization",
+        "problems",
+        "gradient",
+        "nonconvex",
+        "proximal",
+        "algorithm",
+        "method",
+        "nonsmooth"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 159
+        },
+        {
+          "period": "2026-02",
+          "paper_count": 173
+        }
+      ]
+    },
+    "topic_24": {
+      "name": "暴胀宇宙原初标量",
+      "keywords": [
+        "inflation",
+        "scalar",
+        "primordial",
+        "inflationary",
+        "universe",
+        "cosmological",
+        "gravitational",
+        "gravity",
+        "roll",
+        "cosmology"
+      ],
+      "category": "gr-qc",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 155
+        }
+      ]
+    },
+    "topic_25": {
+      "name": "拍卖投票博弈机制",
+      "keywords": [
+        "auction",
+        "voting",
+        "auctions",
+        "mechanism",
+        "game",
+        "bidders",
+        "agents",
+        "sender",
+        "valuations",
+        "collusion"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2025-12",
+          "paper_count": 134
+        }
+      ]
+    },
+    "topic_26": {
+      "name": "共形规范弦理论",
+      "keywords": [
+        "gauge",
+        "string",
+        "theories",
+        "conformal",
+        "theory",
+        "ads",
+        "supersymmetric",
+        "duality",
+        "amplitudes",
+        "cft"
+      ],
+      "category": "hep-th",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 148
+        }
+      ]
+    },
+    "topic_27": {
+      "name": "注意力KV缓存内存",
+      "keywords": [
+        "attention",
+        "kv",
+        "lora",
+        "cache",
+        "memory",
+        "pruning",
+        "transformer",
+        "rank",
+        "token",
+        "context"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 145
+        },
+        {
+          "period": "2026-02",
+          "paper_count": 311
+        }
+      ]
+    },
+    "topic_28": {
+      "name": "李雅普诺夫MPC控制",
+      "keywords": [
+        "control",
+        "mpc",
+        "controller",
+        "lyapunov",
+        "controllers",
+        "nonlinear",
+        "predictive",
+        "safety",
+        "stability",
+        "system"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2025-11",
+          "paper_count": 136
+        },
+        {
+          "period": "2025-12",
+          "paper_count": 45
+        },
+        {
+          "period": "2026-02",
+          "paper_count": 155
+        }
+      ]
+    },
+    "topic_29": {
+      "name": "中子切伦科夫探测器",
+      "keywords": [
+        "detector",
+        "beam",
+        "detectors",
+        "neutron",
+        "cherenkov",
+        "readout",
+        "resolution",
+        "energy",
+        "experiment",
+        "sipm"
+      ],
+      "category": "physics",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 133
+        }
+      ]
+    },
+    "topic_30": {
+      "name": "随机麦基恩-弗拉索夫方程",
+      "keywords": [
+        "stochastic",
+        "equations",
+        "mckean",
+        "equation",
+        "vlasov",
+        "sdes",
+        "differential",
+        "jump",
+        "noise",
+        "processes"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2025-09",
+          "paper_count": 116
+        },
+        {
+          "period": "2025-10",
+          "paper_count": 100
+        },
+        {
+          "period": "2025-11",
+          "paper_count": 105
+        },
+        {
+          "period": "2025-12",
+          "paper_count": 405
+        },
+        {
+          "period": "2026-01",
+          "paper_count": 119
+        },
+        {
+          "period": "2026-02",
+          "paper_count": 174
+        }
+      ]
+    },
+    "topic_31": {
+      "name": "希格斯玻色子产生",
+      "keywords": [
+        "higgs",
+        "lhc",
+        "tev",
+        "production",
+        "boson",
+        "quark",
+        "jet",
+        "proton",
+        "bar",
+        "top"
+      ],
+      "category": "hep-ex",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 130
+        },
+        {
+          "period": "2026-02",
+          "paper_count": 91
+        }
+      ]
+    },
+    "topic_32": {
+      "name": "天气气候降水预报",
+      "keywords": [
+        "weather",
+        "climate",
+        "precipitation",
+        "forecasting",
+        "forecasts",
+        "downscaling",
+        "forecast",
+        "sea",
+        "rainfall",
+        "global"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 140
+        }
+      ]
+    },
+    "topic_33": {
+      "name": "气候降水预报",
+      "keywords": [
+        "climate",
+        "forecasting",
+        "weather",
+        "precipitation",
+        "forecasts",
+        "forecast",
+        "extreme",
+        "ocean",
+        "atmospheric",
+        "meteorological"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 128
+        }
+      ]
+    },
+    "topic_34": {
+      "name": "光子学与激光偏振",
+      "keywords": [
+        "photonic",
+        "optical",
+        "polarization",
+        "light",
+        "laser",
+        "integrated",
+        "photon",
+        "metasurfaces",
+        "chip",
+        "mode"
+      ],
+      "category": "physics",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 135
+        }
+      ]
+    },
+    "topic_35": {
+      "name": "湍流与雷诺波动力学",
+      "keywords": [
+        "turbulence",
+        "turbulent",
+        "flow",
+        "reynolds",
+        "wave",
+        "vortex",
+        "waves",
+        "flows",
+        "velocity",
+        "shear"
+      ],
+      "category": "physics",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 134
+        }
+      ]
+    },
+    "topic_36": {
+      "name": "流匹配与扩散生成",
+      "keywords": [
+        "flow",
+        "diffusion",
+        "generative",
+        "matching",
+        "sampling",
+        "transport",
+        "trajectory",
+        "manifold",
+        "denoising",
+        "step"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 130
+        }
+      ]
+    },
+    "topic_37": {
+      "name": "人工智能教育应用",
+      "keywords": [
+        "students",
+        "ai",
+        "education",
+        "student",
+        "educational",
+        "engagement",
+        "feedback",
+        "learning",
+        "genai",
+        "teachers"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 126
+        },
+        {
+          "period": "2026-02",
+          "paper_count": 142
+        }
+      ]
+    },
+    "topic_38": {
+      "name": "多元时间序列预测",
+      "keywords": [
+        "forecasting",
+        "series",
+        "time",
+        "multivariate",
+        "temporal",
+        "forecast",
+        "forecasts",
+        "tsfms",
+        "tsf",
+        "ts"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 125
+        }
+      ]
+    },
+    "topic_39": {
+      "name": "检索增强生成技术",
+      "keywords": [
+        "retrieval",
+        "rag",
+        "query",
+        "document",
+        "documents",
+        "augmented",
+        "retriever",
+        "retrievers",
+        "generation",
+        "reranking"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 123
+        }
+      ]
+    },
+    "topic_40": {
+      "name": "黎曼级数与超几何",
+      "keywords": [
+        "zeta",
+        "series",
+        "hypergeometric",
+        "riemann",
+        "sum_",
+        "function",
+        "frac",
+        "sums",
+        "prime",
+        "numbers"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 123
+        }
+      ]
+    },
+    "topic_41": {
+      "name": "药物分子性质预测",
+      "keywords": [
+        "protein",
+        "molecular",
+        "drug",
+        "chemical",
+        "prediction",
+        "binding",
+        "proteins",
+        "discovery",
+        "molecules",
+        "property"
+      ],
+      "category": "q-bio",
+      "history": [
+        {
+          "period": "2025-10",
+          "paper_count": 126
+        },
+        {
+          "period": "2025-12",
+          "paper_count": 113
+        },
+        {
+          "period": "2026-02",
+          "paper_count": 32
+        }
+      ]
+    },
+    "topic_42": {
+      "name": "宇宙暴胀与标量场",
+      "keywords": [
+        "inflation",
+        "universe",
+        "inflationary",
+        "cosmological",
+        "scalar",
+        "gravity",
+        "dark",
+        "cosmology",
+        "reheating",
+        "matter"
+      ],
+      "category": "gr-qc",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 121
+        }
+      ]
+    },
+    "topic_43": {
+      "name": "渐近估计与尾部检验",
+      "keywords": [
+        "test",
+        "asymptotic",
+        "estimator",
+        "tail",
+        "testing",
+        "likelihood",
+        "statistic",
+        "tests",
+        "dependence",
+        "risk"
+      ],
+      "category": "stat",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 112
+        }
+      ]
+    },
+    "topic_44": {
+      "name": "量子纠缠态测量",
+      "keywords": [
+        "entanglement",
+        "quantum",
+        "states",
+        "measurement",
+        "entangled",
+        "multipartite",
+        "state",
+        "bell",
+        "qubit",
+        "channels"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 119
+        }
+      ]
+    },
+    "topic_45": {
+      "name": "博弈遗憾与纳什均衡",
+      "keywords": [
+        "regret",
+        "games",
+        "bandit",
+        "bandits",
+        "nash",
+        "player",
+        "game",
+        "equilibrium",
+        "equilibria",
+        "algorithm"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 118
+        }
+      ]
+    },
+    "topic_46": {
+      "name": "遍历测度与随机维数",
+      "keywords": [
+        "ergodic",
+        "measure",
+        "measures",
+        "random",
+        "dimension",
+        "dynamical",
+        "mixing",
+        "maps",
+        "rauzy",
+        "theorem"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 107
+        }
+      ]
+    },
+    "topic_47": {
+      "name": "渐近估计与样本检验",
+      "keywords": [
+        "estimator",
+        "estimators",
+        "asymptotic",
+        "tests",
+        "sample",
+        "test",
+        "estimation",
+        "statistics",
+        "bootstrap",
+        "nonparametric"
+      ],
+      "category": "stat",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 115
+        }
+      ]
+    },
+    "topic_48": {
+      "name": "分数阶随机方程",
+      "keywords": [
+        "fractional",
+        "stochastic",
+        "brownian",
+        "equations",
+        "equation",
+        "transport",
+        "rough",
+        "hurst",
+        "noise",
+        "sinkhorn"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 105
+        }
+      ]
+    },
+    "topic_49": {
+      "name": "机器人路径规划",
+      "keywords": [
+        "planning",
+        "robot",
+        "robots",
+        "path",
+        "mppi",
+        "obstacles",
+        "planner",
+        "navigation",
+        "environments",
+        "trajectory"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 112
+        }
+      ]
+    },
+    "topic_50": {
+      "name": "人工智能治理与风险",
+      "keywords": [
+        "ai",
+        "governance",
+        "intelligence",
+        "risk",
+        "artificial",
+        "risks",
+        "ethical",
+        "regulatory",
+        "responsible",
+        "consciousness"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2025-11",
+          "paper_count": 94
+        },
+        {
+          "period": "2025-12",
+          "paper_count": 35
+        },
+        {
+          "period": "2026-02",
+          "paper_count": 61
+        }
+      ]
+    },
+    "topic_51": {
+      "name": "恶意注入攻击与安全",
+      "keywords": [
+        "security",
+        "attack",
+        "attacks",
+        "malicious",
+        "injection",
+        "agents",
+        "prompt",
+        "phishing",
+        "vulnerabilities",
+        "agent"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 108
+        }
+      ]
+    },
+    "topic_52": {
+      "name": "电网电压与电池充电",
+      "keywords": [
+        "power",
+        "voltage",
+        "grid",
+        "battery",
+        "charging",
+        "energy",
+        "market",
+        "electricity",
+        "renewable",
+        "demand"
+      ],
+      "category": "eess",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 107
+        }
+      ]
+    },
+    "topic_53": {
+      "name": "李代数与Baxter代数",
+      "keywords": [
+        "algebras",
+        "lie",
+        "algebra",
+        "mathfrak",
+        "baxter",
+        "rota",
+        "poisson",
+        "modules",
+        "superalgebras",
+        "novikov"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 105
+        }
+      ]
+    },
+    "topic_54": {
+      "name": "日冕磁通与太阳耀斑",
+      "keywords": [
+        "solar",
+        "coronal",
+        "magnetic",
+        "flare",
+        "flux",
+        "plasma",
+        "sun",
+        "wind",
+        "flares",
+        "cme"
+      ],
+      "category": "physics",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 101
+        }
+      ]
+    },
+    "topic_55": {
+      "name": "量子热化与主方程",
+      "keywords": [
+        "quantum",
+        "thermalization",
+        "steady",
+        "bath",
+        "master",
+        "dissipation",
+        "body",
+        "markovian",
+        "scars",
+        "dynamics"
+      ],
+      "category": "cond-mat",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 100
+        }
+      ]
+    },
+    "topic_56": {
+      "name": "里德伯原子囚禁",
+      "keywords": [
+        "atom",
+        "rydberg",
+        "atomic",
+        "atoms",
+        "trap",
+        "optical",
+        "laser",
+        "cooling",
+        "cavity",
+        "quantum"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 97
+        }
+      ]
+    },
+    "topic_57": {
+      "name": "量子关联与团簇方法",
+      "keywords": [
+        "quantum",
+        "correlation",
+        "electronic",
+        "cluster",
+        "cc",
+        "density",
+        "ccsd",
+        "chemistry",
+        "orbitals",
+        "molecular"
+      ],
+      "category": "quant-ph",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 97
+        }
+      ]
+    },
+    "topic_58": {
+      "name": "千电子伏中微子探测器",
+      "keywords": [
+        "detector",
+        "neutrino",
+        "detectors",
+        "kev",
+        "beam",
+        "cevns",
+        "argon",
+        "experiment",
+        "background",
+        "readout"
+      ],
+      "category": "hep-ex",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 93
+        }
+      ]
+    },
+    "topic_59": {
+      "name": "奖励偏好与对齐学习",
+      "keywords": [
+        "preference",
+        "reward",
+        "dpo",
+        "rlhf",
+        "alignment",
+        "preferences",
+        "human",
+        "rubric",
+        "optimization",
+        "policy"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 93
+        }
+      ]
+    },
+    "topic_60": {
+      "name": "混沌同步与分岔研究",
+      "keywords": [
+        "chaos",
+        "synchronization",
+        "chaotic",
+        "oscillators",
+        "bifurcation",
+        "kuramoto",
+        "dynamical",
+        "bifurcations",
+        "phase",
+        "dynamics"
+      ],
+      "category": "nlin",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 92
+        }
+      ]
+    },
+    "topic_61": {
+      "name": "磁约束聚变等离子体",
+      "keywords": [
+        "plasma",
+        "plasmas",
+        "magnetic",
+        "mhd",
+        "tokamak",
+        "turbulence",
+        "reconnection",
+        "ion",
+        "kinetic",
+        "field"
+      ],
+      "category": "physics",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 87
+        },
+        {
+          "period": "2026-02",
+          "paper_count": 82
+        }
+      ]
+    },
+    "topic_62": {
+      "name": "蛋白质多肽药物设计",
+      "keywords": [
+        "molecular",
+        "protein",
+        "drug",
+        "peptide",
+        "ligand",
+        "chemical",
+        "molecule",
+        "molecules",
+        "affinity",
+        "binding"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 87
+        }
+      ]
+    },
+    "topic_63": {
+      "name": "二维材料光电性能",
+      "keywords": [
+        "_2",
+        "bandgap",
+        "photoluminescence",
+        "metal",
+        "optoelectronic",
+        "exciton",
+        "band",
+        "materials",
+        "phonon",
+        "carrier"
+      ],
+      "category": "cond-mat",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 87
+        }
+      ]
+    },
+    "topic_64": {
+      "name": "夸克与重子结构",
+      "keywords": [
+        "quark",
+        "qcd",
+        "diquark",
+        "baryons",
+        "parton",
+        "meson",
+        "baryon",
+        "factors",
+        "twist",
+        "light"
+      ],
+      "category": "hep-ph",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 81
+        }
+      ]
+    },
+    "topic_65": {
+      "name": "人机协同创意设计",
+      "keywords": [
+        "ai",
+        "creative",
+        "collaboration",
+        "design",
+        "human",
+        "creativity",
+        "storytelling",
+        "collaborative",
+        "participants",
+        "story"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 85
+        }
+      ]
+    },
+    "topic_66": {
+      "name": "对抗攻击与鲁棒性",
+      "keywords": [
+        "adversarial",
+        "attacks",
+        "attack",
+        "robustness",
+        "box",
+        "perturbations",
+        "against",
+        "defense",
+        "examples",
+        "samples"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2025-12",
+          "paper_count": 75
+        },
+        {
+          "period": "2026-01",
+          "paper_count": 74
+        },
+        {
+          "period": "2026-02",
+          "paper_count": 33
+        }
+      ]
+    },
+    "topic_67": {
+      "name": "深度神经网络激活函数",
+      "keywords": [
+        "networks",
+        "neural",
+        "relu",
+        "deep",
+        "network",
+        "generalization",
+        "activation",
+        "layer",
+        "approximation",
+        "loss"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 84
+        }
+      ]
+    },
+    "topic_68": {
+      "name": "脑电睡眠解码",
+      "keywords": [
+        "eeg",
+        "brain",
+        "sleep",
+        "subject",
+        "decoding",
+        "electroencephalography",
+        "seizure",
+        "activity",
+        "bci",
+        "recordings"
+      ],
+      "category": "eess",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 80
+        }
+      ]
+    },
+    "topic_69": {
+      "name": "金刚石氮空位自旋",
+      "keywords": [
+        "diamond",
+        "nv",
+        "vacancy",
+        "spin",
+        "centers",
+        "nitrogen",
+        "spins",
+        "nmr",
+        "microwave",
+        "magnetic"
+      ],
+      "category": "quant-ph",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 79
+        }
+      ]
+    },
+    "topic_70": {
+      "name": "视频扩散图像编码",
+      "keywords": [
+        "video",
+        "diffusion",
+        "compression",
+        "image",
+        "coding",
+        "quality",
+        "quantization",
+        "dit",
+        "resolution",
+        "training"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 79
+        },
+        {
+          "period": "2026-02",
+          "paper_count": 161
+        }
+      ]
+    },
+    "topic_71": {
+      "name": "粗糙随机分数布朗运动",
+      "keywords": [
+        "rough",
+        "stochastic",
+        "fractional",
+        "brownian",
+        "sdes",
+        "processes",
+        "lévy",
+        "equation",
+        "equations",
+        "spdes"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 80
+        }
+      ]
+    },
+    "topic_72": {
+      "name": "双层石墨烯电子能带",
+      "keywords": [
+        "graphene",
+        "bilayer",
+        "band",
+        "electron",
+        "electronic",
+        "twisted",
+        "charge",
+        "strain",
+        "spin",
+        "moiré"
+      ],
+      "category": "cond-mat",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 80
+        }
+      ]
+    },
+    "topic_73": {
+      "name": "CDM与BAO暗能量研究",
+      "keywords": [
+        "cdm",
+        "bao",
+        "cmb",
+        "desi",
+        "dark",
+        "hubble",
+        "cosmological",
+        "h_0",
+        "tension",
+        "cosmic"
+      ],
+      "category": "astro-ph",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 77
+        }
+      ]
+    },
+    "topic_74": {
+      "name": "三维SLAM占据建图",
+      "keywords": [
+        "3d",
+        "slam",
+        "occupancy",
+        "camera",
+        "depth",
+        "scene",
+        "view",
+        "geometric",
+        "monocular",
+        "reconstruction"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 76
+        }
+      ]
+    },
+    "topic_75": {
+      "name": "玻色费米杂质超流",
+      "keywords": [
+        "bose",
+        "impurity",
+        "superfluid",
+        "fermi",
+        "condensate",
+        "gases",
+        "vortex",
+        "gas",
+        "einstein",
+        "interacting"
+      ],
+      "category": "quant-ph",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 73
+        }
+      ]
+    },
+    "topic_76": {
+      "name": "非参数贝叶斯后验混合分布",
+      "keywords": [
+        "bayesian",
+        "posterior",
+        "mixture",
+        "nonparametric",
+        "distribution",
+        "regression",
+        "mortality",
+        "inference",
+        "spatial",
+        "bayes"
+      ],
+      "category": "stat",
+      "history": [
+        {
+          "period": "2025-12",
+          "paper_count": 61
+        }
+      ]
+    },
+    "topic_77": {
+      "name": "脑电与BCI跨被试",
+      "keywords": [
+        "eeg",
+        "subject",
+        "brain",
+        "electroencephalography",
+        "bci",
+        "decoding",
+        "signals",
+        "motor",
+        "meg",
+        "recordings"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 72
+        }
+      ]
+    },
+    "topic_78": {
+      "name": "拓扑晶格对称理论",
+      "keywords": [
+        "symmetry",
+        "symmetries",
+        "topological",
+        "lattice",
+        "theories",
+        "gauge",
+        "theory",
+        "anomaly",
+        "anomalies",
+        "mathbb"
+      ],
+      "category": "hep-th",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 71
+        }
+      ]
+    },
+    "topic_79": {
+      "name": "智能体网络安全攻击",
+      "keywords": [
+        "attack",
+        "security",
+        "agents",
+        "cybersecurity",
+        "attacks",
+        "threat",
+        "agent",
+        "prompt",
+        "tool",
+        "malicious"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 70
+        }
+      ]
+    },
+    "topic_80": {
+      "name": "容错逻辑编码",
+      "keywords": [
+        "codes",
+        "logical",
+        "fault",
+        "tolerant",
+        "code",
+        "error",
+        "syndrome",
+        "qldpc",
+        "stabilizer",
+        "quantum"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 69
+        },
+        {
+          "period": "2026-02",
+          "paper_count": 120
+        }
+      ]
+    },
+    "topic_81": {
+      "name": "种群捕食感染动力学",
+      "keywords": [
+        "species",
+        "population",
+        "predator",
+        "prey",
+        "infection",
+        "pathogen",
+        "dynamics",
+        "epidemic",
+        "vegetation",
+        "mutation"
+      ],
+      "category": "q-bio",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 71
+        }
+      ]
+    },
+    "topic_82": {
+      "name": "LLM性别偏见与刻板印象",
+      "keywords": [
+        "bias",
+        "biases",
+        "llms",
+        "gender",
+        "stereotypes",
+        "social",
+        "language",
+        "llm",
+        "human",
+        "political"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2025-12",
+          "paper_count": 58
+        },
+        {
+          "period": "2026-01",
+          "paper_count": 47
+        },
+        {
+          "period": "2026-02",
+          "paper_count": 86
+        }
+      ]
+    },
+    "topic_83": {
+      "name": "检索增强查询",
+      "keywords": [
+        "rag",
+        "retrieval",
+        "relevance",
+        "augmented",
+        "query",
+        "documents",
+        "llm",
+        "generation",
+        "retrieved",
+        "ranking"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 64
+        }
+      ]
+    },
+    "topic_84": {
+      "name": "BESIII衰变研究",
+      "keywords": [
+        "decays",
+        "decay",
+        "besiii",
+        "pm",
+        "bar",
+        "ξ_b",
+        "rm",
+        "rightarrow",
+        "cp",
+        "pm0"
+      ],
+      "category": "hep-ph",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 64
+        }
+      ]
+    },
+    "topic_85": {
+      "name": "人形机器人遥操作",
+      "keywords": [
+        "humanoid",
+        "manipulation",
+        "motion",
+        "locomotion",
+        "teleoperation",
+        "robot",
+        "whole",
+        "robots",
+        "policy",
+        "body"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 68
+        }
+      ]
+    },
+    "topic_86": {
+      "name": "金刚石氮空位中心",
+      "keywords": [
+        "nv",
+        "diamond",
+        "centers",
+        "nitrogen",
+        "vacancy",
+        "spin",
+        "magnetic",
+        "sic",
+        "nanoscale",
+        "resonance"
+      ],
+      "category": "physics",
+      "history": [
+        {
+          "period": "2025-12",
+          "paper_count": 56
+        }
+      ]
+    },
+    "topic_87": {
+      "name": "AI社交聊天机器人",
+      "keywords": [
+        "chatbots",
+        "ai",
+        "social",
+        "chatbot",
+        "mental",
+        "users",
+        "emotional",
+        "people",
+        "health",
+        "participants"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 62
+        },
+        {
+          "period": "2026-02",
+          "paper_count": 166
+        }
+      ]
+    },
+    "topic_88": {
+      "name": "中子星物态方程",
+      "keywords": [
+        "neutron",
+        "stars",
+        "eos",
+        "matter",
+        "star",
+        "mass",
+        "quark",
+        "radius",
+        "crust",
+        "strange"
+      ],
+      "category": "astro-ph",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 62
+        },
+        {
+          "period": "2026-02",
+          "paper_count": 67
+        }
+      ]
+    },
+    "topic_89": {
+      "name": "望远镜天空校准",
+      "keywords": [
+        "sky",
+        "calibration",
+        "telescope",
+        "cte",
+        "observatory",
+        "radio",
+        "euclid",
+        "gaia",
+        "polarization",
+        "instrument"
+      ],
+      "category": "astro-ph",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 67
+        }
+      ]
+    },
+    "topic_90": {
+      "name": "随机均值最优控制",
+      "keywords": [
+        "stochastic",
+        "mean",
+        "control",
+        "backward",
+        "optimal",
+        "riccati",
+        "game",
+        "games",
+        "differential",
+        "equations"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 61
+        }
+      ]
+    },
+    "topic_91": {
+      "name": "合金位错晶界研究",
+      "keywords": [
+        "dislocation",
+        "grain",
+        "alloys",
+        "dislocations",
+        "cr",
+        "sintering",
+        "mg",
+        "alloy",
+        "gb",
+        "hydrogen"
+      ],
+      "category": "cond-mat",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 61
+        }
+      ]
+    },
+    "topic_92": {
+      "name": "资产价格波动与风险",
+      "keywords": [
+        "risk",
+        "price",
+        "pricing",
+        "asset",
+        "volatility",
+        "market",
+        "equilibrium",
+        "arbitrage",
+        "options",
+        "prices"
+      ],
+      "category": "q-fin",
+      "history": [
+        {
+          "period": "2025-12",
+          "paper_count": 53
+        },
+        {
+          "period": "2026-01",
+          "paper_count": 38
+        },
+        {
+          "period": "2026-02",
+          "paper_count": 151
+        }
+      ]
+    },
+    "topic_93": {
+      "name": "随机矩阵理论",
+      "keywords": [
+        "random",
+        "matrices",
+        "entries",
+        "matrix",
+        "hermitian",
+        "x_α",
+        "ginibre",
+        "concentration",
+        "multivariate",
+        "spectral"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 64
+        }
+      ]
+    },
+    "topic_94": {
+      "name": "软巴拿赫空间",
+      "keywords": [
+        "spaces",
+        "mathfrak",
+        "soft",
+        "banach",
+        "aura",
+        "sets",
+        "mathcal",
+        "space",
+        "compact",
+        "urysohn"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 63
+        }
+      ]
+    },
+    "topic_95": {
+      "name": "城市交通移动性",
+      "keywords": [
+        "mobility",
+        "traffic",
+        "urban",
+        "travel",
+        "spatio",
+        "transportation",
+        "temporal",
+        "forecasting",
+        "city",
+        "trajectory"
+      ],
+      "category": "physics",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 63
+        }
+      ]
+    },
+    "topic_96": {
+      "name": "量子测量理论",
+      "keywords": [
+        "mechanics",
+        "quantum",
+        "theory",
+        "born",
+        "measurement",
+        "rule",
+        "bohmian",
+        "probability",
+        "measurements",
+        "friend"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 63
+        }
+      ]
+    },
+    "topic_97": {
+      "name": "社交媒体内容治理",
+      "keywords": [
+        "political",
+        "media",
+        "social",
+        "community",
+        "moderation",
+        "content",
+        "posts",
+        "notes",
+        "discourse",
+        "stance"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 62
+        }
+      ]
+    },
+    "topic_98": {
+      "name": "星系红移巡天",
+      "keywords": [
+        "galaxy",
+        "galaxies",
+        "redshift",
+        "photometric",
+        "surveys",
+        "survey",
+        "images",
+        "deep",
+        "stellar",
+        "lsst"
+      ],
+      "category": "astro-ph",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 62
+        }
+      ]
+    },
+    "topic_99": {
+      "name": "视频多模态检索",
+      "keywords": [
+        "video",
+        "multimodal",
+        "videos",
+        "mllms",
+        "retrieval",
+        "understanding",
+        "visual",
+        "videoqa",
+        "long",
+        "question"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 58
+        },
+        {
+          "period": "2026-02",
+          "paper_count": 475
+        }
+      ]
+    },
+    "topic_100": {
+      "name": "可驯与Sofic代数作用",
+      "keywords": [
+        "algebras",
+        "algebra",
+        "sofic",
+        "amenable",
+        "actions",
+        "group",
+        "unital",
+        "rokhlin",
+        "mathcal",
+        "countable"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 61
+        }
+      ]
+    },
+    "topic_101": {
+      "name": "量子密码与后量子安全",
+      "keywords": [
+        "qkd",
+        "security",
+        "pqc",
+        "quantum",
+        "cryptographic",
+        "protocol",
+        "cryptography",
+        "key",
+        "secure",
+        "protocols"
+      ],
+      "category": "quant-ph",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 60
+        }
+      ]
+    },
+    "topic_102": {
+      "name": "流形与勒让德里安纽结",
+      "keywords": [
+        "manifolds",
+        "knots",
+        "manifold",
+        "genus",
+        "legendrian",
+        "contact",
+        "seifert",
+        "cobordism",
+        "surgery",
+        "homology"
+      ],
+      "category": "cond-mat",
+      "history": [
+        {
+          "period": "2025-12",
+          "paper_count": 44
+        }
+      ]
+    },
+    "topic_103": {
+      "name": "人工智能治理框架",
+      "keywords": [
+        "ai",
+        "governance",
+        "legal",
+        "regulatory",
+        "technical",
+        "risks",
+        "institutional",
+        "accountability",
+        "systems",
+        "public"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 60
+        }
+      ]
+    },
+    "topic_104": {
+      "name": "人口属性公平性研究",
+      "keywords": [
+        "fairness",
+        "fair",
+        "demographic",
+        "unfairness",
+        "attributes",
+        "algorithmic",
+        "sensitive",
+        "bias",
+        "group",
+        "policing"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 59
+        }
+      ]
+    },
+    "topic_105": {
+      "name": "法律专利推理与大模型",
+      "keywords": [
+        "legal",
+        "patent",
+        "reasoning",
+        "judicial",
+        "llms",
+        "law",
+        "evaluation",
+        "legally",
+        "compliance",
+        "benchmark"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 53
+        }
+      ]
+    },
+    "topic_106": {
+      "name": "医学影像重建技术",
+      "keywords": [
+        "mri",
+        "ct",
+        "reconstruction",
+        "image",
+        "imaging",
+        "dose",
+        "tomography",
+        "pet",
+        "diffusion",
+        "denoising"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 58
+        }
+      ]
+    },
+    "topic_107": {
+      "name": "贝叶斯后验推断",
+      "keywords": [
+        "posterior",
+        "bayesian",
+        "likelihood",
+        "inference",
+        "prior",
+        "selection",
+        "mcmc",
+        "approximations",
+        "misspecification",
+        "gaussian"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 52
+        }
+      ]
+    },
+    "topic_108": {
+      "name": "保形预测与不确定性",
+      "keywords": [
+        "conformal",
+        "prediction",
+        "coverage",
+        "sets",
+        "uncertainty",
+        "guarantees",
+        "conditional",
+        "conformity",
+        "nonconformity",
+        "risk"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 55
+        }
+      ]
+    },
+    "topic_109": {
+      "name": "虚拟现实人机交互界面",
+      "keywords": [
+        "vr",
+        "reality",
+        "virtual",
+        "ehmis",
+        "ehmi",
+        "immersive",
+        "ar",
+        "user",
+        "participants",
+        "pedestrians"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 52
+        }
+      ]
+    },
+    "topic_110": {
+      "name": "冰立方惰性中微子",
+      "keywords": [
+        "neutrino",
+        "neutrinos",
+        "sterile",
+        "flavor",
+        "icecube",
+        "nsi",
+        "oscillation",
+        "dune",
+        "deepcore",
+        "θ_"
+      ],
+      "category": "astro-ph",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 54
+        }
+      ]
+    },
+    "topic_111": {
+      "name": "贝叶斯混合后验推断",
+      "keywords": [
+        "bayesian",
+        "posterior",
+        "mcmc",
+        "gibbs",
+        "mixture",
+        "sampler",
+        "distributions",
+        "nonparametric",
+        "bayes",
+        "likelihood"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 54
+        }
+      ]
+    },
+    "topic_112": {
+      "name": "多智能体资源分配",
+      "keywords": [
+        "envy",
+        "goods",
+        "mms",
+        "allocation",
+        "agents",
+        "allocations",
+        "indivisible",
+        "preferences",
+        "welfare",
+        "valuations"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 53
+        }
+      ]
+    },
+    "topic_113": {
+      "name": "抗扰动预测控制",
+      "keywords": [
+        "control",
+        "mpc",
+        "predictive",
+        "disturbances",
+        "controllers",
+        "controller",
+        "safety",
+        "backstepping",
+        "nonlinear",
+        "barrier"
+      ],
+      "category": "eess",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 53
+        }
+      ]
+    },
+    "topic_114": {
+      "name": "差分隐私成员推断",
+      "keywords": [
+        "privacy",
+        "dp",
+        "membership",
+        "mia",
+        "attacks",
+        "private",
+        "synthetic",
+        "mias",
+        "data",
+        "inference"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 52
+        }
+      ]
+    },
+    "topic_115": {
+      "name": "里德堡原子光子",
+      "keywords": [
+        "rydberg",
+        "atoms",
+        "photon",
+        "atom",
+        "atomic",
+        "quantum",
+        "mode",
+        "squeezing",
+        "cavity",
+        "states"
+      ],
+      "category": "physics",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 49
+        }
+      ]
+    },
+    "topic_116": {
+      "name": "张量范畴代数",
+      "keywords": [
+        "category",
+        "categories",
+        "tensor",
+        "algebras",
+        "algebra",
+        "braided",
+        "abelian",
+        "silting",
+        "monoidal",
+        "leibniz"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 50
+        }
+      ]
+    },
+    "topic_117": {
+      "name": "MIMO无线信道估计",
+      "keywords": [
+        "channel",
+        "csi",
+        "wireless",
+        "mimo",
+        "estimation",
+        "xl",
+        "deep",
+        "6g",
+        "dl",
+        "wifo"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 49
+        }
+      ]
+    },
+    "topic_118": {
+      "name": "GPU内存通信优化",
+      "keywords": [
+        "gpu",
+        "gpus",
+        "cpu",
+        "memory",
+        "communication",
+        "nvidia",
+        "parallelism",
+        "execution",
+        "mpi",
+        "workloads"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 49
+        }
+      ]
+    },
+    "topic_119": {
+      "name": "阿尔茨海默脑成像",
+      "keywords": [
+        "brain",
+        "fmri",
+        "alzheimer",
+        "disease",
+        "neuroimaging",
+        "connectivity",
+        "functional",
+        "ad",
+        "mri",
+        "normative"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 49
+        }
+      ]
+    },
+    "topic_120": {
+      "name": "心电光电容积描记",
+      "keywords": [
+        "ecg",
+        "ppg",
+        "electrocardiogram",
+        "cardiac",
+        "blood",
+        "heart",
+        "physiological",
+        "clinical",
+        "signals",
+        "ptb"
+      ],
+      "category": "physics",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 48
+        }
+      ]
+    },
+    "topic_121": {
+      "name": "大模型答案评估",
+      "keywords": [
+        "judge",
+        "evaluation",
+        "llm",
+        "answers",
+        "qa",
+        "human",
+        "questions",
+        "llms",
+        "question",
+        "summarization"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 48
+        }
+      ]
+    },
+    "topic_122": {
+      "name": "医学影像诊断",
+      "keywords": [
+        "medical",
+        "clinical",
+        "diagnostic",
+        "radiology",
+        "vision",
+        "vlms",
+        "image",
+        "diagnosis",
+        "report",
+        "language"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 48
+        }
+      ]
+    },
+    "topic_123": {
+      "name": "贝叶斯反问题",
+      "keywords": [
+        "inverse",
+        "posterior",
+        "problems",
+        "bayesian",
+        "prior",
+        "diffusion",
+        "sampling",
+        "priors",
+        "inversion",
+        "variational"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 47
+        }
+      ]
+    },
+    "topic_124": {
+      "name": "时间序列预测",
+      "keywords": [
+        "forecasting",
+        "series",
+        "time",
+        "forecast",
+        "temporal",
+        "chronos",
+        "tsf",
+        "alphee",
+        "foundation",
+        "naive"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2025-10",
+          "paper_count": 46
+        },
+        {
+          "period": "2025-12",
+          "paper_count": 33
+        },
+        {
+          "period": "2026-01",
+          "paper_count": 42
+        },
+        {
+          "period": "2026-02",
+          "paper_count": 11
+        }
+      ]
+    },
+    "topic_125": {
+      "name": "基因反应网络分析",
+      "keywords": [
+        "reaction",
+        "networks",
+        "gene",
+        "crns",
+        "biological",
+        "chemical",
+        "biochemical",
+        "regulatory",
+        "stochastic",
+        "systems"
+      ],
+      "category": "q-bio",
+      "history": [
+        {
+          "period": "2025-12",
+          "paper_count": 33
+        },
+        {
+          "period": "2026-02",
+          "paper_count": 16
+        }
+      ]
+    },
+    "topic_126": {
+      "name": "软件代理债务拉取请求",
+      "keywords": [
+        "prs",
+        "pull",
+        "debt",
+        "software",
+        "agents",
+        "code",
+        "requests",
+        "developers",
+        "ai",
+        "coding"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 44
+        }
+      ]
+    },
+    "topic_127": {
+      "name": "光声荧光成像",
+      "keywords": [
+        "imaging",
+        "resolution",
+        "photoacoustic",
+        "fluorescence",
+        "tissue",
+        "scatter",
+        "tomography",
+        "speckle",
+        "optical",
+        "scattering"
+      ],
+      "category": "physics",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 46
+        }
+      ]
+    },
+    "topic_128": {
+      "name": "软体接触机器人",
+      "keywords": [
+        "contact",
+        "soft",
+        "robot",
+        "robots",
+        "rod",
+        "actuation",
+        "robotic",
+        "tendon",
+        "continuum",
+        "control"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 44
+        }
+      ]
+    },
+    "topic_129": {
+      "name": "辛接触流形",
+      "keywords": [
+        "symplectic",
+        "contact",
+        "manifolds",
+        "poisson",
+        "lagrangian",
+        "forms",
+        "reeb",
+        "foliations",
+        "lie",
+        "manifold"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 44
+        }
+      ]
+    },
+    "topic_130": {
+      "name": "排列组合与相交族",
+      "keywords": [
+        "permutations",
+        "partitions",
+        "mathcal",
+        "binom",
+        "intersecting",
+        "permutation",
+        "sequences",
+        "numbers",
+        "subsequence",
+        "dyck"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 43
+        }
+      ]
+    },
+    "topic_131": {
+      "name": "Shapley特征解释方法",
+      "keywords": [
+        "explanations",
+        "shapley",
+        "shap",
+        "explanation",
+        "feature",
+        "gams",
+        "explainable",
+        "xai",
+        "counterfactual",
+        "additive"
+      ],
+      "category": "stat",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 42
+        }
+      ]
+    },
+    "topic_132": {
+      "name": "传染病传播模型",
+      "keywords": [
+        "epidemic",
+        "disease",
+        "infectious",
+        "covid",
+        "transmission",
+        "epidemiological",
+        "outbreak",
+        "infection",
+        "vaccine",
+        "vaccination"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 42
+        }
+      ]
+    },
+    "topic_133": {
+      "name": "拓扑分数陈绝缘体",
+      "keywords": [
+        "hall",
+        "chern",
+        "topological",
+        "fractional",
+        "insulators",
+        "quantized",
+        "insulator",
+        "phases",
+        "berry",
+        "bands"
+      ],
+      "category": "cond-mat",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 40
+        },
+        {
+          "period": "2026-02",
+          "paper_count": 39
+        }
+      ]
+    },
+    "topic_134": {
+      "name": "DNA序列编码与后缀",
+      "keywords": [
+        "codes",
+        "string",
+        "log",
+        "dna",
+        "suffix",
+        "length",
+        "compressed",
+        "deletion",
+        "correcting",
+        "strings"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 42
+        }
+      ]
+    },
+    "topic_135": {
+      "name": "非厄米拓扑相与趋肤效应",
+      "keywords": [
+        "hermitian",
+        "topological",
+        "skin",
+        "non",
+        "phase",
+        "localization",
+        "floquet",
+        "winding",
+        "heeger",
+        "transitions"
+      ],
+      "category": "physics",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 40
+        }
+      ]
+    },
+    "topic_136": {
+      "name": "肾脏超声内镜手术",
+      "keywords": [
+        "surgical",
+        "ultrasound",
+        "surgery",
+        "kidney",
+        "endoscopic",
+        "3d",
+        "laparoscopic",
+        "video",
+        "spinal",
+        "intraoperative"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 40
+        }
+      ]
+    },
+    "topic_137": {
+      "name": "时间序列异常检测",
+      "keywords": [
+        "anomaly",
+        "anomalies",
+        "detection",
+        "series",
+        "tsad",
+        "time",
+        "gad",
+        "krone",
+        "normal",
+        "multivariate"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 40
+        }
+      ]
+    },
+    "topic_138": {
+      "name": "量子线路与酉操作",
+      "keywords": [
+        "circuit",
+        "quantum",
+        "circuits",
+        "qubit",
+        "unitaries",
+        "unitary",
+        "grover",
+        "gates",
+        "gate",
+        "algorithms"
+      ],
+      "category": "quant-ph",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 39
+        }
+      ]
+    },
+    "topic_139": {
+      "name": "科学发现智能体研究",
+      "keywords": [
+        "scientific",
+        "discovery",
+        "research",
+        "agents",
+        "agent",
+        "ai",
+        "science",
+        "end",
+        "bench",
+        "hypotheses"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 39
+        }
+      ]
+    },
+    "topic_140": {
+      "name": "凸体与体积研究",
+      "keywords": [
+        "convex",
+        "bodies",
+        "volume",
+        "tetrahedron",
+        "ball",
+        "body",
+        "polyhedra",
+        "polytope",
+        "euclidean",
+        "planar"
+      ],
+      "category": "math-ph",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 38
+        }
+      ]
+    },
+    "topic_141": {
+      "name": "细胞化学反应",
+      "keywords": [
+        "cell",
+        "reaction",
+        "chemical",
+        "cells",
+        "biological",
+        "gene",
+        "redox",
+        "cellular",
+        "phenotypes",
+        "plant"
+      ],
+      "category": "q-bio",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 39
+        }
+      ]
+    },
+    "topic_142": {
+      "name": "地震断层反演",
+      "keywords": [
+        "seismic",
+        "earthquake",
+        "fault",
+        "geological",
+        "inversion",
+        "slip",
+        "subsurface",
+        "earthquakes",
+        "fwi",
+        "faults"
+      ],
+      "category": "physics",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 38
+        }
+      ]
+    },
+    "topic_143": {
+      "name": "细胞基因扰动测序",
+      "keywords": [
+        "cell",
+        "gene",
+        "seq",
+        "rna",
+        "perturbation",
+        "biological",
+        "scrna",
+        "regulatory",
+        "genes",
+        "single"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 39
+        }
+      ]
+    },
+    "topic_144": {
+      "name": "移动智能体界面",
+      "keywords": [
+        "gui",
+        "mobile",
+        "agents",
+        "agent",
+        "ui",
+        "web",
+        "execution",
+        "osworld",
+        "grounding",
+        "computer"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 38
+        }
+      ]
+    },
+    "topic_145": {
+      "name": "比特币市场波动",
+      "keywords": [
+        "market",
+        "price",
+        "liquidity",
+        "volatility",
+        "bitcoin",
+        "markets",
+        "trading",
+        "cbdc",
+        "bank",
+        "risk"
+      ],
+      "category": "q-fin",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 38
+        }
+      ]
+    },
+    "topic_146": {
+      "name": "ZF基数选择公理",
+      "keywords": [
+        "cardinals",
+        "mathsf",
+        "cardinal",
+        "zf",
+        "choice",
+        "club",
+        "axiom",
+        "1_2",
+        "c_δ",
+        "scott"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 37
+        }
+      ]
+    },
+    "topic_147": {
+      "name": "整数域三项式生成",
+      "keywords": [
+        "mathbb",
+        "trinomials",
+        "fields",
+        "integers",
+        "monogenic",
+        "polynomials",
+        "polynomial",
+        "ax",
+        "let",
+        "number"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 37
+        }
+      ]
+    },
+    "topic_148": {
+      "name": "凸多边形顶点结构",
+      "keywords": [
+        "triangle",
+        "triangles",
+        "polygons",
+        "convex",
+        "vertices",
+        "polygon",
+        "points",
+        "hull",
+        "sides",
+        "polyhedra"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 37
+        }
+      ]
+    },
+    "topic_149": {
+      "name": "双耳麦克风阵列",
+      "keywords": [
+        "microphone",
+        "acoustic",
+        "binaural",
+        "microphones",
+        "array",
+        "sound",
+        "rtf",
+        "doa",
+        "reverberation",
+        "room"
+      ],
+      "category": "eess",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 37
+        }
+      ]
+    },
+    "topic_150": {
+      "name": "无穷范畴与松纤维化",
+      "keywords": [
+        "categories",
+        "category",
+        "infty",
+        "fibrations",
+        "lax",
+        "monoidal",
+        "enriched",
+        "functors",
+        "colimits",
+        "morphisms"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 36
+        }
+      ]
+    },
+    "topic_151": {
+      "name": "群体遗传溯祖模型",
+      "keywords": [
+        "population",
+        "coalescent",
+        "reproduction",
+        "mutation",
+        "moran",
+        "birth",
+        "offspring",
+        "ancestral",
+        "populations",
+        "fixation"
+      ],
+      "category": "q-bio",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 35
+        }
+      ]
+    },
+    "topic_152": {
+      "name": "多模态缺失模态学习",
+      "keywords": [
+        "modality",
+        "modalities",
+        "multimodal",
+        "modal",
+        "missing",
+        "alignment",
+        "cross",
+        "learning",
+        "shared",
+        "unimodal"
+      ],
+      "category": "stat",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 36
+        }
+      ]
+    },
+    "topic_153": {
+      "name": "自旋玻璃相变研究",
+      "keywords": [
+        "ising",
+        "spin",
+        "glass",
+        "bf",
+        "transition",
+        "phase",
+        "disorder",
+        "critical",
+        "order",
+        "temperature"
+      ],
+      "category": "cond-mat",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 36
+        }
+      ]
+    },
+    "topic_154": {
+      "name": "等变拓扑主成分分析",
+      "keywords": [
+        "equivariant",
+        "spd",
+        "symmetries",
+        "topology",
+        "pca",
+        "geometric",
+        "symmetry",
+        "learning",
+        "neural",
+        "metric"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 36
+        }
+      ]
+    },
+    "topic_155": {
+      "name": "激光等离子体尾波电子束",
+      "keywords": [
+        "laser",
+        "plasma",
+        "wakefield",
+        "electron",
+        "beams",
+        "acceleration",
+        "beam",
+        "pulse",
+        "emittance",
+        "pulses"
+      ],
+      "category": "physics",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 35
+        }
+      ]
+    },
+    "topic_156": {
+      "name": "全息对偶与Krylov复杂度",
+      "keywords": [
+        "holographic",
+        "cft",
+        "ads",
+        "bulk",
+        "krylov",
+        "holography",
+        "entanglement",
+        "cfts",
+        "entropy",
+        "gravity"
+      ],
+      "category": "hep-th",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 35
+        }
+      ]
+    },
+    "topic_157": {
+      "name": "边缘云QUIC负载调度",
+      "keywords": [
+        "packet",
+        "load",
+        "edge",
+        "quic",
+        "cloud",
+        "network",
+        "latency",
+        "streaming",
+        "ethernet",
+        "congestion"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 35
+        }
+      ]
+    },
+    "topic_158": {
+      "name": "可重构光子数字计算",
+      "keywords": [
+        "photonic",
+        "optical",
+        "computing",
+        "digital",
+        "reconfiguration",
+        "neuromorphic",
+        "spiking",
+        "spim",
+        "skylight",
+        "chip"
+      ],
+      "category": "cond-mat",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 34
+        }
+      ]
+    },
+    "topic_159": {
+      "name": "全同态加密与隐私保护",
+      "keywords": [
+        "encryption",
+        "homomorphic",
+        "fhe",
+        "encrypted",
+        "privacy",
+        "secure",
+        "fl",
+        "he",
+        "federated",
+        "private"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 34
+        }
+      ]
+    },
+    "topic_160": {
+      "name": "线性切换反馈控制",
+      "keywords": [
+        "switched",
+        "feedback",
+        "control",
+        "linear",
+        "systems",
+        "lyapunov",
+        "controller",
+        "stabilizability",
+        "lpv",
+        "quadratic"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 34
+        }
+      ]
+    },
+    "topic_161": {
+      "name": "激光雷达点云传感",
+      "keywords": [
+        "lidar",
+        "3d",
+        "clouds",
+        "point",
+        "sensor",
+        "2d",
+        "segmentation",
+        "autonomous",
+        "camera",
+        "scene"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 34
+        }
+      ]
+    },
+    "topic_162": {
+      "name": "无标记肌电手势识别",
+      "keywords": [
+        "gesture",
+        "semg",
+        "markerless",
+        "gestures",
+        "recognition",
+        "hand",
+        "wearable",
+        "gait",
+        "camera",
+        "sensor"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 34
+        }
+      ]
+    },
+    "topic_163": {
+      "name": "拍卖定价与买方收益",
+      "keywords": [
+        "revenue",
+        "auction",
+        "auctions",
+        "price",
+        "buyers",
+        "bidders",
+        "buyer",
+        "prices",
+        "seller",
+        "autobidding"
+      ],
+      "category": "econ",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 34
+        }
+      ]
+    },
+    "topic_164": {
+      "name": "社交机器人人机交互",
+      "keywords": [
+        "robot",
+        "hri",
+        "social",
+        "robots",
+        "human",
+        "participants",
+        "robotics",
+        "embodied",
+        "interaction",
+        "design"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 33
+        }
+      ]
+    },
+    "topic_165": {
+      "name": "非线性薛定谔方程解",
+      "keywords": [
+        "blow",
+        "equation",
+        "nonlinearity",
+        "nls",
+        "solutions",
+        "nonlinear",
+        "schrödinger",
+        "mathbb",
+        "up",
+        "wave"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 33
+        }
+      ]
+    },
+    "topic_166": {
+      "name": "蒙特卡洛与Wasserstein采样",
+      "keywords": [
+        "monte",
+        "carlo",
+        "wasserstein",
+        "sampling",
+        "markov",
+        "sampler",
+        "samplers",
+        "metropolis",
+        "hmc",
+        "convergence"
+      ],
+      "category": "stat",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 31
+        }
+      ]
+    },
+    "topic_167": {
+      "name": "凯勒度量与爱因斯坦流形",
+      "keywords": [
+        "kähler",
+        "metrics",
+        "curvature",
+        "einstein",
+        "metric",
+        "holomorphic",
+        "csck",
+        "scalar",
+        "existence",
+        "kaehler"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 30
+        },
+        {
+          "period": "2026-02",
+          "paper_count": 18
+        }
+      ]
+    },
+    "topic_168": {
+      "name": "行星偏心率与迁移",
+      "keywords": [
+        "planet",
+        "planets",
+        "eccentricity",
+        "pluto",
+        "migration",
+        "saturn",
+        "planetary",
+        "resonant",
+        "disk",
+        "orbital"
+      ],
+      "category": "astro-ph",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 32
+        }
+      ]
+    },
+    "topic_169": {
+      "name": "喷注标记与LHC物理",
+      "keywords": [
+        "jet",
+        "tagging",
+        "jets",
+        "physics",
+        "lhc",
+        "collider",
+        "particle",
+        "detector",
+        "event",
+        "fake"
+      ],
+      "category": "astro-ph",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 30
+        }
+      ]
+    },
+    "topic_170": {
+      "name": "视觉大模型越狱攻击",
+      "keywords": [
+        "attack",
+        "attacks",
+        "lvlms",
+        "jailbreak",
+        "vision",
+        "adversarial",
+        "lvlm",
+        "vlms",
+        "image",
+        "box"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 32
+        }
+      ]
+    },
+    "topic_171": {
+      "name": "机器遗忘与擦除",
+      "keywords": [
+        "unlearning",
+        "forget",
+        "forgetting",
+        "forgotten",
+        "erasure",
+        "retain",
+        "machine",
+        "knowledge",
+        "unlearned",
+        "retention"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 32
+        }
+      ]
+    },
+    "topic_172": {
+      "name": "多模态时序推理预测",
+      "keywords": [
+        "series",
+        "time",
+        "forecasting",
+        "reasoning",
+        "multimodal",
+        "opentslm",
+        "abba",
+        "temporal",
+        "timeomni",
+        "tasks"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 32
+        }
+      ]
+    },
+    "topic_173": {
+      "name": "扩散对齐奖励采样",
+      "keywords": [
+        "reward",
+        "alignment",
+        "diffusion",
+        "grpo",
+        "sampling",
+        "flow",
+        "rewards",
+        "preference",
+        "matching",
+        "step"
+      ],
+      "category": "stat",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 32
+        }
+      ]
+    },
+    "topic_174": {
+      "name": "摊销贝叶斯后验推断",
+      "keywords": [
+        "bayesian",
+        "posterior",
+        "sbi",
+        "inference",
+        "amortized",
+        "neural",
+        "uncertainty",
+        "abi",
+        "npe",
+        "simulation"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 31
+        }
+      ]
+    },
+    "topic_175": {
+      "name": "选举投票委员会机制",
+      "keywords": [
+        "voting",
+        "voters",
+        "elections",
+        "voter",
+        "committee",
+        "rules",
+        "election",
+        "rule",
+        "proportionality",
+        "distortion"
+      ],
+      "category": "econ",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 31
+        }
+      ]
+    },
+    "topic_176": {
+      "name": "开放词汇目标分割计数",
+      "keywords": [
+        "segmentation",
+        "object",
+        "vocabulary",
+        "counting",
+        "oov",
+        "instance",
+        "visual",
+        "shot",
+        "sam",
+        "prompts"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 31
+        }
+      ]
+    },
+    "topic_177": {
+      "name": "合金晶界再结晶位错",
+      "keywords": [
+        "dislocation",
+        "grain",
+        "alloys",
+        "recrystallization",
+        "gb",
+        "solute",
+        "alloy",
+        "mg",
+        "strain",
+        "slip"
+      ],
+      "category": "cond-mat",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 31
+        }
+      ]
+    },
+    "topic_178": {
+      "name": "里德-所罗门码与和",
+      "keywords": [
+        "codes",
+        "reed",
+        "singleton",
+        "solomon",
+        "sum",
+        "rank",
+        "hamming",
+        "decoding",
+        "metric",
+        "distance"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 30
+        }
+      ]
+    },
+    "topic_179": {
+      "name": "拥堵定价车队调度",
+      "keywords": [
+        "transit",
+        "pricing",
+        "service",
+        "congestion",
+        "fleet",
+        "demand",
+        "route",
+        "savs",
+        "travel",
+        "routes"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 30
+        }
+      ]
+    },
+    "topic_180": {
+      "name": "高光谱图像分析",
+      "keywords": [
+        "hyperspectral",
+        "spectral",
+        "hsi",
+        "multispectral",
+        "image",
+        "spatial",
+        "msi",
+        "fusion",
+        "landmine",
+        "imaging"
+      ],
+      "category": "eess",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 30
+        }
+      ]
+    },
+    "topic_181": {
+      "name": "恒星双星脉动研究",
+      "keywords": [
+        "stars",
+        "tess",
+        "binaries",
+        "scuti",
+        "odot",
+        "stellar",
+        "eclipsing",
+        "gaia",
+        "asteroseismic",
+        "period"
+      ],
+      "category": "astro-ph",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 30
+        }
+      ]
+    },
+    "topic_182": {
+      "name": "遥感影像变化检测",
+      "keywords": [
+        "change",
+        "remote",
+        "imagery",
+        "scd",
+        "sentinel",
+        "sensing",
+        "detection",
+        "land",
+        "temporal",
+        "forest"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 30
+        }
+      ]
+    },
+    "topic_183": {
+      "name": "图拉普拉斯特征值",
+      "keywords": [
+        "graphs",
+        "graph",
+        "laplacian",
+        "eigenvalue",
+        "eigenvalues",
+        "matrix",
+        "vertex",
+        "cospectral",
+        "spectrum",
+        "a_α"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 30
+        }
+      ]
+    },
+    "topic_184": {
+      "name": "随机麦基恩-朗之万方程",
+      "keywords": [
+        "langevin",
+        "dissipation",
+        "stochastic",
+        "particle",
+        "mckean",
+        "chaos",
+        "brownian",
+        "fluctuation",
+        "propagator",
+        "vlasov"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 29
+        }
+      ]
+    },
+    "topic_185": {
+      "name": "移动边缘计算卸载",
+      "keywords": [
+        "mec",
+        "offloading",
+        "edge",
+        "wireless",
+        "latency",
+        "resource",
+        "reinforcement",
+        "ppo",
+        "vehicular",
+        "iot"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 29
+        }
+      ]
+    },
+    "topic_186": {
+      "name": "分布式共识收敛",
+      "keywords": [
+        "consensus",
+        "decentralized",
+        "distributed",
+        "convergence",
+        "communication",
+        "convex",
+        "optimization",
+        "nonconvex",
+        "colme",
+        "local"
+      ],
+      "category": "eess",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 29
+        }
+      ]
+    },
+    "topic_187": {
+      "name": "单目三维人体姿态",
+      "keywords": [
+        "pose",
+        "3d",
+        "human",
+        "skel",
+        "monocular",
+        "estimation",
+        "wild",
+        "2d",
+        "body",
+        "hpe"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 29
+        }
+      ]
+    },
+    "topic_188": {
+      "name": "NP与PSPACE证明",
+      "keywords": [
+        "np",
+        "proof",
+        "sf",
+        "pspace",
+        "propositional",
+        "logic",
+        "polynomial",
+        "rewriting",
+        "oracle",
+        "bounded"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 28
+        }
+      ]
+    },
+    "topic_189": {
+      "name": "凸体与椭球逼近",
+      "keywords": [
+        "bodies",
+        "convex",
+        "ellipsoid",
+        "body",
+        "ball",
+        "revolution",
+        "mathbb",
+        "subset",
+        "larman",
+        "euclidean"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 28
+        }
+      ]
+    },
+    "topic_190": {
+      "name": "大语言模型数学推理",
+      "keywords": [
+        "mathematics",
+        "mathematical",
+        "reasoning",
+        "llms",
+        "ai",
+        "research",
+        "formal",
+        "problems",
+        "fate",
+        "olympiad"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 28
+        }
+      ]
+    },
+    "topic_191": {
+      "name": "幻觉检测与AUROC",
+      "keywords": [
+        "hallucination",
+        "hallucinations",
+        "detection",
+        "auroc",
+        "hallucinated",
+        "llms",
+        "rag",
+        "citations",
+        "copypastellm",
+        "lumina"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 28
+        }
+      ]
+    },
+    "topic_192": {
+      "name": "成员推理与后门攻击",
+      "keywords": [
+        "membership",
+        "mia",
+        "mias",
+        "attacks",
+        "backdoor",
+        "privacy",
+        "attack",
+        "recsys",
+        "inference",
+        "clean"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 25
+        }
+      ]
+    },
+    "topic_193": {
+      "name": "张量补全与低秩分解",
+      "keywords": [
+        "tensor",
+        "tensors",
+        "nmf",
+        "completion",
+        "rank",
+        "nonnegative",
+        "decomposition",
+        "matrix",
+        "maxvol",
+        "tt"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 27
+        }
+      ]
+    },
+    "topic_194": {
+      "name": "随机粗糙平均场控制",
+      "keywords": [
+        "mean",
+        "stochastic",
+        "control",
+        "rough",
+        "quadratic",
+        "games",
+        "optimal",
+        "problem",
+        "field",
+        "bsdes"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 27
+        }
+      ]
+    },
+    "topic_195": {
+      "name": "最优子采样与SVM迁移",
+      "keywords": [
+        "transfer",
+        "svm",
+        "optimal",
+        "trees",
+        "subsampling",
+        "learning",
+        "performative",
+        "source",
+        "ssvm",
+        "regression"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 25
+        }
+      ]
+    },
+    "topic_196": {
+      "name": "缺失数据插补方法",
+      "keywords": [
+        "imputation",
+        "missing",
+        "missingness",
+        "data",
+        "mar",
+        "series",
+        "mnar",
+        "values",
+        "imts",
+        "lake"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 25
+        }
+      ]
+    },
+    "topic_197": {
+      "name": "量子编译与软件栈",
+      "keywords": [
+        "quantum",
+        "compilation",
+        "software",
+        "qpus",
+        "computing",
+        "circuit",
+        "hardware",
+        "compilers",
+        "stack",
+        "dynq"
+      ],
+      "category": "quant-ph",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 25
+        }
+      ]
+    },
+    "topic_198": {
+      "name": "锂离子固态电池",
+      "keywords": [
+        "li",
+        "batteries",
+        "lithium",
+        "ion",
+        "solid",
+        "electrolytes",
+        "anode",
+        "battery",
+        "electrode",
+        "electrolyte"
+      ],
+      "category": "cond-mat",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 26
+        }
+      ]
+    },
+    "topic_199": {
+      "name": "糖尿病视网膜病灶分割",
+      "keywords": [
+        "retinal",
+        "fundus",
+        "diabetic",
+        "retinopathy",
+        "segmentation",
+        "oct",
+        "dr",
+        "uwf",
+        "vascular",
+        "octa"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 26
+        }
+      ]
+    },
+    "topic_200": {
+      "name": "机器学习临床生存风险预测",
+      "keywords": [
+        "machine",
+        "risk",
+        "clinical",
+        "survival",
+        "auc",
+        "stratification",
+        "patients",
+        "xgboost",
+        "nepal",
+        "prediction"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 26
+        }
+      ]
+    },
+    "topic_201": {
+      "name": "演化博弈合作与声誉机制",
+      "keywords": [
+        "cooperation",
+        "game",
+        "evolutionary",
+        "social",
+        "reputation",
+        "fear",
+        "pggs",
+        "collusion",
+        "games",
+        "collective"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 26
+        }
+      ]
+    },
+    "topic_202": {
+      "name": "基塔耶夫自旋液体",
+      "keywords": [
+        "spin",
+        "liquid",
+        "kitaev",
+        "liquids",
+        "lattice",
+        "phases",
+        "gauge",
+        "csl",
+        "phase",
+        "flux"
+      ],
+      "category": "cond-mat",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 24
+        }
+      ]
+    },
+    "topic_203": {
+      "name": "对称保护拓扑相与能隙",
+      "keywords": [
+        "symmetry",
+        "gapped",
+        "phases",
+        "spt",
+        "symmetries",
+        "topological",
+        "invertible",
+        "fermionic",
+        "anomaly",
+        "anomalies"
+      ],
+      "category": "cond-mat",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 26
+        }
+      ]
+    },
+    "topic_204": {
+      "name": "盲人与视障用户可访问性",
+      "keywords": [
+        "blind",
+        "accessibility",
+        "blv",
+        "users",
+        "sighted",
+        "participants",
+        "vr",
+        "people",
+        "xr",
+        "a11y"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 26
+        }
+      ]
+    },
+    "topic_205": {
+      "name": "视觉Transformer与注意力机制",
+      "keywords": [
+        "vits",
+        "attention",
+        "transformers",
+        "vision",
+        "vit",
+        "textbf",
+        "image",
+        "fibottention",
+        "detr",
+        "perceptual"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 26
+        }
+      ]
+    },
+    "topic_206": {
+      "name": "智能体长时记忆",
+      "keywords": [
+        "memory",
+        "agents",
+        "agent",
+        "lifelong",
+        "long",
+        "self",
+        "hanabi",
+        "horizon",
+        "evolving",
+        "context"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 23
+        },
+        {
+          "period": "2026-02",
+          "paper_count": 64
+        }
+      ]
+    },
+    "topic_207": {
+      "name": "开发者AI编程感知",
+      "keywords": [
+        "software",
+        "vibe",
+        "coding",
+        "developers",
+        "genai",
+        "ai",
+        "engineering",
+        "adoption",
+        "developer",
+        "development"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 23
+        },
+        {
+          "period": "2026-02",
+          "paper_count": 18
+        }
+      ]
+    },
+    "topic_208": {
+      "name": "随机游走与分支破产过程",
+      "keywords": [
+        "walk",
+        "random",
+        "walks",
+        "branching",
+        "ruin",
+        "offspring",
+        "vspace",
+        "gsaws",
+        "baselineskip",
+        "cookie"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 25
+        }
+      ]
+    },
+    "topic_209": {
+      "name": "Harish-Chandra GL(n)",
+      "keywords": [
+        "harish",
+        "gl",
+        "chandra",
+        "adic",
+        "representations",
+        "characteristic",
+        "character",
+        "mathbb",
+        "theorem",
+        "integrability"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 24
+        }
+      ]
+    },
+    "topic_210": {
+      "name": "哈伯德模型与超导配对",
+      "keywords": [
+        "hubbard",
+        "mott",
+        "superconductivity",
+        "superconducting",
+        "pairing",
+        "charge",
+        "insulating",
+        "fermi",
+        "doping",
+        "filling"
+      ],
+      "category": "cond-mat",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 24
+        }
+      ]
+    },
+    "topic_211": {
+      "name": "拜占庭共识协议",
+      "keywords": [
+        "consensus",
+        "protocol",
+        "byzantine",
+        "protocols",
+        "log",
+        "rerouting",
+        "smr",
+        "bft",
+        "ba",
+        "backoff"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 24
+        }
+      ]
+    },
+    "topic_212": {
+      "name": "人工智能伦理道德",
+      "keywords": [
+        "moral",
+        "ethical",
+        "ai",
+        "ethics",
+        "morally",
+        "human",
+        "cognialign",
+        "decisions",
+        "morality",
+        "psychology"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 24
+        }
+      ]
+    },
+    "topic_213": {
+      "name": "贫金属星与铁丰度",
+      "keywords": [
+        "stars",
+        "fe",
+        "metallicity",
+        "metal",
+        "poor",
+        "apogee",
+        "cemp",
+        "li",
+        "abundance",
+        "abundances"
+      ],
+      "category": "astro-ph",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 24
+        }
+      ]
+    },
+    "topic_214": {
+      "name": "有向网络社区发现",
+      "keywords": [
+        "community",
+        "communities",
+        "networks",
+        "block",
+        "directed",
+        "network",
+        "centrality",
+        "sbm",
+        "edge",
+        "modularity"
+      ],
+      "category": "stat",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 24
+        }
+      ]
+    },
+    "topic_215": {
+      "name": "马尔可夫链蒙特卡洛法",
+      "keywords": [
+        "hmc",
+        "langevin",
+        "metropolis",
+        "monte",
+        "carlo",
+        "sampler",
+        "sampling",
+        "hamiltonian",
+        "hastings",
+        "tempering"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 24
+        }
+      ]
+    },
+    "topic_216": {
+      "name": "图数据子群检测",
+      "keywords": [
+        "groups",
+        "graph",
+        "group",
+        "giudici",
+        "subgroups",
+        "permutation",
+        "haagerup",
+        "primitive",
+        "artin",
+        "psu"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 24
+        }
+      ]
+    },
+    "topic_217": {
+      "name": "量子计量与纠缠态",
+      "keywords": [
+        "quantum",
+        "metrology",
+        "fisher",
+        "states",
+        "entanglement",
+        "qfi",
+        "heisenberg",
+        "entangled",
+        "hermitian",
+        "sensing"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 24
+        }
+      ]
+    },
+    "topic_218": {
+      "name": "脑功能连接成像",
+      "keywords": [
+        "brain",
+        "fmri",
+        "functional",
+        "connectivity",
+        "fc",
+        "hemodynamic",
+        "network",
+        "dependencies",
+        "schizophrenia",
+        "scz"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 22
+        }
+      ]
+    },
+    "topic_219": {
+      "name": "无人机高空作业",
+      "keywords": [
+        "uav",
+        "uavs",
+        "aerial",
+        "unmanned",
+        "altitude",
+        "swarm",
+        "haps",
+        "communication",
+        "ues",
+        "assisted"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 23
+        }
+      ]
+    },
+    "topic_220": {
+      "name": "离子与电解质电荷",
+      "keywords": [
+        "ion",
+        "ionic",
+        "electrolytes",
+        "electrolyte",
+        "charge",
+        "solvent",
+        "transport",
+        "31p",
+        "nanopores",
+        "permittivity"
+      ],
+      "category": "cond-mat",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 23
+        }
+      ]
+    },
+    "topic_221": {
+      "name": "随机积分迭代理论",
+      "keywords": [
+        "iterated",
+        "ito",
+        "stratonovich",
+        "integrals",
+        "stochastic",
+        "fourier",
+        "expansions",
+        "series",
+        "legendre",
+        "expansion"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 23
+        }
+      ]
+    },
+    "topic_222": {
+      "name": "太阳能可再生预测",
+      "keywords": [
+        "forecasting",
+        "solar",
+        "cdr",
+        "renewable",
+        "weather",
+        "irradiance",
+        "forecasts",
+        "power",
+        "clearsky",
+        "probabilistic"
+      ],
+      "category": "astro-ph",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 23
+        }
+      ]
+    },
+    "topic_223": {
+      "name": "预训练与语料标记",
+      "keywords": [
+        "training",
+        "pretraining",
+        "token",
+        "seed",
+        "corpus",
+        "icl",
+        "tokens",
+        "fvs",
+        "data",
+        "demix"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 23
+        }
+      ]
+    },
+    "topic_224": {
+      "name": "M87黑洞吸积磁化",
+      "keywords": [
+        "accretion",
+        "hole",
+        "black",
+        "magnetic",
+        "m87",
+        "jet",
+        "disk",
+        "relativistic",
+        "reconnection",
+        "eht"
+      ],
+      "category": "astro-ph",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 23
+        }
+      ]
+    },
+    "topic_225": {
+      "name": "蛋白质基因组重复",
+      "keywords": [
+        "protein",
+        "dna",
+        "genomic",
+        "plms",
+        "repetition",
+        "sequences",
+        "language",
+        "gengram",
+        "dnahnet",
+        "sequence"
+      ],
+      "category": "q-bio",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 23
+        }
+      ]
+    },
+    "topic_226": {
+      "name": "印度司法税务判决",
+      "keywords": [
+        "legal",
+        "judicial",
+        "indian",
+        "judgment",
+        "tax",
+        "court",
+        "laypeople",
+        "appellate",
+        "reasoning",
+        "stylistic"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 22
+        }
+      ]
+    },
+    "topic_227": {
+      "name": "数字水印比特嵌入",
+      "keywords": [
+        "watermarking",
+        "watermark",
+        "bit",
+        "watermarks",
+        "watermarked",
+        "detectability",
+        "text",
+        "messages",
+        "schemes",
+        "gof"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 22
+        }
+      ]
+    },
+    "topic_228": {
+      "name": "超快自旋磁子动力学",
+      "keywords": [
+        "magnon",
+        "spin",
+        "magnetization",
+        "magneto",
+        "ultrafast",
+        "laser",
+        "garnet",
+        "optical",
+        "moke",
+        "magnonic"
+      ],
+      "category": "cond-mat",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 22
+        }
+      ]
+    },
+    "topic_229": {
+      "name": "关系型表格数据库",
+      "keywords": [
+        "relational",
+        "databases",
+        "tabular",
+        "rdl",
+        "table",
+        "lake",
+        "tkg",
+        "relbench",
+        "rdb",
+        "tables"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 22
+        }
+      ]
+    },
+    "topic_230": {
+      "name": "赛季足球队员研究",
+      "keywords": [
+        "season",
+        "football",
+        "team",
+        "player",
+        "players",
+        "sports",
+        "teams",
+        "lottery",
+        "league",
+        "draft"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 22
+        }
+      ]
+    },
+    "topic_231": {
+      "name": "区块链零知识安全共识",
+      "keywords": [
+        "blockchain",
+        "consent",
+        "cryptographic",
+        "zkbid",
+        "security",
+        "voting",
+        "trust",
+        "admission",
+        "credential",
+        "service"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 22
+        }
+      ]
+    },
+    "topic_232": {
+      "name": "磁流体湍流重联研究",
+      "keywords": [
+        "turbulence",
+        "mhd",
+        "reconnection",
+        "alfvén",
+        "magnetic",
+        "kinetic",
+        "magnetohydrodynamic",
+        "alfvénic",
+        "helicity",
+        "ion"
+      ],
+      "category": "astro-ph",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 22
+        }
+      ]
+    },
+    "topic_233": {
+      "name": "人脸融合伪造识别",
+      "keywords": [
+        "forgery",
+        "facial",
+        "face",
+        "morphing",
+        "recognition",
+        "recognizability",
+        "surveillance",
+        "fpvt",
+        "dfic",
+        "lamm"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 21
+        }
+      ]
+    },
+    "topic_234": {
+      "name": "Wasserstein分布距离度量",
+      "keywords": [
+        "wasserstein",
+        "distance",
+        "mmd",
+        "distributions",
+        "kantorovich",
+        "sliced",
+        "df",
+        "distribution",
+        "transport",
+        "gaussian"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 21
+        }
+      ]
+    },
+    "topic_235": {
+      "name": "FPGA硬件加速器设计",
+      "keywords": [
+        "fpga",
+        "hardware",
+        "fpgas",
+        "accelerator",
+        "accelerators",
+        "die",
+        "casper",
+        "hls",
+        "autognn",
+        "risc"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 21
+        }
+      ]
+    },
+    "topic_236": {
+      "name": "曲面与曲线几何分析",
+      "keywords": [
+        "surfaces",
+        "minkowski",
+        "curves",
+        "bertrand",
+        "loxodromes",
+        "lorentzian",
+        "timelike",
+        "sitter",
+        "space",
+        "rotational"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 21
+        }
+      ]
+    },
+    "topic_237": {
+      "name": "优化算法性能比较",
+      "keywords": [
+        "muon",
+        "optimizers",
+        "adam",
+        "shampoo",
+        "soap",
+        "adamw",
+        "optimizer",
+        "orthogonalized",
+        "updates",
+        "namo"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 21
+        }
+      ]
+    },
+    "topic_238": {
+      "name": "路径规划与调度问题",
+      "keywords": [
+        "tsp",
+        "routing",
+        "cvrp",
+        "instances",
+        "scheduling",
+        "solvers",
+        "heuristic",
+        "tour",
+        "neural",
+        "depot"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 21
+        }
+      ]
+    },
+    "topic_239": {
+      "name": "金融绿色漂洗分析",
+      "keywords": [
+        "financial",
+        "finance",
+        "greenwashing",
+        "fimi",
+        "fincot",
+        "banking",
+        "llms",
+        "payment",
+        "evaluation",
+        "unifineval"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 21
+        }
+      ]
+    },
+    "topic_240": {
+      "name": "变点检测与CUSUM",
+      "keywords": [
+        "change",
+        "changepoint",
+        "point",
+        "detection",
+        "cusum",
+        "localization",
+        "conformal",
+        "svp",
+        "statistic",
+        "irfl"
+      ],
+      "category": "stat",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 21
+        }
+      ]
+    },
+    "topic_241": {
+      "name": "星地量子密钥分发",
+      "keywords": [
+        "qkd",
+        "satellite",
+        "key",
+        "quantum",
+        "fiber",
+        "secure",
+        "distribution",
+        "secret",
+        "cv",
+        "wavefront"
+      ],
+      "category": "quant-ph",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 21
+        }
+      ]
+    },
+    "topic_242": {
+      "name": "稀疏自编码器特征学习",
+      "keywords": [
+        "saes",
+        "sae",
+        "autoencoders",
+        "features",
+        "sparse",
+        "interpretability",
+        "feature",
+        "concepts",
+        "interpretable",
+        "activations"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 20
+        }
+      ]
+    },
+    "topic_243": {
+      "name": "飞行机器人翼型设计",
+      "keywords": [
+        "aerial",
+        "flight",
+        "robot",
+        "wings",
+        "wing",
+        "underwater",
+        "control",
+        "controller",
+        "flapping",
+        "rotor"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 20
+        }
+      ]
+    },
+    "topic_244": {
+      "name": "师生蒸馏与Hyena模型",
+      "keywords": [
+        "distillation",
+        "kd",
+        "teacher",
+        "student",
+        "hyena",
+        "knowledge",
+        "cot",
+        "l2t",
+        "analogical",
+        "dwa"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 20
+        }
+      ]
+    },
+    "topic_245": {
+      "name": "孟加拉语仇恨表情包检测",
+      "keywords": [
+        "memes",
+        "meme",
+        "hate",
+        "hateful",
+        "bengali",
+        "toxicity",
+        "multimodal",
+        "cultural",
+        "detection",
+        "sexism"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 20
+        }
+      ]
+    },
+    "topic_246": {
+      "name": "Lusztig簇与Hecke表",
+      "keywords": [
+        "lusztig",
+        "2n",
+        "cluster",
+        "hecke",
+        "tableaux",
+        "ver",
+        "sf",
+        "adic",
+        "l_n",
+        "algebra"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 20
+        }
+      ]
+    },
+    "topic_247": {
+      "name": "医学图像形变配准",
+      "keywords": [
+        "registration",
+        "anatomical",
+        "medical",
+        "image",
+        "deformation",
+        "brain",
+        "polaffini",
+        "tbm",
+        "deep",
+        "clinical"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 20
+        }
+      ]
+    },
+    "topic_248": {
+      "name": "对称子多极功率谱",
+      "keywords": [
+        "power",
+        "spectrum",
+        "symmetron",
+        "dipole",
+        "multipoles",
+        "cosmological",
+        "cmb",
+        "redshift",
+        "turnover",
+        "galaxy"
+      ],
+      "category": "astro-ph",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 19
+        }
+      ]
+    },
+    "topic_249": {
+      "name": "马约拉纳拓扑模与线配对",
+      "keywords": [
+        "majorana",
+        "topological",
+        "modes",
+        "wire",
+        "pairing",
+        "superconductors",
+        "zero",
+        "mzms",
+        "superconducting",
+        "mbs"
+      ],
+      "category": "cond-mat",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 19
+        }
+      ]
+    },
+    "topic_250": {
+      "name": "精益形式化数学验证",
+      "keywords": [
+        "lean",
+        "proof",
+        "formal",
+        "mathematics",
+        "verification",
+        "mathlib",
+        "formalization",
+        "proofs",
+        "autoreal",
+        "prover"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 19
+        }
+      ]
+    },
+    "topic_251": {
+      "name": "二元极值Copula分析",
+      "keywords": [
+        "extreme",
+        "extremes",
+        "copula",
+        "maxima",
+        "bivariate",
+        "tail",
+        "lindley",
+        "wind",
+        "likelihood",
+        "value"
+      ],
+      "category": "stat",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 19
+        }
+      ]
+    },
+    "topic_252": {
+      "name": "非厄米拓扑Floquet相",
+      "keywords": [
+        "topological",
+        "hermitian",
+        "floquet",
+        "phases",
+        "nonhermitian",
+        "blt",
+        "bulk",
+        "knot",
+        "modes",
+        "states"
+      ],
+      "category": "cond-mat",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 18
+        }
+      ]
+    },
+    "topic_253": {
+      "name": "保形预测区间覆盖",
+      "keywords": [
+        "conformal",
+        "prediction",
+        "intervals",
+        "coverage",
+        "cp",
+        "calpro",
+        "quantification",
+        "interquantile",
+        "exchangeability",
+        "uncertainty"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 17
+        }
+      ]
+    },
+    "topic_254": {
+      "name": "Kähler流形与全纯丛",
+      "keywords": [
+        "kähler",
+        "holomorphic",
+        "manifolds",
+        "bundle",
+        "syz",
+        "bundles",
+        "manifold",
+        "mirror",
+        "nef",
+        "line"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 17
+        }
+      ]
+    },
+    "topic_255": {
+      "name": "视觉惯性里程计定位",
+      "keywords": [
+        "vio",
+        "inertial",
+        "odometry",
+        "kalman",
+        "localization",
+        "pose",
+        "imu",
+        "uav",
+        "ckf",
+        "kckf"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 18
+        }
+      ]
+    },
+    "topic_256": {
+      "name": "HfO2铁电极化翻转",
+      "keywords": [
+        "ferroelectric",
+        "ferroelectricity",
+        "switching",
+        "hfo2",
+        "polarization",
+        "polar",
+        "zno",
+        "films",
+        "dislocations",
+        "xmgxo"
+      ],
+      "category": "cond-mat",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 18
+        }
+      ]
+    },
+    "topic_257": {
+      "name": "固件模糊测试漏洞挖掘",
+      "keywords": [
+        "fuzzing",
+        "firmware",
+        "fuzzers",
+        "vulnerabilities",
+        "testing",
+        "greybox",
+        "fuzz",
+        "coverage",
+        "bug",
+        "directed"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 18
+        }
+      ]
+    },
+    "topic_258": {
+      "name": "铌基超导薄膜研究",
+      "keywords": [
+        "superconducting",
+        "niobium",
+        "nb",
+        "films",
+        "nb3sn",
+        "rf",
+        "film",
+        "cavities",
+        "surface",
+        "nanowire"
+      ],
+      "category": "quant-ph",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 18
+        }
+      ]
+    },
+    "topic_259": {
+      "name": "SiGe自旋量子点输运",
+      "keywords": [
+        "spin",
+        "qubit",
+        "sige",
+        "shuttling",
+        "dot",
+        "qubits",
+        "dots",
+        "readout",
+        "coupling",
+        "valley"
+      ],
+      "category": "cond-mat",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 18
+        }
+      ]
+    },
+    "topic_260": {
+      "name": "神经元活动多重分形动力学",
+      "keywords": [
+        "neurons",
+        "activity",
+        "neuron",
+        "dynamics",
+        "multifractality",
+        "neuronal",
+        "brain",
+        "collective",
+        "neural",
+        "critical"
+      ],
+      "category": "cond-mat",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 18
+        }
+      ]
+    },
+    "topic_261": {
+      "name": "碳价与气候国别研究",
+      "keywords": [
+        "carbon",
+        "emissions",
+        "climate",
+        "countries",
+        "prices",
+        "environmental",
+        "taxes",
+        "biodiversity",
+        "social",
+        "ets"
+      ],
+      "category": "physics",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 17
+        }
+      ]
+    },
+    "topic_263": {
+      "name": "多模态项目推荐",
+      "keywords": [
+        "recommendation",
+        "multimodal",
+        "item",
+        "modality",
+        "modalities",
+        "sequential",
+        "user",
+        "recommender",
+        "items",
+        "motivation"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 17
+        }
+      ]
+    },
+    "topic_264": {
+      "name": "M_黑洞吸积与SMBHs",
+      "keywords": [
+        "bh",
+        "m_",
+        "accretion",
+        "black",
+        "smbhs",
+        "bhs",
+        "holes",
+        "eddington",
+        "mass",
+        "stellar"
+      ],
+      "category": "astro-ph",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 17
+        }
+      ]
+    },
+    "topic_265": {
+      "name": "四足机器人运动控制",
+      "keywords": [
+        "locomotion",
+        "quadrupedal",
+        "legged",
+        "robots",
+        "quadruped",
+        "climbing",
+        "gaits",
+        "robot",
+        "terrains",
+        "wheeled"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 17
+        }
+      ]
+    },
+    "topic_262": {
+      "name": "时间Petri网与POWL检验",
+      "keywords": [
+        "nets",
+        "petri",
+        "timed",
+        "checking",
+        "powl",
+        "bmc",
+        "tarzan",
+        "verification",
+        "synthesis",
+        "specifications"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 18
+        }
+      ]
+    },
+    "topic_266": {
+      "name": "旋转黑洞吸积与影",
+      "keywords": [
+        "black",
+        "hole",
+        "shadow",
+        "rotating",
+        "accretion",
+        "s2",
+        "holes",
+        "bh",
+        "precession",
+        "spacetime"
+      ],
+      "category": "astro-ph",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 17
+        }
+      ]
+    },
+    "topic_267": {
+      "name": "可视化类型与图形标记",
+      "keywords": [
+        "visualization",
+        "visualizations",
+        "typology",
+        "graphics",
+        "glyph",
+        "interactive",
+        "metaphors",
+        "disaster",
+        "infographics",
+        "gdsl"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 17
+        }
+      ]
+    },
+    "topic_268": {
+      "name": "可解释AI与解释生成",
+      "keywords": [
+        "xai",
+        "explanations",
+        "explanation",
+        "explainable",
+        "explainability",
+        "ai",
+        "comparables",
+        "agentic",
+        "trust",
+        "artificial"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 17
+        }
+      ]
+    },
+    "topic_269": {
+      "name": "持久同调与Reeb理论",
+      "keywords": [
+        "persistence",
+        "reeb",
+        "homology",
+        "persistent",
+        "ph",
+        "filtrations",
+        "bivariate",
+        "topological",
+        "diagrams",
+        "rips"
+      ],
+      "category": "stat",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 17
+        }
+      ]
+    },
+    "topic_270": {
+      "name": "6G意图智能体网络",
+      "keywords": [
+        "ran",
+        "6g",
+        "intent",
+        "agentic",
+        "intents",
+        "ai",
+        "slice",
+        "native",
+        "orchestration",
+        "network"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 17
+        }
+      ]
+    },
+    "topic_271": {
+      "name": "果园作物气孔调控研究",
+      "keywords": [
+        "orchard",
+        "fruit",
+        "sorghum",
+        "stomatal",
+        "fruits",
+        "strawberry",
+        "harvest",
+        "crop",
+        "detection",
+        "yolov9"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 17
+        }
+      ]
+    },
+    "topic_272": {
+      "name": "脑表征对齐与相似性",
+      "keywords": [
+        "representational",
+        "brain",
+        "alignment",
+        "similarity",
+        "representations",
+        "predictivity",
+        "platonic",
+        "vec2vec",
+        "neural",
+        "fmri"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 17
+        }
+      ]
+    },
+    "topic_273": {
+      "name": "可积系统与李对称性",
+      "keywords": [
+        "integrable",
+        "integrability",
+        "equations",
+        "symmetries",
+        "lie",
+        "invariant",
+        "conservation",
+        "differential",
+        "superintegrable",
+        "poisson"
+      ],
+      "category": "physics",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 17
+        }
+      ]
+    },
+    "topic_274": {
+      "name": "代理优化与目标决策",
+      "keywords": [
+        "objective",
+        "optimization",
+        "surrogate",
+        "moot",
+        "cobra",
+        "qd",
+        "metaheuristics",
+        "search",
+        "diversity",
+        "dops"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 17
+        }
+      ]
+    },
+    "topic_275": {
+      "name": "因果发现与FMCI方法",
+      "keywords": [
+        "causal",
+        "discovery",
+        "fmcit",
+        "causalcompass",
+        "lcms",
+        "temporal",
+        "abm",
+        "aci",
+        "series",
+        "rcv"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 17
+        }
+      ]
+    },
+    "topic_277": {
+      "name": "社交智能体交互分析",
+      "keywords": [
+        "moltbook",
+        "social",
+        "agents",
+        "posts",
+        "agent",
+        "human",
+        "ai",
+        "openclaw",
+        "comments",
+        "communities"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 17
+        }
+      ]
+    },
+    "topic_276": {
+      "name": "量子张量动力学模拟",
+      "keywords": [
+        "mbl",
+        "quantum",
+        "tebd",
+        "tempo",
+        "tensor",
+        "pauli",
+        "hamiltonian",
+        "imaginary",
+        "product",
+        "hamiltonians"
+      ],
+      "category": "quant-ph",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 17
+        }
+      ]
+    },
+    "topic_278": {
+      "name": "WASP-4大气层研究",
+      "keywords": [
+        "atmospheric",
+        "atmosphere",
+        "atmospheres",
+        "_4",
+        "wasp",
+        "helium",
+        "jwst",
+        "magma",
+        "80606",
+        "planetary"
+      ],
+      "category": "astro-ph",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 17
+        }
+      ]
+    },
+    "topic_279": {
+      "name": "棒球运动员团队",
+      "keywords": [
+        "player",
+        "sports",
+        "baseball",
+        "league",
+        "team",
+        "batting",
+        "basketball",
+        "pitch",
+        "lineup",
+        "xg"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 15
+        }
+      ]
+    },
+    "topic_280": {
+      "name": "原初引力波探测",
+      "keywords": [
+        "gravitational",
+        "primordial",
+        "gw",
+        "gws",
+        "waves",
+        "kination",
+        "holes",
+        "bubble",
+        "black",
+        "cgwb"
+      ],
+      "category": "hep-ph",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 16
+        }
+      ]
+    },
+    "topic_281": {
+      "name": "μ子物理与对撞机",
+      "keywords": [
+        "muon",
+        "muonium",
+        "physics",
+        "eic",
+        "collider",
+        "experiment",
+        "antimuonium",
+        "beam",
+        "2νββ",
+        "lepton"
+      ],
+      "category": "hep-ex",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 16
+        }
+      ]
+    },
+    "topic_282": {
+      "name": "强化学习策略优化",
+      "keywords": [
+        "reinforcement",
+        "rl",
+        "action",
+        "policy",
+        "policies",
+        "accelerator",
+        "genpo",
+        "beamline",
+        "control",
+        "offline"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 15
+        },
+        {
+          "period": "2026-02",
+          "paper_count": 256
+        }
+      ]
+    },
+    "topic_284": {
+      "name": "相交族极值问题",
+      "keywords": [
+        "intersecting",
+        "mathcal",
+        "families",
+        "geq",
+        "frankl",
+        "_n",
+        "binom",
+        "subseteq",
+        "leq",
+        "catalan"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 15
+        }
+      ]
+    },
+    "topic_285": {
+      "name": "热带混合整数规划",
+      "keywords": [
+        "integer",
+        "milp",
+        "programming",
+        "tropical",
+        "mixed",
+        "constraints",
+        "relaxation",
+        "variable",
+        "reformulations",
+        "knapsack"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 16
+        }
+      ]
+    },
+    "topic_286": {
+      "name": "胶囊内窥镜机器人",
+      "keywords": [
+        "robotic",
+        "capsule",
+        "mm",
+        "tissue",
+        "endoscopic",
+        "surgery",
+        "robot",
+        "endoluminal",
+        "ibam",
+        "surgical"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 16
+        }
+      ]
+    },
+    "topic_287": {
+      "name": "波前全息光学",
+      "keywords": [
+        "wavefront",
+        "holography",
+        "optics",
+        "hologram",
+        "optical",
+        "aberrations",
+        "gabor",
+        "imaging",
+        "spatiotemporal",
+        "stwfs"
+      ],
+      "category": "physics",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 16
+        }
+      ]
+    },
+    "topic_288": {
+      "name": "代码翻译与LLM污染",
+      "keywords": [
+        "code",
+        "pseudocode",
+        "llms",
+        "translation",
+        "contamination",
+        "programming",
+        "generation",
+        "language",
+        "software",
+        "plc"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 16
+        }
+      ]
+    },
+    "topic_289": {
+      "name": "多文化生成文本",
+      "keywords": [
+        "text",
+        "multilingual",
+        "cultural",
+        "generated",
+        "texts",
+        "culture",
+        "faid",
+        "detection",
+        "detectors",
+        "misalignment"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 16
+        }
+      ]
+    },
+    "topic_290": {
+      "name": "幺半范畴与Kleene单子",
+      "keywords": [
+        "monoidal",
+        "monad",
+        "categories",
+        "monads",
+        "kleene",
+        "distributive",
+        "algebras",
+        "category",
+        "monoids",
+        "theories"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 16
+        }
+      ]
+    },
+    "topic_291": {
+      "name": "蛋白质构象折叠模型",
+      "keywords": [
+        "conformational",
+        "protein",
+        "molecular",
+        "hasimoto",
+        "folding",
+        "hlda",
+        "sampling",
+        "peptides",
+        "cv",
+        "collective"
+      ],
+      "category": "physics",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 16
+        }
+      ]
+    },
+    "topic_283": {
+      "name": "阿诺德-坎氏样条",
+      "keywords": [
+        "kan",
+        "arnold",
+        "kolmogorov",
+        "kans",
+        "spline",
+        "trukan",
+        "networks",
+        "approximation",
+        "fekan",
+        "splines"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 16
+        }
+      ]
+    },
+    "topic_292": {
+      "name": "安全对齐与有害推理",
+      "keywords": [
+        "safety",
+        "alignment",
+        "harmful",
+        "invthink",
+        "reasoning",
+        "telecom",
+        "safe",
+        "misalignment",
+        "lrm",
+        "guard"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 16
+        }
+      ]
+    },
+    "topic_293": {
+      "name": "模块化生物运动智能",
+      "keywords": [
+        "biological",
+        "intelligence",
+        "modularity",
+        "motor",
+        "artificial",
+        "principles",
+        "movement",
+        "brain",
+        "physarum",
+        "organisms"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 16
+        }
+      ]
+    },
+    "topic_294": {
+      "name": "行列式帕斯卡矩阵PD_k研究",
+      "keywords": [
+        "determinantal",
+        "pascal",
+        "matrices",
+        "pd_k",
+        "a_",
+        "sign",
+        "determinants",
+        "det",
+        "ge",
+        "matrix"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 13
+        }
+      ]
+    },
+    "topic_295": {
+      "name": "雷达HRRP目标识别",
+      "keywords": [
+        "radar",
+        "hrrp",
+        "doppler",
+        "cfar",
+        "recognition",
+        "hgr",
+        "gesture",
+        "activities",
+        "uwb",
+        "rade"
+      ],
+      "category": "eess",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 15
+        }
+      ]
+    },
+    "topic_296": {
+      "name": "核心集近似聚类",
+      "keywords": [
+        "clustering",
+        "means",
+        "dimension",
+        "approximation",
+        "coresets",
+        "log",
+        "center",
+        "median",
+        "algorithm",
+        "coreset"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 15
+        }
+      ]
+    },
+    "topic_297": {
+      "name": "耗散超辐射相变",
+      "keywords": [
+        "liouvillian",
+        "exceptional",
+        "dissipative",
+        "phase",
+        "superradiant",
+        "transitions",
+        "points",
+        "quantum",
+        "symmetry",
+        "ssb"
+      ],
+      "category": "cond-mat",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 15
+        }
+      ]
+    },
+    "topic_298": {
+      "name": "地理空间遥感推理",
+      "keywords": [
+        "geospatial",
+        "reasoning",
+        "geozero",
+        "remote",
+        "rs",
+        "geographic",
+        "sensing",
+        "r2rag",
+        "flood",
+        "vlrs"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 15
+        }
+      ]
+    },
+    "topic_299": {
+      "name": "无质量场BRST关联子",
+      "keywords": [
+        "fields",
+        "massless",
+        "correlators",
+        "theories",
+        "brst",
+        "spin",
+        "goofy",
+        "vertices",
+        "gauge",
+        "sitter"
+      ],
+      "category": "hep-th",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 15
+        }
+      ]
+    },
+    "topic_300": {
+      "name": "彗星近日点图集研究",
+      "keywords": [
+        "comet",
+        "3i",
+        "perihelion",
+        "coma",
+        "atlas",
+        "heliocentric",
+        "interstellar",
+        "comets",
+        "cometary",
+        "fei"
+      ],
+      "category": "astro-ph",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 15
+        }
+      ]
+    },
+    "topic_301": {
+      "name": "注视点与刺激响应",
+      "keywords": [
+        "gaze",
+        "eye",
+        "fixation",
+        "participants",
+        "stimuli",
+        "passive",
+        "head",
+        "speakassis",
+        "audience",
+        "human"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 15
+        }
+      ]
+    },
+    "topic_302": {
+      "name": "高斯过程核函数研究",
+      "keywords": [
+        "gaussian",
+        "cgp",
+        "gp",
+        "processes",
+        "kernel",
+        "functional",
+        "process",
+        "pogpn",
+        "gps",
+        "mast"
+      ],
+      "category": "stat",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 15
+        }
+      ]
+    },
+    "topic_303": {
+      "name": "冰水幔结晶氢研究",
+      "keywords": [
+        "ice",
+        "water",
+        "hydrogen",
+        "mantle",
+        "crystallization",
+        "mtz",
+        "superionic",
+        "pressure",
+        "h2o",
+        "melting"
+      ],
+      "category": "cond-mat",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 15
+        }
+      ]
+    },
+    "topic_304": {
+      "name": "断层扫描正则化重建",
+      "keywords": [
+        "reconstruction",
+        "tomography",
+        "gmres",
+        "regularization",
+        "bqnpm",
+        "impedance",
+        "tomographic",
+        "pe",
+        "lista",
+        "unmatched"
+      ],
+      "category": "eess",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 15
+        }
+      ]
+    },
+    "topic_305": {
+      "name": "缺失数据插补方法",
+      "keywords": [
+        "imputation",
+        "missing",
+        "missingness",
+        "data",
+        "mcr",
+        "multiplicity",
+        "tabimpute",
+        "neighbouring",
+        "datasets",
+        "methods"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 15
+        }
+      ]
+    },
+    "topic_307": {
+      "name": "等变上同调理论",
+      "keywords": [
+        "hochschild",
+        "equivariant",
+        "cohomology",
+        "syntomic",
+        "thh",
+        "homology",
+        "c_p",
+        "underline",
+        "witt",
+        "bökstedt"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 15
+        }
+      ]
+    },
+    "topic_308": {
+      "name": "轴承故障诊断研究",
+      "keywords": [
+        "fault",
+        "bearing",
+        "diagnosis",
+        "faults",
+        "cwru",
+        "vibration",
+        "detection",
+        "sgs",
+        "bearings",
+        "dkdl"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 15
+        }
+      ]
+    },
+    "topic_309": {
+      "name": "表格基础模型探索",
+      "keywords": [
+        "tabular",
+        "tabpfn",
+        "foundation",
+        "tabnsa",
+        "gamformer",
+        "cttvae",
+        "tabarena",
+        "tabicl",
+        "tabiclv2",
+        "kmlp"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 15
+        }
+      ]
+    },
+    "topic_310": {
+      "name": "凌星行星巡天研究",
+      "keywords": [
+        "toi",
+        "planet",
+        "transiting",
+        "pm",
+        "planets",
+        "tess",
+        "jupiters",
+        "orbital",
+        "tic",
+        "period"
+      ],
+      "category": "astro-ph",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 14
+        }
+      ]
+    },
+    "topic_311": {
+      "name": "潘勒韦可积方程孤子解",
+      "keywords": [
+        "painlevé",
+        "integrable",
+        "equation",
+        "solitons",
+        "solutions",
+        "dispersionless",
+        "dym",
+        "akns",
+        "rational",
+        "symmetries"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 14
+        }
+      ]
+    },
+    "topic_312": {
+      "name": "生存事件与治疗差异分析",
+      "keywords": [
+        "survival",
+        "event",
+        "treatment",
+        "icoden",
+        "survdiff",
+        "hazards",
+        "individualized",
+        "censored",
+        "hazard",
+        "outcomes"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 14
+        }
+      ]
+    },
+    "topic_313": {
+      "name": "罗宾特征值与索伯列夫空间",
+      "keywords": [
+        "eigenvalue",
+        "robin",
+        "h_g",
+        "chap",
+        "sobolev",
+        "inequality",
+        "r_g",
+        "laplacian",
+        "isoperimetric",
+        "manifolds"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 14
+        }
+      ]
+    },
+    "topic_314": {
+      "name": "波斯语方面情感分析",
+      "keywords": [
+        "sentiment",
+        "absa",
+        "aspect",
+        "opinion",
+        "persian",
+        "reviews",
+        "selsp",
+        "analysis",
+        "tourism",
+        "polarity"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 14
+        }
+      ]
+    },
+    "topic_306": {
+      "name": "电力负荷预测",
+      "keywords": [
+        "forecasting",
+        "forecasts",
+        "load",
+        "electricity",
+        "dalnet",
+        "renewable",
+        "lstm",
+        "ahead",
+        "probabilistic",
+        "bdarma"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2025-10",
+          "paper_count": 13
+        }
+      ]
+    },
+    "topic_315": {
+      "name": "氢原子四极矩超精细结构",
+      "keywords": [
+        "quadrupole",
+        "relativistic",
+        "hydrogen",
+        "hyperfine",
+        "_1",
+        "octupole",
+        "ea",
+        "muonic",
+        "corrections",
+        "calculations"
+      ],
+      "category": "physics",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 14
+        }
+      ]
+    },
+    "topic_316": {
+      "name": "电磁逆设计替代模型",
+      "keywords": [
+        "inverse",
+        "design",
+        "electromagnetic",
+        "dirtl",
+        "surrogate",
+        "dispersion",
+        "uncertainty",
+        "optigan",
+        "metamaterials",
+        "pod"
+      ],
+      "category": "physics",
+      "history": [
+        {
+          "period": "2026-01",
+          "paper_count": 12
+        }
+      ]
+    },
+    "topic_319": {
+      "name": "军校生社交网络意见分析",
+      "keywords": [
+        "opinion",
+        "opinions",
+        "social",
+        "cadets",
+        "network",
+        "beliefs",
+        "dynamics",
+        "agents",
+        "polarization",
+        "heider"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 14
+        }
+      ]
+    },
+    "topic_320": {
+      "name": "中子能谱模拟研究",
+      "keywords": [
+        "neutron",
+        "neutrons",
+        "fluka",
+        "westcott",
+        "mev",
+        "nuclear",
+        "production",
+        "zr",
+        "229m",
+        "mössbauer"
+      ],
+      "category": "nucl-th",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 14
+        }
+      ]
+    },
+    "topic_321": {
+      "name": "张量网络量子算法",
+      "keywords": [
+        "tensor",
+        "mps",
+        "quantum",
+        "vqe",
+        "qgfa",
+        "qng",
+        "qtt",
+        "d_b",
+        "tensors",
+        "subspace"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 13
+        }
+      ]
+    },
+    "topic_322": {
+      "name": "量子线性求解算法",
+      "keywords": [
+        "vec",
+        "quantum",
+        "algorithm",
+        "qls",
+        "hhl",
+        "advantage",
+        "matrices",
+        "solving",
+        "n_l",
+        "linear"
+      ],
+      "category": "quant-ph",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 13
+        }
+      ]
+    },
+    "topic_324": {
+      "name": "生物医学检索增强生成",
+      "keywords": [
+        "biomedical",
+        "rag",
+        "retrieval",
+        "biomodels",
+        "biomedsearch",
+        "bioace",
+        "entity",
+        "kb",
+        "ner",
+        "augmented"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 13
+        }
+      ]
+    },
+    "topic_326": {
+      "name": "语义场景导航系统",
+      "keywords": [
+        "navigation",
+        "scene",
+        "langmap",
+        "semantic",
+        "semnav",
+        "grounding",
+        "3dsgs",
+        "vsn",
+        "environments",
+        "vocabulary"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 13
+        }
+      ]
+    },
+    "topic_327": {
+      "name": "排队系统服务器优化",
+      "keywords": [
+        "job",
+        "queue",
+        "server",
+        "queues",
+        "queueing",
+        "servers",
+        "jobs",
+        "service",
+        "traffic",
+        "completion"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 13
+        }
+      ]
+    },
+    "topic_328": {
+      "name": "不平衡分类置信偏差",
+      "keywords": [
+        "label",
+        "imbalanced",
+        "confidence",
+        "class",
+        "bias",
+        "npe",
+        "classification",
+        "resampling",
+        "imbalance",
+        "pretrained"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 13
+        }
+      ]
+    },
+    "topic_329": {
+      "name": "对话语音说话人处理",
+      "keywords": [
+        "speaker",
+        "conversational",
+        "duplex",
+        "speech",
+        "voice",
+        "spoken",
+        "dialogue",
+        "audio",
+        "sasc",
+        "covo"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 13
+        }
+      ]
+    },
+    "topic_330": {
+      "name": "超快XUV电子像差",
+      "keywords": [
+        "electron",
+        "aberration",
+        "ultrafast",
+        "xuv",
+        "electrons",
+        "streaking",
+        "momentum",
+        "pulses",
+        "pulse",
+        "attosecond"
+      ],
+      "category": "physics",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 13
+        }
+      ]
+    },
+    "topic_331": {
+      "name": "地震断层滑移应力",
+      "keywords": [
+        "earthquakes",
+        "slip",
+        "fault",
+        "earthquake",
+        "stress",
+        "seismic",
+        "rupture",
+        "friction",
+        "faults",
+        "events"
+      ],
+      "category": "physics",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 13
+        }
+      ]
+    },
+    "topic_332": {
+      "name": "认知与随机不确定性",
+      "keywords": [
+        "epistemic",
+        "uncertainty",
+        "aleatoric",
+        "jucal",
+        "c_k",
+        "predictive",
+        "ensembles",
+        "mml",
+        "vge",
+        "edl"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 13
+        }
+      ]
+    },
+    "topic_333": {
+      "name": "区块链去中心化治理",
+      "keywords": [
+        "blockchain",
+        "decentralization",
+        "trust",
+        "txray",
+        "governance",
+        "dams",
+        "sovereignty",
+        "ai",
+        "permissionless",
+        "sovereign"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 13
+        }
+      ]
+    },
+    "topic_334": {
+      "name": "因果发现与DAG",
+      "keywords": [
+        "causal",
+        "discovery",
+        "dag",
+        "ppcr",
+        "llms",
+        "economics",
+        "dmcd",
+        "causalagent",
+        "tlvd",
+        "econcausal"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 13
+        }
+      ]
+    },
+    "topic_335": {
+      "name": "OSS项目贡献者研究",
+      "keywords": [
+        "oss",
+        "projects",
+        "contributors",
+        "oss4sg",
+        "project",
+        "community",
+        "sustainability",
+        "contributor",
+        "software",
+        "ki"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 13
+        }
+      ]
+    },
+    "topic_336": {
+      "name": "符号回归表达式合成",
+      "keywords": [
+        "symbolic",
+        "sr",
+        "egg",
+        "regression",
+        "expressions",
+        "gomea",
+        "nsr",
+        "introns",
+        "linkage",
+        "hopfield"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 13
+        }
+      ]
+    },
+    "topic_337": {
+      "name": "全息引力流体动力学",
+      "keywords": [
+        "holographic",
+        "ads",
+        "gravitational",
+        "bonnet",
+        "hydrodynamic",
+        "ksw",
+        "euclidean",
+        "gauss",
+        "bps",
+        "supergravity"
+      ],
+      "category": "hep-th",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 13
+        }
+      ]
+    },
+    "topic_338": {
+      "name": "REBCO超导磁体失超",
+      "keywords": [
+        "rebco",
+        "magnet",
+        "magnets",
+        "quench",
+        "superconducting",
+        "accelerator",
+        "discc",
+        "tape",
+        "tsa",
+        "thermal"
+      ],
+      "category": "physics",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 13
+        }
+      ]
+    },
+    "topic_339": {
+      "name": "核插值与逼近方法",
+      "keywords": [
+        "interpolation",
+        "approximation",
+        "kernels",
+        "interpolant",
+        "grids",
+        "subdivision",
+        "intrusive",
+        "clouds",
+        "kernel",
+        "irka"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 12
+        }
+      ]
+    },
+    "topic_340": {
+      "name": "亨泽尔域存在可定义性",
+      "keywords": [
+        "existential",
+        "fields",
+        "valued",
+        "henselian",
+        "definable",
+        "nip",
+        "residue",
+        "mathbb",
+        "minimal",
+        "res"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 12
+        }
+      ]
+    },
+    "topic_341": {
+      "name": "氮空位金刚石色心",
+      "keywords": [
+        "nv",
+        "diamond",
+        "centers",
+        "nitrogen",
+        "vacancy",
+        "sensitivity",
+        "magnetic",
+        "magnetometry",
+        "smms",
+        "odmr"
+      ],
+      "category": "physics",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 12
+        }
+      ]
+    },
+    "topic_342": {
+      "name": "情绪市场金融协方差交易",
+      "keywords": [
+        "sentiment",
+        "market",
+        "financial",
+        "covar",
+        "trading",
+        "price",
+        "finbert",
+        "overreactions",
+        "asset",
+        "stock"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 12
+        }
+      ]
+    },
+    "topic_345": {
+      "name": "湍流PITO转换模型",
+      "keywords": [
+        "turbulence",
+        "turbulent",
+        "pito",
+        "conv",
+        "piito",
+        "fi",
+        "reynolds",
+        "fluid",
+        "subgrid",
+        "flow"
+      ],
+      "category": "physics",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 12
+        }
+      ]
+    },
+    "topic_346": {
+      "name": "多宇宙存储恢复机制",
+      "keywords": [
+        "storage",
+        "heal",
+        "recovery",
+        "multiverse",
+        "tidehunter",
+        "stms",
+        "resilience",
+        "distributed",
+        "workloads",
+        "streamshield"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 12
+        }
+      ]
+    },
+    "topic_347": {
+      "name": "演化经济合作博弈",
+      "keywords": [
+        "cooperation",
+        "concession",
+        "economy",
+        "evolutionary",
+        "prejudice",
+        "ambush",
+        "social",
+        "game",
+        "his",
+        "ais"
+      ],
+      "category": "physics",
+      "history": [
+        {
+          "period": "2025-10",
+          "paper_count": 10
+        }
+      ]
+    },
+    "topic_348": {
+      "name": "聚合物材料MD工作流",
+      "keywords": [
+        "polymer",
+        "materials",
+        "workflows",
+        "md",
+        "r2",
+        "topolyagent",
+        "discovery",
+        "batching",
+        "polymers",
+        "sólido"
+      ],
+      "category": "cond-mat",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 12
+        }
+      ]
+    },
+    "topic_350": {
+      "name": "量子引力与引力子",
+      "keywords": [
+        "gravitational",
+        "gravity",
+        "quantum",
+        "graviton",
+        "gravitationally",
+        "lagrangians",
+        "decoherence",
+        "mass",
+        "superpositions",
+        "newtonian"
+      ],
+      "category": "gr-qc",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 12
+        }
+      ]
+    },
+    "topic_317": {
+      "name": "非广延热力学熵定律",
+      "keywords": [
+        "entropy",
+        "entropies",
+        "law",
+        "thermodynamics",
+        "tsallis",
+        "informational",
+        "thermodynamic",
+        "replica",
+        "ep",
+        "second"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 14
+        }
+      ]
+    },
+    "topic_318": {
+      "name": "德西特时空量子引力",
+      "keywords": [
+        "sitter",
+        "gravity",
+        "quantum",
+        "spacetime",
+        "de",
+        "covariant",
+        "hilbert",
+        "algebra",
+        "diffeomorphism",
+        "observers"
+      ],
+      "category": "cond-mat",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 14
+        }
+      ]
+    },
+    "topic_323": {
+      "name": "隐私数据匿名化效用",
+      "keywords": [
+        "pii",
+        "privacy",
+        "anonymization",
+        "personally",
+        "utility",
+        "identifiers",
+        "leakage",
+        "sanitization",
+        "tutoring",
+        "privasis"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 13
+        }
+      ]
+    },
+    "topic_325": {
+      "name": "最优投资组合效用",
+      "keywords": [
+        "portfolio",
+        "utility",
+        "optimal",
+        "investment",
+        "merton",
+        "wealth",
+        "assets",
+        "risky",
+        "risk",
+        "mccormick"
+      ],
+      "category": "q-fin",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 13
+        }
+      ]
+    },
+    "topic_343": {
+      "name": "最优控制与HJB方程",
+      "keywords": [
+        "optimal",
+        "control",
+        "horizon",
+        "hjb",
+        "controls",
+        "terminal",
+        "nonlinear",
+        "port",
+        "kdv",
+        "infinite"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 12
+        }
+      ]
+    },
+    "topic_344": {
+      "name": "银河星团金属丰度研究",
+      "keywords": [
+        "metallicity",
+        "stellar",
+        "gaia",
+        "clusters",
+        "milky",
+        "mass",
+        "satellites",
+        "substructures",
+        "halo",
+        "ocs"
+      ],
+      "category": "astro-ph",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 12
+        }
+      ]
+    },
+    "topic_349": {
+      "name": "并发线程死锁研究",
+      "keywords": [
+        "deadlock",
+        "lock",
+        "deadlocks",
+        "concurrent",
+        "thread",
+        "nets",
+        "concurrency",
+        "coroutine",
+        "calculus",
+        "mutexes"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 12
+        }
+      ]
+    },
+    "topic_351": {
+      "name": "高速缓存压缩优化",
+      "keywords": [
+        "kv",
+        "cache",
+        "compression",
+        "prefill",
+        "fastkv",
+        "caches",
+        "eviction",
+        "deltakv",
+        "compilerkv",
+        "fusedkv"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 12
+        }
+      ]
+    },
+    "topic_352": {
+      "name": "稀疏建模与误发现率控制",
+      "keywords": [
+        "lasso",
+        "knockoffs",
+        "knockoff",
+        "lar",
+        "fdr",
+        "selection",
+        "variable",
+        "bootstrap",
+        "predictors",
+        "procedure"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 11
+        }
+      ]
+    },
+    "topic_353": {
+      "name": "无穷参数方程表示",
+      "keywords": [
+        "infty",
+        "u_",
+        "qquad",
+        "θ_",
+        "_x",
+        "xx",
+        "xt",
+        "u_t",
+        "big",
+        "initial"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 11
+        }
+      ]
+    },
+    "topic_355": {
+      "name": "陆地生态系统服务",
+      "keywords": [
+        "ecosystem",
+        "land",
+        "es",
+        "services",
+        "ecosystems",
+        "biodiversity",
+        "urban",
+        "eds",
+        "hfgt",
+        "economic"
+      ],
+      "category": "q-fin",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 11
+        }
+      ]
+    },
+    "topic_356": {
+      "name": "量子热力学与熵",
+      "keywords": [
+        "thermodynamic",
+        "thermodynamics",
+        "entropy",
+        "quantum",
+        "thermal",
+        "production",
+        "tur",
+        "coherence",
+        "fluctuations",
+        "classical"
+      ],
+      "category": "quant-ph",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 11
+        }
+      ]
+    },
+    "topic_357": {
+      "name": "格点规范场理论",
+      "keywords": [
+        "gauge",
+        "lattice",
+        "su",
+        "theories",
+        "deconfinement",
+        "qcd",
+        "chromodynamics",
+        "action",
+        "fp",
+        "differentiation"
+      ],
+      "category": "quant-ph",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 11
+        }
+      ]
+    },
+    "topic_358": {
+      "name": "网络传染病免疫",
+      "keywords": [
+        "infected",
+        "contagion",
+        "immunization",
+        "epidemic",
+        "network",
+        "individuals",
+        "asymptomatic",
+        "spreading",
+        "nodes",
+        "epidemics"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 11
+        }
+      ]
+    },
+    "topic_359": {
+      "name": "生存分析与竞争风险",
+      "keywords": [
+        "censoring",
+        "survival",
+        "mortality",
+        "cox",
+        "competing",
+        "perr",
+        "qol",
+        "treatment",
+        "dropout",
+        "multimorbidity"
+      ],
+      "category": "stat",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 11
+        }
+      ]
+    },
+    "topic_360": {
+      "name": "深度学者科研计量研究",
+      "keywords": [
+        "research",
+        "deepscholar",
+        "academic",
+        "expert",
+        "scientometric",
+        "deep",
+        "idea",
+        "bench",
+        "innoeval",
+        "acal"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 11
+        }
+      ]
+    },
+    "topic_361": {
+      "name": "三维CAD部件资产建模",
+      "keywords": [
+        "3d",
+        "cad",
+        "partuv",
+        "assetformer",
+        "assets",
+        "seg",
+        "flexam",
+        "trimm",
+        "unwrapping",
+        "appearance"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 10
+        }
+      ]
+    },
+    "topic_362": {
+      "name": "安卓恶意软件Pickle分析",
+      "keywords": [
+        "malware",
+        "pickle",
+        "android",
+        "malicious",
+        "malcve",
+        "pidsmaker",
+        "pickleball",
+        "f1",
+        "detection",
+        "benign"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 10
+        }
+      ]
+    },
+    "topic_363": {
+      "name": "图与局部校验问题",
+      "keywords": [
+        "graph",
+        "graphs",
+        "fo",
+        "lcl",
+        "problems",
+        "checkable",
+        "if",
+        "rounds",
+        "temporal",
+        "houri"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 10
+        }
+      ]
+    },
+    "topic_364": {
+      "name": "多项式边界初等理论",
+      "keywords": [
+        "polynomials",
+        "border",
+        "polynomial",
+        "elementary",
+        "castelnuovo",
+        "multivariate",
+        "rational",
+        "discriminants",
+        "mumford",
+        "polymatroids"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 10
+        }
+      ]
+    },
+    "topic_365": {
+      "name": "沉浸式AR对话记忆导航",
+      "keywords": [
+        "immersive",
+        "memento",
+        "ar",
+        "pathvis",
+        "conversational",
+        "vr",
+        "touch",
+        "everyday",
+        "handover",
+        "presbyopia"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 10
+        }
+      ]
+    },
+    "topic_366": {
+      "name": "冷冻电镜构象重建网络",
+      "keywords": [
+        "cryo",
+        "em",
+        "cryonet",
+        "microscopy",
+        "conformational",
+        "solvar",
+        "electron",
+        "mmse",
+        "heterogeneity",
+        "protein"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 10
+        }
+      ]
+    },
+    "topic_367": {
+      "name": "多智能体博弈强化学习",
+      "keywords": [
+        "games",
+        "mf",
+        "mfg",
+        "agents",
+        "marl",
+        "agent",
+        "mappo",
+        "team",
+        "lmfppo",
+        "ubp"
+      ],
+      "category": "cond-mat",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 10
+        }
+      ]
+    },
+    "topic_368": {
+      "name": "双曲曲面半经典半连续性",
+      "keywords": [
+        "hyperbolic",
+        "surfaces",
+        "semicontinuity",
+        "riesz",
+        "semiclassical",
+        "uniform",
+        "transforms",
+        "systole",
+        "petersson",
+        "capacity"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 10
+        }
+      ]
+    },
+    "topic_369": {
+      "name": "跨性别公平性偏差评测",
+      "keywords": [
+        "bias",
+        "fairness",
+        "transgender",
+        "mcqa",
+        "gender",
+        "framing",
+        "disparities",
+        "biases",
+        "stereotype",
+        "pba"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 10
+        }
+      ]
+    },
+    "topic_370": {
+      "name": "组织AI成熟度与员工人本AI",
+      "keywords": [
+        "ai",
+        "maturity",
+        "organizational",
+        "hcai",
+        "employees",
+        "adoption",
+        "governance",
+        "organizations",
+        "genai",
+        "technology"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 10
+        }
+      ]
+    },
+    "topic_371": {
+      "name": "奥野贝西科维奇拓扑熵",
+      "keywords": [
+        "ohno",
+        "besicovitch",
+        "c_λ",
+        "topological",
+        "pesin",
+        "measure",
+        "pitskel",
+        "entropy",
+        "lebesgue",
+        "historic"
+      ],
+      "category": "math",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 10
+        }
+      ]
+    },
+    "topic_372": {
+      "name": "虚拟人因舒适度与用户体验",
+      "keywords": [
+        "virtual",
+        "manikin",
+        "comfort",
+        "encountered",
+        "user",
+        "ethos",
+        "exoskeletons",
+        "assistance",
+        "interaction",
+        "therapist"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 10
+        }
+      ]
+    },
+    "topic_373": {
+      "name": "领域偏移与条件目标偏差",
+      "keywords": [
+        "domain",
+        "shifts",
+        "conditional",
+        "target",
+        "bias",
+        "domains",
+        "distribution",
+        "dg",
+        "invariant",
+        "source"
+      ],
+      "category": "cs",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 10
+        }
+      ]
+    },
+    "topic_374": {
+      "name": "恒星雾质量与MESA演化",
+      "keywords": [
+        "stellar",
+        "mist",
+        "mass",
+        "tams",
+        "mesa",
+        "metallicity",
+        "stars",
+        "rsg",
+        "kink",
+        "envelope"
+      ],
+      "category": "astro-ph",
+      "history": [
+        {
+          "period": "2026-02",
+          "paper_count": 10
+        }
+      ]
+    }
+  }
+}

@@ -1,4 +1,7 @@
-data/
+# Data files - 排除原始数据但保留输出JSON
+data/input/
+data/raw/
+data/processed/
 frontend/public/data/
 *.pkl
 *.npy
