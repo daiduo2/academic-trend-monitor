@@ -1,0 +1,10 @@
+data/
+frontend/public/data/
+*.pkl
+*.npy
+__pycache__/
+.pytest_cache/
+*.log
+.DS_Store
+node_modules/
+frontend/node_modules/
