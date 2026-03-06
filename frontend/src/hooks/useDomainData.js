@@ -12,8 +12,8 @@ export function useDomainData() {
         const basePath = import.meta.env.BASE_URL || '/';
 
         const [structureRes, trendsRes] = await Promise.all([
-          fetch(`${basePath}data/aligned_topics.json`),
-          fetch(`${basePath}data/aligned_topics.json`)
+          fetch(`${basePath}data/aligned_topics_hierarchy.json`),
+          fetch(`${basePath}data/aligned_topics_hierarchy.json`)
         ]);
 
         if (!structureRes.ok || !trendsRes.ok) {
