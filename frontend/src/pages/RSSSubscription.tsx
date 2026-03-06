@@ -1,0 +1,145 @@
+// frontend/src/pages/RSSSubscription.tsx
+import React, { useMemo } from 'react';
+import { TagSelector } from '../components/TagSelector';
+import { useTopics } from '../hooks/useTopics';
+import { useRecentPapers } from '../hooks/useRecentPapers';
+import { useWeeklyTrends } from '../hooks/useWeeklyTrends';
+import { usePreferences } from '../hooks/usePreferences';
+import { generateAtomFeed, generateJSONFeed, downloadFeed, copyToClipboard } from '../utils/rssGenerator';
+
+export function RSSSubscription() {
+  const { topics, loading: topicsLoading } = useTopics();
+  const { papers, loading: papersLoading } = useRecentPapers();
+  const { report: weeklyReport, loading: trendsLoading } = useWeeklyTrends();
+  const { preferences, loaded: prefsLoaded, toggleTag, updateFormat } = usePreferences();
+
+  // Calculate paper counts per topic
+  const paperCounts = useMemo(() => {
+    const counts: Record<string, number> = {};
+    papers.forEach(paper => {
+      paper.g.forEach(tagId => {
+        counts[tagId] = (counts[tagId] || 0) + 1;
+      });
+    });
+    return counts;
+  }, [papers]);
+
+  // Filter papers by subscribed tags
+  const filteredPapers = useMemo(() => {
+    if (!preferences.subscribedTags.length) return [];
+    return papers.filter(paper =>
+      paper.g.some(tagId => preferences.subscribedTags.includes(String(tagId)))
+    );
+  }, [papers, preferences.subscribedTags]);
+
+  const handleGenerateRSS = () => {
+    if (!topics) return;
+
+    const topicRecord = Object.entries(topics.topics).reduce((acc, [id, t]) => {
+      acc[id] = t;
+      return acc;
+    }, {} as Record<string, typeof topics.topics[string]>);
+
+    if (preferences.rssFormat === 'atom') {
+      const feed = generateAtomFeed(filteredPapers, topicRecord);
+      downloadFeed(feed, 'academic-trend-feed.xml', 'application/atom+xml');
+    } else {
+      const feed = generateJSONFeed(filteredPapers, topicRecord);
+      downloadFeed(feed, 'academic-trend-feed.json', 'application/json');
+    }
+  };
+
+  const handleCopyLink = async () => {
+    // In a real implementation, this would generate a unique subscription URL
+    await copyToClipboard('https://your-github-pages-url/api/rss?tags=' + preferences.subscribedTags.join(','));
+    alert('Subscription link copied to clipboard!');
+  };
+
+  if (topicsLoading || papersLoading || trendsLoading || !prefsLoaded) {
+    return <div className="rss-subscription loading">Loading...</div>;
+  }
+
+  return (
+    <div className="rss-subscription">
+      <header>
+        <h1>Academic Trend RSS Subscription</h1>
+        <p>Subscribe to personalized academic paper feeds based on your interests</p>
+      </header>
+
+      <div className="content">
+        <section className="topic-selection">
+          <h2>Select Topics</h2>
+          <TagSelector
+            topics={topics}
+            subscribedTags={preferences.subscribedTags}
+            onToggleTag={toggleTag}
+            paperCounts={paperCounts}
+          />
+        </section>
+
+        <section className="settings">
+          <h2>Feed Settings</h2>
+
+          <div className="setting">
+            <label>RSS Format:</label>
+            <select
+              value={preferences.rssFormat}
+              onChange={e => updateFormat(e.target.value as 'atom' | 'json')}
+            >
+              <option value="atom">Atom/XML (RSS Readers)</option>
+              <option value="json">JSON Feed (Apps)</option>
+            </select>
+          </div>
+
+          <div className="preview">
+            <h3>Preview</h3>
+            <p>Subscribed to: {preferences.subscribedTags.length} topics</p>
+            <p>Matching papers (7 days): {filteredPapers.length}</p>
+            {weeklyReport && (
+              <p>Weekly trend: {weeklyReport.trends.filter(t => preferences.subscribedTags.includes(t.topic_id)).length} topics tracked</p>
+            )}
+          </div>
+
+          <div className="actions">
+            <button
+              onClick={handleGenerateRSS}
+              disabled={filteredPapers.length === 0}
+              className="primary"
+            >
+              Download Feed
+            </button>
+            <button
+              onClick={handleCopyLink}
+              disabled={preferences.subscribedTags.length === 0}
+            >
+              Copy Subscription Link
+            </button>
+          </div>
+        </section>
+
+        {weeklyReport && (
+          <section className="trends">
+            <h2>Weekly Trends</h2>
+            <div className="trend-list">
+              {weeklyReport.trends
+                .filter(t => preferences.subscribedTags.includes(t.topic_id))
+                .slice(0, 10)
+                .map(trend => (
+                  <div key={trend.topic_id} className={`trend-item ${trend.trend.direction}`}>
+                    <span className="topic-name">{trend.topic_name}</span>
+                    <span className="counts">
+                      {trend.this_week} this week
+                      {trend.last_week > 0 && ` (${trend.trend.direction === 'up' ? '+' : ''}${trend.trend.percent}%)`}
+                    </span>
+                    <span className={`direction ${trend.trend.direction}`}>
+                      {trend.trend.direction === 'up' ? '↑' : trend.trend.direction === 'down' ? '↓' : '→'}
+                    </span>
+                  </div>
+                ))}
+            </div>
+          </section>
+        )}
+      </div>
+    </div>
+  );
+}
