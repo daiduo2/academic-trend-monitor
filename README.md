@@ -2,6 +2,8 @@
 
 学术热点趋势分析仪表盘
 
+> **GEB 文档**: 本项目使用自指文档系统，详见 [PROJECT.md](PROJECT.md) 和 [docs/geb/](docs/geb/)
+
 ## 简介
 
 基于 BERTopic + LLM 的学术研究热点分析工具，支持：
