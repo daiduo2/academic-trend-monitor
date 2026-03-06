@@ -1,4 +1,4 @@
-// frontend/src/pages/RSSSubscription.tsx
+// frontend/src/pages/RSSSubscription.jsx
 import React, { useMemo } from 'react';
 import { TagSelector } from '../components/TagSelector';
 import { useTopics } from '../hooks/useTopics';
@@ -6,6 +6,7 @@ import { useRecentPapers } from '../hooks/useRecentPapers';
 import { useWeeklyTrends } from '../hooks/useWeeklyTrends';
 import { usePreferences } from '../hooks/usePreferences';
 import { generateAtomFeed, generateJSONFeed, downloadFeed, copyToClipboard } from '../utils/rssGenerator';
+import '../styles/rss.css';
 
 export function RSSSubscription() {
   const { topics, loading: topicsLoading } = useTopics();
@@ -15,7 +16,8 @@ export function RSSSubscription() {
 
   // Calculate paper counts per topic
   const paperCounts = useMemo(() => {
-    const counts: Record<string, number> = {};
+    /** @type {Record<string, number>} */
+    const counts = {};
     papers.forEach(paper => {
       paper.g.forEach(tagId => {
         counts[tagId] = (counts[tagId] || 0) + 1;
@@ -38,7 +40,7 @@ export function RSSSubscription() {
     const topicRecord = Object.entries(topics.topics).reduce((acc, [id, t]) => {
       acc[id] = t;
       return acc;
-    }, {} as Record<string, typeof topics.topics[string]>);
+    }, /** @type {Record<string, import('../types/rss').CompactTopic>} */ ({}));
 
     if (preferences.rssFormat === 'atom') {
       const feed = generateAtomFeed(filteredPapers, topicRecord);
@@ -84,7 +86,7 @@ export function RSSSubscription() {
             <label>RSS Format:</label>
             <select
               value={preferences.rssFormat}
-              onChange={e => updateFormat(e.target.value as 'atom' | 'json')}
+              onChange={e => updateFormat(e.target.value)}
             >
               <option value="atom">Atom/XML (RSS Readers)</option>
               <option value="json">JSON Feed (Apps)</option>

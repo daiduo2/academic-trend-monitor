@@ -1,0 +1,121 @@
+/* frontend/src/styles/rss.css */
+.rss-subscription {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.rss-subscription header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.rss-subscription .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.tag-selector {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.tag-selector .search-box input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.category-header {
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  background: #f5f5f5;
+  border: none;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.topic {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.topic:hover {
+  background: #f0f0f0;
+}
+
+.topic.subscribed {
+  background: #e3f2fd;
+}
+
+.topic input {
+  margin-right: 10px;
+}
+
+.topic-name {
+  flex: 1;
+}
+
+.topic-id {
+  color: #666;
+  font-size: 0.85em;
+  margin-left: 5px;
+}
+
+.topic-count {
+  color: #888;
+  font-size: 0.85em;
+}
+
+.settings {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.actions button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.actions button.primary {
+  background: #1976d2;
+  color: white;
+}
+
+.actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.trend-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.trend-item.up .direction {
+  color: green;
+}
+
+.trend-item.down .direction {
+  color: red;
+}
