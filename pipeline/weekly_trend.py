@@ -134,7 +134,8 @@ def main():
     data_dir = Path("data")
     recent_file = data_dir / "recent.jsonl"
     topics_file = data_dir / "output" / "topics.json"
-    output_file = data_dir / "weekly" / f"{datetime.now().strftime('%Y-W%W')}.json"
+    # Use date-based filename for rolling 7-day reports (YYYY-MM-DD format)
+    output_file = data_dir / "weekly" / f"{datetime.now().strftime('%Y-%m-%d')}.json"
 
     print("Analyzing weekly trends...")
     report = analyze_weekly_trends(str(recent_file), str(topics_file))

@@ -1,5 +1,5 @@
 // frontend/src/pages/RSSSubscription.jsx
-import React, { useMemo } from 'react';
+import React, { useMemo, useEffect } from 'react';
 import { TagSelector } from '../components/TagSelector';
 import { useTopics } from '../hooks/useTopics';
 import { useRecentPapers } from '../hooks/useRecentPapers';
@@ -12,7 +12,26 @@ export function RSSSubscription() {
   const { topics, loading: topicsLoading } = useTopics();
   const { papers, loading: papersLoading } = useRecentPapers();
   const { report: weeklyReport, loading: trendsLoading } = useWeeklyTrends();
-  const { preferences, loaded: prefsLoaded, toggleTag, updateFormat, updateMinScore, updateDigestMode } = usePreferences();
+  const { preferences, loaded: prefsLoaded, toggleTag, updateFormat, updateMinScore, updateDigestMode, setPreferences } = usePreferences();
+
+  // Read URL params on mount to restore shared subscription config
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const tagsParam = params.get('tags');
+    const formatParam = params.get('format');
+
+    if (tagsParam) {
+      const tags = tagsParam.split(',').filter(Boolean);
+      // Restore tags from URL
+      if (tags.length > 0) {
+        setPreferences(prev => ({ ...prev, subscribedTags: tags }));
+      }
+    }
+
+    if (formatParam && ['atom', 'json'].includes(formatParam)) {
+      setPreferences(prev => ({ ...prev, rssFormat: formatParam }));
+    }
+  }, [setPreferences]);
 
   // Calculate paper counts per topic
   const paperCounts = useMemo(() => {

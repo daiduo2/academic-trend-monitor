@@ -341,9 +341,10 @@ export default function DomainDashboard() {
             hierarchy_path: [TAXONOMY.getLayer2Display(selectedLayer1, selectedLayer2), ...drillPath, selectedTopic.name]
           }}
           topics={topics}
+          trends={data?.trends?.trends}
           onClose={() => setSelectedTopic(null)}
           onViewTrend={(topic) => {
-            // TODO: Navigate to trend dashboard with selected topic
+            // Navigate to trend dashboard with selected topic
             window.location.href = `/academic-trend-monitor/trends?topic=${encodeURIComponent(topic.id)}`;
           }}
         />

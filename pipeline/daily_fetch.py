@@ -98,9 +98,11 @@ def fetch_arxiv_papers(start_date: str, end_date: str, categories: Optional[List
         if fallback_papers:
             return fallback_papers
 
-        # Return local data for testing when API fails
-        print("API failed, loading from local data files...")
-        return _get_local_papers()
+        # API failed - return empty list to avoid polluting daily pipeline with old data
+        print("ERROR: All API methods failed. Returning empty list.")
+        print("Daily pipeline expects only new papers from arXiv API.")
+        print("Please check network connectivity or arXiv API status.")
+        return []
 
 
 def _fetch_with_requests(start_date: str, end_date: str, categories: Optional[List[str]] = None) -> List[dict]:
@@ -192,43 +194,6 @@ def _fetch_with_requests(start_date: str, end_date: str, categories: Optional[Li
     except Exception as e:
         print(f"Fallback also failed: {e}")
         return []
-
-
-def _get_local_papers() -> List[dict]:
-    """Load papers from local data files when API is unavailable."""
-    import os
-    import json
-
-    papers = []
-    raw_dir = Path("data/raw")
-
-    if not raw_dir.exists():
-        print(f"Local data directory not found: {raw_dir}")
-        return []
-
-    for jsonl_file in raw_dir.glob("*.jsonl"):
-        try:
-            with open(jsonl_file) as f:
-                for line in f:
-                    if line.strip():
-                        paper = json.loads(line)
-                        # Normalize format
-                        papers.append({
-                            "id": paper.get("id", ""),
-                            "title": paper.get("title", ""),
-                            "abstract": paper.get("abstract", ""),
-                            "authors": paper.get("authors", []),
-                            "primary_category": paper.get("categories", [""])[0] if paper.get("categories") else "",
-                            "categories": paper.get("categories", []),
-                            "published": paper.get("published", ""),
-                            "updated": paper.get("updated", paper.get("published", "")),
-                            "pdf_url": paper.get("pdf_url"),
-                        })
-        except Exception as e:
-            print(f"Error reading {jsonl_file}: {e}")
-
-    print(f"Loaded {len(papers)} papers from local data")
-    return papers
 
 
 if __name__ == "__main__":

@@ -97,17 +97,25 @@ export default function TimeDashboard() {
     }
   }, [layer2List]);
 
+  // Clear selected topic when layer2 changes, but preserve if set from URL
   useEffect(() => {
-    setSelectedTopicId('');
+    const params = new URLSearchParams(window.location.search);
+    const topicFromUrl = params.get('topic');
+    // Only clear if not coming from URL navigation
+    if (!topicFromUrl) {
+      setSelectedTopicId('');
+    }
   }, [selectedLayer2]);
 
   // When topic is selected via URL, find and set its layer1/layer2
   useEffect(() => {
-    if (!data || !selectedTopicId) return;
+    if (!data || !selectedTopicId || !data.structure) return;
 
-    // Find topic in structure to determine its layer1/layer2
-    for (const [l1, l1Data] of Object.entries(data.structure || {})) {
-      for (const [l2, topics] of Object.entries(l1Data.children || {})) {
+    // Find topic in structure: data.structure[layer1][layer2] = topics array
+    for (const [l1, l1Data] of Object.entries(data.structure)) {
+      if (!l1Data || typeof l1Data !== 'object') continue;
+      for (const [l2, topics] of Object.entries(l1Data)) {
+        if (!Array.isArray(topics)) continue;
         const topic = topics.find(t => t.id === selectedTopicId);
         if (topic) {
           setSelectedLayer1(l1);

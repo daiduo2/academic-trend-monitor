@@ -81,6 +81,7 @@ export function usePreferences() {
   return {
     preferences,
     loaded,
+    setPreferences,
     subscribeTag,
     unsubscribeTag,
     toggleTag,

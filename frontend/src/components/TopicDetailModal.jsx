@@ -1,15 +1,33 @@
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 
-export default function TopicDetailModal({ topic, topics, onClose, onViewTrend }) {
+export default function TopicDetailModal({ topic, topics, trends, onClose, onViewTrend }) {
   if (!topic) return null;
 
   // 获取主题详细信息
-  // topic.topic_ids 是树节点中的局部ID（如 ["1","2"]），需要映射到全局 topics 列表
-  // 树节点本身包含完整信息（name, keywords, paper_count 等），优先使用
-  const fullTopic = topic.topic_ids?.[0]
-    ? topics.find(t => t.id === topic.topic_ids[0]) || topic
-    : topic;
-  const history = fullTopic?.history || topic?.history || [];
+  // 树节点的 topic_ids 是局部ID（如 ["1","2"]），无法直接与 topics 列表匹配
+  // 改为通过 topic name 在 trends 中查找匹配的 topic（trends 使用全局ID如 "global_1"）
+  let fullTopic = topic;
+  let history = topic?.history || [];
+
+  // If no history in topic, try to find in trends by matching topic name
+  if (!history.length && trends && topic.name) {
+    // Find trend entry with matching name
+    const trendEntry = Object.entries(trends).find(([id, t]) => t.name === topic.name);
+    if (trendEntry) {
+      const [globalId, trendData] = trendEntry;
+      fullTopic = { ...topic, id: globalId, ...trendData };
+      history = trendData.history || [];
+    }
+  }
+
+  // Fallback: try matching by topic_ids if available (for backward compatibility)
+  if (!history.length && topic.topic_ids?.[0] && topics) {
+    const matchedTopic = topics.find(t => t.id === topic.topic_ids[0]);
+    if (matchedTopic?.history) {
+      fullTopic = matchedTopic;
+      history = matchedTopic.history;
+    }
+  }
 
   const chartData = history.map(h => ({
     period: h.period,
