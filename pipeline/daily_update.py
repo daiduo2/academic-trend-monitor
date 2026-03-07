@@ -61,8 +61,8 @@ def main():
     # Convert to compact format
     compact_papers = [compact_paper(p) for p in tagged_papers]
 
-    # Load existing recent papers
-    existing_papers = load_recent_papers(str(recent_file), days=7)
+    # Load existing recent papers (keep 14 days for weekly comparison)
+    existing_papers = load_recent_papers(str(recent_file), days=14)
 
     # Merge and deduplicate
     paper_ids = {p["i"] for p in existing_papers}
@@ -74,8 +74,8 @@ def main():
     # Sort by date (newest first)
     existing_papers.sort(key=lambda p: p["p"], reverse=True)
 
-    # Keep only last 7 days
-    cutoff = (datetime.now() - timedelta(days=7)).strftime("%y%m%d")
+    # Keep only last 14 days (for weekly trend comparison: this week + last week)
+    cutoff = (datetime.now() - timedelta(days=14)).strftime("%y%m%d")
     existing_papers = [p for p in existing_papers if p["p"] >= cutoff]
 
     # Save

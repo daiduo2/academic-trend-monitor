@@ -4,8 +4,11 @@ from typing import Tuple
 
 
 def get_date_range(days: int = 1) -> Tuple[str, str]:
-    """Get date range for fetching papers."""
-    end_date = datetime.now()
+    """Get date range for fetching papers (arXiv uses UTC)."""
+    from datetime import timezone
+
+    # Use UTC time for arXiv API
+    end_date = datetime.now(timezone.utc)
     start_date = end_date - timedelta(days=days)
 
     return (
@@ -25,10 +28,15 @@ def fetch_arxiv_papers(start_date: str, end_date: str, categories: list = None) 
     Returns:
         List of paper dictionaries with id, title, authors, abstract, etc.
     """
-    import urllib.request
-    import urllib.parse
     import xml.etree.ElementTree as ET
     import time
+    try:
+        import requests
+        USE_REQUESTS = True
+    except ImportError:
+        USE_REQUESTS = False
+        import urllib.request
+        import urllib.parse
 
     # Build search query
     date_query = f"submittedDate:[{start_date} TO {end_date}]"
@@ -40,29 +48,56 @@ def fetch_arxiv_papers(start_date: str, end_date: str, categories: list = None) 
         search_query = date_query
 
     # arXiv API endpoint
-    base_url = "http://export.arxiv.org/api/query"
+    base_url = "https://export.arxiv.org/api/query"
     params = {
         "search_query": search_query,
         "start": 0,
-        "max_results": 1000,
+        "max_results": 100,
         "sortBy": "submittedDate",
         "sortOrder": "descending"
     }
 
-    url = f"{base_url}?{urllib.parse.urlencode(params)}"
-
     try:
-        # Fetch with retry logic
-        for attempt in range(3):
-            try:
-                with urllib.request.urlopen(url, timeout=30) as response:
-                    data = response.read().decode('utf-8')
+        data = None
+
+        # Try using requests library first (more reliable)
+        if USE_REQUESTS:
+            for attempt in range(3):
+                try:
+                    response = requests.get(base_url, params=params, timeout=30)
+                    response.raise_for_status()
+                    data = response.text
                     break
-            except urllib.error.URLError as e:
-                if attempt < 2:
-                    time.sleep(2 ** attempt)  # Exponential backoff
-                    continue
-                raise
+                except Exception as e:
+                    if attempt < 2:
+                        time.sleep(2 ** attempt)
+                        continue
+                    raise
+        else:
+            # Fallback to urllib
+            import ssl
+            url = f"{base_url}?{urllib.parse.urlencode(params)}"
+            ssl_context = ssl.create_default_context()
+            ssl_context.check_hostname = False
+            ssl_context.verify_mode = ssl.CERT_NONE
+
+            for attempt in range(3):
+                try:
+                    req = urllib.request.Request(
+                        url,
+                        headers={'User-Agent': 'Mozilla/5.0 (Academic Trend Monitor)'}
+                    )
+                    with urllib.request.urlopen(req, context=ssl_context, timeout=30) as response:
+                        data = response.read().decode('utf-8')
+                        break
+                except Exception as e:
+                    if attempt < 2:
+                        time.sleep(2 ** attempt)
+                        continue
+                    raise
+
+        if data is None:
+            return []
 
         # Parse XML
         root = ET.fromstring(data)

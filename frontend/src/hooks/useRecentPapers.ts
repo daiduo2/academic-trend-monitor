@@ -8,7 +8,8 @@ export function useRecentPapers() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch('/data/recent.jsonl')
+    // Use relative path for static deployment compatibility
+    fetch('./data/recent.jsonl')
       .then(res => res.text())
       .then(text => {
         const lines = text.trim().split('\n');

@@ -8,7 +8,8 @@ export function useTopics() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch('/data/output/topics.json')
+    // Use relative path for static deployment compatibility
+    fetch('./data/output/topics.json')
       .then(res => res.json())
       .then((data: TopicIndex) => {
         setTopics(data);
