@@ -2,19 +2,43 @@ import { useState, useMemo, useEffect } from 'react';
 import { useDomainData, getLayer1List, getLayer2List, getTopicsWithTrends } from '../hooks/useDomainData';
 import { TAXONOMY } from '../data/taxonomy';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Area, AreaChart } from 'recharts';
+import { resolveGlobalTopicsDetail } from '../utils/topicResolution';
 
 export default function TimeDashboard() {
   const { data, loading, error } = useDomainData();
   const [selectedLayer1, setSelectedLayer1] = useState('');
   const [selectedLayer2, setSelectedLayer2] = useState('');
   const [selectedTopicId, setSelectedTopicId] = useState('');
+  const [selectedTopicIds, setSelectedTopicIds] = useState([]);
+  const [selectedTopicLabel, setSelectedTopicLabel] = useState('');
 
   // Read URL query params on mount (from DomainDashboard navigation)
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const topicId = params.get('topic');
+    const topicIds = params.get('topicIds');
+    const label = params.get('label');
+    const layer1 = params.get('layer1');
+    const layer2 = params.get('layer2');
+
+    if (layer1) {
+      setSelectedLayer1(layer1);
+    }
+
+    if (layer2) {
+      setSelectedLayer2(layer2);
+    }
+
+    if (topicIds) {
+      setSelectedTopicIds(topicIds.split(',').filter(Boolean));
+    }
+
     if (topicId) {
       setSelectedTopicId(topicId);
+    }
+
+    if (label) {
+      setSelectedTopicLabel(label);
     }
   }, []);
 
@@ -35,9 +59,22 @@ export default function TimeDashboard() {
       : [];
   }, [data, selectedLayer1, selectedLayer2]);
 
+  const aggregatedSelectedTopic = useMemo(() => {
+    if (!selectedTopicIds.length || !data?.trends?.trends) return null;
+
+    return resolveGlobalTopicsDetail(selectedTopicIds, data.trends.trends, {
+      id: selectedTopicIds[0],
+      name: selectedTopicLabel || '聚合主题'
+    });
+  }, [selectedTopicIds, selectedTopicLabel, data?.trends?.trends]);
+
   const selectedTopic = useMemo(() => {
+    if (aggregatedSelectedTopic) {
+      return aggregatedSelectedTopic;
+    }
+
     return topicsWithTrends.find(t => t.id === selectedTopicId);
-  }, [topicsWithTrends, selectedTopicId]);
+  }, [aggregatedSelectedTopic, topicsWithTrends, selectedTopicId]);
 
   const trendChartData = useMemo(() => {
     if (!selectedTopic || !data?.periods) return [];
@@ -97,16 +134,6 @@ export default function TimeDashboard() {
     }
   }, [layer2List]);
 
-  // Clear selected topic when layer2 changes, but preserve if set from URL
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const topicFromUrl = params.get('topic');
-    // Only clear if not coming from URL navigation
-    if (!topicFromUrl) {
-      setSelectedTopicId('');
-    }
-  }, [selectedLayer2]);
-
   // When topic is selected via URL, find and set its layer1/layer2
   useEffect(() => {
     if (!data || !selectedTopicId || !data.structure) return;
@@ -158,7 +185,13 @@ export default function TimeDashboard() {
             <label className="block text-sm font-medium text-gray-700 mb-2">学科 (Layer 1)</label>
             <select
               value={selectedLayer1}
-              onChange={(e) => setSelectedLayer1(e.target.value)}
+              onChange={(e) => {
+                setSelectedLayer1(e.target.value);
+                setSelectedLayer2('');
+                setSelectedTopicId('');
+                setSelectedTopicIds([]);
+                setSelectedTopicLabel('');
+              }}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               {layer1Options.map(opt => (
@@ -171,7 +204,12 @@ export default function TimeDashboard() {
             <label className="block text-sm font-medium text-gray-700 mb-2">子类 (Layer 2)</label>
             <select
               value={selectedLayer2}
-              onChange={(e) => setSelectedLayer2(e.target.value)}
+              onChange={(e) => {
+                setSelectedLayer2(e.target.value);
+                setSelectedTopicId('');
+                setSelectedTopicIds([]);
+                setSelectedTopicLabel('');
+              }}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               {layer2Options.map(opt => (
@@ -184,7 +222,11 @@ export default function TimeDashboard() {
             <label className="block text-sm font-medium text-gray-700 mb-2">研究主题</label>
             <select
               value={selectedTopicId}
-              onChange={(e) => setSelectedTopicId(e.target.value)}
+              onChange={(e) => {
+                setSelectedTopicId(e.target.value);
+                setSelectedTopicIds([]);
+                setSelectedTopicLabel('');
+              }}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               <option value="">请选择主题</option>

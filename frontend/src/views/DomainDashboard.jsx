@@ -6,6 +6,7 @@ import HierarchyTree from '../components/HierarchyTree';
 import BreadcrumbNav from '../components/BreadcrumbNav';
 import TopicDetailModal from '../components/TopicDetailModal';
 import { getNodesAtDepth, findNodeByPath, enrichTreeWithPaperCounts } from '../utils/hierarchyUtils';
+import { resolveHierarchyNodeDetail } from '../utils/topicResolution';
 
 export default function DomainDashboard() {
   const { data, loading, error } = useDomainData();
@@ -340,12 +341,23 @@ export default function DomainDashboard() {
             ...selectedTopic,
             hierarchy_path: [TAXONOMY.getLayer2Display(selectedLayer1, selectedLayer2), ...drillPath, selectedTopic.name]
           }}
-          topics={topics}
           trends={data?.trends?.trends}
           onClose={() => setSelectedTopic(null)}
           onViewTrend={(topic) => {
-            // Navigate to trend dashboard with selected topic
-            window.location.href = `/academic-trend-monitor/trends?topic=${encodeURIComponent(topic.id)}`;
+            const resolvedTopic = resolveHierarchyNodeDetail(topic, data?.trends?.trends);
+            const params = new URLSearchParams({
+              layer1: selectedLayer1,
+              layer2: selectedLayer2,
+              label: resolvedTopic.name
+            });
+
+            if (resolvedTopic.globalTopicIds?.length > 1) {
+              params.set('topicIds', resolvedTopic.globalTopicIds.join(','));
+            } else if (resolvedTopic.representativeTopicId) {
+              params.set('topic', resolvedTopic.representativeTopicId);
+            }
+
+            window.location.href = `/academic-trend-monitor/trends?${params.toString()}`;
           }}
         />
       )}
