@@ -81,10 +81,112 @@ def fetch_arxiv_papers(start_date: str, end_date: str, categories: Optional[List
         return papers
 
     except Exception as e:
-        print(f"Error fetching from arXiv: {e}")
-        # Return mock data for testing when API fails
-        print("Returning mock data for testing...")
+        import traceback
+        print(f"\n=== Error fetching from arXiv ===")
+        print(f"Exception type: {type(e).__name__}")
+        print(f"Exception message: {e}")
+        print(f"\nFull traceback:")
+        traceback.print_exc()
+        print(f"\n=== End of error ===\n")
+
+        # Try fallback to direct requests if arxiv library failed
+        print("Attempting fallback to direct API call...")
+        fallback_papers = _fetch_with_requests(start_date, end_date, categories)
+        if fallback_papers:
+            return fallback_papers
+
+        # Return mock data for testing when all methods fail
+        print("All API methods failed, returning mock data for testing...")
         return _get_mock_papers(start_date, end_date)
+
+
+def _fetch_with_requests(start_date: str, end_date: str, categories: Optional[List[str]] = None) -> List[dict]:
+    """Fallback fetch using direct requests to arXiv API."""
+    try:
+        import requests
+        import xml.etree.ElementTree as ET
+    except ImportError:
+        print("requests not available for fallback")
+        return []
+
+    # Build query
+    date_query = f"submittedDate:[{start_date} TO {end_date}]"
+    if categories:
+        cat_query = " OR ".join([f"cat:{cat}" for cat in categories])
+        query = f"({date_query}) AND ({cat_query})"
+    else:
+        query = date_query
+
+    url = "https://export.arxiv.org/api/query"
+    params = {
+        "search_query": query,
+        "start": 0,
+        "max_results": 100,
+        "sortBy": "submittedDate",
+        "sortOrder": "descending"
+    }
+
+    try:
+        resp = requests.get(url, params=params, timeout=30)
+        if resp.status_code != 200:
+            print(f"Fallback API returned status {resp.status_code}")
+            return []
+
+        # Parse XML
+        root = ET.fromstring(resp.content)
+        ns = {"atom": "http://www.w3.org/2005/Atom"}
+
+        papers = []
+        for entry in root.findall("atom:entry", ns):
+            id_elem = entry.find("atom:id", ns)
+            if id_elem is None:
+                continue
+
+            full_id = id_elem.text
+            paper_id = full_id.split("/abs/")[-1] if "/abs/" in full_id else full_id
+
+            title_elem = entry.find("atom:title", ns)
+            title = title_elem.text.strip() if title_elem is not None else ""
+
+            summary_elem = entry.find("atom:summary", ns)
+            abstract = summary_elem.text.strip() if summary_elem is not None else ""
+
+            authors = []
+            for author in entry.findall("atom:author", ns):
+                name_elem = author.find("atom:name", ns)
+                if name_elem is not None:
+                    authors.append(name_elem.text)
+
+            primary_category = None
+            categories_list = []
+            for cat in entry.findall("atom:category", ns):
+                term = cat.get("term", "")
+                if term:
+                    categories_list.append(term)
+                    if primary_category is None:
+                        primary_category = term
+
+            published_elem = entry.find("atom:published", ns)
+            published = published_elem.text if published_elem is not None else ""
+
+            papers.append({
+                "id": paper_id,
+                "title": title,
+                "abstract": abstract,
+                "authors": authors,
+                "primary_category": primary_category,
+                "categories": categories_list,
+                "published": published,
+                "updated": "",
+                "pdf_url": None,
+            })
+
+        print(f"Fallback fetched {len(papers)} papers")
+        return papers
+
+    except Exception as e:
+        print(f"Fallback also failed: {e}")
+        return []
 
 
 def _get_mock_papers(start_date: str, end_date: str) -> List[dict]:
