@@ -91,7 +91,7 @@ export function TagSelector({ topics, subscribedTags, onToggleTag, paperCounts }
   };
 
   if (!topics) {
-    return <div className="tag-selector loading">Loading topics...</div>;
+    return <div className="tag-selector loading">加载主题中...</div>;
   }
 
   return (
@@ -99,7 +99,7 @@ export function TagSelector({ topics, subscribedTags, onToggleTag, paperCounts }
       <div className="search-box">
         <input
           type="text"
-          placeholder="Search topics..."
+          placeholder="搜索主题..."
           value={searchTerm}
           onChange={e => setSearchTerm(e.target.value)}
         />
@@ -133,7 +133,7 @@ export function TagSelector({ topics, subscribedTags, onToggleTag, paperCounts }
                       <span className="topic-name">{topic.name}</span>
                       <span className="topic-id">({topic.id})</span>
                       {topic.count > 0 && (
-                        <span className="topic-count">{topic.count} papers/week</span>
+                        <span className="topic-count">{topic.count} 篇/周</span>
                       )}
                     </label>
                   );
@@ -145,7 +145,7 @@ export function TagSelector({ topics, subscribedTags, onToggleTag, paperCounts }
       </div>
 
       <div className="selection-summary">
-        Selected: {subscribedTags.length} topics
+        已选择: {subscribedTags.length} 个主题
       </div>
     </div>
   );

@@ -23,7 +23,7 @@ function paperToRSSEntry(paper: CompactPaper, topics: Record<string, CompactTopi
     authors: paper.a,
     category: categoryMap[paper.c] || `cs.${paper.c}`,
     published: formatDate(paper.p),
-    tags: paper.g.map(tagId => topics[tagId]?.n || `Topic ${tagId}`),
+    tags: paper.g.map(tagId => topics[tagId]?.n || `主题 ${tagId}`),
     link: `https://arxiv.org/abs/${paper.i}`,
   };
 }
@@ -33,7 +33,7 @@ export function generateAtomFeed(
   topics: Record<string, CompactTopic>,
   options: { title?: string; description?: string } = {}
 ): string {
-  const { title = 'Academic Trend Monitor', description = 'Personalized Academic RSS Feed' } = options;
+  const { title = '学术趋势监测', description = '个性化学术论文 RSS 订阅源' } = options;
   const now = new Date().toISOString();
 
   const entries = papers.map(paper => {
@@ -69,7 +69,7 @@ export function generateJSONFeed(
   topics: Record<string, CompactTopic>,
   options: { title?: string; description?: string } = {}
 ): string {
-  const { title = 'Academic Trend Monitor', description = 'Personalized Academic RSS Feed' } = options;
+  const { title = '学术趋势监测', description = '个性化学术论文 RSS 订阅源' } = options;
 
   const feed = {
     version: 'https://jsonfeed.org/version/1.1',
@@ -82,7 +82,7 @@ export function generateJSONFeed(
       return {
         id: entry.id,
         title: entry.title,
-        content_text: `Authors: ${entry.authors.join(', ')}\nCategories: ${entry.tags.join(', ')}`,
+        content_text: `作者: ${entry.authors.join(', ')}\n分类: ${entry.tags.join(', ')}`,
         url: entry.link,
         date_published: entry.published,
         authors: entry.authors.map(name => ({ name })),

@@ -83,23 +83,23 @@ export function RSSSubscription() {
     const baseUrl = window.location.origin + window.location.pathname;
     const feedUrl = `${baseUrl}?tags=${preferences.subscribedTags.join(',')}&format=${preferences.rssFormat}`;
     await copyToClipboard(feedUrl);
-    alert('Feed URL copied to clipboard! This URL preserves your selected topics and can be bookmarked or shared.');
+    alert('订阅链接已复制到剪贴板！此链接保存了您的主题选择，可以收藏或分享。');
   };
 
   if (topicsLoading || papersLoading || trendsLoading || !prefsLoaded) {
-    return <div className="rss-subscription loading">Loading...</div>;
+    return <div className="rss-subscription loading">加载中...</div>;
   }
 
   return (
     <div className="rss-subscription">
       <header>
-        <h1>Academic Trend RSS Subscription</h1>
-        <p>Subscribe to personalized academic paper feeds based on your interests</p>
+        <h1>学术趋势 RSS 订阅</h1>
+        <p>根据您的兴趣订阅个性化学术论文推送</p>
       </header>
 
       <div className="content">
         <section className="topic-selection">
-          <h2>Select Topics</h2>
+          <h2>选择主题</h2>
           <TagSelector
             topics={topics}
             subscribedTags={preferences.subscribedTags}
@@ -109,21 +109,21 @@ export function RSSSubscription() {
         </section>
 
         <section className="settings">
-          <h2>Feed Settings</h2>
+          <h2>订阅设置</h2>
 
           <div className="setting">
-            <label>RSS Format:</label>
+            <label>RSS 格式：</label>
             <select
               value={preferences.rssFormat}
               onChange={e => updateFormat(e.target.value)}
             >
-              <option value="atom">Atom/XML (RSS Readers)</option>
-              <option value="json">JSON Feed (Apps)</option>
+              <option value="atom">Atom/XML (RSS 阅读器)</option>
+              <option value="json">JSON Feed (应用程序)</option>
             </select>
           </div>
 
           <div className="setting">
-            <label>Minimum Match Score: {preferences.minScore.toFixed(1)}</label>
+            <label>最低匹配分数：{preferences.minScore.toFixed(1)}</label>
             <input
               type="range"
               min="0.3"
@@ -134,28 +134,28 @@ export function RSSSubscription() {
               className="slider"
             />
             <span className="slider-labels">
-              <span>0.3 (More papers)</span>
-              <span>0.9 (Stricter)</span>
+              <span>0.3 (更多论文)</span>
+              <span>0.9 (更严格)</span>
             </span>
           </div>
 
           <div className="setting">
-            <label>Digest Mode:</label>
+            <label>推送模式：</label>
             <select
               value={preferences.digestMode}
               onChange={e => updateDigestMode(e.target.value)}
             >
-              <option value="daily">Daily Digest</option>
-              <option value="realtime">Real-time (All papers)</option>
+              <option value="daily">每日摘要</option>
+              <option value="realtime">实时推送 (全部论文)</option>
             </select>
           </div>
 
           <div className="preview">
-            <h3>Preview</h3>
-            <p>Subscribed to: {preferences.subscribedTags.length} topics</p>
-            <p>Matching papers (7 days): {filteredPapers.length}</p>
+            <h3>预览</h3>
+            <p>已订阅主题：{preferences.subscribedTags.length} 个</p>
+            <p>匹配论文 (7天)：{filteredPapers.length} 篇</p>
             {weeklyReport && (
-              <p>Weekly trend: {weeklyReport.trends.filter(t => preferences.subscribedTags.includes(t.topic_id)).length} topics tracked</p>
+              <p>周趋势跟踪：{weeklyReport.trends.filter(t => preferences.subscribedTags.includes(t.topic_id)).length} 个主题</p>
             )}
           </div>
 
@@ -165,22 +165,22 @@ export function RSSSubscription() {
               disabled={filteredPapers.length === 0}
               className="primary"
             >
-              Download Feed
+              下载订阅源
             </button>
             <button
               onClick={handleCopyLink}
               disabled={preferences.subscribedTags.length === 0}
             >
-              Copy Subscription Link
+              复制订阅链接
             </button>
           </div>
         </section>
 
         {weeklyReport && (
           <section className="trends">
-            <h2>Recent Trends (7-day rolling)</h2>
+            <h2>近期趋势 (7天滚动)</h2>
             {weeklyReport.period && (
-              <p className="period-label">Period: {weeklyReport.period}</p>
+              <p className="period-label">时间段：{weeklyReport.period}</p>
             )}
             <div className="trend-list">
               {weeklyReport.trends
@@ -190,7 +190,7 @@ export function RSSSubscription() {
                   <div key={trend.topic_id} className={`trend-item ${trend.trend.direction}`}>
                     <span className="topic-name">{trend.topic_name}</span>
                     <span className="counts">
-                      {trend.this_period ?? trend.this_week} recent
+                      {trend.this_period ?? trend.this_week} 近期
                       {(trend.last_period ?? trend.last_week) > 0 && ` (${trend.trend.direction === 'up' ? '+' : ''}${trend.trend.percent}%)`}
                     </span>
                     <span className={`direction ${trend.trend.direction}`}>
