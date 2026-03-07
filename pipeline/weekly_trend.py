@@ -48,7 +48,7 @@ def parse_compact_date(date_str: str) -> datetime:
 
 
 def analyze_weekly_trends(recent_file: str, topics_file: str) -> dict:
-    """Analyze weekly trends from recent papers."""
+    """Analyze weekly trends from recent papers using rolling 7-day windows."""
     # Load papers
     papers = []
     try:
@@ -68,14 +68,14 @@ def analyze_weekly_trends(recent_file: str, topics_file: str) -> dict:
         print(f"Warning: {topics_file} not found, using empty topics")
         topics = {}
 
-    # Get date ranges
+    # Get date ranges - rolling 7-day windows
     today = datetime.now()
-    this_week_start = today - timedelta(days=today.weekday())  # Monday of this week
-    last_week_start = this_week_start - timedelta(days=7)  # Monday of last week
+    this_period_start = today - timedelta(days=7)   # Last 7 days
+    last_period_start = today - timedelta(days=14)  # 7-14 days ago
 
-    # Count papers per tag for each week
-    this_week_counts = defaultdict(int)
-    last_week_counts = defaultdict(int)
+    # Count papers per tag for each period
+    this_period_counts = defaultdict(int)
+    last_period_counts = defaultdict(int)
 
     for paper in papers:
         try:
@@ -84,27 +84,30 @@ def analyze_weekly_trends(recent_file: str, topics_file: str) -> dict:
 
             for tag in tags:
                 tag_id = str(tag)
-                if paper_date >= this_week_start:
-                    this_week_counts[tag_id] += 1
-                elif paper_date >= last_week_start:
-                    last_week_counts[tag_id] += 1
+                if paper_date >= this_period_start:
+                    this_period_counts[tag_id] += 1
+                elif paper_date >= last_period_start:
+                    last_period_counts[tag_id] += 1
         except (KeyError, ValueError) as e:
             print(f"Warning: Skipping paper with invalid date: {e}")
             continue
 
     # Build trend report
+    period_label = f"{this_period_start.strftime('%m/%d')}-{today.strftime('%m/%d')}"
     report = {
-        "week": today.strftime("%Y-W%W"),
+        "period": period_label,
+        "week": today.strftime("%Y-W%W"),  # Kept for backward compatibility
         "generated_at": today.isoformat(),
         "total_papers": len(papers),
+        "window_days": 7,  # Rolling window size
         "trends": []
     }
 
-    all_tags = set(this_week_counts.keys()) | set(last_week_counts.keys())
+    all_tags = set(this_period_counts.keys()) | set(last_period_counts.keys())
 
     for tag_id in all_tags:
-        this_count = this_week_counts.get(tag_id, 0)
-        last_count = last_week_counts.get(tag_id, 0)
+        this_count = this_period_counts.get(tag_id, 0)
+        last_count = last_period_counts.get(tag_id, 0)
 
         topic_info = topics.get(tag_id, {})
 
@@ -114,8 +117,10 @@ def analyze_weekly_trends(recent_file: str, topics_file: str) -> dict:
             "topic_id": tag_id,
             "topic_name": topic_info.get("n", f"Topic {tag_id}"),
             "category": topic_info.get("p", "Unknown"),
-            "this_week": this_count,
-            "last_week": last_count,
+            "this_period": this_count,
+            "last_period": last_count,
+            "this_week": this_count,  # Kept for backward compatibility
+            "last_week": last_count,  # Kept for backward compatibility
             "trend": trend
         })
 
@@ -140,8 +145,9 @@ def main():
         json.dump(report, f, indent=2, ensure_ascii=False)
 
     print(f"Saved weekly report to {output_file}")
+    print(f"Period: {report['period']} (rolling 7-day window)")
     print(f"Total topics: {len(report['trends'])}")
-    print(f"Total papers this week: {sum(t['this_week'] for t in report['trends'])}")
+    print(f"Total papers this period: {sum(t['this_period'] for t in report['trends'])}")
 
 
 if __name__ == "__main__":

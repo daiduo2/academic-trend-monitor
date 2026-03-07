@@ -159,7 +159,10 @@ export function RSSSubscription() {
 
         {weeklyReport && (
           <section className="trends">
-            <h2>Weekly Trends</h2>
+            <h2>Recent Trends (7-day rolling)</h2>
+            {weeklyReport.period && (
+              <p className="period-label">Period: {weeklyReport.period}</p>
+            )}
             <div className="trend-list">
               {weeklyReport.trends
                 .filter(t => preferences.subscribedTags.includes(t.topic_id))
@@ -168,8 +171,8 @@ export function RSSSubscription() {
                   <div key={trend.topic_id} className={`trend-item ${trend.trend.direction}`}>
                     <span className="topic-name">{trend.topic_name}</span>
                     <span className="counts">
-                      {trend.this_week} this week
-                      {trend.last_week > 0 && ` (${trend.trend.direction === 'up' ? '+' : ''}${trend.trend.percent}%)`}
+                      {trend.this_period ?? trend.this_week} recent
+                      {(trend.last_period ?? trend.last_week) > 0 && ` (${trend.trend.direction === 'up' ? '+' : ''}${trend.trend.percent}%)`}
                     </span>
                     <span className={`direction ${trend.trend.direction}`}>
                       {trend.trend.direction === 'up' ? '↑' : trend.trend.direction === 'down' ? '↓' : '→'}
