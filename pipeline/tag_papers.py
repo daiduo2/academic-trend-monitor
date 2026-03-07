@@ -33,8 +33,12 @@ def tag_paper(paper: dict, topic_ids: list, index=None, model=None, threshold: f
     Returns:
         Paper dict with added tags and scores fields
     """
+    # If no index provided, return empty tags (for testing or when index not available)
+    if index is None:
+        return {**paper, "tags": [], "scores": []}
+
     if model is None:
-        raise ValueError("Model must be provided - load it once in tag_papers()")
+        raise ValueError("Model must be provided when index is provided - load it once in tag_papers()")
 
     # Combine title and abstract
     text = paper.get("title", "") + " " + paper.get("abstract", "")

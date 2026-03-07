@@ -12,9 +12,10 @@ def test_tag_paper_with_mock_index():
     # Mock topic IDs
     topic_ids = ["topic_0", "topic_1", "topic_2"]
 
-    # This test will use mock embeddings
-    result = tag_paper(paper, topic_ids, threshold=0.6)
+    # When no index is provided, should return empty tags
+    result = tag_paper(paper, topic_ids, index=None, model=None, threshold=0.6)
 
     assert "tags" in result
     assert "scores" in result
     assert isinstance(result["tags"], list)
+    assert result["tags"] == []  # Empty when no index

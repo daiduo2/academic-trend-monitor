@@ -19,7 +19,8 @@ def test_compact_paper_format():
         "a": ["Alice Smith", "Bob Jones", "Charlie Brown"],
         "c": "AI",
         "p": "250307",
-        "g": [5, 12]
+        "g": [5, 12],
+        "s": []
     }
 
 def test_compact_truncate_authors():
