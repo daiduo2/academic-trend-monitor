@@ -1,6 +1,7 @@
 # pipeline/daily_fetch.py
 """Daily paper fetching from arXiv using arxiv library."""
 from datetime import datetime, timedelta
+from pathlib import Path
 from typing import Tuple, List, Optional
 import time
 
@@ -36,8 +37,10 @@ def fetch_arxiv_papers(start_date: str, end_date: str, categories: Optional[List
         print("Error: arxiv library not installed. Run: pip install arxiv")
         return []
 
-    # Build query
-    date_query = f"submittedDate:[{start_date} TO {end_date}]"
+    # Build query - arXiv requires YYYYMMDD format (not YYYY-MM-DD)
+    start_fmt = start_date.replace("-", "")
+    end_fmt = end_date.replace("-", "")
+    date_query = f"submittedDate:[{start_fmt} TO {end_fmt}]"
 
     if categories:
         cat_query = " OR ".join([f"cat:{cat}" for cat in categories])
@@ -95,9 +98,9 @@ def fetch_arxiv_papers(start_date: str, end_date: str, categories: Optional[List
         if fallback_papers:
             return fallback_papers
 
-        # Return mock data for testing when all methods fail
-        print("All API methods failed, returning mock data for testing...")
-        return _get_mock_papers(start_date, end_date)
+        # Return local data for testing when API fails
+        print("API failed, loading from local data files...")
+        return _get_local_papers()
 
 
 def _fetch_with_requests(start_date: str, end_date: str, categories: Optional[List[str]] = None) -> List[dict]:
@@ -109,8 +112,10 @@ def _fetch_with_requests(start_date: str, end_date: str, categories: Optional[Li
         print("requests not available for fallback")
         return []
 
-    # Build query
-    date_query = f"submittedDate:[{start_date} TO {end_date}]"
+    # Build query - arXiv requires YYYYMMDD format
+    start_fmt = start_date.replace("-", "")
+    end_fmt = end_date.replace("-", "")
+    date_query = f"submittedDate:[{start_fmt} TO {end_fmt}]"
     if categories:
         cat_query = " OR ".join([f"cat:{cat}" for cat in categories])
         query = f"({date_query}) AND ({cat_query})"
@@ -189,43 +194,41 @@ def _fetch_with_requests(start_date: str, end_date: str, categories: Optional[Li
         return []
 
 
-def _get_mock_papers(start_date: str, end_date: str) -> List[dict]:
-    """Generate mock papers for testing when API is unavailable."""
-    return [
-        {
-            "id": "2503.12345",
-            "title": "Large Language Model Alignment via Preference Optimization",
-            "abstract": "We propose a novel method for aligning LLMs using direct preference optimization...",
-            "authors": ["Alice Smith", "Bob Jones"],
-            "primary_category": "cs.AI",
-            "categories": ["cs.AI", "cs.LG"],
-            "published": f"{start_date}T10:00:00Z",
-            "updated": f"{start_date}T10:00:00Z",
-            "pdf_url": None,
-        },
-        {
-            "id": "2503.12346",
-            "title": "Vision Transformers for Medical Image Analysis",
-            "abstract": "This paper explores the application of vision transformers in medical imaging...",
-            "authors": ["Carol Wang"],
-            "primary_category": "cs.CV",
-            "categories": ["cs.CV", "cs.LG"],
-            "published": f"{start_date}T12:00:00Z",
-            "updated": f"{start_date}T12:00:00Z",
-            "pdf_url": None,
-        },
-        {
-            "id": "2503.12347",
-            "title": "Reinforcement Learning from Human Feedback: A Survey",
-            "abstract": "We survey recent advances in RLHF methods for training language models...",
-            "authors": ["David Lee", "Eva Chen"],
-            "primary_category": "cs.LG",
-            "categories": ["cs.LG", "cs.AI"],
-            "published": f"{end_date}T09:00:00Z",
-            "updated": f"{end_date}T09:00:00Z",
-            "pdf_url": None,
-        },
-    ]
+def _get_local_papers() -> List[dict]:
+    """Load papers from local data files when API is unavailable."""
+    import os
+    import json
+
+    papers = []
+    raw_dir = Path("data/raw")
+
+    if not raw_dir.exists():
+        print(f"Local data directory not found: {raw_dir}")
+        return []
+
+    for jsonl_file in raw_dir.glob("*.jsonl"):
+        try:
+            with open(jsonl_file) as f:
+                for line in f:
+                    if line.strip():
+                        paper = json.loads(line)
+                        # Normalize format
+                        papers.append({
+                            "id": paper.get("id", ""),
+                            "title": paper.get("title", ""),
+                            "abstract": paper.get("abstract", ""),
+                            "authors": paper.get("authors", []),
+                            "primary_category": paper.get("categories", [""])[0] if paper.get("categories") else "",
+                            "categories": paper.get("categories", []),
+                            "published": paper.get("published", ""),
+                            "updated": paper.get("updated", paper.get("published", "")),
+                            "pdf_url": paper.get("pdf_url"),
+                        })
+        except Exception as e:
+            print(f"Error reading {jsonl_file}: {e}")
+
+    print(f"Loaded {len(papers)} papers from local data")
+    return papers
 
 
 if __name__ == "__main__":

@@ -59,9 +59,12 @@ export function RSSSubscription() {
   };
 
   const handleCopyLink = async () => {
-    // In a real implementation, this would generate a unique subscription URL
-    await copyToClipboard('https://your-github-pages-url/api/rss?tags=' + preferences.subscribedTags.join(','));
-    alert('Subscription link copied to clipboard!');
+    // Generate a static feed URL with selected tags as query params
+    // This is a client-side only URL that can be used with the static site
+    const baseUrl = window.location.origin + window.location.pathname;
+    const feedUrl = `${baseUrl}?tags=${preferences.subscribedTags.join(',')}&format=${preferences.rssFormat}`;
+    await copyToClipboard(feedUrl);
+    alert('Feed URL copied to clipboard! This URL preserves your selected topics and can be bookmarked or shared.');
   };
 
   if (topicsLoading || papersLoading || trendsLoading || !prefsLoaded) {

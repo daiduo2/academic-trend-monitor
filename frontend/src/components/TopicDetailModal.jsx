@@ -4,8 +4,12 @@ export default function TopicDetailModal({ topic, topics, onClose, onViewTrend }
   if (!topic) return null;
 
   // 获取主题详细信息
-  const fullTopic = topics.find(t => t.id === topic.topic_ids?.[0]) || topic;
-  const history = fullTopic.history || [];
+  // topic.topic_ids 是树节点中的局部ID（如 ["1","2"]），需要映射到全局 topics 列表
+  // 树节点本身包含完整信息（name, keywords, paper_count 等），优先使用
+  const fullTopic = topic.topic_ids?.[0]
+    ? topics.find(t => t.id === topic.topic_ids[0]) || topic
+    : topic;
+  const history = fullTopic?.history || topic?.history || [];
 
   const chartData = history.map(h => ({
     period: h.period,

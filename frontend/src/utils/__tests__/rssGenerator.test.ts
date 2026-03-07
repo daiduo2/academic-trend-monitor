@@ -17,7 +17,7 @@ describe('rssGenerator', () => {
     '5': { n: 'Test Topic', k: ['test'], l: 3, p: 'AI' },
   };
 
-  test('generateAtomFeed creates valid XML', () => {
+  it('generateAtomFeed creates valid XML', () => {
     const feed = generateAtomFeed([mockPaper], mockTopics);
 
     expect(feed).toContain('<?xml version="1.0" encoding="UTF-8"?>');
@@ -26,7 +26,7 @@ describe('rssGenerator', () => {
     expect(feed).toContain('2503.12345');
   });
 
-  test('generateJSONFeed creates valid JSON', () => {
+  it('generateJSONFeed creates valid JSON', () => {
     const feed = generateJSONFeed([mockPaper], mockTopics);
     const parsed = JSON.parse(feed);
 

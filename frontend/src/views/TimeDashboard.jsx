@@ -9,6 +9,15 @@ export default function TimeDashboard() {
   const [selectedLayer2, setSelectedLayer2] = useState('');
   const [selectedTopicId, setSelectedTopicId] = useState('');
 
+  // Read URL query params on mount (from DomainDashboard navigation)
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const topicId = params.get('topic');
+    if (topicId) {
+      setSelectedTopicId(topicId);
+    }
+  }, []);
+
   // Compute all values first (before any conditional returns)
   const layer1List = useMemo(() => {
     return data?.structure ? getLayer1List(data.structure) : [];
@@ -91,6 +100,23 @@ export default function TimeDashboard() {
   useEffect(() => {
     setSelectedTopicId('');
   }, [selectedLayer2]);
+
+  // When topic is selected via URL, find and set its layer1/layer2
+  useEffect(() => {
+    if (!data || !selectedTopicId) return;
+
+    // Find topic in structure to determine its layer1/layer2
+    for (const [l1, l1Data] of Object.entries(data.structure || {})) {
+      for (const [l2, topics] of Object.entries(l1Data.children || {})) {
+        const topic = topics.find(t => t.id === selectedTopicId);
+        if (topic) {
+          setSelectedLayer1(l1);
+          setSelectedLayer2(l2);
+          return;
+        }
+      }
+    }
+  }, [data, selectedTopicId]);
 
   // Now conditional returns
   if (loading) {
