@@ -4,28 +4,51 @@ export default function TopicDetailModal({ topic, topics, trends, onClose, onVie
   if (!topic) return null;
 
   // 获取主题详细信息
-  // 树节点的 topic_ids 是局部ID（如 ["1","2"]），无法直接与 topics 列表匹配
-  // 改为通过 topic name 在 trends 中查找匹配的 topic（trends 使用全局ID如 "global_1"）
+  // 树节点的 topic_ids 是局部ID（如 ["1","2"]），对应 trends 中的 global_id（如 "global_1"）
+  // 映射关系：global_id = "global_" + topic_id
   let fullTopic = topic;
   let history = topic?.history || [];
+  let keywords = topic?.keywords || [];
 
-  // If no history in topic, try to find in trends by matching topic name
-  if (!history.length && trends && topic.name) {
-    // Find trend entry with matching name
-    const trendEntry = Object.entries(trends).find(([id, t]) => t.name === topic.name);
-    if (trendEntry) {
-      const [globalId, trendData] = trendEntry;
-      fullTopic = { ...topic, id: globalId, ...trendData };
-      history = trendData.history || [];
+  // Use topic_ids to find matching global topics in trends
+  if (!history.length && trends && topic.topic_ids?.length > 0) {
+    // topic_ids like ["1", "2"] -> global_ids like ["global_1", "global_2"]
+    // Merge history from all matching global topics
+    const mergedHistory = new Map();
+    const allKeywords = new Set(topic.keywords || []);
+
+    for (const tid of topic.topic_ids) {
+      const globalId = `global_${tid}`;
+      const trendData = trends[globalId];
+      if (trendData?.history) {
+        // Merge history periods
+        for (const h of trendData.history) {
+          const existing = mergedHistory.get(h.period);
+          if (existing) {
+            existing.paper_count += h.paper_count;
+          } else {
+            mergedHistory.set(h.period, { ...h });
+          }
+        }
+        // Collect keywords
+        if (trendData.keywords) {
+          trendData.keywords.forEach((k) => allKeywords.add(k));
+        }
+      }
     }
-  }
 
-  // Fallback: try matching by topic_ids if available (for backward compatibility)
-  if (!history.length && topic.topic_ids?.[0] && topics) {
-    const matchedTopic = topics.find(t => t.id === topic.topic_ids[0]);
-    if (matchedTopic?.history) {
-      fullTopic = matchedTopic;
-      history = matchedTopic.history;
+    if (mergedHistory.size > 0) {
+      history = Array.from(mergedHistory.values()).sort((a, b) =>
+        a.period.localeCompare(b.period)
+      );
+      keywords = Array.from(allKeywords);
+      // Use first topic_id for the global id
+      fullTopic = {
+        ...topic,
+        id: `global_${topic.topic_ids[0]}`,
+        history,
+        keywords
+      };
     }
   }
 
@@ -98,7 +121,7 @@ export default function TopicDetailModal({ topic, topics, trends, onClose, onVie
         <div className="p-6 border-b border-gray-200">
           <h4 className="text-sm font-medium text-gray-700 mb-3">关键词</h4>
           <div className="flex flex-wrap gap-2">
-            {fullTopic.keywords?.slice(0, 10).map((kw, idx) => (
+            {keywords?.slice(0, 10).map((kw, idx) => (
               <span key={idx} className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
                 {kw}
               </span>
