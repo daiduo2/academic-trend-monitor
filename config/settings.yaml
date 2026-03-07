@@ -1,0 +1,117 @@
+# arXiv 类别配置（Layer 1-2 固定）
+categories:
+  cs.AI: "Artificial Intelligence"
+  cs.CV: "Computer Vision and Pattern Recognition"
+  cs.CL: "Computation and Language"
+  cs.LG: "Machine Learning"
+  cs.RO: "Robotics"
+  cs.DB: "Databases"
+  cs.DC: "Distributed Computing"
+  cs.OS: "Operating Systems"
+  cs.SE: "Software Engineering"
+  cs.NI: "Networking and Internet Architecture"
+  cs.CR: "Cryptography and Security"
+  cs.DS: "Data Structures and Algorithms"
+  cs.GT: "Computer Science and Game Theory"
+  cs.HC: "Human-Computer Interaction"
+  cs.IR: "Information Retrieval"
+  cs.IT: "Information Theory"
+  cs.MA: "Multiagent Systems"
+  cs.MM: "Multimedia"
+  cs.NE: "Neural and Evolutionary Computing"
+  cs.PF: "Performance"
+  cs.PL: "Programming Languages"
+  cs.SC: "Symbolic Computation"
+  cs.SD: "Sound"
+  cs.SY: "Systems and Control"
+  math.AG: "Algebraic Geometry"
+  math.AT: "Algebraic Topology"
+  math.AP: "Analysis of PDEs"
+  math.CT: "Category Theory"
+  math.CA: "Classical Analysis and ODEs"
+  math.CO: "Combinatorics"
+  math.AC: "Commutative Algebra"
+  math.CV: "Complex Variables"
+  math.DG: "Differential Geometry"
+  math.DS: "Dynamical Systems"
+  math.FA: "Functional Analysis"
+  math.GM: "General Mathematics"
+  math.GN: "General Topology"
+  math.GT: "Geometric Topology"
+  math.GR: "Group Theory"
+  math.HO: "History and Overview"
+  math.IT: "Information Theory"
+  math.KT: "K-Theory and Homology"
+  math.LO: "Logic"
+  math.MP: "Mathematical Physics"
+  math.MG: "Metric Geometry"
+  math.NT: "Number Theory"
+  math.NA: "Numerical Analysis"
+  math.OA: "Operator Algebras"
+  math.OC: "Optimization and Control"
+  math.PR: "Probability"
+  math.QA: "Quantum Algebra"
+  math.RT: "Representation Theory"
+  math.RA: "Rings and Algebras"
+  math.SP: "Spectral Theory"
+  math.ST: "Statistics Theory"
+  physics.acc-ph: "Accelerator Physics"
+  physics.ao-ph: "Atmospheric and Oceanic Physics"
+  physics.app-ph: "Applied Physics"
+  physics.atm-clus: "Atomic and Molecular Clusters"
+  physics.atom-ph: "Atomic Physics"
+  physics.bio-ph: "Biological Physics"
+  physics.chem-ph: "Chemical Physics"
+  physics.class-ph: "Classical Physics"
+  physics.comp-ph: "Computational Physics"
+  physics.data-an: "Data Analysis, Statistics and Probability"
+  physics.ed-ph: "Physics Education"
+  physics.flu-dyn: "Fluid Dynamics"
+  physics.gen-ph: "General Physics"
+  physics.geo-ph: "Geophysics"
+  physics.hist-ph: "History and Philosophy of Physics"
+  physics.ins-det: "Instrumentation and Detectors"
+  physics.med-ph: "Medical Physics"
+  physics.optics: "Optics"
+  physics.plasm-ph: "Plasma Physics"
+  physics.pop-ph: "Popular Physics"
+  physics.soc-ph: "Physics and Society"
+  physics.space-ph: "Space Physics"
+  stat.AP: "Applications"
+  stat.CO: "Computation"
+  stat.ME: "Methodology"
+  stat.ML: "Machine Learning"
+  stat.OT: "Other Statistics"
+  stat.TH: "Statistics Theory"
+
+# 主题建模配置
+topic_modeling:
+  min_topic_size: 10
+  embedding_model: "all-MiniLM-L6-v2"
+  nr_topics: "auto"  # 自动确定主题数量
+
+# LLM 配置
+llm:
+  provider: "deepseek"
+  api_key: ""  # 从环境变量 LLM_API_KEY 读取
+  model: "deepseek-chat"
+  base_url: "https://api.deepseek.com/v1"
+  temperature: 0.3
+  max_tokens: 2000
+
+# 流水线配置
+pipeline:
+  # 层次化配置
+  hierarchy:
+    coarse_target: 20      # 粗主题目标数量
+    fine_max_depth: 6      # 最大深度（Layer 6）
+    min_papers_per_topic: 5  # 主题最小论文数
+  
+  # 跨月对齐配置
+  alignment:
+    similarity_threshold: 0.7  # 主题相似度阈值
+    
+  # 数据更新配置
+  update:
+    frequency: "monthly"
+    lookback_months: 12

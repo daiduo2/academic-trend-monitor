@@ -1,0 +1,24 @@
+# Core
+numpy>=1.24.0
+pandas>=2.0.0
+pyyaml>=6.0
+python-dotenv>=1.0.0
+
+# Topic Modeling
+bertopic>=0.16.0
+sentence-transformers>=2.2.0
+hdbscan>=0.8.33
+umap-learn>=0.5.5
+scikit-learn>=1.3.0
+
+# LLM
+openai>=1.0.0
+
+# Visualization (for pipeline debugging)
+matplotlib>=3.7.0
+plotly>=5.15.0
+
+# RSS & Daily Pipeline
+faiss-cpu>=1.7.4
+feedparser>=6.0.0
+requests>=2.31.0
