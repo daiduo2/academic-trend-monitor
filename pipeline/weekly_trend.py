@@ -47,27 +47,9 @@ def parse_compact_date(date_str: str) -> datetime:
     return datetime(year, month, day)
 
 
-def analyze_weekly_trends(recent_file: str, topics_file: str) -> dict:
-    """Analyze weekly trends from recent papers using rolling 7-day windows."""
-    # Load papers
-    papers = []
-    try:
-        with open(recent_file) as f:
-            for line in f:
-                if line.strip():
-                    papers.append(json.loads(line.strip()))
-    except FileNotFoundError:
-        print(f"Warning: {recent_file} not found, using empty list")
-
-    # Load topics
-    try:
-        with open(topics_file) as f:
-            topics_data = json.load(f)
-            topics = topics_data.get("topics", {})
-    except FileNotFoundError:
-        print(f"Warning: {topics_file} not found, using empty topics")
-        topics = {}
-
+def analyze_weekly_trends_from_papers(papers: list[dict], topics_data: dict) -> dict:
+    """Analyze weekly trends from compact papers and compact topics payload."""
+    topics = topics_data.get("topics", {})
     # Get date ranges - rolling 7-day windows
     today = datetime.now()
     this_period_start = today - timedelta(days=7)   # Last 7 days
@@ -128,6 +110,27 @@ def analyze_weekly_trends(recent_file: str, topics_file: str) -> dict:
     report["trends"].sort(key=lambda x: x["this_week"], reverse=True)
 
     return report
+
+
+def analyze_weekly_trends(recent_file: str, topics_file: str) -> dict:
+    """Analyze weekly trends from recent papers using rolling 7-day windows."""
+    papers = []
+    try:
+        with open(recent_file) as f:
+            for line in f:
+                if line.strip():
+                    papers.append(json.loads(line.strip()))
+    except FileNotFoundError:
+        print(f"Warning: {recent_file} not found, using empty list")
+
+    try:
+        with open(topics_file) as f:
+            topics_data = json.load(f)
+    except FileNotFoundError:
+        print(f"Warning: {topics_file} not found, using empty topics")
+        topics_data = {"topics": {}}
+
+    return analyze_weekly_trends_from_papers(papers, topics_data)
 
 
 def main():

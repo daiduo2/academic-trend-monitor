@@ -1,6 +1,6 @@
 # Academic Trend Monitor
 
-学术热点趋势分析仪表盘。这个项目围绕 arXiv 论文构建一个静态部署的数据产品：月度做主题建模与层级结构构建，周度做滚动趋势统计，日度做新论文打标与 RSS 订阅支持，前端以 GitHub Pages 方式发布。
+学术热点趋势分析仪表盘。这个项目围绕 arXiv 论文构建一个静态部署的数据产品：月度做主题建模与层级结构构建，周度做滚动趋势统计，日度做新论文打标与 RSS 订阅支持，并通过 PostgreSQL 主存储 + GitHub Pages 静态导出的方式发布。
 
 > GEB 文档入口：[`PROJECT.md`](PROJECT.md)、[`docs/geb/`](docs/geb/)
 
@@ -11,7 +11,7 @@
 1. 用 BERTopic + LLM 把连续多个月的 arXiv 论文组织成可浏览的层级主题体系。
 2. 用纯前端的方式展示趋势、支持 drill-down 浏览，并提供轻量 RSS 订阅能力。
 
-项目没有后端服务，所有展示数据都来自本地或 GitHub Actions 生成的静态 JSON / JSONL 文件。
+项目不引入常驻 API 服务。PostgreSQL 负责承接月度主题版本、日更标签和日报分析，前端继续消费本地或 GitHub Actions 导出的静态 JSON / JSONL 文件。
 
 ## 当前能力
 
@@ -22,6 +22,8 @@
 - 时间趋势分析：查看单个主题或聚合主题的历史趋势。
 - RSS 订阅中心：按主题标签过滤最近论文并生成可下载的 feed。
 - 日更 / 周更脚本：支持最近论文更新和滚动 7 天趋势报告生成。
+- PostgreSQL 发布链路：支持把月度主题版本、日更标签和日报分析写入数据库。
+- 日报分析：支持调用 Claude Code / LLM 生成结构化热点解读，并导出到静态页面。
 
 ## 架构概览
 
@@ -31,6 +33,7 @@
 arXiv raw JSONL
   -> BERTopic（月度局部主题）
   -> hierarchy / alignment（全局主题与层级）
+  -> PostgreSQL（主题版本 / 标签 / 分析）
   -> static outputs（JSON）
   -> frontend/public/data
   -> GitHub Pages
@@ -48,8 +51,8 @@ React + Vite + Recharts
 ### 时间粒度分工
 
 - 月度：本地运行重型建模与主题对齐。
-- 周度：基于最近论文数据生成滚动 7 天趋势报告。
-- 日度：抓取新增论文、做 topic tagging、供 RSS 页面使用。
+- 周度：从 PostgreSQL 导出滚动 7 天趋势报告。
+- 日度：抓取新增论文、做 topic tagging，并生成日报分析。
 
 ## 目录结构
 
@@ -92,6 +95,8 @@ academic-trend-monitor/
   最近论文的压缩格式索引。
 - `data/weekly/*.json`
   滚动 7 天趋势报告。
+- `data/analysis/daily/*.json`
+  每日结构化 LLM 分析结果。
 
 ## 环境准备
 
@@ -117,7 +122,35 @@ export LLM_API_KEY=your_deepseek_key
 
 LLM 与主题建模相关参数见 [`config/settings.yaml`](config/settings.yaml)。
 
-### 4. 原始数据
+如果使用和 `IssueLab` 一致的第三方 Claude / coding-plan 接法，额外需要：
+
+```bash
+export ANTHROPIC_AUTH_TOKEN=your_model_api_token
+export ANTHROPIC_BASE_URL=https://api.minimaxi.com/anthropic
+export ANTHROPIC_MODEL=MiniMax-M2.1
+npm install -g @anthropic-ai/claude-code
+```
+
+当前实现对齐 `IssueLab` 的变量约定：
+
+- `ANTHROPIC_AUTH_TOKEN`
+- `ANTHROPIC_BASE_URL`
+- `ANTHROPIC_MODEL`
+- `PAT_TOKEN`
+
+分析客户端会优先读取这组变量，并兼容映射到本地 SDK 运行环境；失败时再回退到 `CLAUDE_CODE_COMMAND` 或现有 API 客户端。
+
+### 4. PostgreSQL / Neon 配置
+
+推荐直接使用 Neon 提供的 `DATABASE_URL`，保留其池化 host，并确保带有 `sslmode=require`。
+
+示例：
+
+```bash
+export DATABASE_URL='postgresql://user:password@ep-xxx-pooler.ap-southeast-1.aws.neon.tech/dbname?sslmode=require'
+```
+
+### 5. 原始数据
 
 把原始 arXiv 月度 JSONL 放到 `data/raw/`，文件名应为 `YYYY-MM.jsonl`。
 
@@ -169,26 +202,28 @@ npm run build
 make deploy
 ```
 
-`make deploy` 会先把 `data/output/*.json` 复制到 `frontend/public/data/`，再执行前端构建。静态资源推送后可由 GitHub Pages 发布。
+`make deploy` 会先把 `data/output/`、`data/recent.jsonl`、`data/weekly/`、`data/analysis/daily/` 同步到 `frontend/public/data/`，再执行前端构建。静态资源推送后可由 GitHub Pages 发布。
 
 ## 日更 / 周更工作流
 
 ### 日更：抓取并打标最近论文
 
 ```bash
-python pipeline/daily_update.py
+python -m pipeline.daily_fetch_and_tag
+python -m pipeline.export_recent_static
 ```
 
 内部步骤：
 
 1. 从 arXiv 抓取最近论文
 2. 使用 topic index 打标签
-3. 写入 `data/recent.jsonl`
+3. 写入 PostgreSQL
+4. 导出 `data/recent.jsonl`
 
 ### 周更：生成滚动 7 天趋势报告
 
 ```bash
-python pipeline/weekly_trend.py
+python -m pipeline.export_weekly_static
 ```
 
 输出格式为：
@@ -204,6 +239,35 @@ data/weekly/YYYY-MM-DD.json
 ```bash
 python pipeline/build_topic_index.py
 ```
+
+当前仓库默认将 topic index 固定发布到同一路径，并由日更任务直接下载：
+
+```text
+https://raw.githubusercontent.com/daiduo2/academic-trend-monitor/main/data/output/topic_index
+```
+
+也就是每月更新时直接覆盖：
+
+- `data/output/topic_index.faiss`
+- `data/output/topic_index.json`
+
+### 月度发布到 PostgreSQL
+
+```bash
+make db-init
+python -m pipeline.publish_topics_to_db \
+  --topics-tree data/output/topics_tree.json \
+  --hierarchy data/output/aligned_topics_hierarchy.json
+```
+
+### 日报分析
+
+```bash
+python -m pipeline.daily_generate_analysis
+python -m pipeline.export_analysis_static
+```
+
+默认优先读取 `ANTHROPIC_AUTH_TOKEN / ANTHROPIC_BASE_URL / ANTHROPIC_MODEL` 调用 Anthropic-compatible Claude 提供方；若 `claude-agent-sdk` 和 Claude CLI 都可用，则优先走 SDK。
 
 ## 前端页面说明
 
@@ -225,6 +289,12 @@ python pipeline/build_topic_index.py
 - 作用：按 topic tag 过滤最近论文并生成本地可下载 feed
 - 特性：支持从 URL 恢复订阅参数、展示滚动趋势摘要
 
+### 日报分析
+
+- 入口：`/analysis`
+- 作用：展示每日生成的结构化热点分析、代表论文和关键信号
+- 特性：消费 `data/analysis/daily/*.json`，不依赖在线 API
+
 ## 常用命令
 
 | 命令 | 说明 |
@@ -232,7 +302,12 @@ python pipeline/build_topic_index.py
 | `make install` | 安装 Python 依赖 |
 | `make frontend-install` | 安装前端依赖 |
 | `make test` | 运行 Python 测试 |
+| `make db-init` | 初始化 PostgreSQL schema |
 | `make pipeline` | 运行月度数据流水线 |
+| `make publish-topics` | 发布月度主题版本到 PostgreSQL |
+| `make daily-tag` | 抓取并打标新论文到 PostgreSQL |
+| `make daily-analysis` | 生成每日结构化分析 |
+| `make export-static` | 从 PostgreSQL 导出静态文件 |
 | `make deploy` | 构建前端并准备部署 |
 | `make clean` | 清理生成物 |
 | `cd frontend && npm test` | 运行前端测试 |
@@ -254,6 +329,9 @@ python pipeline/build_topic_index.py
 - `llm.provider`
 - `llm.model`
 - `pipeline.alignment.similarity_threshold`
+- `pipeline.tagging.score_threshold`
+- `database.topic_index_path`
+- `analysis.command`
 
 ## 测试与校验
 

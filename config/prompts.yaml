@@ -114,6 +114,49 @@ topic_trend_analysis: |
   2. 近期有哪些值得关注的进展?
   3. 未来可能的发展方向是什么?
 
+daily_analysis_json: |
+  你是学术趋势日报分析助手。请基于输入数据输出严格 JSON，不要输出 Markdown，不要添加解释。
+
+  输入数据：
+  {payload}
+
+  输出 schema：
+  {{
+    "date": "YYYY-MM-DD",
+    "title": "日报标题",
+    "summary": "2-4句的总体摘要",
+    "key_findings": ["发现1", "发现2", "发现3"],
+    "risks": ["风险1", "风险2"],
+    "top_rising_topics": [
+      {{
+        "topic_id": "123",
+        "topic_name": "主题名",
+        "summary": "上升原因或背景",
+        "paper_count": 12,
+        "change": 5
+      }}
+    ],
+    "notable_papers": [
+      {{
+        "arxiv_id": "2503.12345",
+        "title": "论文标题",
+        "reason": "为什么值得关注"
+      }}
+    ],
+    "signals": [
+      {{
+        "kind": "emerging|cooling|cross_disciplinary|drift",
+        "label": "信号标题",
+        "summary": "信号说明"
+      }}
+    ],
+    "model_meta": {{
+      "provider": "claude_code",
+      "model": "string",
+      "mode": "daily_analysis"
+    }}
+  }}
+
 # 研究空白识别
 research_gap_identification: |
   你是一位研究机会发现专家。基于以下热门研究主题的分析，识别潜在的研究空白。
