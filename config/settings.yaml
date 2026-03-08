@@ -115,3 +115,28 @@ pipeline:
   update:
     frequency: "monthly"
     lookback_months: 12
+
+  tagging:
+    score_threshold: 0.6
+    top_k: 10
+    min_tags: 0
+    recent_days: 14
+
+  export:
+    analysis_format: "json"
+    static_output_dir: "data"
+
+database:
+  active_topic_version: ""
+  topic_index_path: "https://raw.githubusercontent.com/daiduo2/academic-trend-monitor/main/data/output/topic_index"
+  provider: "neon"
+  require_ssl: true
+
+analysis:
+  provider: "claude_code"
+  command: ""
+  fallback_to_api: true
+  sdk_max_turns: 6
+  sdk_cwd: "."
+  anthropic_base_url: ""
+  anthropic_model: ""
