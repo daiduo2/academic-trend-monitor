@@ -2,6 +2,7 @@ import { Routes, Route, NavLink } from 'react-router-dom';
 import DomainDashboard from './views/DomainDashboard';
 import TimeDashboard from './views/TimeDashboard';
 import { RSSSubscription } from './pages/RSSSubscription';
+import { AnalysisDashboard } from './pages/AnalysisDashboard';
 
 function App() {
   return (
@@ -55,6 +56,18 @@ function App() {
             >
               RSS订阅
             </NavLink>
+            <NavLink
+              to="/analysis"
+              className={({ isActive }) =>
+                `py-4 px-2 border-b-2 font-medium text-sm ${
+                  isActive
+                    ? 'border-blue-500 text-blue-600'
+                    : 'border-transparent text-gray-500 hover:text-gray-700'
+                }`
+              }
+            >
+              日报分析
+            </NavLink>
           </div>
         </div>
       </nav>
@@ -65,6 +78,7 @@ function App() {
           <Route path="/" element={<DomainDashboard />} />
           <Route path="/trends" element={<TimeDashboard />} />
           <Route path="/rss" element={<RSSSubscription />} />
+          <Route path="/analysis" element={<AnalysisDashboard />} />
         </Routes>
       </main>
 

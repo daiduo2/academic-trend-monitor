@@ -1,0 +1,64 @@
+name: Daily Analysis
+
+on:
+  workflow_run:
+    workflows: ["Daily Tagging"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  daily-analysis:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      CLAUDE_CODE_COMMAND: ${{ vars.CLAUDE_CODE_COMMAND || '' }}
+      ANTHROPIC_AUTH_TOKEN: ${{ secrets.ANTHROPIC_AUTH_TOKEN }}
+      ANTHROPIC_BASE_URL: ${{ secrets.ANTHROPIC_BASE_URL }}
+      ANTHROPIC_MODEL: ${{ secrets.ANTHROPIC_MODEL }}
+      PAT_TOKEN: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
+      LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install Claude Code CLI
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Validate Anthropic-compatible provider config
+        run: |
+          set -euo pipefail
+          [ -n "${ANTHROPIC_AUTH_TOKEN:-}" ] || { echo "Missing ANTHROPIC_AUTH_TOKEN"; exit 1; }
+          [ -n "${ANTHROPIC_BASE_URL:-}" ] || { echo "Missing ANTHROPIC_BASE_URL"; exit 1; }
+          [ -n "${ANTHROPIC_MODEL:-}" ] || { echo "Missing ANTHROPIC_MODEL"; exit 1; }
+
+      - name: Generate daily analysis
+        continue-on-error: true
+        run: python3 -m pipeline.daily_generate_analysis
+
+      - name: Export analysis artifacts
+        continue-on-error: true
+        run: python3 -m pipeline.export_analysis_static
+
+      - name: Commit exported analysis
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/analysis/
+          git diff --staged --quiet || git commit -m "daily: export analysis"
+          git push

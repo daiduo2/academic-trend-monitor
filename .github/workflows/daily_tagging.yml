@@ -1,0 +1,41 @@
+name: Daily Tagging
+
+on:
+  schedule:
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  daily-tagging:
+    runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      TAG_SCORE_THRESHOLD: ${{ vars.TAG_SCORE_THRESHOLD || '0.6' }}
+      TAGGER_VERSION: embedding-v1
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run daily fetch and tagging
+        run: python3 -m pipeline.daily_fetch_and_tag
+
+      - name: Export recent papers
+        run: python3 -m pipeline.export_recent_static
+
+      - name: Commit exported static data
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/recent.jsonl
+          git diff --staged --quiet || git commit -m "daily: export recent papers"
+          git push
