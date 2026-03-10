@@ -1,5 +1,16 @@
 import { useState, useEffect } from 'react';
 
+async function fetchJsonWithFallback(paths) {
+  for (const path of paths) {
+    const response = await fetch(path);
+    if (response.ok) {
+      return response.json();
+    }
+  }
+
+  throw new Error('Failed to load data');
+}
+
 export function useData() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -11,17 +22,16 @@ export function useData() {
         setLoading(true);
 
         const basePath = import.meta.env.BASE_URL || '/';
-        const [treeResponse, trendsResponse] = await Promise.all([
-          fetch(`${basePath}data/topics_tree.json`),
-          fetch(`${basePath}data/trend_stats.json`)
+        const [treeData, trendsData] = await Promise.all([
+          fetchJsonWithFallback([
+            `${basePath}data/output/topics_tree.json`,
+            `${basePath}data/topics_tree.json`
+          ]),
+          fetchJsonWithFallback([
+            `${basePath}data/output/trend_stats.json`,
+            `${basePath}data/trend_stats.json`
+          ])
         ]);
-
-        if (!treeResponse.ok || !trendsResponse.ok) {
-          throw new Error('Failed to load data');
-        }
-
-        const treeData = await treeResponse.json();
-        const trendsData = await trendsResponse.json();
 
         setData({
           topics: treeData.topics,

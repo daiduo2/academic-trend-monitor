@@ -1,5 +1,16 @@
 import { useState, useEffect } from 'react';
 
+async function fetchJsonWithFallback(paths) {
+  for (const path of paths) {
+    const response = await fetch(path);
+    if (response.ok) {
+      return response.json();
+    }
+  }
+
+  throw new Error('Failed to load data');
+}
+
 export function useDomainData() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -10,17 +21,10 @@ export function useDomainData() {
       try {
         setLoading(true);
         const basePath = import.meta.env.BASE_URL || '/';
-
-        const [structureRes, trendsRes] = await Promise.all([
-          fetch(`${basePath}data/aligned_topics_hierarchy.json`),
-          fetch(`${basePath}data/aligned_topics_hierarchy.json`)
+        const alignedData = await fetchJsonWithFallback([
+          `${basePath}data/output/aligned_topics_hierarchy.json`,
+          `${basePath}data/aligned_topics_hierarchy.json`
         ]);
-
-        if (!structureRes.ok || !trendsRes.ok) {
-          throw new Error('Failed to load data');
-        }
-
-        const alignedData = await structureRes.json();
 
         setData({
           structure: alignedData,
