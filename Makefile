@@ -17,16 +17,16 @@ help:
 	@echo ""
 
 install:
-	pip install -r requirements.txt
+	uv sync
 
 frontend-install:
 	cd frontend && npm install
 
 test:
-	pytest tests/ -v
+	uv run pytest tests/ -v
 
 db-init:
-	python3 -m pipeline.db
+	uv run python -m pipeline.db
 
 pipeline:
 	@echo "运行数据处理流水线..."
@@ -39,18 +39,21 @@ pipeline:
 	@echo "流水线完成，数据已生成到 data/output/"
 
 publish-topics:
-	python3 -m pipeline.publish_topics_to_db
+	uv run python -m pipeline.publish_topics_to_db
 
 daily-tag:
-	python3 -m pipeline.daily_fetch_and_tag
+	uv run python -m pipeline.daily_tag_metadata
+
+daily-fetch:
+	uv run python -m pipeline.daily_fetch_metadata
 
 daily-analysis:
-	python3 -m pipeline.daily_generate_analysis
+	uv run python -m pipeline.daily_generate_analysis
 
 export-static:
-	python3 -m pipeline.export_recent_static
-	python3 -m pipeline.export_weekly_static
-	python3 -m pipeline.export_analysis_static
+	uv run python -m pipeline.export_recent_static
+	uv run python -m pipeline.export_weekly_static
+	uv run python -m pipeline.export_analysis_static
 
 deploy:
 	@echo "构建前端并部署..."

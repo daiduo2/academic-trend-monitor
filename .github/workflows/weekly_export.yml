@@ -5,6 +5,10 @@ on:
     - cron: '0 3 * * 0'
   workflow_dispatch:
 
+concurrency:
+  group: static-export-${{ github.ref }}
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
@@ -13,24 +17,47 @@ jobs:
     runs-on: ubuntu-latest
     env:
       DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      GH_PUSH_TOKEN: ${{ secrets.PAT_TOKEN || github.token }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ env.GH_PUSH_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+
       - name: Install Python dependencies
-        run: pip install -r requirements.txt
+        run: uv sync --locked --no-dev
+
+      - name: Skip workflow when DATABASE_URL is not configured
+        if: ${{ env.DATABASE_URL == '' }}
+        run: echo "DATABASE_URL is not configured; skipping Weekly Export."
 
       - name: Export weekly trends
-        run: python3 -m pipeline.export_weekly_static
+        if: ${{ env.DATABASE_URL != '' }}
+        run: uv run python -m pipeline.export_weekly_static
 
       - name: Commit exported weekly data
+        if: ${{ env.DATABASE_URL != '' }}
         run: |
+          set -euo pipefail
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add data/weekly/
-          git diff --staged --quiet || git commit -m "weekly: export trend analysis"
-          git push
+          git diff --staged --quiet && exit 0
+          git commit -m "weekly: export trend analysis"
+          for attempt in 1 2 3; do
+            git fetch origin "${GITHUB_REF_NAME}"
+            git rebase "origin/${GITHUB_REF_NAME}" && git push && exit 0
+            git rebase --abort || true
+            [ "$attempt" -lt 3 ] || exit 1
+            sleep 5
+          done

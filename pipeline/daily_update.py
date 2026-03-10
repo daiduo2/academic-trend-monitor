@@ -1,7 +1,12 @@
-# pipeline/daily_update.py
+"""Compatibility wrapper for the PostgreSQL-backed daily pipeline."""
+from __future__ import annotations
+
+import sys
 from pathlib import Path
 
-"""Compatibility wrapper for the PostgreSQL-backed daily pipeline."""
+
+if __package__ in (None, ""):
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 
 def main():

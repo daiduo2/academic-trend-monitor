@@ -2,25 +2,36 @@ name: Daily Analysis
 
 on:
   workflow_run:
-    workflows: ["Daily Tagging"]
+    workflows: ["Daily Fetch"]
     types: [completed]
   workflow_dispatch:
+    inputs:
+      smoke_sdk_only:
+        description: "Run Claude SDK smoke test only"
+        required: false
+        default: false
+        type: boolean
+      smoke_http_only:
+        description: "Run direct HTTP smoke test only"
+        required: false
+        default: false
+        type: boolean
+
+concurrency:
+  group: daily-analysis-${{ github.ref }}
+  cancel-in-progress: false
 
 permissions:
   contents: write
 
 jobs:
-  daily-analysis:
-    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+  claude-http-smoke:
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.smoke_http_only == true }}
     runs-on: ubuntu-latest
     env:
-      DATABASE_URL: ${{ secrets.DATABASE_URL }}
-      CLAUDE_CODE_COMMAND: ${{ vars.CLAUDE_CODE_COMMAND || '' }}
       ANTHROPIC_AUTH_TOKEN: ${{ secrets.ANTHROPIC_AUTH_TOKEN }}
       ANTHROPIC_BASE_URL: ${{ secrets.ANTHROPIC_BASE_URL }}
       ANTHROPIC_MODEL: ${{ secrets.ANTHROPIC_MODEL }}
-      PAT_TOKEN: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
-      LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
     steps:
       - uses: actions/checkout@v4
 
@@ -29,13 +40,182 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+
+      - name: Install Python dependencies
+        run: uv sync --locked --no-dev
+
+      - name: Validate Anthropic-compatible env
+        run: |
+          set -euo pipefail
+          [ -n "${ANTHROPIC_AUTH_TOKEN:-}" ] || { echo "Missing ANTHROPIC_AUTH_TOKEN"; exit 1; }
+          [ -n "${ANTHROPIC_BASE_URL:-}" ] || { echo "Missing ANTHROPIC_BASE_URL"; exit 1; }
+          [ -n "${ANTHROPIC_MODEL:-}" ] || { echo "Missing ANTHROPIC_MODEL"; exit 1; }
+          echo "ANTHROPIC_AUTH_TOKEN=set"
+          echo "ANTHROPIC_BASE_URL=set"
+          echo "ANTHROPIC_MODEL=set"
+
+      - name: Run direct HTTP smoke test
+        run: |
+          uv run python - <<'PY'
+          import json
+          import os
+          import sys
+          import urllib.error
+          import urllib.request
+
+          base_url = os.environ["ANTHROPIC_BASE_URL"].rstrip("/")
+          if base_url.endswith("/v1/messages"):
+              url = base_url
+          elif base_url.endswith("/v1"):
+              url = base_url + "/messages"
+          else:
+              url = base_url + "/v1/messages"
+
+          payload = {
+              "model": os.environ["ANTHROPIC_MODEL"],
+              "max_tokens": 32,
+              "messages": [{"role": "user", "content": "Reply with exactly: ok"}],
+          }
+          data = json.dumps(payload).encode("utf-8")
+          headers = {
+              "content-type": "application/json",
+              "x-api-key": os.environ["ANTHROPIC_AUTH_TOKEN"],
+              "anthropic-version": "2023-06-01",
+              "authorization": f"Bearer {os.environ['ANTHROPIC_AUTH_TOKEN']}",
+          }
+
+          request = urllib.request.Request(url, data=data, headers=headers, method="POST")
+          print(f"HTTP_URL={url}")
+          print("HTTP_REQUEST_BODY=" + json.dumps(payload, ensure_ascii=False))
+
+          try:
+              with urllib.request.urlopen(request, timeout=120) as response:
+                  body = response.read().decode("utf-8", errors="replace")
+                  print(f"HTTP_STATUS={response.status}")
+                  print("HTTP_RESPONSE_START")
+                  print(body)
+                  print("HTTP_RESPONSE_END")
+          except urllib.error.HTTPError as exc:
+              body = exc.read().decode("utf-8", errors="replace")
+              print(f"HTTP_STATUS={exc.code}")
+              print("HTTP_RESPONSE_START")
+              print(body)
+              print("HTTP_RESPONSE_END")
+              sys.exit(1)
+          except Exception as exc:
+              print(f"HTTP_EXCEPTION={type(exc).__name__}: {exc}")
+              sys.exit(1)
+          PY
+
+  claude-sdk-smoke:
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.smoke_sdk_only == true }}
+    runs-on: ubuntu-latest
+    env:
+      ANTHROPIC_AUTH_TOKEN: ${{ secrets.ANTHROPIC_AUTH_TOKEN }}
+      ANTHROPIC_BASE_URL: ${{ secrets.ANTHROPIC_BASE_URL }}
+      ANTHROPIC_MODEL: ${{ secrets.ANTHROPIC_MODEL }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+
+      - name: Install Python dependencies
+        run: uv sync --locked --no-dev
+
+      - name: Validate Anthropic-compatible env
+        run: |
+          set -euo pipefail
+          [ -n "${ANTHROPIC_AUTH_TOKEN:-}" ] || { echo "Missing ANTHROPIC_AUTH_TOKEN"; exit 1; }
+          [ -n "${ANTHROPIC_BASE_URL:-}" ] || { echo "Missing ANTHROPIC_BASE_URL"; exit 1; }
+          [ -n "${ANTHROPIC_MODEL:-}" ] || { echo "Missing ANTHROPIC_MODEL"; exit 1; }
+          echo "ANTHROPIC_AUTH_TOKEN=set"
+          echo "ANTHROPIC_BASE_URL=set"
+          echo "ANTHROPIC_MODEL=set"
+
+      - name: Run Claude SDK smoke test
+        run: |
+          uv run python - <<'PY'
+          import asyncio
+          import json
+          import os
+
+          if os.getenv("ANTHROPIC_AUTH_TOKEN") and not os.getenv("ANTHROPIC_API_KEY"):
+              os.environ["ANTHROPIC_API_KEY"] = os.environ["ANTHROPIC_AUTH_TOKEN"]
+
+          from claude_agent_sdk import AssistantMessage, ClaudeAgentOptions, ResultMessage, TextBlock, query
+
+          async def main():
+              chunks = []
+              meta = {}
+              options = ClaudeAgentOptions(max_turns=2)
+              prompt = 'Return strict JSON only: {"ok": true, "source": "claude-sdk"}'
+
+              async for message in query(prompt=prompt, options=options):
+                  if isinstance(message, AssistantMessage):
+                      for block in getattr(message, "content", []):
+                          if isinstance(block, TextBlock):
+                              chunks.append(block.text)
+                  elif isinstance(message, ResultMessage):
+                      meta["session_id"] = getattr(message, "session_id", "")
+                      meta["num_turns"] = getattr(message, "num_turns", 0)
+                      meta["total_cost_usd"] = getattr(message, "total_cost_usd", 0.0)
+
+              text = "".join(chunks).strip()
+              print("SDK_TEXT_START")
+              print(text)
+              print("SDK_TEXT_END")
+              print("SDK_META=" + json.dumps(meta, ensure_ascii=False))
+
+          asyncio.run(main())
+          PY
+
+  daily-analysis:
+    if: ${{ (github.event_name == 'workflow_dispatch' && inputs.smoke_sdk_only != true && inputs.smoke_http_only != true) || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      GH_PUSH_TOKEN: ${{ secrets.PAT_TOKEN || github.token }}
+      CLAUDE_CODE_COMMAND: ${{ vars.CLAUDE_CODE_COMMAND || '' }}
+      ANTHROPIC_AUTH_TOKEN: ${{ secrets.ANTHROPIC_AUTH_TOKEN }}
+      ANTHROPIC_BASE_URL: ${{ secrets.ANTHROPIC_BASE_URL }}
+      ANTHROPIC_MODEL: ${{ secrets.ANTHROPIC_MODEL }}
+      PAT_TOKEN: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
+      LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ env.GH_PUSH_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
       - name: Install Python dependencies
-        run: pip install -r requirements.txt
+        run: uv sync --locked --no-dev
 
       - name: Install Claude Code CLI
         run: npm install -g @anthropic-ai/claude-code
@@ -48,17 +228,24 @@ jobs:
           [ -n "${ANTHROPIC_MODEL:-}" ] || { echo "Missing ANTHROPIC_MODEL"; exit 1; }
 
       - name: Generate daily analysis
-        continue-on-error: true
-        run: python3 -m pipeline.daily_generate_analysis
+        run: uv run python -m pipeline.daily_generate_analysis
 
       - name: Export analysis artifacts
-        continue-on-error: true
-        run: python3 -m pipeline.export_analysis_static
+        run: uv run python -m pipeline.export_analysis_static
 
       - name: Commit exported analysis
         run: |
+          set -euo pipefail
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add data/analysis/
-          git diff --staged --quiet || git commit -m "daily: export analysis"
-          git push
+          [ -d data/analysis ] || exit 0
+          git add -A data/analysis/
+          git diff --staged --quiet && exit 0
+          git commit -m "daily: export analysis"
+          for attempt in 1 2 3; do
+            git fetch origin "${GITHUB_REF_NAME}"
+            git rebase "origin/${GITHUB_REF_NAME}" && git push && exit 0
+            git rebase --abort || true
+            [ "$attempt" -lt 3 ] || exit 1
+            sleep 5
+          done
