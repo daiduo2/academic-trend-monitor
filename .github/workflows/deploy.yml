@@ -36,13 +36,16 @@ jobs:
 
       - name: Copy data files
         run: |
-          mkdir -p frontend/public/data/output frontend/public/data/weekly frontend/public/data/analysis/daily
-          cp data/output/*.json frontend/public/data/output/ || echo "No root json files"
+          mkdir -p frontend/public/data frontend/public/data/output frontend/public/data/weekly frontend/public/data/analysis/daily
+          cp data/output/*.json frontend/public/data/ || echo "No root json files"
+          cp data/output/*.json frontend/public/data/output/ || echo "No output json files"
           cp data/recent.jsonl frontend/public/data/ || echo "No recent file"
           cp -r data/weekly/. frontend/public/data/weekly/ || echo "No weekly files"
           cp -r data/analysis/daily/. frontend/public/data/analysis/daily/ || echo "No daily analysis files"
-          cp -r data/output/bertopic frontend/public/data/output/ || echo "No bertopic files"
-          cp -r data/output/hierarchy frontend/public/data/output/ || echo "No hierarchy files"
+          cp -r data/output/bertopic frontend/public/data/ || echo "No bertopic files"
+          cp -r data/output/hierarchy frontend/public/data/ || echo "No hierarchy files"
+          cp -r data/output/bertopic frontend/public/data/output/ || echo "No output bertopic files"
+          cp -r data/output/hierarchy frontend/public/data/output/ || echo "No output hierarchy files"
           ls -la frontend/public/data/
 
       - name: Build

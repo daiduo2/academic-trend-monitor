@@ -54,8 +54,9 @@ export-static:
 
 deploy:
 	@echo "构建前端并部署..."
-	@mkdir -p frontend/public/data/output frontend/public/data/weekly frontend/public/data/analysis/daily
-	@cp data/output/*.json frontend/public/data/output/ || echo "No data files yet"
+	@mkdir -p frontend/public/data frontend/public/data/output frontend/public/data/weekly frontend/public/data/analysis/daily
+	@cp data/output/*.json frontend/public/data/ || echo "No data files yet"
+	@cp data/output/*.json frontend/public/data/output/ || echo "No output data files yet"
 	@cp data/recent.jsonl frontend/public/data/ || echo "No recent data yet"
 	@cp -r data/weekly/. frontend/public/data/weekly/ || echo "No weekly data yet"
 	@cp -r data/analysis/daily/. frontend/public/data/analysis/daily/ || echo "No analysis data yet"
