@@ -22,6 +22,7 @@ export function AnalysisDashboard() {
       <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
         <p className="text-sm uppercase tracking-[0.2em] text-slate-500">Daily Analysis</p>
         <h1 className="mt-2 text-3xl font-bold text-slate-900">{analysis.title}</h1>
+        <p className="mt-2 text-sm text-slate-500">分析日期：{analysis.date}</p>
         <p className="mt-4 max-w-3xl text-base leading-7 text-slate-700">{analysis.summary}</p>
       </section>
 
