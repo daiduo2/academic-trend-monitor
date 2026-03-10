@@ -40,64 +40,79 @@ def _cleanup_topic_index(path: str) -> None:
         shutil.rmtree(parent, ignore_errors=True)
 
 
+def _upsert_papers(cur, papers: list[dict]) -> None:
+    for paper in papers:
+        cur.execute(
+            """
+            INSERT INTO papers_recent (
+                arxiv_id, title, abstract, authors, primary_category, categories, published_at, updated_at, pdf_url, metadata
+            ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+            ON CONFLICT (arxiv_id) DO UPDATE SET
+                title = EXCLUDED.title,
+                abstract = EXCLUDED.abstract,
+                authors = EXCLUDED.authors,
+                primary_category = EXCLUDED.primary_category,
+                categories = EXCLUDED.categories,
+                published_at = EXCLUDED.published_at,
+                updated_at = EXCLUDED.updated_at,
+                pdf_url = EXCLUDED.pdf_url,
+                metadata = EXCLUDED.metadata,
+                fetched_at = NOW()
+            """,
+            (
+                paper["id"],
+                paper.get("title", ""),
+                paper.get("abstract", ""),
+                json.dumps(paper.get("authors", [])),
+                paper.get("primary_category"),
+                json.dumps(paper.get("categories", [])),
+                paper.get("published") or None,
+                paper.get("updated") or None,
+                paper.get("pdf_url"),
+                json.dumps({"source": "arxiv"}),
+            ),
+        )
+
+
+def _replace_tags(cur, tagged_papers: list[dict], active_version: str, tagger_version: str) -> None:
+    for paper in tagged_papers:
+        cur.execute(
+            "DELETE FROM paper_topic_tags WHERE arxiv_id = %s AND topic_version_month = %s",
+            (paper["id"], active_version),
+        )
+        for rank, (topic_id, score) in enumerate(zip(paper.get("tags", []), paper.get("scores", [])), start=1):
+            cur.execute(
+                """
+                INSERT INTO paper_topic_tags (
+                    arxiv_id, topic_id, topic_version_month, score, rank, tagger_version, metadata
+                ) VALUES (%s, %s, %s, %s, %s, %s, %s)
+                """,
+                (
+                    paper["id"],
+                    str(topic_id),
+                    active_version,
+                    float(score),
+                    rank,
+                    tagger_version,
+                    json.dumps({}),
+                ),
+            )
+
+
+def store_papers(papers: list[dict]) -> int:
+    with connect() as conn:
+        ensure_schema(conn)
+        with conn.cursor() as cur:
+            _upsert_papers(cur, papers)
+    return len(papers)
+
+
 def store_papers_and_tags(papers: list[dict], active_version: str, tagged_papers: list[dict], tagger_version: str) -> int:
     with connect() as conn:
         ensure_schema(conn)
         with conn.cursor() as cur:
-            for paper in papers:
-                cur.execute(
-                    """
-                    INSERT INTO papers_recent (
-                        arxiv_id, title, abstract, authors, primary_category, categories, published_at, updated_at, pdf_url, metadata
-                    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
-                    ON CONFLICT (arxiv_id) DO UPDATE SET
-                        title = EXCLUDED.title,
-                        abstract = EXCLUDED.abstract,
-                        authors = EXCLUDED.authors,
-                        primary_category = EXCLUDED.primary_category,
-                        categories = EXCLUDED.categories,
-                        published_at = EXCLUDED.published_at,
-                        updated_at = EXCLUDED.updated_at,
-                        pdf_url = EXCLUDED.pdf_url,
-                        metadata = EXCLUDED.metadata,
-                        fetched_at = NOW()
-                    """,
-                    (
-                        paper["id"],
-                        paper.get("title", ""),
-                        paper.get("abstract", ""),
-                        json.dumps(paper.get("authors", [])),
-                        paper.get("primary_category"),
-                        json.dumps(paper.get("categories", [])),
-                        paper.get("published") or None,
-                        paper.get("updated") or None,
-                        paper.get("pdf_url"),
-                        json.dumps({"source": "arxiv"}),
-                    ),
-                )
-
-            for paper in tagged_papers:
-                cur.execute(
-                    "DELETE FROM paper_topic_tags WHERE arxiv_id = %s AND topic_version_month = %s",
-                    (paper["id"], active_version),
-                )
-                for rank, (topic_id, score) in enumerate(zip(paper.get("tags", []), paper.get("scores", [])), start=1):
-                    cur.execute(
-                        """
-                        INSERT INTO paper_topic_tags (
-                            arxiv_id, topic_id, topic_version_month, score, rank, tagger_version, metadata
-                        ) VALUES (%s, %s, %s, %s, %s, %s, %s)
-                        """,
-                        (
-                            paper["id"],
-                            str(topic_id),
-                            active_version,
-                            float(score),
-                            rank,
-                            tagger_version,
-                            json.dumps({}),
-                        ),
-                    )
+            _upsert_papers(cur, papers)
+            _replace_tags(cur, tagged_papers, active_version, tagger_version)
     return len(tagged_papers)
 
 

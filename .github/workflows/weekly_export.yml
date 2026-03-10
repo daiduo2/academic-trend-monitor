@@ -54,6 +54,10 @@ jobs:
           git add data/weekly/
           git diff --staged --quiet && exit 0
           git commit -m "weekly: export trend analysis"
-          git fetch origin "${GITHUB_REF_NAME}"
-          git rebase "origin/${GITHUB_REF_NAME}"
-          git push
+          for attempt in 1 2 3; do
+            git fetch origin "${GITHUB_REF_NAME}"
+            git rebase "origin/${GITHUB_REF_NAME}" && git push && exit 0
+            git rebase --abort || true
+            [ "$attempt" -lt 3 ] || exit 1
+            sleep 5
+          done

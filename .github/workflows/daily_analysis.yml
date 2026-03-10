@@ -2,12 +2,12 @@ name: Daily Analysis
 
 on:
   workflow_run:
-    workflows: ["Daily Tagging"]
+    workflows: ["Daily Fetch"]
     types: [completed]
   workflow_dispatch:
 
 concurrency:
-  group: static-export-${{ github.ref }}
+  group: daily-analysis-${{ github.ref }}
   cancel-in-progress: false
 
 permissions:
@@ -46,7 +46,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
 
       - name: Install Python dependencies
         run: uv pip install --system -r requirements.txt
@@ -76,6 +75,10 @@ jobs:
           git add -A data/analysis/
           git diff --staged --quiet && exit 0
           git commit -m "daily: export analysis"
-          git fetch origin "${GITHUB_REF_NAME}"
-          git rebase "origin/${GITHUB_REF_NAME}"
-          git push
+          for attempt in 1 2 3; do
+            git fetch origin "${GITHUB_REF_NAME}"
+            git rebase "origin/${GITHUB_REF_NAME}" && git push && exit 0
+            git rebase --abort || true
+            [ "$attempt" -lt 3 ] || exit 1
+            sleep 5
+          done

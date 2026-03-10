@@ -16,33 +16,45 @@ def export_recent_static(output_path: Path, days: int = 14) -> int:
     with connect() as conn:
         ensure_schema(conn)
         active = get_active_topic_version(conn)
-        if not active:
-            output_path.parent.mkdir(parents=True, exist_ok=True)
-            output_path.write_text("", encoding="utf-8")
-            print("No active topic version found, exported empty recent snapshot")
-            return 0
-
         with conn.cursor() as cur:
-            cur.execute(
-                """
-                SELECT
-                    p.arxiv_id,
-                    p.title,
-                    p.authors,
-                    p.primary_category,
-                    p.published_at,
-                    COALESCE(json_agg(replace(t.topic_id, 'topic_', '') ORDER BY t.rank) FILTER (WHERE t.topic_id IS NOT NULL), '[]'::json) AS tags,
-                    COALESCE(json_agg(t.score ORDER BY t.rank) FILTER (WHERE t.topic_id IS NOT NULL), '[]'::json) AS scores
-                FROM papers_recent p
-                LEFT JOIN paper_topic_tags t
-                    ON p.arxiv_id = t.arxiv_id
-                   AND t.topic_version_month = %s
-                WHERE p.published_at >= %s
-                GROUP BY p.arxiv_id, p.title, p.authors, p.primary_category, p.published_at
-                ORDER BY p.published_at DESC
-                """,
-                (active["version_month"], cutoff),
-            )
+            if active:
+                cur.execute(
+                    """
+                    SELECT
+                        p.arxiv_id,
+                        p.title,
+                        p.authors,
+                        p.primary_category,
+                        p.published_at,
+                        COALESCE(json_agg(replace(t.topic_id, 'topic_', '') ORDER BY t.rank) FILTER (WHERE t.topic_id IS NOT NULL), '[]'::json) AS tags,
+                        COALESCE(json_agg(t.score ORDER BY t.rank) FILTER (WHERE t.topic_id IS NOT NULL), '[]'::json) AS scores
+                    FROM papers_recent p
+                    LEFT JOIN paper_topic_tags t
+                        ON p.arxiv_id = t.arxiv_id
+                       AND t.topic_version_month = %s
+                    WHERE p.published_at >= %s
+                    GROUP BY p.arxiv_id, p.title, p.authors, p.primary_category, p.published_at
+                    ORDER BY p.published_at DESC
+                    """,
+                    (active["version_month"], cutoff),
+                )
+            else:
+                cur.execute(
+                    """
+                    SELECT
+                        p.arxiv_id,
+                        p.title,
+                        p.authors,
+                        p.primary_category,
+                        p.published_at,
+                        '[]'::json AS tags,
+                        '[]'::json AS scores
+                    FROM papers_recent p
+                    WHERE p.published_at >= %s
+                    ORDER BY p.published_at DESC
+                    """,
+                    (cutoff,),
+                )
             rows = cur.fetchall()
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -71,6 +83,9 @@ def export_recent_static(output_path: Path, days: int = 14) -> int:
                 """,
                 (json.dumps({"count": len(rows), "output_path": str(output_path)}),),
             )
+
+    if not active:
+        print("No active topic version found, exported recent snapshot without tags")
 
     return len(rows)
 
