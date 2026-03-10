@@ -48,7 +48,7 @@ jobs:
           node-version: '20'
 
       - name: Install Python dependencies
-        run: uv pip install --system -r requirements.txt
+        run: uv sync --locked --no-dev
 
       - name: Install Claude Code CLI
         run: npm install -g @anthropic-ai/claude-code
@@ -61,10 +61,10 @@ jobs:
           [ -n "${ANTHROPIC_MODEL:-}" ] || { echo "Missing ANTHROPIC_MODEL"; exit 1; }
 
       - name: Generate daily analysis
-        run: python3 -m pipeline.daily_generate_analysis
+        run: uv run python -m pipeline.daily_generate_analysis
 
       - name: Export analysis artifacts
-        run: python3 -m pipeline.export_analysis_static
+        run: uv run python -m pipeline.export_analysis_static
 
       - name: Commit exported analysis
         run: |

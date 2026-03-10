@@ -27,7 +27,7 @@ jobs:
           enable-cache: true
 
       - name: Install Python dependencies
-        run: uv pip install --system -r requirements.txt
+        run: uv sync --locked --no-dev
 
       - name: Skip workflow when DATABASE_URL is not configured
         if: ${{ env.DATABASE_URL == '' }}
@@ -35,4 +35,4 @@ jobs:
 
       - name: Fetch daily metadata
         if: ${{ env.DATABASE_URL != '' }}
-        run: python3 -m pipeline.daily_fetch_metadata
+        run: uv run python -m pipeline.daily_fetch_metadata

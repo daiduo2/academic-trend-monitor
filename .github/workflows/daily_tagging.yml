@@ -39,7 +39,7 @@ jobs:
           enable-cache: true
 
       - name: Install Python dependencies
-        run: uv pip install --system -r requirements.txt
+        run: uv sync --locked --no-dev
 
       - name: Skip workflow when DATABASE_URL is not configured
         if: ${{ env.DATABASE_URL == '' }}
@@ -47,11 +47,11 @@ jobs:
 
       - name: Tag recent metadata
         if: ${{ env.DATABASE_URL != '' }}
-        run: python3 -m pipeline.daily_tag_metadata
+        run: uv run python -m pipeline.daily_tag_metadata
 
       - name: Export recent papers
         if: ${{ env.DATABASE_URL != '' }}
-        run: python3 -m pipeline.export_recent_static
+        run: uv run python -m pipeline.export_recent_static
 
       - name: Commit exported static data
         if: ${{ env.DATABASE_URL != '' }}

@@ -38,7 +38,7 @@ jobs:
           enable-cache: true
 
       - name: Install Python dependencies
-        run: uv pip install --system -r requirements.txt
+        run: uv sync --locked --no-dev
 
       - name: Publish topics to PostgreSQL
         run: |
@@ -46,7 +46,7 @@ jobs:
           if [ -n "${{ github.event.inputs.version }}" ]; then
             VERSION_ARG="--version ${{ github.event.inputs.version }}"
           fi
-          python3 -m pipeline.publish_topics_to_db \
+          uv run python -m pipeline.publish_topics_to_db \
             --topics-tree "${{ github.event.inputs.topics_tree || 'data/output/topics_tree.json' }}" \
             --hierarchy "${{ github.event.inputs.hierarchy || 'data/output/aligned_topics_hierarchy.json' }}" \
             $VERSION_ARG
