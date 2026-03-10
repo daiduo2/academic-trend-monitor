@@ -1,0 +1,26 @@
+{
+  "date": "2026-03-10",
+  "risks": [
+    "已启用本地兜底分析：LLM API key not configured"
+  ],
+  "title": "2026-03-10 学术趋势日报",
+  "signals": [
+    {
+      "kind": "drift",
+      "label": "使用分类回退分析",
+      "summary": "由于缺少已发布主题版本，本日报未使用主题标签趋势，而是使用 primary category 统计。"
+    }
+  ],
+  "summary": "当日共采集到 0 篇论文，暂未观察到显著的集中热点。",
+  "model_meta": {
+    "mode": "daily_analysis",
+    "model": "deterministic-summary",
+    "provider": "local_fallback"
+  },
+  "key_findings": [
+    "当日共采集到 0 篇论文，暂未观察到显著的集中热点。",
+    "当前缺少激活的 topic version，日报基于 primary category 聚合生成。"
+  ],
+  "notable_papers": [],
+  "top_rising_topics": []
+}
