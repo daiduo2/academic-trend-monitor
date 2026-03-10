@@ -5,6 +5,10 @@ on:
     - cron: '0 2 * * *'
   workflow_dispatch:
 
+concurrency:
+  group: static-export-${{ github.ref }}
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
@@ -19,6 +23,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          fetch-depth: 0
           token: ${{ env.GH_PUSH_TOKEN }}
 
       - name: Set up Python
@@ -44,9 +49,12 @@ jobs:
       - name: Commit exported static data
         if: ${{ env.DATABASE_URL != '' }}
         run: |
+          set -euo pipefail
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add data/recent.jsonl
           git diff --staged --quiet && exit 0
           git commit -m "daily: export recent papers"
+          git fetch origin "${GITHUB_REF_NAME}"
+          git rebase "origin/${GITHUB_REF_NAME}"
           git push
