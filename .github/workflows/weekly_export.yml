@@ -13,8 +13,11 @@ jobs:
     runs-on: ubuntu-latest
     env:
       DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      GH_PUSH_TOKEN: ${{ secrets.PAT_TOKEN || github.token }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ env.GH_PUSH_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -24,13 +27,20 @@ jobs:
       - name: Install Python dependencies
         run: pip install -r requirements.txt
 
+      - name: Skip workflow when DATABASE_URL is not configured
+        if: ${{ env.DATABASE_URL == '' }}
+        run: echo "DATABASE_URL is not configured; skipping Weekly Export."
+
       - name: Export weekly trends
+        if: ${{ env.DATABASE_URL != '' }}
         run: python3 -m pipeline.export_weekly_static
 
       - name: Commit exported weekly data
+        if: ${{ env.DATABASE_URL != '' }}
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add data/weekly/
-          git diff --staged --quiet || git commit -m "weekly: export trend analysis"
+          git diff --staged --quiet && exit 0
+          git commit -m "weekly: export trend analysis"
           git push
