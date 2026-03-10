@@ -40,9 +40,9 @@ def _fetch_daily_papers(cur, start_dt: datetime, end_dt: datetime, version_month
                {topic_select}
         FROM papers_recent p
         {topic_join}
-        WHERE p.published_at >= %s AND p.published_at < %s
+        WHERE p.fetched_at >= %s AND p.fetched_at < %s
         GROUP BY p.arxiv_id, p.title, p.primary_category, p.published_at
-        ORDER BY p.published_at DESC
+        ORDER BY p.fetched_at DESC, p.published_at DESC
         """,
         params,
     )
@@ -57,8 +57,8 @@ def _fetch_topic_trends(cur, active_version: str, start_dt: datetime, end_dt: da
             FROM papers_recent p
             JOIN paper_topic_tags t ON p.arxiv_id = t.arxiv_id
             WHERE t.topic_version_month = %s
-              AND p.published_at >= %s
-              AND p.published_at < %s
+              AND p.fetched_at >= %s
+              AND p.fetched_at < %s
             GROUP BY t.topic_id
         ),
         previous_window AS (
@@ -66,8 +66,8 @@ def _fetch_topic_trends(cur, active_version: str, start_dt: datetime, end_dt: da
             FROM papers_recent p
             JOIN paper_topic_tags t ON p.arxiv_id = t.arxiv_id
             WHERE t.topic_version_month = %s
-              AND p.published_at >= %s
-              AND p.published_at < %s
+              AND p.fetched_at >= %s
+              AND p.fetched_at < %s
             GROUP BY t.topic_id
         )
         SELECT COALESCE(c.topic_id, p.topic_id) AS topic_id,
@@ -98,20 +98,20 @@ def _fetch_topic_trends(cur, active_version: str, start_dt: datetime, end_dt: da
 def _fetch_category_trends(cur, start_dt: datetime, end_dt: datetime, prev_start: datetime):
     cur.execute(
         """
-        SELECT primary_category, published_at
+        SELECT primary_category, fetched_at
         FROM papers_recent
-        WHERE published_at >= %s
-          AND published_at < %s
+        WHERE fetched_at >= %s
+          AND fetched_at < %s
           AND primary_category IS NOT NULL
         """,
         (prev_start - timedelta(days=7), end_dt),
     )
     counts_now: Counter[str] = Counter()
     counts_prev: Counter[str] = Counter()
-    for category, published_at in cur.fetchall():
-        if not category or not published_at:
+    for category, fetched_at in cur.fetchall():
+        if not category or not fetched_at:
             continue
-        if published_at >= prev_start:
+        if fetched_at >= prev_start:
             counts_now[category] += 1
         else:
             counts_prev[category] += 1
