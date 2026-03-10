@@ -37,13 +37,19 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm'
 
       - name: Install Python dependencies
-        run: pip install -r requirements.txt
+        run: uv pip install --system -r requirements.txt
 
       - name: Install Claude Code CLI
         run: npm install -g @anthropic-ai/claude-code
@@ -56,11 +62,9 @@ jobs:
           [ -n "${ANTHROPIC_MODEL:-}" ] || { echo "Missing ANTHROPIC_MODEL"; exit 1; }
 
       - name: Generate daily analysis
-        continue-on-error: true
         run: python3 -m pipeline.daily_generate_analysis
 
       - name: Export analysis artifacts
-        continue-on-error: true
         run: python3 -m pipeline.export_analysis_static
 
       - name: Commit exported analysis
