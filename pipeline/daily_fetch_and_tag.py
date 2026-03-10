@@ -107,6 +107,14 @@ def store_papers(papers: list[dict]) -> int:
     return len(papers)
 
 
+def store_paper_tags(tagged_papers: list[dict], active_version: str, tagger_version: str) -> int:
+    with connect() as conn:
+        ensure_schema(conn)
+        with conn.cursor() as cur:
+            _replace_tags(cur, tagged_papers, active_version, tagger_version)
+    return len(tagged_papers)
+
+
 def store_papers_and_tags(papers: list[dict], active_version: str, tagged_papers: list[dict], tagger_version: str) -> int:
     with connect() as conn:
         ensure_schema(conn)

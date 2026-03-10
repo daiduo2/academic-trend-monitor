@@ -45,9 +45,9 @@ jobs:
         if: ${{ env.DATABASE_URL == '' }}
         run: echo "DATABASE_URL is not configured; skipping Daily Tagging."
 
-      - name: Run daily fetch and tagging
+      - name: Tag recent metadata
         if: ${{ env.DATABASE_URL != '' }}
-        run: python3 -m pipeline.daily_fetch_and_tag
+        run: python3 -m pipeline.daily_tag_metadata
 
       - name: Export recent papers
         if: ${{ env.DATABASE_URL != '' }}
