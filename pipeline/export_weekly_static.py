@@ -43,7 +43,19 @@ def export_weekly_static(output_path: Path, days: int = 14) -> dict:
         ensure_schema(conn)
         active = get_active_topic_version(conn)
         if not active:
-            raise RuntimeError("No active topic version found")
+            report = {
+                "period": "",
+                "week": datetime.now(timezone.utc).strftime("%Y-W%W"),
+                "generated_at": datetime.now(timezone.utc).isoformat(),
+                "total_papers": 0,
+                "window_days": 7,
+                "trends": [],
+            }
+            output_path.parent.mkdir(parents=True, exist_ok=True)
+            with open(output_path, "w", encoding="utf-8") as handle:
+                json.dump(report, handle, ensure_ascii=False, indent=2)
+            print("No active topic version found, exported empty weekly snapshot")
+            return report
         topics_payload = _load_topic_index(conn, active["version_month"])
 
         with conn.cursor() as cur:

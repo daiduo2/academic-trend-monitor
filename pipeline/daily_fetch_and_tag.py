@@ -114,7 +114,8 @@ def run_daily_fetch_and_tag(days: int = 1, categories: list[str] | None = None) 
         active = get_active_topic_version(conn)
 
     if not active:
-        raise RuntimeError("No active topic version found in PostgreSQL")
+        print("No active topic version found in PostgreSQL, skipping tagging")
+        return 0
 
     topic_index_base = os.getenv("TOPIC_INDEX_URL") or active.get("topic_index_path") or config.get("database", {}).get("topic_index_path", "")
     topic_index_path = _resolve_topic_index(topic_index_base)

@@ -17,7 +17,10 @@ def export_recent_static(output_path: Path, days: int = 14) -> int:
         ensure_schema(conn)
         active = get_active_topic_version(conn)
         if not active:
-            raise RuntimeError("No active topic version found")
+            output_path.parent.mkdir(parents=True, exist_ok=True)
+            output_path.write_text("", encoding="utf-8")
+            print("No active topic version found, exported empty recent snapshot")
+            return 0
 
         with conn.cursor() as cur:
             cur.execute(
