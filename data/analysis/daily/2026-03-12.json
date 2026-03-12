@@ -1,0 +1,115 @@
+{
+  "date": "2026-03-12",
+  "risks": [
+    "category_fallback模式可能未能准确归类所有论文",
+    "大量CV论文集中发布，可能导致研究同质化",
+    "代理系统论文虽多但实际应用可行性待验证"
+  ],
+  "title": "学术趋势日报 2026-03-12：计算机视觉与代理系统爆发",
+  "signals": [
+    {
+      "kind": "emerging",
+      "label": "Agentic AI扩散",
+      "summary": "多个Agent相关论文涌现，从漫画喜剧生成到自动驾驶推理，AI代理范式正在多领域扩散"
+    },
+    {
+      "kind": "cross_disciplinary",
+      "label": "量子-经典交叉",
+      "summary": "量子计算理论与机器学习交叉加深，Krylov复杂度等概念桥接两个领域"
+    },
+    {
+      "kind": "drift",
+      "label": "多模态内容创作兴起",
+      "summary": "视频到音乐生成(V2M-Zero)、艺术风格识别等论文表明多模态AI创作持续演进"
+    },
+    {
+      "kind": "cooling",
+      "label": "传统机器学习理论",
+      "summary": "数学优化、概率论等传统理论论文数量相对减少，AI应用研究更占主导"
+    }
+  ],
+  "summary": "今日arXiv共763篇论文，计算机视觉(cs.CV)以311篇居首，机器学习(cs.LG)221篇紧随其后。多个代理(Agent)相关论文涌现，显示AI代理研究持续升温。量子计算与经典对应关系、LLM压缩技术为今日亮点。",
+  "model_meta": {
+    "mode": "daily_analysis",
+    "model": "claude-3-5-sonnet-20241022",
+    "provider": "claude_code"
+  },
+  "key_findings": [
+    "计算机视觉(cs.CV)论文数311篇，占总数40%以上，为今日最热门领域",
+    "多个Agentic AI论文出现：COMIC(喜剧生成)、DynVLA(自动驾驶动作推理)体现代理范式扩散",
+    "量子-经典对应(Krylov复杂度)及量子模拟(Emery模型)论文揭示量子计算进展",
+    "Leech晶格矢量量化用于LLM压缩，代表大模型高效部署新方向",
+    "视频到音乐生成(V2M-Zero)展示多模态内容创作新突破"
+  ],
+  "notable_papers": [
+    {
+      "title": "COMIC: Agentic Sketch Comedy Generation",
+      "reason": "首个代理式漫画喜剧生成系统，展示AI在创意内容创作的新范式",
+      "arxiv_id": "2603.11048v1"
+    },
+    {
+      "title": "DynVLA: Learning World Dynamics for Action Reasoning in Autonomous Driving",
+      "reason": "将视觉语言模型用于自动驾驶世界动态学习，动作推理能力突破",
+      "arxiv_id": "2603.11041v1"
+    },
+    {
+      "title": "Quantum-to-classical correspondence in Krylov complexity",
+      "reason": "探讨量子计算复杂度与经典对应的深刻理论问题",
+      "arxiv_id": "2603.11034v1"
+    },
+    {
+      "title": "Leech Lattice Vector Quantization for Efficient LLM Compression",
+      "reason": "利用Leech晶格矢量量化实现高效LLM压缩，实用价值突出",
+      "arxiv_id": "2603.11021v1"
+    },
+    {
+      "title": "Beyond the Illusion of Consensus: From Surface Heuristics to Knowledge-Grounded Evaluation in LLM-as-a-Judge",
+      "reason": "深入分析LLM作为评判者的局限性，推动评估方法论进步",
+      "arxiv_id": "2603.11027v1"
+    }
+  ],
+  "top_rising_topics": [
+    {
+      "change": 311,
+      "summary": "计算机视觉持续爆发，包括图像/视频生成、动作推理、光场token化等多方向突破",
+      "topic_id": "cs.CV",
+      "topic_name": "cs.CV",
+      "paper_count": 311
+    },
+    {
+      "change": 221,
+      "summary": "机器学习领域涵盖LLM压缩、神经网络热成像tomography、无监督学习等技术",
+      "topic_id": "cs.LG",
+      "topic_name": "cs.LG",
+      "paper_count": 221
+    },
+    {
+      "change": 142,
+      "summary": "机器人学领域，特别是自动驾驶世界模型DynVLA推动动作推理研究",
+      "topic_id": "cs.RO",
+      "topic_name": "cs.RO",
+      "paper_count": 142
+    },
+    {
+      "change": 112,
+      "summary": "量子计算理论进展，包括Krylov复杂度量子-经典对应、量子模拟等",
+      "topic_id": "quant-ph",
+      "topic_name": "quant-ph",
+      "paper_count": 112
+    },
+    {
+      "change": 107,
+      "summary": "自然语言处理与语言模型评估，LLM作为评判者的知识基础评估受关注",
+      "topic_id": "cs.CL",
+      "topic_name": "cs.CL",
+      "paper_count": 107
+    },
+    {
+      "change": 90,
+      "summary": "人工智能基础理论，多代理推荐系统等跨领域应用",
+      "topic_id": "cs.AI",
+      "topic_name": "cs.AI",
+      "paper_count": 90
+    }
+  ]
+}
