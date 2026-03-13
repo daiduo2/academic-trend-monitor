@@ -1,0 +1,129 @@
+{
+  "date": "2026-03-13",
+  "risks": [
+    "论文数量庞大可能导致研究热点过于集中，创新空间被压缩",
+    "部分方向如视频生成存在同质化趋势，差异化创新难度增加"
+  ],
+  "title": "2026年3月13日学术趋势日报：视觉与机器人领域持续爆发",
+  "signals": [
+    {
+      "kind": "emerging",
+      "label": "具身智能与机器人基础模型爆发",
+      "summary": "多个人形机器人与操控基础模型发布(Ψ_0、HumDex、HandelBot)，具身智能从概念走向可用的开源基础模型"
+    },
+    {
+      "kind": "emerging",
+      "label": "科学文档多模态推理兴起",
+      "summary": "SciMDR等基准推动大模型在科学文献理解中的应用，AI科研助手潜力显现"
+    },
+    {
+      "kind": "cross_disciplinary",
+      "label": "视频理解与机器人技术融合",
+      "summary": "Video Streaming Thinking、Spatial-TTT等将视频理解与空间智能结合，服务于机器人感知"
+    },
+    {
+      "kind": "drift",
+      "label": "从模型规模转向效率优化",
+      "summary": "BiGain、Elastic Latent Interfaces等工作关注token压缩与预算控制，效率优化成为新焦点"
+    },
+    {
+      "kind": "cooling",
+      "label": "纯文本LLM研究相对减少",
+      "summary": "相比多模态与机器人方向，纯语言模型研究占比下降，热点向具身智能转移"
+    }
+  ],
+  "summary": "今日arxiv共发布881篇论文，计算机视觉(cs.CV)以422篇高居榜首，机器学习(cs.LG)289篇紧随其后，机器人学(cs.RO)达172篇。视频理解与生成、具身智能、多模态推理成为核心热点，量子物理与材料科学领域也有显著产出。",
+  "model_meta": {
+    "mode": "daily_analysis",
+    "model": "sonnet-4-20250514",
+    "provider": "claude_code"
+  },
+  "key_findings": [
+    "视频理解与生成技术持续突破，EVATok、DVD、DreamVideo-Omni等论文探索高效视频tokenization与深度估计",
+    "具身智能与机器人操控成为重要方向，HumDex、Ψ_0基础模型、HandelBot等聚焦人形机器人灵巧操作",
+    "多模态推理与科学文档理解兴起，SciMDR、MM-CondChain推动视觉语言模型在科学领域的应用",
+    "量子材料与凝聚态物理持续活跃，包括Majorana纳米线、拓扑绝缘体、量子顺电体等方向",
+    "LLM推理与奖励建模进展显著，EndoCoT扩展思维链推理，Trust Your Critic探索可靠的图像生成奖励模型"
+  ],
+  "notable_papers": [
+    {
+      "title": "Ψ_0: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation",
+      "reason": "首个开源通用人形机器人基础模型，覆盖运动与操作任务，可能成为具身智能开源里程碑",
+      "arxiv_id": "2603.12263v1"
+    },
+    {
+      "title": "HumDex: Humanoid Dexterous Manipulation Made Easy",
+      "reason": "简化人形机器人灵巧操控复杂度，降低研究门槛，推动机器人技术普及",
+      "arxiv_id": "2603.12260v1"
+    },
+    {
+      "title": "EVATok: Adaptive Length Video Tokenization for Efficient Visual Autoregressive Generation",
+      "reason": "创新视频tokenization方法，提升视觉自回归生成效率，对视频理解与生成有重要推动作用",
+      "arxiv_id": "2603.12267v1"
+    },
+    {
+      "title": "DreamVideo-Omni: Omni-Motion Controlled Multi-Subject Video Customization",
+      "reason": "实现多主体可控视频生成，推动个性化视频创作技术发展",
+      "arxiv_id": "2603.12257v1"
+    },
+    {
+      "title": "SciMDR: Benchmarking and Advancing Scientific Multimodal Document Reasoning",
+      "reason": "首个科学文档多模态推理基准，推动大模型在科研领域的实际应用",
+      "arxiv_id": "2603.12249v1"
+    },
+    {
+      "title": "EndoCoT: Scaling Endogenous Chain-of-Thought Reasoning in Diffusion Models",
+      "reason": "将思维链推理扩展到扩散模型，提升模型可解释性和推理能力",
+      "arxiv_id": "2603.12252v1"
+    },
+    {
+      "title": "OmniStream: Mastering Perception, Reconstruction and Action in Continuous Streams",
+      "reason": "探索连续流环境中的感知、重建与动作统一框架，推动具身智能发展",
+      "arxiv_id": "2603.12265v1"
+    }
+  ],
+  "top_rising_topics": [
+    {
+      "change": 422,
+      "summary": "视频理解与生成技术持续突破，包括高效tokenization、自回归视觉生成、流式视觉智能等方向涌现大量创新",
+      "topic_id": "cs.CV",
+      "topic_name": "计算机视觉",
+      "paper_count": 422
+    },
+    {
+      "change": 289,
+      "summary": "大模型微调、能量基方法、强化学习与奖励建模成为核心方向，探讨如何提升模型可靠性和可控性",
+      "topic_id": "cs.LG",
+      "topic_name": "机器学习",
+      "paper_count": 289
+    },
+    {
+      "change": 172,
+      "summary": "具身智能与人形机器人操控取得显著进展，包括灵巧操作、钢琴演奏、视觉导航等实际应用",
+      "topic_id": "cs.RO",
+      "topic_name": "机器人学",
+      "paper_count": 172
+    },
+    {
+      "change": 156,
+      "summary": "量子信息与量子计算领域持续活跃，包括量子电感、Majorana费米子等前沿探索",
+      "topic_id": "quant-ph",
+      "topic_name": "量子物理",
+      "paper_count": 156
+    },
+    {
+      "change": 149,
+      "summary": "科学文档理解与多模态语言模型兴起，推动大模型在专业领域的应用",
+      "topic_id": "cs.CL",
+      "topic_name": "计算语言学",
+      "paper_count": 149
+    },
+    {
+      "change": 139,
+      "summary": "LLM推理能力评估与增强成为热点，包括思维链推理、法官模型可靠性等研究",
+      "topic_id": "cs.AI",
+      "topic_name": "人工智能",
+      "paper_count": 139
+    }
+  ]
+}
