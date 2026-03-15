@@ -1,0 +1,72 @@
+{
+  "date": "2026-03-15",
+  "risks": [],
+  "title": "学术趋势日报 2026-03-15",
+  "signals": [
+    {
+      "kind": "emerging",
+      "label": "量子物理崛起",
+      "summary": "quant-ph进入前四，表明量子科学与计算机科学的交叉融合正在加速"
+    },
+    {
+      "kind": "cross_disciplinary",
+      "label": "CS与数学交叉",
+      "summary": "math.AP、math.CO等数学领域进入榜单，反映计算与基础数学的深度结合"
+    },
+    {
+      "kind": "drift",
+      "label": "AI研究版图扩展",
+      "summary": "cs.CV、cs.LG、cs.CL、cs.AI四大AI相关领域占据主导，反映AI研究持续深化"
+    }
+  ],
+  "summary": "今日计算机科学领域持续保持强劲上升态势，其中计算机视觉(cs.CV)以422篇论文位居榜首，机器学习(cs.LG)紧随其后达289篇。量子物理(quant-ph)表现亮眼，显示跨学科研究热度上升。",
+  "model_meta": {
+    "mode": "daily_analysis",
+    "model": "claude-3-5-sonnet-20241022",
+    "provider": "claude_code"
+  },
+  "key_findings": [
+    "计算机视觉(cs.CV)成为今日最大热点，单日新增论文422篇",
+    "机器学习(cs.LG)保持高热度，新增289篇论文",
+    "量子物理(quant-ph)首次进入前四，显示物理学与计算交叉领域增长迅速",
+    "机器人(cs.RO)领域上升至第三位，反映自动化领域持续发展"
+  ],
+  "notable_papers": [],
+  "top_rising_topics": [
+    {
+      "change": 422,
+      "summary": "计算机视觉持续火热，涉及图像识别、目标检测、图像生成等核心技术",
+      "topic_id": "cs.CV",
+      "topic_name": "计算机视觉",
+      "paper_count": 422
+    },
+    {
+      "change": 289,
+      "summary": "机器学习算法与理论创新持续驱动AI发展，深度学习、强化学习等方向活跃",
+      "topic_id": "cs.LG",
+      "topic_name": "机器学习",
+      "paper_count": 289
+    },
+    {
+      "change": 172,
+      "summary": "机器人感知、导航、操控技术进展迅速，智能机器人应用场景不断拓展",
+      "topic_id": "cs.RO",
+      "topic_name": "机器人学",
+      "paper_count": 172
+    },
+    {
+      "change": 156,
+      "summary": "量子计算、量子信息等前沿领域热度上升，与经典计算交叉研究活跃",
+      "topic_id": "quant-ph",
+      "topic_name": "量子物理",
+      "paper_count": 156
+    },
+    {
+      "change": 149,
+      "summary": "自然语言处理与语言模型研究持续深入，大语言模型相关工作增多",
+      "topic_id": "cs.CL",
+      "topic_name": "计算语言学",
+      "paper_count": 149
+    }
+  ]
+}
