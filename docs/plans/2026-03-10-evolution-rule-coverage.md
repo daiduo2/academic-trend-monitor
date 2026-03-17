@@ -160,6 +160,7 @@ notes:
   - "2026-03-17更新: 已找到2个真实positive case和1个真实negative case"
   - "real case标准: 共享>=2方法词且共享对象词<2，确保是方法连续性而非对象连续性"
   - "状态保持partial: 虽有真实case，但尚未达到ready所需的2个event-level正例"
+  - "阈值验证: len(shared_math_ag_methods) >= 2 在所有真实cases上工作正常，无需微调"
 claude_evaluation:
   required: true
   representative_cases:
@@ -167,7 +168,7 @@ claude_evaluation:
     - "ag-method-p1: global_136 -> global_263 (positive, bridge-level)"
     - "ag-method-p2: global_237 -> global_263 (positive, bridge-level)"
     - "ag-method-n1: global_215 -> global_237 (negative, only 1 method word)"
-  conclusion: "math_ag_object/method_continuity 拆分方向合理。2026-03-17更新: 已找到2个真实positive case(global_136->global_263, global_237->global_263)和1个negative case(global_215->global_237)，均为纯方法连续性(共享>=2方法词，无共享对象词)。状态保持partial: 虽有真实case验证阈值有效性，但尚未达到ready所需的2个event-level正例，且均为bridge-level。"
+  conclusion: "math_ag_object/method_continuity 拆分方向合理。2026-03-17更新: 已找到2个真实positive case(global_136->global_263, global_237->global_263)和1个negative case(global_215->global_237)，均为纯方法连续性(共享>=2方法词，无共享对象词)。阈值验证: len(shared_math_ag_methods) >= 2 在所有真实cases上工作正常(ag-method-p1/p2 PASS, ag-method-n1 正确拒绝)，无需微调。状态保持partial: 虽有真实case验证阈值有效性，但尚未达到ready所需的2个event-level正例，且均为bridge-level。"
 ```
 
 ```yaml

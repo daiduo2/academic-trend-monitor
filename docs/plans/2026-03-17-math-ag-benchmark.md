@@ -129,10 +129,16 @@ last_reviewed: "2026-03-17"
 
 **math_ag_object_continuity**: `ready`
 - 已有 2 个 event-level 正例 (ag-b1, ag-e2)
+- Benchmark: 2/2 positive PASS, 4/5 negative PASS (ag-n5 为已知反向演化问题)
 
-**math_ag_method_continuity**: `partial`
+**math_ag_method_continuity**: `partial` ✅ **已验证**
 - 已有 2 个真实 bridge-level 正例 (ag-method-p1, ag-method-p2)
 - 已有 1 个真实 negative case (ag-method-n1)
+- **Threshold 验证**: `len(shared_math_ag_methods) >= 2`
+  - ag-method-p1: 共享 motivic, étale (2个) → PASS
+  - ag-method-p2: 共享 cohomology, motivic (2个) → PASS
+  - ag-method-n1: 共享 cohomology (1个) → 正确拒绝
+- **结论**: 当前阈值正确，无需微调
 - 尚未达到 `ready` 所需的 2 个 event-level 正例
 - 状态保持 `partial`，不可升级
 
