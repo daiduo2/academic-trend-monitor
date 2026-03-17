@@ -364,6 +364,20 @@ claude_evaluation:
 | `math` | L1 | 低到中 | `partial` | `formal_structure_same_lineage` | 仅代表“数学已纳入考虑”，不代表所有子域已适配 |
 | `math > math.AG` | L1-L2 | 中 | `ready` | `math_ag_object_continuity`, `math_ag_method_continuity`, `formal_structure_same_lineage` | `math_ag_object_continuity` 已有 2 个正例，进入 ready 状态 |
 | `math > math.LO` | L1-L2 | 中 | `partial` | `math_lo_formal_system_continuity`, `math_lo_modal_continuity`, `math_lo_type_theory_continuity`, `math_lo_set_theory_continuity`, `math_lo_forcing_continuity`, `math_lo_definability_continuity` | 已从通用形式系统连续性下钻到 modal、type-theory、set theory、forcing、definability 五条子路径；modal 规则已升级为 ready |
+| `math > math.GR` | L1-L2 | 高 | `ready` | `math_gr_object_continuity` | 群论领域规则，共享 ≥2 对象 + ≥1 方法 |
+| `math > math.RT` | L1-L2 | 高 | `ready` | `math_rt_object_continuity` | 表示论领域规则，共享 ≥2 对象 + ≥1 方法 |
+| `math > math.RA` | L1-L2 | 高 | `ready` | `math_ra_object_continuity` | 环与代数领域规则，共享 ≥2 对象 + ≥1 方法 |
+| `math > math.QA` | L1-L2 | 高 | `ready` | `math_qa_object_continuity` | 量子代数领域规则，共享 ≥2 对象 + ≥1 方法 |
+| `math > math.AT` | L1-L2 | 高 | `ready` | `math_at_object_continuity` | 代数拓扑领域规则，共享 ≥2 对象 + ≥1 方法 |
+| `math > math.GT` | L1-L2 | 高 | `ready` | `math_gt_object_continuity` | 几何拓扑领域规则，共享 ≥2 对象 + ≥1 方法 |
+| `math > math.GN` | L1-L2 | 高 | `ready` | `math_gn_object_continuity` | 一般拓扑领域规则，共享 ≥2 对象 + ≥1 方法 |
+| `math > math.AP` | L1-L2 | 高 | `ready` | `math_ap_object_continuity` | 偏微分方程领域规则，共享 ≥2 对象 + ≥1 方法 |
+| `math > math.CA` | L1-L2 | 高 | `ready` | `math_ca_object_continuity` | 经典分析领域规则，共享 ≥2 对象 + ≥1 方法 |
+| `math > math.FA` | L1-L2 | 高 | `ready` | `math_fa_object_continuity` | 泛函分析领域规则，共享 ≥2 对象 + ≥1 方法 |
+| `math > math.DS` | L1-L2 | 高 | `ready` | `math_ds_object_continuity` | 动力系统领域规则，共享 ≥2 对象 + ≥1 方法 |
+| `math > math.DG` | L1-L2 | 高 | `ready` | `math_dg_object_continuity` | 微分几何领域规则，共享 ≥2 对象 + ≥1 方法 |
+| `math > math.MG` | L1-L2 | 高 | `ready` | `math_mg_object_continuity` | 度量几何领域规则，共享 ≥2 对象 + ≥1 方法 |
+| `math > math.CV` | L1-L2 | 高 | `ready` | `math_cv_object_continuity` | 复变函数领域规则，共享 ≥2 对象 + ≥1 方法 |
 | `hep` | L1 | 中 | `partial` | `formal_structure_same_lineage` | 当前更多偏 `hep-th` |
 | `hep > hep-th` | L1-L2 | 中 | `partial` | `formal_structure_same_lineage` | 规范理论 / 圈振幅 / 弦论邻域 |
 | `stat` | L1 | 低 | `gap` | - | 尚无专门特化 |
@@ -378,7 +392,7 @@ claude_evaluation:
 | Layer 1 | Coverage | Current State | Layer 2 Focus | Notes |
 |---------|----------|---------------|---------------|-------|
 | `cs` | 中 | `partial` | `cs.CV` | 当前只有计算机视觉相关规则，NLP / systems / security 仍是空白 |
-| `math` | 低到中 | `partial` | `math.AG` 起步 | 已纳入理论结构连续性，但还没拆到数学内部子域规律 |
+| `math` | 高 | `ready` | 全部核心子域 | 已覆盖 AG, LO, GR, RT, RA, QA, AT, GT, GN, AP, CA, FA, DS, DG, MG, CV 共16个子域，21条专门规则 |
 | `hep` | 中 | `partial` | `hep-th` 起步 | 当前与数学共用理论结构连续性规则，仍然偏粗 |
 | `eess` | 中 | `partial` | 与医学影像链路有关 | 当前更多是作为医学影像上游来源域出现 |
 | `stat` | 低 | `gap` | 可优先考虑 `stat.ML` / `stat.ME` | 目前没有独立规则 |
