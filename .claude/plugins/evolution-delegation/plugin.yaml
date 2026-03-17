@@ -25,14 +25,27 @@ config:
 
   # Benchmark binding configuration
   # Convention: math.{XX} -> make math-{xx}-benchmark
-  # Fallback: python3 pipeline/math_benchmark.py --domain math_{xx}
   benchmark:
     convention_pattern: "math.{XX} -> make math-{xx}-benchmark"
-    fallback_command: "python3 pipeline/math_benchmark.py --domain {benchmark_domain}"
-    # Examples:
-    #   math.LO -> make math-lo-benchmark
-    #   math.AG -> make math-ag-benchmark
-    #   math.QA -> make math-qa-benchmark
+
+    # Supported domains (current)
+    # Only these domains have working benchmark runners
+    supported_domains:
+      - "math_lo"   # make math-lo-benchmark
+      - "math_ag"   # make math-ag-benchmark (via math_ag_benchmark.py)
+
+    # Planned: Generic runner for all math domains
+    # Status: NOT YET IMPLEMENTED
+    # When available, fallback will be:
+    #   python3 pipeline/math_benchmark.py --domain {benchmark_domain}
+    #
+    # Until then, new domains must implement their own runner:
+    #   pipeline/math_{xx}_benchmark.py
+    # Or extend the generic runner once it exists.
+    planned_fallback:
+      command: "python3 pipeline/math_benchmark.py --domain {benchmark_domain}"
+      status: "planned"
+      target_version: "0.2.0"
 
 requirements:
   - "python >= 3.9"

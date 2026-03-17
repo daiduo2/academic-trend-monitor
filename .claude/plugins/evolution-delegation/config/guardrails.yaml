@@ -17,11 +17,18 @@ hard_blocks:
     description: "没有 benchmark 不得将规则状态升为 ready"
     condition: |
       status_intent == "upgrade_to_ready" AND
-      (benchmark_domain not in registry OR benchmark_status != "exists")
+      NOT (
+        file_exists("config/benchmarks/{benchmark_domain}.yaml") OR
+        file_exists("docs/plans/*-{benchmark_domain}-benchmark.md") OR
+        file_exists("data/output/benchmarks/{benchmark_domain}/*_benchmark.json")
+      )
     action: "BLOCK"
     message: |
       阻断：规则状态升级到 ready 必须先有 benchmark。
-      请先创建 benchmark spec 并运行通过，再升级状态。
+      请确保以下至少一项存在：
+      - config/benchmarks/{benchmark_domain}.yaml
+      - docs/plans/*-{benchmark_domain}-benchmark.md
+      - data/output/benchmarks/{benchmark_domain}/*_benchmark.json
 
   - id: "level_mismatch"
     description: "不得将 bridge-level 标记为 event-level"

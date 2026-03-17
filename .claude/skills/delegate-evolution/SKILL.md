@@ -137,6 +137,7 @@ python3 pipeline/math_benchmark.py --domain math_{xx}
 
 任务标记为完成前，必须检查：
 
+### 所有任务类型通用检查
 ```yaml
 completion_checks:
   - check: "Claude review"
@@ -145,7 +146,12 @@ completion_checks:
   - check: "Local git commit"
     status: "created"
     verify: "git status shows no uncommitted changes"
+```
 
+### 按任务类型分支检查
+
+**rule-worker 任务**（修改规则实现）：
+```yaml
   - check: "Benchmark"
     status: "passed"
     verify: "no regression in existing cases"
@@ -154,6 +160,26 @@ completion_checks:
     status: "updated"
     verify: "registry, review, benchmark in sync"
 ```
+
+**case-worker 任务**（找 case）：
+```yaml
+  - check: "Case quality"
+    status: "verified"
+    verify: "at least 1 positive and 1 negative case found"
+
+  - check: "Documentation"
+    status: "updated"
+    verify: "benchmark doc updated with new cases"
+```
+
+**doc-worker 任务**（纯文档更新）：
+```yaml
+  - check: "Consistency"
+    status: "verified"
+    verify: "registry, review, benchmark in sync"
+```
+
+注意：**doc-only 任务不需要跑 benchmark**，但需要验证文档一致性。
 
 ## Example
 

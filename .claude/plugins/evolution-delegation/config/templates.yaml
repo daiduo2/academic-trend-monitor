@@ -139,12 +139,18 @@ benchmark_binding:
     examples:
       - "math.LO -> make math-lo-benchmark"
       - "math.AG -> make math-ag-benchmark"
-      - "math.QA -> make math-qa-benchmark"
 
-  # Fallback 机制
-  fallback:
-    command: "python3 pipeline/math_benchmark.py --domain {benchmark_domain}"
-    when: "make target does not exist"
+  # 当前支持的 domain
+  # 只有这些 domain 有可用的 benchmark runner
+  supported_domains:
+    - "math_lo"   # 通过 make math-lo-benchmark 或 pipeline/math_lo_benchmark.py
+    - "math_ag"   # 通过 pipeline/math_ag_benchmark.py
+
+  # Planned: 通用 runner
+  # 目前还未实现，计划 v0.2.0 提供
+  # planned_fallback:
+  #   command: "python3 pipeline/math_benchmark.py --domain {benchmark_domain}"
+  #   status: "planned"
 
   # Registry 校验
   registry_checks:
