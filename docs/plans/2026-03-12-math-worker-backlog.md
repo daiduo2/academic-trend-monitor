@@ -167,55 +167,85 @@ done_when:
   - "review registry 说明对象词典盲点"
 ```
 
-### Package MAG-03
+### Package MAG-03A: Method Continuity Case Discovery **[PENDING - DECISION REQUIRED]**
 
-**STATUS: ✅ 已完成**
+**STATUS: ⏸️ 待决策 - 仅当明确需要时才执行**
+
+```yaml
+tree_path: "math > math.AG"
+task_owner: "case-worker"
+task_type: "case_discovery"
+target_rule: "math_ag_method_continuity"
+goal: "判断 method_continuity 是否值得进入 benchmark 主流程"
+decision_fork:
+  option_a:
+    condition: "找到 >=2 个真实 event-level positive cases"
+    action: "进入 MAG-03B-runner，实现 math_ag_method_continuity benchmark"
+  option_b:
+    condition: "只找到 bridge-level cases 或 case 不足"
+    action: "进入 MAG-03B-normalization，明确维持 test-evidence-only"
+search_criteria:
+  - "共享 >=2 个方法词: cohomology/derived/motivic/tropical/étale"
+  - "共享对象词 <2 个 (确保是方法连续性而非对象连续性)"
+  - "有清晰的 temporal evolution 证据 (event-level)"
+  - "跨期出现，而非同期并存"
+current_candidates:
+  - note: "已找到的 cases 均为 bridge-level"
+  - ag-method-p1: "global_136 -> global_263 (2025-06 -> 2025-10)"
+  - ag-method-p2: "global_237 -> global_263 (2025-09 -> 2025-10)"
+  - assessment: "时间跨度太短，无法构成 event-level evolution"
+allowed_files:
+  - "docs/plans/2026-03-17-math-ag-benchmark.md"
+  - "docs/plans/2026-03-10-evolution-rule-coverage.md"
+stop_conditions:
+  - "搜索后仍无 event-level cases"
+  - "所有 candidate 都是同期或短期并存"
+  - "与 object_continuity 边界无法区分"
+done_when:
+  - "明确 decision_fork 走向 (option_a 或 option_b)"
+  - "文档记录决策理由"
+```
+
+### Package MAG-03B-runner: Implement Method Benchmark **[CONDITIONAL]**
+
+**STATUS: 🔒 锁定 - 仅在 MAG-03A 选择 option_a 后解锁**
 
 ```yaml
 tree_path: "math > math.AG"
 task_owner: "rule-worker"
-task_type: "rule_update"
+task_type: "benchmark_implementation"
 target_rule: "math_ag_method_continuity"
-goal: "基于真实 cases 验证并更新 benchmark 脚本"
-positive_case:
-  - case_id: "ag-method-p1"
-    anchor: "global_136"
-    target: "global_263"
-    reason: "共享方法词: motivic, étale (2个)，无共享对象词，纯方法连续性"
-    result: "✅ PASS (expected math_ag_method_continuity, actual math_ag_method_continuity)"
-  - case_id: "ag-method-p2"
-    anchor: "global_237"
-    target: "global_263"
-    reason: "共享方法词: cohomology, motivic (2个)，无共享对象词，纯方法连续性"
-    result: "✅ PASS (expected math_ag_method_continuity, actual math_ag_method_continuity)"
-negative_case:
-  - case_id: "ag-method-n1"
-    anchor: "global_215"
-    target: "global_237"
-    reason: "仅共享1个方法词(cohomology)，低于>=2阈值，Hodge vs Motivic不同子领域"
-    result: "✅ PASS (expected none, actual none)"
-threshold_analysis:
-  - "当前阈值: len(shared_math_ag_methods) >= 2"
-  - "验证结果: 所有真实 cases 正确触发"
-  - "结论: 阈值无需调整，当前实现已满足需求"
-changes_made:
-  - "更新 pipeline/math_ag_benchmark.py，添加 method continuity cases"
-  - "添加 ag-method-p1, ag-method-p2 到 positive cases"
-  - "添加 ag-method-n1 到 negative cases"
+precondition: "MAG-03A 必须完成且选择 option_a"
+goal: "为 method_continuity 实现完整的 benchmark runner"
+required_cases:
+  - ">=2 event-level positive cases"
+  - ">=1 negative case"
 allowed_files:
-  - "pipeline/evolution_analysis.py"
-  - "tests/test_evolution_analysis.py"
-  - "docs/plans/2026-03-10-evolution-rule-coverage.md"
-  - "docs/plans/2026-03-17-math-ag-benchmark.md"
   - "pipeline/math_ag_benchmark.py"
-required_commands:
-  - "pytest tests/test_evolution_analysis.py -q: 38 passed ✅"
-  - "make evolution-analysis: PASS ✅"
-  - "make math-ag-benchmark: 9/10 passed (ag-n5已知问题，与method无关) ✅"
+  - "tests/test_math_ag_benchmark.py"
+  - "docs/plans/2026-03-17-math-ag-benchmark.md"
+```
+
+### Package MAG-03B-normalization: Scope Cleanup **[FALLBACK]**
+
+**STATUS: 🔓 默认路径 - 当 MAG-03A 无法找到足够 cases 时执行**
+
+```yaml
+tree_path: "math > math.AG"
+task_owner: "doc-worker"
+task_type: "scope_normalization"
+target_rule: "math_ag_method_continuity"
+precondition: "MAG-03A 完成，选择 option_b (case 不足)"
+goal: "明确将 method_continuity 从 benchmark 候选中移除，维持 test-evidence-only"
+actions:
+  - "更新 registry: 明确标注 'test evidence only / not benchmark-ready'"
+  - "更新 math-ag-benchmark.md: 将 method cases 移入 'Test Evidence' 章节"
+  - "更新 math_ag_benchmark.py: 移除 method continuity cases 或标注为 test-only"
+  - "更新 worker-backlog: 归档 MAG-03，标注 'archived - insufficient event-level data'"
 done_when:
-  - "✅ 已有2个真实positive case和1个negative case"
-  - "✅ 阈值验证通过，无需微调"
-  - "✅ 创建git commit"
+  - "method_continuity 不再出现在 benchmark runner 中"
+  - "文档明确区分: object_continuity (ready) vs method_continuity (test-only)"
+  - "无歧义的 stop condition 已记录"
 ```
 
 ## Dispatch Rules
@@ -228,16 +258,36 @@ done_when:
 
 ## Recommended Near-Term Order
 
-接下来最推荐的顺序：
+### 已完成 ✅
 
-1. `MLO-01`
-2. `MAG-01`
-3. `MLO-03`
-4. `MLO-02`
-5. `MAG-02`
-6. `MAG-03`
+1. `MLO-01` - Registry 状态一致性校正
+2. `MAG-01` - Synthetic 标注清理
+3. `MLO-03` - Set theory negative case 补充
+4. `MLO-02` - Type theory bridge-level 确认
+5. `MAG-02` - Object continuity negative case 补充
 
-这个顺序的目的，是先把文档边界和 benchmark 边界收紧，再动规则。
+### 待决策 ⏸️
+
+6. **`MAG-03A`** - Method continuity case discovery **[需要明确决策]**
+   - 选择 A: 找到 event-level cases → 进入 `MAG-03B-runner`
+   - 选择 B: 无 event-level cases → 进入 `MAG-03B-normalization` (默认路径)
+
+**默认路径**: 若 `MAG-03A` 无法找到足够 cases，直接执行 `MAG-03B-normalization`
+
+### 重要原则
+
+**不要跳过 `MAG-03A` 直接执行 `MAG-03B-runner`**
+
+math_ag_method_continuity 目前状态：
+- ✅ Threshold 验证通过
+- ❌ **无 event-level cases** (只有 bridge-level)
+- ❌ **不配进入 benchmark runner**
+
+必须先做 `MAG-03A` case discovery，明确：
+1. 能否找到跨期明显的 evolution cases
+2. 还是只能找到同期/短期的结构相似性
+
+只有确认有 event-level cases 后，才允许实现 runner。
 
 ## Stop Conditions
 

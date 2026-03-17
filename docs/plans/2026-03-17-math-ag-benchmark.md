@@ -15,7 +15,9 @@ last_reviewed: "2026-03-17"
 
 这份文档固定 `math.AG` 的代表性 benchmark case。
 
-用于验证 `math_ag_object_continuity` 和 `math_ag_method_continuity` 规则的边界。
+**重要区分**:
+- `math_ag_object_continuity`: **BENCHMARK-READY** - 已进入 runner
+- `math_ag_method_continuity`: **TEST EVIDENCE ONLY** - 仅用于验证阈值，不进入 runner
 
 ## Scope
 
@@ -23,6 +25,13 @@ last_reviewed: "2026-03-17"
 
 - `math > math.AG`
 - 代数簇与模空间相关主题
+
+**Status Distinction**:
+
+| 规则 | 状态 | 进入 Benchmark Runner? |
+|------|------|------------------------|
+| `math_ag_object_continuity` | `ready` | ✅ 是 |
+| `math_ag_method_continuity` | `test-evidence-only` | ❌ 否 |
 
 ## Case List
 
@@ -33,12 +42,27 @@ last_reviewed: "2026-03-17"
 | `ag-b1` | `global_69` 代数叠与层理论 | `global_287` 导出代数叠范畴 | `math_ag_object_continuity` | event-level | 0.85 |
 | `ag-e2` | `global_69` 代数叠与层理论 | `global_287` 导出代数叠范畴 | `math_ag_object_continuity` | event-level | 0.85 |
 
-### Positive Cases - Method Continuity
+## Test Evidence (Not Benchmark-Ready)
 
-| Case ID | Anchor | Target | Expected Relation | Level | Confidence |
+以下 cases 仅用于验证 `math_ag_method_continuity` 阈值有效性，**不进入 benchmark runner**。
+
+原因:
+- 所有 cases 均为 `bridge-level`
+- 时间跨度太短 (1-4个月)，无法构成 event-level evolution
+- 缺乏跨期明显的 evolution 信号
+
+### Method Continuity - Test Evidence Cases
+
+| Case ID | Anchor | Target | Expected Relation | Level | In Runner? |
 |---------|--------|--------|-------------------|-------|------------|
-| `ag-method-p1` | `global_136` 动机层与亨泽尔层 | `global_263` 平展上同调与光滑性 | `math_ag_method_continuity` | bridge-level | 0.82 |
-| `ag-method-p2` | `global_237` 母题上同调与规范群 | `global_263` 平展上同调与光滑性 | `math_ag_method_continuity` | bridge-level | 0.80 |
+| `ag-method-p1` | `global_136` 动机层与亨泽尔层 | `global_263` 平展上同调与光滑性 | `math_ag_method_continuity` | bridge-level | ❌ No |
+| `ag-method-p2` | `global_237` 母题上同调与规范群 | `global_263` 平展上同调与光滑性 | `math_ag_method_continuity` | bridge-level | ❌ No |
+
+**Why NOT in benchmark runner:**
+- Time span too short: 2025-06 → 2025-10 (4 months)
+- No clear temporal evolution signal
+- More of structural similarity than evolutionary carryover
+- Would give false confidence if treated as benchmark cases
 
 **Method Continuity Case Details:**
 
@@ -125,22 +149,36 @@ last_reviewed: "2026-03-17"
 3. 有合理的时间顺序 (anchor 早于 target)
 4. 方法词是真正的方法/技术，不是泛词
 
-### Current Assessment (2026-03-17)
+### Current Assessment (2026-03-17) - IMPORTANT UPDATE
 
-**math_ag_object_continuity**: `ready`
+#### `math_ag_object_continuity`: ✅ `ready`
 - 已有 2 个 event-level 正例 (ag-b1, ag-e2)
-- Benchmark: 2/2 positive PASS, 4/5 negative PASS (ag-n5 为已知反向演化问题)
+- **已进入 `math_ag_benchmark.py` runner**
+- Benchmark: 2/2 positive PASS, 4/5 negative PASS
 
-**math_ag_method_continuity**: `partial` ✅ **已验证**
-- 已有 2 个真实 bridge-level 正例 (ag-method-p1, ag-method-p2)
-- 已有 1 个真实 negative case (ag-method-n1)
-- **Threshold 验证**: `len(shared_math_ag_methods) >= 2`
-  - ag-method-p1: 共享 motivic, étale (2个) → PASS
-  - ag-method-p2: 共享 cohomology, motivic (2个) → PASS
-  - ag-method-n1: 共享 cohomology (1个) → 正确拒绝
-- **结论**: 当前阈值正确，无需微调
-- 尚未达到 `ready` 所需的 2 个 event-level 正例
-- 状态保持 `partial`，不可升级
+#### `math_ag_method_continuity`: ⚠️ `test-evidence-only` (NOT `partial`)
+
+**决策变更**: 从 `partial` (待提升到 ready) 降级为 `test-evidence-only`
+
+原因:
+- 找到的 cases 均为 **bridge-level**，时间跨度不足
+- ag-method-p1: 2025-06 → 2025-10 (4个月)
+- ag-method-p2: 2025-09 → 2025-10 (1个月)
+- 无法构成 event-level evolution 信号
+
+Threshold 验证:
+- `len(shared_math_ag_methods) >= 2` 工作正常
+- ag-method-p1/p2: PASS (2个方法词)
+- ag-method-n1: 正确拒绝 (1个方法词)
+
+**关键区别**:
+- Threshold 是 **valid** 的
+- 但 Cases 是 **insufficient** 的 (bridge-level only)
+
+**Status**:
+- ❌ **NOT in `math_ag_benchmark.py` runner**
+- ❌ **NOT benchmark-ready**
+- ✅ **Test evidence only** - 用于验证规则逻辑，不作为回归测试
 
 ## Change Log
 

@@ -35,31 +35,9 @@ BENCHMARK_CASES = {
                 "taxonomy_overlap": ["moduli_and_stack", "sheaf_and_bundle", "scheme_level"],
             },
         },
-        # Method continuity cases (MAG-03)
-        {
-            "case_id": "ag-method-p1",
-            "anchor": "global_136",
-            "target": "global_263",
-            "expected_relation": "math_ag_method_continuity",
-            "level": "bridge-level",
-            "confidence": 0.82,
-            "evidence": {
-                "shared_methods": ["motivic", "étale"],
-                "shared_objects": [],
-            },
-        },
-        {
-            "case_id": "ag-method-p2",
-            "anchor": "global_237",
-            "target": "global_263",
-            "expected_relation": "math_ag_method_continuity",
-            "level": "bridge-level",
-            "confidence": 0.80,
-            "evidence": {
-                "shared_methods": ["cohomology", "motivic"],
-                "shared_objects": [],
-            },
-        },
+        # NOTE: math_ag_method_continuity cases are NOT included here
+        # They are test-evidence-only, not benchmark-ready
+        # See docs/plans/2026-03-17-math-ag-benchmark.md for details
     ],
     "negative": [
         {
@@ -97,14 +75,8 @@ BENCHMARK_CASES = {
             "expected_relation": "none",
             "reason": "反向演化，不触发连续性",
         },
-        # Method continuity negative case (MAG-03)
-        {
-            "case_id": "ag-method-n1",
-            "anchor": "global_215",
-            "target": "global_237",
-            "expected_relation": "none",
-            "reason": "仅共享1个方法词(cohomology)，低于>=2阈值，Hodge vs Motivic不同子领域",
-        },
+        # NOTE: ag-method-n1 is NOT included here
+        # Method continuity is test-evidence-only, not in benchmark runner
     ],
 }
 

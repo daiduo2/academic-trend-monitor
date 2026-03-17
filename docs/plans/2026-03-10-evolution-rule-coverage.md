@@ -157,10 +157,11 @@ implemented_in:
   - "pipeline/evolution_analysis.py"
 notes:
   - "用于把 math.AG 中的方法迁移和对象迁移分开建模"
-  - "2026-03-17更新: 已找到2个真实positive case和1个真实negative case"
-  - "real case标准: 共享>=2方法词且共享对象词<2，确保是方法连续性而非对象连续性"
-  - "状态保持partial: 虽有真实case，但尚未达到ready所需的2个event-level正例"
-  - "阈值验证: len(shared_math_ag_methods) >= 2 在所有真实cases上工作正常，无需微调"
+  - "⚠️ TEST EVIDENCE ONLY / NOT BENCHMARK-READY"
+  - "原因: 虽有2个真实bridge-level cases，但无event-level cases"
+  - "现状: cases时间跨度太短(2025-06->2025-10, 2025-09->2025-10)，不足以构成evolution事件"
+  - "决策: 维持test-evidence-only状态，不进入benchmark runner"
+  - "未来: 只有当找到event-level cases后才考虑benchmark化"
 claude_evaluation:
   required: true
   representative_cases:
@@ -168,7 +169,7 @@ claude_evaluation:
     - "ag-method-p1: global_136 -> global_263 (positive, bridge-level)"
     - "ag-method-p2: global_237 -> global_263 (positive, bridge-level)"
     - "ag-method-n1: global_215 -> global_237 (negative, only 1 method word)"
-  conclusion: "math_ag_object/method_continuity 拆分方向合理。2026-03-17更新: 已找到2个真实positive case(global_136->global_263, global_237->global_263)和1个negative case(global_215->global_237)，均为纯方法连续性(共享>=2方法词，无共享对象词)。阈值验证: len(shared_math_ag_methods) >= 2 在所有真实cases上工作正常(ag-method-p1/p2 PASS, ag-method-n1 正确拒绝)，无需微调。状态保持partial: 虽有真实case验证阈值有效性，但尚未达到ready所需的2个event-level正例，且均为bridge-level。"
+  conclusion: "math_ag_object/method_continuity 拆分方向合理。2026-03-17重要更新: ⚠️ 将method_continuity明确降级为TEST EVIDENCE ONLY。原因: 找到的cases(ag-method-p1/p2)均为bridge-level，时间跨度不足(仅1-4个月)，无法构成event-level evolution。这些cases验证阈值有效性，但不足以支持benchmark runner。决策: method_continuity维持test-evidence-only状态，不进入math_ag_benchmark.py主流程。只有当未来找到event-level cases(跨期明显evolution信号)后才考虑重新评估。"
 ```
 
 ```yaml
