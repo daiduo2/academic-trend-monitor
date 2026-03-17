@@ -900,7 +900,7 @@ def _build_pipeline_relation(anchor: TopicRecord, target: TopicRecord) -> Dict[s
         relation = "math_lo_formal_system_continuity"
     elif math_gr_domain and (len(shared_math_gr_objects) >= 3 or (len(shared_math_gr_objects) >= 2 and len(shared_math_gr_methods) >= 1)):
         relation = "math_gr_object_continuity"
-    elif math_rt_domain and (len(shared_math_rt_objects) >= 3 or (len(shared_math_rt_objects) >= 2 and len(shared_math_rt_methods) >= 1)):
+    elif math_rt_domain and (len(shared_math_rt_objects) >= 2 or (len(shared_math_rt_objects) >= 1 and len(shared_math_rt_methods) >= 1)):
         relation = "math_rt_object_continuity"
     elif math_ra_domain and (len(shared_math_ra_objects) >= 3 or (len(shared_math_ra_objects) >= 2 and len(shared_math_ra_methods) >= 1)):
         relation = "math_ra_object_continuity"
@@ -978,6 +978,12 @@ def _build_pipeline_relation(anchor: TopicRecord, target: TopicRecord) -> Dict[s
         "shared_math_gt_methods": shared_math_gt_methods,
         "shared_math_gn_objects": shared_math_gn_objects,
         "shared_math_gn_methods": shared_math_gn_methods,
+        "shared_math_dg_objects": shared_math_dg_objects,
+        "shared_math_dg_methods": shared_math_dg_methods,
+        "shared_math_mg_objects": shared_math_mg_objects,
+        "shared_math_mg_methods": shared_math_mg_methods,
+        "shared_math_cv_objects": shared_math_cv_objects,
+        "shared_math_cv_methods": shared_math_cv_methods,
         "math_ag_object_matches": {
             "anchor": anchor_object_matches,
             "target": target_object_matches,
@@ -1134,6 +1140,9 @@ def build_consistency_check(
         "math_ca_object_continuity",
         "math_fa_object_continuity",
         "math_ds_object_continuity",
+        "math_at_object_continuity",
+        "math_gt_object_continuity",
+        "math_gn_object_continuity",
         "math_dg_object_continuity",
         "math_mg_object_continuity",
         "math_cv_object_continuity",
