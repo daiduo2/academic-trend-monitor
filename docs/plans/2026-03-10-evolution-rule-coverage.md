@@ -115,18 +115,23 @@ positive_examples:
   - "ag-e2: global_69 (stacks/stack) -> global_287 (sheaf/stacks), event-level, confidence=0.85"
 counter_examples:
   - "仅共享一个泛词，如 projective，不应直接触发"
+  - "global_30 -> global_355: 仅共享 curves + adic，对象重叠不足（需>=2对象词）"
 implemented_in:
   - "pipeline/evolution_analysis.py"
 notes:
   - "用于把对象层面的连续演化与一般形式结构连续性拆开"
   - "当前已加入对象 taxonomy 与层次权重，开始区分 exact overlap / same-class overlap / related-class overlap"
   - "已有 2 个正例 (ag-b1 和 ag-e2)，进入 ready 状态"
+  - "对象词典盲点（2026-03-17发现）:"
+  - "  - varieties/curves/moduli/bundles/surfaces 分布不均，同一路径下对象差异可能很大"
+  - "  - global_30 (法诺簇) 与 global_355 (阿贝尔簇) 同属'代数簇与模空间'，但仅共享1个对象词"
 claude_evaluation:
   required: true
   representative_cases:
     - "global_30-2025-02"
     - "ag-e2: global_69 -> global_287"
-  conclusion: "math.AG taxonomy v3 比 v2 更具本体解释力；ag-e2 案例验证了 stacks/sheaf/bundle 在 moduli_and_stack 与 sheaf_and_bundle 类别间的连续演化，related-class overlap 机制有效。规则已有 2 个正例，已进入 ready 状态。"
+    - "negative: global_30 -> global_355 (仅共享 curves，不足以触发)"
+  conclusion: "math.AG taxonomy v3 比 v2 更具本体解释力；ag-e2 案例验证了 stacks/sheaf/bundle 在 moduli_and_stack 与 sheaf_and_bundle 类别间的连续演化，related-class overlap 机制有效。规则已有 2 个正例，已进入 ready 状态。新增 negative case (global_30 -> global_355) 验证阈值有效性：仅共享1个对象词(curves) + 1个泛词(adic)时，正确不触发连续性。"
 ```
 
 ```yaml
