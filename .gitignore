@@ -11,3 +11,15 @@ __pycache__/
 .DS_Store
 node_modules/
 frontend/node_modules/
+
+# Graphiti/Kuzu database
+kuzu_db/
+graphiti-server/kuzu_db/
+# Graphiti
+graphiti-server/kuzu_db/
+graphiti-server/data/kuzu/
+*.db
+
+# Build outputs
+frontend/dist/assets/*.js
+frontend/dist/assets/*.css

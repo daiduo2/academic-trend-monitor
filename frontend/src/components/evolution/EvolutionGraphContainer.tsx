@@ -1,24 +1,21 @@
 // frontend/src/components/evolution/EvolutionGraphContainer.tsx
 
-import React, { useState, useMemo, useEffect, lazy, Suspense } from 'react';
+import React, { useState, useMemo, useEffect, useCallback } from 'react';
 import { LeftSidebar } from './LeftSidebar';
 import { RightPanel } from './RightPanel';
-import { TimelineCanvas } from './TimelineCanvas';
+import { ForceGraphView } from './ForceGraphView';
 import { TimelineSlider } from './TimelineSlider';
 import { BreadcrumbNav } from './BreadcrumbNav';
 import { CanvasToolbar } from './CanvasToolbar';
 import { ConfidenceSlider } from './ConfidenceSlider';
-const NetworkView = lazy(() => import('./NetworkView'));
 import { TopicTooltip } from './TopicTooltip';
 import { ErrorBoundary } from './ErrorBoundary';
-import { useEvolutionData } from '../../hooks/useEvolutionData';
-import type { EvolutionNode, EvolutionEdge } from '../../types/evolution';
-import { filterNodesByCategory } from '../../utils/layoutEngine';
+import { useGraphData } from '../../hooks/useGraphData';
+import type { Node } from '../../hooks/useGraphData';
 
 // Wrapper component with Error Boundary
 export function EvolutionGraphContainer() {
   const handleReset = () => {
-    // Reset any state if needed
     window.location.reload();
   };
 
@@ -30,7 +27,7 @@ export function EvolutionGraphContainer() {
 }
 
 function EvolutionGraphContent() {
-  const { data, loading, error, currentDomain, availableDomains, loadDomain } = useEvolutionData();
+  const { data, rawData, loading, error } = useGraphData('math');
 
   // Load viewMode from localStorage
   const [viewMode, setViewMode] = useState<'timeline' | 'network'>(() => {
@@ -42,40 +39,48 @@ function EvolutionGraphContent() {
   useEffect(() => {
     localStorage.setItem('evolutionViewMode', viewMode);
   }, [viewMode]);
+
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedNode, setSelectedNode] = useState<EvolutionNode | null>(null);
+  const [selectedNode, setSelectedNode] = useState<Node | null>(null);
   const [currentPeriod, setCurrentPeriod] = useState<string>('2025-04');
   const [confidenceThreshold, setConfidenceThreshold] = useState<number>(0.8);
 
   // Tooltip state
-  const [hoveredNode, setHoveredNode] = useState<EvolutionNode | null>(null);
+  const [hoveredNode, setHoveredNode] = useState<Node | null>(null);
   const [tooltipPosition, setTooltipPosition] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
 
-  // Filter nodes by category
-  const filteredNodes = useMemo(() => {
-    if (!data) return [];
-    return filterNodesByCategory(data.nodes, selectedCategory);
-  }, [data, selectedCategory]);
+  // Filter edges by confidence threshold
+  const filteredData = useMemo(() => {
+    if (!data) return { nodes: [], edges: [] };
 
-  // Filter edges to only include visible nodes and apply confidence threshold
-  const filteredEdges = useMemo(() => {
-    if (!data) return [];
-    const nodeIds = new Set(filteredNodes.map(n => n.id));
-    return data.edges.filter(e => {
-      if (!nodeIds.has(e.source) || !nodeIds.has(e.target)) return false;
-      // Always show continued edges
+    const filteredEdges = data.edges.filter(e => {
       if (e.type === 'continued') return true;
-      // Filter diffused edges by confidence
       return e.confidence >= confidenceThreshold;
     });
-  }, [data, filteredNodes, confidenceThreshold]);
+
+    return {
+      nodes: data.nodes,
+      edges: filteredEdges,
+    };
+  }, [data, confidenceThreshold]);
+
+  // Handle node click
+  const handleNodeClick = useCallback((node: Node) => {
+    setSelectedNode(prev => prev?.id === node.id ? null : node);
+  }, []);
+
+  // Handle node hover with tooltip position
+  const handleNodeHover = useCallback((node: Node | null) => {
+    setHoveredNode(node);
+    // Tooltip position will be handled by the ForceGraphView's mouse events
+  }, []);
 
   if (loading) {
     return (
-      <div className="h-screen flex items-center justify-center bg-gray-50">
+      <div className="h-screen flex items-center justify-center bg-slate-900">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4" />
-          <p className="text-gray-500">加载演化图谱...</p>
+          <p className="text-slate-400">加载演化图谱...</p>
         </div>
       </div>
     );
@@ -83,8 +88,8 @@ function EvolutionGraphContent() {
 
   if (error) {
     return (
-      <div className="h-screen flex items-center justify-center bg-gray-50">
-        <div className="text-center text-red-500">
+      <div className="h-screen flex items-center justify-center bg-slate-900">
+        <div className="text-center text-red-400">
           <p className="text-lg font-medium mb-2">加载失败</p>
           <p className="text-sm">{error}</p>
         </div>
@@ -92,10 +97,10 @@ function EvolutionGraphContent() {
     );
   }
 
-  if (!data) {
+  if (!data || !rawData) {
     return (
-      <div className="h-screen flex items-center justify-center bg-gray-50">
-        <div className="text-center text-gray-500">
+      <div className="h-screen flex items-center justify-center bg-slate-900">
+        <div className="text-center text-slate-400">
           <p className="text-lg mb-2">暂无数据</p>
           <p className="text-sm">请先运行数据预处理脚本</p>
         </div>
@@ -104,12 +109,12 @@ function EvolutionGraphContent() {
   }
 
   return (
-    <div className="h-screen flex flex-col bg-gray-50">
+    <div className="h-screen flex flex-col bg-slate-900">
       {/* Header */}
-      <div className="bg-white border-b border-gray-200 px-6 py-4">
-        <h1 className="text-xl font-semibold text-gray-900">主题演化图谱</h1>
-        <p className="text-sm text-gray-500 mt-1">
-          基于时间切片的学术主题演化分析 · {currentDomain.toUpperCase()} 2025
+      <div className="bg-slate-800 border-b border-slate-700 px-6 py-4">
+        <h1 className="text-xl font-semibold text-white">主题演化图谱</h1>
+        <p className="text-sm text-slate-400 mt-1">
+          基于时间切片的学术主题演化分析 · MATH 2025
         </p>
       </div>
 
@@ -117,7 +122,7 @@ function EvolutionGraphContent() {
       <div className="flex-1 flex overflow-hidden">
         {/* Left Sidebar */}
         <LeftSidebar
-          categories={data.category_tree}
+          categories={rawData.category_tree}
           selectedCategory={selectedCategory}
           onSelectCategory={setSelectedCategory}
           viewMode={viewMode}
@@ -138,54 +143,58 @@ function EvolutionGraphContent() {
             </div>
           </div>
 
-          {/* View Content */}
-          {viewMode === 'timeline' ? (
-            <TimelineCanvas
-              nodes={filteredNodes}
-              edges={filteredEdges}
-              selectedNode={selectedNode}
-              onSelectNode={setSelectedNode}
-              currentPeriod={currentPeriod}
-              onNodeHover={setHoveredNode}
-              onTooltipPositionChange={setTooltipPosition}
-            />
-          ) : (
-            <Suspense fallback={
-              <div className="flex-1 h-full flex items-center justify-center bg-gray-50">
-                <div className="text-center">
-                  <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4" />
-                  <p className="text-gray-500">加载网络视图...</p>
-                </div>
-              </div>
-            }>
-              <NetworkView
-                period={currentPeriod}
-                nodes={filteredNodes}
-                edges={filteredEdges}
-                confidenceThreshold={confidenceThreshold}
-                selectedNode={selectedNode}
-                onSelectNode={setSelectedNode}
-              />
-            </Suspense>
-          )}
+          {/* Force Graph View */}
+          <ForceGraphView
+            data={filteredData}
+            mode={viewMode}
+            selectedPeriod={currentPeriod}
+            onNodeClick={handleNodeClick}
+            onNodeHover={handleNodeHover}
+            selectedCategory={selectedCategory}
+            selectedNode={selectedNode}
+          />
 
           {/* Tooltip */}
-          <TopicTooltip
-            node={hoveredNode}
-            position={tooltipPosition}
-            visible={!!hoveredNode}
-          />
+          {hoveredNode && (
+            <TopicTooltip
+              node={{
+                id: hoveredNode.id,
+                topic_id: hoveredNode.topic_id,
+                name: hoveredNode.name,
+                period: hoveredNode.period,
+                category: hoveredNode.category,
+                mode: hoveredNode.mode as any,
+                paper_count: hoveredNode.paper_count,
+                x: hoveredNode.x ?? 0,
+                y: hoveredNode.y ?? 0,
+              }}
+              position={tooltipPosition}
+              visible={!!hoveredNode}
+            />
+          )}
 
           {/* Timeline Slider */}
           <TimelineSlider
-            periods={data.metadata.periods}
+            periods={rawData.metadata.periods}
             currentPeriod={currentPeriod}
             onSelectPeriod={setCurrentPeriod}
           />
         </div>
 
         {/* Right Panel */}
-        <RightPanel selectedNode={selectedNode} />
+        <RightPanel
+          selectedNode={selectedNode ? {
+            id: selectedNode.id,
+            topic_id: selectedNode.topic_id,
+            name: selectedNode.name,
+            period: selectedNode.period,
+            category: selectedNode.category,
+            mode: selectedNode.mode as any,
+            paper_count: selectedNode.paper_count,
+            x: selectedNode.x ?? 0,
+            y: selectedNode.y ?? 0,
+          } : null}
+        />
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-.PHONY: help pipeline deploy clean install frontend-install test db-init publish-topics daily-tag daily-analysis export-static evolution-analysis math-lo-benchmark math-ag-benchmark evolution-graph evolution-analytics evolution-loop evolution-test viz-prep viz
+.PHONY: help pipeline deploy clean install frontend-install test db-init publish-topics daily-tag daily-analysis export-static evolution-analysis math-lo-benchmark math-ag-benchmark evolution-graph evolution-analytics evolution-loop evolution-test viz-prep viz graphiti-up graphiti-down graphiti-import graphiti-export
 
 help:
 	@echo "Academic Trend Monitor - 可用命令:"
@@ -23,6 +23,10 @@ help:
 	@echo "  make evolution-test       - 运行演化测试"
 	@echo "  make viz-prep             - 准备可视化数据"
 	@echo "  make viz                  - 准备并确认可视化"
+	@echo "  make graphiti-up          - 启动 Graphiti Docker Compose"
+	@echo "  make graphiti-down        - 停止 Graphiti Docker Compose"
+	@echo "  make graphiti-import      - 导入数据到 Graphiti"
+	@echo "  make graphiti-export      - 导出 Graphiti 静态快照"
 	@echo ""
 
 install:
@@ -131,3 +135,24 @@ viz-prep:
 
 viz: viz-prep
 	@echo "Visualization data prepared"
+
+# Graphiti Docker targets
+GRAPHITI_DIR=graphiti-server
+
+graphiti-up:
+	@echo "Starting Graphiti Docker Compose..."
+	cd $(GRAPHITI_DIR) && docker-compose up -d
+	@echo "Graphiti server starting on http://localhost:8000"
+
+graphiti-down:
+	@echo "Stopping Graphiti Docker Compose..."
+	cd $(GRAPHITI_DIR) && docker-compose down
+
+graphiti-import:
+	@echo "Importing data into Graphiti..."
+	cd $(GRAPHITI_DIR) && python import_data.py --snapshot ../frontend/public/data/graphiti_snapshot.json
+
+graphiti-export:
+	@echo "Exporting Graphiti snapshot..."
+	mkdir -p frontend/public/data
+	uv run python -m pipeline.export_graphiti_snapshot --output frontend/public/data/graphiti_snapshot.json --domains math cs physics

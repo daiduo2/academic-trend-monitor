@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  graphiti-server:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - KUZU_DATABASE_PATH=/app/data/kuzu
+      - DATA_PIPELINE_PATH=/app/data/pipeline
+    volumes:
+      - kuzu-data:/app/data/kuzu
+      - ./data/pipeline:/app/data/pipeline:ro
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+volumes:
+  kuzu-data:
+    driver: local
