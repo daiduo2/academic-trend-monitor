@@ -8,7 +8,7 @@ upstream_docs:
   - "docs/plans/2026-03-10-evolution-rule-coverage.md"
   - "docs/plans/2026-03-11-math-lo-rule-review.md"
 downstream_docs: []
-last_reviewed: "2026-03-14"
+last_reviewed: "2026-03-17"
 
 # Math.LO Benchmark
 
@@ -77,12 +77,38 @@ last_reviewed: "2026-03-14"
 ## Review Notes
 
 - 当前 benchmark 混合了 `event-level` 与 `bridge-level` 两种粒度
+
+### Case Details
+
+#### `lo-b2` - Type Theory Positive Case
+
+- **Anchor** `global_56`: 直觉主义逻辑证明 (math.LO > 数理逻辑 > 非经典逻辑 > 直觉主义逻辑)
+  - Type objects: `type`, `types`, `typed`
+  - Source terms: `proof`, `calculus`, `intuitionistic`
+- **Target** `global_980`: 程序线性化与类型 (cs.LO > 逻辑与形式化方法)
+  - Type objects: `type`, `types`
+  - Target terms: `program`, `languages`, `subtyping`, `correctness`
+- **Why bridge-level**: Cross-domain (math → cs) theoretical lineage, not temporal evolution
+- **Evidence**: Classic proof theory → type systems academic continuity
+
+#### `lo-n5` - Type Theory Negative Case
+
+- **Anchor** `global_56`: 直觉主义逻辑证明
+- **Target** `global_438`: 大语言模型数学推理 (cs.LO > 自动推理与证明 > AI驱动推理)
+- **Why negative**: No shared type objects (0 vs required >=2)
+- **Risk prevented**: AI/math reasoning topics should not trigger type theory continuity
 - 后续优先目标不是增加 case 数量，而是让更多 `bridge-level` case 升到 `event-level`
 - 每次新增 `math.LO` 规则时，必须至少补一个 positive case 和一个 negative case 到这份文档
 
 ## Change Log
 
-- `2026-03-17`
+- `2026-03-17` (MLO-02)
+  - 更新 `math_lo_type_theory_continuity` 案例详情
+  - 明确 `lo-b2` (global_56 → global_980) 为 bridge-level
+  - 添加详细的正反例分析到 Review Notes
+  - 确认规则保持 bridge-level，未进入 event-level
+
+- `2026-03-17` (MLO-03)
   - 新增 negative case `lo-n6` (global_167 → global_75)
   - 补充 `math_lo_set_theory_continuity` 的真实 negative case
   - 避免仅因共享 `cardinals` 单词而误判为集合论连续性

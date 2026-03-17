@@ -51,17 +51,33 @@
 
 - `global_56 -> global_980`
   - `直觉主义逻辑证明 -> 程序线性化与类型`
+  - 共享 type objects: `type`, `types` (2个，满足 >=2 阈值)
+  - Source terms (anchor): `proof`, `calculus`, `intuitionistic`
+  - Target terms (target): `program`, `languages`, `subtyping`, `correctness`
+  - 跨域连续性: math.LO (直觉主义逻辑) -> cs.LO (程序语言类型系统)
 
 当前负例：
 
 - `global_56 -> global_438`
+  - `直觉主义逻辑证明 -> 大语言模型数学推理`
+  - 共享 type objects: 无 (0个)
+  - global_438 关键词聚焦: `llms`, `ai`, `reinforcement`, `reasoning`
+  - 正确不触发：AI 推理主题不应误判为类型理论连续性
 - `global_980 -> global_438`
+  - `程序线性化与类型 -> 大语言模型数学推理`
+  - 同样无共享 type objects
 
-判断：
+判断 (2026-03-17 更新)：
 
 - 这条规则的结构是合理的
-- 但目前还停留在 bridge-level
-- 还没有在 replay 事件层浮现
+- **明确保持 bridge-level**：
+  - 跨域连接 (math -> cs) 是理论 lineage 而非事件演化
+  - 符合 proof theory -> type systems 的经典学术传承
+  - 尚未在 replay 事件层稳定浮现
+- 不是 event-level 的原因：
+  - 更多体现学科间理论传承，非时间维度上的热点 carryover
+  - 在主 12 案例中没有命中
+- 规则阈值有效：>=2 type objects 成功区分正例/负例
 
 ### 3. `math_lo_set_theory_continuity`
 
