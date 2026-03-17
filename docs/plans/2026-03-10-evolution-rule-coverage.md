@@ -145,20 +145,29 @@ trigger_sketch:
   - "共享至少 2 个方法词，如 cohomology / derived / motivic / tropical / étale"
 positive_examples:
   - "上同调、导出几何、热带几何等方法链路"
-  - "注：当前仅通过 synthetic test 验证，真实 case 待补充"
+  - "ag-method-p1: global_136 (动机层与亨泽尔层) -> global_263 (平展上同调与光滑性)"
+  - "  共享方法词: motivic, étale (2个)，无共享对象词，纯方法连续性"
+  - "ag-method-p2: global_237 (母题上同调与规范群) -> global_263 (平展上同调与光滑性)"
+  - "  共享方法词: cohomology, motivic (2个)，无共享对象词，纯方法连续性"
 counter_examples:
   - "对象连续性更强时，不应误标成 method continuity"
+  - "ag-method-n1: global_215 (霍奇商上同调猜想) -> global_237 (母题上同调与规范群)"
+  - "  仅共享1个方法词(cohomology)，低于>=2阈值，不同子领域(Hodge vs Motivic)"
 implemented_in:
   - "pipeline/evolution_analysis.py"
 notes:
   - "用于把 math.AG 中的方法迁移和对象迁移分开建模"
-  - "WARNING: 当前仅有 synthetic test evidence，无真实 benchmark case"
-  - "ag-method-b1 / ag-method-n1 为 synthetic validation，不应写入真实 benchmark"
+  - "2026-03-17更新: 已找到2个真实positive case和1个真实negative case"
+  - "real case标准: 共享>=2方法词且共享对象词<2，确保是方法连续性而非对象连续性"
+  - "状态保持partial: 虽有真实case，但尚未达到ready所需的2个event-level正例"
 claude_evaluation:
   required: true
   representative_cases:
     - "global_30-2025-02 (synthetic validation only)"
-  conclusion: "math_ag_object/method_continuity 拆分方向合理，但当前词典覆盖率不足。WARNING: 真实案例缺失，当前 validation 仅来自 synthetic test，不代表真实 benchmark 通过。需优先补充数学方法词典和真实 case，否则这一维度会持续为空。"
+    - "ag-method-p1: global_136 -> global_263 (positive, bridge-level)"
+    - "ag-method-p2: global_237 -> global_263 (positive, bridge-level)"
+    - "ag-method-n1: global_215 -> global_237 (negative, only 1 method word)"
+  conclusion: "math_ag_object/method_continuity 拆分方向合理。2026-03-17更新: 已找到2个真实positive case(global_136->global_263, global_237->global_263)和1个negative case(global_215->global_237)，均为纯方法连续性(共享>=2方法词，无共享对象词)。状态保持partial: 虽有真实case验证阈值有效性，但尚未达到ready所需的2个event-level正例，且均为bridge-level。"
 ```
 
 ```yaml
