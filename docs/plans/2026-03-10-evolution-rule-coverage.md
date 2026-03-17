@@ -233,8 +233,9 @@ positive_examples:
   - "基数与超滤子公理 -> ZF基数选择公理"
   - "基数与波莱尔公理 -> 基数迭代强制法"
 counter_examples:
-  - "只共享 cardinal + forcing 的弱重叠"
-  - "只共享 cardinals + definable 的可定义性弱联系"
+  - "只共享 cardinal + forcing 的弱重叠 (global_339 -> global_51)"
+  - "只共享 cardinals + definable 的可定义性弱联系 (global_167 -> global_75)"
+  - "global_167 (可定义基数塔基序) -> global_75 (基数迭代强制法): 仅共享1个set对象(cardinals)，且分属不同子分支(ultrafilter vs iterable/woodin)"
 implemented_in:
   - "pipeline/evolution_analysis.py"
 notes:
@@ -243,11 +244,11 @@ notes:
 claude_evaluation:
   required: true
   representative_cases:
-    - "global_313 -> global_360"
-    - "global_51 -> global_75"
-    - "global_339 -> global_51"
-    - "global_167 -> global_75"
-  conclusion: "规则值得保留，其中 `global_51 -> global_75` 更可信；`global_339 -> global_51` 作为只共享 cardinal + forcing 的负例，说明当前“至少 3 个共享对象，或 2 个对象 + 1 个方法”的阈值是有效的。"
+    - “global_313 -> global_360 (positive, bridge-level)”
+    - “global_51 -> global_75 (positive, bridge-level)”
+    - “global_339 -> global_51 (negative, only 2 shared objects)”
+    - “global_167 -> global_75 (negative, only 1 shared object - cardinals)”
+  conclusion: “规则值得保留，其中 `global_51 -> global_75` 更可信；`global_339 -> global_51` 作为只共享 cardinal + forcing 的负例，说明当前”至少 3 个共享对象，或 2 个对象 + 1 个方法”的阈值是有效的。新增负例 `global_167 -> global_75` (仅共享 cardinals) 进一步验证：仅共享1个set对象不足以触发连续性，可有效防止 ultrafilter 分支与 iterable/woodin 分支的误判。”
 ```
 
 ```yaml

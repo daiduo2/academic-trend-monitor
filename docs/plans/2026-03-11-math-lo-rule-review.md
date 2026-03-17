@@ -75,13 +75,20 @@
 当前负例：
 
 - `global_339 -> global_51`
+  - 仅共享 `cardinal + forcing`，弱重叠，不满足 `>=3` 对象阈值
 - `global_167 -> global_75`
+  - `可定义基数塔基序 -> 基数迭代强制法`
+  - 仅共享 1 个 set 对象 (`cardinals`)，远低于阈值
+  - global_167 核心对象: `ultrafilter`, `tukey` (超滤子理论方向)
+  - global_75 核心对象: `iterable`, `woodin` (迭代/大基数方向)
+  - 两者同属集合论但研究分支不同，不应触发连续性
 
 判断：
 
 - 这条规则在对象连续性上是通的
 - 但事件层没有稳定命中
-- 说明它更像“结构近邻解释器”，还不是“演化主路径解释器”
+- 说明它更像”结构近邻解释器”，还不是”演化主路径解释器”
+- **新增发现 (2026-03-17)**: `cardinals` 单共享不足触发，需区分 `cardinal arithmetic` vs `cardinal iteration` vs `ultrafilter theory` 分支
 
 ### 4. `math_lo_forcing_continuity`
 

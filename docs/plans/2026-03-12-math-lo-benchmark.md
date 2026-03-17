@@ -47,6 +47,7 @@ last_reviewed: "2026-03-14"
 | `lo-n3` | `global_167` 可定义基数塔基序 | `global_778` 武丁公理与可定义性 | `none` |
 | `lo-n4` | `global_361` 亨泽尔域存在可定义性 | `global_778` 武丁公理与可定义性 | `none` |
 | `lo-n5` | `global_56` 直觉主义逻辑证明 | `global_438` 大语言模型数学推理 | `none` |
+| `lo-n6` | `global_167` 可定义基数塔基序 | `global_75` 基数迭代强制法 | `not math_lo_set_theory_continuity` |
 
 ### Ambiguous Cases
 
@@ -71,6 +72,7 @@ last_reviewed: "2026-03-14"
 - `lo-n3` 不能因为 `definable + cardinals` 的弱联系就误判
 - `lo-n4` 不能因为 `definable` 单词本身就误判
 - `lo-n5` 不能把一般 AI 推理主题误判成类型理论连续性
+- `lo-n6` 不能因为共享 `cardinals` 就误判成 `math_lo_set_theory_continuity`（仅共享1个set对象，低于阈值）
 
 ## Review Notes
 
@@ -79,6 +81,11 @@ last_reviewed: "2026-03-14"
 - 每次新增 `math.LO` 规则时，必须至少补一个 positive case 和一个 negative case 到这份文档
 
 ## Change Log
+
+- `2026-03-17`
+  - 新增 negative case `lo-n6` (global_167 → global_75)
+  - 补充 `math_lo_set_theory_continuity` 的真实 negative case
+  - 避免仅因共享 `cardinals` 单词而误判为集合论连续性
 
 - `2026-03-14`
   - 新增 positive case `lo-e2` (global_977 → global_1155)
