@@ -1,0 +1,24 @@
+{
+  "version": "1.0",
+  "domains": [
+    {
+      "id": "math",
+      "name": "Mathematics",
+      "available": true,
+      "data_file": "math_visualization.json"
+    },
+    {
+      "id": "cs",
+      "name": "Computer Science",
+      "available": false,
+      "data_file": null
+    },
+    {
+      "id": "physics",
+      "name": "Physics",
+      "available": false,
+      "data_file": null
+    }
+  ],
+  "default_domain": "math"
+}

@@ -139,7 +139,7 @@ function getLayoutOptions(nodeCount: number): object {
   };
 }
 
-export function NetworkView({
+export default function NetworkView({
   period,
   nodes,
   edges,

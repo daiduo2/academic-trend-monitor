@@ -1,6 +1,6 @@
 // frontend/src/components/evolution/EvolutionGraphContainer.tsx
 
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, lazy, Suspense } from 'react';
 import { LeftSidebar } from './LeftSidebar';
 import { RightPanel } from './RightPanel';
 import { TimelineCanvas } from './TimelineCanvas';
@@ -8,7 +8,7 @@ import { TimelineSlider } from './TimelineSlider';
 import { BreadcrumbNav } from './BreadcrumbNav';
 import { CanvasToolbar } from './CanvasToolbar';
 import { ConfidenceSlider } from './ConfidenceSlider';
-import { NetworkView } from './NetworkView';
+const NetworkView = lazy(() => import('./NetworkView'));
 import { TopicTooltip } from './TopicTooltip';
 import { ErrorBoundary } from './ErrorBoundary';
 import { useEvolutionData } from '../../hooks/useEvolutionData';
@@ -150,14 +150,23 @@ function EvolutionGraphContent() {
               onTooltipPositionChange={setTooltipPosition}
             />
           ) : (
-            <NetworkView
-              period={currentPeriod}
-              nodes={filteredNodes}
-              edges={filteredEdges}
-              confidenceThreshold={confidenceThreshold}
-              selectedNode={selectedNode}
-              onSelectNode={setSelectedNode}
-            />
+            <Suspense fallback={
+              <div className="flex-1 h-full flex items-center justify-center bg-gray-50">
+                <div className="text-center">
+                  <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4" />
+                  <p className="text-gray-500">加载网络视图...</p>
+                </div>
+              </div>
+            }>
+              <NetworkView
+                period={currentPeriod}
+                nodes={filteredNodes}
+                edges={filteredEdges}
+                confidenceThreshold={confidenceThreshold}
+                selectedNode={selectedNode}
+                onSelectNode={setSelectedNode}
+              />
+            </Suspense>
           )}
 
           {/* Tooltip */}

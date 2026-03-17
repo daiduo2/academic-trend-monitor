@@ -30,6 +30,8 @@ export class ErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
+    // Store error details for debugging
+    this.setState({ error, hasError: true });
   }
 
   handleRetry = (): void => {
