@@ -1,4 +1,4 @@
-import{r as He,j as _g,M as nw}from"./index-Br6STAlb.js";/**
+import{r as He,j as _g,M as nw}from"./index-CcrqHMEh.js";/**
  * vis-network
  * https://visjs.github.io/vis-network/
  *
