@@ -36,13 +36,30 @@ export function ForceGraphView({
     return data.nodes.filter(node => node.category === selectedCategory);
   }, [data.nodes, selectedCategory]);
 
-  // Filter edges to only include visible nodes
-  const filteredEdges = useMemo(() => {
-    const nodeIds = new Set(filteredNodes.map(n => n.id));
-    return data.edges.filter(
-      edge => nodeIds.has(edge.source as string) && nodeIds.has(edge.target as string)
-    );
-  }, [data.edges, filteredNodes]);
+  // Build node id set for filtering
+  const nodeIds = useMemo(() => new Set(filteredNodes.map(n => n.id)), [filteredNodes]);
+
+  // Build adjacency map for quick lookup
+  const adjacencyMap = useMemo(() => {
+    const map = new Map<string, Edge[]>();
+    data.edges.forEach(edge => {
+      if (!nodeIds.has(edge.source) || !nodeIds.has(edge.target)) return;
+      if (!map.has(edge.source)) map.set(edge.source, []);
+      if (!map.has(edge.target)) map.set(edge.target, []);
+      map.get(edge.source)!.push(edge);
+      map.get(edge.target)!.push(edge);
+    });
+    return map;
+  }, [data.edges, nodeIds]);
+
+  // Only show edges connected to selected or hovered node
+  const visibleEdges = useMemo(() => {
+    const targetNode = selectedNode || hoveredNode;
+    if (!targetNode) return []; // No edges by default
+
+    const connected = adjacencyMap.get(targetNode.id);
+    return connected || [];
+  }, [adjacencyMap, selectedNode, hoveredNode]);
 
   // For network mode, filter to selected period only
   const periodNodes = useMemo(() => {
@@ -51,13 +68,14 @@ export function ForceGraphView({
     return filteredNodes.filter(node => node.period === selectedPeriod);
   }, [filteredNodes, mode, selectedPeriod]);
 
+  // Filter edges by selected period in network mode
   const periodEdges = useMemo(() => {
-    if (mode === 'timeline') return filteredEdges;
+    if (mode === 'timeline') return visibleEdges;
     const nodeIds = new Set(periodNodes.map(n => n.id));
-    return filteredEdges.filter(
+    return visibleEdges.filter(
       edge => nodeIds.has(edge.source as string) && nodeIds.has(edge.target as string)
     );
-  }, [filteredEdges, mode, periodNodes]);
+  }, [visibleEdges, mode, periodNodes]);
 
   // Timeline layout: position nodes by period
   const timelineNodes = useMemo(() => {
