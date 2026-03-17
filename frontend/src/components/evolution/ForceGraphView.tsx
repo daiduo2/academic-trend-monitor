@@ -13,8 +13,8 @@ interface ForceGraphViewProps {
   selectedNode?: Node | null;
 }
 
-const NODE_SIZE_BASE = 4;
-const NODE_SIZE_MULTIPLIER = 0.5;
+const NODE_SIZE_BASE = 3;
+const NODE_SIZE_MULTIPLIER = 0.3;
 
 export function ForceGraphView({
   data,
@@ -28,6 +28,7 @@ export function ForceGraphView({
   const fgRef = useRef<any>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [dimensions, setDimensions] = useState({ width: 800, height: 600 });
+  const [hoveredNode, setHoveredNode] = useState<Node | null>(null);
 
   // Filter nodes by category
   const filteredNodes = useMemo(() => {
@@ -152,6 +153,7 @@ export function ForceGraphView({
 
   // Handle node hover
   const handleNodeHover = useCallback((node: any) => {
+    setHoveredNode(node ? (node as Node) : null);
     if (node) {
       onNodeHover({
         ...(node as Node),
@@ -196,6 +198,18 @@ export function ForceGraphView({
     const size = getNodeSize(node);
     const color = getNodeColor(node);
     const isSelected = selectedNode?.id === n.id;
+    const isHovered = hoveredNode?.id === n.id;
+
+    // Glow effect for selected/hovered nodes
+    if (isSelected || isHovered) {
+      const gradient = ctx.createRadialGradient(n.x ?? 0, n.y ?? 0, size, n.x ?? 0, n.y ?? 0, size * 3);
+      gradient.addColorStop(0, color + '80'); // 50% opacity
+      gradient.addColorStop(1, color + '00'); // 0% opacity
+      ctx.beginPath();
+      ctx.arc(n.x ?? 0, n.y ?? 0, size * 3, 0, 2 * Math.PI);
+      ctx.fillStyle = gradient;
+      ctx.fill();
+    }
 
     // Draw node circle
     ctx.beginPath();
@@ -208,25 +222,29 @@ export function ForceGraphView({
       ctx.lineWidth = 3;
       ctx.strokeStyle = '#ffffff';
       ctx.stroke();
-      ctx.lineWidth = 1;
-      ctx.strokeStyle = color;
+      ctx.lineWidth = 2;
+      ctx.strokeStyle = '#3b82f6';
+      ctx.stroke();
+    } else if (isHovered) {
+      ctx.lineWidth = 2;
+      ctx.strokeStyle = '#ffffff';
       ctx.stroke();
     } else {
       ctx.lineWidth = 1;
-      ctx.strokeStyle = 'rgba(255,255,255,0.5)';
+      ctx.strokeStyle = 'rgba(255,255,255,0.3)';
       ctx.stroke();
     }
 
-    // Draw label if zoomed in enough
-    if (globalScale > 1.5) {
-      ctx.font = `${isSelected ? 'bold' : 'normal'} 12px sans-serif`;
-      ctx.fillStyle = '#e2e8f0';
+    // Draw label if zoomed in enough or if selected
+    if (globalScale > 1.2 || isSelected) {
+      ctx.font = `${isSelected ? 'bold' : 'normal'} 11px sans-serif`;
+      ctx.fillStyle = isSelected ? '#ffffff' : '#e2e8f0';
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
-      const label = n.name.length > 15 ? n.name.slice(0, 15) + '...' : n.name;
-      ctx.fillText(label, n.x ?? 0, (n.y ?? 0) + size + 12);
+      const label = n.name.length > 12 ? n.name.slice(0, 12) + '...' : n.name;
+      ctx.fillText(label, n.x ?? 0, (n.y ?? 0) + size + 10);
     }
-  }, [getNodeSize, getNodeColor, selectedNode]);
+  }, [getNodeSize, getNodeColor, selectedNode, hoveredNode]);
 
   // Custom link canvas drawing
   const linkCanvasObject = useCallback((link: any, ctx: CanvasRenderingContext2D) => {
@@ -237,6 +255,7 @@ export function ForceGraphView({
     if (!source.x || !source.y || !target.x || !target.y) return;
 
     const isContinued = edge.type === 'continued';
+    const isSelected = selectedNode && (source.id === selectedNode.id || target.id === selectedNode.id);
 
     ctx.beginPath();
     ctx.moveTo(source.x, source.y);
@@ -250,18 +269,21 @@ export function ForceGraphView({
       ctx.lineTo(target.x, target.y);
     }
 
-    ctx.strokeStyle = isContinued ? '#3b82f6' : '#64748b';
-    ctx.lineWidth = isContinued ? 2 : 1;
+    // Thicker, more visible edges
+    ctx.strokeStyle = isSelected ? '#60a5fa' : (isContinued ? '#3b82f6' : '#64748b');
+    ctx.lineWidth = isSelected ? 4 : (isContinued ? 3 : 2);
+    ctx.globalAlpha = isSelected ? 1 : (isContinued ? 0.8 : 0.5);
     if (!isContinued) {
       ctx.setLineDash([5, 5]);
     }
     ctx.stroke();
     ctx.setLineDash([]);
+    ctx.globalAlpha = 1;
 
     // Arrow for continued edges
     if (isContinued) {
       const angle = Math.atan2(target.y - source.y, target.x - source.x);
-      const arrowLength = 8;
+      const arrowLength = isSelected ? 12 : 10;
       const arrowAngle = Math.PI / 6;
 
       ctx.beginPath();
@@ -277,7 +299,7 @@ export function ForceGraphView({
       );
       ctx.stroke();
     }
-  }, [mode]);
+  }, [mode, selectedNode]);
 
   // Physics configuration
   const physicsConfig = useMemo(() => {
