@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { EvolutionNode, TopicMode } from '../../types/evolution';
 import { MODE_COLORS, MODE_LABELS } from '../../utils/colorSchemes';

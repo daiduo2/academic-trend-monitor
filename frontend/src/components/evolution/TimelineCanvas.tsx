@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useCallback } from 'react';
 import * as d3 from 'd3';
 import type { EvolutionNode, EvolutionEdge } from '../../types/evolution';
+import { getNodeColor } from '../../utils/colorSchemes';
 
 interface TimelineCanvasProps {
   nodes: EvolutionNode[];
@@ -184,7 +185,7 @@ export function TimelineCanvas({
         .attr('width', 4)
         .attr('height', 40)
         .attr('rx', 2)
-        .attr('fill', getModeColor(node.mode))
+        .attr('fill', getNodeColor(node.mode))
         .attr('opacity', isHighlighted ? 1 : 0.3);
 
       // Title
@@ -227,14 +228,4 @@ export function TimelineCanvas({
       <svg ref={svgRef} className="w-full h-full" />
     </div>
   );
-}
-
-function getModeColor(mode: string): string {
-  const colors: Record<string, string> = {
-    theory: '#3b82f6',
-    method: '#10b981',
-    problem: '#f59e0b',
-    hybrid: '#8b5cf6'
-  };
-  return colors[mode] || '#64748b';
 }
