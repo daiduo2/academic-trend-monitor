@@ -1,0 +1,637 @@
+{
+  "case_id": "global_1791-2025-07",
+  "anchor_topic_id": "global_1791",
+  "anchor_topic_name": "因果效应与干预结果",
+  "anchor_topic_mode": "method",
+  "anchor_topic_profile": {
+    "primary_mode": "method",
+    "secondary_mode": null,
+    "method_score": 5,
+    "problem_score": 0,
+    "theory_score": 0
+  },
+  "start_period": "2025-07",
+  "observation_horizon": 4,
+  "neighbor_topics": [
+    "global_1799",
+    "global_1972",
+    "global_1788"
+  ],
+  "evolution_path": [
+    {
+      "period": "2025-07",
+      "anchor_paper_count": 193,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_1799",
+          "topic_name": "面板估计与外生性",
+          "paper_count": 0,
+          "weight": 0.405,
+          "category": "econ",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 5,
+            "problem_score": 0,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1972",
+          "topic_name": "因果估计与试验处理",
+          "paper_count": 0,
+          "weight": 0.3889,
+          "category": "stat",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 6,
+            "problem_score": 0,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1788",
+          "topic_name": "因果发现与结构模型",
+          "paper_count": 0,
+          "weight": 0.3318,
+          "category": "econ",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 4,
+            "problem_score": 0,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-08",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 1,
+      "top_neighbors": [
+        {
+          "topic_id": "global_1972",
+          "topic_name": "因果估计与试验处理",
+          "paper_count": 124,
+          "weight": 0.3889,
+          "category": "stat",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 6,
+            "problem_score": 0,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1799",
+          "topic_name": "面板估计与外生性",
+          "paper_count": 0,
+          "weight": 0.405,
+          "category": "econ",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 5,
+            "problem_score": 0,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1788",
+          "topic_name": "因果发现与结构模型",
+          "paper_count": 0,
+          "weight": 0.3318,
+          "category": "econ",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 4,
+            "problem_score": 0,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-09",
+      "anchor_paper_count": 160,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_1799",
+          "topic_name": "面板估计与外生性",
+          "paper_count": 0,
+          "weight": 0.405,
+          "category": "econ",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 5,
+            "problem_score": 0,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1972",
+          "topic_name": "因果估计与试验处理",
+          "paper_count": 0,
+          "weight": 0.3889,
+          "category": "stat",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 6,
+            "problem_score": 0,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1788",
+          "topic_name": "因果发现与结构模型",
+          "paper_count": 0,
+          "weight": 0.3318,
+          "category": "econ",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 4,
+            "problem_score": 0,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-10",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 1,
+      "top_neighbors": [
+        {
+          "topic_id": "global_1972",
+          "topic_name": "因果估计与试验处理",
+          "paper_count": 161,
+          "weight": 0.3889,
+          "category": "stat",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 6,
+            "problem_score": 0,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1799",
+          "topic_name": "面板估计与外生性",
+          "paper_count": 0,
+          "weight": 0.405,
+          "category": "econ",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 5,
+            "problem_score": 0,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1788",
+          "topic_name": "因果发现与结构模型",
+          "paper_count": 0,
+          "weight": 0.3318,
+          "category": "econ",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 4,
+            "problem_score": 0,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-11",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 1,
+      "top_neighbors": [
+        {
+          "topic_id": "global_1972",
+          "topic_name": "因果估计与试验处理",
+          "paper_count": 161,
+          "weight": 0.3889,
+          "category": "stat",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 6,
+            "problem_score": 0,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1799",
+          "topic_name": "面板估计与外生性",
+          "paper_count": 0,
+          "weight": 0.405,
+          "category": "econ",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 5,
+            "problem_score": 0,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1788",
+          "topic_name": "因果发现与结构模型",
+          "paper_count": 0,
+          "weight": 0.3318,
+          "category": "econ",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 4,
+            "problem_score": 0,
+            "theory_score": 0
+          }
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "emerged",
+      "period": "2025-07",
+      "summary": "Anchor topic first appears in the replay window."
+    },
+    {
+      "type": "diffused_to_neighbor",
+      "period": "2025-10",
+      "summary": "Semantic neighbors absorb momentum from the anchor topic around 2025-10.",
+      "evidence": {
+        "target_topic_id": "global_1972",
+        "target_topic_name": "因果估计与试验处理",
+        "target_topic_mode": "method",
+        "transfer_kind": "method_diffusion",
+        "transfer_pattern": "migration",
+        "weight": 0.3889,
+        "increase": 161,
+        "bridge_evidence": {
+          "shared_keywords": [
+            "covariate",
+            "covariates",
+            "effect",
+            "effects",
+            "estimation",
+            "estimator"
+          ],
+          "bridge_topics": [
+            "面板估计与外生性",
+            "因果发现与结构模型"
+          ],
+          "target_evidence_titles": [
+            "Model-assisted inference for dynamic causal effects in staggered rollout cluster randomized experiments",
+            "Two-Phase Treatment with Noncompliance: Identifying the Cumulative Average Treatment Effect via Multisite Instrumental Variables"
+          ],
+          "category_flow": {
+            "source_category": "econ",
+            "target_category": "stat",
+            "source_top_level": "econ",
+            "target_top_level": "stat",
+            "relation": "cross_domain"
+          },
+          "pipeline_relation": {
+            "relation": "none",
+            "source_stage_terms": [],
+            "target_stage_terms": [],
+            "shared_domain_terms": [],
+            "representation_stage_terms": [],
+            "perception_stage_terms": [
+              "estimation"
+            ],
+            "shared_3d_terms": [],
+            "shared_formal_terms": [],
+            "shared_math_ag_objects": [],
+            "shared_math_ag_methods": [],
+            "shared_math_lo_objects": [],
+            "shared_math_lo_methods": [],
+            "shared_math_lo_core_objects": [],
+            "shared_math_lo_modal_objects": [],
+            "shared_math_lo_modal_methods": [],
+            "shared_math_lo_set_objects": [],
+            "shared_math_lo_set_methods": [],
+            "shared_math_lo_forcing_objects": [],
+            "shared_math_lo_forcing_methods": [],
+            "shared_math_lo_type_objects": [],
+            "source_type_terms": [],
+            "target_type_terms": [],
+            "shared_math_lo_definability_objects": [],
+            "shared_math_lo_definability_methods": [],
+            "math_ag_object_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            },
+            "math_ag_method_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            }
+          },
+          "evidence_title_overlap": {
+            "anchor_titles": [
+              "Model-assisted inference for dynamic causal effects in staggered rollout cluster randomized experiments",
+              "Two-Phase Treatment with Noncompliance: Identifying the Cumulative Average Treatment Effect via Multisite Instrumental Variables"
+            ],
+            "target_titles": [
+              "Model-assisted inference for dynamic causal effects in staggered rollout cluster randomized experiments",
+              "Two-Phase Treatment with Noncompliance: Identifying the Cumulative Average Treatment Effect via Multisite Instrumental Variables"
+            ],
+            "shared_terms": [
+              "assisted",
+              "average",
+              "causal",
+              "cluster",
+              "cumulative",
+              "dynamic"
+            ],
+            "shared_term_count": 6
+          },
+          "bridge_strength": 0.847,
+          "alias_risk": {
+            "level": "low",
+            "reason": "distinct_concepts"
+          }
+        },
+        "post_transfer_persistence": {
+          "lookahead_periods": [
+            "2025-11",
+            "2025-12"
+          ],
+          "active_periods_after_event": 2,
+          "paper_counts_after_event": [
+            161,
+            111
+          ],
+          "sustained": true
+        },
+        "anchor_post_event_persistence": {
+          "lookahead_periods": [
+            "2025-11",
+            "2025-12"
+          ],
+          "active_periods_after_event": 0,
+          "paper_counts_after_event": [
+            0,
+            0
+          ],
+          "sustained": false
+        },
+        "relative_persistence": {
+          "anchor_total": 0,
+          "target_total": 272,
+          "target_to_anchor_ratio": null,
+          "status": "target_outlasts_source"
+        },
+        "consistency_check": {
+          "status": "consistent",
+          "flags": [],
+          "relation": "cross_domain",
+          "pipeline_relation": "none",
+          "bridge_strength": 0.847,
+          "relative_persistence_status": "target_outlasts_source",
+          "event_type": "diffused_to_neighbor"
+        }
+      }
+    },
+    {
+      "type": "migrated_to_new_category",
+      "period": "2025-10",
+      "summary": "Related growth propagates from econ into stat.",
+      "evidence": {
+        "source_category": "econ",
+        "target_category": "stat",
+        "target_topic_id": "global_1972",
+        "target_topic_name": "因果估计与试验处理",
+        "target_topic_mode": "method",
+        "transfer_kind": "method_transfer",
+        "transfer_pattern": "migration",
+        "weight": 0.3889,
+        "bridge_evidence": {
+          "shared_keywords": [
+            "covariate",
+            "covariates",
+            "effect",
+            "effects",
+            "estimation",
+            "estimator"
+          ],
+          "bridge_topics": [
+            "面板估计与外生性",
+            "因果发现与结构模型"
+          ],
+          "target_evidence_titles": [
+            "Model-assisted inference for dynamic causal effects in staggered rollout cluster randomized experiments",
+            "Two-Phase Treatment with Noncompliance: Identifying the Cumulative Average Treatment Effect via Multisite Instrumental Variables"
+          ],
+          "category_flow": {
+            "source_category": "econ",
+            "target_category": "stat",
+            "source_top_level": "econ",
+            "target_top_level": "stat",
+            "relation": "cross_domain"
+          },
+          "pipeline_relation": {
+            "relation": "none",
+            "source_stage_terms": [],
+            "target_stage_terms": [],
+            "shared_domain_terms": [],
+            "representation_stage_terms": [],
+            "perception_stage_terms": [
+              "estimation"
+            ],
+            "shared_3d_terms": [],
+            "shared_formal_terms": [],
+            "shared_math_ag_objects": [],
+            "shared_math_ag_methods": [],
+            "shared_math_lo_objects": [],
+            "shared_math_lo_methods": [],
+            "shared_math_lo_core_objects": [],
+            "shared_math_lo_modal_objects": [],
+            "shared_math_lo_modal_methods": [],
+            "shared_math_lo_set_objects": [],
+            "shared_math_lo_set_methods": [],
+            "shared_math_lo_forcing_objects": [],
+            "shared_math_lo_forcing_methods": [],
+            "shared_math_lo_type_objects": [],
+            "source_type_terms": [],
+            "target_type_terms": [],
+            "shared_math_lo_definability_objects": [],
+            "shared_math_lo_definability_methods": [],
+            "math_ag_object_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            },
+            "math_ag_method_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            }
+          },
+          "evidence_title_overlap": {
+            "anchor_titles": [
+              "Model-assisted inference for dynamic causal effects in staggered rollout cluster randomized experiments",
+              "Two-Phase Treatment with Noncompliance: Identifying the Cumulative Average Treatment Effect via Multisite Instrumental Variables"
+            ],
+            "target_titles": [
+              "Model-assisted inference for dynamic causal effects in staggered rollout cluster randomized experiments",
+              "Two-Phase Treatment with Noncompliance: Identifying the Cumulative Average Treatment Effect via Multisite Instrumental Variables"
+            ],
+            "shared_terms": [
+              "assisted",
+              "average",
+              "causal",
+              "cluster",
+              "cumulative",
+              "dynamic"
+            ],
+            "shared_term_count": 6
+          },
+          "bridge_strength": 0.847,
+          "alias_risk": {
+            "level": "low",
+            "reason": "distinct_concepts"
+          }
+        },
+        "post_transfer_persistence": {
+          "lookahead_periods": [
+            "2025-11",
+            "2025-12"
+          ],
+          "active_periods_after_event": 2,
+          "paper_counts_after_event": [
+            161,
+            111
+          ],
+          "sustained": true
+        },
+        "anchor_post_event_persistence": {
+          "lookahead_periods": [
+            "2025-11",
+            "2025-12"
+          ],
+          "active_periods_after_event": 0,
+          "paper_counts_after_event": [
+            0,
+            0
+          ],
+          "sustained": false
+        },
+        "relative_persistence": {
+          "anchor_total": 0,
+          "target_total": 272,
+          "target_to_anchor_ratio": null,
+          "status": "target_outlasts_source"
+        },
+        "consistency_check": {
+          "status": "consistent",
+          "flags": [],
+          "relation": "cross_domain",
+          "pipeline_relation": "none",
+          "bridge_strength": 0.847,
+          "relative_persistence_status": "target_outlasts_source",
+          "event_type": "migrated_to_new_category"
+        }
+      }
+    },
+    {
+      "type": "weakened",
+      "period": "2025-11",
+      "summary": "Anchor topic shows sustained decline without strong absorption evidence."
+    }
+  ],
+  "cross_category_moves": [
+    "stat"
+  ],
+  "growth_summary": "因果效应与干预结果 (method) remains active without a strong expansion signal by 2025-11.",
+  "decline_summary": "Momentum softens by 2025-11, suggesting the topic loses local centrality.",
+  "review_flags": [],
+  "key_supporting_topics": [
+    {
+      "topic_id": "global_1972",
+      "topic_name": "因果估计与试验处理",
+      "category": "stat",
+      "weight": 0.3889,
+      "peak_period": "2025-10",
+      "peak_count": 161,
+      "increase": 161,
+      "topic_mode": "method",
+      "topic_profile": {
+        "primary_mode": "method",
+        "secondary_mode": null,
+        "method_score": 6,
+        "problem_score": 0,
+        "theory_score": 0
+      }
+    }
+  ],
+  "key_turning_points": [
+    {
+      "period": "2025-08",
+      "delta": -193,
+      "anchor_paper_count": 0
+    },
+    {
+      "period": "2025-09",
+      "delta": 160,
+      "anchor_paper_count": 160
+    },
+    {
+      "period": "2025-10",
+      "delta": -160,
+      "anchor_paper_count": 0
+    }
+  ]
+}

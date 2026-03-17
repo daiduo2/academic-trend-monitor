@@ -1,0 +1,117 @@
+{
+  "date": "2026-03-14",
+  "risks": [
+    "数据采用category_fallback模式，可能存在分类不精确问题",
+    "previous_count全为0，无法计算真实增长率",
+    "paper_count为0，缺乏具体论文数据支撑分析"
+  ],
+  "title": "2026年3月14日 学术趋势日报",
+  "signals": [
+    {
+      "kind": "emerging",
+      "label": "计算机视觉爆发式增长",
+      "summary": "cs.CV以422篇论文成为今日最热门领域，远超其他话题，显示视觉研究进入新一轮爆发期"
+    },
+    {
+      "kind": "cross_disciplinary",
+      "label": "AI与机器人深度融合",
+      "summary": "cs.RO(机器人学)大幅上升172篇，与cs.LG(机器学习)、cs.AI(人工智能)形成交叉热点，反映具身智能发展趋势"
+    },
+    {
+      "kind": "emerging",
+      "label": "量子物理研究升温",
+      "summary": "quant-ph(量子物理)上升至第四位156篇，量子计算研究热度明显上升"
+    },
+    {
+      "kind": "drift",
+      "label": "AI研究持续主导",
+      "summary": "cs.CV、cs.LG、cs.CL、cs.AI等AI相关领域占据前五名中的四席，AI研究仍是学术界核心驱动力"
+    }
+  ],
+  "summary": "今日共捕获10个上升趋势话题，以计算机视觉(cs.CV)领先达422篇论文，机器学习(cs.LG)289篇，机器人学(cs.RO)172篇。量子物理(quant-ph)和计算语言学(cs.CL)分别贡献156篇和149篇，显示多学科交叉趋势明显。",
+  "model_meta": {
+    "mode": "daily_analysis",
+    "model": "sonnet-4-20250514",
+    "provider": "claude_code"
+  },
+  "key_findings": [
+    "计算机视觉(cs.CV)以422篇论文领跑，成为今日最具活力的研究领域",
+    "机器学习(cs.LG)紧随其后289篇，反映AI研究持续火热",
+    "机器人学(cs.RO)异军突起172篇，可能与具身智能发展相关",
+    "量子物理(quant-ph)上升至第四位，量子计算研究热度上升",
+    "计算语言学(cs.CL)达149篇，大语言模型推动NLP研究持续增长"
+  ],
+  "notable_papers": [],
+  "top_rising_topics": [
+    {
+      "change": 422,
+      "summary": "计算机视觉领域今日新发表论文最多，可能与图像生成、视觉理解、3D重建等方向最新突破有关",
+      "topic_id": "cs.CV",
+      "topic_name": "cs.CV",
+      "paper_count": 422
+    },
+    {
+      "change": 289,
+      "summary": "机器学习持续火热，包括深度学习、强化学习、神经网络架构等研究方向活跃",
+      "topic_id": "cs.LG",
+      "topic_name": "cs.LG",
+      "paper_count": 289
+    },
+    {
+      "change": 172,
+      "summary": "机器人学显著上升，可能受益于具身智能、机器人学习、自动化控制等领域进展",
+      "topic_id": "cs.RO",
+      "topic_name": "cs.RO",
+      "paper_count": 172
+    },
+    {
+      "change": 156,
+      "summary": "量子物理研究活跃，量子计算、量子信息处理等方向可能迎来新突破",
+      "topic_id": "quant-ph",
+      "topic_name": "quant-ph",
+      "paper_count": 156
+    },
+    {
+      "change": 149,
+      "summary": "计算语言学持续增长，大语言模型推动自然语言处理研究热度不减",
+      "topic_id": "cs.CL",
+      "topic_name": "cs.CL",
+      "paper_count": 149
+    },
+    {
+      "change": 139,
+      "summary": "人工智能基础理论研究活跃，包括推理、规划、知识表示等方向",
+      "topic_id": "cs.AI",
+      "topic_name": "cs.AI",
+      "paper_count": 139
+    },
+    {
+      "change": 86,
+      "summary": "材料科学研究上升，可能与新型材料计算、材料模拟等方向相关",
+      "topic_id": "cond-mat.mtrl-sci",
+      "topic_name": "cond-mat.mtrl-sci",
+      "paper_count": 86
+    },
+    {
+      "change": 73,
+      "summary": "应用数学研究稳定，偏微分方程、数值分析等方向有持续产出",
+      "topic_id": "math.AP",
+      "topic_name": "math.AP",
+      "paper_count": 73
+    },
+    {
+      "change": 71,
+      "summary": "密码学与安全研究上升，可能与隐私计算、区块链安全等热点相关",
+      "topic_id": "cs.CR",
+      "topic_name": "cs.CR",
+      "paper_count": 71
+    },
+    {
+      "change": 67,
+      "summary": "组合数学研究稳定，算法设计、图论等方向有持续贡献",
+      "topic_id": "math.CO",
+      "topic_name": "math.CO",
+      "paper_count": 67
+    }
+  ]
+}

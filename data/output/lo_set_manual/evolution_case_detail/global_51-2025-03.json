@@ -1,0 +1,485 @@
+{
+  "case_id": "global_51-2025-03",
+  "anchor_topic_id": "global_51",
+  "anchor_topic_name": "基数与波莱尔公理",
+  "anchor_topic_mode": "theory",
+  "anchor_topic_profile": {
+    "primary_mode": "theory",
+    "secondary_mode": "problem",
+    "method_score": 1,
+    "problem_score": 1,
+    "theory_score": 2
+  },
+  "start_period": "2025-03",
+  "observation_horizon": 4,
+  "neighbor_topics": [
+    "global_313",
+    "global_360",
+    "global_75",
+    "global_167",
+    "global_339"
+  ],
+  "evolution_path": [
+    {
+      "period": "2025-03",
+      "anchor_paper_count": 27,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_313",
+          "topic_name": "基数与超滤子公理",
+          "paper_count": 0,
+          "weight": 0.3955,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_360",
+          "topic_name": "ZF基数选择公理",
+          "paper_count": 0,
+          "weight": 0.3955,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_75",
+          "topic_name": "基数迭代强制法",
+          "paper_count": 0,
+          "weight": 0.3955,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-04",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 1,
+      "top_neighbors": [
+        {
+          "topic_id": "global_75",
+          "topic_name": "基数迭代强制法",
+          "paper_count": 21,
+          "weight": 0.3955,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_313",
+          "topic_name": "基数与超滤子公理",
+          "paper_count": 0,
+          "weight": 0.3955,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_360",
+          "topic_name": "ZF基数选择公理",
+          "paper_count": 0,
+          "weight": 0.3955,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-05",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_313",
+          "topic_name": "基数与超滤子公理",
+          "paper_count": 0,
+          "weight": 0.3955,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_360",
+          "topic_name": "ZF基数选择公理",
+          "paper_count": 0,
+          "weight": 0.3955,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_75",
+          "topic_name": "基数迭代强制法",
+          "paper_count": 0,
+          "weight": 0.3955,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-06",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_313",
+          "topic_name": "基数与超滤子公理",
+          "paper_count": 0,
+          "weight": 0.3955,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_360",
+          "topic_name": "ZF基数选择公理",
+          "paper_count": 0,
+          "weight": 0.3955,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_75",
+          "topic_name": "基数迭代强制法",
+          "paper_count": 0,
+          "weight": 0.3955,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-07",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 1,
+      "top_neighbors": [
+        {
+          "topic_id": "global_167",
+          "topic_name": "可定义基数塔基序",
+          "paper_count": 31,
+          "weight": 0.3609,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 0,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_313",
+          "topic_name": "基数与超滤子公理",
+          "paper_count": 0,
+          "weight": 0.3955,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_360",
+          "topic_name": "ZF基数选择公理",
+          "paper_count": 0,
+          "weight": 0.3955,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "emerged",
+      "period": "2025-03",
+      "summary": "Anchor topic first appears in the replay window."
+    },
+    {
+      "type": "diffused_to_neighbor",
+      "period": "2025-07",
+      "summary": "Semantic neighbors absorb momentum from the anchor topic around 2025-07.",
+      "evidence": {
+        "target_topic_id": "global_167",
+        "target_topic_name": "可定义基数塔基序",
+        "target_topic_mode": "theory",
+        "transfer_kind": "theory_spillover",
+        "transfer_pattern": "spillover",
+        "weight": 0.3609,
+        "increase": 31,
+        "bridge_evidence": {
+          "shared_keywords": [
+            "cardinals",
+            "theories"
+          ],
+          "bridge_topics": [
+            "基数与超滤子公理",
+            "ZF基数选择公理",
+            "基数迭代强制法"
+          ],
+          "target_evidence_titles": [
+            "Imaginaries, products and the adele ring",
+            "On some NIP Fragments of Fields"
+          ],
+          "category_flow": {
+            "source_category": "math",
+            "target_category": "math",
+            "source_top_level": "math",
+            "target_top_level": "math",
+            "relation": "same_category"
+          },
+          "pipeline_relation": {
+            "relation": "none",
+            "source_stage_terms": [],
+            "target_stage_terms": [],
+            "shared_domain_terms": [],
+            "representation_stage_terms": [],
+            "perception_stage_terms": [],
+            "shared_3d_terms": [],
+            "shared_formal_terms": [
+              "theories"
+            ],
+            "shared_math_ag_objects": [],
+            "shared_math_ag_methods": [],
+            "shared_math_lo_objects": [
+              "cardinals",
+              "theories"
+            ],
+            "shared_math_lo_methods": [],
+            "shared_math_lo_core_objects": [
+              "cardinals"
+            ],
+            "shared_math_lo_modal_objects": [],
+            "shared_math_lo_modal_methods": [],
+            "shared_math_lo_set_objects": [
+              "cardinals"
+            ],
+            "shared_math_lo_set_methods": [],
+            "math_ag_object_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            },
+            "math_ag_method_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            }
+          },
+          "evidence_title_overlap": {
+            "anchor_titles": [
+              "On classification of continuous first order theories",
+              "Some notes on plump ordinals"
+            ],
+            "target_titles": [
+              "Imaginaries, products and the adele ring",
+              "On some NIP Fragments of Fields"
+            ],
+            "shared_terms": [
+              "some"
+            ],
+            "shared_term_count": 1
+          },
+          "bridge_strength": 0.633,
+          "alias_risk": {
+            "level": "low",
+            "reason": "distinct_concepts"
+          }
+        },
+        "post_transfer_persistence": {
+          "lookahead_periods": [
+            "2025-08",
+            "2025-09"
+          ],
+          "active_periods_after_event": 0,
+          "paper_counts_after_event": [
+            0,
+            0
+          ],
+          "sustained": false
+        },
+        "anchor_post_event_persistence": {
+          "lookahead_periods": [
+            "2025-08",
+            "2025-09"
+          ],
+          "active_periods_after_event": 1,
+          "paper_counts_after_event": [
+            16,
+            0
+          ],
+          "sustained": false
+        },
+        "relative_persistence": {
+          "anchor_total": 16,
+          "target_total": 0,
+          "target_to_anchor_ratio": 0.0,
+          "status": "weak_carryover"
+        },
+        "consistency_check": {
+          "status": "consistent",
+          "flags": [],
+          "relation": "same_category",
+          "pipeline_relation": "none",
+          "bridge_strength": 0.633,
+          "relative_persistence_status": "weak_carryover",
+          "event_type": "diffused_to_neighbor"
+        }
+      }
+    },
+    {
+      "type": "weakened",
+      "period": "2025-07",
+      "summary": "Anchor topic shows sustained decline without strong absorption evidence."
+    }
+  ],
+  "cross_category_moves": [],
+  "growth_summary": "基数与波莱尔公理 (theory) remains active without a strong expansion signal by 2025-07.",
+  "decline_summary": "Momentum softens by 2025-07, suggesting the topic loses local centrality.",
+  "review_flags": [],
+  "key_supporting_topics": [
+    {
+      "topic_id": "global_167",
+      "topic_name": "可定义基数塔基序",
+      "category": "math",
+      "weight": 0.3609,
+      "peak_period": "2025-07",
+      "peak_count": 31,
+      "increase": 31,
+      "topic_mode": "theory",
+      "topic_profile": {
+        "primary_mode": "theory",
+        "secondary_mode": "method",
+        "method_score": 1,
+        "problem_score": 0,
+        "theory_score": 1
+      }
+    },
+    {
+      "topic_id": "global_75",
+      "topic_name": "基数迭代强制法",
+      "category": "math",
+      "weight": 0.3955,
+      "peak_period": "2025-04",
+      "peak_count": 21,
+      "increase": 21,
+      "topic_mode": "theory",
+      "topic_profile": {
+        "primary_mode": "theory",
+        "secondary_mode": "problem",
+        "method_score": 1,
+        "problem_score": 1,
+        "theory_score": 1
+      }
+    }
+  ],
+  "key_turning_points": [
+    {
+      "period": "2025-04",
+      "delta": -27,
+      "anchor_paper_count": 0
+    }
+  ]
+}

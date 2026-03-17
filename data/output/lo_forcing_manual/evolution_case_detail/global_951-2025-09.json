@@ -1,0 +1,457 @@
+{
+  "case_id": "global_951-2025-09",
+  "anchor_topic_id": "global_951",
+  "anchor_topic_name": "基数与力迫法",
+  "anchor_topic_mode": "hybrid",
+  "anchor_topic_profile": {
+    "primary_mode": "hybrid",
+    "secondary_mode": null,
+    "method_score": 1,
+    "problem_score": 1,
+    "theory_score": 0
+  },
+  "start_period": "2025-09",
+  "observation_horizon": 4,
+  "neighbor_topics": [
+    "global_778",
+    "global_360",
+    "global_1155",
+    "global_621",
+    "global_75"
+  ],
+  "evolution_path": [
+    {
+      "period": "2025-09",
+      "anchor_paper_count": 42,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_778",
+          "topic_name": "武丁公理与可定义性",
+          "paper_count": 0,
+          "weight": 0.3485,
+          "category": "cs",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 2,
+            "problem_score": 0,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_360",
+          "topic_name": "ZF基数选择公理",
+          "paper_count": 0,
+          "weight": 0.2833,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_1155",
+          "topic_name": "直觉主义模态逻辑语义",
+          "paper_count": 0,
+          "weight": 0.2618,
+          "category": "cs",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-10",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_778",
+          "topic_name": "武丁公理与可定义性",
+          "paper_count": 0,
+          "weight": 0.3485,
+          "category": "cs",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 2,
+            "problem_score": 0,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_360",
+          "topic_name": "ZF基数选择公理",
+          "paper_count": 0,
+          "weight": 0.2833,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_1155",
+          "topic_name": "直觉主义模态逻辑语义",
+          "paper_count": 0,
+          "weight": 0.2618,
+          "category": "cs",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-11",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_778",
+          "topic_name": "武丁公理与可定义性",
+          "paper_count": 0,
+          "weight": 0.3485,
+          "category": "cs",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 2,
+            "problem_score": 0,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_360",
+          "topic_name": "ZF基数选择公理",
+          "paper_count": 0,
+          "weight": 0.2833,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_1155",
+          "topic_name": "直觉主义模态逻辑语义",
+          "paper_count": 0,
+          "weight": 0.2618,
+          "category": "cs",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-12",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 1,
+      "top_neighbors": [
+        {
+          "topic_id": "global_1155",
+          "topic_name": "直觉主义模态逻辑语义",
+          "paper_count": 63,
+          "weight": 0.2618,
+          "category": "cs",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_778",
+          "topic_name": "武丁公理与可定义性",
+          "paper_count": 0,
+          "weight": 0.3485,
+          "category": "cs",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 2,
+            "problem_score": 0,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_360",
+          "topic_name": "ZF基数选择公理",
+          "paper_count": 0,
+          "weight": 0.2833,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        }
+      ]
+    },
+    {
+      "period": "2026-01",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_778",
+          "topic_name": "武丁公理与可定义性",
+          "paper_count": 0,
+          "weight": 0.3485,
+          "category": "cs",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 2,
+            "problem_score": 0,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_360",
+          "topic_name": "ZF基数选择公理",
+          "paper_count": 0,
+          "weight": 0.2833,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_1155",
+          "topic_name": "直觉主义模态逻辑语义",
+          "paper_count": 0,
+          "weight": 0.2618,
+          "category": "cs",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "emerged",
+      "period": "2025-09",
+      "summary": "Anchor topic first appears in the replay window."
+    },
+    {
+      "type": "diffused_to_neighbor",
+      "period": "2025-12",
+      "summary": "Semantic neighbors absorb momentum from the anchor topic around 2025-12.",
+      "evidence": {
+        "target_topic_id": "global_1155",
+        "target_topic_name": "直觉主义模态逻辑语义",
+        "target_topic_mode": "hybrid",
+        "transfer_kind": "mixed_diffusion",
+        "transfer_pattern": "spillover",
+        "weight": 0.2618,
+        "increase": 63,
+        "bridge_evidence": {
+          "shared_keywords": [
+            "mathsf"
+          ],
+          "bridge_topics": [
+            "ZF基数选择公理",
+            "幺半范畴与限制函子"
+          ],
+          "target_evidence_titles": [
+            "Fundamental Propositional Logic with Strict Implication",
+            "A Class of Generalised Quantifiers for k-Variable Logics"
+          ],
+          "category_flow": {
+            "source_category": "cs",
+            "target_category": "cs",
+            "source_top_level": "cs",
+            "target_top_level": "cs",
+            "relation": "same_category"
+          },
+          "pipeline_relation": {
+            "relation": "none",
+            "source_stage_terms": [],
+            "target_stage_terms": [],
+            "shared_domain_terms": [],
+            "representation_stage_terms": [],
+            "perception_stage_terms": [],
+            "shared_3d_terms": [],
+            "shared_formal_terms": [],
+            "shared_math_ag_objects": [],
+            "shared_math_ag_methods": [],
+            "shared_math_lo_objects": [],
+            "shared_math_lo_methods": [],
+            "shared_math_lo_core_objects": [],
+            "shared_math_lo_modal_objects": [],
+            "shared_math_lo_modal_methods": [],
+            "shared_math_lo_set_objects": [],
+            "shared_math_lo_set_methods": [],
+            "shared_math_lo_forcing_objects": [],
+            "shared_math_lo_forcing_methods": [],
+            "math_ag_object_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            },
+            "math_ag_method_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            }
+          },
+          "evidence_title_overlap": {
+            "anchor_titles": [
+              "Some Families of Type $B$ Set Partitions Counted by the Dowling Numbers",
+              "Word Measures on Symmetric Groups"
+            ],
+            "target_titles": [
+              "Fundamental Propositional Logic with Strict Implication",
+              "A Class of Generalised Quantifiers for k-Variable Logics"
+            ],
+            "shared_terms": [],
+            "shared_term_count": 0
+          },
+          "bridge_strength": 0.367,
+          "alias_risk": {
+            "level": "low",
+            "reason": "distinct_concepts"
+          }
+        },
+        "post_transfer_persistence": {
+          "lookahead_periods": [
+            "2026-01",
+            "2026-02"
+          ],
+          "active_periods_after_event": 0,
+          "paper_counts_after_event": [
+            0,
+            0
+          ],
+          "sustained": false
+        },
+        "anchor_post_event_persistence": {
+          "lookahead_periods": [
+            "2026-01",
+            "2026-02"
+          ],
+          "active_periods_after_event": 0,
+          "paper_counts_after_event": [
+            0,
+            0
+          ],
+          "sustained": false
+        },
+        "relative_persistence": {
+          "anchor_total": 0,
+          "target_total": 0,
+          "target_to_anchor_ratio": null,
+          "status": "source_dried_up"
+        },
+        "consistency_check": {
+          "status": "consistent",
+          "flags": [],
+          "relation": "same_category",
+          "pipeline_relation": "none",
+          "bridge_strength": 0.367,
+          "relative_persistence_status": "source_dried_up",
+          "event_type": "diffused_to_neighbor"
+        }
+      }
+    },
+    {
+      "type": "weakened",
+      "period": "2026-01",
+      "summary": "Anchor topic shows sustained decline without strong absorption evidence."
+    }
+  ],
+  "cross_category_moves": [],
+  "growth_summary": "基数与力迫法 (hybrid) remains active without a strong expansion signal by 2026-01.",
+  "decline_summary": "Momentum softens by 2026-01, suggesting the topic loses local centrality.",
+  "review_flags": [],
+  "key_supporting_topics": [
+    {
+      "topic_id": "global_1155",
+      "topic_name": "直觉主义模态逻辑语义",
+      "category": "cs",
+      "weight": 0.2618,
+      "peak_period": "2025-12",
+      "peak_count": 63,
+      "increase": 63,
+      "topic_mode": "hybrid",
+      "topic_profile": {
+        "primary_mode": "hybrid",
+        "secondary_mode": null,
+        "method_score": 1,
+        "problem_score": 1,
+        "theory_score": 0
+      }
+    }
+  ],
+  "key_turning_points": [
+    {
+      "period": "2025-10",
+      "delta": -42,
+      "anchor_paper_count": 0
+    }
+  ]
+}

@@ -1,0 +1,646 @@
+{
+  "case_id": "global_2071-2025-04",
+  "anchor_topic_id": "global_2071",
+  "anchor_topic_name": "蛋白质药物分子预测",
+  "anchor_topic_mode": "problem",
+  "anchor_topic_profile": {
+    "primary_mode": "problem",
+    "secondary_mode": "method",
+    "method_score": 1,
+    "problem_score": 2,
+    "theory_score": 0
+  },
+  "start_period": "2025-04",
+  "observation_horizon": 4,
+  "neighbor_topics": [
+    "global_1904",
+    "global_1514",
+    "global_418",
+    "global_2084",
+    "global_2091"
+  ],
+  "evolution_path": [
+    {
+      "period": "2025-04",
+      "anchor_paper_count": 115,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_1904",
+          "topic_name": "药物蛋白分子与抗体化学",
+          "paper_count": 0,
+          "weight": 0.3937,
+          "category": "physics",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 2,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_1514",
+          "topic_name": "蛋白质分子药物结合",
+          "paper_count": 0,
+          "weight": 0.3294,
+          "category": "cond-mat",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 2,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_418",
+          "topic_name": "分子药物化学",
+          "paper_count": 0,
+          "weight": 0.2545,
+          "category": "cs",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 3,
+            "problem_score": 3,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-05",
+      "anchor_paper_count": 161,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_1904",
+          "topic_name": "药物蛋白分子与抗体化学",
+          "paper_count": 0,
+          "weight": 0.3937,
+          "category": "physics",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 2,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_1514",
+          "topic_name": "蛋白质分子药物结合",
+          "paper_count": 0,
+          "weight": 0.3294,
+          "category": "cond-mat",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 2,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_418",
+          "topic_name": "分子药物化学",
+          "paper_count": 0,
+          "weight": 0.2545,
+          "category": "cs",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 3,
+            "problem_score": 3,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-06",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 1,
+      "top_neighbors": [
+        {
+          "topic_id": "global_418",
+          "topic_name": "分子药物化学",
+          "paper_count": 138,
+          "weight": 0.2545,
+          "category": "cs",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 3,
+            "problem_score": 3,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1904",
+          "topic_name": "药物蛋白分子与抗体化学",
+          "paper_count": 0,
+          "weight": 0.3937,
+          "category": "physics",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 2,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_1514",
+          "topic_name": "蛋白质分子药物结合",
+          "paper_count": 0,
+          "weight": 0.3294,
+          "category": "cond-mat",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 2,
+            "theory_score": 1
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-07",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 1,
+      "top_neighbors": [
+        {
+          "topic_id": "global_418",
+          "topic_name": "分子药物化学",
+          "paper_count": 112,
+          "weight": 0.2545,
+          "category": "cs",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 3,
+            "problem_score": 3,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1904",
+          "topic_name": "药物蛋白分子与抗体化学",
+          "paper_count": 0,
+          "weight": 0.3937,
+          "category": "physics",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 2,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_1514",
+          "topic_name": "蛋白质分子药物结合",
+          "paper_count": 0,
+          "weight": 0.3294,
+          "category": "cond-mat",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 2,
+            "theory_score": 1
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-08",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 1,
+      "top_neighbors": [
+        {
+          "topic_id": "global_1514",
+          "topic_name": "蛋白质分子药物结合",
+          "paper_count": 143,
+          "weight": 0.3294,
+          "category": "cond-mat",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 2,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_1904",
+          "topic_name": "药物蛋白分子与抗体化学",
+          "paper_count": 0,
+          "weight": 0.3937,
+          "category": "physics",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 2,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_418",
+          "topic_name": "分子药物化学",
+          "paper_count": 0,
+          "weight": 0.2545,
+          "category": "cs",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 3,
+            "problem_score": 3,
+            "theory_score": 0
+          }
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "emerged",
+      "period": "2025-04",
+      "summary": "Anchor topic first appears in the replay window."
+    },
+    {
+      "type": "expanded",
+      "period": "2025-05",
+      "summary": "Anchor topic grows materially during the replay horizon."
+    },
+    {
+      "type": "specialized_into_child",
+      "period": "2025-06",
+      "summary": "A deeper child-like topic grows within the anchor neighborhood."
+    },
+    {
+      "type": "diffused_to_neighbor",
+      "period": "2025-08",
+      "summary": "Semantic neighbors absorb momentum from the anchor topic around 2025-08.",
+      "evidence": {
+        "target_topic_id": "global_1514",
+        "target_topic_name": "蛋白质分子药物结合",
+        "target_topic_mode": "problem",
+        "transfer_kind": "problem_diffusion",
+        "transfer_pattern": "migration",
+        "weight": 0.3294,
+        "increase": 143,
+        "bridge_evidence": {
+          "shared_keywords": [
+            "binding",
+            "discovery",
+            "drug",
+            "molecular",
+            "molecules",
+            "prediction"
+          ],
+          "bridge_topics": [
+            "药物蛋白分子与抗体化学",
+            "分子药物化学",
+            "蛋白质构象研究"
+          ],
+          "target_evidence_titles": [
+            "SCALAR: Quantifying Structural Hallucination, Consistency, and Reasoning Gaps in Materials Foundation Models",
+            "A Cross-Domain Graph Learning Protocol for Single-Step Molecular Geometry Refinement"
+          ],
+          "category_flow": {
+            "source_category": "q-bio",
+            "target_category": "cond-mat",
+            "source_top_level": "q-bio",
+            "target_top_level": "cond-mat",
+            "relation": "cross_domain"
+          },
+          "pipeline_relation": {
+            "relation": "none",
+            "source_stage_terms": [],
+            "target_stage_terms": [],
+            "shared_domain_terms": [],
+            "representation_stage_terms": [],
+            "perception_stage_terms": [],
+            "shared_3d_terms": [],
+            "shared_formal_terms": [],
+            "shared_math_ag_objects": [],
+            "shared_math_ag_methods": [],
+            "shared_math_lo_objects": [],
+            "shared_math_lo_methods": [],
+            "shared_math_lo_core_objects": [],
+            "shared_math_lo_modal_objects": [],
+            "shared_math_lo_modal_methods": [],
+            "shared_math_lo_set_objects": [],
+            "shared_math_lo_set_methods": [],
+            "shared_math_lo_forcing_objects": [],
+            "shared_math_lo_forcing_methods": [],
+            "shared_math_lo_type_objects": [],
+            "source_type_terms": [],
+            "target_type_terms": [],
+            "shared_math_lo_definability_objects": [],
+            "shared_math_lo_definability_methods": [],
+            "math_ag_object_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            },
+            "math_ag_method_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            }
+          },
+          "evidence_title_overlap": {
+            "anchor_titles": [
+              "Effects of multi-phase control mechanism on fibroblast dynamics: A segmented mathematical modeling approach",
+              "Intrinsic MIMO Particle Communication Channel with Random Advection"
+            ],
+            "target_titles": [
+              "SCALAR: Quantifying Structural Hallucination, Consistency, and Reasoning Gaps in Materials Foundation Models",
+              "A Cross-Domain Graph Learning Protocol for Single-Step Molecular Geometry Refinement"
+            ],
+            "shared_terms": [],
+            "shared_term_count": 0
+          },
+          "bridge_strength": 0.68,
+          "alias_risk": {
+            "level": "low",
+            "reason": "distinct_concepts"
+          }
+        },
+        "post_transfer_persistence": {
+          "lookahead_periods": [
+            "2025-09",
+            "2025-10"
+          ],
+          "active_periods_after_event": 0,
+          "paper_counts_after_event": [
+            0,
+            0
+          ],
+          "sustained": false
+        },
+        "anchor_post_event_persistence": {
+          "lookahead_periods": [
+            "2025-09",
+            "2025-10"
+          ],
+          "active_periods_after_event": 1,
+          "paper_counts_after_event": [
+            0,
+            126
+          ],
+          "sustained": false
+        },
+        "relative_persistence": {
+          "anchor_total": 126,
+          "target_total": 0,
+          "target_to_anchor_ratio": 0.0,
+          "status": "weak_carryover"
+        },
+        "consistency_check": {
+          "status": "consistent",
+          "flags": [],
+          "relation": "cross_domain",
+          "pipeline_relation": "none",
+          "bridge_strength": 0.68,
+          "relative_persistence_status": "weak_carryover",
+          "event_type": "diffused_to_neighbor"
+        }
+      }
+    },
+    {
+      "type": "migrated_to_new_category",
+      "period": "2025-08",
+      "summary": "Related growth propagates from q-bio into cond-mat.",
+      "evidence": {
+        "source_category": "q-bio",
+        "target_category": "cond-mat",
+        "target_topic_id": "global_1514",
+        "target_topic_name": "蛋白质分子药物结合",
+        "target_topic_mode": "problem",
+        "transfer_kind": "problem_transfer",
+        "transfer_pattern": "migration",
+        "weight": 0.3294,
+        "bridge_evidence": {
+          "shared_keywords": [
+            "binding",
+            "discovery",
+            "drug",
+            "molecular",
+            "molecules",
+            "prediction"
+          ],
+          "bridge_topics": [
+            "药物蛋白分子与抗体化学",
+            "分子药物化学",
+            "蛋白质构象研究"
+          ],
+          "target_evidence_titles": [
+            "SCALAR: Quantifying Structural Hallucination, Consistency, and Reasoning Gaps in Materials Foundation Models",
+            "A Cross-Domain Graph Learning Protocol for Single-Step Molecular Geometry Refinement"
+          ],
+          "category_flow": {
+            "source_category": "q-bio",
+            "target_category": "cond-mat",
+            "source_top_level": "q-bio",
+            "target_top_level": "cond-mat",
+            "relation": "cross_domain"
+          },
+          "pipeline_relation": {
+            "relation": "none",
+            "source_stage_terms": [],
+            "target_stage_terms": [],
+            "shared_domain_terms": [],
+            "representation_stage_terms": [],
+            "perception_stage_terms": [],
+            "shared_3d_terms": [],
+            "shared_formal_terms": [],
+            "shared_math_ag_objects": [],
+            "shared_math_ag_methods": [],
+            "shared_math_lo_objects": [],
+            "shared_math_lo_methods": [],
+            "shared_math_lo_core_objects": [],
+            "shared_math_lo_modal_objects": [],
+            "shared_math_lo_modal_methods": [],
+            "shared_math_lo_set_objects": [],
+            "shared_math_lo_set_methods": [],
+            "shared_math_lo_forcing_objects": [],
+            "shared_math_lo_forcing_methods": [],
+            "shared_math_lo_type_objects": [],
+            "source_type_terms": [],
+            "target_type_terms": [],
+            "shared_math_lo_definability_objects": [],
+            "shared_math_lo_definability_methods": [],
+            "math_ag_object_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            },
+            "math_ag_method_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            }
+          },
+          "evidence_title_overlap": {
+            "anchor_titles": [
+              "Effects of multi-phase control mechanism on fibroblast dynamics: A segmented mathematical modeling approach",
+              "Intrinsic MIMO Particle Communication Channel with Random Advection"
+            ],
+            "target_titles": [
+              "SCALAR: Quantifying Structural Hallucination, Consistency, and Reasoning Gaps in Materials Foundation Models",
+              "A Cross-Domain Graph Learning Protocol for Single-Step Molecular Geometry Refinement"
+            ],
+            "shared_terms": [],
+            "shared_term_count": 0
+          },
+          "bridge_strength": 0.68,
+          "alias_risk": {
+            "level": "low",
+            "reason": "distinct_concepts"
+          }
+        },
+        "post_transfer_persistence": {
+          "lookahead_periods": [
+            "2025-09",
+            "2025-10"
+          ],
+          "active_periods_after_event": 0,
+          "paper_counts_after_event": [
+            0,
+            0
+          ],
+          "sustained": false
+        },
+        "anchor_post_event_persistence": {
+          "lookahead_periods": [
+            "2025-09",
+            "2025-10"
+          ],
+          "active_periods_after_event": 1,
+          "paper_counts_after_event": [
+            0,
+            126
+          ],
+          "sustained": false
+        },
+        "relative_persistence": {
+          "anchor_total": 126,
+          "target_total": 0,
+          "target_to_anchor_ratio": 0.0,
+          "status": "weak_carryover"
+        },
+        "consistency_check": {
+          "status": "consistent",
+          "flags": [],
+          "relation": "cross_domain",
+          "pipeline_relation": "none",
+          "bridge_strength": 0.68,
+          "relative_persistence_status": "weak_carryover",
+          "event_type": "migrated_to_new_category"
+        }
+      }
+    },
+    {
+      "type": "weakened",
+      "period": "2025-08",
+      "summary": "Anchor topic shows sustained decline without strong absorption evidence."
+    }
+  ],
+  "cross_category_moves": [
+    "cond-mat",
+    "cs"
+  ],
+  "growth_summary": "蛋白质药物分子预测 (problem) expands from 2025-04 to 2025-08 and diffuses into nearby topics.",
+  "decline_summary": "Momentum softens by 2025-08, suggesting the topic loses local centrality.",
+  "review_flags": [],
+  "key_supporting_topics": [
+    {
+      "topic_id": "global_1514",
+      "topic_name": "蛋白质分子药物结合",
+      "category": "cond-mat",
+      "weight": 0.3294,
+      "peak_period": "2025-08",
+      "peak_count": 143,
+      "increase": 143,
+      "topic_mode": "problem",
+      "topic_profile": {
+        "primary_mode": "problem",
+        "secondary_mode": "method",
+        "method_score": 1,
+        "problem_score": 2,
+        "theory_score": 1
+      }
+    },
+    {
+      "topic_id": "global_418",
+      "topic_name": "分子药物化学",
+      "category": "cs",
+      "weight": 0.2545,
+      "peak_period": "2025-06",
+      "peak_count": 138,
+      "increase": 138,
+      "topic_mode": "hybrid",
+      "topic_profile": {
+        "primary_mode": "hybrid",
+        "secondary_mode": null,
+        "method_score": 3,
+        "problem_score": 3,
+        "theory_score": 0
+      }
+    }
+  ],
+  "key_turning_points": [
+    {
+      "period": "2025-05",
+      "delta": 46,
+      "anchor_paper_count": 161
+    },
+    {
+      "period": "2025-06",
+      "delta": -161,
+      "anchor_paper_count": 0
+    }
+  ]
+}

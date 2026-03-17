@@ -1,0 +1,308 @@
+{
+  "case_id": "global_2126-2025-03",
+  "anchor_topic_id": "global_2126",
+  "anchor_topic_name": "安德森局域化与相变",
+  "anchor_topic_mode": "theory",
+  "anchor_topic_profile": {
+    "primary_mode": "theory",
+    "secondary_mode": "problem",
+    "method_score": 1,
+    "problem_score": 1,
+    "theory_score": 1
+  },
+  "start_period": "2025-03",
+  "observation_horizon": 4,
+  "neighbor_topics": [
+    "global_2132",
+    "global_1522",
+    "global_1805",
+    "global_1893",
+    "global_1550"
+  ],
+  "evolution_path": [
+    {
+      "period": "2025-03",
+      "anchor_paper_count": 36,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_2132",
+          "topic_name": "耦合振子同步",
+          "paper_count": 0,
+          "weight": 0.325,
+          "category": "nlin",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 2,
+            "problem_score": 0,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_1522",
+          "topic_name": "准周期无序局域化",
+          "paper_count": 0,
+          "weight": 0.2882,
+          "category": "cond-mat",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 2
+          }
+        },
+        {
+          "topic_id": "global_1805",
+          "topic_name": "无序系统安德森局域化",
+          "paper_count": 0,
+          "weight": 0.2333,
+          "category": "physics",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 0,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-04",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_2132",
+          "topic_name": "耦合振子同步",
+          "paper_count": 0,
+          "weight": 0.325,
+          "category": "nlin",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 2,
+            "problem_score": 0,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_1522",
+          "topic_name": "准周期无序局域化",
+          "paper_count": 0,
+          "weight": 0.2882,
+          "category": "cond-mat",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 2
+          }
+        },
+        {
+          "topic_id": "global_1805",
+          "topic_name": "无序系统安德森局域化",
+          "paper_count": 0,
+          "weight": 0.2333,
+          "category": "physics",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 0,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-05",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_2132",
+          "topic_name": "耦合振子同步",
+          "paper_count": 0,
+          "weight": 0.325,
+          "category": "nlin",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 2,
+            "problem_score": 0,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_1522",
+          "topic_name": "准周期无序局域化",
+          "paper_count": 0,
+          "weight": 0.2882,
+          "category": "cond-mat",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 2
+          }
+        },
+        {
+          "topic_id": "global_1805",
+          "topic_name": "无序系统安德森局域化",
+          "paper_count": 0,
+          "weight": 0.2333,
+          "category": "physics",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 0,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-06",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_2132",
+          "topic_name": "耦合振子同步",
+          "paper_count": 0,
+          "weight": 0.325,
+          "category": "nlin",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 2,
+            "problem_score": 0,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_1522",
+          "topic_name": "准周期无序局域化",
+          "paper_count": 0,
+          "weight": 0.2882,
+          "category": "cond-mat",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 2
+          }
+        },
+        {
+          "topic_id": "global_1805",
+          "topic_name": "无序系统安德森局域化",
+          "paper_count": 0,
+          "weight": 0.2333,
+          "category": "physics",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 0,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-07",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_2132",
+          "topic_name": "耦合振子同步",
+          "paper_count": 0,
+          "weight": 0.325,
+          "category": "nlin",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 2,
+            "problem_score": 0,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_1522",
+          "topic_name": "准周期无序局域化",
+          "paper_count": 0,
+          "weight": 0.2882,
+          "category": "cond-mat",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 2
+          }
+        },
+        {
+          "topic_id": "global_1805",
+          "topic_name": "无序系统安德森局域化",
+          "paper_count": 0,
+          "weight": 0.2333,
+          "category": "physics",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 0,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "emerged",
+      "period": "2025-03",
+      "summary": "Anchor topic first appears in the replay window."
+    },
+    {
+      "type": "weakened",
+      "period": "2025-07",
+      "summary": "Anchor topic shows sustained decline without strong absorption evidence."
+    }
+  ],
+  "cross_category_moves": [],
+  "growth_summary": "安德森局域化与相变 (problem) remains active without a strong expansion signal by 2025-07.",
+  "decline_summary": "Momentum softens by 2025-07, suggesting the topic loses local centrality.",
+  "review_flags": [],
+  "key_supporting_topics": [],
+  "key_turning_points": [
+    {
+      "period": "2025-04",
+      "delta": -36,
+      "anchor_paper_count": 0
+    }
+  ]
+}

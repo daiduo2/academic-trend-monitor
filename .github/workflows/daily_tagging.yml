@@ -1,0 +1,81 @@
+name: Daily Tagging
+
+on:
+  workflow_run:
+    workflows: ["Daily Fetch"]
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      bootstrap_fetch:
+        description: "Fetch daily metadata before tagging"
+        required: false
+        default: false
+        type: boolean
+
+concurrency:
+  group: daily-tagging-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  daily-tagging:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      GH_PUSH_TOKEN: ${{ secrets.PAT_TOKEN || github.token }}
+      TAG_SCORE_THRESHOLD: ${{ vars.TAG_SCORE_THRESHOLD || '0.6' }}
+      TAGGER_VERSION: embedding-v1
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ env.GH_PUSH_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+
+      - name: Install Python dependencies
+        run: uv sync --locked --no-dev
+
+      - name: Skip workflow when DATABASE_URL is not configured
+        if: ${{ env.DATABASE_URL == '' }}
+        run: echo "DATABASE_URL is not configured; skipping Daily Tagging."
+
+      - name: Fetch daily metadata first
+        if: ${{ env.DATABASE_URL != '' && github.event_name == 'workflow_dispatch' && inputs.bootstrap_fetch == true }}
+        run: uv run python -m pipeline.daily_fetch_metadata
+
+      - name: Tag recent metadata
+        if: ${{ env.DATABASE_URL != '' }}
+        run: uv run python -m pipeline.daily_tag_metadata
+
+      - name: Export recent papers
+        if: ${{ env.DATABASE_URL != '' }}
+        run: uv run python -m pipeline.export_recent_static
+
+      - name: Commit exported static data
+        if: ${{ env.DATABASE_URL != '' }}
+        run: |
+          set -euo pipefail
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/recent.jsonl
+          git diff --staged --quiet && exit 0
+          git commit -m "daily: export recent papers"
+          for attempt in 1 2 3; do
+            git fetch origin "${GITHUB_REF_NAME}"
+            git rebase "origin/${GITHUB_REF_NAME}" && git push && exit 0
+            git rebase --abort || true
+            [ "$attempt" -lt 3 ] || exit 1
+            sleep 5
+          done

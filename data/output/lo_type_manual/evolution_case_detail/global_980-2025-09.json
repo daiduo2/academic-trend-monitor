@@ -1,0 +1,318 @@
+{
+  "case_id": "global_980-2025-09",
+  "anchor_topic_id": "global_980",
+  "anchor_topic_name": "程序线性化与类型",
+  "anchor_topic_mode": "problem",
+  "anchor_topic_profile": {
+    "primary_mode": "problem",
+    "secondary_mode": "method",
+    "method_score": 1,
+    "problem_score": 2,
+    "theory_score": 0
+  },
+  "start_period": "2025-09",
+  "observation_horizon": 4,
+  "neighbor_topics": [
+    "global_1031"
+  ],
+  "evolution_path": [
+    {
+      "period": "2025-09",
+      "anchor_paper_count": 66,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_1031",
+          "topic_name": "形式规约语义验证",
+          "paper_count": 0,
+          "weight": 0.2,
+          "category": "cs",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 3,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-10",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 1,
+      "top_neighbors": [
+        {
+          "topic_id": "global_1031",
+          "topic_name": "形式规约语义验证",
+          "paper_count": 15,
+          "weight": 0.2,
+          "category": "cs",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 3,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-11",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_1031",
+          "topic_name": "形式规约语义验证",
+          "paper_count": 0,
+          "weight": 0.2,
+          "category": "cs",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 3,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-12",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_1031",
+          "topic_name": "形式规约语义验证",
+          "paper_count": 0,
+          "weight": 0.2,
+          "category": "cs",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 3,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2026-01",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_1031",
+          "topic_name": "形式规约语义验证",
+          "paper_count": 0,
+          "weight": 0.2,
+          "category": "cs",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 3,
+            "theory_score": 0
+          }
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "emerged",
+      "period": "2025-09",
+      "summary": "Anchor topic first appears in the replay window."
+    },
+    {
+      "type": "diffused_to_neighbor",
+      "period": "2025-10",
+      "summary": "Semantic neighbors absorb momentum from the anchor topic around 2025-10.",
+      "evidence": {
+        "target_topic_id": "global_1031",
+        "target_topic_name": "形式规约语义验证",
+        "target_topic_mode": "problem",
+        "transfer_kind": "problem_diffusion",
+        "transfer_pattern": "migration",
+        "weight": 0.2,
+        "increase": 15,
+        "bridge_evidence": {
+          "shared_keywords": [
+            "correctness",
+            "program",
+            "programs"
+          ],
+          "bridge_topics": [],
+          "target_evidence_titles": [
+            "Herb.jl: A Unifying Program Synthesis Library",
+            "From Evaluation to Enhancement: Large Language Models for Zero-Knowledge Proof Code Generation"
+          ],
+          "category_flow": {
+            "source_category": "cs",
+            "target_category": "cs",
+            "source_top_level": "cs",
+            "target_top_level": "cs",
+            "relation": "same_category"
+          },
+          "pipeline_relation": {
+            "relation": "none",
+            "source_stage_terms": [],
+            "target_stage_terms": [],
+            "shared_domain_terms": [],
+            "representation_stage_terms": [],
+            "perception_stage_terms": [],
+            "shared_3d_terms": [],
+            "shared_formal_terms": [],
+            "shared_math_ag_objects": [],
+            "shared_math_ag_methods": [],
+            "shared_math_lo_objects": [],
+            "shared_math_lo_methods": [],
+            "shared_math_lo_core_objects": [],
+            "shared_math_lo_modal_objects": [],
+            "shared_math_lo_modal_methods": [],
+            "shared_math_lo_set_objects": [],
+            "shared_math_lo_set_methods": [],
+            "shared_math_lo_forcing_objects": [],
+            "shared_math_lo_forcing_methods": [],
+            "shared_math_lo_type_objects": [
+              "programs"
+            ],
+            "source_type_terms": [],
+            "target_type_terms": [
+              "correctness",
+              "program",
+              "programs"
+            ],
+            "math_ag_object_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            },
+            "math_ag_method_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            }
+          },
+          "evidence_title_overlap": {
+            "anchor_titles": [
+              "Herb.jl: A Unifying Program Synthesis Library",
+              "From Evaluation to Enhancement: Large Language Models for Zero-Knowledge Proof Code Generation"
+            ],
+            "target_titles": [
+              "Herb.jl: A Unifying Program Synthesis Library",
+              "From Evaluation to Enhancement: Large Language Models for Zero-Knowledge Proof Code Generation"
+            ],
+            "shared_terms": [
+              "code",
+              "enhancement",
+              "evaluation",
+              "from",
+              "generation",
+              "herb.jl"
+            ],
+            "shared_term_count": 6
+          },
+          "bridge_strength": 0.65,
+          "alias_risk": {
+            "level": "low",
+            "reason": "distinct_concepts"
+          }
+        },
+        "post_transfer_persistence": {
+          "lookahead_periods": [
+            "2025-11",
+            "2025-12"
+          ],
+          "active_periods_after_event": 0,
+          "paper_counts_after_event": [
+            0,
+            0
+          ],
+          "sustained": false
+        },
+        "anchor_post_event_persistence": {
+          "lookahead_periods": [
+            "2025-11",
+            "2025-12"
+          ],
+          "active_periods_after_event": 0,
+          "paper_counts_after_event": [
+            0,
+            0
+          ],
+          "sustained": false
+        },
+        "relative_persistence": {
+          "anchor_total": 0,
+          "target_total": 0,
+          "target_to_anchor_ratio": null,
+          "status": "source_dried_up"
+        },
+        "consistency_check": {
+          "status": "consistent",
+          "flags": [],
+          "relation": "same_category",
+          "pipeline_relation": "none",
+          "bridge_strength": 0.65,
+          "relative_persistence_status": "source_dried_up",
+          "event_type": "diffused_to_neighbor"
+        }
+      }
+    },
+    {
+      "type": "weakened",
+      "period": "2026-01",
+      "summary": "Anchor topic shows sustained decline without strong absorption evidence."
+    }
+  ],
+  "cross_category_moves": [],
+  "growth_summary": "程序线性化与类型 (hybrid) remains active without a strong expansion signal by 2026-01.",
+  "decline_summary": "Momentum softens by 2026-01, suggesting the topic loses local centrality.",
+  "review_flags": [],
+  "key_supporting_topics": [
+    {
+      "topic_id": "global_1031",
+      "topic_name": "形式规约语义验证",
+      "category": "cs",
+      "weight": 0.2,
+      "peak_period": "2025-10",
+      "peak_count": 15,
+      "increase": 15,
+      "topic_mode": "problem",
+      "topic_profile": {
+        "primary_mode": "problem",
+        "secondary_mode": "method",
+        "method_score": 1,
+        "problem_score": 3,
+        "theory_score": 0
+      }
+    }
+  ],
+  "key_turning_points": [
+    {
+      "period": "2025-10",
+      "delta": -66,
+      "anchor_paper_count": 0
+    }
+  ]
+}

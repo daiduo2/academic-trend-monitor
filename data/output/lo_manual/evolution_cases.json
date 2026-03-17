@@ -1,0 +1,264 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-03-10T16:52:59.711862+00:00",
+  "analysis_periods": [
+    "2025-02",
+    "2025-03",
+    "2025-04",
+    "2025-05",
+    "2025-06",
+    "2025-07",
+    "2025-08",
+    "2025-09",
+    "2025-10",
+    "2025-11",
+    "2025-12",
+    "2026-01"
+  ],
+  "horizon_months": 4,
+  "total_cases": 3,
+  "cases": [
+    {
+      "case_id": "global_27-2025-02",
+      "anchor_topic_id": "global_27",
+      "anchor_topic_name": "概率逻辑与自动机语义",
+      "anchor_topic_mode": "theory",
+      "anchor_topic_profile": {
+        "primary_mode": "theory",
+        "secondary_mode": null,
+        "method_score": 0,
+        "problem_score": 0,
+        "theory_score": 1
+      },
+      "category": "math",
+      "start_period": "2025-02",
+      "observation_horizon": 4,
+      "neighbor_topics": [
+        "global_56",
+        "global_208",
+        "global_736",
+        "global_345",
+        "global_313"
+      ],
+      "event_types": [
+        "diffused_to_neighbor",
+        "emerged",
+        "merged_into_parent",
+        "migrated_to_new_category"
+      ],
+      "cross_category_moves": [
+        "cs"
+      ],
+      "growth_summary": "概率逻辑与自动机语义 (theory) remains active without a strong expansion signal by 2025-06.",
+      "decline_summary": "Some activity appears to reconverge into a broader parent topic by 2025-06.",
+      "review_flags": [],
+      "key_supporting_topics": [
+        {
+          "topic_id": "global_736",
+          "topic_name": "逻辑自动机与基数语义",
+          "category": "cs",
+          "weight": 0.2545,
+          "peak_period": "2025-05",
+          "peak_count": 176,
+          "increase": 176,
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_56",
+          "topic_name": "直觉主义逻辑证明",
+          "category": "math",
+          "weight": 0.4025,
+          "peak_period": "2025-03",
+          "peak_count": 49,
+          "increase": 49,
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        }
+      ],
+      "key_turning_points": [
+        {
+          "period": "2025-03",
+          "delta": -112,
+          "anchor_paper_count": 0
+        },
+        {
+          "period": "2025-04",
+          "delta": 58,
+          "anchor_paper_count": 58
+        },
+        {
+          "period": "2025-05",
+          "delta": -58,
+          "anchor_paper_count": 0
+        }
+      ]
+    },
+    {
+      "case_id": "global_56-2025-03",
+      "anchor_topic_id": "global_56",
+      "anchor_topic_name": "直觉主义逻辑证明",
+      "anchor_topic_mode": "hybrid",
+      "anchor_topic_profile": {
+        "primary_mode": "hybrid",
+        "secondary_mode": null,
+        "method_score": 1,
+        "problem_score": 1,
+        "theory_score": 0
+      },
+      "category": "math",
+      "start_period": "2025-03",
+      "observation_horizon": 4,
+      "neighbor_topics": [
+        "global_27",
+        "global_208",
+        "global_345",
+        "global_1155",
+        "global_977"
+      ],
+      "event_types": [
+        "diffused_to_neighbor",
+        "emerged",
+        "weakened"
+      ],
+      "cross_category_moves": [],
+      "growth_summary": "直觉主义逻辑证明 (hybrid) remains active without a strong expansion signal by 2025-07.",
+      "decline_summary": "Momentum softens by 2025-07, suggesting the topic loses local centrality.",
+      "review_flags": [],
+      "key_supporting_topics": [
+        {
+          "topic_id": "global_27",
+          "topic_name": "概率逻辑与自动机语义",
+          "category": "math",
+          "weight": 0.4025,
+          "peak_period": "2025-04",
+          "peak_count": 58,
+          "increase": 58,
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 1
+          }
+        }
+      ],
+      "key_turning_points": [
+        {
+          "period": "2025-04",
+          "delta": -49,
+          "anchor_paper_count": 0
+        }
+      ]
+    },
+    {
+      "case_id": "global_208-2025-08",
+      "anchor_topic_id": "global_208",
+      "anchor_topic_name": "模态逻辑可满足性",
+      "anchor_topic_mode": "hybrid",
+      "anchor_topic_profile": {
+        "primary_mode": "hybrid",
+        "secondary_mode": null,
+        "method_score": 1,
+        "problem_score": 1,
+        "theory_score": 0
+      },
+      "category": "math",
+      "start_period": "2025-08",
+      "observation_horizon": 4,
+      "neighbor_topics": [
+        "global_345",
+        "global_56",
+        "global_1155",
+        "global_27",
+        "global_339"
+      ],
+      "event_types": [
+        "diffused_to_neighbor",
+        "emerged",
+        "migrated_to_new_category",
+        "specialized_into_child",
+        "weakened"
+      ],
+      "cross_category_moves": [
+        "cs"
+      ],
+      "growth_summary": "模态逻辑可满足性 (hybrid) remains active without a strong expansion signal by 2025-12.",
+      "decline_summary": "Momentum softens by 2025-12, suggesting the topic loses local centrality.",
+      "review_flags": [],
+      "key_supporting_topics": [
+        {
+          "topic_id": "global_27",
+          "topic_name": "概率逻辑与自动机语义",
+          "category": "math",
+          "weight": 0.2859,
+          "peak_period": "2025-11",
+          "peak_count": 233,
+          "increase": 233,
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_56",
+          "topic_name": "直觉主义逻辑证明",
+          "category": "math",
+          "weight": 0.3583,
+          "peak_period": "2025-10",
+          "peak_count": 85,
+          "increase": 85,
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1155",
+          "topic_name": "直觉主义模态逻辑语义",
+          "category": "cs",
+          "weight": 0.35,
+          "peak_period": "2025-12",
+          "peak_count": 63,
+          "increase": 63,
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        }
+      ],
+      "key_turning_points": [
+        {
+          "period": "2025-09",
+          "delta": -72,
+          "anchor_paper_count": 0
+        }
+      ]
+    }
+  ]
+}

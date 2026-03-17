@@ -1,0 +1,250 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-03-10T17:00:33.560756+00:00",
+  "analysis_periods": [
+    "2025-02",
+    "2025-03",
+    "2025-04",
+    "2025-05",
+    "2025-06",
+    "2025-07",
+    "2025-08",
+    "2025-09",
+    "2025-10",
+    "2025-11",
+    "2025-12",
+    "2026-01"
+  ],
+  "horizon_months": 4,
+  "total_cases": 3,
+  "cases": [
+    {
+      "case_id": "global_51-2025-03",
+      "anchor_topic_id": "global_51",
+      "anchor_topic_name": "基数与波莱尔公理",
+      "anchor_topic_mode": "theory",
+      "anchor_topic_profile": {
+        "primary_mode": "theory",
+        "secondary_mode": "problem",
+        "method_score": 1,
+        "problem_score": 1,
+        "theory_score": 2
+      },
+      "category": "math",
+      "start_period": "2025-03",
+      "observation_horizon": 4,
+      "neighbor_topics": [
+        "global_313",
+        "global_360",
+        "global_75",
+        "global_167",
+        "global_339"
+      ],
+      "event_types": [
+        "diffused_to_neighbor",
+        "emerged",
+        "weakened"
+      ],
+      "cross_category_moves": [],
+      "growth_summary": "基数与波莱尔公理 (theory) remains active without a strong expansion signal by 2025-07.",
+      "decline_summary": "Momentum softens by 2025-07, suggesting the topic loses local centrality.",
+      "review_flags": [],
+      "key_supporting_topics": [
+        {
+          "topic_id": "global_167",
+          "topic_name": "可定义基数塔基序",
+          "category": "math",
+          "weight": 0.3609,
+          "peak_period": "2025-07",
+          "peak_count": 31,
+          "increase": 31,
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 0,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_75",
+          "topic_name": "基数迭代强制法",
+          "category": "math",
+          "weight": 0.3955,
+          "peak_period": "2025-04",
+          "peak_count": 21,
+          "increase": 21,
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        }
+      ],
+      "key_turning_points": [
+        {
+          "period": "2025-04",
+          "delta": -27,
+          "anchor_paper_count": 0
+        }
+      ]
+    },
+    {
+      "case_id": "global_75-2025-04",
+      "anchor_topic_id": "global_75",
+      "anchor_topic_name": "基数迭代强制法",
+      "anchor_topic_mode": "theory",
+      "anchor_topic_profile": {
+        "primary_mode": "theory",
+        "secondary_mode": "problem",
+        "method_score": 1,
+        "problem_score": 1,
+        "theory_score": 1
+      },
+      "category": "math",
+      "start_period": "2025-04",
+      "observation_horizon": 4,
+      "neighbor_topics": [
+        "global_167",
+        "global_51",
+        "global_313",
+        "global_360",
+        "global_361"
+      ],
+      "event_types": [
+        "diffused_to_neighbor",
+        "emerged",
+        "migrated_to_new_category",
+        "weakened"
+      ],
+      "cross_category_moves": [
+        "cs"
+      ],
+      "growth_summary": "基数迭代强制法 (hybrid) remains active without a strong expansion signal by 2025-08.",
+      "decline_summary": "Momentum softens by 2025-08, suggesting the topic loses local centrality.",
+      "review_flags": [],
+      "key_supporting_topics": [
+        {
+          "topic_id": "global_167",
+          "topic_name": "可定义基数塔基序",
+          "category": "math",
+          "weight": 0.475,
+          "peak_period": "2025-07",
+          "peak_count": 31,
+          "increase": 31,
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 0,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_778",
+          "topic_name": "武丁公理与可定义性",
+          "category": "cs",
+          "weight": 0.225,
+          "peak_period": "2025-06",
+          "peak_count": 29,
+          "increase": 29,
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 2,
+            "problem_score": 0,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_51",
+          "topic_name": "基数与波莱尔公理",
+          "category": "math",
+          "weight": 0.3955,
+          "peak_period": "2025-08",
+          "peak_count": 16,
+          "increase": 16,
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 2
+          }
+        }
+      ],
+      "key_turning_points": [
+        {
+          "period": "2025-05",
+          "delta": -21,
+          "anchor_paper_count": 0
+        }
+      ]
+    },
+    {
+      "case_id": "global_167-2025-07",
+      "anchor_topic_id": "global_167",
+      "anchor_topic_name": "可定义基数塔基序",
+      "anchor_topic_mode": "theory",
+      "anchor_topic_profile": {
+        "primary_mode": "theory",
+        "secondary_mode": "method",
+        "method_score": 1,
+        "problem_score": 0,
+        "theory_score": 1
+      },
+      "category": "math",
+      "start_period": "2025-07",
+      "observation_horizon": 4,
+      "neighbor_topics": [
+        "global_75",
+        "global_313",
+        "global_361",
+        "global_51",
+        "global_360"
+      ],
+      "event_types": [
+        "diffused_to_neighbor",
+        "emerged",
+        "weakened"
+      ],
+      "cross_category_moves": [],
+      "growth_summary": "可定义基数塔基序 (hybrid) remains active without a strong expansion signal by 2025-11.",
+      "decline_summary": "Momentum softens by 2025-11, suggesting the topic loses local centrality.",
+      "review_flags": [],
+      "key_supporting_topics": [
+        {
+          "topic_id": "global_51",
+          "topic_name": "基数与波莱尔公理",
+          "category": "math",
+          "weight": 0.3609,
+          "peak_period": "2025-10",
+          "peak_count": 59,
+          "increase": 59,
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 2
+          }
+        }
+      ],
+      "key_turning_points": [
+        {
+          "period": "2025-08",
+          "delta": -31,
+          "anchor_paper_count": 0
+        }
+      ]
+    }
+  ]
+}

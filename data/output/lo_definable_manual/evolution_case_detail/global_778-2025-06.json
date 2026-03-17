@@ -1,0 +1,403 @@
+{
+  "case_id": "global_778-2025-06",
+  "anchor_topic_id": "global_778",
+  "anchor_topic_name": "武丁公理与可定义性",
+  "anchor_topic_mode": "method",
+  "anchor_topic_profile": {
+    "primary_mode": "method",
+    "secondary_mode": null,
+    "method_score": 2,
+    "problem_score": 0,
+    "theory_score": 0
+  },
+  "start_period": "2025-06",
+  "observation_horizon": 4,
+  "neighbor_topics": [
+    "global_951",
+    "global_75"
+  ],
+  "evolution_path": [
+    {
+      "period": "2025-06",
+      "anchor_paper_count": 29,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_951",
+          "topic_name": "基数与力迫法",
+          "paper_count": 0,
+          "weight": 0.3485,
+          "category": "cs",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_75",
+          "topic_name": "基数迭代强制法",
+          "paper_count": 0,
+          "weight": 0.225,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-07",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_951",
+          "topic_name": "基数与力迫法",
+          "paper_count": 0,
+          "weight": 0.3485,
+          "category": "cs",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_75",
+          "topic_name": "基数迭代强制法",
+          "paper_count": 0,
+          "weight": 0.225,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-08",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_951",
+          "topic_name": "基数与力迫法",
+          "paper_count": 0,
+          "weight": 0.3485,
+          "category": "cs",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_75",
+          "topic_name": "基数迭代强制法",
+          "paper_count": 0,
+          "weight": 0.225,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-09",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 1,
+      "top_neighbors": [
+        {
+          "topic_id": "global_951",
+          "topic_name": "基数与力迫法",
+          "paper_count": 42,
+          "weight": 0.3485,
+          "category": "cs",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_75",
+          "topic_name": "基数迭代强制法",
+          "paper_count": 0,
+          "weight": 0.225,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-10",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_951",
+          "topic_name": "基数与力迫法",
+          "paper_count": 0,
+          "weight": 0.3485,
+          "category": "cs",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_75",
+          "topic_name": "基数迭代强制法",
+          "paper_count": 0,
+          "weight": 0.225,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "emerged",
+      "period": "2025-06",
+      "summary": "Anchor topic first appears in the replay window."
+    },
+    {
+      "type": "diffused_to_neighbor",
+      "period": "2025-09",
+      "summary": "Semantic neighbors absorb momentum from the anchor topic around 2025-09.",
+      "evidence": {
+        "target_topic_id": "global_951",
+        "target_topic_name": "基数与力迫法",
+        "target_topic_mode": "hybrid",
+        "transfer_kind": "method_diffusion",
+        "transfer_pattern": "migration",
+        "weight": 0.3485,
+        "increase": 42,
+        "bridge_evidence": {
+          "shared_keywords": [
+            "axiom",
+            "cardinal",
+            "cardinals"
+          ],
+          "bridge_topics": [
+            "基数迭代强制法"
+          ],
+          "target_evidence_titles": [
+            "Some Families of Type $B$ Set Partitions Counted by the Dowling Numbers",
+            "Word Measures on Symmetric Groups"
+          ],
+          "category_flow": {
+            "source_category": "cs",
+            "target_category": "cs",
+            "source_top_level": "cs",
+            "target_top_level": "cs",
+            "relation": "same_category"
+          },
+          "pipeline_relation": {
+            "relation": "none",
+            "source_stage_terms": [],
+            "target_stage_terms": [],
+            "shared_domain_terms": [],
+            "representation_stage_terms": [],
+            "perception_stage_terms": [],
+            "shared_3d_terms": [],
+            "shared_formal_terms": [],
+            "shared_math_ag_objects": [],
+            "shared_math_ag_methods": [],
+            "shared_math_lo_objects": [
+              "axiom",
+              "cardinal",
+              "cardinals"
+            ],
+            "shared_math_lo_methods": [],
+            "shared_math_lo_core_objects": [
+              "cardinal",
+              "cardinals"
+            ],
+            "shared_math_lo_modal_objects": [],
+            "shared_math_lo_modal_methods": [],
+            "shared_math_lo_set_objects": [
+              "axiom",
+              "cardinal",
+              "cardinals"
+            ],
+            "shared_math_lo_set_methods": [],
+            "shared_math_lo_forcing_objects": [
+              "axiom",
+              "cardinal",
+              "cardinals"
+            ],
+            "shared_math_lo_forcing_methods": [],
+            "shared_math_lo_type_objects": [],
+            "source_type_terms": [],
+            "target_type_terms": [],
+            "math_ag_object_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            },
+            "math_ag_method_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            }
+          },
+          "evidence_title_overlap": {
+            "anchor_titles": [
+              "What is a POLYNOMIAL-TIME Computable L2-Function?",
+              "On Probabilistic $ω$-Pushdown Systems, and $ω$-Probabilistic Computational Tree Logic"
+            ],
+            "target_titles": [
+              "Some Families of Type $B$ Set Partitions Counted by the Dowling Numbers",
+              "Word Measures on Symmetric Groups"
+            ],
+            "shared_terms": [],
+            "shared_term_count": 0
+          },
+          "bridge_strength": 0.483,
+          "alias_risk": {
+            "level": "low",
+            "reason": "distinct_concepts"
+          }
+        },
+        "post_transfer_persistence": {
+          "lookahead_periods": [
+            "2025-10",
+            "2025-11"
+          ],
+          "active_periods_after_event": 0,
+          "paper_counts_after_event": [
+            0,
+            0
+          ],
+          "sustained": false
+        },
+        "anchor_post_event_persistence": {
+          "lookahead_periods": [
+            "2025-10",
+            "2025-11"
+          ],
+          "active_periods_after_event": 0,
+          "paper_counts_after_event": [
+            0,
+            0
+          ],
+          "sustained": false
+        },
+        "relative_persistence": {
+          "anchor_total": 0,
+          "target_total": 0,
+          "target_to_anchor_ratio": null,
+          "status": "source_dried_up"
+        },
+        "consistency_check": {
+          "status": "consistent",
+          "flags": [],
+          "relation": "same_category",
+          "pipeline_relation": "none",
+          "bridge_strength": 0.483,
+          "relative_persistence_status": "source_dried_up",
+          "event_type": "diffused_to_neighbor"
+        }
+      }
+    },
+    {
+      "type": "specialized_into_child",
+      "period": "2025-09",
+      "summary": "A deeper child-like topic grows within the anchor neighborhood."
+    },
+    {
+      "type": "weakened",
+      "period": "2025-10",
+      "summary": "Anchor topic shows sustained decline without strong absorption evidence."
+    }
+  ],
+  "cross_category_moves": [],
+  "growth_summary": "武丁公理与可定义性 (hybrid) remains active without a strong expansion signal by 2025-10.",
+  "decline_summary": "Momentum softens by 2025-10, suggesting the topic loses local centrality.",
+  "review_flags": [],
+  "key_supporting_topics": [
+    {
+      "topic_id": "global_951",
+      "topic_name": "基数与力迫法",
+      "category": "cs",
+      "weight": 0.3485,
+      "peak_period": "2025-09",
+      "peak_count": 42,
+      "increase": 42,
+      "topic_mode": "hybrid",
+      "topic_profile": {
+        "primary_mode": "hybrid",
+        "secondary_mode": null,
+        "method_score": 1,
+        "problem_score": 1,
+        "theory_score": 0
+      }
+    }
+  ],
+  "key_turning_points": [
+    {
+      "period": "2025-07",
+      "delta": -29,
+      "anchor_paper_count": 0
+    }
+  ]
+}

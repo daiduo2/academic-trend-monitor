@@ -1,0 +1,514 @@
+{
+  "case_id": "global_1806-2025-02",
+  "anchor_topic_id": "global_1806",
+  "anchor_topic_name": "湍流与雷诺流动",
+  "anchor_topic_mode": "hybrid",
+  "anchor_topic_profile": {
+    "primary_mode": "hybrid",
+    "secondary_mode": null,
+    "method_score": 1,
+    "problem_score": 1,
+    "theory_score": 0
+  },
+  "start_period": "2025-02",
+  "observation_horizon": 4,
+  "neighbor_topics": [
+    "global_1896",
+    "global_1831",
+    "global_1845",
+    "global_1909",
+    "global_1840"
+  ],
+  "evolution_path": [
+    {
+      "period": "2025-02",
+      "anchor_paper_count": 55,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_1896",
+          "topic_name": "冰波压力衰减",
+          "paper_count": 0,
+          "weight": 0.3955,
+          "category": "physics",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1831",
+          "topic_name": "风力机气动流场研究",
+          "paper_count": 0,
+          "weight": 0.3609,
+          "category": "physics",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1845",
+          "topic_name": "翼型雷诺流动减阻",
+          "paper_count": 0,
+          "weight": 0.3609,
+          "category": "physics",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-03",
+      "anchor_paper_count": 54,
+      "active_neighbor_count": 1,
+      "top_neighbors": [
+        {
+          "topic_id": "global_1831",
+          "topic_name": "风力机气动流场研究",
+          "paper_count": 20,
+          "weight": 0.3609,
+          "category": "physics",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1896",
+          "topic_name": "冰波压力衰减",
+          "paper_count": 0,
+          "weight": 0.3955,
+          "category": "physics",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1845",
+          "topic_name": "翼型雷诺流动减阻",
+          "paper_count": 0,
+          "weight": 0.3609,
+          "category": "physics",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-04",
+      "anchor_paper_count": 40,
+      "active_neighbor_count": 2,
+      "top_neighbors": [
+        {
+          "topic_id": "global_1840",
+          "topic_name": "玻尔兹曼流与流体速度",
+          "paper_count": 31,
+          "weight": 0.3292,
+          "category": "physics",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 0,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1845",
+          "topic_name": "翼型雷诺流动减阻",
+          "paper_count": 16,
+          "weight": 0.3609,
+          "category": "physics",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1896",
+          "topic_name": "冰波压力衰减",
+          "paper_count": 0,
+          "weight": 0.3955,
+          "category": "physics",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-05",
+      "anchor_paper_count": 56,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_1896",
+          "topic_name": "冰波压力衰减",
+          "paper_count": 0,
+          "weight": 0.3955,
+          "category": "physics",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1831",
+          "topic_name": "风力机气动流场研究",
+          "paper_count": 0,
+          "weight": 0.3609,
+          "category": "physics",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1845",
+          "topic_name": "翼型雷诺流动减阻",
+          "paper_count": 0,
+          "weight": 0.3609,
+          "category": "physics",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-06",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_1896",
+          "topic_name": "冰波压力衰减",
+          "paper_count": 0,
+          "weight": 0.3955,
+          "category": "physics",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1831",
+          "topic_name": "风力机气动流场研究",
+          "paper_count": 0,
+          "weight": 0.3609,
+          "category": "physics",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1845",
+          "topic_name": "翼型雷诺流动减阻",
+          "paper_count": 0,
+          "weight": 0.3609,
+          "category": "physics",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "emerged",
+      "period": "2025-02",
+      "summary": "Anchor topic first appears in the replay window."
+    },
+    {
+      "type": "diffused_to_neighbor",
+      "period": "2025-04",
+      "summary": "Semantic neighbors absorb momentum from the anchor topic around 2025-04.",
+      "evidence": {
+        "target_topic_id": "global_1840",
+        "target_topic_name": "玻尔兹曼流与流体速度",
+        "target_topic_mode": "method",
+        "transfer_kind": "method_diffusion",
+        "transfer_pattern": "spillover",
+        "weight": 0.3292,
+        "increase": 31,
+        "bridge_evidence": {
+          "shared_keywords": [
+            "velocity"
+          ],
+          "bridge_topics": [
+            "风力机气动流场研究",
+            "翼型雷诺流动减阻",
+            "旋转湍流波动研究"
+          ],
+          "target_evidence_titles": [
+            "Evanescent and inertial-like waves in rigidly-rotating odd viscous liquids",
+            "Performance evaluation of an offshore wave measurement buoy in monochromatic waves"
+          ],
+          "category_flow": {
+            "source_category": "physics",
+            "target_category": "physics",
+            "source_top_level": "physics",
+            "target_top_level": "physics",
+            "relation": "same_category"
+          },
+          "pipeline_relation": {
+            "relation": "none",
+            "source_stage_terms": [],
+            "target_stage_terms": [],
+            "shared_domain_terms": [],
+            "representation_stage_terms": [],
+            "perception_stage_terms": [],
+            "shared_3d_terms": [],
+            "shared_formal_terms": [],
+            "shared_math_ag_objects": [],
+            "shared_math_ag_methods": [],
+            "shared_math_lo_objects": [],
+            "shared_math_lo_methods": [],
+            "shared_math_lo_core_objects": [],
+            "shared_math_lo_modal_objects": [],
+            "shared_math_lo_modal_methods": [],
+            "shared_math_lo_set_objects": [],
+            "shared_math_lo_set_methods": [],
+            "shared_math_lo_forcing_objects": [],
+            "shared_math_lo_forcing_methods": [],
+            "shared_math_lo_type_objects": [],
+            "source_type_terms": [],
+            "target_type_terms": [],
+            "shared_math_lo_definability_objects": [],
+            "shared_math_lo_definability_methods": [],
+            "math_ag_object_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            },
+            "math_ag_method_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            }
+          },
+          "evidence_title_overlap": {
+            "anchor_titles": [
+              "Evanescent and inertial-like waves in rigidly-rotating odd viscous liquids",
+              "Performance evaluation of an offshore wave measurement buoy in monochromatic waves"
+            ],
+            "target_titles": [
+              "Evanescent and inertial-like waves in rigidly-rotating odd viscous liquids",
+              "Performance evaluation of an offshore wave measurement buoy in monochromatic waves"
+            ],
+            "shared_terms": [
+              "buoy",
+              "evaluation",
+              "evanescent",
+              "inertial",
+              "like",
+              "liquids"
+            ],
+            "shared_term_count": 6
+          },
+          "bridge_strength": 0.7,
+          "alias_risk": {
+            "level": "low",
+            "reason": "distinct_concepts"
+          }
+        },
+        "post_transfer_persistence": {
+          "lookahead_periods": [
+            "2025-05",
+            "2025-06"
+          ],
+          "active_periods_after_event": 0,
+          "paper_counts_after_event": [
+            0,
+            0
+          ],
+          "sustained": false
+        },
+        "anchor_post_event_persistence": {
+          "lookahead_periods": [
+            "2025-05",
+            "2025-06"
+          ],
+          "active_periods_after_event": 1,
+          "paper_counts_after_event": [
+            56,
+            0
+          ],
+          "sustained": false
+        },
+        "relative_persistence": {
+          "anchor_total": 56,
+          "target_total": 0,
+          "target_to_anchor_ratio": 0.0,
+          "status": "weak_carryover"
+        },
+        "consistency_check": {
+          "status": "consistent",
+          "flags": [],
+          "relation": "same_category",
+          "pipeline_relation": "none",
+          "bridge_strength": 0.7,
+          "relative_persistence_status": "weak_carryover",
+          "event_type": "diffused_to_neighbor"
+        }
+      }
+    },
+    {
+      "type": "weakened",
+      "period": "2025-06",
+      "summary": "Anchor topic shows sustained decline without strong absorption evidence."
+    }
+  ],
+  "cross_category_moves": [],
+  "growth_summary": "湍流与雷诺流动 (hybrid) remains active without a strong expansion signal by 2025-06.",
+  "decline_summary": "Momentum softens by 2025-06, suggesting the topic loses local centrality.",
+  "review_flags": [],
+  "key_supporting_topics": [
+    {
+      "topic_id": "global_1840",
+      "topic_name": "玻尔兹曼流与流体速度",
+      "category": "physics",
+      "weight": 0.3292,
+      "peak_period": "2025-04",
+      "peak_count": 31,
+      "increase": 31,
+      "topic_mode": "method",
+      "topic_profile": {
+        "primary_mode": "method",
+        "secondary_mode": null,
+        "method_score": 1,
+        "problem_score": 0,
+        "theory_score": 0
+      }
+    },
+    {
+      "topic_id": "global_1831",
+      "topic_name": "风力机气动流场研究",
+      "category": "physics",
+      "weight": 0.3609,
+      "peak_period": "2025-03",
+      "peak_count": 20,
+      "increase": 20,
+      "topic_mode": "hybrid",
+      "topic_profile": {
+        "primary_mode": "hybrid",
+        "secondary_mode": null,
+        "method_score": 1,
+        "problem_score": 1,
+        "theory_score": 0
+      }
+    },
+    {
+      "topic_id": "global_1845",
+      "topic_name": "翼型雷诺流动减阻",
+      "category": "physics",
+      "weight": 0.3609,
+      "peak_period": "2025-04",
+      "peak_count": 16,
+      "increase": 16,
+      "topic_mode": "hybrid",
+      "topic_profile": {
+        "primary_mode": "hybrid",
+        "secondary_mode": null,
+        "method_score": 1,
+        "problem_score": 1,
+        "theory_score": 0
+      }
+    }
+  ],
+  "key_turning_points": [
+    {
+      "period": "2025-04",
+      "delta": -14,
+      "anchor_paper_count": 40
+    },
+    {
+      "period": "2025-05",
+      "delta": 16,
+      "anchor_paper_count": 56
+    },
+    {
+      "period": "2025-06",
+      "delta": -56,
+      "anchor_paper_count": 0
+    }
+  ]
+}

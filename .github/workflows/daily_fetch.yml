@@ -1,0 +1,38 @@
+name: Daily Fetch
+
+on:
+  schedule:
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  daily-fetch:
+    runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+
+      - name: Install Python dependencies
+        run: uv sync --locked --no-dev
+
+      - name: Skip workflow when DATABASE_URL is not configured
+        if: ${{ env.DATABASE_URL == '' }}
+        run: echo "DATABASE_URL is not configured; skipping Daily Fetch."
+
+      - name: Fetch daily metadata
+        if: ${{ env.DATABASE_URL != '' }}
+        run: uv run python -m pipeline.daily_fetch_metadata

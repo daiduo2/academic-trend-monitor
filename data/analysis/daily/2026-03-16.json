@@ -1,0 +1,113 @@
+{
+  "date": "2026-03-16",
+  "risks": [],
+  "title": "计算机科学领域持续领跑学术热度榜",
+  "signals": [
+    {
+      "kind": "emerging",
+      "label": "计算机视觉持续升温",
+      "summary": "cs.CV领域论文数量远超其他类别，反映计算机视觉在AI研究中的核心地位持续巩固"
+    },
+    {
+      "kind": "cross_disciplinary",
+      "label": "量子物理进入热门榜单",
+      "summary": "quant-ph作为非计算机科学领域进入前五，显示量子计算等交叉研究方向正在兴起"
+    },
+    {
+      "kind": "drift",
+      "label": "AI研究向应用层扩展",
+      "summary": "机器人学(cs.RO)排名第三，表明AI技术正在从理论研究向实际应用领域延伸"
+    },
+    {
+      "kind": "cooling",
+      "label": "纯数学领域相对平稳",
+      "summary": "数学类主题(math.AP, math.CO)排名靠后但保持稳定，传统基础学科研究节奏相对缓慢"
+    }
+  ],
+  "summary": "今日学术趋势分析显示，计算机科学领域持续占据学术热度前沿。计算机视觉(cs.CV)以422篇论文位居榜首，机器学习(cs.LG)以289篇紧随其后。量子物理学(quant-ph)作为非CS领域也进入前四，显示跨学科研究正在兴起。",
+  "model_meta": {
+    "mode": "daily_analysis",
+    "model": "claude-3-5-sonnet-20241022",
+    "provider": "claude_code"
+  },
+  "key_findings": [
+    "计算机视觉(cs.CV)以422篇论文成为最热门研究领域",
+    "机器学习(cs.LG)与机器人学(cs.RO)分别以289篇和172篇位列第二第三",
+    "量子物理(quant-ph)进入前五，显示物理学与AI交叉趋势",
+    "自然语言处理(cs.CL)与人工智能(cs.AI)领域论文数接近，竞争激烈",
+    "材料科学(cond-mat.mtrl-sci)作为新兴交叉学科进入前十"
+  ],
+  "notable_papers": [],
+  "top_rising_topics": [
+    {
+      "change": 422,
+      "summary": "计算机视觉领域持续火热，涉及图像识别、目标检测、图像生成等研究方向，是当前AI研究的核心领域之一",
+      "topic_id": "cs.CV",
+      "topic_name": "cs.CV",
+      "paper_count": 422
+    },
+    {
+      "change": 289,
+      "summary": "机器学习领域包括深度学习、强化学习、神经网络等方向，是人工智能发展的核心技术支撑",
+      "topic_id": "cs.LG",
+      "topic_name": "cs.LG",
+      "paper_count": 289
+    },
+    {
+      "change": 172,
+      "summary": "机器人学涉及运动规划、感知交互、自动控制系统等，与AI结合推动智能机器人发展",
+      "topic_id": "cs.RO",
+      "topic_name": "cs.RO",
+      "paper_count": 172
+    },
+    {
+      "change": 156,
+      "summary": "量子物理学研究量子计算、量子信息等前沿领域，与AI技术交叉产生新的研究方向",
+      "topic_id": "quant-ph",
+      "topic_name": "quant-ph",
+      "paper_count": 156
+    },
+    {
+      "change": 149,
+      "summary": "计算语言学与自然语言处理密切相关，涉及语言理解、机器翻译、文本生成等应用",
+      "topic_id": "cs.CL",
+      "topic_name": "cs.CL",
+      "paper_count": 149
+    },
+    {
+      "change": 139,
+      "summary": "人工智能基础理论研究方向，包括知识表示、推理规划、专家系统等核心问题",
+      "topic_id": "cs.AI",
+      "topic_name": "cs.AI",
+      "paper_count": 139
+    },
+    {
+      "change": 86,
+      "summary": "凝聚态物理与材料科学交叉领域，研究新型材料的物理性质和应用潜力",
+      "topic_id": "cond-mat.mtrl-sci",
+      "topic_name": "cond-mat.mtrl-sci",
+      "paper_count": 86
+    },
+    {
+      "change": 73,
+      "summary": "偏微分方程分析领域，为物理建模和工程计算提供数学理论基础",
+      "topic_id": "math.AP",
+      "topic_name": "math.AP",
+      "paper_count": 73
+    },
+    {
+      "change": 71,
+      "summary": "密码学与网络安全方向，随着数据安全重要性提升而受到更多关注",
+      "topic_id": "cs.CR",
+      "topic_name": "cs.CR",
+      "paper_count": 71
+    },
+    {
+      "change": 67,
+      "summary": "组合数学研究离散结构与计数问题，为计算机科学提供理论基础",
+      "topic_id": "math.CO",
+      "topic_name": "math.CO",
+      "paper_count": 67
+    }
+  ]
+}

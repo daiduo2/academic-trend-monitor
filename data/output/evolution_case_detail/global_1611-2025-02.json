@@ -1,0 +1,706 @@
+{
+  "case_id": "global_1611-2025-02",
+  "anchor_topic_id": "global_1611",
+  "anchor_topic_name": "CT与MRI低剂量成像",
+  "anchor_topic_mode": "problem",
+  "anchor_topic_profile": {
+    "primary_mode": "problem",
+    "secondary_mode": "method",
+    "method_score": 1,
+    "problem_score": 6,
+    "theory_score": 0
+  },
+  "start_period": "2025-02",
+  "observation_horizon": 4,
+  "neighbor_topics": [
+    "global_1694",
+    "global_1713",
+    "global_421",
+    "global_1670",
+    "global_1677"
+  ],
+  "evolution_path": [
+    {
+      "period": "2025-02",
+      "anchor_paper_count": 48,
+      "active_neighbor_count": 1,
+      "top_neighbors": [
+        {
+          "topic_id": "global_421",
+          "topic_name": "医学图像癌症分割",
+          "paper_count": 209,
+          "weight": 0.4053,
+          "category": "cs",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 5,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1694",
+          "topic_name": "医学影像分割技术",
+          "paper_count": 0,
+          "weight": 0.6937,
+          "category": "eess",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 5,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1713",
+          "topic_name": "超声显微层析成像",
+          "paper_count": 0,
+          "weight": 0.4333,
+          "category": "eess",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": "problem",
+            "method_score": 3,
+            "problem_score": 2,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-03",
+      "anchor_paper_count": 447,
+      "active_neighbor_count": 1,
+      "top_neighbors": [
+        {
+          "topic_id": "global_1627",
+          "topic_name": "多尺度正则化PDHG展开",
+          "paper_count": 12,
+          "weight": 0.3292,
+          "category": "eess",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 3,
+            "problem_score": 0,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1694",
+          "topic_name": "医学影像分割技术",
+          "paper_count": 0,
+          "weight": 0.6937,
+          "category": "eess",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 5,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1713",
+          "topic_name": "超声显微层析成像",
+          "paper_count": 0,
+          "weight": 0.4333,
+          "category": "eess",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": "problem",
+            "method_score": 3,
+            "problem_score": 2,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-04",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 2,
+      "top_neighbors": [
+        {
+          "topic_id": "global_421",
+          "topic_name": "医学图像癌症分割",
+          "paper_count": 484,
+          "weight": 0.4053,
+          "category": "cs",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 5,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1635",
+          "topic_name": "三维高斯溅射渲染",
+          "paper_count": 165,
+          "weight": 0.3292,
+          "category": "eess",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": "problem",
+            "method_score": 3,
+            "problem_score": 1,
+            "theory_score": 2
+          }
+        },
+        {
+          "topic_id": "global_1694",
+          "topic_name": "医学影像分割技术",
+          "paper_count": 0,
+          "weight": 0.6937,
+          "category": "eess",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 5,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-05",
+      "anchor_paper_count": 295,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_1694",
+          "topic_name": "医学影像分割技术",
+          "paper_count": 0,
+          "weight": 0.6937,
+          "category": "eess",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 5,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1713",
+          "topic_name": "超声显微层析成像",
+          "paper_count": 0,
+          "weight": 0.4333,
+          "category": "eess",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": "problem",
+            "method_score": 3,
+            "problem_score": 2,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_421",
+          "topic_name": "医学图像癌症分割",
+          "paper_count": 0,
+          "weight": 0.4053,
+          "category": "cs",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 5,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-06",
+      "anchor_paper_count": 487,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_1694",
+          "topic_name": "医学影像分割技术",
+          "paper_count": 0,
+          "weight": 0.6937,
+          "category": "eess",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 5,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1713",
+          "topic_name": "超声显微层析成像",
+          "paper_count": 0,
+          "weight": 0.4333,
+          "category": "eess",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": "problem",
+            "method_score": 3,
+            "problem_score": 2,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_421",
+          "topic_name": "医学图像癌症分割",
+          "paper_count": 0,
+          "weight": 0.4053,
+          "category": "cs",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 5,
+            "theory_score": 0
+          }
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "emerged",
+      "period": "2025-02",
+      "summary": "Anchor topic first appears in the replay window."
+    },
+    {
+      "type": "diffused_to_neighbor",
+      "period": "2025-04",
+      "summary": "Semantic neighbors absorb momentum from the anchor topic around 2025-04.",
+      "evidence": {
+        "target_topic_id": "global_421",
+        "target_topic_name": "医学图像癌症分割",
+        "target_topic_mode": "problem",
+        "transfer_kind": "problem_diffusion",
+        "transfer_pattern": "migration",
+        "weight": 0.4053,
+        "increase": 275,
+        "bridge_evidence": {
+          "shared_keywords": [
+            "anatomical",
+            "brain",
+            "cancer",
+            "clinical",
+            "ct",
+            "images"
+          ],
+          "bridge_topics": [
+            "医学影像分割技术",
+            "超声显微层析成像",
+            "临床疾病诊断研究"
+          ],
+          "target_evidence_titles": [
+            "Fréchet Radiomic Distance (FRD): A Versatile Metric for Comparing Medical Imaging Datasets",
+            "HEAL: Learning-Free Source Free Unsupervised Domain Adaptation for Cross-Modality Medical Image Segmentation"
+          ],
+          "category_flow": {
+            "source_category": "eess",
+            "target_category": "cs",
+            "source_top_level": "eess",
+            "target_top_level": "cs",
+            "relation": "cross_domain"
+          },
+          "pipeline_relation": {
+            "relation": "imaging_to_analysis_same_pipeline",
+            "source_stage_terms": [
+              "ct",
+              "imaging",
+              "mri",
+              "reconstruction",
+              "tomography",
+              "ultrasound"
+            ],
+            "target_stage_terms": [
+              "segmentation"
+            ],
+            "shared_domain_terms": [
+              "brain",
+              "cancer",
+              "clinical",
+              "imaging",
+              "medical"
+            ],
+            "representation_stage_terms": [],
+            "perception_stage_terms": [],
+            "shared_3d_terms": [],
+            "shared_formal_terms": [],
+            "shared_math_ag_objects": [],
+            "shared_math_ag_methods": [],
+            "shared_math_lo_objects": [],
+            "shared_math_lo_methods": [],
+            "shared_math_lo_core_objects": [],
+            "shared_math_lo_modal_objects": [],
+            "shared_math_lo_modal_methods": [],
+            "shared_math_lo_set_objects": [],
+            "shared_math_lo_set_methods": [],
+            "shared_math_lo_forcing_objects": [],
+            "shared_math_lo_forcing_methods": [],
+            "shared_math_lo_type_objects": [],
+            "source_type_terms": [],
+            "target_type_terms": [],
+            "shared_math_lo_definability_objects": [],
+            "shared_math_lo_definability_methods": [],
+            "math_ag_object_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            },
+            "math_ag_method_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            }
+          },
+          "evidence_title_overlap": {
+            "anchor_titles": [
+              "Fréchet Radiomic Distance (FRD): A Versatile Metric for Comparing Medical Imaging Datasets",
+              "HEAL: Learning-Free Source Free Unsupervised Domain Adaptation for Cross-Modality Medical Image Segmentation"
+            ],
+            "target_titles": [
+              "Fréchet Radiomic Distance (FRD): A Versatile Metric for Comparing Medical Imaging Datasets",
+              "HEAL: Learning-Free Source Free Unsupervised Domain Adaptation for Cross-Modality Medical Image Segmentation"
+            ],
+            "shared_terms": [
+              "adaptation",
+              "comparing",
+              "cross",
+              "datasets",
+              "distance",
+              "domain"
+            ],
+            "shared_term_count": 6
+          },
+          "bridge_strength": 0.93,
+          "alias_risk": {
+            "level": "low",
+            "reason": "distinct_concepts"
+          }
+        },
+        "post_transfer_persistence": {
+          "lookahead_periods": [
+            "2025-05",
+            "2025-06"
+          ],
+          "active_periods_after_event": 0,
+          "paper_counts_after_event": [
+            0,
+            0
+          ],
+          "sustained": false
+        },
+        "anchor_post_event_persistence": {
+          "lookahead_periods": [
+            "2025-05",
+            "2025-06"
+          ],
+          "active_periods_after_event": 2,
+          "paper_counts_after_event": [
+            295,
+            487
+          ],
+          "sustained": true
+        },
+        "relative_persistence": {
+          "anchor_total": 782,
+          "target_total": 0,
+          "target_to_anchor_ratio": 0.0,
+          "status": "weak_carryover"
+        },
+        "consistency_check": {
+          "status": "pipeline_consistent",
+          "flags": [],
+          "relation": "cross_domain",
+          "pipeline_relation": "imaging_to_analysis_same_pipeline",
+          "bridge_strength": 0.93,
+          "relative_persistence_status": "weak_carryover",
+          "event_type": "diffused_to_neighbor"
+        }
+      }
+    },
+    {
+      "type": "migrated_to_new_category",
+      "period": "2025-04",
+      "summary": "Related growth propagates from eess into cs.",
+      "evidence": {
+        "source_category": "eess",
+        "target_category": "cs",
+        "target_topic_id": "global_421",
+        "target_topic_name": "医学图像癌症分割",
+        "target_topic_mode": "problem",
+        "transfer_kind": "problem_transfer",
+        "transfer_pattern": "migration",
+        "weight": 0.4053,
+        "bridge_evidence": {
+          "shared_keywords": [
+            "anatomical",
+            "brain",
+            "cancer",
+            "clinical",
+            "ct",
+            "images"
+          ],
+          "bridge_topics": [
+            "医学影像分割技术",
+            "超声显微层析成像",
+            "临床疾病诊断研究"
+          ],
+          "target_evidence_titles": [
+            "Fréchet Radiomic Distance (FRD): A Versatile Metric for Comparing Medical Imaging Datasets",
+            "HEAL: Learning-Free Source Free Unsupervised Domain Adaptation for Cross-Modality Medical Image Segmentation"
+          ],
+          "category_flow": {
+            "source_category": "eess",
+            "target_category": "cs",
+            "source_top_level": "eess",
+            "target_top_level": "cs",
+            "relation": "cross_domain"
+          },
+          "pipeline_relation": {
+            "relation": "imaging_to_analysis_same_pipeline",
+            "source_stage_terms": [
+              "ct",
+              "imaging",
+              "mri",
+              "reconstruction",
+              "tomography",
+              "ultrasound"
+            ],
+            "target_stage_terms": [
+              "segmentation"
+            ],
+            "shared_domain_terms": [
+              "brain",
+              "cancer",
+              "clinical",
+              "imaging",
+              "medical"
+            ],
+            "representation_stage_terms": [],
+            "perception_stage_terms": [],
+            "shared_3d_terms": [],
+            "shared_formal_terms": [],
+            "shared_math_ag_objects": [],
+            "shared_math_ag_methods": [],
+            "shared_math_lo_objects": [],
+            "shared_math_lo_methods": [],
+            "shared_math_lo_core_objects": [],
+            "shared_math_lo_modal_objects": [],
+            "shared_math_lo_modal_methods": [],
+            "shared_math_lo_set_objects": [],
+            "shared_math_lo_set_methods": [],
+            "shared_math_lo_forcing_objects": [],
+            "shared_math_lo_forcing_methods": [],
+            "shared_math_lo_type_objects": [],
+            "source_type_terms": [],
+            "target_type_terms": [],
+            "shared_math_lo_definability_objects": [],
+            "shared_math_lo_definability_methods": [],
+            "math_ag_object_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            },
+            "math_ag_method_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            }
+          },
+          "evidence_title_overlap": {
+            "anchor_titles": [
+              "Fréchet Radiomic Distance (FRD): A Versatile Metric for Comparing Medical Imaging Datasets",
+              "HEAL: Learning-Free Source Free Unsupervised Domain Adaptation for Cross-Modality Medical Image Segmentation"
+            ],
+            "target_titles": [
+              "Fréchet Radiomic Distance (FRD): A Versatile Metric for Comparing Medical Imaging Datasets",
+              "HEAL: Learning-Free Source Free Unsupervised Domain Adaptation for Cross-Modality Medical Image Segmentation"
+            ],
+            "shared_terms": [
+              "adaptation",
+              "comparing",
+              "cross",
+              "datasets",
+              "distance",
+              "domain"
+            ],
+            "shared_term_count": 6
+          },
+          "bridge_strength": 0.93,
+          "alias_risk": {
+            "level": "low",
+            "reason": "distinct_concepts"
+          }
+        },
+        "post_transfer_persistence": {
+          "lookahead_periods": [
+            "2025-05",
+            "2025-06"
+          ],
+          "active_periods_after_event": 0,
+          "paper_counts_after_event": [
+            0,
+            0
+          ],
+          "sustained": false
+        },
+        "anchor_post_event_persistence": {
+          "lookahead_periods": [
+            "2025-05",
+            "2025-06"
+          ],
+          "active_periods_after_event": 2,
+          "paper_counts_after_event": [
+            295,
+            487
+          ],
+          "sustained": true
+        },
+        "relative_persistence": {
+          "anchor_total": 782,
+          "target_total": 0,
+          "target_to_anchor_ratio": 0.0,
+          "status": "weak_carryover"
+        },
+        "consistency_check": {
+          "status": "pipeline_consistent",
+          "flags": [],
+          "relation": "cross_domain",
+          "pipeline_relation": "imaging_to_analysis_same_pipeline",
+          "bridge_strength": 0.93,
+          "relative_persistence_status": "weak_carryover",
+          "event_type": "migrated_to_new_category"
+        }
+      }
+    },
+    {
+      "type": "expanded",
+      "period": "2025-06",
+      "summary": "Anchor topic grows materially during the replay horizon."
+    }
+  ],
+  "cross_category_moves": [
+    "cs"
+  ],
+  "growth_summary": "CT与MRI低剂量成像 (problem) expands from 2025-02 to 2025-06 and diffuses into nearby topics.",
+  "decline_summary": "No dominant decline pattern is detected before 2025-06.",
+  "review_flags": [],
+  "key_supporting_topics": [
+    {
+      "topic_id": "global_421",
+      "topic_name": "医学图像癌症分割",
+      "category": "cs",
+      "weight": 0.4053,
+      "peak_period": "2025-04",
+      "peak_count": 484,
+      "increase": 275,
+      "topic_mode": "problem",
+      "topic_profile": {
+        "primary_mode": "problem",
+        "secondary_mode": null,
+        "method_score": 0,
+        "problem_score": 5,
+        "theory_score": 0
+      }
+    },
+    {
+      "topic_id": "global_1635",
+      "topic_name": "三维高斯溅射渲染",
+      "category": "eess",
+      "weight": 0.3292,
+      "peak_period": "2025-04",
+      "peak_count": 165,
+      "increase": 165,
+      "topic_mode": "method",
+      "topic_profile": {
+        "primary_mode": "method",
+        "secondary_mode": "problem",
+        "method_score": 3,
+        "problem_score": 1,
+        "theory_score": 2
+      }
+    },
+    {
+      "topic_id": "global_1627",
+      "topic_name": "多尺度正则化PDHG展开",
+      "category": "eess",
+      "weight": 0.3292,
+      "peak_period": "2025-03",
+      "peak_count": 12,
+      "increase": 12,
+      "topic_mode": "method",
+      "topic_profile": {
+        "primary_mode": "method",
+        "secondary_mode": null,
+        "method_score": 3,
+        "problem_score": 0,
+        "theory_score": 0
+      }
+    }
+  ],
+  "key_turning_points": [
+    {
+      "period": "2025-03",
+      "delta": 399,
+      "anchor_paper_count": 447
+    },
+    {
+      "period": "2025-04",
+      "delta": -447,
+      "anchor_paper_count": 0
+    },
+    {
+      "period": "2025-05",
+      "delta": 295,
+      "anchor_paper_count": 295
+    },
+    {
+      "period": "2025-06",
+      "delta": 192,
+      "anchor_paper_count": 487
+    }
+  ]
+}

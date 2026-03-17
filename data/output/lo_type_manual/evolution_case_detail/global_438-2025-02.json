@@ -1,0 +1,501 @@
+{
+  "case_id": "global_438-2025-02",
+  "anchor_topic_id": "global_438",
+  "anchor_topic_name": "大语言模型数学推理",
+  "anchor_topic_mode": "method",
+  "anchor_topic_profile": {
+    "primary_mode": "method",
+    "secondary_mode": "problem",
+    "method_score": 3,
+    "problem_score": 2,
+    "theory_score": 1
+  },
+  "start_period": "2025-02",
+  "observation_horizon": 4,
+  "neighbor_topics": [
+    "global_622",
+    "global_844",
+    "global_342",
+    "global_793",
+    "global_856"
+  ],
+  "evolution_path": [
+    {
+      "period": "2025-02",
+      "anchor_paper_count": 153,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_622",
+          "topic_name": "强化学习推理奖励",
+          "paper_count": 0,
+          "weight": 0.2826,
+          "category": "cs",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 3,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_844",
+          "topic_name": "数学形式化自动证明",
+          "paper_count": 0,
+          "weight": 0.2653,
+          "category": "cs",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 4,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_342",
+          "topic_name": "强化推理奖励机制",
+          "paper_count": 0,
+          "weight": 0.225,
+          "category": "math",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-03",
+      "anchor_paper_count": 134,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_622",
+          "topic_name": "强化学习推理奖励",
+          "paper_count": 0,
+          "weight": 0.2826,
+          "category": "cs",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 3,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_844",
+          "topic_name": "数学形式化自动证明",
+          "paper_count": 0,
+          "weight": 0.2653,
+          "category": "cs",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 4,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_342",
+          "topic_name": "强化推理奖励机制",
+          "paper_count": 0,
+          "weight": 0.225,
+          "category": "math",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-04",
+      "anchor_paper_count": 92,
+      "active_neighbor_count": 1,
+      "top_neighbors": [
+        {
+          "topic_id": "global_622",
+          "topic_name": "强化学习推理奖励",
+          "paper_count": 19,
+          "weight": 0.2826,
+          "category": "cs",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 3,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_844",
+          "topic_name": "数学形式化自动证明",
+          "paper_count": 0,
+          "weight": 0.2653,
+          "category": "cs",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 4,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_342",
+          "topic_name": "强化推理奖励机制",
+          "paper_count": 0,
+          "weight": 0.225,
+          "category": "math",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-05",
+      "anchor_paper_count": 207,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_622",
+          "topic_name": "强化学习推理奖励",
+          "paper_count": 0,
+          "weight": 0.2826,
+          "category": "cs",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 3,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_844",
+          "topic_name": "数学形式化自动证明",
+          "paper_count": 0,
+          "weight": 0.2653,
+          "category": "cs",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 4,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_342",
+          "topic_name": "强化推理奖励机制",
+          "paper_count": 0,
+          "weight": 0.225,
+          "category": "math",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-06",
+      "anchor_paper_count": 286,
+      "active_neighbor_count": 1,
+      "top_neighbors": [
+        {
+          "topic_id": "global_793",
+          "topic_name": "表格模式与推理研究",
+          "paper_count": 11,
+          "weight": 0.1955,
+          "category": "cs",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": "method",
+            "method_score": 2,
+            "problem_score": 3,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_622",
+          "topic_name": "强化学习推理奖励",
+          "paper_count": 0,
+          "weight": 0.2826,
+          "category": "cs",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 3,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_844",
+          "topic_name": "数学形式化自动证明",
+          "paper_count": 0,
+          "weight": 0.2653,
+          "category": "cs",
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 4,
+            "theory_score": 1
+          }
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "emerged",
+      "period": "2025-02",
+      "summary": "Anchor topic first appears in the replay window."
+    },
+    {
+      "type": "diffused_to_neighbor",
+      "period": "2025-04",
+      "summary": "Semantic neighbors absorb momentum from the anchor topic around 2025-04.",
+      "evidence": {
+        "target_topic_id": "global_622",
+        "target_topic_name": "强化学习推理奖励",
+        "target_topic_mode": "problem",
+        "transfer_kind": "problem_diffusion",
+        "transfer_pattern": "migration",
+        "weight": 0.2826,
+        "increase": 19,
+        "bridge_evidence": {
+          "shared_keywords": [
+            "llms",
+            "r1",
+            "reasoning",
+            "reinforcement",
+            "reward",
+            "rlvr"
+          ],
+          "bridge_topics": [
+            "数学形式化自动证明",
+            "强化推理奖励机制",
+            "表格模式与推理研究"
+          ],
+          "target_evidence_titles": [
+            "Kalman Filter Enhanced GRPO for Reinforcement Learning-Based Language Model Reasoning",
+            "Lost in Transmission: When and Why LLMs Fail to Reason Globally"
+          ],
+          "category_flow": {
+            "source_category": "cs",
+            "target_category": "cs",
+            "source_top_level": "cs",
+            "target_top_level": "cs",
+            "relation": "same_category"
+          },
+          "pipeline_relation": {
+            "relation": "none",
+            "source_stage_terms": [],
+            "target_stage_terms": [],
+            "shared_domain_terms": [],
+            "representation_stage_terms": [],
+            "perception_stage_terms": [],
+            "shared_3d_terms": [],
+            "shared_formal_terms": [],
+            "shared_math_ag_objects": [],
+            "shared_math_ag_methods": [],
+            "shared_math_lo_objects": [],
+            "shared_math_lo_methods": [],
+            "shared_math_lo_core_objects": [],
+            "shared_math_lo_modal_objects": [],
+            "shared_math_lo_modal_methods": [],
+            "shared_math_lo_set_objects": [],
+            "shared_math_lo_set_methods": [],
+            "shared_math_lo_forcing_objects": [],
+            "shared_math_lo_forcing_methods": [],
+            "shared_math_lo_type_objects": [],
+            "source_type_terms": [],
+            "target_type_terms": [],
+            "math_ag_object_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            },
+            "math_ag_method_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            }
+          },
+          "evidence_title_overlap": {
+            "anchor_titles": [
+              "Thinking Machines: Mathematical Reasoning in the Age of LLMs",
+              "Towards Solving the Gilbert-Pollak Conjecture via Large Language Models"
+            ],
+            "target_titles": [
+              "Kalman Filter Enhanced GRPO for Reinforcement Learning-Based Language Model Reasoning",
+              "Lost in Transmission: When and Why LLMs Fail to Reason Globally"
+            ],
+            "shared_terms": [
+              "language",
+              "llms",
+              "reasoning"
+            ],
+            "shared_term_count": 3
+          },
+          "bridge_strength": 1.0,
+          "alias_risk": {
+            "level": "low",
+            "reason": "distinct_concepts"
+          }
+        },
+        "post_transfer_persistence": {
+          "lookahead_periods": [
+            "2025-05",
+            "2025-06"
+          ],
+          "active_periods_after_event": 0,
+          "paper_counts_after_event": [
+            0,
+            0
+          ],
+          "sustained": false
+        },
+        "anchor_post_event_persistence": {
+          "lookahead_periods": [
+            "2025-05",
+            "2025-06"
+          ],
+          "active_periods_after_event": 2,
+          "paper_counts_after_event": [
+            207,
+            286
+          ],
+          "sustained": true
+        },
+        "relative_persistence": {
+          "anchor_total": 493,
+          "target_total": 0,
+          "target_to_anchor_ratio": 0.0,
+          "status": "weak_carryover"
+        },
+        "consistency_check": {
+          "status": "needs_review",
+          "flags": [
+            "same_category_high_bridge_weak_carryover"
+          ],
+          "relation": "same_category",
+          "pipeline_relation": "none",
+          "bridge_strength": 1.0,
+          "relative_persistence_status": "weak_carryover",
+          "event_type": "diffused_to_neighbor"
+        }
+      }
+    },
+    {
+      "type": "expanded",
+      "period": "2025-06",
+      "summary": "Anchor topic grows materially during the replay horizon."
+    }
+  ],
+  "cross_category_moves": [],
+  "growth_summary": "大语言模型数学推理 (hybrid) expands from 2025-02 to 2025-06 and diffuses into nearby topics. Some transfer links remain flagged for manual review.",
+  "decline_summary": "No dominant decline pattern is detected before 2025-06.",
+  "review_flags": [
+    "same_category_high_bridge_weak_carryover"
+  ],
+  "key_supporting_topics": [
+    {
+      "topic_id": "global_622",
+      "topic_name": "强化学习推理奖励",
+      "category": "cs",
+      "weight": 0.2826,
+      "peak_period": "2025-04",
+      "peak_count": 19,
+      "increase": 19,
+      "topic_mode": "problem",
+      "topic_profile": {
+        "primary_mode": "problem",
+        "secondary_mode": "method",
+        "method_score": 1,
+        "problem_score": 3,
+        "theory_score": 0
+      }
+    },
+    {
+      "topic_id": "global_793",
+      "topic_name": "表格模式与推理研究",
+      "category": "cs",
+      "weight": 0.1955,
+      "peak_period": "2025-06",
+      "peak_count": 11,
+      "increase": 11,
+      "topic_mode": "problem",
+      "topic_profile": {
+        "primary_mode": "problem",
+        "secondary_mode": "method",
+        "method_score": 2,
+        "problem_score": 3,
+        "theory_score": 1
+      }
+    }
+  ],
+  "key_turning_points": [
+    {
+      "period": "2025-04",
+      "delta": -42,
+      "anchor_paper_count": 92
+    },
+    {
+      "period": "2025-05",
+      "delta": 115,
+      "anchor_paper_count": 207
+    },
+    {
+      "period": "2025-06",
+      "delta": 79,
+      "anchor_paper_count": 286
+    }
+  ]
+}

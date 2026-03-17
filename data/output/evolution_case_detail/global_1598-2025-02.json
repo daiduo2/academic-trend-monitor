@@ -1,0 +1,496 @@
+{
+  "case_id": "global_1598-2025-02",
+  "anchor_topic_id": "global_1598",
+  "anchor_topic_name": "黑洞与引力视界",
+  "anchor_topic_mode": "theory",
+  "anchor_topic_profile": {
+    "primary_mode": "theory",
+    "secondary_mode": null,
+    "method_score": 0,
+    "problem_score": 0,
+    "theory_score": 1
+  },
+  "start_period": "2025-02",
+  "observation_horizon": 4,
+  "neighbor_topics": [
+    "global_1603",
+    "global_1607",
+    "global_1610",
+    "global_1595",
+    "global_1599"
+  ],
+  "evolution_path": [
+    {
+      "period": "2025-02",
+      "anchor_paper_count": 159,
+      "active_neighbor_count": 1,
+      "top_neighbors": [
+        {
+          "topic_id": "global_1595",
+          "topic_name": "引力波与黑洞",
+          "paper_count": 84,
+          "weight": 0.35,
+          "category": "gr-qc",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": "problem",
+            "method_score": 3,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1603",
+          "topic_name": "量子引力时空理论",
+          "paper_count": 0,
+          "weight": 0.3955,
+          "category": "gr-qc",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 0,
+            "theory_score": 4
+          }
+        },
+        {
+          "topic_id": "global_1607",
+          "topic_name": "黑洞吸积盘阴影",
+          "paper_count": 0,
+          "weight": 0.3955,
+          "category": "gr-qc",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 0,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-03",
+      "anchor_paper_count": 339,
+      "active_neighbor_count": 1,
+      "top_neighbors": [
+        {
+          "topic_id": "global_1599",
+          "topic_name": "巴罗宇宙暗能量研究",
+          "paper_count": 32,
+          "weight": 0.35,
+          "category": "gr-qc",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 0,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1603",
+          "topic_name": "量子引力时空理论",
+          "paper_count": 0,
+          "weight": 0.3955,
+          "category": "gr-qc",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 0,
+            "theory_score": 4
+          }
+        },
+        {
+          "topic_id": "global_1607",
+          "topic_name": "黑洞吸积盘阴影",
+          "paper_count": 0,
+          "weight": 0.3955,
+          "category": "gr-qc",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 0,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-04",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_1603",
+          "topic_name": "量子引力时空理论",
+          "paper_count": 0,
+          "weight": 0.3955,
+          "category": "gr-qc",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 0,
+            "theory_score": 4
+          }
+        },
+        {
+          "topic_id": "global_1607",
+          "topic_name": "黑洞吸积盘阴影",
+          "paper_count": 0,
+          "weight": 0.3955,
+          "category": "gr-qc",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 0,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1610",
+          "topic_name": "量子引力与引力子",
+          "paper_count": 0,
+          "weight": 0.3609,
+          "category": "gr-qc",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 2
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-05",
+      "anchor_paper_count": 221,
+      "active_neighbor_count": 2,
+      "top_neighbors": [
+        {
+          "topic_id": "global_1595",
+          "topic_name": "引力波与黑洞",
+          "paper_count": 90,
+          "weight": 0.35,
+          "category": "gr-qc",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": "problem",
+            "method_score": 3,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1603",
+          "topic_name": "量子引力时空理论",
+          "paper_count": 23,
+          "weight": 0.3955,
+          "category": "gr-qc",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 0,
+            "theory_score": 4
+          }
+        },
+        {
+          "topic_id": "global_1607",
+          "topic_name": "黑洞吸积盘阴影",
+          "paper_count": 0,
+          "weight": 0.3955,
+          "category": "gr-qc",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 0,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-06",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_1603",
+          "topic_name": "量子引力时空理论",
+          "paper_count": 0,
+          "weight": 0.3955,
+          "category": "gr-qc",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 0,
+            "theory_score": 4
+          }
+        },
+        {
+          "topic_id": "global_1607",
+          "topic_name": "黑洞吸积盘阴影",
+          "paper_count": 0,
+          "weight": 0.3955,
+          "category": "gr-qc",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 0,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1610",
+          "topic_name": "量子引力与引力子",
+          "paper_count": 0,
+          "weight": 0.3609,
+          "category": "gr-qc",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 2
+          }
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "emerged",
+      "period": "2025-02",
+      "summary": "Anchor topic first appears in the replay window."
+    },
+    {
+      "type": "diffused_to_neighbor",
+      "period": "2025-03",
+      "summary": "Semantic neighbors absorb momentum from the anchor topic around 2025-03.",
+      "evidence": {
+        "target_topic_id": "global_1599",
+        "target_topic_name": "巴罗宇宙暗能量研究",
+        "target_topic_mode": "method",
+        "transfer_kind": "theory_spillover",
+        "transfer_pattern": "spillover",
+        "weight": 0.35,
+        "increase": 32,
+        "bridge_evidence": {
+          "shared_keywords": [
+            "gravity",
+            "spacetime"
+          ],
+          "bridge_topics": [
+            "量子引力时空理论",
+            "黑洞吸积盘阴影",
+            "量子引力与引力子"
+          ],
+          "target_evidence_titles": [
+            "Fitting NANOGrav 15-year data and ACT data with modified inflation in entropic cosmology",
+            "Single-field D-type inflation in the minimal supergravity in light of Planck-ACT-SPT data"
+          ],
+          "category_flow": {
+            "source_category": "gr-qc",
+            "target_category": "gr-qc",
+            "source_top_level": "gr-qc",
+            "target_top_level": "gr-qc",
+            "relation": "same_category"
+          },
+          "pipeline_relation": {
+            "relation": "none",
+            "source_stage_terms": [],
+            "target_stage_terms": [],
+            "shared_domain_terms": [],
+            "representation_stage_terms": [],
+            "perception_stage_terms": [],
+            "shared_3d_terms": [],
+            "shared_formal_terms": [],
+            "shared_math_ag_objects": [],
+            "shared_math_ag_methods": [],
+            "shared_math_lo_objects": [],
+            "shared_math_lo_methods": [],
+            "shared_math_lo_core_objects": [],
+            "shared_math_lo_modal_objects": [],
+            "shared_math_lo_modal_methods": [],
+            "shared_math_lo_set_objects": [],
+            "shared_math_lo_set_methods": [],
+            "shared_math_lo_forcing_objects": [],
+            "shared_math_lo_forcing_methods": [],
+            "shared_math_lo_type_objects": [],
+            "source_type_terms": [],
+            "target_type_terms": [],
+            "shared_math_lo_definability_objects": [],
+            "shared_math_lo_definability_methods": [],
+            "math_ag_object_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            },
+            "math_ag_method_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            }
+          },
+          "evidence_title_overlap": {
+            "anchor_titles": [
+              "Strong Gravitational Lensing by Compact Object without Cauchy Horizons in Effective Quantum Gravity",
+              "Primary Proca Hair and the Double-Peak Optics of Black Holes"
+            ],
+            "target_titles": [
+              "Fitting NANOGrav 15-year data and ACT data with modified inflation in entropic cosmology",
+              "Single-field D-type inflation in the minimal supergravity in light of Planck-ACT-SPT data"
+            ],
+            "shared_terms": [],
+            "shared_term_count": 0
+          },
+          "bridge_strength": 0.55,
+          "alias_risk": {
+            "level": "low",
+            "reason": "distinct_concepts"
+          }
+        },
+        "post_transfer_persistence": {
+          "lookahead_periods": [
+            "2025-04",
+            "2025-05"
+          ],
+          "active_periods_after_event": 0,
+          "paper_counts_after_event": [
+            0,
+            0
+          ],
+          "sustained": false
+        },
+        "anchor_post_event_persistence": {
+          "lookahead_periods": [
+            "2025-04",
+            "2025-05"
+          ],
+          "active_periods_after_event": 1,
+          "paper_counts_after_event": [
+            0,
+            221
+          ],
+          "sustained": false
+        },
+        "relative_persistence": {
+          "anchor_total": 221,
+          "target_total": 0,
+          "target_to_anchor_ratio": 0.0,
+          "status": "weak_carryover"
+        },
+        "consistency_check": {
+          "status": "consistent",
+          "flags": [],
+          "relation": "same_category",
+          "pipeline_relation": "none",
+          "bridge_strength": 0.55,
+          "relative_persistence_status": "weak_carryover",
+          "event_type": "diffused_to_neighbor"
+        }
+      }
+    },
+    {
+      "type": "expanded",
+      "period": "2025-03",
+      "summary": "Anchor topic grows materially during the replay horizon."
+    }
+  ],
+  "cross_category_moves": [],
+  "growth_summary": "黑洞与引力视界 (hybrid) expands from 2025-02 to 2025-06 and diffuses into nearby topics.",
+  "decline_summary": "No dominant decline pattern is detected before 2025-06.",
+  "review_flags": [],
+  "key_supporting_topics": [
+    {
+      "topic_id": "global_1599",
+      "topic_name": "巴罗宇宙暗能量研究",
+      "category": "gr-qc",
+      "weight": 0.35,
+      "peak_period": "2025-03",
+      "peak_count": 32,
+      "increase": 32,
+      "topic_mode": "method",
+      "topic_profile": {
+        "primary_mode": "method",
+        "secondary_mode": null,
+        "method_score": 1,
+        "problem_score": 0,
+        "theory_score": 0
+      }
+    },
+    {
+      "topic_id": "global_1603",
+      "topic_name": "量子引力时空理论",
+      "category": "gr-qc",
+      "weight": 0.3955,
+      "peak_period": "2025-05",
+      "peak_count": 23,
+      "increase": 23,
+      "topic_mode": "theory",
+      "topic_profile": {
+        "primary_mode": "theory",
+        "secondary_mode": "method",
+        "method_score": 1,
+        "problem_score": 0,
+        "theory_score": 4
+      }
+    }
+  ],
+  "key_turning_points": [
+    {
+      "period": "2025-03",
+      "delta": 180,
+      "anchor_paper_count": 339
+    },
+    {
+      "period": "2025-04",
+      "delta": -339,
+      "anchor_paper_count": 0
+    },
+    {
+      "period": "2025-05",
+      "delta": 221,
+      "anchor_paper_count": 221
+    },
+    {
+      "period": "2025-06",
+      "delta": -221,
+      "anchor_paper_count": 0
+    }
+  ]
+}

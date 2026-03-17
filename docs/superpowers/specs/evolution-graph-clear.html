@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>演化图可视化 - 清晰架构版</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            background: white;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 20px 32px;
+        }
+
+        .header h1 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 4px;
+        }
+
+        .header p {
+            color: #64748b;
+            font-size: 13px;
+        }
+
+        /* Three-panel layout */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr 320px;
+            height: calc(100vh - 140px);
+        }
+
+        /* Left sidebar - Navigation & Filters */
+        .sidebar-left {
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .section-title {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #94a3b8;
+            margin-bottom: 12px;
+        }
+
+        .nav-section {
+            margin-bottom: 24px;
+        }
+
+        .view-tabs {
+            display: flex;
+            gap: 4px;
+            background: #f1f5f9;
+            padding: 4px;
+            border-radius: 8px;
+        }
+
+        .view-tab {
+            flex: 1;
+            padding: 8px 12px;
+            border: none;
+            background: transparent;
+            color: #64748b;
+            font-size: 13px;
+            font-weight: 500;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .view-tab.active {
+            background: white;
+            color: #0f172a;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        /* Category tree */
+        .category-tree {
+            font-size: 13px;
+        }
+
+        .category-item {
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+        }
+
+        .category-item:hover {
+            background: #f8fafc;
+        }
+
+        .category-item.active {
+            background: #eff6ff;
+            color: #2563eb;
+        }
+
+        .category-icon {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        .category-count {
+            margin-left: auto;
+            color: #94a3b8;
+            font-size: 12px;
+        }
+
+        .subcategory-list {
+            padding-left: 24px;
+            border-left: 1px solid #e2e8f0;
+            margin-left: 12px;
+        }
+
+        .subcategory-item {
+            padding: 6px 12px;
+            font-size: 12px;
+            color: #64748b;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .subcategory-item:hover {
+            color: #2563eb;
+            background: #f8fafc;
+        }
+
+        /* Center - Graph Canvas */
+        .canvas-area {
+            background: #f8fafc;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .canvas-toolbar {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            right: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            font-size: 13px;
+        }
+
+        .breadcrumb-item {
+            color: #64748b;
+        }
+
+        .breadcrumb-item:last-child {
+            color: #0f172a;
+            font-weight: 500;
+        }
+
+        .breadcrumb-separator {
+            color: #cbd5e1;
+        }
+
+        .canvas-controls {
+            display: flex;
+            gap: 8px;
+        }
+
+        .control-btn {
+            width: 36px;
+            height: 36px;
+            border: 1px solid #e2e8f0;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            transition: all 0.2s;
+        }
+
+        .control-btn:hover {
+            background: #f8fafc;
+            border-color: #cbd5e1;
+        }
+
+        .timeline-slider {
+            position: absolute;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 16px 24px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            z-index: 10;
+        }
+
+        .timeline-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 12px;
+            color: #64748b;
+        }
+
+        .timeline-track {
+            width: 400px;
+            height: 4px;
+            background: #e2e8f0;
+            border-radius: 2px;
+            position: relative;
+        }
+
+        .timeline-progress {
+            height: 100%;
+            background: #2563eb;
+            border-radius: 2px;
+            transition: width 0.3s;
+        }
+
+        .timeline-points {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .timeline-point {
+            width: 12px;
+            height: 12px;
+            background: white;
+            border: 2px solid #cbd5e1;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .timeline-point.active {
+            background: #2563eb;
+            border-color: #2563eb;
+        }
+
+        .timeline-point:hover {
+            border-color: #2563eb;
+        }
+
+        /* Graph SVG */
+        .graph-svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Node styling */
+        .topic-node {
+            cursor: pointer;
+        }
+
+        .node-rect {
+            fill: white;
+            stroke: #e2e8f0;
+            stroke-width: 1;
+            rx: 8;
+            transition: all 0.2s;
+        }
+
+        .topic-node:hover .node-rect {
+            stroke: #2563eb;
+            stroke-width: 2;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.05));
+        }
+
+        .node-mode-indicator {
+            width: 4px;
+            height: 40px;
+            rx: 2;
+        }
+
+        .node-title {
+            font-size: 12px;
+            font-weight: 600;
+            fill: #0f172a;
+        }
+
+        .node-subtitle {
+            font-size: 10px;
+            fill: #64748b;
+        }
+
+        .node-meta {
+            font-size: 9px;
+            fill: #94a3b8;
+        }
+
+        /* Edge styling */
+        .evolution-edge {
+            fill: none;
+            stroke: #cbd5e1;
+            stroke-width: 2;
+        }
+
+        .evolution-edge.continued {
+            stroke: #2563eb;
+            stroke-width: 2;
+        }
+
+        .evolution-edge.diffused {
+            stroke: #94a3b8;
+            stroke-dasharray: 5,5;
+        }
+
+        .edge-arrow {
+            fill: #2563eb;
+        }
+
+        /* Right sidebar - Details Panel */
+        .sidebar-right {
+            background: white;
+            border-left: 1px solid #e2e8f0;
+            overflow-y: auto;
+        }
+
+        .panel-header {
+            padding: 20px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .panel-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 4px;
+        }
+
+        .panel-subtitle {
+            font-size: 12px;
+            color: #64748b;
+        }
+
+        .panel-content {
+            padding: 20px;
+        }
+
+        .detail-section {
+            margin-bottom: 24px;
+        }
+
+        .detail-label {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #94a3b8;
+            margin-bottom: 8px;
+        }
+
+        .detail-value {
+            font-size: 13px;
+            color: #0f172a;
+            line-height: 1.5;
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 10px;
+            background: #f1f5f9;
+            border-radius: 4px;
+            font-size: 12px;
+            color: #475569;
+            margin-right: 6px;
+            margin-bottom: 6px;
+        }
+
+        .tag.primary {
+            background: #eff6ff;
+            color: #2563eb;
+        }
+
+        /* Timeline cards */
+        .timeline-card {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 12px;
+        }
+
+        .timeline-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .timeline-card-period {
+            font-size: 12px;
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        .timeline-card-badge {
+            font-size: 10px;
+            padding: 2px 8px;
+            background: #dbeafe;
+            color: #2563eb;
+            border-radius: 4px;
+        }
+
+        .timeline-card-content {
+            font-size: 12px;
+            color: #64748b;
+        }
+
+        /* Mode colors */
+        .mode-theory { background: #3b82f6; }
+        .mode-method { background: #10b981; }
+        .mode-problem { background: #f59e0b; }
+        .mode-hybrid { background: #8b5cf6; }
+
+        .empty-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: #94a3b8;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .empty-state-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>主题演化图谱</h1>
+        <p>基于时间切片的学术主题演化分析 · Mathematics 2025</p>
+    </div>
+
+    <div class="main-layout">
+        <!-- Left Sidebar: Navigation -->
+        <div class="sidebar-left">
+            <div class="nav-section">
+                <div class="section-title">视图模式</div>
+                <div class="view-tabs">
+                    <button class="view-tab active" onclick="switchView('timeline')">时间轴</button>
+                    <button class="view-tab" onclick="switchView('network')">关系网</button>
+                </div>
+            </div>
+
+            <div class="nav-section">
+                <div class="section-title">学科分类</div>
+                <div class="category-tree">
+                    <div class="category-item active" onclick="selectCategory('all')">
+                        <span>📚</span>
+                        <span>全部学科</span>
+                        <span class="category-count">156</span>
+                    </div>
+                    <div class="subcategory-list">
+                        <div class="category-item" onclick="selectCategory('OA')">
+                            <div class="category-icon mode-theory"></div>
+                            <span>算子代数 (OA)</span>
+                            <span class="category-count">42</span>
+                        </div>
+                        <div class="subcategory-list">
+                            <div class="subcategory-item">代数K理论 (12)</div>
+                            <div class="subcategory-item">算子代数结构 (18)</div>
+                            <div class="subcategory-item">非交换几何 (8)</div>
+                            <div class="subcategory-item">遍历理论 (4)</div>
+                        </div>
+
+                        <div class="category-item" onclick="selectCategory('NT')">
+                            <div class="category-icon mode-method"></div>
+                            <span>数论 (NT)</span>
+                            <span class="category-count">38</span>
+                        </div>
+                        <div class="subcategory-list">
+                            <div class="subcategory-item">代数数论 (15)</div>
+                            <div class="subcategory-item">解析数论 (12)</div>
+                            <div class="subcategory-item">算术几何 (11)</div>
+                        </div>
+
+                        <div class="category-item" onclick="selectCategory('CO')">
+                            <div class="category-icon mode-problem"></div>
+                            <span>组合数学 (CO)</span>
+                            <span class="category-count">45</span>
+                        </div>
+
+                        <div class="category-item" onclick="selectCategory('AG')">
+                            <div class="category-icon mode-hybrid"></div>
+                            <span>代数几何 (AG)</span>
+                            <span class="category-count">31</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-section">
+                <div class="section-title">图例说明</div>
+                <div style="font-size: 12px; color: #64748b; line-height: 2;">
+                    <div><span style="display:inline-block;width:12px;height:12px;background:#3b82f6;border-radius:2px;margin-right:8px;"></span>理论导向</div>
+                    <div><span style="display:inline-block;width:12px;height:12px;background:#10b981;border-radius:2px;margin-right:8px;"></span>方法导向</div>
+                    <div><span style="display:inline-block;width:12px;height:12px;background:#f59e0b;border-radius:2px;margin-right:8px;"></span>问题导向</div>
+                    <div><span style="display:inline-block;width:12px;height:12px;background:#8b5cf6;border-radius:2px;margin-right:8px;"></span>混合导向</div>
+                    <div style="margin-top:12px;padding-top:12px;border-top:1px solid #e2e8f0;">
+                        <div><span style="display:inline-block;width:24px;height:2px;background:#2563eb;margin-right:8px;vertical-align:middle;"></span>主题演化（时间连续）</div>
+                        <div><span style="display:inline-block;width:24px;height:2px;background:#94a3b8;border-top:2px dashed #94a3b8;margin-right:8px;vertical-align:middle;"></span>主题关联（同时间段）</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Center: Graph Canvas -->
+        <div class="canvas-area">
+            <div class="canvas-toolbar">
+                <div class="breadcrumb">
+                    <span class="breadcrumb-item">Mathematics</span>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-item">math.OA</span>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-item">算子代数结构理论</span>
+                </div>
+                <div class="canvas-controls">
+                    <button class="control-btn" title="放大">+</button>
+                    <button class="control-btn" title="缩小">−</button>
+                    <button class="control-btn" title="适应屏幕">⟲</button>
+                </div>
+            </div>
+
+            <svg class="graph-svg" id="graph-svg"></svg>
+
+            <div class="timeline-slider">
+                <div class="timeline-labels">
+                    <span>2025-02</span>
+                    <span>2025-03</span>
+                    <span>2025-04</span>
+                    <span>2025-05</span>
+                </div>
+                <div class="timeline-track">
+                    <div class="timeline-progress" style="width: 50%;"></div>
+                    <div class="timeline-points">
+                        <div class="timeline-point active"></div>
+                        <div class="timeline-point active"></div>
+                        <div class="timeline-point"></div>
+                        <div class="timeline-point"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Sidebar: Details Panel -->
+        <div class="sidebar-right">
+            <div class="panel-header">
+                <div class="panel-title">AW代数与希尔伯特代数</div>
+                <div class="panel-subtitle">Topic ID: global_1</div>
+            </div>
+
+            <div class="panel-content">
+                <div class="detail-section">
+                    <div class="detail-label">基本信息</div>
+                    <div style="display:flex;gap:8px;flex-wrap:wrap;">
+                        <span class="tag primary">math.OA</span>
+                        <span class="tag">理论导向</span>
+                        <span class="tag">4个时间切片</span>
+                    </div>
+                </div>
+
+                <div class="detail-section">
+                    <div class="detail-label">演化路径</div>
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <span class="timeline-card-period">2025-02</span>
+                            <span class="timeline-card-badge">起始</span>
+                        </div>
+                        <div class="timeline-card-content">
+                            论文数: 12 · 引用数: 45 · 热度: 上升
+                        </div>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <span class="timeline-card-period">2025-03</span>
+                            <span class="timeline-card-badge">持续</span>
+                        </div>
+                        <div class="timeline-card-content">
+                            论文数: 18 · 引用数: 62 · 热度: 稳定
+                        </div>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <span class="timeline-card-period">2025-04</span>
+                            <span class="timeline-card-badge">当前</span>
+                        </div>
+                        <div class="timeline-card-content">
+                            论文数: 15 · 引用数: 58 · 热度: 略微下降
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detail-section">
+                    <div class="detail-label">关联主题</div>
+                    <div class="detail-value">
+                        <div style="padding:8px 0;border-bottom:1px solid #f1f5f9;">
+                            <div style="font-weight:500;">迹态代数结构</div>
+                            <div style="font-size:11px;color:#94a3b8;">同类别 · 相似度 0.85</div>
+                        </div>
+                        <div style="padding:8px 0;border-bottom:1px solid #f1f5f9;">
+                            <div style="font-weight:500;">非交换几何</div>
+                            <div style="font-size:11px;color:#94a3b8;">跨类别 · 相似度 0.72</div>
+                        </div>
+                        <div style="padding:8px 0;">
+                            <div style="font-weight:500;">C*-代数分类</div>
+                            <div style="font-size:11px;color:#94a3b8;">同类别 · 相似度 0.68</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detail-section">
+                    <div class="detail-label">属性指标</div>
+                    <div class="detail-value">
+                        <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+                            <span style="color:#64748b;">理论深度</span>
+                            <span style="font-weight:500;">3.2/5</span>
+                        </div>
+                        <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+                            <span style="color:#64748b;">方法创新</span>
+                            <span style="font-weight:500;">2.8/5</span>
+                        </div>
+                        <div style="display:flex;justify-content:space-between;">
+                            <span style="color:#64748b;">应用价值</span>
+                            <span style="font-weight:500;">2.1/5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detail-section">
+                    <div class="detail-label">来源追踪</div>
+                    <div class="detail-value" style="font-size:12px;color:#64748b;">
+                        <div>📄 生成时间: 2026-03-17</div>
+                        <div>🔧 数据来源: evolution_cases.json</div>
+                        <div>📊 算法版本: v2.1</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Generate sample data
+        const periods = ['2025-02', '2025-03', '2025-04', '2025-05'];
+        const modes = ['theory', 'method', 'problem', 'hybrid'];
+        const modeLabels = { theory: '理论', method: '方法', problem: '问题', hybrid: '混合' };
+        const modeColors = { theory: '#3b82f6', method: '#10b981', problem: '#f59e0b', hybrid: '#8b5cf6' };
+
+        const topics = [
+            { id: 'global_1', name: 'AW代数与希尔伯特代数', category: 'math.OA', mode: 'theory' },
+            { id: 'global_2', name: '迹态代数结构', category: 'math.OA', mode: 'theory' },
+            { id: 'global_3', name: '扭曲平展群胚代数', category: 'math.OA', mode: 'theory' },
+            { id: 'global_4', name: '非交换代数Fell丛', category: 'math.OA', mode: 'hybrid' },
+            { id: 'global_5', name: 'p进伽罗瓦表示', category: 'math.NT', mode: 'theory' },
+            { id: 'global_6', name: '随机矩阵谱理论', category: 'math.PR', mode: 'method' },
+            { id: 'global_7', name: '图论极值问题', category: 'math.CO', mode: 'problem' },
+            { id: 'global_8', name: '代数K理论', category: 'math.KT', mode: 'theory' }
+        ];
+
+        // Generate nodes and edges
+        const nodes = [];
+        const edges = [];
+
+        topics.forEach((topic, idx) => {
+            const startPeriod = Math.floor(Math.random() * 2);
+            const endPeriod = Math.min(startPeriod + 2 + Math.floor(Math.random() * 2), 3);
+
+            const topicNodes = [];
+            for (let p = startPeriod; p <= endPeriod; p++) {
+                const node = {
+                    id: `${topic.id}@${periods[p]}`,
+                    topicId: topic.id,
+                    name: topic.name,
+                    period: periods[p],
+                    periodIdx: p,
+                    category: topic.category,
+                    mode: topic.mode,
+                    paperCount: Math.floor(Math.random() * 30) + 5,
+                    x: 0, y: 0
+                };
+                nodes.push(node);
+                topicNodes.push(node);
+            }
+
+            // Continued edges
+            for (let i = 0; i < topicNodes.length - 1; i++) {
+                edges.push({
+                    source: topicNodes[i].id,
+                    target: topicNodes[i + 1].id,
+                    type: 'continued',
+                    confidence: 1.0
+                });
+            }
+        });
+
+        // Cross-topic edges
+        nodes.forEach(node => {
+            const samePeriod = nodes.filter(n => n.period === node.period && n.id !== node.id);
+            const numEdges = Math.floor(Math.random() * 2);
+            for (let i = 0; i < numEdges && i < samePeriod.length; i++) {
+                if (Math.random() > 0.5) {
+                    edges.push({
+                        source: node.id,
+                        target: samePeriod[i].id,
+                        type: 'diffused',
+                        confidence: 0.6 + Math.random() * 0.4
+                    });
+                }
+            }
+        });
+
+        // Render timeline view
+        function renderTimeline() {
+            const svg = d3.select('#graph-svg');
+            svg.selectAll('*').remove();
+
+            const width = svg.node().parentElement.clientWidth;
+            const height = svg.node().parentElement.clientHeight;
+            svg.attr('width', width).attr('height', height);
+
+            const margin = { top: 80, right: 40, bottom: 100, left: 40 };
+            const innerWidth = width - margin.left - margin.right;
+            const innerHeight = height - margin.top - margin.bottom;
+
+            const g = svg.append('g')
+                .attr('transform', `translate(${margin.left},${margin.top})`);
+
+            // Period columns
+            const periodWidth = innerWidth / periods.length;
+
+            periods.forEach((period, i) => {
+                const x = i * periodWidth;
+
+                g.append('rect')
+                    .attr('class', 'period-column')
+                    .attr('x', x)
+                    .attr('y', 0)
+                    .attr('width', periodWidth - 20)
+                    .attr('height', innerHeight);
+
+                g.append('text')
+                    .attr('class', 'period-label')
+                    .attr('x', x + periodWidth / 2 - 10)
+                    .attr('y', -20)
+                    .text(period);
+            });
+
+            // Position nodes
+            const nodesByPeriod = {};
+            periods.forEach(p => nodesByPeriod[p] = []);
+            nodes.forEach(n => {
+                if (nodesByPeriod[n.period]) {
+                    nodesByPeriod[n.period].push(n);
+                }
+            });
+
+            Object.values(nodesByPeriod).forEach(periodNodes => {
+                periodNodes.forEach((n, i) => {
+                    n.x = periods.indexOf(n.period) * periodWidth + periodWidth / 2 - 10;
+                    n.y = (i + 1) * (innerHeight / (periodNodes.length + 1));
+                });
+            });
+
+            // Draw edges
+            const edgeGroup = g.append('g').attr('class', 'edges');
+
+            edges.forEach(edge => {
+                const source = nodes.find(n => n.id === edge.source);
+                const target = nodes.find(n => n.id === edge.target);
+                if (!source || !target) return;
+
+                const path = d3.path();
+                path.moveTo(source.x + 60, source.y + 20);
+
+                if (edge.type === 'continued') {
+                    path.bezierCurveTo(
+                        source.x + periodWidth / 2, source.y + 20,
+                        target.x - periodWidth / 2, target.y + 20,
+                        target.x - 5, target.y + 20
+                    );
+
+                    edgeGroup.append('path')
+                        .attr('class', 'evolution-edge continued')
+                        .attr('d', path.toString())
+                        .attr('marker-end', 'url(#arrow)');
+                } else {
+                    const midX = (source.x + target.x) / 2;
+                    const midY = Math.min(source.y, target.y) - 30;
+                    path.quadraticCurveTo(midX, midY, target.x, target.y + 20);
+
+                    edgeGroup.append('path')
+                        .attr('class', 'evolution-edge diffused')
+                        .attr('d', path.toString());
+                }
+            });
+
+            // Arrow marker
+            svg.append('defs').append('marker')
+                .attr('id', 'arrow')
+                .attr('viewBox', '0 0 10 10')
+                .attr('refX', 8)
+                .attr('refY', 5)
+                .attr('markerWidth', 6)
+                .attr('markerHeight', 6)
+                .attr('orient', 'auto')
+                .append('path')
+                .attr('d', 'M 0 0 L 10 5 L 0 10 z')
+                .attr('class', 'edge-arrow');
+
+            // Draw nodes as cards
+            const nodeGroup = g.selectAll('.topic-node')
+                .data(nodes)
+                .enter()
+                .append('g')
+                .attr('class', 'topic-node')
+                .attr('transform', d => `translate(${d.x - 60},${d.y})`)
+                .on('click', function(event, d) {
+                    showNodeDetails(d);
+                });
+
+            // Card background
+            nodeGroup.append('rect')
+                .attr('class', 'node-rect')
+                .attr('width', 120)
+                .attr('height', 50)
+                .attr('rx', 8);
+
+            // Mode indicator
+            nodeGroup.append('rect')
+                .attr('class', d => `node-mode-indicator mode-${d.mode}`)
+                .attr('x', 4)
+                .attr('y', 5)
+                .attr('width', 4)
+                .attr('height', 40)
+                .attr('rx', 2);
+
+            // Title
+            nodeGroup.append('text')
+                .attr('class', 'node-title')
+                .attr('x', 14)
+                .attr('y', 18)
+                .text(d => d.name.length > 7 ? d.name.slice(0, 7) + '...' : d.name);
+
+            // Subtitle
+            nodeGroup.append('text')
+                .attr('class', 'node-subtitle')
+                .attr('x', 14)
+                .attr('y', 32)
+                .text(d => d.category);
+
+            // Meta
+            nodeGroup.append('text')
+                .attr('class', 'node-meta')
+                .attr('x', 14)
+                .attr('y', 44)
+                .text(d => `${d.paperCount} papers · ${modeLabels[d.mode]}`);
+        }
+
+        function showNodeDetails(node) {
+            document.querySelector('.panel-title').textContent = node.name;
+            document.querySelector('.panel-subtitle').textContent = `Topic ID: ${node.topicId}`;
+            // In real app, would fetch and display full details
+        }
+
+        function switchView(view) {
+            document.querySelectorAll('.view-tab').forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+            // Would switch between timeline and network views
+        }
+
+        function selectCategory(cat) {
+            document.querySelectorAll('.category-item').forEach(item => item.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+            // Would filter nodes by category
+        }
+
+        // Initialize
+        window.addEventListener('load', renderTimeline);
+        window.addEventListener('resize', renderTimeline);
+    </script>
+</body>
+</html>

@@ -1,0 +1,500 @@
+{
+  "case_id": "global_1728-2025-02",
+  "anchor_topic_id": "global_1728",
+  "anchor_topic_name": "规范理论与共形弦论",
+  "anchor_topic_mode": "theory",
+  "anchor_topic_profile": {
+    "primary_mode": "theory",
+    "secondary_mode": null,
+    "method_score": 0,
+    "problem_score": 0,
+    "theory_score": 2
+  },
+  "start_period": "2025-02",
+  "observation_horizon": 4,
+  "neighbor_topics": [
+    "global_1735",
+    "global_1766",
+    "global_1729",
+    "global_1771",
+    "global_1748"
+  ],
+  "evolution_path": [
+    {
+      "period": "2025-02",
+      "anchor_paper_count": 134,
+      "active_neighbor_count": 1,
+      "top_neighbors": [
+        {
+          "topic_id": "global_1729",
+          "topic_name": "费曼规范理论积分",
+          "paper_count": 16,
+          "weight": 0.4333,
+          "category": "hep",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 2
+          }
+        },
+        {
+          "topic_id": "global_1735",
+          "topic_name": "圈振幅与关联函数",
+          "paper_count": 0,
+          "weight": 0.475,
+          "category": "hep",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_1766",
+          "topic_name": "晶格对称与贝特相",
+          "paper_count": 0,
+          "weight": 0.4458,
+          "category": "hep",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 2
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-03",
+      "anchor_paper_count": 125,
+      "active_neighbor_count": 1,
+      "top_neighbors": [
+        {
+          "topic_id": "global_1735",
+          "topic_name": "圈振幅与关联函数",
+          "paper_count": 59,
+          "weight": 0.475,
+          "category": "hep",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_1766",
+          "topic_name": "晶格对称与贝特相",
+          "paper_count": 0,
+          "weight": 0.4458,
+          "category": "hep",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 2
+          }
+        },
+        {
+          "topic_id": "global_1729",
+          "topic_name": "费曼规范理论积分",
+          "paper_count": 0,
+          "weight": 0.4333,
+          "category": "hep",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 2
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-04",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_1735",
+          "topic_name": "圈振幅与关联函数",
+          "paper_count": 0,
+          "weight": 0.475,
+          "category": "hep",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_1766",
+          "topic_name": "晶格对称与贝特相",
+          "paper_count": 0,
+          "weight": 0.4458,
+          "category": "hep",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 2
+          }
+        },
+        {
+          "topic_id": "global_1729",
+          "topic_name": "费曼规范理论积分",
+          "paper_count": 0,
+          "weight": 0.4333,
+          "category": "hep",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 2
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-05",
+      "anchor_paper_count": 65,
+      "active_neighbor_count": 2,
+      "top_neighbors": [
+        {
+          "topic_id": "global_1740",
+          "topic_name": "共形场论模结构",
+          "paper_count": 21,
+          "weight": 0.3455,
+          "category": "hep",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 2
+          }
+        },
+        {
+          "topic_id": "global_1735",
+          "topic_name": "圈振幅与关联函数",
+          "paper_count": 15,
+          "weight": 0.475,
+          "category": "hep",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_1766",
+          "topic_name": "晶格对称与贝特相",
+          "paper_count": 0,
+          "weight": 0.4458,
+          "category": "hep",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 2
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-06",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_1735",
+          "topic_name": "圈振幅与关联函数",
+          "paper_count": 0,
+          "weight": 0.475,
+          "category": "hep",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_1766",
+          "topic_name": "晶格对称与贝特相",
+          "paper_count": 0,
+          "weight": 0.4458,
+          "category": "hep",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 2
+          }
+        },
+        {
+          "topic_id": "global_1729",
+          "topic_name": "费曼规范理论积分",
+          "paper_count": 0,
+          "weight": 0.4333,
+          "category": "hep",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 2
+          }
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "emerged",
+      "period": "2025-02",
+      "summary": "Anchor topic first appears in the replay window."
+    },
+    {
+      "type": "diffused_to_neighbor",
+      "period": "2025-03",
+      "summary": "Semantic neighbors absorb momentum from the anchor topic around 2025-03.",
+      "evidence": {
+        "target_topic_id": "global_1735",
+        "target_topic_name": "圈振幅与关联函数",
+        "target_topic_mode": "theory",
+        "transfer_kind": "theory_spillover",
+        "transfer_pattern": "spillover",
+        "weight": 0.475,
+        "increase": 59,
+        "bridge_evidence": {
+          "shared_keywords": [
+            "amplitudes",
+            "brane",
+            "gauge",
+            "mills",
+            "theories",
+            "theory"
+          ],
+          "bridge_topics": [
+            "晶格对称与贝特相",
+            "费曼规范理论积分",
+            "标量超引力规范理论"
+          ],
+          "target_evidence_titles": [],
+          "category_flow": {
+            "source_category": "hep",
+            "target_category": "hep",
+            "source_top_level": "hep",
+            "target_top_level": "hep",
+            "relation": "same_category"
+          },
+          "pipeline_relation": {
+            "relation": "formal_structure_same_lineage",
+            "source_stage_terms": [],
+            "target_stage_terms": [],
+            "shared_domain_terms": [],
+            "representation_stage_terms": [],
+            "perception_stage_terms": [],
+            "shared_3d_terms": [],
+            "shared_formal_terms": [
+              "amplitudes",
+              "brane",
+              "gauge",
+              "theories",
+              "theory"
+            ],
+            "shared_math_ag_objects": [],
+            "shared_math_ag_methods": [],
+            "shared_math_lo_objects": [
+              "theories",
+              "theory"
+            ],
+            "shared_math_lo_methods": [],
+            "shared_math_lo_core_objects": [],
+            "shared_math_lo_modal_objects": [],
+            "shared_math_lo_modal_methods": [],
+            "shared_math_lo_set_objects": [],
+            "shared_math_lo_set_methods": [],
+            "shared_math_lo_forcing_objects": [],
+            "shared_math_lo_forcing_methods": [],
+            "shared_math_lo_type_objects": [],
+            "source_type_terms": [],
+            "target_type_terms": [],
+            "shared_math_lo_definability_objects": [],
+            "shared_math_lo_definability_methods": [],
+            "math_ag_object_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            },
+            "math_ag_method_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            }
+          },
+          "evidence_title_overlap": {
+            "anchor_titles": [],
+            "target_titles": [],
+            "shared_terms": [],
+            "shared_term_count": 0
+          },
+          "bridge_strength": 0.75,
+          "alias_risk": {
+            "level": "low",
+            "reason": "distinct_concepts"
+          }
+        },
+        "post_transfer_persistence": {
+          "lookahead_periods": [
+            "2025-04",
+            "2025-05"
+          ],
+          "active_periods_after_event": 1,
+          "paper_counts_after_event": [
+            0,
+            15
+          ],
+          "sustained": false
+        },
+        "anchor_post_event_persistence": {
+          "lookahead_periods": [
+            "2025-04",
+            "2025-05"
+          ],
+          "active_periods_after_event": 1,
+          "paper_counts_after_event": [
+            0,
+            65
+          ],
+          "sustained": false
+        },
+        "relative_persistence": {
+          "anchor_total": 65,
+          "target_total": 15,
+          "target_to_anchor_ratio": 0.231,
+          "status": "weak_carryover"
+        },
+        "consistency_check": {
+          "status": "pipeline_consistent",
+          "flags": [],
+          "relation": "same_category",
+          "pipeline_relation": "formal_structure_same_lineage",
+          "bridge_strength": 0.75,
+          "relative_persistence_status": "weak_carryover",
+          "event_type": "diffused_to_neighbor"
+        }
+      }
+    },
+    {
+      "type": "specialized_into_child",
+      "period": "2025-05",
+      "summary": "A deeper child-like topic grows within the anchor neighborhood."
+    },
+    {
+      "type": "weakened",
+      "period": "2025-06",
+      "summary": "Anchor topic shows sustained decline without strong absorption evidence."
+    }
+  ],
+  "cross_category_moves": [],
+  "growth_summary": "规范理论与共形弦论 (theory) remains active without a strong expansion signal by 2025-06.",
+  "decline_summary": "Momentum softens by 2025-06, suggesting the topic loses local centrality.",
+  "review_flags": [],
+  "key_supporting_topics": [
+    {
+      "topic_id": "global_1735",
+      "topic_name": "圈振幅与关联函数",
+      "category": "hep",
+      "weight": 0.475,
+      "peak_period": "2025-03",
+      "peak_count": 59,
+      "increase": 59,
+      "topic_mode": "theory",
+      "topic_profile": {
+        "primary_mode": "theory",
+        "secondary_mode": null,
+        "method_score": 0,
+        "problem_score": 0,
+        "theory_score": 1
+      }
+    },
+    {
+      "topic_id": "global_1740",
+      "topic_name": "共形场论模结构",
+      "category": "hep",
+      "weight": 0.3455,
+      "peak_period": "2025-05",
+      "peak_count": 21,
+      "increase": 21,
+      "topic_mode": "theory",
+      "topic_profile": {
+        "primary_mode": "theory",
+        "secondary_mode": null,
+        "method_score": 0,
+        "problem_score": 0,
+        "theory_score": 2
+      }
+    }
+  ],
+  "key_turning_points": [
+    {
+      "period": "2025-04",
+      "delta": -125,
+      "anchor_paper_count": 0
+    },
+    {
+      "period": "2025-05",
+      "delta": 65,
+      "anchor_paper_count": 65
+    },
+    {
+      "period": "2025-06",
+      "delta": -65,
+      "anchor_paper_count": 0
+    }
+  ]
+}

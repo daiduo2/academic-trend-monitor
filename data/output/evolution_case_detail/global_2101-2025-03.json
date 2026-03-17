@@ -1,0 +1,464 @@
+{
+  "case_id": "global_2101-2025-03",
+  "anchor_topic_id": "global_2101",
+  "anchor_topic_name": "核壳结构与同位素",
+  "anchor_topic_mode": "hybrid",
+  "anchor_topic_profile": {
+    "primary_mode": "hybrid",
+    "secondary_mode": null,
+    "method_score": 1,
+    "problem_score": 1,
+    "theory_score": 0
+  },
+  "start_period": "2025-03",
+  "observation_horizon": 4,
+  "neighbor_topics": [
+    "global_2108",
+    "global_2099",
+    "global_2106",
+    "global_2102",
+    "global_2105"
+  ],
+  "evolution_path": [
+    {
+      "period": "2025-03",
+      "anchor_paper_count": 83,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_2108",
+          "topic_name": "原子核壳层计算",
+          "paper_count": 0,
+          "weight": 0.412,
+          "category": "nucl",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_2099",
+          "topic_name": "核团簇与中子反应",
+          "paper_count": 0,
+          "weight": 0.4077,
+          "category": "nucl",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_2106",
+          "topic_name": "原子核四极矩研究",
+          "paper_count": 0,
+          "weight": 0.3609,
+          "category": "nucl",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-04",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_2108",
+          "topic_name": "原子核壳层计算",
+          "paper_count": 0,
+          "weight": 0.412,
+          "category": "nucl",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_2099",
+          "topic_name": "核团簇与中子反应",
+          "paper_count": 0,
+          "weight": 0.4077,
+          "category": "nucl",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_2106",
+          "topic_name": "原子核四极矩研究",
+          "paper_count": 0,
+          "weight": 0.3609,
+          "category": "nucl",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-05",
+      "anchor_paper_count": 30,
+      "active_neighbor_count": 1,
+      "top_neighbors": [
+        {
+          "topic_id": "global_2102",
+          "topic_name": "中子星物质状态方程",
+          "paper_count": 28,
+          "weight": 0.3292,
+          "category": "nucl",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_2108",
+          "topic_name": "原子核壳层计算",
+          "paper_count": 0,
+          "weight": 0.412,
+          "category": "nucl",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_2099",
+          "topic_name": "核团簇与中子反应",
+          "paper_count": 0,
+          "weight": 0.4077,
+          "category": "nucl",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-06",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_2108",
+          "topic_name": "原子核壳层计算",
+          "paper_count": 0,
+          "weight": 0.412,
+          "category": "nucl",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_2099",
+          "topic_name": "核团簇与中子反应",
+          "paper_count": 0,
+          "weight": 0.4077,
+          "category": "nucl",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_2106",
+          "topic_name": "原子核四极矩研究",
+          "paper_count": 0,
+          "weight": 0.3609,
+          "category": "nucl",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-07",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_2108",
+          "topic_name": "原子核壳层计算",
+          "paper_count": 0,
+          "weight": 0.412,
+          "category": "nucl",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_2099",
+          "topic_name": "核团簇与中子反应",
+          "paper_count": 0,
+          "weight": 0.4077,
+          "category": "nucl",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_2106",
+          "topic_name": "原子核四极矩研究",
+          "paper_count": 0,
+          "weight": 0.3609,
+          "category": "nucl",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "emerged",
+      "period": "2025-03",
+      "summary": "Anchor topic first appears in the replay window."
+    },
+    {
+      "type": "diffused_to_neighbor",
+      "period": "2025-05",
+      "summary": "Semantic neighbors absorb momentum from the anchor topic around 2025-05.",
+      "evidence": {
+        "target_topic_id": "global_2102",
+        "target_topic_name": "中子星物质状态方程",
+        "target_topic_mode": "hybrid",
+        "transfer_kind": "mixed_diffusion",
+        "transfer_pattern": "spillover",
+        "weight": 0.3292,
+        "increase": 28,
+        "bridge_evidence": {
+          "shared_keywords": [
+            "neutron"
+          ],
+          "bridge_topics": [
+            "原子核壳层计算",
+            "核团簇与中子反应",
+            "原子核四极矩研究"
+          ],
+          "target_evidence_titles": [],
+          "category_flow": {
+            "source_category": "nucl",
+            "target_category": "nucl",
+            "source_top_level": "nucl",
+            "target_top_level": "nucl",
+            "relation": "same_category"
+          },
+          "pipeline_relation": {
+            "relation": "none",
+            "source_stage_terms": [],
+            "target_stage_terms": [],
+            "shared_domain_terms": [],
+            "representation_stage_terms": [],
+            "perception_stage_terms": [],
+            "shared_3d_terms": [],
+            "shared_formal_terms": [],
+            "shared_math_ag_objects": [],
+            "shared_math_ag_methods": [],
+            "shared_math_lo_objects": [],
+            "shared_math_lo_methods": [],
+            "shared_math_lo_core_objects": [],
+            "shared_math_lo_modal_objects": [],
+            "shared_math_lo_modal_methods": [],
+            "shared_math_lo_set_objects": [],
+            "shared_math_lo_set_methods": [],
+            "shared_math_lo_forcing_objects": [],
+            "shared_math_lo_forcing_methods": [],
+            "shared_math_lo_type_objects": [],
+            "source_type_terms": [],
+            "target_type_terms": [],
+            "shared_math_lo_definability_objects": [],
+            "shared_math_lo_definability_methods": [],
+            "math_ag_object_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            },
+            "math_ag_method_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            }
+          },
+          "evidence_title_overlap": {
+            "anchor_titles": [],
+            "target_titles": [],
+            "shared_terms": [],
+            "shared_term_count": 0
+          },
+          "bridge_strength": 0.45,
+          "alias_risk": {
+            "level": "low",
+            "reason": "distinct_concepts"
+          }
+        },
+        "post_transfer_persistence": {
+          "lookahead_periods": [
+            "2025-06",
+            "2025-07"
+          ],
+          "active_periods_after_event": 0,
+          "paper_counts_after_event": [
+            0,
+            0
+          ],
+          "sustained": false
+        },
+        "anchor_post_event_persistence": {
+          "lookahead_periods": [
+            "2025-06",
+            "2025-07"
+          ],
+          "active_periods_after_event": 0,
+          "paper_counts_after_event": [
+            0,
+            0
+          ],
+          "sustained": false
+        },
+        "relative_persistence": {
+          "anchor_total": 0,
+          "target_total": 0,
+          "target_to_anchor_ratio": null,
+          "status": "source_dried_up"
+        },
+        "consistency_check": {
+          "status": "consistent",
+          "flags": [],
+          "relation": "same_category",
+          "pipeline_relation": "none",
+          "bridge_strength": 0.45,
+          "relative_persistence_status": "source_dried_up",
+          "event_type": "diffused_to_neighbor"
+        }
+      }
+    },
+    {
+      "type": "weakened",
+      "period": "2025-07",
+      "summary": "Anchor topic shows sustained decline without strong absorption evidence."
+    }
+  ],
+  "cross_category_moves": [],
+  "growth_summary": "核壳结构与同位素 (hybrid) remains active without a strong expansion signal by 2025-07.",
+  "decline_summary": "Momentum softens by 2025-07, suggesting the topic loses local centrality.",
+  "review_flags": [],
+  "key_supporting_topics": [
+    {
+      "topic_id": "global_2102",
+      "topic_name": "中子星物质状态方程",
+      "category": "nucl",
+      "weight": 0.3292,
+      "peak_period": "2025-05",
+      "peak_count": 28,
+      "increase": 28,
+      "topic_mode": "hybrid",
+      "topic_profile": {
+        "primary_mode": "hybrid",
+        "secondary_mode": null,
+        "method_score": 1,
+        "problem_score": 1,
+        "theory_score": 0
+      }
+    }
+  ],
+  "key_turning_points": [
+    {
+      "period": "2025-04",
+      "delta": -83,
+      "anchor_paper_count": 0
+    },
+    {
+      "period": "2025-05",
+      "delta": 30,
+      "anchor_paper_count": 30
+    },
+    {
+      "period": "2025-06",
+      "delta": -30,
+      "anchor_paper_count": 0
+    }
+  ]
+}

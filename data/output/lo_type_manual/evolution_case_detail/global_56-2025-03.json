@@ -1,0 +1,504 @@
+{
+  "case_id": "global_56-2025-03",
+  "anchor_topic_id": "global_56",
+  "anchor_topic_name": "直觉主义逻辑证明",
+  "anchor_topic_mode": "hybrid",
+  "anchor_topic_profile": {
+    "primary_mode": "hybrid",
+    "secondary_mode": null,
+    "method_score": 1,
+    "problem_score": 1,
+    "theory_score": 0
+  },
+  "start_period": "2025-03",
+  "observation_horizon": 4,
+  "neighbor_topics": [
+    "global_27",
+    "global_208",
+    "global_345",
+    "global_1155",
+    "global_977"
+  ],
+  "evolution_path": [
+    {
+      "period": "2025-03",
+      "anchor_paper_count": 49,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_27",
+          "topic_name": "概率逻辑与自动机语义",
+          "paper_count": 0,
+          "weight": 0.4025,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_208",
+          "topic_name": "模态逻辑可满足性",
+          "paper_count": 0,
+          "weight": 0.3583,
+          "category": "math",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_345",
+          "topic_name": "模态逻辑与哥德尔联结词",
+          "paper_count": 0,
+          "weight": 0.3583,
+          "category": "math",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-04",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 1,
+      "top_neighbors": [
+        {
+          "topic_id": "global_27",
+          "topic_name": "概率逻辑与自动机语义",
+          "paper_count": 58,
+          "weight": 0.4025,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_208",
+          "topic_name": "模态逻辑可满足性",
+          "paper_count": 0,
+          "weight": 0.3583,
+          "category": "math",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_345",
+          "topic_name": "模态逻辑与哥德尔联结词",
+          "paper_count": 0,
+          "weight": 0.3583,
+          "category": "math",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-05",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_27",
+          "topic_name": "概率逻辑与自动机语义",
+          "paper_count": 0,
+          "weight": 0.4025,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_208",
+          "topic_name": "模态逻辑可满足性",
+          "paper_count": 0,
+          "weight": 0.3583,
+          "category": "math",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_345",
+          "topic_name": "模态逻辑与哥德尔联结词",
+          "paper_count": 0,
+          "weight": 0.3583,
+          "category": "math",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-06",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_27",
+          "topic_name": "概率逻辑与自动机语义",
+          "paper_count": 0,
+          "weight": 0.4025,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_208",
+          "topic_name": "模态逻辑可满足性",
+          "paper_count": 0,
+          "weight": 0.3583,
+          "category": "math",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_345",
+          "topic_name": "模态逻辑与哥德尔联结词",
+          "paper_count": 0,
+          "weight": 0.3583,
+          "category": "math",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-07",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_27",
+          "topic_name": "概率逻辑与自动机语义",
+          "paper_count": 0,
+          "weight": 0.4025,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_208",
+          "topic_name": "模态逻辑可满足性",
+          "paper_count": 0,
+          "weight": 0.3583,
+          "category": "math",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_345",
+          "topic_name": "模态逻辑与哥德尔联结词",
+          "paper_count": 0,
+          "weight": 0.3583,
+          "category": "math",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "emerged",
+      "period": "2025-03",
+      "summary": "Anchor topic first appears in the replay window."
+    },
+    {
+      "type": "diffused_to_neighbor",
+      "period": "2025-04",
+      "summary": "Semantic neighbors absorb momentum from the anchor topic around 2025-04.",
+      "evidence": {
+        "target_topic_id": "global_27",
+        "target_topic_name": "概率逻辑与自动机语义",
+        "target_topic_mode": "theory",
+        "transfer_kind": "theory_spillover",
+        "transfer_pattern": "spillover",
+        "weight": 0.4025,
+        "increase": 58,
+        "bridge_evidence": {
+          "shared_keywords": [
+            "calculus",
+            "intuitionistic",
+            "logics",
+            "proof",
+            "semantics"
+          ],
+          "bridge_topics": [
+            "模态逻辑可满足性",
+            "模态逻辑与哥德尔联结词",
+            "直觉主义模态逻辑语义"
+          ],
+          "target_evidence_titles": [
+            "Fundamental Propositional Logic with Strict Implication",
+            "A Class of Generalised Quantifiers for k-Variable Logics"
+          ],
+          "category_flow": {
+            "source_category": "math",
+            "target_category": "math",
+            "source_top_level": "math",
+            "target_top_level": "math",
+            "relation": "same_category"
+          },
+          "pipeline_relation": {
+            "relation": "math_lo_modal_continuity",
+            "source_stage_terms": [],
+            "target_stage_terms": [],
+            "shared_domain_terms": [],
+            "representation_stage_terms": [],
+            "perception_stage_terms": [],
+            "shared_3d_terms": [],
+            "shared_formal_terms": [],
+            "shared_math_ag_objects": [],
+            "shared_math_ag_methods": [],
+            "shared_math_lo_objects": [
+              "calculus",
+              "logics",
+              "proof",
+              "semantics"
+            ],
+            "shared_math_lo_methods": [
+              "intuitionistic"
+            ],
+            "shared_math_lo_core_objects": [
+              "logics",
+              "proof",
+              "semantics"
+            ],
+            "shared_math_lo_modal_objects": [
+              "calculus",
+              "logics",
+              "proof",
+              "semantics"
+            ],
+            "shared_math_lo_modal_methods": [
+              "intuitionistic"
+            ],
+            "shared_math_lo_set_objects": [],
+            "shared_math_lo_set_methods": [],
+            "shared_math_lo_forcing_objects": [],
+            "shared_math_lo_forcing_methods": [],
+            "shared_math_lo_type_objects": [
+              "calculus",
+              "proof",
+              "semantics"
+            ],
+            "source_type_terms": [
+              "calculus",
+              "intuitionistic",
+              "proof",
+              "proofs",
+              "propositional",
+              "typed"
+            ],
+            "target_type_terms": [
+              "languages",
+              "programs"
+            ],
+            "math_ag_object_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            },
+            "math_ag_method_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            }
+          },
+          "evidence_title_overlap": {
+            "anchor_titles": [
+              "Fundamental Propositional Logic with Strict Implication",
+              "A Class of Generalised Quantifiers for k-Variable Logics"
+            ],
+            "target_titles": [
+              "Fundamental Propositional Logic with Strict Implication",
+              "A Class of Generalised Quantifiers for k-Variable Logics"
+            ],
+            "shared_terms": [
+              "class",
+              "fundamental",
+              "generalised",
+              "implication",
+              "logic",
+              "logics"
+            ],
+            "shared_term_count": 6
+          },
+          "bridge_strength": 1.0,
+          "alias_risk": {
+            "level": "low",
+            "reason": "distinct_concepts"
+          }
+        },
+        "post_transfer_persistence": {
+          "lookahead_periods": [
+            "2025-05",
+            "2025-06"
+          ],
+          "active_periods_after_event": 0,
+          "paper_counts_after_event": [
+            0,
+            0
+          ],
+          "sustained": false
+        },
+        "anchor_post_event_persistence": {
+          "lookahead_periods": [
+            "2025-05",
+            "2025-06"
+          ],
+          "active_periods_after_event": 0,
+          "paper_counts_after_event": [
+            0,
+            0
+          ],
+          "sustained": false
+        },
+        "relative_persistence": {
+          "anchor_total": 0,
+          "target_total": 0,
+          "target_to_anchor_ratio": null,
+          "status": "source_dried_up"
+        },
+        "consistency_check": {
+          "status": "pipeline_consistent",
+          "flags": [],
+          "relation": "same_category",
+          "pipeline_relation": "math_lo_modal_continuity",
+          "bridge_strength": 1.0,
+          "relative_persistence_status": "source_dried_up",
+          "event_type": "diffused_to_neighbor"
+        }
+      }
+    },
+    {
+      "type": "weakened",
+      "period": "2025-07",
+      "summary": "Anchor topic shows sustained decline without strong absorption evidence."
+    }
+  ],
+  "cross_category_moves": [],
+  "growth_summary": "直觉主义逻辑证明 (hybrid) remains active without a strong expansion signal by 2025-07.",
+  "decline_summary": "Momentum softens by 2025-07, suggesting the topic loses local centrality.",
+  "review_flags": [],
+  "key_supporting_topics": [
+    {
+      "topic_id": "global_27",
+      "topic_name": "概率逻辑与自动机语义",
+      "category": "math",
+      "weight": 0.4025,
+      "peak_period": "2025-04",
+      "peak_count": 58,
+      "increase": 58,
+      "topic_mode": "theory",
+      "topic_profile": {
+        "primary_mode": "theory",
+        "secondary_mode": null,
+        "method_score": 0,
+        "problem_score": 0,
+        "theory_score": 1
+      }
+    }
+  ],
+  "key_turning_points": [
+    {
+      "period": "2025-04",
+      "delta": -49,
+      "anchor_paper_count": 0
+    }
+  ]
+}

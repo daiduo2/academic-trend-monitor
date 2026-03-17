@@ -1,0 +1,541 @@
+{
+  "case_id": "global_30-2025-02",
+  "anchor_topic_id": "global_30",
+  "anchor_topic_name": "法诺簇模空间曲线",
+  "anchor_topic_mode": "theory",
+  "anchor_topic_profile": {
+    "primary_mode": "theory",
+    "secondary_mode": null,
+    "method_score": 0,
+    "problem_score": 0,
+    "theory_score": 3
+  },
+  "start_period": "2025-02",
+  "observation_horizon": 4,
+  "neighbor_topics": [
+    "global_215",
+    "global_355",
+    "global_5",
+    "global_117",
+    "global_349"
+  ],
+  "evolution_path": [
+    {
+      "period": "2025-02",
+      "anchor_paper_count": 109,
+      "active_neighbor_count": 1,
+      "top_neighbors": [
+        {
+          "topic_id": "global_5",
+          "topic_name": "卢斯蒂格代数上同调",
+          "paper_count": 45,
+          "weight": 0.3241,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 0,
+            "problem_score": 1,
+            "theory_score": 3
+          }
+        },
+        {
+          "topic_id": "global_215",
+          "topic_name": "霍奇商上同调猜想",
+          "paper_count": 0,
+          "weight": 0.475,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 4
+          }
+        },
+        {
+          "topic_id": "global_355",
+          "topic_name": "超椭圆曲线阿贝尔簇",
+          "paper_count": 0,
+          "weight": 0.3609,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 2
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-03",
+      "anchor_paper_count": 213,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_215",
+          "topic_name": "霍奇商上同调猜想",
+          "paper_count": 0,
+          "weight": 0.475,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 4
+          }
+        },
+        {
+          "topic_id": "global_355",
+          "topic_name": "超椭圆曲线阿贝尔簇",
+          "paper_count": 0,
+          "weight": 0.3609,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 2
+          }
+        },
+        {
+          "topic_id": "global_5",
+          "topic_name": "卢斯蒂格代数上同调",
+          "paper_count": 0,
+          "weight": 0.3241,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 0,
+            "problem_score": 1,
+            "theory_score": 3
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-04",
+      "anchor_paper_count": 94,
+      "active_neighbor_count": 1,
+      "top_neighbors": [
+        {
+          "topic_id": "global_5",
+          "topic_name": "卢斯蒂格代数上同调",
+          "paper_count": 75,
+          "weight": 0.3241,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 0,
+            "problem_score": 1,
+            "theory_score": 3
+          }
+        },
+        {
+          "topic_id": "global_215",
+          "topic_name": "霍奇商上同调猜想",
+          "paper_count": 0,
+          "weight": 0.475,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 4
+          }
+        },
+        {
+          "topic_id": "global_355",
+          "topic_name": "超椭圆曲线阿贝尔簇",
+          "paper_count": 0,
+          "weight": 0.3609,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 2
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-05",
+      "anchor_paper_count": 210,
+      "active_neighbor_count": 1,
+      "top_neighbors": [
+        {
+          "topic_id": "global_117",
+          "topic_name": "志村簇与Theta积分",
+          "paper_count": 16,
+          "weight": 0.2542,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 2
+          }
+        },
+        {
+          "topic_id": "global_215",
+          "topic_name": "霍奇商上同调猜想",
+          "paper_count": 0,
+          "weight": 0.475,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 4
+          }
+        },
+        {
+          "topic_id": "global_355",
+          "topic_name": "超椭圆曲线阿贝尔簇",
+          "paper_count": 0,
+          "weight": 0.3609,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 2
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-06",
+      "anchor_paper_count": 189,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_215",
+          "topic_name": "霍奇商上同调猜想",
+          "paper_count": 0,
+          "weight": 0.475,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 4
+          }
+        },
+        {
+          "topic_id": "global_355",
+          "topic_name": "超椭圆曲线阿贝尔簇",
+          "paper_count": 0,
+          "weight": 0.3609,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 2
+          }
+        },
+        {
+          "topic_id": "global_5",
+          "topic_name": "卢斯蒂格代数上同调",
+          "paper_count": 0,
+          "weight": 0.3241,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 0,
+            "problem_score": 1,
+            "theory_score": 3
+          }
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "emerged",
+      "period": "2025-02",
+      "summary": "Anchor topic first appears in the replay window."
+    },
+    {
+      "type": "expanded",
+      "period": "2025-03",
+      "summary": "Anchor topic grows materially during the replay horizon."
+    },
+    {
+      "type": "diffused_to_neighbor",
+      "period": "2025-04",
+      "summary": "Semantic neighbors absorb momentum from the anchor topic around 2025-04.",
+      "evidence": {
+        "target_topic_id": "global_5",
+        "target_topic_name": "卢斯蒂格代数上同调",
+        "target_topic_mode": "theory",
+        "transfer_kind": "theory_spillover",
+        "transfer_pattern": "spillover",
+        "weight": 0.3241,
+        "increase": 30,
+        "bridge_evidence": {
+          "shared_keywords": [
+            "projective"
+          ],
+          "bridge_topics": [
+            "霍奇商上同调猜想"
+          ],
+          "target_evidence_titles": [
+            "Zero-level integrable modules over twisted affine Lie superalgebras",
+            "Vidinli algebras"
+          ],
+          "category_flow": {
+            "source_category": "math",
+            "target_category": "math",
+            "source_top_level": "math",
+            "target_top_level": "math",
+            "relation": "same_category"
+          },
+          "pipeline_relation": {
+            "relation": "math_ag_object_continuity",
+            "source_stage_terms": [],
+            "target_stage_terms": [],
+            "shared_domain_terms": [],
+            "representation_stage_terms": [],
+            "perception_stage_terms": [],
+            "shared_3d_terms": [],
+            "shared_formal_terms": [
+              "projective"
+            ],
+            "shared_math_ag_objects": [],
+            "shared_math_ag_methods": [],
+            "shared_math_lo_objects": [],
+            "shared_math_lo_methods": [],
+            "shared_math_lo_core_objects": [],
+            "shared_math_lo_modal_objects": [],
+            "shared_math_lo_modal_methods": [],
+            "shared_math_lo_set_objects": [],
+            "shared_math_lo_set_methods": [],
+            "shared_math_lo_forcing_objects": [],
+            "shared_math_lo_forcing_methods": [],
+            "shared_math_lo_type_objects": [],
+            "source_type_terms": [],
+            "target_type_terms": [],
+            "shared_math_lo_definability_objects": [],
+            "shared_math_lo_definability_methods": [],
+            "math_ag_object_matches": {
+              "anchor": {
+                "variety_family": [
+                  "curves",
+                  "k3",
+                  "surfaces",
+                  "threefolds",
+                  "toric"
+                ],
+                "moduli_and_stack": [
+                  "moduli",
+                  "spaces"
+                ],
+                "sheaf_and_bundle": [
+                  "bundles"
+                ],
+                "scheme_level": [
+                  "projective"
+                ]
+              },
+              "target": {
+                "sheaf_and_bundle": [
+                  "sheaves"
+                ],
+                "scheme_level": [
+                  "projective",
+                  "smooth"
+                ]
+              },
+              "overlap": {
+                "score": 1.75,
+                "shared_exact_terms": [
+                  "projective"
+                ],
+                "shared_classes": [
+                  "sheaf_and_bundle"
+                ],
+                "related_classes": []
+              }
+            },
+            "math_ag_method_matches": {
+              "anchor": {
+                "cohomological": [
+                  "adic"
+                ]
+              },
+              "target": {
+                "cohomological": [
+                  "cohomology"
+                ],
+                "derived_categorical": [
+                  "category"
+                ],
+                "integrable_formal": [
+                  "lusztig"
+                ]
+              },
+              "overlap": {
+                "score": 0.75,
+                "shared_exact_terms": [],
+                "shared_classes": [
+                  "cohomological"
+                ],
+                "related_classes": []
+              }
+            }
+          },
+          "evidence_title_overlap": {
+            "anchor_titles": [
+              "Ramification theory from homotopical point of view, I",
+              "Families of singular algebraic varieties that are rationally elliptic spaces"
+            ],
+            "target_titles": [
+              "Zero-level integrable modules over twisted affine Lie superalgebras",
+              "Vidinli algebras"
+            ],
+            "shared_terms": [],
+            "shared_term_count": 0
+          },
+          "bridge_strength": 0.283,
+          "alias_risk": {
+            "level": "low",
+            "reason": "distinct_concepts"
+          }
+        },
+        "post_transfer_persistence": {
+          "lookahead_periods": [
+            "2025-05",
+            "2025-06"
+          ],
+          "active_periods_after_event": 0,
+          "paper_counts_after_event": [
+            0,
+            0
+          ],
+          "sustained": false
+        },
+        "anchor_post_event_persistence": {
+          "lookahead_periods": [
+            "2025-05",
+            "2025-06"
+          ],
+          "active_periods_after_event": 2,
+          "paper_counts_after_event": [
+            210,
+            189
+          ],
+          "sustained": true
+        },
+        "relative_persistence": {
+          "anchor_total": 399,
+          "target_total": 0,
+          "target_to_anchor_ratio": 0.0,
+          "status": "weak_carryover"
+        },
+        "consistency_check": {
+          "status": "pipeline_consistent",
+          "flags": [],
+          "relation": "same_category",
+          "pipeline_relation": "math_ag_object_continuity",
+          "bridge_strength": 0.283,
+          "relative_persistence_status": "weak_carryover",
+          "event_type": "diffused_to_neighbor"
+        }
+      }
+    },
+    {
+      "type": "specialized_into_child",
+      "period": "2025-05",
+      "summary": "A deeper child-like topic grows within the anchor neighborhood."
+    }
+  ],
+  "cross_category_moves": [],
+  "growth_summary": "法诺簇模空间曲线 (theory) expands from 2025-02 to 2025-06 and diffuses into nearby topics.",
+  "decline_summary": "No dominant decline pattern is detected before 2025-06.",
+  "review_flags": [],
+  "key_supporting_topics": [
+    {
+      "topic_id": "global_5",
+      "topic_name": "卢斯蒂格代数上同调",
+      "category": "math",
+      "weight": 0.3241,
+      "peak_period": "2025-04",
+      "peak_count": 75,
+      "increase": 30,
+      "topic_mode": "theory",
+      "topic_profile": {
+        "primary_mode": "theory",
+        "secondary_mode": "problem",
+        "method_score": 0,
+        "problem_score": 1,
+        "theory_score": 3
+      }
+    },
+    {
+      "topic_id": "global_117",
+      "topic_name": "志村簇与Theta积分",
+      "category": "math",
+      "weight": 0.2542,
+      "peak_period": "2025-05",
+      "peak_count": 16,
+      "increase": 16,
+      "topic_mode": "theory",
+      "topic_profile": {
+        "primary_mode": "theory",
+        "secondary_mode": null,
+        "method_score": 0,
+        "problem_score": 0,
+        "theory_score": 2
+      }
+    }
+  ],
+  "key_turning_points": [
+    {
+      "period": "2025-03",
+      "delta": 104,
+      "anchor_paper_count": 213
+    },
+    {
+      "period": "2025-04",
+      "delta": -119,
+      "anchor_paper_count": 94
+    },
+    {
+      "period": "2025-05",
+      "delta": 116,
+      "anchor_paper_count": 210
+    }
+  ]
+}

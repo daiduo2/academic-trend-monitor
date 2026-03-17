@@ -1,0 +1,472 @@
+{
+  "case_id": "global_167-2025-07",
+  "anchor_topic_id": "global_167",
+  "anchor_topic_name": "可定义基数塔基序",
+  "anchor_topic_mode": "theory",
+  "anchor_topic_profile": {
+    "primary_mode": "theory",
+    "secondary_mode": "method",
+    "method_score": 1,
+    "problem_score": 0,
+    "theory_score": 1
+  },
+  "start_period": "2025-07",
+  "observation_horizon": 4,
+  "neighbor_topics": [
+    "global_75",
+    "global_313",
+    "global_361",
+    "global_51",
+    "global_360"
+  ],
+  "evolution_path": [
+    {
+      "period": "2025-07",
+      "anchor_paper_count": 31,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_75",
+          "topic_name": "基数迭代强制法",
+          "paper_count": 0,
+          "weight": 0.475,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_313",
+          "topic_name": "基数与超滤子公理",
+          "paper_count": 0,
+          "weight": 0.3778,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_361",
+          "topic_name": "亨泽尔域存在可定义性",
+          "paper_count": 0,
+          "weight": 0.3778,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 0,
+            "theory_score": 1
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-08",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 1,
+      "top_neighbors": [
+        {
+          "topic_id": "global_51",
+          "topic_name": "基数与波莱尔公理",
+          "paper_count": 16,
+          "weight": 0.3609,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 2
+          }
+        },
+        {
+          "topic_id": "global_75",
+          "topic_name": "基数迭代强制法",
+          "paper_count": 0,
+          "weight": 0.475,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_313",
+          "topic_name": "基数与超滤子公理",
+          "paper_count": 0,
+          "weight": 0.3778,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-09",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_75",
+          "topic_name": "基数迭代强制法",
+          "paper_count": 0,
+          "weight": 0.475,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_313",
+          "topic_name": "基数与超滤子公理",
+          "paper_count": 0,
+          "weight": 0.3778,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_361",
+          "topic_name": "亨泽尔域存在可定义性",
+          "paper_count": 0,
+          "weight": 0.3778,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 0,
+            "theory_score": 1
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-10",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 1,
+      "top_neighbors": [
+        {
+          "topic_id": "global_51",
+          "topic_name": "基数与波莱尔公理",
+          "paper_count": 59,
+          "weight": 0.3609,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 2
+          }
+        },
+        {
+          "topic_id": "global_75",
+          "topic_name": "基数迭代强制法",
+          "paper_count": 0,
+          "weight": 0.475,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_313",
+          "topic_name": "基数与超滤子公理",
+          "paper_count": 0,
+          "weight": 0.3778,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-11",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_75",
+          "topic_name": "基数迭代强制法",
+          "paper_count": 0,
+          "weight": 0.475,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_313",
+          "topic_name": "基数与超滤子公理",
+          "paper_count": 0,
+          "weight": 0.3778,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "problem",
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_361",
+          "topic_name": "亨泽尔域存在可定义性",
+          "paper_count": 0,
+          "weight": 0.3778,
+          "category": "math",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 0,
+            "theory_score": 1
+          }
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "emerged",
+      "period": "2025-07",
+      "summary": "Anchor topic first appears in the replay window."
+    },
+    {
+      "type": "diffused_to_neighbor",
+      "period": "2025-10",
+      "summary": "Semantic neighbors absorb momentum from the anchor topic around 2025-10.",
+      "evidence": {
+        "target_topic_id": "global_51",
+        "target_topic_name": "基数与波莱尔公理",
+        "target_topic_mode": "theory",
+        "transfer_kind": "theory_spillover",
+        "transfer_pattern": "spillover",
+        "weight": 0.3609,
+        "increase": 59,
+        "bridge_evidence": {
+          "shared_keywords": [
+            "cardinals",
+            "theories"
+          ],
+          "bridge_topics": [
+            "基数迭代强制法",
+            "基数与超滤子公理",
+            "ZF基数选择公理"
+          ],
+          "target_evidence_titles": [
+            "On classification of continuous first order theories",
+            "Some notes on plump ordinals"
+          ],
+          "category_flow": {
+            "source_category": "math",
+            "target_category": "math",
+            "source_top_level": "math",
+            "target_top_level": "math",
+            "relation": "same_category"
+          },
+          "pipeline_relation": {
+            "relation": "none",
+            "source_stage_terms": [],
+            "target_stage_terms": [],
+            "shared_domain_terms": [],
+            "representation_stage_terms": [],
+            "perception_stage_terms": [],
+            "shared_3d_terms": [],
+            "shared_formal_terms": [
+              "theories"
+            ],
+            "shared_math_ag_objects": [],
+            "shared_math_ag_methods": [],
+            "shared_math_lo_objects": [
+              "cardinals",
+              "theories"
+            ],
+            "shared_math_lo_methods": [],
+            "shared_math_lo_core_objects": [
+              "cardinals"
+            ],
+            "shared_math_lo_modal_objects": [],
+            "shared_math_lo_modal_methods": [],
+            "shared_math_lo_set_objects": [
+              "cardinals"
+            ],
+            "shared_math_lo_set_methods": [],
+            "shared_math_lo_forcing_objects": [
+              "cardinals"
+            ],
+            "shared_math_lo_forcing_methods": [],
+            "math_ag_object_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            },
+            "math_ag_method_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            }
+          },
+          "evidence_title_overlap": {
+            "anchor_titles": [
+              "Imaginaries, products and the adele ring",
+              "On some NIP Fragments of Fields"
+            ],
+            "target_titles": [
+              "On classification of continuous first order theories",
+              "Some notes on plump ordinals"
+            ],
+            "shared_terms": [
+              "some"
+            ],
+            "shared_term_count": 1
+          },
+          "bridge_strength": 0.633,
+          "alias_risk": {
+            "level": "low",
+            "reason": "distinct_concepts"
+          }
+        },
+        "post_transfer_persistence": {
+          "lookahead_periods": [
+            "2025-11",
+            "2025-12"
+          ],
+          "active_periods_after_event": 0,
+          "paper_counts_after_event": [
+            0,
+            0
+          ],
+          "sustained": false
+        },
+        "anchor_post_event_persistence": {
+          "lookahead_periods": [
+            "2025-11",
+            "2025-12"
+          ],
+          "active_periods_after_event": 0,
+          "paper_counts_after_event": [
+            0,
+            0
+          ],
+          "sustained": false
+        },
+        "relative_persistence": {
+          "anchor_total": 0,
+          "target_total": 0,
+          "target_to_anchor_ratio": null,
+          "status": "source_dried_up"
+        },
+        "consistency_check": {
+          "status": "consistent",
+          "flags": [],
+          "relation": "same_category",
+          "pipeline_relation": "none",
+          "bridge_strength": 0.633,
+          "relative_persistence_status": "source_dried_up",
+          "event_type": "diffused_to_neighbor"
+        }
+      }
+    },
+    {
+      "type": "weakened",
+      "period": "2025-11",
+      "summary": "Anchor topic shows sustained decline without strong absorption evidence."
+    }
+  ],
+  "cross_category_moves": [],
+  "growth_summary": "可定义基数塔基序 (hybrid) remains active without a strong expansion signal by 2025-11.",
+  "decline_summary": "Momentum softens by 2025-11, suggesting the topic loses local centrality.",
+  "review_flags": [],
+  "key_supporting_topics": [
+    {
+      "topic_id": "global_51",
+      "topic_name": "基数与波莱尔公理",
+      "category": "math",
+      "weight": 0.3609,
+      "peak_period": "2025-10",
+      "peak_count": 59,
+      "increase": 59,
+      "topic_mode": "theory",
+      "topic_profile": {
+        "primary_mode": "theory",
+        "secondary_mode": "problem",
+        "method_score": 1,
+        "problem_score": 1,
+        "theory_score": 2
+      }
+    }
+  ],
+  "key_turning_points": [
+    {
+      "period": "2025-08",
+      "delta": -31,
+      "anchor_paper_count": 0
+    }
+  ]
+}

@@ -1,0 +1,848 @@
+{
+  "case_id": "global_27-2025-02",
+  "anchor_topic_id": "global_27",
+  "anchor_topic_name": "概率逻辑与自动机语义",
+  "anchor_topic_mode": "theory",
+  "anchor_topic_profile": {
+    "primary_mode": "theory",
+    "secondary_mode": null,
+    "method_score": 0,
+    "problem_score": 0,
+    "theory_score": 1
+  },
+  "start_period": "2025-02",
+  "observation_horizon": 4,
+  "neighbor_topics": [
+    "global_56",
+    "global_208",
+    "global_736",
+    "global_345",
+    "global_313"
+  ],
+  "evolution_path": [
+    {
+      "period": "2025-02",
+      "anchor_paper_count": 112,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_56",
+          "topic_name": "直觉主义逻辑证明",
+          "paper_count": 0,
+          "weight": 0.4025,
+          "category": "math",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_208",
+          "topic_name": "模态逻辑可满足性",
+          "paper_count": 0,
+          "weight": 0.2859,
+          "category": "math",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_736",
+          "topic_name": "逻辑自动机与基数语义",
+          "paper_count": 0,
+          "weight": 0.2545,
+          "category": "cs",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 1
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-03",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 1,
+      "top_neighbors": [
+        {
+          "topic_id": "global_56",
+          "topic_name": "直觉主义逻辑证明",
+          "paper_count": 49,
+          "weight": 0.4025,
+          "category": "math",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_208",
+          "topic_name": "模态逻辑可满足性",
+          "paper_count": 0,
+          "weight": 0.2859,
+          "category": "math",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_736",
+          "topic_name": "逻辑自动机与基数语义",
+          "paper_count": 0,
+          "weight": 0.2545,
+          "category": "cs",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 1
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-04",
+      "anchor_paper_count": 58,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_56",
+          "topic_name": "直觉主义逻辑证明",
+          "paper_count": 0,
+          "weight": 0.4025,
+          "category": "math",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_208",
+          "topic_name": "模态逻辑可满足性",
+          "paper_count": 0,
+          "weight": 0.2859,
+          "category": "math",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_736",
+          "topic_name": "逻辑自动机与基数语义",
+          "paper_count": 0,
+          "weight": 0.2545,
+          "category": "cs",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 1
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-05",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 1,
+      "top_neighbors": [
+        {
+          "topic_id": "global_736",
+          "topic_name": "逻辑自动机与基数语义",
+          "paper_count": 176,
+          "weight": 0.2545,
+          "category": "cs",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_56",
+          "topic_name": "直觉主义逻辑证明",
+          "paper_count": 0,
+          "weight": 0.4025,
+          "category": "math",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_208",
+          "topic_name": "模态逻辑可满足性",
+          "paper_count": 0,
+          "weight": 0.2859,
+          "category": "math",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-06",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 1,
+      "top_neighbors": [
+        {
+          "topic_id": "global_736",
+          "topic_name": "逻辑自动机与基数语义",
+          "paper_count": 50,
+          "weight": 0.2545,
+          "category": "cs",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 1
+          }
+        },
+        {
+          "topic_id": "global_56",
+          "topic_name": "直觉主义逻辑证明",
+          "paper_count": 0,
+          "weight": 0.4025,
+          "category": "math",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_208",
+          "topic_name": "模态逻辑可满足性",
+          "paper_count": 0,
+          "weight": 0.2859,
+          "category": "math",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "emerged",
+      "period": "2025-02",
+      "summary": "Anchor topic first appears in the replay window."
+    },
+    {
+      "type": "diffused_to_neighbor",
+      "period": "2025-05",
+      "summary": "Semantic neighbors absorb momentum from the anchor topic around 2025-05.",
+      "evidence": {
+        "target_topic_id": "global_736",
+        "target_topic_name": "逻辑自动机与基数语义",
+        "target_topic_mode": "theory",
+        "transfer_kind": "theory_spillover",
+        "transfer_pattern": "spillover",
+        "weight": 0.2545,
+        "increase": 176,
+        "bridge_evidence": {
+          "shared_keywords": [
+            "automata",
+            "intuitionistic",
+            "logics",
+            "order",
+            "programs",
+            "proof"
+          ],
+          "bridge_topics": [
+            "直觉主义逻辑证明",
+            "模态逻辑可满足性",
+            "模态逻辑与哥德尔联结词"
+          ],
+          "target_evidence_titles": [
+            "Fundamental Propositional Logic with Strict Implication",
+            "A Class of Generalised Quantifiers for k-Variable Logics"
+          ],
+          "category_flow": {
+            "source_category": "math",
+            "target_category": "cs",
+            "source_top_level": "math",
+            "target_top_level": "cs",
+            "relation": "cross_domain"
+          },
+          "pipeline_relation": {
+            "relation": "none",
+            "source_stage_terms": [],
+            "target_stage_terms": [],
+            "shared_domain_terms": [],
+            "representation_stage_terms": [],
+            "perception_stage_terms": [],
+            "shared_3d_terms": [],
+            "shared_formal_terms": [
+              "theory"
+            ],
+            "shared_math_ag_objects": [],
+            "shared_math_ag_methods": [],
+            "shared_math_lo_objects": [
+              "automata",
+              "logics",
+              "proof",
+              "semantics",
+              "theory"
+            ],
+            "shared_math_lo_methods": [
+              "intuitionistic"
+            ],
+            "shared_math_lo_core_objects": [
+              "automata",
+              "logics",
+              "proof",
+              "semantics"
+            ],
+            "shared_math_lo_modal_objects": [
+              "logics",
+              "proof",
+              "semantics"
+            ],
+            "shared_math_lo_modal_methods": [
+              "intuitionistic"
+            ],
+            "math_ag_object_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            },
+            "math_ag_method_matches": {
+              "anchor": {},
+              "target": {
+                "derived_categorical": [
+                  "categorical",
+                  "category"
+                ]
+              },
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            }
+          },
+          "evidence_title_overlap": {
+            "anchor_titles": [
+              "Fundamental Propositional Logic with Strict Implication",
+              "A Class of Generalised Quantifiers for k-Variable Logics"
+            ],
+            "target_titles": [
+              "Fundamental Propositional Logic with Strict Implication",
+              "A Class of Generalised Quantifiers for k-Variable Logics"
+            ],
+            "shared_terms": [
+              "class",
+              "fundamental",
+              "generalised",
+              "implication",
+              "logic",
+              "logics"
+            ],
+            "shared_term_count": 6
+          },
+          "bridge_strength": 0.93,
+          "alias_risk": {
+            "level": "low",
+            "reason": "distinct_concepts"
+          }
+        },
+        "post_transfer_persistence": {
+          "lookahead_periods": [
+            "2025-06",
+            "2025-07"
+          ],
+          "active_periods_after_event": 2,
+          "paper_counts_after_event": [
+            50,
+            122
+          ],
+          "sustained": true
+        },
+        "anchor_post_event_persistence": {
+          "lookahead_periods": [
+            "2025-06",
+            "2025-07"
+          ],
+          "active_periods_after_event": 0,
+          "paper_counts_after_event": [
+            0,
+            0
+          ],
+          "sustained": false
+        },
+        "relative_persistence": {
+          "anchor_total": 0,
+          "target_total": 172,
+          "target_to_anchor_ratio": null,
+          "status": "target_outlasts_source"
+        },
+        "consistency_check": {
+          "status": "consistent",
+          "flags": [],
+          "relation": "cross_domain",
+          "pipeline_relation": "none",
+          "bridge_strength": 0.93,
+          "relative_persistence_status": "target_outlasts_source",
+          "event_type": "diffused_to_neighbor"
+        }
+      }
+    },
+    {
+      "type": "merged_into_parent",
+      "period": "2025-05",
+      "summary": "Activity appears to reconverge into broader topic 逻辑自动机与基数语义.",
+      "evidence": {
+        "target_topic_id": "global_736",
+        "target_topic_name": "逻辑自动机与基数语义",
+        "target_topic_mode": "theory",
+        "transfer_kind": "mixed_transfer",
+        "transfer_pattern": "spillover",
+        "weight": 0.2545,
+        "bridge_evidence": {
+          "shared_keywords": [
+            "automata",
+            "intuitionistic",
+            "logics",
+            "order",
+            "programs",
+            "proof"
+          ],
+          "bridge_topics": [
+            "直觉主义逻辑证明",
+            "模态逻辑可满足性",
+            "模态逻辑与哥德尔联结词"
+          ],
+          "target_evidence_titles": [
+            "Fundamental Propositional Logic with Strict Implication",
+            "A Class of Generalised Quantifiers for k-Variable Logics"
+          ],
+          "category_flow": {
+            "source_category": "math",
+            "target_category": "cs",
+            "source_top_level": "math",
+            "target_top_level": "cs",
+            "relation": "cross_domain"
+          },
+          "pipeline_relation": {
+            "relation": "none",
+            "source_stage_terms": [],
+            "target_stage_terms": [],
+            "shared_domain_terms": [],
+            "representation_stage_terms": [],
+            "perception_stage_terms": [],
+            "shared_3d_terms": [],
+            "shared_formal_terms": [
+              "theory"
+            ],
+            "shared_math_ag_objects": [],
+            "shared_math_ag_methods": [],
+            "shared_math_lo_objects": [
+              "automata",
+              "logics",
+              "proof",
+              "semantics",
+              "theory"
+            ],
+            "shared_math_lo_methods": [
+              "intuitionistic"
+            ],
+            "shared_math_lo_core_objects": [
+              "automata",
+              "logics",
+              "proof",
+              "semantics"
+            ],
+            "shared_math_lo_modal_objects": [
+              "logics",
+              "proof",
+              "semantics"
+            ],
+            "shared_math_lo_modal_methods": [
+              "intuitionistic"
+            ],
+            "math_ag_object_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            },
+            "math_ag_method_matches": {
+              "anchor": {},
+              "target": {
+                "derived_categorical": [
+                  "categorical",
+                  "category"
+                ]
+              },
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            }
+          },
+          "evidence_title_overlap": {
+            "anchor_titles": [
+              "Fundamental Propositional Logic with Strict Implication",
+              "A Class of Generalised Quantifiers for k-Variable Logics"
+            ],
+            "target_titles": [
+              "Fundamental Propositional Logic with Strict Implication",
+              "A Class of Generalised Quantifiers for k-Variable Logics"
+            ],
+            "shared_terms": [
+              "class",
+              "fundamental",
+              "generalised",
+              "implication",
+              "logic",
+              "logics"
+            ],
+            "shared_term_count": 6
+          },
+          "bridge_strength": 0.93,
+          "alias_risk": {
+            "level": "low",
+            "reason": "distinct_concepts"
+          }
+        },
+        "post_transfer_persistence": {
+          "lookahead_periods": [
+            "2025-06",
+            "2025-07"
+          ],
+          "active_periods_after_event": 2,
+          "paper_counts_after_event": [
+            50,
+            122
+          ],
+          "sustained": true
+        },
+        "anchor_post_event_persistence": {
+          "lookahead_periods": [
+            "2025-06",
+            "2025-07"
+          ],
+          "active_periods_after_event": 0,
+          "paper_counts_after_event": [
+            0,
+            0
+          ],
+          "sustained": false
+        },
+        "relative_persistence": {
+          "anchor_total": 0,
+          "target_total": 172,
+          "target_to_anchor_ratio": null,
+          "status": "target_outlasts_source"
+        },
+        "consistency_check": {
+          "status": "consistent",
+          "flags": [],
+          "relation": "cross_domain",
+          "pipeline_relation": "none",
+          "bridge_strength": 0.93,
+          "relative_persistence_status": "target_outlasts_source",
+          "event_type": "merged_into_parent"
+        }
+      }
+    },
+    {
+      "type": "migrated_to_new_category",
+      "period": "2025-05",
+      "summary": "Related growth propagates from math into cs.",
+      "evidence": {
+        "source_category": "math",
+        "target_category": "cs",
+        "target_topic_id": "global_736",
+        "target_topic_name": "逻辑自动机与基数语义",
+        "target_topic_mode": "theory",
+        "transfer_kind": "mixed_transfer",
+        "transfer_pattern": "spillover",
+        "weight": 0.2545,
+        "bridge_evidence": {
+          "shared_keywords": [
+            "automata",
+            "intuitionistic",
+            "logics",
+            "order",
+            "programs",
+            "proof"
+          ],
+          "bridge_topics": [
+            "直觉主义逻辑证明",
+            "模态逻辑可满足性",
+            "模态逻辑与哥德尔联结词"
+          ],
+          "target_evidence_titles": [
+            "Fundamental Propositional Logic with Strict Implication",
+            "A Class of Generalised Quantifiers for k-Variable Logics"
+          ],
+          "category_flow": {
+            "source_category": "math",
+            "target_category": "cs",
+            "source_top_level": "math",
+            "target_top_level": "cs",
+            "relation": "cross_domain"
+          },
+          "pipeline_relation": {
+            "relation": "none",
+            "source_stage_terms": [],
+            "target_stage_terms": [],
+            "shared_domain_terms": [],
+            "representation_stage_terms": [],
+            "perception_stage_terms": [],
+            "shared_3d_terms": [],
+            "shared_formal_terms": [
+              "theory"
+            ],
+            "shared_math_ag_objects": [],
+            "shared_math_ag_methods": [],
+            "shared_math_lo_objects": [
+              "automata",
+              "logics",
+              "proof",
+              "semantics",
+              "theory"
+            ],
+            "shared_math_lo_methods": [
+              "intuitionistic"
+            ],
+            "shared_math_lo_core_objects": [
+              "automata",
+              "logics",
+              "proof",
+              "semantics"
+            ],
+            "shared_math_lo_modal_objects": [
+              "logics",
+              "proof",
+              "semantics"
+            ],
+            "shared_math_lo_modal_methods": [
+              "intuitionistic"
+            ],
+            "math_ag_object_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            },
+            "math_ag_method_matches": {
+              "anchor": {},
+              "target": {
+                "derived_categorical": [
+                  "categorical",
+                  "category"
+                ]
+              },
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            }
+          },
+          "evidence_title_overlap": {
+            "anchor_titles": [
+              "Fundamental Propositional Logic with Strict Implication",
+              "A Class of Generalised Quantifiers for k-Variable Logics"
+            ],
+            "target_titles": [
+              "Fundamental Propositional Logic with Strict Implication",
+              "A Class of Generalised Quantifiers for k-Variable Logics"
+            ],
+            "shared_terms": [
+              "class",
+              "fundamental",
+              "generalised",
+              "implication",
+              "logic",
+              "logics"
+            ],
+            "shared_term_count": 6
+          },
+          "bridge_strength": 0.93,
+          "alias_risk": {
+            "level": "low",
+            "reason": "distinct_concepts"
+          }
+        },
+        "post_transfer_persistence": {
+          "lookahead_periods": [
+            "2025-06",
+            "2025-07"
+          ],
+          "active_periods_after_event": 2,
+          "paper_counts_after_event": [
+            50,
+            122
+          ],
+          "sustained": true
+        },
+        "anchor_post_event_persistence": {
+          "lookahead_periods": [
+            "2025-06",
+            "2025-07"
+          ],
+          "active_periods_after_event": 0,
+          "paper_counts_after_event": [
+            0,
+            0
+          ],
+          "sustained": false
+        },
+        "relative_persistence": {
+          "anchor_total": 0,
+          "target_total": 172,
+          "target_to_anchor_ratio": null,
+          "status": "target_outlasts_source"
+        },
+        "consistency_check": {
+          "status": "consistent",
+          "flags": [],
+          "relation": "cross_domain",
+          "pipeline_relation": "none",
+          "bridge_strength": 0.93,
+          "relative_persistence_status": "target_outlasts_source",
+          "event_type": "migrated_to_new_category"
+        }
+      }
+    }
+  ],
+  "cross_category_moves": [
+    "cs"
+  ],
+  "growth_summary": "概率逻辑与自动机语义 (theory) remains active without a strong expansion signal by 2025-06.",
+  "decline_summary": "Some activity appears to reconverge into a broader parent topic by 2025-06.",
+  "review_flags": [],
+  "key_supporting_topics": [
+    {
+      "topic_id": "global_736",
+      "topic_name": "逻辑自动机与基数语义",
+      "category": "cs",
+      "weight": 0.2545,
+      "peak_period": "2025-05",
+      "peak_count": 176,
+      "increase": 176,
+      "topic_mode": "theory",
+      "topic_profile": {
+        "primary_mode": "theory",
+        "secondary_mode": null,
+        "method_score": 0,
+        "problem_score": 0,
+        "theory_score": 1
+      }
+    },
+    {
+      "topic_id": "global_56",
+      "topic_name": "直觉主义逻辑证明",
+      "category": "math",
+      "weight": 0.4025,
+      "peak_period": "2025-03",
+      "peak_count": 49,
+      "increase": 49,
+      "topic_mode": "hybrid",
+      "topic_profile": {
+        "primary_mode": "hybrid",
+        "secondary_mode": null,
+        "method_score": 1,
+        "problem_score": 1,
+        "theory_score": 0
+      }
+    }
+  ],
+  "key_turning_points": [
+    {
+      "period": "2025-03",
+      "delta": -112,
+      "anchor_paper_count": 0
+    },
+    {
+      "period": "2025-04",
+      "delta": 58,
+      "anchor_paper_count": 58
+    },
+    {
+      "period": "2025-05",
+      "delta": -58,
+      "anchor_paper_count": 0
+    }
+  ]
+}

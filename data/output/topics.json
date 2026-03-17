@@ -1,0 +1,4592 @@
+{
+  "version": "2026-02",
+  "topics": {
+    "0": {
+      "n": "无线MIMO信道感知",
+      "k": [
+        "channel",
+        "ris",
+        "wireless",
+        "sensing",
+        "mimo"
+      ],
+      "l": 3,
+      "p": "NI"
+    },
+    "1": {
+      "n": "视觉多模态推理",
+      "k": [
+        "visual",
+        "multimodal",
+        "reasoning",
+        "image",
+        "vision"
+      ],
+      "l": 3,
+      "p": "CV"
+    },
+    "2": {
+      "n": "强化学习策略推理",
+      "k": [
+        "reasoning",
+        "rlvr",
+        "rl",
+        "grpo",
+        "policy"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "3": {
+      "n": "星系恒星气体质量",
+      "k": [
+        "galaxies",
+        "galaxy",
+        "star",
+        "gas",
+        "mass"
+      ],
+      "l": 3,
+      "p": "CO"
+    },
+    "4": {
+      "n": "夸克QCD对撞物理",
+      "k": [
+        "collisions",
+        "qcd",
+        "quark",
+        "bar",
+        "gev"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "5": {
+      "n": "图顶点结构研究",
+      "k": [
+        "graphs",
+        "graph",
+        "vertex",
+        "vertices",
+        "every"
+      ],
+      "l": 3,
+      "p": "NT"
+    },
+    "6": {
+      "n": "语音音乐说话人识别",
+      "k": [
+        "audio",
+        "speech",
+        "music",
+        "speaker",
+        "asr"
+      ],
+      "l": 3,
+      "p": "SD"
+    },
+    "7": {
+      "n": "活性液滴剪切流变",
+      "k": [
+        "droplet",
+        "active",
+        "shear",
+        "fluid",
+        "stress"
+      ],
+      "l": 3,
+      "p": "soft"
+    },
+    "8": {
+      "n": "射影簇模空间曲线",
+      "k": [
+        "varieties",
+        "projective",
+        "bundles",
+        "moduli",
+        "curves"
+      ],
+      "l": 3,
+      "p": "AG"
+    },
+    "9": {
+      "n": "注意力秩优化剪枝",
+      "k": [
+        "attention",
+        "rank",
+        "transformers",
+        "lora",
+        "pruning"
+      ],
+      "l": 3,
+      "p": "CL"
+    },
+    "10": {
+      "n": "有限元数值阶方法",
+      "k": [
+        "element",
+        "numerical",
+        "finite",
+        "method",
+        "order"
+      ],
+      "l": 3,
+      "p": "NA"
+    },
+    "11": {
+      "n": "离线强化学习策略",
+      "k": [
+        "policy",
+        "rl",
+        "reinforcement",
+        "offline",
+        "learning"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "12": {
+      "n": "图神经网络节点",
+      "k": [
+        "graph",
+        "gnns",
+        "node",
+        "graphs",
+        "gnn"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "13": {
+      "n": "交变磁体磁化特性",
+      "k": [
+        "spin",
+        "magnetic",
+        "altermagnets",
+        "altermagnetic",
+        "magnetization"
+      ],
+      "l": 3,
+      "p": "mes-hall"
+    },
+    "14": {
+      "n": "多语言英语翻译",
+      "k": [
+        "languages",
+        "multilingual",
+        "english",
+        "language",
+        "translation"
+      ],
+      "l": 3,
+      "p": "CL"
+    },
+    "15": {
+      "n": "脉冲星射电辐射",
+      "k": [
+        "ray",
+        "pulsar",
+        "emission",
+        "radio",
+        "pulsars"
+      ],
+      "l": 3,
+      "p": "HE"
+    },
+    "16": {
+      "n": "Sobolev边值正则性",
+      "k": [
+        "solutions",
+        "mathbb",
+        "sobolev",
+        "regularity",
+        "boundary"
+      ],
+      "l": 3,
+      "p": "AP"
+    },
+    "17": {
+      "n": "医学肿瘤CT分割",
+      "k": [
+        "segmentation",
+        "medical",
+        "tumor",
+        "ct",
+        "pathology"
+      ],
+      "l": 3,
+      "p": "CV"
+    },
+    "18": {
+      "n": "分子间势机器学习",
+      "k": [
+        "materials",
+        "machine",
+        "molecular",
+        "interatomic",
+        "potentials"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "19": {
+      "n": "物理信息神经网络",
+      "k": [
+        "neural",
+        "pinns",
+        "pdes",
+        "physics",
+        "informed"
+      ],
+      "l": 3,
+      "p": "NA"
+    },
+    "20": {
+      "n": "凸优化梯度收敛",
+      "k": [
+        "convex",
+        "convergence",
+        "gradient",
+        "optimization",
+        "problems"
+      ],
+      "l": 3,
+      "p": "MO"
+    },
+    "21": {
+      "n": "杨-米尔斯规范场论",
+      "k": [
+        "string",
+        "gauge",
+        "theory",
+        "mills",
+        "yang"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "22": {
+      "n": "心理健康AI聊天机器人",
+      "k": [
+        "ai",
+        "health",
+        "social",
+        "mental",
+        "chatbots"
+      ],
+      "l": 3,
+      "p": "HC"
+    },
+    "23": {
+      "n": "代码仓库软件测试",
+      "k": [
+        "code",
+        "software",
+        "bug",
+        "test",
+        "repository"
+      ],
+      "l": 3,
+      "p": "SE"
+    },
+    "24": {
+      "n": "因果效应与治疗效果",
+      "k": [
+        "treatment",
+        "causal",
+        "effects",
+        "effect",
+        "outcome"
+      ],
+      "l": 3,
+      "p": "ME"
+    },
+    "25": {
+      "n": "视频扩散生成模型",
+      "k": [
+        "video",
+        "diffusion",
+        "dit",
+        "generation",
+        "image"
+      ],
+      "l": 3,
+      "p": "CV"
+    },
+    "26": {
+      "n": "黑洞时空与史瓦西解",
+      "k": [
+        "black",
+        "hole",
+        "holes",
+        "spacetime",
+        "schwarzschild"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "27": {
+      "n": "量子经典混合电路",
+      "k": [
+        "quantum",
+        "circuit",
+        "classical",
+        "circuits",
+        "machine"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "28": {
+      "n": "机器人视觉动作操控",
+      "k": [
+        "vla",
+        "action",
+        "manipulation",
+        "vision",
+        "robot"
+      ],
+      "l": 3,
+      "p": "CV"
+    },
+    "29": {
+      "n": "学生教育与生成式AI",
+      "k": [
+        "students",
+        "education",
+        "ai",
+        "student",
+        "genai"
+      ],
+      "l": 3,
+      "p": "HC"
+    },
+    "30": {
+      "n": "用户物品推荐系统",
+      "k": [
+        "recommendation",
+        "item",
+        "user",
+        "recommender",
+        "items"
+      ],
+      "l": 3,
+      "p": "IR"
+    },
+    "31": {
+      "n": "流形曲率与超曲面",
+      "k": [
+        "curvature",
+        "manifolds",
+        "riemannian",
+        "ricci",
+        "hypersurfaces"
+      ],
+      "l": 3,
+      "p": "DG"
+    },
+    "32": {
+      "n": "天气气候降水预报",
+      "k": [
+        "weather",
+        "climate",
+        "precipitation",
+        "forecasting",
+        "forecasts"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "33": {
+      "n": "临床医疗与大语言模型",
+      "k": [
+        "clinical",
+        "medical",
+        "health",
+        "patient",
+        "llms"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "34": {
+      "n": "光子学与激光偏振",
+      "k": [
+        "photonic",
+        "optical",
+        "polarization",
+        "light",
+        "laser"
+      ],
+      "l": 3,
+      "p": "optics"
+    },
+    "35": {
+      "n": "湍流与雷诺波动力学",
+      "k": [
+        "turbulence",
+        "turbulent",
+        "flow",
+        "reynolds",
+        "wave"
+      ],
+      "l": 3,
+      "p": "flu-dyn"
+    },
+    "36": {
+      "n": "流匹配与扩散生成",
+      "k": [
+        "flow",
+        "diffusion",
+        "generative",
+        "matching",
+        "sampling"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "37": {
+      "n": "自动驾驶与交通流",
+      "k": [
+        "driving",
+        "autonomous",
+        "vehicle",
+        "traffic",
+        "vehicles"
+      ],
+      "l": 3,
+      "p": "RO"
+    },
+    "38": {
+      "n": "多元时间序列预测",
+      "k": [
+        "forecasting",
+        "series",
+        "time",
+        "multivariate",
+        "temporal"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "39": {
+      "n": "检索增强生成技术",
+      "k": [
+        "retrieval",
+        "rag",
+        "query",
+        "document",
+        "documents"
+      ],
+      "l": 3,
+      "p": "CL"
+    },
+    "40": {
+      "n": "黎曼级数与超几何",
+      "k": [
+        "zeta",
+        "series",
+        "hypergeometric",
+        "riemann",
+        "sum_"
+      ],
+      "l": 3,
+      "p": "NT"
+    },
+    "41": {
+      "n": "光子量子纠缠态",
+      "k": [
+        "photon",
+        "quantum",
+        "states",
+        "optical",
+        "entangled"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "42": {
+      "n": "宇宙暴胀与标量场",
+      "k": [
+        "inflation",
+        "universe",
+        "inflationary",
+        "cosmological",
+        "scalar"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "43": {
+      "n": "容错逻辑编码",
+      "k": [
+        "codes",
+        "logical",
+        "error",
+        "fault",
+        "tolerant"
+      ],
+      "l": 3,
+      "p": "CR"
+    },
+    "44": {
+      "n": "量子纠缠态测量",
+      "k": [
+        "entanglement",
+        "quantum",
+        "states",
+        "measurement",
+        "entangled"
+      ],
+      "l": 3,
+      "p": "IT"
+    },
+    "45": {
+      "n": "博弈遗憾与纳什均衡",
+      "k": [
+        "regret",
+        "games",
+        "bandit",
+        "bandits",
+        "nash"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "46": {
+      "n": "引力波与双星系统",
+      "k": [
+        "gravitational",
+        "gw",
+        "wave",
+        "binaries",
+        "binary"
+      ],
+      "l": 3,
+      "p": "HE"
+    },
+    "47": {
+      "n": "渐近估计与样本检验",
+      "k": [
+        "estimator",
+        "estimators",
+        "asymptotic",
+        "tests",
+        "sample"
+      ],
+      "l": 3,
+      "p": "ME"
+    },
+    "48": {
+      "n": "纽结同调与流形手术",
+      "k": [
+        "knot",
+        "knots",
+        "homology",
+        "manifolds",
+        "surgery"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "49": {
+      "n": "机器人路径规划",
+      "k": [
+        "planning",
+        "robot",
+        "robots",
+        "path",
+        "mppi"
+      ],
+      "l": 3,
+      "p": "DM"
+    },
+    "50": {
+      "n": "可压缩Navier-Stokes方程解",
+      "k": [
+        "navier",
+        "stokes",
+        "compressible",
+        "solutions",
+        "equations"
+      ],
+      "l": 3,
+      "p": "AP"
+    },
+    "51": {
+      "n": "恶意注入攻击与安全",
+      "k": [
+        "security",
+        "attack",
+        "attacks",
+        "malicious",
+        "injection"
+      ],
+      "l": 3,
+      "p": "CL"
+    },
+    "52": {
+      "n": "电网电压与电池充电",
+      "k": [
+        "power",
+        "voltage",
+        "grid",
+        "battery",
+        "charging"
+      ],
+      "l": 3,
+      "p": "SY"
+    },
+    "53": {
+      "n": "李代数与Baxter代数",
+      "k": [
+        "algebras",
+        "lie",
+        "algebra",
+        "mathfrak",
+        "baxter"
+      ],
+      "l": 3,
+      "p": "RT"
+    },
+    "54": {
+      "n": "日冕磁通与太阳耀斑",
+      "k": [
+        "solar",
+        "coronal",
+        "magnetic",
+        "flare",
+        "flux"
+      ],
+      "l": 3,
+      "p": "space-ph"
+    },
+    "55": {
+      "n": "量子热化与主方程",
+      "k": [
+        "quantum",
+        "thermalization",
+        "steady",
+        "bath",
+        "master"
+      ],
+      "l": 3,
+      "p": "stat-mech"
+    },
+    "56": {
+      "n": "里德伯原子囚禁",
+      "k": [
+        "atom",
+        "rydberg",
+        "atomic",
+        "atoms",
+        "trap"
+      ],
+      "l": 3,
+      "p": "IT"
+    },
+    "57": {
+      "n": "量子关联与团簇方法",
+      "k": [
+        "quantum",
+        "correlation",
+        "electronic",
+        "cluster",
+        "cc"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "58": {
+      "n": "千电子伏中微子探测器",
+      "k": [
+        "detector",
+        "neutrino",
+        "detectors",
+        "kev",
+        "beam"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "59": {
+      "n": "奖励偏好与对齐学习",
+      "k": [
+        "preference",
+        "reward",
+        "dpo",
+        "rlhf",
+        "alignment"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "60": {
+      "n": "混沌同步与分岔研究",
+      "k": [
+        "chaos",
+        "synchronization",
+        "chaotic",
+        "oscillators",
+        "bifurcation"
+      ],
+      "l": 3,
+      "p": "AO"
+    },
+    "61": {
+      "n": "希格斯与顶夸克物理",
+      "k": [
+        "higgs",
+        "top",
+        "quark",
+        "lhc",
+        "bar"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "62": {
+      "n": "蛋白质多肽药物设计",
+      "k": [
+        "molecular",
+        "protein",
+        "drug",
+        "peptide",
+        "ligand"
+      ],
+      "l": 3,
+      "p": "CV"
+    },
+    "63": {
+      "n": "二维材料光电性能",
+      "k": [
+        "_2",
+        "bandgap",
+        "photoluminescence",
+        "metal",
+        "optoelectronic"
+      ],
+      "l": 3,
+      "p": "mes-hall"
+    },
+    "64": {
+      "n": "联邦学习客户端优化",
+      "k": [
+        "federated",
+        "fl",
+        "client",
+        "clients",
+        "server"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "65": {
+      "n": "人机协同创意设计",
+      "k": [
+        "ai",
+        "creative",
+        "collaboration",
+        "design",
+        "human"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "66": {
+      "n": "量化精度权重优化",
+      "k": [
+        "quantization",
+        "bit",
+        "ptq",
+        "precision",
+        "weight"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "67": {
+      "n": "深度神经网络激活函数",
+      "k": [
+        "networks",
+        "neural",
+        "relu",
+        "deep",
+        "network"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "68": {
+      "n": "托卡马克等离子体模拟",
+      "k": [
+        "plasma",
+        "plasmas",
+        "tokamak",
+        "gyrokinetic",
+        "zonal"
+      ],
+      "l": 3,
+      "p": "plasm-ph"
+    },
+    "69": {
+      "n": "有限群及其子群结构",
+      "k": [
+        "groups",
+        "subgroups",
+        "group",
+        "subgroup",
+        "finite"
+      ],
+      "l": 3,
+      "p": "GR"
+    },
+    "70": {
+      "n": "持续学习遗忘与合并",
+      "k": [
+        "continual",
+        "forgetting",
+        "merging",
+        "cl",
+        "task"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "71": {
+      "n": "粗糙随机分数布朗运动",
+      "k": [
+        "rough",
+        "stochastic",
+        "fractional",
+        "brownian",
+        "sdes"
+      ],
+      "l": 3,
+      "p": "PR"
+    },
+    "72": {
+      "n": "双层石墨烯电子能带",
+      "k": [
+        "graphene",
+        "bilayer",
+        "band",
+        "electron",
+        "electronic"
+      ],
+      "l": 3,
+      "p": "mtrl-sci"
+    },
+    "73": {
+      "n": "CDM与BAO暗能量研究",
+      "k": [
+        "cdm",
+        "bao",
+        "cmb",
+        "desi",
+        "dark"
+      ],
+      "l": 3,
+      "p": "CO"
+    },
+    "74": {
+      "n": "三维SLAM占据建图",
+      "k": [
+        "3d",
+        "slam",
+        "occupancy",
+        "camera",
+        "depth"
+      ],
+      "l": 3,
+      "p": "CV"
+    },
+    "75": {
+      "n": "玻色费米杂质超流",
+      "k": [
+        "bose",
+        "impurity",
+        "superfluid",
+        "fermi",
+        "condensate"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "76": {
+      "n": "环理想与模理论",
+      "k": [
+        "rings",
+        "ideals",
+        "ring",
+        "modules",
+        "macaulay"
+      ],
+      "l": 3,
+      "p": "RA"
+    },
+    "77": {
+      "n": "脑电与BCI跨被试",
+      "k": [
+        "eeg",
+        "subject",
+        "brain",
+        "electroencephalography",
+        "bci"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "78": {
+      "n": "学术引用与同行评议",
+      "k": [
+        "citation",
+        "citations",
+        "peer",
+        "scholarly",
+        "scientific"
+      ],
+      "l": 3,
+      "p": "CL"
+    },
+    "79": {
+      "n": "掩码扩散解码模型",
+      "k": [
+        "diffusion",
+        "masked",
+        "decoding",
+        "dlms",
+        "dllms"
+      ],
+      "l": 3,
+      "p": "CL"
+    },
+    "80": {
+      "n": "量子优化退火算法",
+      "k": [
+        "quantum",
+        "qaoa",
+        "optimization",
+        "qubo",
+        "annealing"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "81": {
+      "n": "种群捕食感染动力学",
+      "k": [
+        "species",
+        "population",
+        "predator",
+        "prey",
+        "infection"
+      ],
+      "l": 3,
+      "p": "PE"
+    },
+    "82": {
+      "n": "随机奇异矩阵算法",
+      "k": [
+        "matrix",
+        "matrices",
+        "singular",
+        "randomized",
+        "algorithm"
+      ],
+      "l": 3,
+      "p": "NA"
+    },
+    "83": {
+      "n": "算子空间数学理论",
+      "k": [
+        "operators",
+        "spaces",
+        "mathbb",
+        "infty",
+        "mathcal"
+      ],
+      "l": 3,
+      "p": "PR"
+    },
+    "84": {
+      "n": "脉冲神经形态网络",
+      "k": [
+        "spiking",
+        "neuromorphic",
+        "snns",
+        "snn",
+        "spike"
+      ],
+      "l": 3,
+      "p": "NE"
+    },
+    "85": {
+      "n": "人形机器人遥操作",
+      "k": [
+        "humanoid",
+        "manipulation",
+        "motion",
+        "locomotion",
+        "teleoperation"
+      ],
+      "l": 3,
+      "p": "RO"
+    },
+    "86": {
+      "n": "中子星物态方程研究",
+      "k": [
+        "neutron",
+        "stars",
+        "star",
+        "matter",
+        "eos"
+      ],
+      "l": 3,
+      "p": "HE"
+    },
+    "87": {
+      "n": "轴子暗物质探测",
+      "k": [
+        "dark",
+        "matter",
+        "axion",
+        "dm",
+        "photon"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "88": {
+      "n": "原子核与核子结构",
+      "k": [
+        "nuclear",
+        "nuclei",
+        "nucleon",
+        "neutron",
+        "proton"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "89": {
+      "n": "望远镜天空校准",
+      "k": [
+        "sky",
+        "calibration",
+        "telescope",
+        "cte",
+        "observatory"
+      ],
+      "l": 3,
+      "p": "IM"
+    },
+    "90": {
+      "n": "机器人触觉力操控",
+      "k": [
+        "tactile",
+        "contact",
+        "force",
+        "manipulation",
+        "robotic"
+      ],
+      "l": 3,
+      "p": "RO"
+    },
+    "91": {
+      "n": "镍基超导研究",
+      "k": [
+        "superconductivity",
+        "superconducting",
+        "_3",
+        "nickelates",
+        "_2"
+      ],
+      "l": 3,
+      "p": "mtrl-sci"
+    },
+    "92": {
+      "n": "智能体记忆工具",
+      "k": [
+        "memory",
+        "agent",
+        "agents",
+        "agentic",
+        "tool"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "93": {
+      "n": "随机矩阵理论",
+      "k": [
+        "random",
+        "matrices",
+        "entries",
+        "matrix",
+        "hermitian"
+      ],
+      "l": 3,
+      "p": "PR"
+    },
+    "94": {
+      "n": "软巴拿赫空间",
+      "k": [
+        "spaces",
+        "mathfrak",
+        "soft",
+        "banach",
+        "aura"
+      ],
+      "l": 3,
+      "p": "FA"
+    },
+    "95": {
+      "n": "城市交通移动性",
+      "k": [
+        "mobility",
+        "traffic",
+        "urban",
+        "travel",
+        "spatio"
+      ],
+      "l": 3,
+      "p": "soc-ph"
+    },
+    "96": {
+      "n": "量子测量理论",
+      "k": [
+        "mechanics",
+        "quantum",
+        "theory",
+        "born",
+        "measurement"
+      ],
+      "l": 3,
+      "p": "LO"
+    },
+    "97": {
+      "n": "社交媒体内容治理",
+      "k": [
+        "political",
+        "media",
+        "social",
+        "community",
+        "moderation"
+      ],
+      "l": 3,
+      "p": "CL"
+    },
+    "98": {
+      "n": "星系红移巡天",
+      "k": [
+        "galaxy",
+        "galaxies",
+        "redshift",
+        "photometric",
+        "surveys"
+      ],
+      "l": 3,
+      "p": "GA"
+    },
+    "99": {
+      "n": "差分隐私保护",
+      "k": [
+        "privacy",
+        "private",
+        "dp",
+        "differentially",
+        "differential"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "100": {
+      "n": "可驯与Sofic代数作用",
+      "k": [
+        "algebras",
+        "algebra",
+        "sofic",
+        "amenable",
+        "actions"
+      ],
+      "l": 3,
+      "p": "OA"
+    },
+    "101": {
+      "n": "量子密码与后量子安全",
+      "k": [
+        "qkd",
+        "security",
+        "pqc",
+        "quantum",
+        "cryptographic"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "102": {
+      "n": "三维高斯溅射渲染",
+      "k": [
+        "3dgs",
+        "splatting",
+        "rendering",
+        "gaussian",
+        "3d"
+      ],
+      "l": 3,
+      "p": "CV"
+    },
+    "103": {
+      "n": "人工智能治理框架",
+      "k": [
+        "ai",
+        "governance",
+        "legal",
+        "regulatory",
+        "technical"
+      ],
+      "l": 3,
+      "p": "CR"
+    },
+    "104": {
+      "n": "人口属性公平性研究",
+      "k": [
+        "fairness",
+        "fair",
+        "demographic",
+        "unfairness",
+        "attributes"
+      ],
+      "l": 3,
+      "p": "DS"
+    },
+    "105": {
+      "n": "语音情感识别分析",
+      "k": [
+        "emotion",
+        "emotional",
+        "speech",
+        "recognition",
+        "affective"
+      ],
+      "l": 3,
+      "p": "CL"
+    },
+    "106": {
+      "n": "医学影像重建技术",
+      "k": [
+        "mri",
+        "ct",
+        "reconstruction",
+        "image",
+        "imaging"
+      ],
+      "l": 3,
+      "p": "CV"
+    },
+    "107": {
+      "n": "渗流与随机通道过程",
+      "k": [
+        "percolation",
+        "brownian",
+        "random",
+        "pfaffian",
+        "passage"
+      ],
+      "l": 3,
+      "p": "PR"
+    },
+    "108": {
+      "n": "保形预测与不确定性",
+      "k": [
+        "conformal",
+        "prediction",
+        "coverage",
+        "sets",
+        "uncertainty"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "109": {
+      "n": "越狱攻击与安全防御",
+      "k": [
+        "jailbreak",
+        "safety",
+        "attacks",
+        "jailbreaks",
+        "jailbreaking"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "110": {
+      "n": "冰立方惰性中微子",
+      "k": [
+        "neutrino",
+        "neutrinos",
+        "sterile",
+        "flavor",
+        "icecube"
+      ],
+      "l": 3,
+      "p": "HE"
+    },
+    "111": {
+      "n": "贝叶斯混合后验推断",
+      "k": [
+        "bayesian",
+        "posterior",
+        "mcmc",
+        "gibbs",
+        "mixture"
+      ],
+      "l": 3,
+      "p": "ST"
+    },
+    "112": {
+      "n": "多智能体资源分配",
+      "k": [
+        "envy",
+        "goods",
+        "mms",
+        "allocation",
+        "agents"
+      ],
+      "l": 3,
+      "p": "GT"
+    },
+    "113": {
+      "n": "抗扰动预测控制",
+      "k": [
+        "control",
+        "mpc",
+        "predictive",
+        "disturbances",
+        "controllers"
+      ],
+      "l": 3,
+      "p": "SY"
+    },
+    "114": {
+      "n": "差分隐私成员推断",
+      "k": [
+        "privacy",
+        "dp",
+        "membership",
+        "mia",
+        "attacks"
+      ],
+      "l": 3,
+      "p": "CR"
+    },
+    "115": {
+      "n": "模态直觉命题逻辑",
+      "k": [
+        "logic",
+        "logics",
+        "modal",
+        "intuitionistic",
+        "propositional"
+      ],
+      "l": 3,
+      "p": "LO"
+    },
+    "116": {
+      "n": "张量范畴代数",
+      "k": [
+        "category",
+        "categories",
+        "tensor",
+        "algebras",
+        "algebra"
+      ],
+      "l": 3,
+      "p": "KT"
+    },
+    "117": {
+      "n": "超新星爆发抛射物",
+      "k": [
+        "sn",
+        "sne",
+        "ia",
+        "explosion",
+        "ejecta"
+      ],
+      "l": 3,
+      "p": "GA"
+    },
+    "118": {
+      "n": "GPU内存通信优化",
+      "k": [
+        "gpu",
+        "gpus",
+        "cpu",
+        "memory",
+        "communication"
+      ],
+      "l": 3,
+      "p": "AR"
+    },
+    "119": {
+      "n": "阿尔茨海默脑成像",
+      "k": [
+        "brain",
+        "fmri",
+        "alzheimer",
+        "disease",
+        "neuroimaging"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "120": {
+      "n": "心电光电容积描记",
+      "k": [
+        "ecg",
+        "ppg",
+        "electrocardiogram",
+        "cardiac",
+        "blood"
+      ],
+      "l": 3,
+      "p": "med-ph"
+    },
+    "121": {
+      "n": "大模型答案评估",
+      "k": [
+        "judge",
+        "evaluation",
+        "llm",
+        "answers",
+        "qa"
+      ],
+      "l": 3,
+      "p": "CL"
+    },
+    "122": {
+      "n": "医学影像诊断",
+      "k": [
+        "medical",
+        "clinical",
+        "diagnostic",
+        "radiology",
+        "vision"
+      ],
+      "l": 3,
+      "p": "CV"
+    },
+    "123": {
+      "n": "贝叶斯反问题",
+      "k": [
+        "inverse",
+        "posterior",
+        "problems",
+        "bayesian",
+        "prior"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "124": {
+      "n": "工业异常检测",
+      "k": [
+        "anomaly",
+        "detection",
+        "anomalies",
+        "industrial",
+        "mvtec"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "125": {
+      "n": "代码漏洞安全",
+      "k": [
+        "vulnerability",
+        "security",
+        "vulnerabilities",
+        "code",
+        "cve"
+      ],
+      "l": 3,
+      "p": "SE"
+    },
+    "126": {
+      "n": "程序编译验证",
+      "k": [
+        "program",
+        "programs",
+        "verification",
+        "compiler",
+        "rust"
+      ],
+      "l": 3,
+      "p": "PL"
+    },
+    "127": {
+      "n": "光声荧光成像",
+      "k": [
+        "imaging",
+        "resolution",
+        "photoacoustic",
+        "fluorescence",
+        "tissue"
+      ],
+      "l": 3,
+      "p": "optics"
+    },
+    "128": {
+      "n": "软体接触机器人",
+      "k": [
+        "contact",
+        "soft",
+        "robot",
+        "robots",
+        "rod"
+      ],
+      "l": 3,
+      "p": "RO"
+    },
+    "129": {
+      "n": "辛接触流形",
+      "k": [
+        "symplectic",
+        "contact",
+        "manifolds",
+        "poisson",
+        "lagrangian"
+      ],
+      "l": 3,
+      "p": "DG"
+    },
+    "130": {
+      "n": "排列组合与相交族",
+      "k": [
+        "permutations",
+        "partitions",
+        "mathcal",
+        "binom",
+        "intersecting"
+      ],
+      "l": 3,
+      "p": "CO"
+    },
+    "131": {
+      "n": "Shapley特征解释方法",
+      "k": [
+        "explanations",
+        "shapley",
+        "shap",
+        "explanation",
+        "feature"
+      ],
+      "l": 3,
+      "p": "CO"
+    },
+    "132": {
+      "n": "传染病传播模型",
+      "k": [
+        "epidemic",
+        "disease",
+        "infectious",
+        "covid",
+        "transmission"
+      ],
+      "l": 3,
+      "p": "SI"
+    },
+    "133": {
+      "n": "博弈谈判与LLM策略",
+      "k": [
+        "strategic",
+        "game",
+        "negotiation",
+        "games",
+        "llms"
+      ],
+      "l": 3,
+      "p": "GT"
+    },
+    "134": {
+      "n": "DNA序列编码与后缀",
+      "k": [
+        "codes",
+        "string",
+        "log",
+        "dna",
+        "suffix"
+      ],
+      "l": 3,
+      "p": "IT"
+    },
+    "135": {
+      "n": "中微子跷跷板机制",
+      "k": [
+        "neutrino",
+        "seesaw",
+        "leptogenesis",
+        "handed",
+        "lepton"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "136": {
+      "n": "肾脏超声内镜手术",
+      "k": [
+        "surgical",
+        "ultrasound",
+        "surgery",
+        "kidney",
+        "endoscopic"
+      ],
+      "l": 3,
+      "p": "CV"
+    },
+    "137": {
+      "n": "时间序列异常检测",
+      "k": [
+        "anomaly",
+        "anomalies",
+        "detection",
+        "series",
+        "tsad"
+      ],
+      "l": 3,
+      "p": "SE"
+    },
+    "138": {
+      "n": "模形式与Hecke算子",
+      "k": [
+        "gl",
+        "forms",
+        "modular",
+        "hecke",
+        "eisenstein"
+      ],
+      "l": 3,
+      "p": "NT"
+    },
+    "139": {
+      "n": "科学发现智能体研究",
+      "k": [
+        "scientific",
+        "discovery",
+        "research",
+        "agents",
+        "agent"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "140": {
+      "n": "量子自旋液体相",
+      "k": [
+        "spin",
+        "liquids",
+        "phases",
+        "liquid",
+        "quantum"
+      ],
+      "l": 3,
+      "p": "str-el"
+    },
+    "141": {
+      "n": "细胞化学反应",
+      "k": [
+        "cell",
+        "reaction",
+        "chemical",
+        "cells",
+        "biological"
+      ],
+      "l": 3,
+      "p": "CB"
+    },
+    "142": {
+      "n": "黑洞霍金熵",
+      "k": [
+        "black",
+        "holes",
+        "hole",
+        "entropy",
+        "hawking"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "143": {
+      "n": "细胞基因扰动测序",
+      "k": [
+        "cell",
+        "gene",
+        "seq",
+        "rna",
+        "perturbation"
+      ],
+      "l": 3,
+      "p": "CV"
+    },
+    "144": {
+      "n": "移动智能体界面",
+      "k": [
+        "gui",
+        "mobile",
+        "agents",
+        "agent",
+        "ui"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "145": {
+      "n": "比特币市场波动",
+      "k": [
+        "market",
+        "price",
+        "liquidity",
+        "volatility",
+        "bitcoin"
+      ],
+      "l": 3,
+      "p": "RM"
+    },
+    "146": {
+      "n": "ZF基数选择公理",
+      "k": [
+        "cardinals",
+        "mathsf",
+        "cardinal",
+        "zf",
+        "choice"
+      ],
+      "l": 3,
+      "p": "LO"
+    },
+    "147": {
+      "n": "整数域三项式生成",
+      "k": [
+        "mathbb",
+        "trinomials",
+        "fields",
+        "integers",
+        "monogenic"
+      ],
+      "l": 3,
+      "p": "AC"
+    },
+    "148": {
+      "n": "凸多边形顶点结构",
+      "k": [
+        "triangle",
+        "triangles",
+        "polygons",
+        "convex",
+        "vertices"
+      ],
+      "l": 3,
+      "p": "CG"
+    },
+    "149": {
+      "n": "双耳麦克风阵列",
+      "k": [
+        "microphone",
+        "acoustic",
+        "binaural",
+        "microphones",
+        "array"
+      ],
+      "l": 3,
+      "p": "AS"
+    },
+    "150": {
+      "n": "无穷范畴与松纤维化",
+      "k": [
+        "categories",
+        "category",
+        "infty",
+        "fibrations",
+        "lax"
+      ],
+      "l": 3,
+      "p": "AT"
+    },
+    "151": {
+      "n": "视觉大模型幻觉解码",
+      "k": [
+        "hallucination",
+        "hallucinations",
+        "lvlms",
+        "visual",
+        "decoding"
+      ],
+      "l": 3,
+      "p": "CV"
+    },
+    "152": {
+      "n": "多模态缺失模态学习",
+      "k": [
+        "modality",
+        "modalities",
+        "multimodal",
+        "modal",
+        "missing"
+      ],
+      "l": 3,
+      "p": "SM"
+    },
+    "153": {
+      "n": "自旋玻璃相变研究",
+      "k": [
+        "ising",
+        "spin",
+        "glass",
+        "bf",
+        "transition"
+      ],
+      "l": 3,
+      "p": "stat-mech"
+    },
+    "154": {
+      "n": "等变拓扑主成分分析",
+      "k": [
+        "equivariant",
+        "spd",
+        "symmetries",
+        "topology",
+        "pca"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "155": {
+      "n": "激光等离子体尾波电子束",
+      "k": [
+        "laser",
+        "plasma",
+        "wakefield",
+        "electron",
+        "beams"
+      ],
+      "l": 3,
+      "p": "plasm-ph"
+    },
+    "156": {
+      "n": "全息对偶与Krylov复杂度",
+      "k": [
+        "holographic",
+        "cft",
+        "ads",
+        "bulk",
+        "krylov"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "157": {
+      "n": "边缘云QUIC负载调度",
+      "k": [
+        "packet",
+        "load",
+        "edge",
+        "quic",
+        "cloud"
+      ],
+      "l": 3,
+      "p": "DC"
+    },
+    "158": {
+      "n": "可重构光子数字计算",
+      "k": [
+        "photonic",
+        "optical",
+        "computing",
+        "digital",
+        "reconfiguration"
+      ],
+      "l": 3,
+      "p": "dis-nn"
+    },
+    "159": {
+      "n": "全同态加密与隐私保护",
+      "k": [
+        "encryption",
+        "homomorphic",
+        "fhe",
+        "encrypted",
+        "privacy"
+      ],
+      "l": 3,
+      "p": "CR"
+    },
+    "160": {
+      "n": "线性切换反馈控制",
+      "k": [
+        "switched",
+        "feedback",
+        "control",
+        "linear",
+        "systems"
+      ],
+      "l": 3,
+      "p": "MO"
+    },
+    "161": {
+      "n": "激光雷达点云传感",
+      "k": [
+        "lidar",
+        "3d",
+        "clouds",
+        "point",
+        "sensor"
+      ],
+      "l": 3,
+      "p": "RO"
+    },
+    "162": {
+      "n": "无标记肌电手势识别",
+      "k": [
+        "gesture",
+        "semg",
+        "markerless",
+        "gestures",
+        "recognition"
+      ],
+      "l": 3,
+      "p": "CV"
+    },
+    "163": {
+      "n": "拍卖定价与买方收益",
+      "k": [
+        "revenue",
+        "auction",
+        "auctions",
+        "price",
+        "buyers"
+      ],
+      "l": 3,
+      "p": "TH"
+    },
+    "164": {
+      "n": "社交机器人人机交互",
+      "k": [
+        "robot",
+        "hri",
+        "social",
+        "robots",
+        "human"
+      ],
+      "l": 3,
+      "p": "RO"
+    },
+    "165": {
+      "n": "非线性薛定谔方程解",
+      "k": [
+        "blow",
+        "equation",
+        "nonlinearity",
+        "nls",
+        "solutions"
+      ],
+      "l": 3,
+      "p": "AP"
+    },
+    "166": {
+      "n": "物联网流量入侵检测",
+      "k": [
+        "traffic",
+        "iot",
+        "intrusion",
+        "ids",
+        "detection"
+      ],
+      "l": 3,
+      "p": "CR"
+    },
+    "167": {
+      "n": "超导量子比特耦合",
+      "k": [
+        "qubit",
+        "superconducting",
+        "qubits",
+        "coupler",
+        "tls"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "168": {
+      "n": "行星偏心率与迁移",
+      "k": [
+        "planet",
+        "planets",
+        "eccentricity",
+        "pluto",
+        "migration"
+      ],
+      "l": 3,
+      "p": "EP"
+    },
+    "169": {
+      "n": "智能体工具与基准",
+      "k": [
+        "tool",
+        "agent",
+        "agents",
+        "tools",
+        "bench"
+      ],
+      "l": 3,
+      "p": "CV"
+    },
+    "170": {
+      "n": "视觉大模型越狱攻击",
+      "k": [
+        "attack",
+        "attacks",
+        "lvlms",
+        "jailbreak",
+        "vision"
+      ],
+      "l": 3,
+      "p": "CV"
+    },
+    "171": {
+      "n": "机器遗忘与擦除",
+      "k": [
+        "unlearning",
+        "forget",
+        "forgetting",
+        "forgotten",
+        "erasure"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "172": {
+      "n": "多模态时序推理预测",
+      "k": [
+        "series",
+        "time",
+        "forecasting",
+        "reasoning",
+        "multimodal"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "173": {
+      "n": "扩散对齐奖励采样",
+      "k": [
+        "reward",
+        "alignment",
+        "diffusion",
+        "grpo",
+        "sampling"
+      ],
+      "l": 3,
+      "p": "SM"
+    },
+    "174": {
+      "n": "摊销贝叶斯后验推断",
+      "k": [
+        "bayesian",
+        "posterior",
+        "sbi",
+        "inference",
+        "amortized"
+      ],
+      "l": 3,
+      "p": "ST"
+    },
+    "175": {
+      "n": "选举投票委员会机制",
+      "k": [
+        "voting",
+        "voters",
+        "elections",
+        "voter",
+        "committee"
+      ],
+      "l": 3,
+      "p": "GN"
+    },
+    "176": {
+      "n": "开放词汇目标分割计数",
+      "k": [
+        "segmentation",
+        "object",
+        "vocabulary",
+        "counting",
+        "oov"
+      ],
+      "l": 3,
+      "p": "CV"
+    },
+    "177": {
+      "n": "合金晶界再结晶位错",
+      "k": [
+        "dislocation",
+        "grain",
+        "alloys",
+        "recrystallization",
+        "gb"
+      ],
+      "l": 3,
+      "p": "mtrl-sci"
+    },
+    "178": {
+      "n": "里德-所罗门码与和",
+      "k": [
+        "codes",
+        "reed",
+        "singleton",
+        "solomon",
+        "sum"
+      ],
+      "l": 3,
+      "p": "CO"
+    },
+    "179": {
+      "n": "拥堵定价车队调度",
+      "k": [
+        "transit",
+        "pricing",
+        "service",
+        "congestion",
+        "fleet"
+      ],
+      "l": 3,
+      "p": "MO"
+    },
+    "180": {
+      "n": "高光谱图像分析",
+      "k": [
+        "hyperspectral",
+        "spectral",
+        "hsi",
+        "multispectral",
+        "image"
+      ],
+      "l": 3,
+      "p": "IV"
+    },
+    "181": {
+      "n": "恒星双星脉动研究",
+      "k": [
+        "stars",
+        "tess",
+        "binaries",
+        "scuti",
+        "odot"
+      ],
+      "l": 3,
+      "p": "SR"
+    },
+    "182": {
+      "n": "遥感影像变化检测",
+      "k": [
+        "change",
+        "remote",
+        "imagery",
+        "scd",
+        "sentinel"
+      ],
+      "l": 3,
+      "p": "CV"
+    },
+    "183": {
+      "n": "图拉普拉斯特征值",
+      "k": [
+        "graphs",
+        "graph",
+        "laplacian",
+        "eigenvalue",
+        "eigenvalues"
+      ],
+      "l": 3,
+      "p": "CO"
+    },
+    "184": {
+      "n": "随机麦基恩-朗之万方程",
+      "k": [
+        "langevin",
+        "dissipation",
+        "stochastic",
+        "particle",
+        "mckean"
+      ],
+      "l": 3,
+      "p": "PR"
+    },
+    "185": {
+      "n": "移动边缘计算卸载",
+      "k": [
+        "mec",
+        "offloading",
+        "edge",
+        "wireless",
+        "latency"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "186": {
+      "n": "分布式共识收敛",
+      "k": [
+        "consensus",
+        "decentralized",
+        "distributed",
+        "convergence",
+        "communication"
+      ],
+      "l": 3,
+      "p": "SY"
+    },
+    "187": {
+      "n": "单目三维人体姿态",
+      "k": [
+        "pose",
+        "3d",
+        "human",
+        "skel",
+        "monocular"
+      ],
+      "l": 3,
+      "p": "CV"
+    },
+    "188": {
+      "n": "NP与PSPACE证明",
+      "k": [
+        "np",
+        "proof",
+        "sf",
+        "pspace",
+        "propositional"
+      ],
+      "l": 3,
+      "p": "CC"
+    },
+    "189": {
+      "n": "凸体与椭球逼近",
+      "k": [
+        "bodies",
+        "convex",
+        "ellipsoid",
+        "body",
+        "ball"
+      ],
+      "l": 3,
+      "p": "MG"
+    },
+    "190": {
+      "n": "大语言模型数学推理",
+      "k": [
+        "mathematics",
+        "mathematical",
+        "reasoning",
+        "llms",
+        "ai"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "191": {
+      "n": "幻觉检测与AUROC",
+      "k": [
+        "hallucination",
+        "hallucinations",
+        "detection",
+        "auroc",
+        "hallucinated"
+      ],
+      "l": 3,
+      "p": "CL"
+    },
+    "192": {
+      "n": "冰立方中微子弥散辐射",
+      "k": [
+        "neutrino",
+        "neutrinos",
+        "icecube",
+        "ray",
+        "diffuse"
+      ],
+      "l": 3,
+      "p": "HE"
+    },
+    "193": {
+      "n": "张量补全与低秩分解",
+      "k": [
+        "tensor",
+        "tensors",
+        "nmf",
+        "completion",
+        "rank"
+      ],
+      "l": 3,
+      "p": "ST"
+    },
+    "194": {
+      "n": "随机粗糙平均场控制",
+      "k": [
+        "mean",
+        "stochastic",
+        "control",
+        "rough",
+        "quadratic"
+      ],
+      "l": 3,
+      "p": "AP"
+    },
+    "195": {
+      "n": "自然语言转SQL与表模式",
+      "k": [
+        "sql",
+        "table",
+        "schema",
+        "tables",
+        "nl2sql"
+      ],
+      "l": 3,
+      "p": "CL"
+    },
+    "196": {
+      "n": "混合专家路由机制",
+      "k": [
+        "experts",
+        "moe",
+        "expert",
+        "routing",
+        "mixture"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "197": {
+      "n": "最近邻搜索与HNSW索引",
+      "k": [
+        "neighbor",
+        "nearest",
+        "search",
+        "hnsw",
+        "index"
+      ],
+      "l": 3,
+      "p": "DB"
+    },
+    "198": {
+      "n": "锂离子固态电池",
+      "k": [
+        "li",
+        "batteries",
+        "lithium",
+        "ion",
+        "solid"
+      ],
+      "l": 3,
+      "p": "mtrl-sci"
+    },
+    "199": {
+      "n": "糖尿病视网膜病灶分割",
+      "k": [
+        "retinal",
+        "fundus",
+        "diabetic",
+        "retinopathy",
+        "segmentation"
+      ],
+      "l": 3,
+      "p": "CV"
+    },
+    "200": {
+      "n": "机器学习临床生存风险预测",
+      "k": [
+        "machine",
+        "risk",
+        "clinical",
+        "survival",
+        "auc"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "201": {
+      "n": "演化博弈合作与声誉机制",
+      "k": [
+        "cooperation",
+        "game",
+        "evolutionary",
+        "social",
+        "reputation"
+      ],
+      "l": 3,
+      "p": "GT"
+    },
+    "202": {
+      "n": "推测解码与令牌验证",
+      "k": [
+        "speculative",
+        "draft",
+        "decoding",
+        "verification",
+        "tokens"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "203": {
+      "n": "对称保护拓扑相与能隙",
+      "k": [
+        "symmetry",
+        "gapped",
+        "phases",
+        "spt",
+        "symmetries"
+      ],
+      "l": 3,
+      "p": "str-el"
+    },
+    "204": {
+      "n": "盲人与视障用户可访问性",
+      "k": [
+        "blind",
+        "accessibility",
+        "blv",
+        "users",
+        "sighted"
+      ],
+      "l": 3,
+      "p": "HC"
+    },
+    "205": {
+      "n": "视觉Transformer与注意力机制",
+      "k": [
+        "vits",
+        "attention",
+        "transformers",
+        "vision",
+        "vit"
+      ],
+      "l": 3,
+      "p": "CV"
+    },
+    "206": {
+      "n": "特征金字塔目标检测方法",
+      "k": [
+        "detection",
+        "object",
+        "feature",
+        "pyramid",
+        "flim"
+      ],
+      "l": 3,
+      "p": "CV"
+    },
+    "207": {
+      "n": "对抗攻击与防御鲁棒性",
+      "k": [
+        "adversarial",
+        "attacks",
+        "attack",
+        "robustness",
+        "defense"
+      ],
+      "l": 3,
+      "p": "CV"
+    },
+    "208": {
+      "n": "随机游走与分支破产过程",
+      "k": [
+        "walk",
+        "random",
+        "walks",
+        "branching",
+        "ruin"
+      ],
+      "l": 3,
+      "p": "PR"
+    },
+    "209": {
+      "n": "Harish-Chandra GL(n)",
+      "k": [
+        "harish",
+        "gl",
+        "chandra",
+        "adic",
+        "representations"
+      ],
+      "l": 3,
+      "p": "RT"
+    },
+    "210": {
+      "n": "哈伯德模型与超导配对",
+      "k": [
+        "hubbard",
+        "mott",
+        "superconductivity",
+        "superconducting",
+        "pairing"
+      ],
+      "l": 3,
+      "p": "str-el"
+    },
+    "211": {
+      "n": "拜占庭共识协议",
+      "k": [
+        "consensus",
+        "protocol",
+        "byzantine",
+        "protocols",
+        "log"
+      ],
+      "l": 3,
+      "p": "DC"
+    },
+    "212": {
+      "n": "人工智能伦理道德",
+      "k": [
+        "moral",
+        "ethical",
+        "ai",
+        "ethics",
+        "morally"
+      ],
+      "l": 3,
+      "p": "CL"
+    },
+    "213": {
+      "n": "贫金属星与铁丰度",
+      "k": [
+        "stars",
+        "fe",
+        "metallicity",
+        "metal",
+        "poor"
+      ],
+      "l": 3,
+      "p": "GA"
+    },
+    "214": {
+      "n": "有向网络社区发现",
+      "k": [
+        "community",
+        "communities",
+        "networks",
+        "block",
+        "directed"
+      ],
+      "l": 3,
+      "p": "ME"
+    },
+    "215": {
+      "n": "马尔可夫链蒙特卡洛法",
+      "k": [
+        "hmc",
+        "langevin",
+        "metropolis",
+        "monte",
+        "carlo"
+      ],
+      "l": 3,
+      "p": "NA"
+    },
+    "216": {
+      "n": "图数据子群检测",
+      "k": [
+        "groups",
+        "graph",
+        "group",
+        "giudici",
+        "subgroups"
+      ],
+      "l": 3,
+      "p": "GR"
+    },
+    "217": {
+      "n": "量子计量与纠缠态",
+      "k": [
+        "quantum",
+        "metrology",
+        "fisher",
+        "states",
+        "entanglement"
+      ],
+      "l": 3,
+      "p": "MO"
+    },
+    "218": {
+      "n": "椭圆曲线与塞尔默群",
+      "k": [
+        "elliptic",
+        "curves",
+        "mathbb",
+        "ell",
+        "selmer"
+      ],
+      "l": 3,
+      "p": "NT"
+    },
+    "219": {
+      "n": "无人机高空作业",
+      "k": [
+        "uav",
+        "uavs",
+        "aerial",
+        "unmanned",
+        "altitude"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "220": {
+      "n": "离子与电解质电荷",
+      "k": [
+        "ion",
+        "ionic",
+        "electrolytes",
+        "electrolyte",
+        "charge"
+      ],
+      "l": 3,
+      "p": "soft"
+    },
+    "221": {
+      "n": "随机积分迭代理论",
+      "k": [
+        "iterated",
+        "ito",
+        "stratonovich",
+        "integrals",
+        "stochastic"
+      ],
+      "l": 3,
+      "p": "PR"
+    },
+    "222": {
+      "n": "太阳能可再生预测",
+      "k": [
+        "forecasting",
+        "solar",
+        "cdr",
+        "renewable",
+        "weather"
+      ],
+      "l": 3,
+      "p": "SR"
+    },
+    "223": {
+      "n": "预训练与语料标记",
+      "k": [
+        "training",
+        "pretraining",
+        "token",
+        "seed",
+        "corpus"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "224": {
+      "n": "M87黑洞吸积磁化",
+      "k": [
+        "accretion",
+        "hole",
+        "black",
+        "magnetic",
+        "m87"
+      ],
+      "l": 3,
+      "p": "HE"
+    },
+    "225": {
+      "n": "蛋白质基因组重复",
+      "k": [
+        "protein",
+        "dna",
+        "genomic",
+        "plms",
+        "repetition"
+      ],
+      "l": 3,
+      "p": "QM"
+    },
+    "226": {
+      "n": "印度司法税务判决",
+      "k": [
+        "legal",
+        "judicial",
+        "indian",
+        "judgment",
+        "tax"
+      ],
+      "l": 3,
+      "p": "CL"
+    },
+    "227": {
+      "n": "数字水印比特嵌入",
+      "k": [
+        "watermarking",
+        "watermark",
+        "bit",
+        "watermarks",
+        "watermarked"
+      ],
+      "l": 3,
+      "p": "CR"
+    },
+    "228": {
+      "n": "超快自旋磁子动力学",
+      "k": [
+        "magnon",
+        "spin",
+        "magnetization",
+        "magneto",
+        "ultrafast"
+      ],
+      "l": 3,
+      "p": "mes-hall"
+    },
+    "229": {
+      "n": "关系型表格数据库",
+      "k": [
+        "relational",
+        "databases",
+        "tabular",
+        "rdl",
+        "table"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "230": {
+      "n": "赛季足球队员研究",
+      "k": [
+        "season",
+        "football",
+        "team",
+        "player",
+        "players"
+      ],
+      "l": 3,
+      "p": "SI"
+    },
+    "231": {
+      "n": "区块链零知识安全共识",
+      "k": [
+        "blockchain",
+        "consent",
+        "cryptographic",
+        "zkbid",
+        "security"
+      ],
+      "l": 3,
+      "p": "LO"
+    },
+    "232": {
+      "n": "磁流体湍流重联研究",
+      "k": [
+        "turbulence",
+        "mhd",
+        "reconnection",
+        "alfvén",
+        "magnetic"
+      ],
+      "l": 3,
+      "p": "CO"
+    },
+    "233": {
+      "n": "人脸融合伪造识别",
+      "k": [
+        "forgery",
+        "facial",
+        "face",
+        "morphing",
+        "recognition"
+      ],
+      "l": 3,
+      "p": "CV"
+    },
+    "234": {
+      "n": "Wasserstein分布距离度量",
+      "k": [
+        "wasserstein",
+        "distance",
+        "mmd",
+        "distributions",
+        "kantorovich"
+      ],
+      "l": 3,
+      "p": "NA"
+    },
+    "235": {
+      "n": "FPGA硬件加速器设计",
+      "k": [
+        "fpga",
+        "hardware",
+        "fpgas",
+        "accelerator",
+        "accelerators"
+      ],
+      "l": 3,
+      "p": "AR"
+    },
+    "236": {
+      "n": "曲面与曲线几何分析",
+      "k": [
+        "surfaces",
+        "minkowski",
+        "curves",
+        "bertrand",
+        "loxodromes"
+      ],
+      "l": 3,
+      "p": "CV"
+    },
+    "237": {
+      "n": "优化算法性能比较",
+      "k": [
+        "muon",
+        "optimizers",
+        "adam",
+        "shampoo",
+        "soap"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "238": {
+      "n": "路径规划与调度问题",
+      "k": [
+        "tsp",
+        "routing",
+        "cvrp",
+        "instances",
+        "scheduling"
+      ],
+      "l": 3,
+      "p": "DC"
+    },
+    "239": {
+      "n": "金融绿色漂洗分析",
+      "k": [
+        "financial",
+        "finance",
+        "greenwashing",
+        "fimi",
+        "fincot"
+      ],
+      "l": 3,
+      "p": "CL"
+    },
+    "240": {
+      "n": "变点检测与CUSUM",
+      "k": [
+        "change",
+        "changepoint",
+        "point",
+        "detection",
+        "cusum"
+      ],
+      "l": 3,
+      "p": "ME"
+    },
+    "241": {
+      "n": "星地量子密钥分发",
+      "k": [
+        "qkd",
+        "satellite",
+        "key",
+        "quantum",
+        "fiber"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "242": {
+      "n": "稀疏自编码器特征学习",
+      "k": [
+        "saes",
+        "sae",
+        "autoencoders",
+        "features",
+        "sparse"
+      ],
+      "l": 3,
+      "p": "CL"
+    },
+    "243": {
+      "n": "飞行机器人翼型设计",
+      "k": [
+        "aerial",
+        "flight",
+        "robot",
+        "wings",
+        "wing"
+      ],
+      "l": 3,
+      "p": "RO"
+    },
+    "244": {
+      "n": "师生蒸馏与Hyena模型",
+      "k": [
+        "distillation",
+        "kd",
+        "teacher",
+        "student",
+        "hyena"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "245": {
+      "n": "孟加拉语仇恨表情包检测",
+      "k": [
+        "memes",
+        "meme",
+        "hate",
+        "hateful",
+        "bengali"
+      ],
+      "l": 3,
+      "p": "CV"
+    },
+    "246": {
+      "n": "Lusztig簇与Hecke表",
+      "k": [
+        "lusztig",
+        "2n",
+        "cluster",
+        "hecke",
+        "tableaux"
+      ],
+      "l": 3,
+      "p": "RT"
+    },
+    "247": {
+      "n": "医学图像形变配准",
+      "k": [
+        "registration",
+        "anatomical",
+        "medical",
+        "image",
+        "deformation"
+      ],
+      "l": 3,
+      "p": "CV"
+    },
+    "248": {
+      "n": "对称子多极功率谱",
+      "k": [
+        "power",
+        "spectrum",
+        "symmetron",
+        "dipole",
+        "multipoles"
+      ],
+      "l": 3,
+      "p": "CO"
+    },
+    "249": {
+      "n": "马约拉纳拓扑模与线配对",
+      "k": [
+        "majorana",
+        "topological",
+        "modes",
+        "wire",
+        "pairing"
+      ],
+      "l": 3,
+      "p": "supr-con"
+    },
+    "250": {
+      "n": "精益形式化数学验证",
+      "k": [
+        "lean",
+        "proof",
+        "formal",
+        "mathematics",
+        "verification"
+      ],
+      "l": 3,
+      "p": "LO"
+    },
+    "251": {
+      "n": "二元极值Copula分析",
+      "k": [
+        "extreme",
+        "extremes",
+        "copula",
+        "maxima",
+        "bivariate"
+      ],
+      "l": 3,
+      "p": "SM"
+    },
+    "252": {
+      "n": "非厄米拓扑Floquet相",
+      "k": [
+        "topological",
+        "hermitian",
+        "floquet",
+        "phases",
+        "nonhermitian"
+      ],
+      "l": 3,
+      "p": "mes-hall"
+    },
+    "253": {
+      "n": "Kähler流形全纯爱因斯坦",
+      "k": [
+        "kähler",
+        "manifolds",
+        "holomorphic",
+        "einstein",
+        "pluricanonical"
+      ],
+      "l": 3,
+      "p": "DG"
+    },
+    "254": {
+      "n": "策略操控机器人流模仿",
+      "k": [
+        "policy",
+        "manipulation",
+        "robot",
+        "flow",
+        "imitation"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "255": {
+      "n": "视觉惯性里程计定位",
+      "k": [
+        "vio",
+        "inertial",
+        "odometry",
+        "kalman",
+        "localization"
+      ],
+      "l": 3,
+      "p": "MO"
+    },
+    "256": {
+      "n": "HfO2铁电极化翻转",
+      "k": [
+        "ferroelectric",
+        "ferroelectricity",
+        "switching",
+        "hfo2",
+        "polarization"
+      ],
+      "l": 3,
+      "p": "mtrl-sci"
+    },
+    "257": {
+      "n": "固件模糊测试漏洞挖掘",
+      "k": [
+        "fuzzing",
+        "firmware",
+        "fuzzers",
+        "vulnerabilities",
+        "testing"
+      ],
+      "l": 3,
+      "p": "CR"
+    },
+    "258": {
+      "n": "铌基超导薄膜研究",
+      "k": [
+        "superconducting",
+        "niobium",
+        "nb",
+        "films",
+        "nb3sn"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "259": {
+      "n": "SiGe自旋量子点输运",
+      "k": [
+        "spin",
+        "qubit",
+        "sige",
+        "shuttling",
+        "dot"
+      ],
+      "l": 3,
+      "p": "mes-hall"
+    },
+    "260": {
+      "n": "神经元活动多重分形动力学",
+      "k": [
+        "neurons",
+        "activity",
+        "neuron",
+        "dynamics",
+        "multifractality"
+      ],
+      "l": 3,
+      "p": "soft"
+    },
+    "261": {
+      "n": "敏捷开发与GenAI生产力",
+      "k": [
+        "software",
+        "agile",
+        "adoption",
+        "productivity",
+        "genai"
+      ],
+      "l": 3,
+      "p": "SE"
+    },
+    "262": {
+      "n": "时间Petri网与POWL检验",
+      "k": [
+        "nets",
+        "petri",
+        "timed",
+        "checking",
+        "powl"
+      ],
+      "l": 3,
+      "p": "FL"
+    },
+    "263": {
+      "n": "多模态项目推荐",
+      "k": [
+        "recommendation",
+        "multimodal",
+        "item",
+        "modality",
+        "modalities"
+      ],
+      "l": 3,
+      "p": "IR"
+    },
+    "264": {
+      "n": "M_黑洞吸积与SMBHs",
+      "k": [
+        "bh",
+        "m_",
+        "accretion",
+        "black",
+        "smbhs"
+      ],
+      "l": 3,
+      "p": "GA"
+    },
+    "265": {
+      "n": "四足机器人运动控制",
+      "k": [
+        "locomotion",
+        "quadrupedal",
+        "legged",
+        "robots",
+        "quadruped"
+      ],
+      "l": 3,
+      "p": "RO"
+    },
+    "266": {
+      "n": "旋转黑洞吸积与影",
+      "k": [
+        "black",
+        "hole",
+        "shadow",
+        "rotating",
+        "accretion"
+      ],
+      "l": 3,
+      "p": "HE"
+    },
+    "267": {
+      "n": "可视化类型与图形标记",
+      "k": [
+        "visualization",
+        "visualizations",
+        "typology",
+        "graphics",
+        "glyph"
+      ],
+      "l": 3,
+      "p": "CL"
+    },
+    "268": {
+      "n": "可解释AI与解释生成",
+      "k": [
+        "xai",
+        "explanations",
+        "explanation",
+        "explainable",
+        "explainability"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "269": {
+      "n": "持久同调与Reeb理论",
+      "k": [
+        "persistence",
+        "reeb",
+        "homology",
+        "persistent",
+        "ph"
+      ],
+      "l": 3,
+      "p": "SM"
+    },
+    "270": {
+      "n": "6G意图智能体网络",
+      "k": [
+        "ran",
+        "6g",
+        "intent",
+        "agentic",
+        "intents"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "271": {
+      "n": "果园作物气孔调控研究",
+      "k": [
+        "orchard",
+        "fruit",
+        "sorghum",
+        "stomatal",
+        "fruits"
+      ],
+      "l": 3,
+      "p": "CV"
+    },
+    "272": {
+      "n": "脑表征对齐与相似性",
+      "k": [
+        "representational",
+        "brain",
+        "alignment",
+        "similarity",
+        "representations"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "273": {
+      "n": "可积系统与李对称性",
+      "k": [
+        "integrable",
+        "integrability",
+        "equations",
+        "symmetries",
+        "lie"
+      ],
+      "l": 3,
+      "p": "class-ph"
+    },
+    "274": {
+      "n": "代理优化与目标决策",
+      "k": [
+        "objective",
+        "optimization",
+        "surrogate",
+        "moot",
+        "cobra"
+      ],
+      "l": 3,
+      "p": "MO"
+    },
+    "275": {
+      "n": "因果发现与FMCI方法",
+      "k": [
+        "causal",
+        "discovery",
+        "fmcit",
+        "causalcompass",
+        "lcms"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "276": {
+      "n": "量子张量动力学模拟",
+      "k": [
+        "mbl",
+        "quantum",
+        "tebd",
+        "tempo",
+        "tensor"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "277": {
+      "n": "社交智能体交互分析",
+      "k": [
+        "moltbook",
+        "social",
+        "agents",
+        "posts",
+        "agent"
+      ],
+      "l": 3,
+      "p": "SI"
+    },
+    "278": {
+      "n": "WASP-4大气层研究",
+      "k": [
+        "atmospheric",
+        "atmosphere",
+        "atmospheres",
+        "_4",
+        "wasp"
+      ],
+      "l": 3,
+      "p": "EP"
+    },
+    "279": {
+      "n": "智能合约安全漏洞",
+      "k": [
+        "smart",
+        "contracts",
+        "contract",
+        "security",
+        "vulnerabilities"
+      ],
+      "l": 3,
+      "p": "CR"
+    },
+    "280": {
+      "n": "原初引力波探测",
+      "k": [
+        "gravitational",
+        "primordial",
+        "gw",
+        "gws",
+        "waves"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "281": {
+      "n": "μ子物理与对撞机",
+      "k": [
+        "muon",
+        "muonium",
+        "physics",
+        "eic",
+        "collider"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "282": {
+      "n": "拟群双曲映射",
+      "k": [
+        "groups",
+        "hyperbolic",
+        "mapping",
+        "quasi",
+        "group"
+      ],
+      "l": 3,
+      "p": "DS"
+    },
+    "283": {
+      "n": "阿诺德-坎氏样条",
+      "k": [
+        "kan",
+        "arnold",
+        "kolmogorov",
+        "kans",
+        "spline"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "284": {
+      "n": "强化学习探索策略",
+      "k": [
+        "rl",
+        "exploration",
+        "reinforcement",
+        "agents",
+        "tsr"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "285": {
+      "n": "热带混合整数规划",
+      "k": [
+        "integer",
+        "milp",
+        "programming",
+        "tropical",
+        "mixed"
+      ],
+      "l": 3,
+      "p": "MO"
+    },
+    "286": {
+      "n": "胶囊内窥镜机器人",
+      "k": [
+        "robotic",
+        "capsule",
+        "mm",
+        "tissue",
+        "endoscopic"
+      ],
+      "l": 3,
+      "p": "RO"
+    },
+    "287": {
+      "n": "波前全息光学",
+      "k": [
+        "wavefront",
+        "holography",
+        "optics",
+        "hologram",
+        "optical"
+      ],
+      "l": 3,
+      "p": "optics"
+    },
+    "288": {
+      "n": "代码翻译与LLM污染",
+      "k": [
+        "code",
+        "pseudocode",
+        "llms",
+        "translation",
+        "contamination"
+      ],
+      "l": 3,
+      "p": "SE"
+    },
+    "289": {
+      "n": "多文化生成文本",
+      "k": [
+        "text",
+        "multilingual",
+        "cultural",
+        "generated",
+        "texts"
+      ],
+      "l": 3,
+      "p": "CL"
+    },
+    "290": {
+      "n": "幺半范畴与Kleene单子",
+      "k": [
+        "monoidal",
+        "monad",
+        "categories",
+        "monads",
+        "kleene"
+      ],
+      "l": 3,
+      "p": "FL"
+    },
+    "291": {
+      "n": "蛋白质构象折叠模型",
+      "k": [
+        "conformational",
+        "protein",
+        "molecular",
+        "hasimoto",
+        "folding"
+      ],
+      "l": 3,
+      "p": "bio-ph"
+    },
+    "292": {
+      "n": "安全对齐与有害推理",
+      "k": [
+        "safety",
+        "alignment",
+        "harmful",
+        "invthink",
+        "reasoning"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "293": {
+      "n": "模块化生物运动智能",
+      "k": [
+        "biological",
+        "intelligence",
+        "modularity",
+        "motor",
+        "artificial"
+      ],
+      "l": 3,
+      "p": "NE"
+    },
+    "294": {
+      "n": "约瑟夫森超导二极管",
+      "k": [
+        "josephson",
+        "junction",
+        "junctions",
+        "superconducting",
+        "diode"
+      ],
+      "l": 3,
+      "p": "mes-hall"
+    },
+    "295": {
+      "n": "雷达HRRP目标识别",
+      "k": [
+        "radar",
+        "hrrp",
+        "doppler",
+        "cfar",
+        "recognition"
+      ],
+      "l": 3,
+      "p": "SP"
+    },
+    "296": {
+      "n": "核心集近似聚类",
+      "k": [
+        "clustering",
+        "means",
+        "dimension",
+        "approximation",
+        "coresets"
+      ],
+      "l": 3,
+      "p": "DS"
+    },
+    "297": {
+      "n": "耗散超辐射相变",
+      "k": [
+        "liouvillian",
+        "exceptional",
+        "dissipative",
+        "phase",
+        "superradiant"
+      ],
+      "l": 3,
+      "p": "mes-hall"
+    },
+    "298": {
+      "n": "地理空间遥感推理",
+      "k": [
+        "geospatial",
+        "reasoning",
+        "geozero",
+        "remote",
+        "rs"
+      ],
+      "l": 3,
+      "p": "CV"
+    },
+    "299": {
+      "n": "无质量场BRST关联子",
+      "k": [
+        "fields",
+        "massless",
+        "correlators",
+        "theories",
+        "brst"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "300": {
+      "n": "彗星近日点图集研究",
+      "k": [
+        "comet",
+        "3i",
+        "perihelion",
+        "coma",
+        "atlas"
+      ],
+      "l": 3,
+      "p": "EP"
+    },
+    "301": {
+      "n": "注视点与刺激响应",
+      "k": [
+        "gaze",
+        "eye",
+        "fixation",
+        "participants",
+        "stimuli"
+      ],
+      "l": 3,
+      "p": "HC"
+    },
+    "302": {
+      "n": "高斯过程核函数研究",
+      "k": [
+        "gaussian",
+        "cgp",
+        "gp",
+        "processes",
+        "kernel"
+      ],
+      "l": 3,
+      "p": "SM"
+    },
+    "303": {
+      "n": "冰水幔结晶氢研究",
+      "k": [
+        "ice",
+        "water",
+        "hydrogen",
+        "mantle",
+        "crystallization"
+      ],
+      "l": 3,
+      "p": "mtrl-sci"
+    },
+    "304": {
+      "n": "断层扫描正则化重建",
+      "k": [
+        "reconstruction",
+        "tomography",
+        "gmres",
+        "regularization",
+        "bqnpm"
+      ],
+      "l": 3,
+      "p": "IV"
+    },
+    "305": {
+      "n": "缺失数据插补方法",
+      "k": [
+        "imputation",
+        "missing",
+        "missingness",
+        "data",
+        "mcr"
+      ],
+      "l": 3,
+      "p": "MA"
+    },
+    "306": {
+      "n": "知识编辑技术研究",
+      "k": [
+        "editing",
+        "knowledge",
+        "edits",
+        "edit",
+        "crispedit"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "307": {
+      "n": "等变上同调理论",
+      "k": [
+        "hochschild",
+        "equivariant",
+        "cohomology",
+        "syntomic",
+        "thh"
+      ],
+      "l": 3,
+      "p": "AT"
+    },
+    "308": {
+      "n": "轴承故障诊断研究",
+      "k": [
+        "fault",
+        "bearing",
+        "diagnosis",
+        "faults",
+        "cwru"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "309": {
+      "n": "表格基础模型探索",
+      "k": [
+        "tabular",
+        "tabpfn",
+        "foundation",
+        "tabnsa",
+        "gamformer"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "310": {
+      "n": "凌星行星巡天研究",
+      "k": [
+        "toi",
+        "planet",
+        "transiting",
+        "pm",
+        "planets"
+      ],
+      "l": 3,
+      "p": "EP"
+    },
+    "311": {
+      "n": "潘勒韦可积方程孤子解",
+      "k": [
+        "painlevé",
+        "integrable",
+        "equation",
+        "solitons",
+        "solutions"
+      ],
+      "l": 3,
+      "p": "CA"
+    },
+    "312": {
+      "n": "生存事件与治疗差异分析",
+      "k": [
+        "survival",
+        "event",
+        "treatment",
+        "icoden",
+        "survdiff"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "313": {
+      "n": "罗宾特征值与索伯列夫空间",
+      "k": [
+        "eigenvalue",
+        "robin",
+        "h_g",
+        "chap",
+        "sobolev"
+      ],
+      "l": 3,
+      "p": "DG"
+    },
+    "314": {
+      "n": "波斯语方面情感分析",
+      "k": [
+        "sentiment",
+        "absa",
+        "aspect",
+        "opinion",
+        "persian"
+      ],
+      "l": 3,
+      "p": "HC"
+    },
+    "315": {
+      "n": "氢原子四极矩超精细结构",
+      "k": [
+        "quadrupole",
+        "relativistic",
+        "hydrogen",
+        "hyperfine",
+        "_1"
+      ],
+      "l": 3,
+      "p": "atom-ph"
+    },
+    "316": {
+      "n": "数字水印与隐写分析技术",
+      "k": [
+        "watermark",
+        "watermarking",
+        "watermarks",
+        "underline",
+        "steganalysis"
+      ],
+      "l": 3,
+      "p": "CR"
+    },
+    "317": {
+      "n": "非广延热力学熵定律",
+      "k": [
+        "entropy",
+        "entropies",
+        "law",
+        "thermodynamics",
+        "tsallis"
+      ],
+      "l": 3,
+      "p": "IT"
+    },
+    "318": {
+      "n": "德西特时空量子引力",
+      "k": [
+        "sitter",
+        "gravity",
+        "quantum",
+        "spacetime",
+        "de"
+      ],
+      "l": 3,
+      "p": "mes-hall"
+    },
+    "319": {
+      "n": "军校生社交网络意见分析",
+      "k": [
+        "opinion",
+        "opinions",
+        "social",
+        "cadets",
+        "network"
+      ],
+      "l": 3,
+      "p": "MO"
+    },
+    "320": {
+      "n": "中子能谱模拟研究",
+      "k": [
+        "neutron",
+        "neutrons",
+        "fluka",
+        "westcott",
+        "mev"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "321": {
+      "n": "张量网络量子算法",
+      "k": [
+        "tensor",
+        "mps",
+        "quantum",
+        "vqe",
+        "qgfa"
+      ],
+      "l": 3,
+      "p": "MO"
+    },
+    "322": {
+      "n": "量子线性求解算法",
+      "k": [
+        "vec",
+        "quantum",
+        "algorithm",
+        "qls",
+        "hhl"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "323": {
+      "n": "隐私数据匿名化效用",
+      "k": [
+        "pii",
+        "privacy",
+        "anonymization",
+        "personally",
+        "utility"
+      ],
+      "l": 3,
+      "p": "HC"
+    },
+    "324": {
+      "n": "生物医学检索增强生成",
+      "k": [
+        "biomedical",
+        "rag",
+        "retrieval",
+        "biomodels",
+        "biomedsearch"
+      ],
+      "l": 3,
+      "p": "CL"
+    },
+    "325": {
+      "n": "最优投资组合效用",
+      "k": [
+        "portfolio",
+        "utility",
+        "optimal",
+        "investment",
+        "merton"
+      ],
+      "l": 3,
+      "p": "MF"
+    },
+    "326": {
+      "n": "语义场景导航系统",
+      "k": [
+        "navigation",
+        "scene",
+        "langmap",
+        "semantic",
+        "semnav"
+      ],
+      "l": 3,
+      "p": "RO"
+    },
+    "327": {
+      "n": "排队系统服务器优化",
+      "k": [
+        "job",
+        "queue",
+        "server",
+        "queues",
+        "queueing"
+      ],
+      "l": 3,
+      "p": "IT"
+    },
+    "328": {
+      "n": "不平衡分类置信偏差",
+      "k": [
+        "label",
+        "imbalanced",
+        "confidence",
+        "class",
+        "bias"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "329": {
+      "n": "对话语音说话人处理",
+      "k": [
+        "speaker",
+        "conversational",
+        "duplex",
+        "speech",
+        "voice"
+      ],
+      "l": 3,
+      "p": "SD"
+    },
+    "330": {
+      "n": "超快XUV电子像差",
+      "k": [
+        "electron",
+        "aberration",
+        "ultrafast",
+        "xuv",
+        "electrons"
+      ],
+      "l": 3,
+      "p": "optics"
+    },
+    "331": {
+      "n": "地震断层滑移应力",
+      "k": [
+        "earthquakes",
+        "slip",
+        "fault",
+        "earthquake",
+        "stress"
+      ],
+      "l": 3,
+      "p": "geo-ph"
+    },
+    "332": {
+      "n": "认知与随机不确定性",
+      "k": [
+        "epistemic",
+        "uncertainty",
+        "aleatoric",
+        "jucal",
+        "c_k"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "333": {
+      "n": "区块链去中心化治理",
+      "k": [
+        "blockchain",
+        "decentralization",
+        "trust",
+        "txray",
+        "governance"
+      ],
+      "l": 3,
+      "p": "CR"
+    },
+    "334": {
+      "n": "因果发现与DAG",
+      "k": [
+        "causal",
+        "discovery",
+        "dag",
+        "ppcr",
+        "llms"
+      ],
+      "l": 3,
+      "p": "CL"
+    },
+    "335": {
+      "n": "OSS项目贡献者研究",
+      "k": [
+        "oss",
+        "projects",
+        "contributors",
+        "oss4sg",
+        "project"
+      ],
+      "l": 3,
+      "p": "SE"
+    },
+    "336": {
+      "n": "符号回归表达式合成",
+      "k": [
+        "symbolic",
+        "sr",
+        "egg",
+        "regression",
+        "expressions"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "337": {
+      "n": "全息引力流体动力学",
+      "k": [
+        "holographic",
+        "ads",
+        "gravitational",
+        "bonnet",
+        "hydrodynamic"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "338": {
+      "n": "REBCO超导磁体失超",
+      "k": [
+        "rebco",
+        "magnet",
+        "magnets",
+        "quench",
+        "superconducting"
+      ],
+      "l": 3,
+      "p": "ins-det"
+    },
+    "339": {
+      "n": "核插值与逼近方法",
+      "k": [
+        "interpolation",
+        "approximation",
+        "kernels",
+        "interpolant",
+        "grids"
+      ],
+      "l": 3,
+      "p": "NA"
+    },
+    "340": {
+      "n": "亨泽尔域存在可定义性",
+      "k": [
+        "existential",
+        "fields",
+        "valued",
+        "henselian",
+        "definable"
+      ],
+      "l": 3,
+      "p": "LO"
+    },
+    "341": {
+      "n": "氮空位金刚石色心",
+      "k": [
+        "nv",
+        "diamond",
+        "centers",
+        "nitrogen",
+        "vacancy"
+      ],
+      "l": 3,
+      "p": "optics"
+    },
+    "342": {
+      "n": "情绪市场金融协方差交易",
+      "k": [
+        "sentiment",
+        "market",
+        "financial",
+        "covar",
+        "trading"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "343": {
+      "n": "最优控制与HJB方程",
+      "k": [
+        "optimal",
+        "control",
+        "horizon",
+        "hjb",
+        "controls"
+      ],
+      "l": 3,
+      "p": "NA"
+    },
+    "344": {
+      "n": "银河星团金属丰度研究",
+      "k": [
+        "metallicity",
+        "stellar",
+        "gaia",
+        "clusters",
+        "milky"
+      ],
+      "l": 3,
+      "p": "GA"
+    },
+    "345": {
+      "n": "湍流PITO转换模型",
+      "k": [
+        "turbulence",
+        "turbulent",
+        "pito",
+        "conv",
+        "piito"
+      ],
+      "l": 3,
+      "p": "flu-dyn"
+    },
+    "346": {
+      "n": "多宇宙存储恢复机制",
+      "k": [
+        "storage",
+        "heal",
+        "recovery",
+        "multiverse",
+        "tidehunter"
+      ],
+      "l": 3,
+      "p": "SE"
+    },
+    "347": {
+      "n": "模因金融市场交易",
+      "k": [
+        "trading",
+        "market",
+        "financial",
+        "markets",
+        "meme"
+      ],
+      "l": 3,
+      "p": "ST"
+    },
+    "348": {
+      "n": "聚合物材料MD工作流",
+      "k": [
+        "polymer",
+        "materials",
+        "workflows",
+        "md",
+        "r2"
+      ],
+      "l": 3,
+      "p": "soft"
+    },
+    "349": {
+      "n": "并发线程死锁研究",
+      "k": [
+        "deadlock",
+        "lock",
+        "deadlocks",
+        "concurrent",
+        "thread"
+      ],
+      "l": 3,
+      "p": "PL"
+    },
+    "350": {
+      "n": "量子引力与引力子",
+      "k": [
+        "gravitational",
+        "gravity",
+        "quantum",
+        "graviton",
+        "gravitationally"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "351": {
+      "n": "高速缓存压缩优化",
+      "k": [
+        "kv",
+        "cache",
+        "compression",
+        "prefill",
+        "fastkv"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "352": {
+      "n": "稀疏建模与误发现率控制",
+      "k": [
+        "lasso",
+        "knockoffs",
+        "knockoff",
+        "lar",
+        "fdr"
+      ],
+      "l": 3,
+      "p": "ST"
+    },
+    "353": {
+      "n": "无穷参数方程表示",
+      "k": [
+        "infty",
+        "u_",
+        "qquad",
+        "θ_",
+        "_x"
+      ],
+      "l": 3,
+      "p": "AP"
+    },
+    "354": {
+      "n": "人脸身份识别",
+      "k": [
+        "facial",
+        "id",
+        "identity",
+        "face",
+        "portrait"
+      ],
+      "l": 3,
+      "p": "CV"
+    },
+    "355": {
+      "n": "陆地生态系统服务",
+      "k": [
+        "ecosystem",
+        "land",
+        "es",
+        "services",
+        "ecosystems"
+      ],
+      "l": 3,
+      "p": "ST"
+    },
+    "356": {
+      "n": "量子热力学与熵",
+      "k": [
+        "thermodynamic",
+        "thermodynamics",
+        "entropy",
+        "quantum",
+        "thermal"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "357": {
+      "n": "格点规范场理论",
+      "k": [
+        "gauge",
+        "lattice",
+        "su",
+        "theories",
+        "deconfinement"
+      ],
+      "l": 3,
+      "p": "AI"
+    },
+    "358": {
+      "n": "网络传染病免疫",
+      "k": [
+        "infected",
+        "contagion",
+        "immunization",
+        "epidemic",
+        "network"
+      ],
+      "l": 3,
+      "p": "SI"
+    },
+    "359": {
+      "n": "生存分析与竞争风险",
+      "k": [
+        "censoring",
+        "survival",
+        "mortality",
+        "cox",
+        "competing"
+      ],
+      "l": 3,
+      "p": "ME"
+    },
+    "360": {
+      "n": "深度学者科研计量研究",
+      "k": [
+        "research",
+        "deepscholar",
+        "academic",
+        "expert",
+        "scientometric"
+      ],
+      "l": 3,
+      "p": "CL"
+    },
+    "361": {
+      "n": "三维CAD部件资产建模",
+      "k": [
+        "3d",
+        "cad",
+        "partuv",
+        "assetformer",
+        "assets"
+      ],
+      "l": 3,
+      "p": "CE"
+    },
+    "362": {
+      "n": "安卓恶意软件Pickle分析",
+      "k": [
+        "malware",
+        "pickle",
+        "android",
+        "malicious",
+        "malcve"
+      ],
+      "l": 3,
+      "p": "CR"
+    },
+    "363": {
+      "n": "图与局部校验问题",
+      "k": [
+        "graph",
+        "graphs",
+        "fo",
+        "lcl",
+        "problems"
+      ],
+      "l": 3,
+      "p": "DS"
+    },
+    "364": {
+      "n": "多项式边界初等理论",
+      "k": [
+        "polynomials",
+        "border",
+        "polynomial",
+        "elementary",
+        "castelnuovo"
+      ],
+      "l": 3,
+      "p": "SC"
+    },
+    "365": {
+      "n": "沉浸式AR对话记忆导航",
+      "k": [
+        "immersive",
+        "memento",
+        "ar",
+        "pathvis",
+        "conversational"
+      ],
+      "l": 3,
+      "p": "HC"
+    },
+    "366": {
+      "n": "冷冻电镜构象重建网络",
+      "k": [
+        "cryo",
+        "em",
+        "cryonet",
+        "microscopy",
+        "conformational"
+      ],
+      "l": 3,
+      "p": "CV"
+    },
+    "367": {
+      "n": "多智能体博弈强化学习",
+      "k": [
+        "games",
+        "mf",
+        "mfg",
+        "agents",
+        "marl"
+      ],
+      "l": 3,
+      "p": "stat-mech"
+    },
+    "368": {
+      "n": "双曲曲面半经典半连续性",
+      "k": [
+        "hyperbolic",
+        "surfaces",
+        "semicontinuity",
+        "riesz",
+        "semiclassical"
+      ],
+      "l": 3,
+      "p": "DG"
+    },
+    "369": {
+      "n": "跨性别公平性偏差评测",
+      "k": [
+        "bias",
+        "fairness",
+        "transgender",
+        "mcqa",
+        "gender"
+      ],
+      "l": 3,
+      "p": "CY"
+    },
+    "370": {
+      "n": "组织AI成熟度与员工人本AI",
+      "k": [
+        "ai",
+        "maturity",
+        "organizational",
+        "hcai",
+        "employees"
+      ],
+      "l": 3,
+      "p": "CY"
+    },
+    "371": {
+      "n": "奥野贝西科维奇拓扑熵",
+      "k": [
+        "ohno",
+        "besicovitch",
+        "c_λ",
+        "topological",
+        "pesin"
+      ],
+      "l": 3,
+      "p": "DS"
+    },
+    "372": {
+      "n": "虚拟人因舒适度与用户体验",
+      "k": [
+        "virtual",
+        "manikin",
+        "comfort",
+        "encountered",
+        "user"
+      ],
+      "l": 3,
+      "p": "RO"
+    },
+    "373": {
+      "n": "领域偏移与条件目标偏差",
+      "k": [
+        "domain",
+        "shifts",
+        "conditional",
+        "target",
+        "bias"
+      ],
+      "l": 3,
+      "p": "LG"
+    },
+    "374": {
+      "n": "恒星雾质量与MESA演化",
+      "k": [
+        "stellar",
+        "mist",
+        "mass",
+        "tams",
+        "mesa"
+      ],
+      "l": 3,
+      "p": "SR"
+    }
+  },
+  "categories": {
+    "SD": "cs.SD",
+    "KT": "math.KT",
+    "AI": "quant-ph",
+    "DG": "math.DG",
+    "ME": "stat.ME",
+    "ins-det": "physics.ins-det",
+    "LO": "math.LO",
+    "flu-dyn": "physics.flu-dyn",
+    "mtrl-sci": "cond-mat.mtrl-sci",
+    "stat-mech": "cond-mat.stat-mech",
+    "TH": "econ.TH",
+    "CB": "q-bio.CB",
+    "SP": "eess.SP",
+    "ST": "q-fin.ST",
+    "OA": "math.OA",
+    "CV": "math.CV",
+    "CC": "cs.CC",
+    "DM": "cs.DM",
+    "DS": "math.DS",
+    "geo-ph": "physics.geo-ph",
+    "RM": "q-fin.RM",
+    "MG": "math.MG",
+    "SY": "eess.SY",
+    "CR": "cs.CR",
+    "AC": "math.AC",
+    "IM": "astro-ph.IM",
+    "CA": "math.CA",
+    "IR": "cs.IR",
+    "FA": "math.FA",
+    "RO": "cs.RO",
+    "CO": "math.CO",
+    "plasm-ph": "physics.plasm-ph",
+    "MO": "math.OC",
+    "RA": "math.RA",
+    "AP": "math.AP",
+    "NI": "cs.NI",
+    "FL": "cs.FL",
+    "GN": "econ.GN",
+    "RT": "math.RT",
+    "PL": "cs.PL",
+    "HE": "astro-ph.HE",
+    "mes-hall": "cond-mat.mes-hall",
+    "GR": "math.GR",
+    "EP": "astro-ph.EP",
+    "AO": "nlin.AO",
+    "PE": "q-bio.PE",
+    "MF": "q-fin.MF",
+    "DB": "cs.DB",
+    "NE": "cs.NE",
+    "bio-ph": "physics.bio-ph",
+    "CG": "cs.CG",
+    "AG": "math.AG",
+    "med-ph": "physics.med-ph",
+    "SR": "astro-ph.SR",
+    "QM": "q-bio.QM",
+    "DC": "cs.DC",
+    "CY": "cs.CY",
+    "class-ph": "physics.class-ph",
+    "NT": "math.NT",
+    "dis-nn": "cond-mat.dis-nn",
+    "SC": "cs.SC",
+    "str-el": "cond-mat.str-el",
+    "SM": "stat.ML",
+    "CE": "cs.CE",
+    "HC": "cs.HC",
+    "NA": "math.NA",
+    "SE": "cs.SE",
+    "LG": "cs.LG",
+    "IT": "cs.IT",
+    "space-ph": "physics.space-ph",
+    "MA": "cs.MA",
+    "soft": "cond-mat.soft",
+    "AT": "math.AT",
+    "GA": "astro-ph.GA",
+    "SI": "cs.SI",
+    "supr-con": "cond-mat.supr-con",
+    "atom-ph": "physics.atom-ph",
+    "AS": "eess.AS",
+    "optics": "physics.optics",
+    "soc-ph": "physics.soc-ph",
+    "IV": "eess.IV",
+    "PR": "math.PR",
+    "AR": "cs.AR",
+    "GT": "cs.GT",
+    "CL": "cs.CL"
+  }
+}

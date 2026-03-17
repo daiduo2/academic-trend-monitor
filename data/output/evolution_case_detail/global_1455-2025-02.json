@@ -1,0 +1,510 @@
+{
+  "case_id": "global_1455-2025-02",
+  "anchor_topic_id": "global_1455",
+  "anchor_topic_name": "自旋磁性与霍尔薄膜",
+  "anchor_topic_mode": "theory",
+  "anchor_topic_profile": {
+    "primary_mode": "theory",
+    "secondary_mode": "problem",
+    "method_score": 1,
+    "problem_score": 1,
+    "theory_score": 2
+  },
+  "start_period": "2025-02",
+  "observation_horizon": 4,
+  "neighbor_topics": [
+    "global_1504",
+    "global_1473",
+    "global_1493",
+    "global_1499",
+    "global_1524"
+  ],
+  "evolution_path": [
+    {
+      "period": "2025-02",
+      "anchor_paper_count": 140,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_1504",
+          "topic_name": "超快磁化与自旋动力学",
+          "paper_count": 0,
+          "weight": 0.3875,
+          "category": "cond-mat",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1473",
+          "topic_name": "钙钛矿铁电薄膜",
+          "paper_count": 0,
+          "weight": 0.3609,
+          "category": "cond-mat",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 3,
+            "problem_score": 0,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1493",
+          "topic_name": "量子自旋磁相态",
+          "paper_count": 0,
+          "weight": 0.3609,
+          "category": "cond-mat",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 2
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-03",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 1,
+      "top_neighbors": [
+        {
+          "topic_id": "global_1473",
+          "topic_name": "钙钛矿铁电薄膜",
+          "paper_count": 97,
+          "weight": 0.3609,
+          "category": "cond-mat",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 3,
+            "problem_score": 0,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1504",
+          "topic_name": "超快磁化与自旋动力学",
+          "paper_count": 0,
+          "weight": 0.3875,
+          "category": "cond-mat",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1493",
+          "topic_name": "量子自旋磁相态",
+          "paper_count": 0,
+          "weight": 0.3609,
+          "category": "cond-mat",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 2
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-04",
+      "anchor_paper_count": 161,
+      "active_neighbor_count": 0,
+      "top_neighbors": [
+        {
+          "topic_id": "global_1504",
+          "topic_name": "超快磁化与自旋动力学",
+          "paper_count": 0,
+          "weight": 0.3875,
+          "category": "cond-mat",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1473",
+          "topic_name": "钙钛矿铁电薄膜",
+          "paper_count": 0,
+          "weight": 0.3609,
+          "category": "cond-mat",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 3,
+            "problem_score": 0,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1493",
+          "topic_name": "量子自旋磁相态",
+          "paper_count": 0,
+          "weight": 0.3609,
+          "category": "cond-mat",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 2
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-05",
+      "anchor_paper_count": 0,
+      "active_neighbor_count": 1,
+      "top_neighbors": [
+        {
+          "topic_id": "global_1493",
+          "topic_name": "量子自旋磁相态",
+          "paper_count": 3407,
+          "weight": 0.3609,
+          "category": "cond-mat",
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 2
+          }
+        },
+        {
+          "topic_id": "global_1504",
+          "topic_name": "超快磁化与自旋动力学",
+          "paper_count": 0,
+          "weight": 0.3875,
+          "category": "cond-mat",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1473",
+          "topic_name": "钙钛矿铁电薄膜",
+          "paper_count": 0,
+          "weight": 0.3609,
+          "category": "cond-mat",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 3,
+            "problem_score": 0,
+            "theory_score": 0
+          }
+        }
+      ]
+    },
+    {
+      "period": "2025-06",
+      "anchor_paper_count": 140,
+      "active_neighbor_count": 1,
+      "top_neighbors": [
+        {
+          "topic_id": "global_1499",
+          "topic_name": "自旋波与磁子学研究",
+          "paper_count": 14,
+          "weight": 0.3609,
+          "category": "cond-mat",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1504",
+          "topic_name": "超快磁化与自旋动力学",
+          "paper_count": 0,
+          "weight": 0.3875,
+          "category": "cond-mat",
+          "topic_mode": "hybrid",
+          "topic_profile": {
+            "primary_mode": "hybrid",
+            "secondary_mode": null,
+            "method_score": 1,
+            "problem_score": 1,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_1473",
+          "topic_name": "钙钛矿铁电薄膜",
+          "paper_count": 0,
+          "weight": 0.3609,
+          "category": "cond-mat",
+          "topic_mode": "method",
+          "topic_profile": {
+            "primary_mode": "method",
+            "secondary_mode": null,
+            "method_score": 3,
+            "problem_score": 0,
+            "theory_score": 0
+          }
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "emerged",
+      "period": "2025-02",
+      "summary": "Anchor topic first appears in the replay window."
+    },
+    {
+      "type": "diffused_to_neighbor",
+      "period": "2025-05",
+      "summary": "Semantic neighbors absorb momentum from the anchor topic around 2025-05.",
+      "evidence": {
+        "target_topic_id": "global_1493",
+        "target_topic_name": "量子自旋磁相态",
+        "target_topic_mode": "theory",
+        "transfer_kind": "theory_spillover",
+        "transfer_pattern": "spillover",
+        "weight": 0.3609,
+        "increase": 3407,
+        "bridge_evidence": {
+          "shared_keywords": [
+            "spin",
+            "topological"
+          ],
+          "bridge_topics": [
+            "超快磁化与自旋动力学",
+            "钙钛矿铁电薄膜",
+            "自旋波与磁子学研究"
+          ],
+          "target_evidence_titles": [
+            "Topological $Z_4$ spin-orbital liquid on the honeycomb lattice",
+            "Disorder and non-Hermiticity in Kitaev spin liquids with a Majorana Fermi surface"
+          ],
+          "category_flow": {
+            "source_category": "cond-mat",
+            "target_category": "cond-mat",
+            "source_top_level": "cond-mat",
+            "target_top_level": "cond-mat",
+            "relation": "same_category"
+          },
+          "pipeline_relation": {
+            "relation": "none",
+            "source_stage_terms": [],
+            "target_stage_terms": [],
+            "shared_domain_terms": [],
+            "representation_stage_terms": [],
+            "perception_stage_terms": [],
+            "shared_3d_terms": [],
+            "shared_formal_terms": [],
+            "shared_math_ag_objects": [],
+            "shared_math_ag_methods": [],
+            "shared_math_lo_objects": [],
+            "shared_math_lo_methods": [],
+            "shared_math_lo_core_objects": [],
+            "shared_math_lo_modal_objects": [],
+            "shared_math_lo_modal_methods": [],
+            "shared_math_lo_set_objects": [],
+            "shared_math_lo_set_methods": [],
+            "shared_math_lo_forcing_objects": [],
+            "shared_math_lo_forcing_methods": [],
+            "shared_math_lo_type_objects": [],
+            "source_type_terms": [],
+            "target_type_terms": [],
+            "shared_math_lo_definability_objects": [],
+            "shared_math_lo_definability_methods": [],
+            "math_ag_object_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            },
+            "math_ag_method_matches": {
+              "anchor": {},
+              "target": {},
+              "overlap": {
+                "score": 0.0,
+                "shared_exact_terms": [],
+                "shared_classes": [],
+                "related_classes": []
+              }
+            }
+          },
+          "evidence_title_overlap": {
+            "anchor_titles": [
+              "Singular flat bands in three dimensions: Landau level spreading, quantum geometry, and Weyl reconstruction",
+              "Spin Current Generation Controlled by the Néel State in a Compensated Ferrimagnet"
+            ],
+            "target_titles": [
+              "Topological $Z_4$ spin-orbital liquid on the honeycomb lattice",
+              "Disorder and non-Hermiticity in Kitaev spin liquids with a Majorana Fermi surface"
+            ],
+            "shared_terms": [
+              "spin"
+            ],
+            "shared_term_count": 1
+          },
+          "bridge_strength": 0.633,
+          "alias_risk": {
+            "level": "low",
+            "reason": "distinct_concepts"
+          }
+        },
+        "post_transfer_persistence": {
+          "lookahead_periods": [
+            "2025-06",
+            "2025-07"
+          ],
+          "active_periods_after_event": 0,
+          "paper_counts_after_event": [
+            0,
+            0
+          ],
+          "sustained": false
+        },
+        "anchor_post_event_persistence": {
+          "lookahead_periods": [
+            "2025-06",
+            "2025-07"
+          ],
+          "active_periods_after_event": 2,
+          "paper_counts_after_event": [
+            140,
+            175
+          ],
+          "sustained": true
+        },
+        "relative_persistence": {
+          "anchor_total": 315,
+          "target_total": 0,
+          "target_to_anchor_ratio": 0.0,
+          "status": "weak_carryover"
+        },
+        "consistency_check": {
+          "status": "consistent",
+          "flags": [],
+          "relation": "same_category",
+          "pipeline_relation": "none",
+          "bridge_strength": 0.633,
+          "relative_persistence_status": "weak_carryover",
+          "event_type": "diffused_to_neighbor"
+        }
+      }
+    }
+  ],
+  "cross_category_moves": [],
+  "growth_summary": "自旋磁性与霍尔薄膜 (hybrid) remains active without a strong expansion signal by 2025-06.",
+  "decline_summary": "No dominant decline pattern is detected before 2025-06.",
+  "review_flags": [],
+  "key_supporting_topics": [
+    {
+      "topic_id": "global_1493",
+      "topic_name": "量子自旋磁相态",
+      "category": "cond-mat",
+      "weight": 0.3609,
+      "peak_period": "2025-05",
+      "peak_count": 3407,
+      "increase": 3407,
+      "topic_mode": "theory",
+      "topic_profile": {
+        "primary_mode": "theory",
+        "secondary_mode": null,
+        "method_score": 0,
+        "problem_score": 0,
+        "theory_score": 2
+      }
+    },
+    {
+      "topic_id": "global_1473",
+      "topic_name": "钙钛矿铁电薄膜",
+      "category": "cond-mat",
+      "weight": 0.3609,
+      "peak_period": "2025-03",
+      "peak_count": 97,
+      "increase": 97,
+      "topic_mode": "method",
+      "topic_profile": {
+        "primary_mode": "method",
+        "secondary_mode": null,
+        "method_score": 3,
+        "problem_score": 0,
+        "theory_score": 0
+      }
+    },
+    {
+      "topic_id": "global_1499",
+      "topic_name": "自旋波与磁子学研究",
+      "category": "cond-mat",
+      "weight": 0.3609,
+      "peak_period": "2025-06",
+      "peak_count": 14,
+      "increase": 14,
+      "topic_mode": "hybrid",
+      "topic_profile": {
+        "primary_mode": "hybrid",
+        "secondary_mode": null,
+        "method_score": 1,
+        "problem_score": 1,
+        "theory_score": 0
+      }
+    }
+  ],
+  "key_turning_points": [
+    {
+      "period": "2025-03",
+      "delta": -140,
+      "anchor_paper_count": 0
+    },
+    {
+      "period": "2025-04",
+      "delta": 161,
+      "anchor_paper_count": 161
+    },
+    {
+      "period": "2025-05",
+      "delta": -161,
+      "anchor_paper_count": 0
+    },
+    {
+      "period": "2025-06",
+      "delta": 140,
+      "anchor_paper_count": 140
+    }
+  ]
+}

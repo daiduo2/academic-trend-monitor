@@ -1,0 +1,829 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-03-14T13:35:53.476736+00:00",
+  "total_cases": 7,
+  "passed_cases": 2,
+  "failed_cases": 5,
+  "sections": {
+    "positive": [
+      {
+        "case_id": "ag-b1",
+        "anchor_topic_id": "global_69",
+        "anchor_topic_name": "代数叠与层理论",
+        "target_topic_id": "global_287",
+        "target_topic_name": "导出代数叠范畴",
+        "expected_relation": "math_ag_object_continuity",
+        "actual_relation": "math_ag_object_continuity",
+        "passed": true,
+        "reason": "ok",
+        "level": "event-level",
+        "confidence": null,
+        "pipeline_relation": {
+          "relation": "math_ag_object_continuity",
+          "source_stage_terms": [],
+          "target_stage_terms": [],
+          "shared_domain_terms": [],
+          "representation_stage_terms": [],
+          "perception_stage_terms": [],
+          "shared_3d_terms": [],
+          "shared_formal_terms": [
+            "algebraic"
+          ],
+          "shared_math_ag_objects": [
+            "sheaf",
+            "stack",
+            "stacks"
+          ],
+          "shared_math_ag_methods": [],
+          "shared_math_lo_objects": [],
+          "shared_math_lo_methods": [],
+          "shared_math_lo_core_objects": [],
+          "shared_math_lo_modal_objects": [],
+          "shared_math_lo_modal_methods": [],
+          "shared_math_lo_set_objects": [],
+          "shared_math_lo_set_methods": [],
+          "shared_math_lo_forcing_objects": [],
+          "shared_math_lo_forcing_methods": [],
+          "shared_math_lo_type_objects": [],
+          "source_type_terms": [],
+          "target_type_terms": [],
+          "shared_math_lo_definability_objects": [],
+          "shared_math_lo_definability_methods": [],
+          "math_ag_object_matches": {
+            "anchor": {
+              "moduli_and_stack": [
+                "stack",
+                "stacks"
+              ],
+              "sheaf_and_bundle": [
+                "sheaf",
+                "sheaves"
+              ],
+              "scheme_level": [
+                "algebraic",
+                "scheme"
+              ]
+            },
+            "target": {
+              "moduli_and_stack": [
+                "stack",
+                "stacks"
+              ],
+              "sheaf_and_bundle": [
+                "sheaf"
+              ],
+              "scheme_level": [
+                "algebraic"
+              ]
+            },
+            "overlap": {
+              "score": 3.0,
+              "shared_exact_terms": [
+                "algebraic",
+                "sheaf",
+                "stack",
+                "stacks"
+              ],
+              "shared_classes": [],
+              "related_classes": []
+            }
+          },
+          "math_ag_method_matches": {
+            "anchor": {
+              "cohomological": [
+                "prismatic"
+              ],
+              "geometric_combinatorial": [
+                "constructible",
+                "intersection"
+              ]
+            },
+            "target": {
+              "derived_categorical": [
+                "categories",
+                "derived",
+                "functor"
+              ]
+            },
+            "overlap": {
+              "score": 0.75,
+              "shared_exact_terms": [],
+              "shared_classes": [],
+              "related_classes": [
+                {
+                  "from": "cohomological",
+                  "to": "derived_categorical",
+                  "weight": 0.45
+                },
+                {
+                  "from": "geometric_combinatorial",
+                  "to": "derived_categorical",
+                  "weight": 0.3
+                }
+              ]
+            }
+          }
+        },
+        "evidence": {
+          "shared_objects": [
+            "stack",
+            "stacks"
+          ],
+          "taxonomy_overlap": [
+            "moduli_and_stack"
+          ]
+        }
+      },
+      {
+        "case_id": "ag-e2",
+        "anchor_topic_id": "global_69",
+        "anchor_topic_name": "代数叠与层理论",
+        "target_topic_id": "global_287",
+        "target_topic_name": "导出代数叠范畴",
+        "expected_relation": "math_ag_object_continuity",
+        "actual_relation": "math_ag_object_continuity",
+        "passed": true,
+        "reason": "ok",
+        "level": "event-level",
+        "confidence": 0.85,
+        "pipeline_relation": {
+          "relation": "math_ag_object_continuity",
+          "source_stage_terms": [],
+          "target_stage_terms": [],
+          "shared_domain_terms": [],
+          "representation_stage_terms": [],
+          "perception_stage_terms": [],
+          "shared_3d_terms": [],
+          "shared_formal_terms": [
+            "algebraic"
+          ],
+          "shared_math_ag_objects": [
+            "sheaf",
+            "stack",
+            "stacks"
+          ],
+          "shared_math_ag_methods": [],
+          "shared_math_lo_objects": [],
+          "shared_math_lo_methods": [],
+          "shared_math_lo_core_objects": [],
+          "shared_math_lo_modal_objects": [],
+          "shared_math_lo_modal_methods": [],
+          "shared_math_lo_set_objects": [],
+          "shared_math_lo_set_methods": [],
+          "shared_math_lo_forcing_objects": [],
+          "shared_math_lo_forcing_methods": [],
+          "shared_math_lo_type_objects": [],
+          "source_type_terms": [],
+          "target_type_terms": [],
+          "shared_math_lo_definability_objects": [],
+          "shared_math_lo_definability_methods": [],
+          "math_ag_object_matches": {
+            "anchor": {
+              "moduli_and_stack": [
+                "stack",
+                "stacks"
+              ],
+              "sheaf_and_bundle": [
+                "sheaf",
+                "sheaves"
+              ],
+              "scheme_level": [
+                "algebraic",
+                "scheme"
+              ]
+            },
+            "target": {
+              "moduli_and_stack": [
+                "stack",
+                "stacks"
+              ],
+              "sheaf_and_bundle": [
+                "sheaf"
+              ],
+              "scheme_level": [
+                "algebraic"
+              ]
+            },
+            "overlap": {
+              "score": 3.0,
+              "shared_exact_terms": [
+                "algebraic",
+                "sheaf",
+                "stack",
+                "stacks"
+              ],
+              "shared_classes": [],
+              "related_classes": []
+            }
+          },
+          "math_ag_method_matches": {
+            "anchor": {
+              "cohomological": [
+                "prismatic"
+              ],
+              "geometric_combinatorial": [
+                "constructible",
+                "intersection"
+              ]
+            },
+            "target": {
+              "derived_categorical": [
+                "categories",
+                "derived",
+                "functor"
+              ]
+            },
+            "overlap": {
+              "score": 0.75,
+              "shared_exact_terms": [],
+              "shared_classes": [],
+              "related_classes": [
+                {
+                  "from": "cohomological",
+                  "to": "derived_categorical",
+                  "weight": 0.45
+                },
+                {
+                  "from": "geometric_combinatorial",
+                  "to": "derived_categorical",
+                  "weight": 0.3
+                }
+              ]
+            }
+          }
+        },
+        "evidence": {
+          "shared_objects": [
+            "stack",
+            "stacks",
+            "sheaf",
+            "algebraic"
+          ],
+          "taxonomy_overlap": [
+            "moduli_and_stack",
+            "sheaf_and_bundle",
+            "scheme_level"
+          ]
+        }
+      }
+    ],
+    "negative": [
+      {
+        "case_id": "ag-n1",
+        "anchor_topic_id": "global_30",
+        "anchor_topic_name": "法诺簇模空间曲线",
+        "target_topic_id": "global_287",
+        "target_topic_name": "导出代数叠范畴",
+        "expected_relation": "none",
+        "actual_relation": "math_ag_object_continuity",
+        "passed": false,
+        "reason": "mismatch",
+        "level": "bridge-level",
+        "confidence": null,
+        "pipeline_relation": {
+          "relation": "math_ag_object_continuity",
+          "source_stage_terms": [],
+          "target_stage_terms": [],
+          "shared_domain_terms": [],
+          "representation_stage_terms": [],
+          "perception_stage_terms": [],
+          "shared_3d_terms": [],
+          "shared_formal_terms": [],
+          "shared_math_ag_objects": [],
+          "shared_math_ag_methods": [],
+          "shared_math_lo_objects": [],
+          "shared_math_lo_methods": [],
+          "shared_math_lo_core_objects": [],
+          "shared_math_lo_modal_objects": [],
+          "shared_math_lo_modal_methods": [],
+          "shared_math_lo_set_objects": [],
+          "shared_math_lo_set_methods": [],
+          "shared_math_lo_forcing_objects": [],
+          "shared_math_lo_forcing_methods": [],
+          "shared_math_lo_type_objects": [],
+          "source_type_terms": [],
+          "target_type_terms": [],
+          "shared_math_lo_definability_objects": [],
+          "shared_math_lo_definability_methods": [],
+          "math_ag_object_matches": {
+            "anchor": {
+              "variety_family": [
+                "curves",
+                "k3",
+                "surfaces",
+                "threefolds",
+                "toric"
+              ],
+              "moduli_and_stack": [
+                "moduli",
+                "spaces"
+              ],
+              "sheaf_and_bundle": [
+                "bundles"
+              ],
+              "scheme_level": [
+                "projective"
+              ]
+            },
+            "target": {
+              "moduli_and_stack": [
+                "stack",
+                "stacks"
+              ],
+              "sheaf_and_bundle": [
+                "sheaf"
+              ],
+              "scheme_level": [
+                "algebraic"
+              ]
+            },
+            "overlap": {
+              "score": 2.25,
+              "shared_exact_terms": [],
+              "shared_classes": [
+                "moduli_and_stack",
+                "scheme_level",
+                "sheaf_and_bundle"
+              ],
+              "related_classes": []
+            }
+          },
+          "math_ag_method_matches": {
+            "anchor": {
+              "cohomological": [
+                "adic"
+              ]
+            },
+            "target": {
+              "derived_categorical": [
+                "categories",
+                "derived",
+                "functor"
+              ]
+            },
+            "overlap": {
+              "score": 0.45,
+              "shared_exact_terms": [],
+              "shared_classes": [],
+              "related_classes": [
+                {
+                  "from": "cohomological",
+                  "to": "derived_categorical",
+                  "weight": 0.45
+                }
+              ]
+            }
+          }
+        },
+        "evidence": {}
+      },
+      {
+        "case_id": "ag-n2",
+        "anchor_topic_id": "global_30",
+        "anchor_topic_name": "法诺簇模空间曲线",
+        "target_topic_id": "global_69",
+        "target_topic_name": "代数叠与层理论",
+        "expected_relation": "none",
+        "actual_relation": "math_ag_object_continuity",
+        "passed": false,
+        "reason": "mismatch",
+        "level": "bridge-level",
+        "confidence": null,
+        "pipeline_relation": {
+          "relation": "math_ag_object_continuity",
+          "source_stage_terms": [],
+          "target_stage_terms": [],
+          "shared_domain_terms": [],
+          "representation_stage_terms": [],
+          "perception_stage_terms": [],
+          "shared_3d_terms": [],
+          "shared_formal_terms": [],
+          "shared_math_ag_objects": [],
+          "shared_math_ag_methods": [],
+          "shared_math_lo_objects": [],
+          "shared_math_lo_methods": [],
+          "shared_math_lo_core_objects": [],
+          "shared_math_lo_modal_objects": [],
+          "shared_math_lo_modal_methods": [],
+          "shared_math_lo_set_objects": [],
+          "shared_math_lo_set_methods": [],
+          "shared_math_lo_forcing_objects": [],
+          "shared_math_lo_forcing_methods": [],
+          "shared_math_lo_type_objects": [],
+          "source_type_terms": [],
+          "target_type_terms": [],
+          "shared_math_lo_definability_objects": [],
+          "shared_math_lo_definability_methods": [],
+          "math_ag_object_matches": {
+            "anchor": {
+              "variety_family": [
+                "curves",
+                "k3",
+                "surfaces",
+                "threefolds",
+                "toric"
+              ],
+              "moduli_and_stack": [
+                "moduli",
+                "spaces"
+              ],
+              "sheaf_and_bundle": [
+                "bundles"
+              ],
+              "scheme_level": [
+                "projective"
+              ]
+            },
+            "target": {
+              "moduli_and_stack": [
+                "stack",
+                "stacks"
+              ],
+              "sheaf_and_bundle": [
+                "sheaf",
+                "sheaves"
+              ],
+              "scheme_level": [
+                "algebraic",
+                "scheme"
+              ]
+            },
+            "overlap": {
+              "score": 2.25,
+              "shared_exact_terms": [],
+              "shared_classes": [
+                "moduli_and_stack",
+                "scheme_level",
+                "sheaf_and_bundle"
+              ],
+              "related_classes": []
+            }
+          },
+          "math_ag_method_matches": {
+            "anchor": {
+              "cohomological": [
+                "adic"
+              ]
+            },
+            "target": {
+              "cohomological": [
+                "prismatic"
+              ],
+              "geometric_combinatorial": [
+                "constructible",
+                "intersection"
+              ]
+            },
+            "overlap": {
+              "score": 0.75,
+              "shared_exact_terms": [],
+              "shared_classes": [
+                "cohomological"
+              ],
+              "related_classes": []
+            }
+          }
+        },
+        "evidence": {}
+      },
+      {
+        "case_id": "ag-n3",
+        "anchor_topic_id": "global_287",
+        "anchor_topic_name": "导出代数叠范畴",
+        "target_topic_id": "global_30",
+        "target_topic_name": "法诺簇模空间曲线",
+        "expected_relation": "none",
+        "actual_relation": "math_ag_object_continuity",
+        "passed": false,
+        "reason": "mismatch",
+        "level": "bridge-level",
+        "confidence": null,
+        "pipeline_relation": {
+          "relation": "math_ag_object_continuity",
+          "source_stage_terms": [],
+          "target_stage_terms": [],
+          "shared_domain_terms": [],
+          "representation_stage_terms": [],
+          "perception_stage_terms": [],
+          "shared_3d_terms": [],
+          "shared_formal_terms": [],
+          "shared_math_ag_objects": [],
+          "shared_math_ag_methods": [],
+          "shared_math_lo_objects": [],
+          "shared_math_lo_methods": [],
+          "shared_math_lo_core_objects": [],
+          "shared_math_lo_modal_objects": [],
+          "shared_math_lo_modal_methods": [],
+          "shared_math_lo_set_objects": [],
+          "shared_math_lo_set_methods": [],
+          "shared_math_lo_forcing_objects": [],
+          "shared_math_lo_forcing_methods": [],
+          "shared_math_lo_type_objects": [],
+          "source_type_terms": [],
+          "target_type_terms": [],
+          "shared_math_lo_definability_objects": [],
+          "shared_math_lo_definability_methods": [],
+          "math_ag_object_matches": {
+            "anchor": {
+              "moduli_and_stack": [
+                "stack",
+                "stacks"
+              ],
+              "sheaf_and_bundle": [
+                "sheaf"
+              ],
+              "scheme_level": [
+                "algebraic"
+              ]
+            },
+            "target": {
+              "variety_family": [
+                "curves",
+                "k3",
+                "surfaces",
+                "threefolds",
+                "toric"
+              ],
+              "moduli_and_stack": [
+                "moduli",
+                "spaces"
+              ],
+              "sheaf_and_bundle": [
+                "bundles"
+              ],
+              "scheme_level": [
+                "projective"
+              ]
+            },
+            "overlap": {
+              "score": 2.25,
+              "shared_exact_terms": [],
+              "shared_classes": [
+                "moduli_and_stack",
+                "scheme_level",
+                "sheaf_and_bundle"
+              ],
+              "related_classes": []
+            }
+          },
+          "math_ag_method_matches": {
+            "anchor": {
+              "derived_categorical": [
+                "categories",
+                "derived",
+                "functor"
+              ]
+            },
+            "target": {
+              "cohomological": [
+                "adic"
+              ]
+            },
+            "overlap": {
+              "score": 0.45,
+              "shared_exact_terms": [],
+              "shared_classes": [],
+              "related_classes": [
+                {
+                  "from": "derived_categorical",
+                  "to": "cohomological",
+                  "weight": 0.45
+                }
+              ]
+            }
+          }
+        },
+        "evidence": {}
+      },
+      {
+        "case_id": "ag-n4",
+        "anchor_topic_id": "global_69",
+        "anchor_topic_name": "代数叠与层理论",
+        "target_topic_id": "global_30",
+        "target_topic_name": "法诺簇模空间曲线",
+        "expected_relation": "none",
+        "actual_relation": "math_ag_object_continuity",
+        "passed": false,
+        "reason": "mismatch",
+        "level": "bridge-level",
+        "confidence": null,
+        "pipeline_relation": {
+          "relation": "math_ag_object_continuity",
+          "source_stage_terms": [],
+          "target_stage_terms": [],
+          "shared_domain_terms": [],
+          "representation_stage_terms": [],
+          "perception_stage_terms": [],
+          "shared_3d_terms": [],
+          "shared_formal_terms": [],
+          "shared_math_ag_objects": [],
+          "shared_math_ag_methods": [],
+          "shared_math_lo_objects": [],
+          "shared_math_lo_methods": [],
+          "shared_math_lo_core_objects": [],
+          "shared_math_lo_modal_objects": [],
+          "shared_math_lo_modal_methods": [],
+          "shared_math_lo_set_objects": [],
+          "shared_math_lo_set_methods": [],
+          "shared_math_lo_forcing_objects": [],
+          "shared_math_lo_forcing_methods": [],
+          "shared_math_lo_type_objects": [],
+          "source_type_terms": [],
+          "target_type_terms": [],
+          "shared_math_lo_definability_objects": [],
+          "shared_math_lo_definability_methods": [],
+          "math_ag_object_matches": {
+            "anchor": {
+              "moduli_and_stack": [
+                "stack",
+                "stacks"
+              ],
+              "sheaf_and_bundle": [
+                "sheaf",
+                "sheaves"
+              ],
+              "scheme_level": [
+                "algebraic",
+                "scheme"
+              ]
+            },
+            "target": {
+              "variety_family": [
+                "curves",
+                "k3",
+                "surfaces",
+                "threefolds",
+                "toric"
+              ],
+              "moduli_and_stack": [
+                "moduli",
+                "spaces"
+              ],
+              "sheaf_and_bundle": [
+                "bundles"
+              ],
+              "scheme_level": [
+                "projective"
+              ]
+            },
+            "overlap": {
+              "score": 2.25,
+              "shared_exact_terms": [],
+              "shared_classes": [
+                "moduli_and_stack",
+                "scheme_level",
+                "sheaf_and_bundle"
+              ],
+              "related_classes": []
+            }
+          },
+          "math_ag_method_matches": {
+            "anchor": {
+              "cohomological": [
+                "prismatic"
+              ],
+              "geometric_combinatorial": [
+                "constructible",
+                "intersection"
+              ]
+            },
+            "target": {
+              "cohomological": [
+                "adic"
+              ]
+            },
+            "overlap": {
+              "score": 0.75,
+              "shared_exact_terms": [],
+              "shared_classes": [
+                "cohomological"
+              ],
+              "related_classes": []
+            }
+          }
+        },
+        "evidence": {}
+      },
+      {
+        "case_id": "ag-n5",
+        "anchor_topic_id": "global_287",
+        "anchor_topic_name": "导出代数叠范畴",
+        "target_topic_id": "global_69",
+        "target_topic_name": "代数叠与层理论",
+        "expected_relation": "none",
+        "actual_relation": "math_ag_object_continuity",
+        "passed": false,
+        "reason": "mismatch",
+        "level": "bridge-level",
+        "confidence": null,
+        "pipeline_relation": {
+          "relation": "math_ag_object_continuity",
+          "source_stage_terms": [],
+          "target_stage_terms": [],
+          "shared_domain_terms": [],
+          "representation_stage_terms": [],
+          "perception_stage_terms": [],
+          "shared_3d_terms": [],
+          "shared_formal_terms": [
+            "algebraic"
+          ],
+          "shared_math_ag_objects": [
+            "sheaf",
+            "stack",
+            "stacks"
+          ],
+          "shared_math_ag_methods": [],
+          "shared_math_lo_objects": [],
+          "shared_math_lo_methods": [],
+          "shared_math_lo_core_objects": [],
+          "shared_math_lo_modal_objects": [],
+          "shared_math_lo_modal_methods": [],
+          "shared_math_lo_set_objects": [],
+          "shared_math_lo_set_methods": [],
+          "shared_math_lo_forcing_objects": [],
+          "shared_math_lo_forcing_methods": [],
+          "shared_math_lo_type_objects": [],
+          "source_type_terms": [],
+          "target_type_terms": [],
+          "shared_math_lo_definability_objects": [],
+          "shared_math_lo_definability_methods": [],
+          "math_ag_object_matches": {
+            "anchor": {
+              "moduli_and_stack": [
+                "stack",
+                "stacks"
+              ],
+              "sheaf_and_bundle": [
+                "sheaf"
+              ],
+              "scheme_level": [
+                "algebraic"
+              ]
+            },
+            "target": {
+              "moduli_and_stack": [
+                "stack",
+                "stacks"
+              ],
+              "sheaf_and_bundle": [
+                "sheaf",
+                "sheaves"
+              ],
+              "scheme_level": [
+                "algebraic",
+                "scheme"
+              ]
+            },
+            "overlap": {
+              "score": 3.0,
+              "shared_exact_terms": [
+                "algebraic",
+                "sheaf",
+                "stack",
+                "stacks"
+              ],
+              "shared_classes": [],
+              "related_classes": []
+            }
+          },
+          "math_ag_method_matches": {
+            "anchor": {
+              "derived_categorical": [
+                "categories",
+                "derived",
+                "functor"
+              ]
+            },
+            "target": {
+              "cohomological": [
+                "prismatic"
+              ],
+              "geometric_combinatorial": [
+                "constructible",
+                "intersection"
+              ]
+            },
+            "overlap": {
+              "score": 0.75,
+              "shared_exact_terms": [],
+              "shared_classes": [],
+              "related_classes": [
+                {
+                  "from": "derived_categorical",
+                  "to": "cohomological",
+                  "weight": 0.45
+                },
+                {
+                  "from": "derived_categorical",
+                  "to": "geometric_combinatorial",
+                  "weight": 0.3
+                }
+              ]
+            }
+          }
+        },
+        "evidence": {}
+      }
+    ]
+  }
+}

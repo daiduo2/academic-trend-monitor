@@ -1,0 +1,125 @@
+{
+  "date": "2026-03-11",
+  "risks": [
+    "领域过于集中于CV和LG可能导致其他基础学科资源不足",
+    "category_fallback模式可能导致主题分类精度下降",
+    "新论文数量庞大，筛选有价值研究难度增加"
+  ],
+  "title": "学术趋势日报 2026-03-11",
+  "signals": [
+    {
+      "kind": "emerging",
+      "label": "LLM推理诚实性研究兴起",
+      "summary": "多篇论文探讨如何通过推理能力提升LLM的诚实性，反映AI对齐研究新趋势"
+    },
+    {
+      "kind": "cross_disciplinary",
+      "label": "量子物理与机器学习交叉",
+      "summary": "量子物理(quant-ph)与机器学习(cs.LG)同时快速增长，两领域交叉潜力显现"
+    },
+    {
+      "kind": "emerging",
+      "label": "机器人操作规划突破",
+      "summary": "TiPToP等模块化规划系统出现，推动机器人操作向开放词汇和通用化发展"
+    },
+    {
+      "kind": "drift",
+      "label": "计算机视觉持续主导",
+      "summary": "cs.CV以233篇论文远超其他领域，视觉智能仍是AI研究核心"
+    }
+  ],
+  "summary": "今日共发布947篇论文，计算机视觉(233篇)和机器学习(151篇)持续领跑，机器人学(103篇)增长显著。量子物理与计算语言学各75篇并列，人工智能领域出现推理增强LLM诚实性的新研究方向。",
+  "model_meta": {
+    "mode": "daily_analysis",
+    "model": "claude-3-5-sonnet-20241022",
+    "provider": "claude_code"
+  },
+  "key_findings": [
+    "计算机视觉cs.CV以233篇论文成为最活跃领域",
+    "机器学习cs.LG达151篇紧随其后",
+    "机器人学cs.RO增长至103篇，显示自动化领域热度上升",
+    "量子物理quant-ph与计算语言学cs.CL各75篇，显示跨学科研究活跃",
+    "出现LLM推理能力与诚实性结合的新研究方向"
+  ],
+  "notable_papers": [
+    {
+      "title": "Does hot QCD have a conformal manifold in the chiral limit?",
+      "reason": "探讨QCD手征极限下的共形流形问题，对理解强相互作用基本特性具有重要意义",
+      "arxiv_id": "2603.09977v1"
+    },
+    {
+      "title": "d-DNNF Modulo Theories: A General Framework for Polytime SMT Queries",
+      "reason": "提出d-DNNF模理论框架，为可满足性模理论查询提供通用高效解决方案",
+      "arxiv_id": "2603.09975v1"
+    },
+    {
+      "title": "TiPToP: A Modular Open-Vocabulary Planning System for Robotic Manipulation",
+      "reason": "模块化开放词汇机器人操作规划系统，推动具身智能发展",
+      "arxiv_id": "2603.09971v1"
+    },
+    {
+      "title": "CREATE: Testing LLMs for Associative Creativity",
+      "reason": "提出测试LLM关联创造力的新基准，评估语言模型创意能力",
+      "arxiv_id": "2603.09970v1"
+    },
+    {
+      "title": "Dark Matter Recoupling",
+      "reason": "研究暗物质重耦合过程，对宇宙学模型有重要启示",
+      "arxiv_id": "2603.09969v1"
+    },
+    {
+      "title": "Think Before You Lie: How Reasoning Improves Honesty",
+      "reason": "探索推理能力如何提升LLM的诚实性，对AI对齐研究有重要价值",
+      "arxiv_id": "2603.09957v1"
+    },
+    {
+      "title": "Interaction of the gravitational Hawking radiation and a static point mass",
+      "reason": "研究引力霍金辐射与静态点质量的相互作用，连接量子引力与黑洞物理",
+      "arxiv_id": "2603.09948v1"
+    }
+  ],
+  "top_rising_topics": [
+    {
+      "change": 233,
+      "summary": "计算机视觉领域持续火热，包含图像分割、目标检测、3D重建等多个子方向",
+      "topic_id": "cs.CV",
+      "topic_name": "cs.CV",
+      "paper_count": 233
+    },
+    {
+      "change": 151,
+      "summary": "机器学习理论和方法研究活跃，涉及优化器、神经网络结构、表示学习等",
+      "topic_id": "cs.LG",
+      "topic_name": "cs.LG",
+      "paper_count": 151
+    },
+    {
+      "change": 103,
+      "summary": "机器人学领域增长显著，包含规划系统、导航、人形机器人运动控制等",
+      "topic_id": "cs.RO",
+      "topic_name": "cs.RO",
+      "paper_count": 103
+    },
+    {
+      "change": 76,
+      "summary": "人工智能基础研究，包含LLM推理能力、创造力评估等前沿方向",
+      "topic_id": "cs.AI",
+      "topic_name": "cs.AI",
+      "paper_count": 76
+    },
+    {
+      "change": 75,
+      "summary": "量子物理理论研究，包括量子态分类、量子信息处理等",
+      "topic_id": "quant-ph",
+      "topic_name": "quant-ph",
+      "paper_count": 75
+    },
+    {
+      "change": 75,
+      "summary": "计算语言学与NLP研究，包含LLM评估、语言模型推理等",
+      "topic_id": "cs.CL",
+      "topic_name": "cs.CL",
+      "paper_count": 75
+    }
+  ]
+}

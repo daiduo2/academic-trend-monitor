@@ -1,0 +1,69 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install dependencies
+        run: |
+          cd frontend
+          npm install
+
+      - name: Copy data files
+        run: |
+          mkdir -p frontend/public/data frontend/public/data/output frontend/public/data/weekly frontend/public/data/analysis/daily
+          cp data/output/*.json frontend/public/data/ || echo "No root json files"
+          cp data/output/*.json frontend/public/data/output/ || echo "No output json files"
+          cp data/recent.jsonl frontend/public/data/ || echo "No recent file"
+          cp -r data/weekly/. frontend/public/data/weekly/ || echo "No weekly files"
+          cp -r data/analysis/daily/. frontend/public/data/analysis/daily/ || echo "No daily analysis files"
+          cp -r data/output/bertopic frontend/public/data/ || echo "No bertopic files"
+          cp -r data/output/hierarchy frontend/public/data/ || echo "No hierarchy files"
+          cp -r data/output/bertopic frontend/public/data/output/ || echo "No output bertopic files"
+          cp -r data/output/hierarchy frontend/public/data/output/ || echo "No output hierarchy files"
+          cp -r data/output/evolution_graphs frontend/public/data/output/ || echo "No evolution_graphs files"
+          ls -la frontend/public/data/
+
+      - name: Build
+        run: |
+          cd frontend
+          npm run build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './frontend/dist'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

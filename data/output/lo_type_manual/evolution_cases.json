@@ -1,0 +1,221 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-03-10T17:42:22.524749+00:00",
+  "analysis_periods": [
+    "2025-02",
+    "2025-03",
+    "2025-04",
+    "2025-05",
+    "2025-06",
+    "2025-07",
+    "2025-08",
+    "2025-09",
+    "2025-10",
+    "2025-11",
+    "2025-12",
+    "2026-01"
+  ],
+  "horizon_months": 4,
+  "total_cases": 3,
+  "cases": [
+    {
+      "case_id": "global_438-2025-02",
+      "anchor_topic_id": "global_438",
+      "anchor_topic_name": "大语言模型数学推理",
+      "anchor_topic_mode": "method",
+      "anchor_topic_profile": {
+        "primary_mode": "method",
+        "secondary_mode": "problem",
+        "method_score": 3,
+        "problem_score": 2,
+        "theory_score": 1
+      },
+      "category": "cs",
+      "start_period": "2025-02",
+      "observation_horizon": 4,
+      "neighbor_topics": [
+        "global_622",
+        "global_844",
+        "global_342",
+        "global_793",
+        "global_856"
+      ],
+      "event_types": [
+        "diffused_to_neighbor",
+        "emerged",
+        "expanded"
+      ],
+      "cross_category_moves": [],
+      "growth_summary": "大语言模型数学推理 (hybrid) expands from 2025-02 to 2025-06 and diffuses into nearby topics. Some transfer links remain flagged for manual review.",
+      "decline_summary": "No dominant decline pattern is detected before 2025-06.",
+      "review_flags": [
+        "same_category_high_bridge_weak_carryover"
+      ],
+      "key_supporting_topics": [
+        {
+          "topic_id": "global_622",
+          "topic_name": "强化学习推理奖励",
+          "category": "cs",
+          "weight": 0.2826,
+          "peak_period": "2025-04",
+          "peak_count": 19,
+          "increase": 19,
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 3,
+            "theory_score": 0
+          }
+        },
+        {
+          "topic_id": "global_793",
+          "topic_name": "表格模式与推理研究",
+          "category": "cs",
+          "weight": 0.1955,
+          "peak_period": "2025-06",
+          "peak_count": 11,
+          "increase": 11,
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": "method",
+            "method_score": 2,
+            "problem_score": 3,
+            "theory_score": 1
+          }
+        }
+      ],
+      "key_turning_points": [
+        {
+          "period": "2025-04",
+          "delta": -42,
+          "anchor_paper_count": 92
+        },
+        {
+          "period": "2025-05",
+          "delta": 115,
+          "anchor_paper_count": 207
+        },
+        {
+          "period": "2025-06",
+          "delta": 79,
+          "anchor_paper_count": 286
+        }
+      ]
+    },
+    {
+      "case_id": "global_980-2025-09",
+      "anchor_topic_id": "global_980",
+      "anchor_topic_name": "程序线性化与类型",
+      "anchor_topic_mode": "problem",
+      "anchor_topic_profile": {
+        "primary_mode": "problem",
+        "secondary_mode": "method",
+        "method_score": 1,
+        "problem_score": 2,
+        "theory_score": 0
+      },
+      "category": "cs",
+      "start_period": "2025-09",
+      "observation_horizon": 4,
+      "neighbor_topics": [
+        "global_1031"
+      ],
+      "event_types": [
+        "diffused_to_neighbor",
+        "emerged",
+        "weakened"
+      ],
+      "cross_category_moves": [],
+      "growth_summary": "程序线性化与类型 (hybrid) remains active without a strong expansion signal by 2026-01.",
+      "decline_summary": "Momentum softens by 2026-01, suggesting the topic loses local centrality.",
+      "review_flags": [],
+      "key_supporting_topics": [
+        {
+          "topic_id": "global_1031",
+          "topic_name": "形式规约语义验证",
+          "category": "cs",
+          "weight": 0.2,
+          "peak_period": "2025-10",
+          "peak_count": 15,
+          "increase": 15,
+          "topic_mode": "problem",
+          "topic_profile": {
+            "primary_mode": "problem",
+            "secondary_mode": "method",
+            "method_score": 1,
+            "problem_score": 3,
+            "theory_score": 0
+          }
+        }
+      ],
+      "key_turning_points": [
+        {
+          "period": "2025-10",
+          "delta": -66,
+          "anchor_paper_count": 0
+        }
+      ]
+    },
+    {
+      "case_id": "global_56-2025-03",
+      "anchor_topic_id": "global_56",
+      "anchor_topic_name": "直觉主义逻辑证明",
+      "anchor_topic_mode": "hybrid",
+      "anchor_topic_profile": {
+        "primary_mode": "hybrid",
+        "secondary_mode": null,
+        "method_score": 1,
+        "problem_score": 1,
+        "theory_score": 0
+      },
+      "category": "math",
+      "start_period": "2025-03",
+      "observation_horizon": 4,
+      "neighbor_topics": [
+        "global_27",
+        "global_208",
+        "global_345",
+        "global_1155",
+        "global_977"
+      ],
+      "event_types": [
+        "diffused_to_neighbor",
+        "emerged",
+        "weakened"
+      ],
+      "cross_category_moves": [],
+      "growth_summary": "直觉主义逻辑证明 (hybrid) remains active without a strong expansion signal by 2025-07.",
+      "decline_summary": "Momentum softens by 2025-07, suggesting the topic loses local centrality.",
+      "review_flags": [],
+      "key_supporting_topics": [
+        {
+          "topic_id": "global_27",
+          "topic_name": "概率逻辑与自动机语义",
+          "category": "math",
+          "weight": 0.4025,
+          "peak_period": "2025-04",
+          "peak_count": 58,
+          "increase": 58,
+          "topic_mode": "theory",
+          "topic_profile": {
+            "primary_mode": "theory",
+            "secondary_mode": null,
+            "method_score": 0,
+            "problem_score": 0,
+            "theory_score": 1
+          }
+        }
+      ],
+      "key_turning_points": [
+        {
+          "period": "2025-04",
+          "delta": -49,
+          "anchor_paper_count": 0
+        }
+      ]
+    }
+  ]
+}

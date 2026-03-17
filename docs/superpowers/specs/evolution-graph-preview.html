@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>演化图可视化预览 - Evolution Graph Preview</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            padding: 20px 30px;
+            border-bottom: 1px solid #334155;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            background: linear-gradient(90deg, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header p {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        .controls {
+            display: flex;
+            gap: 20px;
+            padding: 20px 30px;
+            background: #1e293b;
+            border-bottom: 1px solid #334155;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .view-switcher {
+            display: flex;
+            background: #0f172a;
+            border-radius: 8px;
+            padding: 4px;
+            gap: 4px;
+        }
+
+        .view-btn {
+            padding: 10px 24px;
+            border: none;
+            background: transparent;
+            color: #94a3b8;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .view-btn.active {
+            background: #3b82f6;
+            color: white;
+        }
+
+        .view-btn:hover:not(.active) {
+            color: #e2e8f0;
+            background: #1e293b;
+        }
+
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .filter-label {
+            font-size: 13px;
+            color: #94a3b8;
+            font-weight: 500;
+        }
+
+        .category-filters {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .category-btn {
+            padding: 6px 14px;
+            border: 1px solid #475569;
+            background: transparent;
+            color: #94a3b8;
+            cursor: pointer;
+            border-radius: 20px;
+            font-size: 12px;
+            transition: all 0.2s;
+        }
+
+        .category-btn.active {
+            border-color: #3b82f6;
+            background: rgba(59, 130, 246, 0.2);
+            color: #60a5fa;
+        }
+
+        .slider-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .confidence-slider {
+            width: 150px;
+            height: 6px;
+            -webkit-appearance: none;
+            appearance: none;
+            background: #334155;
+            border-radius: 3px;
+            outline: none;
+        }
+
+        .confidence-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            background: #3b82f6;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .confidence-value {
+            font-size: 13px;
+            color: #60a5fa;
+            font-weight: 600;
+            min-width: 40px;
+        }
+
+        .legend {
+            display: flex;
+            gap: 16px;
+            margin-left: auto;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            color: #94a3b8;
+        }
+
+        .legend-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .legend-dot.theory { background: #4A90D9; }
+        .legend-dot.method { background: #5CB85C; }
+        .legend-dot.problem { background: #F0AD4E; }
+        .legend-dot.hybrid { background: #9B59B6; }
+
+        .main-content {
+            padding: 30px;
+            height: calc(100vh - 200px);
+        }
+
+        .view-container {
+            display: none;
+            width: 100%;
+            height: 100%;
+            background: #1e293b;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            overflow: hidden;
+        }
+
+        .view-container.active {
+            display: block;
+        }
+
+        #timeline-view {
+            position: relative;
+        }
+
+        #network-view {
+            position: relative;
+        }
+
+        .timeline-svg, #network-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .period-column {
+            fill: rgba(51, 65, 85, 0.3);
+            stroke: #334155;
+            stroke-width: 1;
+        }
+
+        .period-label {
+            fill: #94a3b8;
+            font-size: 14px;
+            font-weight: 600;
+            text-anchor: middle;
+        }
+
+        .topic-node {
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .topic-node:hover {
+            filter: brightness(1.2);
+        }
+
+        .topic-node circle {
+            stroke: #0f172a;
+            stroke-width: 2;
+        }
+
+        .topic-node text {
+            fill: #e2e8f0;
+            font-size: 11px;
+            text-anchor: middle;
+            pointer-events: none;
+        }
+
+        .evolution-edge {
+            fill: none;
+            stroke: #64748b;
+            stroke-width: 2;
+            opacity: 0.6;
+        }
+
+        .evolution-edge.highlighted {
+            stroke: #60a5fa;
+            stroke-width: 3;
+            opacity: 1;
+        }
+
+        .tooltip {
+            position: absolute;
+            background: rgba(15, 23, 42, 0.95);
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 12px 16px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            max-width: 280px;
+        }
+
+        .tooltip.visible {
+            opacity: 1;
+        }
+
+        .tooltip-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #e2e8f0;
+            margin-bottom: 8px;
+        }
+
+        .tooltip-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            margin-bottom: 4px;
+        }
+
+        .tooltip-label {
+            color: #94a3b8;
+        }
+
+        .tooltip-value {
+            color: #e2e8f0;
+            font-weight: 500;
+        }
+
+        .mode-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .mode-badge.theory { background: rgba(74, 144, 217, 0.2); color: #4A90D9; }
+        .mode-badge.method { background: rgba(92, 184, 92, 0.2); color: #5CB85C; }
+        .mode-badge.problem { background: rgba(240, 173, 78, 0.2); color: #F0AD4E; }
+        .mode-badge.hybrid { background: rgba(155, 89, 182, 0.2); color: #9B59B6; }
+
+        .stats-bar {
+            display: flex;
+            gap: 30px;
+            padding: 15px 30px;
+            background: #0f172a;
+            border-top: 1px solid #334155;
+            font-size: 13px;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .stat-value {
+            color: #60a5fa;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .stat-label {
+            color: #64748b;
+        }
+
+        .network-controls {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .network-control-btn {
+            padding: 8px 16px;
+            background: rgba(30, 41, 59, 0.9);
+            border: 1px solid #475569;
+            color: #e2e8f0;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.2s;
+        }
+
+        .network-control-btn:hover {
+            background: #334155;
+        }
+
+        .network-period-selector {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .period-select-btn {
+            padding: 8px 16px;
+            background: rgba(30, 41, 59, 0.9);
+            border: 1px solid #475569;
+            color: #94a3b8;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.2s;
+        }
+
+        .period-select-btn.active {
+            background: #3b82f6;
+            color: white;
+            border-color: #3b82f6;
+        }
+
+        /* Icons */
+        .icon::before {
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .icon-timeline::before { content: "◯"; }
+        .icon-network::before { content: "⑆"; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📊 主题演化图可视化预览</h1>
+        <p>Topic Evolution Graph Visualization Preview - Math Domain (2025-02 to 2025-05)</p>
+    </div>
+
+    <div class="controls">
+        <div class="view-switcher">
+            <button class="view-btn active" onclick="switchView('timeline')">
+                <span class="icon-timeline"></span>
+                演化时间轴
+            </button>
+            <button class="view-btn" onclick="switchView('network')">
+                <span class="icon-network"></span>
+                关系网络
+            </button>
+        </div>
+
+        <div class="filter-group">
+            <span class="filter-label">类别筛选:</span>
+            <div class="category-filters">
+                <button class="category-btn active" onclick="toggleCategory(this, 'all')">全部</button>
+                <button class="category-btn" onclick="toggleCategory(this, 'OA')">math.OA</button>
+                <button class="category-btn" onclick="toggleCategory(this, 'NT')">math.NT</button>
+                <button class="category-btn" onclick="toggleCategory(this, 'CO')">math.CO</button>
+                <button class="category-btn" onclick="toggleCategory(this, 'AG')">math.AG</button>
+            </div>
+        </div>
+
+        <div class="filter-group">
+            <span class="filter-label">置信度:</span>
+            <div class="slider-container">
+                <input type="range" class="confidence-slider" min="60" max="100" value="80"
+                       oninput="updateConfidence(this.value)">
+                <span class="confidence-value">≥0.80</span>
+            </div>
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-dot theory"></div>
+                <span>理论</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-dot method"></div>
+                <span>方法</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-dot problem"></div>
+                <span>问题</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-dot hybrid"></div>
+                <span>混合</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div id="timeline-view" class="view-container active">
+            <svg class="timeline-svg"></svg>
+        </div>
+        <div id="network-view" class="view-container">
+            <div class="network-period-selector">
+                <button class="period-select-btn active" onclick="switchPeriod('2025-02')">2025-02</button>
+                <button class="period-select-btn" onclick="switchPeriod('2025-03')">2025-03</button>
+                <button class="period-select-btn" onclick="switchPeriod('2025-04')">2025-04</button>
+                <button class="period-select-btn" onclick="switchPeriod('2025-05')">2025-05</button>
+            </div>
+            <div class="network-controls">
+                <button class="network-control-btn" onclick="togglePhysics()">切换物理引擎</button>
+                <button class="network-control-btn" onclick="resetNetwork()">重置视图</button>
+            </div>
+            <div id="network-container"></div>
+        </div>
+    </div>
+
+    <div class="tooltip" id="tooltip">
+        <div class="tooltip-title">Topic Name</div>
+        <div class="tooltip-row">
+            <span class="tooltip-label">类别:</span>
+            <span class="tooltip-value">math.OA</span>
+        </div>
+        <div class="tooltip-row">
+            <span class="tooltip-label">模式:</span>
+            <span class="tooltip-value"><span class="mode-badge theory">理论</span></span>
+        </div>
+        <div class="tooltip-row">
+            <span class="tooltip-label">时间:</span>
+            <span class="tooltip-value">2025-02</span>
+        </div>
+    </div>
+
+    <div class="stats-bar">
+        <div class="stat-item">
+            <span class="stat-value" id="stat-nodes">156</span>
+            <span class="stat-label">节点</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-value" id="stat-edges">312</span>
+            <span class="stat-label">边</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-value" id="stat-components">12</span>
+            <span class="stat-label">连通分量</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-value" id="stat-coverage">78%</span>
+            <span class="stat-label">覆盖率</span>
+        </div>
+    </div>
+
+    <script>
+        // Color scheme
+        const MODE_COLORS = {
+            theory: '#4A90D9',
+            method: '#5CB85C',
+            problem: '#F0AD4E',
+            hybrid: '#9B59B6'
+        };
+
+        const MODE_LABELS = {
+            theory: '理论',
+            method: '方法',
+            problem: '问题',
+            hybrid: '混合'
+        };
+
+        // Generate mock data
+        const periods = ['2025-02', '2025-03', '2025-04', '2025-05'];
+        const categories = ['math.OA', 'math.NT', 'math.CO', 'math.AG'];
+        const modes = ['theory', 'method', 'problem', 'hybrid'];
+
+        const topicNames = [
+            'AW代数与希尔伯特代数', '迹态代数结构', '扭曲平展群胚代数',
+            '非交换代数Fell丛', 'p进伽罗瓦表示理论', '多项式与杜奇序列',
+            '随机矩阵谱理论', '量子纠错码', '椭圆曲线密码学',
+            '代数K理论', '同调镜像对称', '稳定性条件',
+            '模形式与L函数', '丢番图逼近', '算术几何',
+            '图论极值问题', '组合设计理论', '概率方法',
+            '微分几何流', '度量空间嵌入', '黎曼几何'
+        ];
+
+        function generateMockData() {
+            const nodes = [];
+            const edges = [];
+            const topicMap = {};
+
+            // Generate nodes
+            let nodeId = 0;
+            topicNames.forEach((name, idx) => {
+                const category = categories[Math.floor(Math.random() * categories.length)];
+                const mode = modes[Math.floor(Math.random() * modes.length)];
+                const startPeriod = Math.floor(Math.random() * 2); // 0 or 1
+                const endPeriod = Math.min(startPeriod + 2 + Math.floor(Math.random() * 2), 3);
+
+                topicMap[idx] = [];
+
+                for (let p = startPeriod; p <= endPeriod; p++) {
+                    const node = {
+                        id: `node_${nodeId++}`,
+                        topicId: `global_${idx}`,
+                        name: name,
+                        period: periods[p],
+                        periodIndex: p,
+                        category: category,
+                        mode: mode,
+                        paperCount: Math.floor(Math.random() * 50) + 1
+                    };
+                    nodes.push(node);
+                    topicMap[idx].push(node);
+                }
+            });
+
+            // Generate continued edges
+            Object.values(topicMap).forEach(topicNodes => {
+                for (let i = 0; i < topicNodes.length - 1; i++) {
+                    edges.push({
+                        source: topicNodes[i].id,
+                        target: topicNodes[i + 1].id,
+                        type: 'continued',
+                        confidence: 1.0
+                    });
+                }
+            });
+
+            // Generate cross-topic edges
+            nodes.forEach((node, i) => {
+                const samePeriod = nodes.filter(n => n.period === node.period && n.id !== node.id);
+                const numEdges = Math.floor(Math.random() * 3);
+                for (let j = 0; j < numEdges && j < samePeriod.length; j++) {
+                    if (Math.random() > 0.5) {
+                        edges.push({
+                            source: node.id,
+                            target: samePeriod[j].id,
+                            type: 'diffused',
+                            confidence: 0.6 + Math.random() * 0.4
+                        });
+                    }
+                }
+            });
+
+            return { nodes, edges };
+        }
+
+        const mockData = generateMockData();
+
+        // View state
+        let currentView = 'timeline';
+        let selectedCategories = new Set(['all']);
+        let confidenceThreshold = 0.8;
+        let networkInstance = null;
+        let currentPeriod = '2025-02';
+
+        // Switch view
+        function switchView(view) {
+            currentView = view;
+            document.querySelectorAll('.view-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.view-container').forEach(container => container.classList.remove('active'));
+
+            event.target.closest('.view-btn').classList.add('active');
+            document.getElementById(`${view}-view`).classList.add('active');
+
+            if (view === 'network' && !networkInstance) {
+                initNetworkView();
+            }
+        }
+
+        // Toggle category
+        function toggleCategory(btn, category) {
+            if (category === 'all') {
+                selectedCategories = new Set(['all']);
+                document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            } else {
+                selectedCategories.delete('all');
+                document.querySelector('.category-btn:first-child').classList.remove('active');
+
+                if (selectedCategories.has(category)) {
+                    selectedCategories.delete(category);
+                    btn.classList.remove('active');
+                } else {
+                    selectedCategories.add(category);
+                    btn.classList.add('active');
+                }
+
+                if (selectedCategories.size === 0) {
+                    selectedCategories.add('all');
+                    document.querySelector('.category-btn:first-child').classList.add('active');
+                }
+            }
+            updateVisualization();
+        }
+
+        // Update confidence threshold
+        function updateConfidence(value) {
+            confidenceThreshold = value / 100;
+            document.querySelector('.confidence-value').textContent = `≥${confidenceThreshold.toFixed(2)}`;
+            updateVisualization();
+        }
+
+        // Filter data
+        function getFilteredData() {
+            let filteredNodes = mockData.nodes;
+
+            if (!selectedCategories.has('all')) {
+                filteredNodes = filteredNodes.filter(n => {
+                    const cat = n.category.split('.')[1];
+                    return selectedCategories.has(cat);
+                });
+            }
+
+            const nodeIds = new Set(filteredNodes.map(n => n.id));
+            const filteredEdges = mockData.edges.filter(e => {
+                return nodeIds.has(e.source) && nodeIds.has(e.target) &&
+                       e.confidence >= confidenceThreshold;
+            });
+
+            return { nodes: filteredNodes, edges: filteredEdges };
+        }
+
+        // Update visualization
+        function updateVisualization() {
+            if (currentView === 'timeline') {
+                renderTimeline();
+            } else {
+                updateNetwork();
+            }
+            updateStats();
+        }
+
+        // Update stats
+        function updateStats() {
+            const { nodes, edges } = getFilteredData();
+            document.getElementById('stat-nodes').textContent = nodes.length;
+            document.getElementById('stat-edges').textContent = edges.length;
+
+            // Calculate connected components
+            const adjacency = {};
+            nodes.forEach(n => adjacency[n.id] = []);
+            edges.forEach(e => {
+                if (adjacency[e.source]) adjacency[e.source].push(e.target);
+                if (adjacency[e.target]) adjacency[e.target].push(e.source);
+            });
+
+            const visited = new Set();
+            let components = 0;
+            nodes.forEach(n => {
+                if (!visited.has(n.id)) {
+                    components++;
+                    const stack = [n.id];
+                    while (stack.length) {
+                        const curr = stack.pop();
+                        if (!visited.has(curr)) {
+                            visited.add(curr);
+                            (adjacency[curr] || []).forEach(neighbor => {
+                                if (!visited.has(neighbor)) stack.push(neighbor);
+                            });
+                        }
+                    }
+                }
+            });
+
+            document.getElementById('stat-components').textContent = components;
+            document.getElementById('stat-coverage').textContent =
+                Math.round((nodes.length / mockData.nodes.length) * 100) + '%';
+        }
+
+        // Render timeline view
+        function renderTimeline() {
+            const container = document.getElementById('timeline-view');
+            const svg = d3.select('.timeline-svg');
+            svg.selectAll('*').remove();
+
+            const { width, height } = container.getBoundingClientRect();
+            svg.attr('width', width).attr('height', height);
+
+            const { nodes, edges } = getFilteredData();
+            const margin = { top: 60, right: 50, bottom: 50, left: 50 };
+            const innerWidth = width - margin.left - margin.right;
+            const innerHeight = height - margin.top - margin.bottom;
+
+            const g = svg.append('g')
+                .attr('transform', `translate(${margin.left},${margin.top})`);
+
+            // Period columns
+            const periodWidth = innerWidth / periods.length;
+
+            periods.forEach((period, i) => {
+                const x = i * periodWidth;
+
+                // Column background
+                g.append('rect')
+                    .attr('class', 'period-column')
+                    .attr('x', x)
+                    .attr('y', -30)
+                    .attr('width', periodWidth - 20)
+                    .attr('height', innerHeight + 30);
+
+                // Period label
+                g.append('text')
+                    .attr('class', 'period-label')
+                    .attr('x', x + periodWidth / 2 - 10)
+                    .attr('y', -10)
+                    .text(period);
+            });
+
+            // Position nodes
+            const nodesByPeriod = {};
+            periods.forEach(p => nodesByPeriod[p] = []);
+            nodes.forEach(n => {
+                if (nodesByPeriod[n.period]) {
+                    nodesByPeriod[n.period].push(n);
+                }
+            });
+
+            Object.values(nodesByPeriod).forEach(periodNodes => {
+                periodNodes.forEach((n, i) => {
+                    n.x = periods.indexOf(n.period) * periodWidth + periodWidth / 2 - 10;
+                    n.y = (i + 1) * (innerHeight / (periodNodes.length + 1));
+                });
+            });
+
+            // Draw edges (curved bezier)
+            const edgeGroup = g.append('g').attr('class', 'edges');
+
+            edges.filter(e => e.type === 'continued').forEach(edge => {
+                const source = nodes.find(n => n.id === edge.source);
+                const target = nodes.find(n => n.id === edge.target);
+                if (source && target) {
+                    const path = d3.path();
+                    path.moveTo(source.x, source.y);
+                    path.bezierCurveTo(
+                        source.x + periodWidth / 3, source.y,
+                        target.x - periodWidth / 3, target.y,
+                        target.x, target.y
+                    );
+
+                    edgeGroup.append('path')
+                        .attr('class', 'evolution-edge')
+                        .attr('d', path.toString())
+                        .attr('id', `edge-${edge.source}-${edge.target}`);
+                }
+            });
+
+            // Draw nodes
+            const nodeGroup = g.append('g').attr('class', 'nodes');
+
+            const nodeEnter = nodeGroup.selectAll('.topic-node')
+                .data(nodes)
+                .enter()
+                .append('g')
+                .attr('class', 'topic-node')
+                .attr('transform', d => `translate(${d.x},${d.y})`)
+                .on('mouseover', function(event, d) {
+                    showTooltip(event, d);
+                    highlightLineage(d);
+                })
+                .on('mouseout', function() {
+                    hideTooltip();
+                    unhighlightLineage();
+                });
+
+            // Node circles with size based on paper count
+            nodeEnter.append('circle')
+                .attr('r', d => 8 + Math.log2(d.paperCount + 1) * 2)
+                .attr('fill', d => MODE_COLORS[d.mode]);
+
+            // Node labels (only for larger nodes)
+            nodeEnter.filter(d => d.paperCount > 20)
+                .append('text')
+                .attr('dy', 25)
+                .text(d => d.name.length > 8 ? d.name.slice(0, 8) + '...' : d.name);
+        }
+
+        // Highlight topic lineage
+        function highlightLineage(node) {
+            // Find all edges connected to this topic across periods
+            const topicEdges = mockData.edges.filter(e =>
+                e.source.startsWith(node.topicId) || e.target.startsWith(node.topicId)
+            );
+
+            topicEdges.forEach(edge => {
+                const edgeEl = document.getElementById(`edge-${edge.source}-${edge.target}`);
+                if (edgeEl) edgeEl.classList.add('highlighted');
+            });
+        }
+
+        function unhighlightLineage() {
+            document.querySelectorAll('.evolution-edge').forEach(el => {
+                el.classList.remove('highlighted');
+            });
+        }
+
+        // Tooltip functions
+        function showTooltip(event, node) {
+            const tooltip = document.getElementById('tooltip');
+            tooltip.querySelector('.tooltip-title').textContent = node.name;
+            tooltip.querySelectorAll('.tooltip-value')[0].textContent = node.category;
+            tooltip.querySelector('.mode-badge').textContent = MODE_LABELS[node.mode];
+            tooltip.querySelector('.mode-badge').className = `mode-badge ${node.mode}`;
+            tooltip.querySelectorAll('.tooltip-value')[2].textContent = node.period;
+
+            tooltip.style.left = (event.pageX + 15) + 'px';
+            tooltip.style.top = (event.pageY + 15) + 'px';
+            tooltip.classList.add('visible');
+        }
+
+        function hideTooltip() {
+            document.getElementById('tooltip').classList.remove('visible');
+        }
+
+        // Network view functions
+        function initNetworkView() {
+            updateNetwork();
+        }
+
+        function updateNetwork() {
+            const container = document.getElementById('network-container');
+            const { width, height } = container.getBoundingClientRect();
+
+            // Filter nodes by current period
+            const periodNodes = mockData.nodes.filter(n => n.period === currentPeriod);
+            const nodeIds = new Set(periodNodes.map(n => n.id));
+            const periodEdges = mockData.edges.filter(e =>
+                nodeIds.has(e.source) && nodeIds.has(e.target) &&
+                e.confidence >= confidenceThreshold &&
+                e.type === 'diffused'
+            );
+
+            // Prepare vis-network data
+            const visNodes = periodNodes.map(n => ({
+                id: n.id,
+                label: n.name.length > 10 ? n.name.slice(0, 10) + '...' : n.name,
+                color: {
+                    background: MODE_COLORS[n.mode],
+                    border: '#0f172a',
+                    highlight: { background: MODE_COLORS[n.mode], border: '#60a5fa' }
+                },
+                size: 10 + Math.log2(n.paperCount + 1) * 3,
+                font: { color: '#e2e8f0', size: 11 },
+                title: `${n.name}<br/>类别: ${n.category}<br/>模式: ${MODE_LABELS[n.mode]}`,
+                shape: 'dot'
+            }));
+
+            const visEdges = periodEdges.map(e => ({
+                from: e.source,
+                to: e.target,
+                width: e.confidence * 3,
+                color: { color: 'rgba(100, 116, 139, 0.5)', highlight: '#60a5fa' },
+                smooth: { type: 'continuous' }
+            }));
+
+            const data = {
+                nodes: new vis.DataSet(visNodes),
+                edges: new vis.DataSet(visEdges)
+            };
+
+            const options = {
+                width: width + 'px',
+                height: height + 'px',
+                backgroundColor: '#1e293b',
+                physics: {
+                    enabled: periodNodes.length <= 300,
+                    barnesHut: {
+                        gravitationalConstant: -2000,
+                        centralGravity: 0.3,
+                        springLength: 95,
+                        springConstant: 0.04,
+                        damping: 0.09
+                    }
+                },
+                interaction: {
+                    hover: true,
+                    tooltipDelay: 200,
+                    zoomView: true
+                }
+            };
+
+            if (networkInstance) {
+                networkInstance.destroy();
+            }
+
+            networkInstance = new vis.Network(container, data, options);
+        }
+
+        function switchPeriod(period) {
+            currentPeriod = period;
+            document.querySelectorAll('.period-select-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent === period) btn.classList.add('active');
+            });
+            updateNetwork();
+        }
+
+        function togglePhysics() {
+            if (networkInstance) {
+                const physics = networkInstance.physics.physicsEnabled;
+                networkInstance.setOptions({ physics: { enabled: !physics } });
+            }
+        }
+
+        function resetNetwork() {
+            if (networkInstance) {
+                networkInstance.fit();
+            }
+        }
+
+        // Initialize
+        window.addEventListener('load', () => {
+            renderTimeline();
+            updateStats();
+        });
+
+        window.addEventListener('resize', () => {
+            if (currentView === 'timeline') {
+                renderTimeline();
+            } else {
+                updateNetwork();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+name: Monthly Publish
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Topic version month (YYYY-MM)"
+        required: false
+        type: string
+      topics_tree:
+        description: "Path to topics_tree.json"
+        required: false
+        default: "data/output/topics_tree.json"
+        type: string
+      hierarchy:
+        description: "Path to aligned_topics_hierarchy.json"
+        required: false
+        default: "data/output/aligned_topics_hierarchy.json"
+        type: string
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      TOPIC_INDEX_HASH: ${{ vars.TOPIC_INDEX_HASH || '' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+
+      - name: Install Python dependencies
+        run: uv sync --locked --no-dev
+
+      - name: Publish topics to PostgreSQL
+        run: |
+          VERSION_ARG=""
+          if [ -n "${{ github.event.inputs.version }}" ]; then
+            VERSION_ARG="--version ${{ github.event.inputs.version }}"
+          fi
+          uv run python -m pipeline.publish_topics_to_db \
+            --topics-tree "${{ github.event.inputs.topics_tree || 'data/output/topics_tree.json' }}" \
+            --hierarchy "${{ github.event.inputs.hierarchy || 'data/output/aligned_topics_hierarchy.json' }}" \
+            $VERSION_ARG

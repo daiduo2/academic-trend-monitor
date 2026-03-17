@@ -1,0 +1,29 @@
+# ~/.claude/plugins/evolution-delegation/plugin.yaml
+name: "evolution-delegation"
+version: "0.1.0"
+description: "Structured execution framework for trend-monitor evolution-analysis tasks"
+author: "trend-monitor"
+
+entry_points:
+  slash_commands:
+    - name: "/delegate-evolution"
+      skill: "delegate-evolution"
+      description: "Entry point for all evolution-analysis tasks"
+    - name: "/case-worker"
+      skill: "case-worker"
+      description: "Find positive/negative/ambiguous cases"
+    - name: "/rule-worker"
+      skill: "rule-worker"
+      description: "Modify rule implementation and tests"
+    - name: "/doc-worker"
+      skill: "doc-worker"
+      description: "Update registry, review, and benchmark docs"
+
+config:
+  guardrails_file: "config/guardrails.yaml"
+  templates_file: "config/templates.yaml"
+
+requirements:
+  - "python >= 3.9"
+  - "pyyaml"
+  - "git"
