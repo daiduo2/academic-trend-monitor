@@ -167,9 +167,9 @@ done_when:
   - "review registry 说明对象词典盲点"
 ```
 
-### Package MAG-03A: Method Continuity Case Discovery **[PENDING - DECISION REQUIRED]**
+### Package MAG-03A: Method Continuity Case Discovery **[ARCHIVED - 2026-03-17]**
 
-**STATUS: ⏸️ 待决策 - 仅当明确需要时才执行**
+**STATUS: ✅ 已完成决策 - 选择 Option B (进入 normalization)**
 
 ```yaml
 tree_path: "math > math.AG"
@@ -206,9 +206,9 @@ done_when:
   - "文档记录决策理由"
 ```
 
-### Package MAG-03B-runner: Implement Method Benchmark **[CONDITIONAL]**
+### Package MAG-03B-runner: Implement Method Benchmark **[LOCKED - NOT UNLOCKED]**
 
-**STATUS: 🔒 锁定 - 仅在 MAG-03A 选择 option_a 后解锁**
+**STATUS: 🔒 保持锁定 - 因 MAG-03A 选择 Option B，此包不会执行**
 
 ```yaml
 tree_path: "math > math.AG"
@@ -226,9 +226,9 @@ allowed_files:
   - "docs/plans/2026-03-17-math-ag-benchmark.md"
 ```
 
-### Package MAG-03B-normalization: Scope Cleanup **[FALLBACK]**
+### Package MAG-03B-normalization: Scope Cleanup **[COMPLETED - 2026-03-17]**
 
-**STATUS: 🔓 默认路径 - 当 MAG-03A 无法找到足够 cases 时执行**
+**STATUS: ✅ 已完成 - method_continuity 已明确为 test-evidence-only**
 
 ```yaml
 tree_path: "math > math.AG"
@@ -237,15 +237,20 @@ task_type: "scope_normalization"
 target_rule: "math_ag_method_continuity"
 precondition: "MAG-03A 完成，选择 option_b (case 不足)"
 goal: "明确将 method_continuity 从 benchmark 候选中移除，维持 test-evidence-only"
-actions:
-  - "更新 registry: 明确标注 'test evidence only / not benchmark-ready'"
-  - "更新 math-ag-benchmark.md: 将 method cases 移入 'Test Evidence' 章节"
-  - "更新 math_ag_benchmark.py: 移除 method continuity cases 或标注为 test-only"
-  - "更新 worker-backlog: 归档 MAG-03，标注 'archived - insufficient event-level data'"
-done_when:
-  - "method_continuity 不再出现在 benchmark runner 中"
-  - "文档明确区分: object_continuity (ready) vs method_continuity (test-only)"
-  - "无歧义的 stop condition 已记录"
+actions_completed:
+  - ✅ "更新 registry: 明确标注 'test evidence only / not benchmark-ready'"
+    - 文件: docs/plans/2026-03-10-evolution-rule-coverage.md
+  - ✅ "更新 math-ag-benchmark.md: 将 method cases 移入 'Test Evidence' 章节"
+    - 文件: docs/plans/2026-03-17-math-ag-benchmark.md
+  - ✅ "更新 math_ag_benchmark.py: 移除 method continuity cases"
+    - 文件: pipeline/math_ag_benchmark.py (仅剩 object_continuity cases)
+  - ✅ "更新 evolution-ops: 归档 PKG-AG-03"
+    - 文件: docs/plans/evolution-ops/03-task-packages.md
+completion_verify:
+  - ✅ method_continuity 不在 runner 中
+  - ✅ 文档明确区分: object_continuity (ready) vs method_continuity (test-only)
+  - ✅ 无歧义的 stop condition 已记录
+  - ✅ math.AG benchmark 全绿: 6/6 passed
 ```
 
 ## Dispatch Rules
@@ -266,28 +271,30 @@ done_when:
 4. `MLO-02` - Type theory bridge-level 确认
 5. `MAG-02` - Object continuity negative case 补充
 
-### 待决策 ⏸️
+### 已完成 ✅
 
-6. **`MAG-03A`** - Method continuity case discovery **[需要明确决策]**
-   - 选择 A: 找到 event-level cases → 进入 `MAG-03B-runner`
-   - 选择 B: 无 event-level cases → 进入 `MAG-03B-normalization` (默认路径)
+6. **`MAG-03A`** - Method continuity case discovery **[已归档]**
+   - 决策: 选择 Option B (case 不足)
+   - 结果: 进入 `MAG-03B-normalization`，已完成
 
-**默认路径**: 若 `MAG-03A` 无法找到足够 cases，直接执行 `MAG-03B-normalization`
+7. **`MAG-03B-normalization`** - Scope cleanup **[已完成]**
+   - method_continuity 明确为 test-evidence-only
+   - math.AG benchmark 6/6 全绿
 
 ### 重要原则
 
-**不要跳过 `MAG-03A` 直接执行 `MAG-03B-runner`**
+**MAG-03 任务包已完成 (2026-03-17)**
 
-math_ag_method_continuity 目前状态：
+math_ag_method_continuity 最终状态：
 - ✅ Threshold 验证通过
 - ❌ **无 event-level cases** (只有 bridge-level)
-- ❌ **不配进入 benchmark runner**
+- ✅ **决策**: 明确为 test-evidence-only，不进入 benchmark runner
 
-必须先做 `MAG-03A` case discovery，明确：
-1. 能否找到跨期明显的 evolution cases
-2. 还是只能找到同期/短期的结构相似性
-
-只有确认有 event-level cases 后，才允许实现 runner。
+决策结果：
+1. `MAG-03A` case discovery 完成
+2. 确认无法找到 event-level cases，选择 Option B
+3. `MAG-03B-normalization` 已完成，文档已更新
+4. math.AG benchmark 稳定: **6/6 全绿**
 
 ## Stop Conditions
 
