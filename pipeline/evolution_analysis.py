@@ -307,21 +307,26 @@ MATH_DG_OBJECT_TAXONOMY = {
 MATH_AT_OBJECT_HINTS = {
     "homotopy", "homotopy_group", "higher_homotopy", "homology", "cohomology", "spectrum",
     "spectra", "cw_complex", "simplicial_complex", "chain_complex", "fundamental_group",
-    "covering_space", "fibration", "cofibration",
+    "covering_space", "fibration", "cofibration", "persistent", "persistence", "topological",
+    "bundles", "bundle", "simplicial", "morse", "equivariant", "hochschild", "thh",
 }
 MATH_AT_METHOD_HINTS = {
     "spectral_sequence", "steenrod_operation", "characteristic_class", "obstruction_theory",
     "stable_homotopy", "unstable_homotopy", "adams_spectral_sequence", "postnikov_tower",
+    "filtration", "barcode", "interleaving",
 }
 
 # math.GT (Geometric Topology) hints
 MATH_GT_OBJECT_HINTS = {
     "manifold", "manifolds", "knot", "knots", "link", "links", "surface", "3_manifold",
     "4_manifold", "handlebody", "heegaard_splitting", "mapping_class_group", "braid_group",
+    "heegaard", "genus", "khovanov",
 }
 MATH_GT_METHOD_HINTS = {
     "surgery_theory", "cobordism", "dehn_surgery", "kirby_calculus", "triangulation",
-    "foliation", "hyperbolic_structure", "jsj_decomposition",
+    "foliation", "hyperbolic_structure", "jsj_decomposition", "skein_relation",
+    "jones_polynomial", "alexander_polynomial", "homflypt", "floer_homology",
+    "instanton", "casson_invariant", "reidemeister_move", "floer", "jones", "homfly",
 }
 
 # math.GN (General Topology) hints
@@ -869,8 +874,8 @@ def _build_pipeline_relation(anchor: TopicRecord, target: TopicRecord) -> Dict[s
     elif representation_hits and perception_hits:
         relation = "representation_to_perception_same_pipeline"
     elif math_ag_domain and (
-        (len(shared_math_ag_objects) >= 2 and len(object_overlap["exact_terms"]) >= 1)
-        or (object_overlap["score"] >= 1.5 and len(object_overlap["exact_terms"]) >= 1)
+        (len(shared_math_ag_objects) >= 2 and len(object_overlap["shared_exact_terms"]) >= 1)
+        or (object_overlap["score"] >= 1.5 and len(object_overlap["shared_exact_terms"]) >= 1)
     ):
         relation = "math_ag_object_continuity"
     elif math_ag_domain and (len(shared_math_ag_methods) >= 2 or method_overlap["score"] >= 1.5):
