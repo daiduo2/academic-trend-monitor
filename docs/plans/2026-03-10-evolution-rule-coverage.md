@@ -140,17 +140,20 @@ trigger_sketch:
   - "共享至少 2 个方法词，如 cohomology / derived / motivic / tropical / étale"
 positive_examples:
   - "上同调、导出几何、热带几何等方法链路"
+  - "注：当前仅通过 synthetic test 验证，真实 case 待补充"
 counter_examples:
   - "对象连续性更强时，不应误标成 method continuity"
 implemented_in:
   - "pipeline/evolution_analysis.py"
 notes:
   - "用于把 math.AG 中的方法迁移和对象迁移分开建模"
+  - "WARNING: 当前仅有 synthetic test evidence，无真实 benchmark case"
+  - "ag-method-b1 / ag-method-n1 为 synthetic validation，不应写入真实 benchmark"
 claude_evaluation:
   required: true
   representative_cases:
-    - "global_30-2025-02"
-  conclusion: "math_ag_object/method_continuity 拆分方向合理，但当前词典覆盖率不足，需优先补充数学方法词典，否则真实案例中这一维度会持续为空。"
+    - "global_30-2025-02 (synthetic validation only)"
+  conclusion: "math_ag_object/method_continuity 拆分方向合理，但当前词典覆盖率不足。WARNING: 真实案例缺失，当前 validation 仅来自 synthetic test，不代表真实 benchmark 通过。需优先补充数学方法词典和真实 case，否则这一维度会持续为空。"
 ```
 
 ```yaml
