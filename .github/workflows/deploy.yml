@@ -50,7 +50,7 @@ jobs:
       - name: Export Graphiti snapshot
         run: |
           mkdir -p frontend/public/data
-          python pipeline/export_graphiti_snapshot.py --output frontend/public/data/graphiti_snapshot.json --domains math cs physics
+          PYTHONPATH=$PWD python pipeline/export_graphiti_snapshot.py --output frontend/public/data/graphiti_snapshot.json --domains math cs physics
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
