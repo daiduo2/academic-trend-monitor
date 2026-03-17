@@ -52,14 +52,14 @@ export function ForceGraphView({
     return map;
   }, [data.edges, nodeIds]);
 
-  // Only show edges connected to selected or hovered node
+  // Show all edges, but highlight those connected to selected/hovered node
   const visibleEdges = useMemo(() => {
-    const targetNode = selectedNode || hoveredNode;
-    if (!targetNode) return []; // No edges by default
-
-    const connected = adjacencyMap.get(targetNode.id);
-    return connected || [];
-  }, [adjacencyMap, selectedNode, hoveredNode]);
+    return data.edges.filter(edge => {
+      // Only show edges between nodes in our filtered set
+      if (!nodeIds.has(edge.source) || !nodeIds.has(edge.target)) return false;
+      return true;
+    });
+  }, [data.edges, nodeIds]);
 
   // For network mode, filter to selected period only
   const periodNodes = useMemo(() => {
@@ -77,39 +77,43 @@ export function ForceGraphView({
     );
   }, [visibleEdges, mode, periodNodes]);
 
-  // Timeline layout: position nodes by period
+  // Timeline layout: natural force-directed with period-based x bias
   const timelineNodes = useMemo(() => {
     if (mode !== 'timeline') return periodNodes;
 
     const periods = [...new Set(periodNodes.map(n => n.period))].sort();
     const periodWidth = dimensions.width / Math.max(periods.length, 1);
 
-    // Group nodes by period for Y distribution
+    // Group nodes by period for initial positioning
     const nodesByPeriod: Record<string, Node[]> = {};
     periodNodes.forEach(node => {
       if (!nodesByPeriod[node.period]) nodesByPeriod[node.period] = [];
       nodesByPeriod[node.period].push(node);
     });
 
-    // Calculate Y position within each period column
+    // Assign initial positions with organic distribution
     const nodesWithPositions: Node[] = [];
     periods.forEach((period, periodIndex) => {
       const columnNodes = nodesByPeriod[period] || [];
-      const columnHeight = dimensions.height * 0.8;
-      const nodeSpacing = columnHeight / Math.max(columnNodes.length, 1);
+      const targetX = periodIndex * periodWidth + periodWidth / 2;
 
       columnNodes.forEach((node, index) => {
-        const x = periodIndex * periodWidth + periodWidth / 2;
-        // Distribute evenly in Y, with some padding
-        const y = dimensions.height * 0.1 + index * nodeSpacing + nodeSpacing / 2;
+        // Add jitter to prevent perfect vertical alignment
+        const jitterX = (Math.random() - 0.5) * periodWidth * 0.3;
+        const jitterY = (Math.random() - 0.5) * 100;
+
+        // Distribute vertically with some randomness
+        const baseY = dimensions.height * 0.5 + (index - columnNodes.length / 2) * 60;
 
         nodesWithPositions.push({
           ...node,
-          fx: x, // Fixed x position for timeline
-          fy: y, // Fixed y position to show vertical distribution
-          x,
-          y,
-        });
+          // fx: only weakly constrain x, allow some movement
+          x: targetX + jitterX,
+          y: baseY + jitterY,
+          // Store target x for force simulation
+          __targetX: targetX,
+          __periodIndex: periodIndex,
+        } as Node);
       });
     });
 
@@ -273,7 +277,9 @@ export function ForceGraphView({
     if (!source.x || !source.y || !target.x || !target.y) return;
 
     const isContinued = edge.type === 'continued';
+    const isHovered = hoveredNode && (source.id === hoveredNode.id || target.id === hoveredNode.id);
     const isSelected = selectedNode && (source.id === selectedNode.id || target.id === selectedNode.id);
+    const isHighlighted = isSelected || isHovered;
 
     ctx.beginPath();
     ctx.moveTo(source.x, source.y);
@@ -281,27 +287,41 @@ export function ForceGraphView({
     if (isContinued && mode === 'timeline') {
       // Curved line for continued edges in timeline mode
       const midX = (source.x + target.x) / 2;
-      const midY = (source.y + target.y) / 2 - 50;
+      const midY = Math.min(source.y, target.y) - 30 - Math.abs(source.x - target.x) * 0.1;
       ctx.quadraticCurveTo(midX, midY, target.x, target.y);
     } else {
       ctx.lineTo(target.x, target.y);
     }
 
-    // Thicker, more visible edges
-    ctx.strokeStyle = isSelected ? '#60a5fa' : (isContinued ? '#3b82f6' : '#64748b');
-    ctx.lineWidth = isSelected ? 4 : (isContinued ? 3 : 2);
-    ctx.globalAlpha = isSelected ? 1 : (isContinued ? 0.8 : 0.5);
+    // Edge styling based on state
+    if (isHighlighted) {
+      // Bright highlight for connected edges
+      ctx.strokeStyle = '#60a5fa';
+      ctx.lineWidth = isContinued ? 4 : 3;
+      ctx.globalAlpha = 1;
+    } else if (hoveredNode || selectedNode) {
+      // Dimmed when something else is highlighted
+      ctx.strokeStyle = isContinued ? '#3b82f6' : '#64748b';
+      ctx.lineWidth = isContinued ? 2 : 1;
+      ctx.globalAlpha = 0.15;
+    } else {
+      // Normal visibility
+      ctx.strokeStyle = isContinued ? '#3b82f6' : '#94a3b8';
+      ctx.lineWidth = isContinued ? 2.5 : 1.5;
+      ctx.globalAlpha = isContinued ? 0.7 : 0.4;
+    }
+
     if (!isContinued) {
-      ctx.setLineDash([5, 5]);
+      ctx.setLineDash([4, 4]);
     }
     ctx.stroke();
     ctx.setLineDash([]);
     ctx.globalAlpha = 1;
 
     // Arrow for continued edges
-    if (isContinued) {
+    if (isContinued && (isHighlighted || (!hoveredNode && !selectedNode))) {
       const angle = Math.atan2(target.y - source.y, target.x - source.x);
-      const arrowLength = isSelected ? 12 : 10;
+      const arrowLength = isHighlighted ? 10 : 8;
       const arrowAngle = Math.PI / 6;
 
       ctx.beginPath();
@@ -315,18 +335,22 @@ export function ForceGraphView({
         target.x - arrowLength * Math.cos(angle + arrowAngle),
         target.y - arrowLength * Math.sin(angle + arrowAngle)
       );
+      ctx.strokeStyle = isHighlighted ? '#60a5fa' : '#3b82f6';
+      ctx.lineWidth = isHighlighted ? 3 : 2;
+      ctx.globalAlpha = isHighlighted ? 1 : 0.7;
       ctx.stroke();
+      ctx.globalAlpha = 1;
     }
-  }, [mode, selectedNode]);
+  }, [mode, selectedNode, hoveredNode]);
 
   // Physics configuration
   const physicsConfig = useMemo(() => {
     if (mode === 'timeline') {
       return {
-        linkDistance: 100,
-        charge: 0, // No repulsion in timeline mode (positions are fixed)
-        x: 0, // No x force
-        y: 0, // No y force
+        linkDistance: 120,
+        charge: -300, // Gentle repulsion for organic layout
+        x: 0.1, // Weak x force to keep periods roughly aligned
+        y: 0.01, // Minimal y force
       };
     }
     return {
@@ -370,8 +394,8 @@ export function ForceGraphView({
         enableZoomInteraction={true}
         enablePanInteraction={true}
         enableNodeDrag={mode === 'network'}
-        warmupTicks={100}
-        cooldownTicks={50}
+        warmupTicks={mode === 'timeline' ? 200 : 100}
+        cooldownTicks={mode === 'timeline' ? 100 : 50}
         d3AlphaDecay={0.02}
         d3VelocityDecay={0.3}
         linkDistance={physicsConfig.linkDistance}
@@ -380,7 +404,9 @@ export function ForceGraphView({
             force.strength(physicsConfig.charge);
           }
           if (forceName === 'x' && mode === 'timeline') {
-            // In timeline mode, x force is weaker to respect fx
+            // Custom x force that pulls nodes toward their period column
+            force.x((d: any) => d.__targetX || 0).strength(0.08);
+          } else if (forceName === 'x') {
             force.strength(physicsConfig.x);
           }
           if (forceName === 'y') {
