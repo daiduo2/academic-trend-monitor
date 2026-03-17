@@ -23,6 +23,17 @@ config:
   guardrails_file: "config/guardrails.yaml"
   templates_file: "config/templates.yaml"
 
+  # Benchmark binding configuration
+  # Convention: math.{XX} -> make math-{xx}-benchmark
+  # Fallback: python3 pipeline/math_benchmark.py --domain math_{xx}
+  benchmark:
+    convention_pattern: "math.{XX} -> make math-{xx}-benchmark"
+    fallback_command: "python3 pipeline/math_benchmark.py --domain {benchmark_domain}"
+    # Examples:
+    #   math.LO -> make math-lo-benchmark
+    #   math.AG -> make math-ag-benchmark
+    #   math.QA -> make math-qa-benchmark
+
 requirements:
   - "python >= 3.9"
   - "pyyaml"

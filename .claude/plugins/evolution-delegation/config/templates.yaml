@@ -1,0 +1,162 @@
+# Evolution Delegation Templates v1.0
+# 基础模板 + Worker 扩展
+
+# ==================== 基础模板（所有 Worker 共用）====================
+base_template:
+  # 必填字段
+  tree_path: ""              # 如 "math > math.LO > 模态逻辑"
+  task_type: ""              # new_rule | tighten_rule | benchmark_update | review_update
+  target_rule: ""            # 规则名，如 "math_lo_modal_continuity"
+  goal: ""                   # 一句话描述目标
+
+  # Case 提示
+  positive_case_hint: ""     # 正例提示，如 "global_56 -> global_27"
+  negative_case_hint: ""     # 负例提示，如 "global_56 -> global_438"
+
+  # 执行边界
+  allowed_files: []          # 允许修改的文件列表
+  required_commands: []      # 必须运行的命令
+
+  # 新增字段（v1.0 修正版）
+  benchmark_domain: ""       # 如 "math_lo"，用于 benchmark 绑定
+  status_ceiling: ""         # 如 "partial"，任务状态上限
+
+# ==================== /case-worker 扩展 ====================
+case_worker_ext:
+  # 候选 case 池
+  candidate_pool:
+    positive: []             # 候选正例列表
+    negative: []             # 候选负例列表
+    ambiguous: []            # 候选模糊例列表
+
+  # 推荐 case 对
+  recommended_pair:
+    positive:
+      case_id: ""
+      anchor: ""
+      target: ""
+      reason: ""             # 为什么这是好的正例
+    negative:
+      case_id: ""
+      anchor: ""
+      target: ""
+      reason: ""             # 为什么这是好的负例
+
+  # 边界分析
+  ambiguity_notes: ""        # 边界模糊处说明
+  boundary_definition: ""    # 这条规则与相邻规则的边界在哪
+
+# ==================== /rule-worker 扩展 ====================
+rule_worker_ext:
+  # 已选 case
+  selected_cases:
+    positive:
+      case_id: ""
+      anchor: ""
+      target: ""
+      expected_relation: ""
+    negative:
+      case_id: ""
+      anchor: ""
+      target: ""
+      expected_relation: "none"
+
+  # 修改计划
+  files_to_modify:
+    - file: ""
+      changes: ""            # 简述要做的修改
+
+  # 预期影响
+  expected_impact:
+    positive_change: ""      # 正例预期的变化
+    negative_protection: ""  # 负例如何被正确拒绝
+    regression_risk: ""      # 可能的回归风险
+
+  # 执行结果（运行时填充）
+  actual_changes: []
+  tests_run: []
+  benchmark_results: {}
+  residual_risk: ""
+
+# ==================== /doc-worker 扩展 ====================
+doc_worker_ext:
+  # 更新目标
+  doc_targets:
+    - doc: "registry"
+      action: "update"        # add | update | sync
+    - doc: "review"
+      action: "update"
+    - doc: "benchmark"
+      action: "sync"
+
+  # 状态意图
+  status_intent:
+    current: ""              # 当前状态
+    target: ""               # 目标状态
+    justification: ""        # 升级/变更理由
+
+  # 一致性检查
+  consistency_checks:
+    - check: "registry_vs_review"
+      status: "pending"       # pending | passed | failed
+    - check: "review_vs_benchmark"
+      status: "pending"
+    - check: "benchmark_vs_code"
+      status: "pending"
+
+  # 开放风险
+  open_risks: []
+
+# ==================== /delegate-evolution 扩展 ====================
+delegate_evolution_ext:
+  # 路由决策
+  routing_decision:
+    assigned_worker: ""      # case-worker | rule-worker | doc-worker
+    reasoning: ""            # 为什么选择这个 worker
+
+  # 完成检查
+  completion_requirements:
+    - "Claude review completed"
+    - "Local git commit created"
+    - "Benchmark passed"
+
+  # Stop conditions
+  stop_conditions:
+    - condition: "找不到可信 positive case"
+      action: "escalate"
+    - condition: "正例负例只能靠单个泛词区分"
+      action: "escalate"
+    - condition: "新规则与现有规则明显重叠"
+      action: "escalate"
+    - condition: "benchmark 失败但原因不清"
+      action: "escalate"
+
+# ==================== Benchmark 绑定配置 ====================
+benchmark_binding:
+  # 命名约定映射
+  convention:
+    pattern: "math.{XX} -> make math-{xx}-benchmark"
+    examples:
+      - "math.LO -> make math-lo-benchmark"
+      - "math.AG -> make math-ag-benchmark"
+      - "math.QA -> make math-qa-benchmark"
+
+  # Fallback 机制
+  fallback:
+    command: "python3 pipeline/math_benchmark.py --domain {benchmark_domain}"
+    when: "make target does not exist"
+
+  # Registry 校验
+  registry_checks:
+    - "tree_path exists in registry"
+    - "benchmark_status allows execution"
+    - "benchmark doc/spec exists"
+
+# ==================== 字段说明 ====================
+# 所有字段分为三类：
+# - required: 必填
+# - recommended: 建议填写
+# - optional: 可选
+#
+# 基础模板字段（6 required + 2 recommended）
+# Worker 扩展字段（根据 task 动态选用）
