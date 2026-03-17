@@ -86,7 +86,8 @@ deploy:
 	@cp data/output/*.json frontend/public/data/output/ || echo "No output data files yet"
 	@mkdir -p frontend/public/data/evolution_case_detail
 	@cp -r data/output/evolution_case_detail/. frontend/public/data/evolution_case_detail/ || echo "No evolution case detail yet"
-	@cp -r data/output/evolution_graphs frontend/public/data/output/ || echo "No evolution_graphs files yet"
+	@mkdir -p frontend/public/data/output/evolution_graphs
+	@cp -r data/output/evolution_graphs/. frontend/public/data/output/evolution_graphs/ 2>/dev/null || echo "No evolution_graphs files yet"
 	@cp data/recent.jsonl frontend/public/data/ || echo "No recent data yet"
 	@cp -r data/weekly/. frontend/public/data/weekly/ || echo "No weekly data yet"
 	@cp -r data/analysis/daily/. frontend/public/data/analysis/daily/ || echo "No analysis data yet"

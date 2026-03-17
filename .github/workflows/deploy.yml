@@ -48,7 +48,8 @@ jobs:
           cp -r data/output/hierarchy frontend/public/data/ || echo "No hierarchy files"
           cp -r data/output/bertopic frontend/public/data/output/ || echo "No output bertopic files"
           cp -r data/output/hierarchy frontend/public/data/output/ || echo "No output hierarchy files"
-          cp -r data/output/evolution_graphs frontend/public/data/output/ || echo "No evolution_graphs files"
+          mkdir -p frontend/public/data/output/evolution_graphs
+          cp -r data/output/evolution_graphs/. frontend/public/data/output/evolution_graphs/ 2>/dev/null || echo "No evolution_graphs files"
           ls -la frontend/public/data/
 
       - name: Build
