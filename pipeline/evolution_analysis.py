@@ -161,6 +161,94 @@ MATH_LO_DEFINABILITY_SPECIAL_OBJECTS = {
     "woodin", "axiom", "reals", "uniformization",
 }
 
+# math.GR (Group Theory) hints
+MATH_GR_OBJECT_HINTS = {
+    "group", "groups", "subgroup", "normal", "simple", "finite", "infinite", "abelian", "nilpotent",
+    "solvable", "representation", "character", "conjugacy", "sylow", "p-group", "free_group",
+}
+MATH_GR_METHOD_HINTS = {
+    "homomorphism", "isomorphism", "action", "orbit", "stabilizer", "sylow_theorem", "cohomology",
+    "extension", "composition_series", "character_table",
+}
+
+# math.RT (Representation Theory) hints
+MATH_RT_OBJECT_HINTS = {
+    "representation", "representations", "module", "modules", "character", "irreducible", "reducible",
+    "weight", "highest_weight", "root", "roots", "weyl_group", "flag_variety", "schubert",
+}
+MATH_RT_METHOD_HINTS = {
+    "induction", "restriction", "tensor_product", "symmetric_power", "exterior_power", "schur_functor",
+    "verma_module", "category_o", "bgg_category",
+}
+
+# math.RA (Rings and Algebras) hints
+MATH_RA_OBJECT_HINTS = {
+    "ring", "rings", "ideal", "ideals", "module", "algebra", "algebras", "commutative", "noetherian",
+    "artinian", "prime_ideal", "maximal_ideal", "radical", "spectrum",
+}
+MATH_RA_METHOD_HINTS = {
+    "localization", "completion", "tensor_product", "extension", "galois_theory", "homology",
+    "projective_resolution", "global_dimension", "regular_local_ring",
+}
+
+# math.QA (Quantum Algebra) hints
+MATH_QA_OBJECT_HINTS = {
+    "quantum", "q-deformation", "hopf_algebra", "quantum_group", "yangian", "crystal_basis",
+    "canonical_basis", "braid_group", "temperley-lieb",
+}
+MATH_QA_METHOD_HINTS = {
+    "r_matrix", "drinfeld_double", "jimbo_quantization", "kashiwara_crystal", "lurzig_basis",
+    "categorification", "cluster_algebra", "mutation",
+}
+
+# math.AP (Partial Differential Equations) hints
+MATH_AP_OBJECT_HINTS = {
+    "pde", "equation", "equations", "elliptic", "parabolic", "hyperbolic", "laplacian",
+    "schrodinger_equation", "navier_stokes", "wave_equation", "heat_equation",
+    "reaction_diffusion", "boundary_value",
+}
+MATH_AP_METHOD_HINTS = {
+    "sobolev_space", "weak_solution", "viscosity_solution", "maximum_principle",
+    "energy_estimate", "fixed_point_method", "iteration_scheme", "a_priori_estimate",
+    "bootstrap_argument",
+}
+
+# math.CA (Classical Analysis and ODEs) hints
+MATH_CA_OBJECT_HINTS = {
+    "function", "functions", "analytic_function", "harmonic_function", "fourier_series",
+    "fourier_transform", "integral", "measure", "ergodic_theory", "complex_dynamics",
+    "ordinary_differential_equation", "special_function",
+}
+MATH_CA_METHOD_HINTS = {
+    "complex_analysis", "real_analysis", "potential_theory", "approximation_theory",
+    "interpolation", "asymptotic_analysis", "contour_integration", "residue_calculus",
+    "steepest_descent",
+}
+
+# math.FA (Functional Analysis) hints
+MATH_FA_OBJECT_HINTS = {
+    "banach_space", "hilbert_space", "operator", "operators", "bounded_linear_operator",
+    "compact_operator", "spectral_theory", "semigroup", "distribution", "generalized_function",
+    "sobolev_space", "hardy_space",
+}
+MATH_FA_METHOD_HINTS = {
+    "functional_calculus", "spectral_radius", "resolvent", "fredholm_theory", "duality",
+    "weak_convergence", "strong_convergence", "unitary_equivalence", "von_neumann_algebra",
+    "c_star_algebra",
+}
+
+# math.DS (Dynamical Systems) hints
+MATH_DS_OBJECT_HINTS = {
+    "dynamical_system", "flow", "map", "diffeomorphism", "attractor", "strange_attractor",
+    "bifurcation", "chaos", "invariant_set", "topological_entropy", "metric_entropy",
+    "periodic_orbit", "homoclinic_orbit",
+}
+MATH_DS_METHOD_HINTS = {
+    "stable_manifold", "unstable_manifold", "center_manifold", "hyperbolicity",
+    "structural_stability", "topological_conjugacy", "symbolic_dynamics", "kneading_theory",
+    "renormalization", "linearization",
+}
+
 NAME_ALIASES = {
     "three dimensional": "3d",
     "three-dimensional": "3d",
@@ -584,6 +672,58 @@ def _build_pipeline_relation(anchor: TopicRecord, target: TopicRecord) -> Dict[s
     target_type_terms = sorted(target_terms & MATH_LO_TYPE_TARGET_HINTS)[:6]
     shared_math_lo_definability_objects = sorted((anchor_terms & target_terms) & MATH_LO_DEFINABILITY_OBJECT_HINTS)[:6]
     shared_math_lo_definability_methods = sorted((anchor_terms & target_terms) & MATH_LO_DEFINABILITY_METHOD_HINTS)[:6]
+    # Algebra domain detection
+    math_gr_domain = (
+        any("math.GR研究" in segment for segment in anchor.hierarchy_path)
+        and any("math.GR研究" in segment for segment in target.hierarchy_path)
+    )
+    math_rt_domain = (
+        any("math.RT研究" in segment for segment in anchor.hierarchy_path)
+        and any("math.RT研究" in segment for segment in target.hierarchy_path)
+    )
+    math_ra_domain = (
+        any("math.RA研究" in segment for segment in anchor.hierarchy_path)
+        and any("math.RA研究" in segment for segment in target.hierarchy_path)
+    )
+    math_qa_domain = (
+        any("math.QA" in segment for segment in anchor.hierarchy_path)
+        and any("math.QA" in segment for segment in target.hierarchy_path)
+    )
+    # Algebra domain shared terms
+    shared_math_gr_objects = sorted((anchor_terms & target_terms) & MATH_GR_OBJECT_HINTS)[:6]
+    shared_math_gr_methods = sorted((anchor_terms & target_terms) & MATH_GR_METHOD_HINTS)[:6]
+    shared_math_rt_objects = sorted((anchor_terms & target_terms) & MATH_RT_OBJECT_HINTS)[:6]
+    shared_math_rt_methods = sorted((anchor_terms & target_terms) & MATH_RT_METHOD_HINTS)[:6]
+    shared_math_ra_objects = sorted((anchor_terms & target_terms) & MATH_RA_OBJECT_HINTS)[:6]
+    shared_math_ra_methods = sorted((anchor_terms & target_terms) & MATH_RA_METHOD_HINTS)[:6]
+    shared_math_qa_objects = sorted((anchor_terms & target_terms) & MATH_QA_OBJECT_HINTS)[:6]
+    shared_math_qa_methods = sorted((anchor_terms & target_terms) & MATH_QA_METHOD_HINTS)[:6]
+    # Analysis domain detection
+    math_ap_domain = (
+        any("math.AP" in segment for segment in anchor.hierarchy_path)
+        and any("math.AP" in segment for segment in target.hierarchy_path)
+    )
+    math_ca_domain = (
+        any("math.CA" in segment for segment in anchor.hierarchy_path)
+        and any("math.CA" in segment for segment in target.hierarchy_path)
+    )
+    math_fa_domain = (
+        any("math.FA" in segment for segment in anchor.hierarchy_path)
+        and any("math.FA" in segment for segment in target.hierarchy_path)
+    )
+    math_ds_domain = (
+        any("math.DS" in segment for segment in anchor.hierarchy_path)
+        and any("math.DS" in segment for segment in target.hierarchy_path)
+    )
+    # Analysis domain shared terms
+    shared_math_ap_objects = sorted((anchor_terms & target_terms) & MATH_AP_OBJECT_HINTS)[:6]
+    shared_math_ap_methods = sorted((anchor_terms & target_terms) & MATH_AP_METHOD_HINTS)[:6]
+    shared_math_ca_objects = sorted((anchor_terms & target_terms) & MATH_CA_OBJECT_HINTS)[:6]
+    shared_math_ca_methods = sorted((anchor_terms & target_terms) & MATH_CA_METHOD_HINTS)[:6]
+    shared_math_fa_objects = sorted((anchor_terms & target_terms) & MATH_FA_OBJECT_HINTS)[:6]
+    shared_math_fa_methods = sorted((anchor_terms & target_terms) & MATH_FA_METHOD_HINTS)[:6]
+    shared_math_ds_objects = sorted((anchor_terms & target_terms) & MATH_DS_OBJECT_HINTS)[:6]
+    shared_math_ds_methods = sorted((anchor_terms & target_terms) & MATH_DS_METHOD_HINTS)[:6]
     anchor_object_matches = _match_taxonomy_classes(anchor_terms, MATH_AG_OBJECT_TAXONOMY)
     target_object_matches = _match_taxonomy_classes(target_terms, MATH_AG_OBJECT_TAXONOMY)
     object_overlap = _score_taxonomy_overlap(
@@ -633,6 +773,22 @@ def _build_pipeline_relation(anchor: TopicRecord, target: TopicRecord) -> Dict[s
         relation = "math_lo_set_theory_continuity"
     elif math_lo_domain and len(shared_math_lo_core_objects) >= 2 and len(shared_math_lo_methods) >= 1:
         relation = "math_lo_formal_system_continuity"
+    elif math_gr_domain and (len(shared_math_gr_objects) >= 3 or (len(shared_math_gr_objects) >= 2 and len(shared_math_gr_methods) >= 1)):
+        relation = "math_gr_object_continuity"
+    elif math_rt_domain and (len(shared_math_rt_objects) >= 3 or (len(shared_math_rt_objects) >= 2 and len(shared_math_rt_methods) >= 1)):
+        relation = "math_rt_object_continuity"
+    elif math_ra_domain and (len(shared_math_ra_objects) >= 3 or (len(shared_math_ra_objects) >= 2 and len(shared_math_ra_methods) >= 1)):
+        relation = "math_ra_object_continuity"
+    elif math_qa_domain and (len(shared_math_qa_objects) >= 3 or (len(shared_math_qa_objects) >= 2 and len(shared_math_qa_methods) >= 1)):
+        relation = "math_qa_object_continuity"
+    elif math_ap_domain and len(shared_math_ap_objects) >= 2 and len(shared_math_ap_methods) >= 1:
+        relation = "math_ap_object_continuity"
+    elif math_ca_domain and len(shared_math_ca_objects) >= 2 and len(shared_math_ca_methods) >= 1:
+        relation = "math_ca_object_continuity"
+    elif math_fa_domain and len(shared_math_fa_objects) >= 2 and len(shared_math_fa_methods) >= 1:
+        relation = "math_fa_object_continuity"
+    elif math_ds_domain and len(shared_math_ds_objects) >= 2 and len(shared_math_ds_methods) >= 1:
+        relation = "math_ds_object_continuity"
     elif theory_domain and len(shared_formal_terms) >= 2:
         relation = "formal_structure_same_lineage"
     else:
@@ -663,6 +819,22 @@ def _build_pipeline_relation(anchor: TopicRecord, target: TopicRecord) -> Dict[s
         "target_type_terms": target_type_terms,
         "shared_math_lo_definability_objects": shared_math_lo_definability_objects,
         "shared_math_lo_definability_methods": shared_math_lo_definability_methods,
+        "shared_math_gr_objects": shared_math_gr_objects,
+        "shared_math_gr_methods": shared_math_gr_methods,
+        "shared_math_rt_objects": shared_math_rt_objects,
+        "shared_math_rt_methods": shared_math_rt_methods,
+        "shared_math_ra_objects": shared_math_ra_objects,
+        "shared_math_ra_methods": shared_math_ra_methods,
+        "shared_math_qa_objects": shared_math_qa_objects,
+        "shared_math_qa_methods": shared_math_qa_methods,
+        "shared_math_ap_objects": shared_math_ap_objects,
+        "shared_math_ap_methods": shared_math_ap_methods,
+        "shared_math_ca_objects": shared_math_ca_objects,
+        "shared_math_ca_methods": shared_math_ca_methods,
+        "shared_math_fa_objects": shared_math_fa_objects,
+        "shared_math_fa_methods": shared_math_fa_methods,
+        "shared_math_ds_objects": shared_math_ds_objects,
+        "shared_math_ds_methods": shared_math_ds_methods,
         "math_ag_object_matches": {
             "anchor": anchor_object_matches,
             "target": target_object_matches,
@@ -811,6 +983,14 @@ def build_consistency_check(
         "math_lo_forcing_continuity",
         "math_lo_set_theory_continuity",
         "math_lo_formal_system_continuity",
+        "math_gr_object_continuity",
+        "math_rt_object_continuity",
+        "math_ra_object_continuity",
+        "math_qa_object_continuity",
+        "math_ap_object_continuity",
+        "math_ca_object_continuity",
+        "math_fa_object_continuity",
+        "math_ds_object_continuity",
         "formal_structure_same_lineage",
     }:
         return {
