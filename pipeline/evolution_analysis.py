@@ -175,30 +175,33 @@ MATH_GR_METHOD_HINTS = {
 MATH_RT_OBJECT_HINTS = {
     "representation", "representations", "module", "modules", "character", "irreducible", "reducible",
     "weight", "highest_weight", "root", "roots", "weyl_group", "flag_variety", "schubert",
+    "cohomology", "sheaves", "lusztig", "hecke", "categories", "category", "algebra", "algebras",
 }
 MATH_RT_METHOD_HINTS = {
     "induction", "restriction", "tensor_product", "symmetric_power", "exterior_power", "schur_functor",
-    "verma_module", "category_o", "bgg_category",
+    "verma_module", "category_o", "bgg_category", "perverse", "deligne",
 }
 
 # math.RA (Rings and Algebras) hints
 MATH_RA_OBJECT_HINTS = {
     "ring", "rings", "ideal", "ideals", "module", "algebra", "algebras", "commutative", "noetherian",
-    "artinian", "prime_ideal", "maximal_ideal", "radical", "spectrum",
+    "artinian", "prime_ideal", "maximal_ideal", "radical", "spectrum", "polynomials", "polynomial",
+    "matrices", "matrix", "lie",
 }
 MATH_RA_METHOD_HINTS = {
     "localization", "completion", "tensor_product", "extension", "galois_theory", "homology",
-    "projective_resolution", "global_dimension", "regular_local_ring",
+    "projective_resolution", "global_dimension", "regular_local_ring", "rota", "baxter",
 }
 
 # math.QA (Quantum Algebra) hints
 MATH_QA_OBJECT_HINTS = {
     "quantum", "q-deformation", "hopf_algebra", "quantum_group", "yangian", "crystal_basis",
-    "canonical_basis", "braid_group", "temperley-lieb",
+    "canonical_basis", "braid_group", "temperley-lieb", "hopf", "algebras", "algebra",
+    "schubert", "cohomology", "flag", "modules", "module", "categories", "category",
 }
 MATH_QA_METHOD_HINTS = {
     "r_matrix", "drinfeld_double", "jimbo_quantization", "kashiwara_crystal", "lurzig_basis",
-    "categorification", "cluster_algebra", "mutation",
+    "categorification", "cluster_algebra", "mutation", "equivariant",
 }
 
 # math.AP (Partial Differential Equations) hints
@@ -247,6 +250,88 @@ MATH_DS_METHOD_HINTS = {
     "stable_manifold", "unstable_manifold", "center_manifold", "hyperbolicity",
     "structural_stability", "topological_conjugacy", "symbolic_dynamics", "kneading_theory",
     "renormalization", "linearization",
+}
+# math.DG (Differential Geometry) hints
+MATH_DG_OBJECT_HINTS = {
+    "manifold", "manifolds", "riemannian_metric", "metric_tensor", "curvature", "sectional_curvature",
+    "ricci_curvature", "scalar_curvature", "geodesic", "connection", "levi_civita", "vector_bundle",
+    "principal_bundle", "tangent_bundle", "cotangent_bundle", "tensor_field", "differential_form",
+    "symplectic_form", "kahler_form",
+}
+MATH_DG_METHOD_HINTS = {
+    "christoffel_symbols", "parallel_transport", "holonomy", "covariant_derivative", "exponential_map",
+    "geodesic_flow", "ricci_flow", "mean_curvature_flow", "yang_mills", "chern_connection", "hodge_theory",
+}
+
+# math.MG (Metric Geometry) hints
+MATH_MG_OBJECT_HINTS = {
+    "metric_space", "geodesic_metric_space", "alexandrov_space", "hadamard_space", "cat_k_space",
+    "boundary_at_infinity", "gromov_boundary", "gromov_hyperbolic_space", "quasi_geodesic",
+    "asymptotic_cone", "tangent_cone",
+}
+MATH_MG_METHOD_HINTS = {
+    "comparison_geometry", "triangle_comparison", "toponogov_comparison", "hausdorff_distance",
+    "gromov_hausdorff_convergence", "pointed_gromov_hausdorff", "ultralimit", "filling_radius",
+    "systolic_geometry",
+}
+
+# math.CV (Complex Variables / Several Complex Variables) hints
+MATH_CV_OBJECT_HINTS = {
+    "complex_manifold", "complex_structure", "holomorphic_function", "analytic_function",
+    "pseudoconvex_domain", "stein_manifold", "kahler_manifold", "domain_of_holomorphy",
+    "meromorphic_function", "divisor", "line_bundle", "coherent_sheaf", "plurisubharmonic_function",
+}
+MATH_CV_METHOD_HINTS = {
+    "cauchy_integral", "dbar_operator", "sheaf_cohomology", "l2_estimates", "hormander_theorem",
+    "oka_principle", "cartan_theorem_a", "cartan_theorem_b", "lelong_number", "positive_current",
+    "bergman_kernel",
+}
+
+MATH_DG_OBJECT_TAXONOMY = {
+    "riemannian_structure": {
+        "metric", "riemannian", "curvature", "ricci", "scalar_curvature", "geodesic",
+    },
+    "bundle_theory": {
+        "vector_bundle", "principal_bundle", "connection", "gauge_field",
+    },
+    "submanifold_geometry": {
+        "submanifold", "hypersurface", "minimal_surface", "geodesic",
+    },
+    "complex_geometry": {
+        "kahler", "symplectic", "complex_manifold", "holomorphic",
+    },
+}
+
+
+# math.AT (Algebraic Topology) hints
+MATH_AT_OBJECT_HINTS = {
+    "homotopy", "homotopy_group", "higher_homotopy", "homology", "cohomology", "spectrum",
+    "spectra", "cw_complex", "simplicial_complex", "chain_complex", "fundamental_group",
+    "covering_space", "fibration", "cofibration",
+}
+MATH_AT_METHOD_HINTS = {
+    "spectral_sequence", "steenrod_operation", "characteristic_class", "obstruction_theory",
+    "stable_homotopy", "unstable_homotopy", "adams_spectral_sequence", "postnikov_tower",
+}
+
+# math.GT (Geometric Topology) hints
+MATH_GT_OBJECT_HINTS = {
+    "manifold", "manifolds", "knot", "knots", "link", "links", "surface", "3_manifold",
+    "4_manifold", "handlebody", "heegaard_splitting", "mapping_class_group", "braid_group",
+}
+MATH_GT_METHOD_HINTS = {
+    "surgery_theory", "cobordism", "dehn_surgery", "kirby_calculus", "triangulation",
+    "foliation", "hyperbolic_structure", "jsj_decomposition",
+}
+
+# math.GN (General Topology) hints
+MATH_GN_OBJECT_HINTS = {
+    "topological_space", "compact", "hausdorff", "metric_space", "uniform_space", "convergence",
+    "filter", "net", "neighborhood", "closure", "interior", "boundary",
+}
+MATH_GN_METHOD_HINTS = {
+    "separation_axiom", "connectedness", "path_connected", "compactification", "completion",
+    "metrization_theorem", "paracompactness", "tychonoff", "urysohn",
 }
 
 NAME_ALIASES = {
@@ -724,6 +809,46 @@ def _build_pipeline_relation(anchor: TopicRecord, target: TopicRecord) -> Dict[s
     shared_math_fa_methods = sorted((anchor_terms & target_terms) & MATH_FA_METHOD_HINTS)[:6]
     shared_math_ds_objects = sorted((anchor_terms & target_terms) & MATH_DS_OBJECT_HINTS)[:6]
     shared_math_ds_methods = sorted((anchor_terms & target_terms) & MATH_DS_METHOD_HINTS)[:6]
+    # Topology domain detection
+    math_at_domain = (
+        any("math.AT" in segment for segment in anchor.hierarchy_path)
+        and any("math.AT" in segment for segment in target.hierarchy_path)
+    )
+    math_gt_domain = (
+        any("math.GT" in segment for segment in anchor.hierarchy_path)
+        and any("math.GT" in segment for segment in target.hierarchy_path)
+    )
+    math_gn_domain = (
+        any("math.GN" in segment for segment in anchor.hierarchy_path)
+        and any("math.GN" in segment for segment in target.hierarchy_path)
+    )
+    # Topology domain shared terms
+    shared_math_at_objects = sorted((anchor_terms & target_terms) & MATH_AT_OBJECT_HINTS)[:6]
+    shared_math_at_methods = sorted((anchor_terms & target_terms) & MATH_AT_METHOD_HINTS)[:6]
+    shared_math_gt_objects = sorted((anchor_terms & target_terms) & MATH_GT_OBJECT_HINTS)[:6]
+    shared_math_gt_methods = sorted((anchor_terms & target_terms) & MATH_GT_METHOD_HINTS)[:6]
+    shared_math_gn_objects = sorted((anchor_terms & target_terms) & MATH_GN_OBJECT_HINTS)[:6]
+    shared_math_gn_methods = sorted((anchor_terms & target_terms) & MATH_GN_METHOD_HINTS)[:6]
+    # Geometry domain detection
+    math_dg_domain = (
+        any("math.DG" in segment for segment in anchor.hierarchy_path)
+        and any("math.DG" in segment for segment in target.hierarchy_path)
+    )
+    math_mg_domain = (
+        any("math.MG" in segment for segment in anchor.hierarchy_path)
+        and any("math.MG" in segment for segment in target.hierarchy_path)
+    )
+    math_cv_domain = (
+        any("math.CV" in segment for segment in anchor.hierarchy_path)
+        and any("math.CV" in segment for segment in target.hierarchy_path)
+    )
+    # Geometry domain shared terms
+    shared_math_dg_objects = sorted((anchor_terms & target_terms) & MATH_DG_OBJECT_HINTS)[:6]
+    shared_math_dg_methods = sorted((anchor_terms & target_terms) & MATH_DG_METHOD_HINTS)[:6]
+    shared_math_mg_objects = sorted((anchor_terms & target_terms) & MATH_MG_OBJECT_HINTS)[:6]
+    shared_math_mg_methods = sorted((anchor_terms & target_terms) & MATH_MG_METHOD_HINTS)[:6]
+    shared_math_cv_objects = sorted((anchor_terms & target_terms) & MATH_CV_OBJECT_HINTS)[:6]
+    shared_math_cv_methods = sorted((anchor_terms & target_terms) & MATH_CV_METHOD_HINTS)[:6]
     anchor_object_matches = _match_taxonomy_classes(anchor_terms, MATH_AG_OBJECT_TAXONOMY)
     target_object_matches = _match_taxonomy_classes(target_terms, MATH_AG_OBJECT_TAXONOMY)
     object_overlap = _score_taxonomy_overlap(
@@ -789,6 +914,18 @@ def _build_pipeline_relation(anchor: TopicRecord, target: TopicRecord) -> Dict[s
         relation = "math_fa_object_continuity"
     elif math_ds_domain and len(shared_math_ds_objects) >= 2 and len(shared_math_ds_methods) >= 1:
         relation = "math_ds_object_continuity"
+    elif math_at_domain and len(shared_math_at_objects) >= 2 and len(shared_math_at_methods) >= 1:
+        relation = "math_at_object_continuity"
+    elif math_gt_domain and len(shared_math_gt_objects) >= 2 and len(shared_math_gt_methods) >= 1:
+        relation = "math_gt_object_continuity"
+    elif math_gn_domain and len(shared_math_gn_objects) >= 2 and len(shared_math_gn_methods) >= 1:
+        relation = "math_gn_object_continuity"
+    elif math_dg_domain and len(shared_math_dg_objects) >= 2 and len(shared_math_dg_methods) >= 1:
+        relation = "math_dg_object_continuity"
+    elif math_mg_domain and len(shared_math_mg_objects) >= 2 and len(shared_math_mg_methods) >= 1:
+        relation = "math_mg_object_continuity"
+    elif math_cv_domain and len(shared_math_cv_objects) >= 2 and len(shared_math_cv_methods) >= 1:
+        relation = "math_cv_object_continuity"
     elif theory_domain and len(shared_formal_terms) >= 2:
         relation = "formal_structure_same_lineage"
     else:
@@ -835,6 +972,12 @@ def _build_pipeline_relation(anchor: TopicRecord, target: TopicRecord) -> Dict[s
         "shared_math_fa_methods": shared_math_fa_methods,
         "shared_math_ds_objects": shared_math_ds_objects,
         "shared_math_ds_methods": shared_math_ds_methods,
+        "shared_math_at_objects": shared_math_at_objects,
+        "shared_math_at_methods": shared_math_at_methods,
+        "shared_math_gt_objects": shared_math_gt_objects,
+        "shared_math_gt_methods": shared_math_gt_methods,
+        "shared_math_gn_objects": shared_math_gn_objects,
+        "shared_math_gn_methods": shared_math_gn_methods,
         "math_ag_object_matches": {
             "anchor": anchor_object_matches,
             "target": target_object_matches,
@@ -991,6 +1134,9 @@ def build_consistency_check(
         "math_ca_object_continuity",
         "math_fa_object_continuity",
         "math_ds_object_continuity",
+        "math_dg_object_continuity",
+        "math_mg_object_continuity",
+        "math_cv_object_continuity",
         "formal_structure_same_lineage",
     }:
         return {
