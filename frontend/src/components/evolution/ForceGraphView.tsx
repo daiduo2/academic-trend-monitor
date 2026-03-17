@@ -65,20 +65,36 @@ export function ForceGraphView({
     const periods = [...new Set(periodNodes.map(n => n.period))].sort();
     const periodWidth = dimensions.width / Math.max(periods.length, 1);
 
-    return periodNodes.map(node => {
-      const periodIndex = periods.indexOf(node.period);
-      const x = periodIndex * periodWidth + periodWidth / 2;
-      // Use existing y if available, otherwise distribute evenly
-      const y = node.y ?? Math.random() * dimensions.height * 0.8 + dimensions.height * 0.1;
-
-      return {
-        ...node,
-        fx: x, // Fixed x position for timeline
-        fy: undefined, // Allow y to be determined by force simulation
-        x,
-        y,
-      };
+    // Group nodes by period for Y distribution
+    const nodesByPeriod: Record<string, Node[]> = {};
+    periodNodes.forEach(node => {
+      if (!nodesByPeriod[node.period]) nodesByPeriod[node.period] = [];
+      nodesByPeriod[node.period].push(node);
     });
+
+    // Calculate Y position within each period column
+    const nodesWithPositions: Node[] = [];
+    periods.forEach((period, periodIndex) => {
+      const columnNodes = nodesByPeriod[period] || [];
+      const columnHeight = dimensions.height * 0.8;
+      const nodeSpacing = columnHeight / Math.max(columnNodes.length, 1);
+
+      columnNodes.forEach((node, index) => {
+        const x = periodIndex * periodWidth + periodWidth / 2;
+        // Distribute evenly in Y, with some padding
+        const y = dimensions.height * 0.1 + index * nodeSpacing + nodeSpacing / 2;
+
+        nodesWithPositions.push({
+          ...node,
+          fx: x, // Fixed x position for timeline
+          fy: y, // Fixed y position to show vertical distribution
+          x,
+          y,
+        });
+      });
+    });
+
+    return nodesWithPositions;
   }, [periodNodes, mode, dimensions]);
 
   // Graph data for force-graph
@@ -268,9 +284,9 @@ export function ForceGraphView({
     if (mode === 'timeline') {
       return {
         linkDistance: 100,
-        charge: -300,
-        x: 0.1, // Weak x force to allow fx to dominate
-        y: 0.1,
+        charge: 0, // No repulsion in timeline mode (positions are fixed)
+        x: 0, // No x force
+        y: 0, // No y force
       };
     }
     return {
