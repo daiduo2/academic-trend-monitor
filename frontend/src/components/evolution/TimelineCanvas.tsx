@@ -8,6 +8,8 @@ interface TimelineCanvasProps {
   selectedNode: EvolutionNode | null;
   onSelectNode: (node: EvolutionNode | null) => void;
   currentPeriod: string;
+  onNodeHover?: (node: EvolutionNode | null) => void;
+  onTooltipPositionChange?: (position: { x: number; y: number }) => void;
 }
 
 export function TimelineCanvas({
@@ -15,7 +17,9 @@ export function TimelineCanvas({
   edges,
   selectedNode,
   onSelectNode,
-  currentPeriod
+  currentPeriod,
+  onNodeHover,
+  onTooltipPositionChange
 }: TimelineCanvasProps) {
   const svgRef = useRef<SVGSVGElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -156,7 +160,22 @@ export function TimelineCanvas({
         .attr('opacity', isHighlighted ? 1 : 0.3)
         .attr('cursor', 'pointer')
         .style('filter', isSelected ? 'drop-shadow(0 4px 6px rgba(0,0,0,0.1))' : 'none')
-        .on('click', () => onSelectNode(isSelected ? null : node));
+        .on('click', () => onSelectNode(isSelected ? null : node))
+        .on('mouseenter', (event) => {
+          if (onNodeHover) onNodeHover(node);
+          if (onTooltipPositionChange) {
+            const rect = containerRef.current?.getBoundingClientRect();
+            if (rect) {
+              onTooltipPositionChange({
+                x: event.clientX - rect.left,
+                y: event.clientY - rect.top
+              });
+            }
+          }
+        })
+        .on('mouseleave', () => {
+          if (onNodeHover) onNodeHover(null);
+        });
 
       // Mode indicator
       g.append('rect')
@@ -201,7 +220,7 @@ export function TimelineCanvas({
         .style('pointer-events', 'none');
     });
 
-  }, [nodes, edges, selectedNode, onSelectNode, currentPeriod, getConnectedNodes]);
+  }, [nodes, edges, selectedNode, onSelectNode, currentPeriod, getConnectedNodes, onNodeHover, onTooltipPositionChange]);
 
   return (
     <div ref={containerRef} className="flex-1 h-full bg-slate-50 relative">

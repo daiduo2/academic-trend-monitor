@@ -1,5 +1,5 @@
 export type TopicMode = 'theory' | 'method' | 'problem' | 'hybrid';
-export type EdgeType = 'continued' | 'diffused';
+export type EdgeType = 'continued' | 'diffused_to_neighbor';
 
 export interface EvolutionNode {
   id: string;

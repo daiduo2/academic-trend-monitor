@@ -1,23 +1,55 @@
 // frontend/src/components/evolution/EvolutionGraphContainer.tsx
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { LeftSidebar } from './LeftSidebar';
 import { RightPanel } from './RightPanel';
 import { TimelineCanvas } from './TimelineCanvas';
 import { TimelineSlider } from './TimelineSlider';
 import { BreadcrumbNav } from './BreadcrumbNav';
 import { CanvasToolbar } from './CanvasToolbar';
+import { ConfidenceSlider } from './ConfidenceSlider';
+import { NetworkView } from './NetworkView';
+import { TopicTooltip } from './TopicTooltip';
+import { ErrorBoundary } from './ErrorBoundary';
 import { useEvolutionData } from '../../hooks/useEvolutionData';
 import type { EvolutionNode, EvolutionEdge } from '../../types/evolution';
 import { filterNodesByCategory } from '../../utils/layoutEngine';
 
+// Wrapper component with Error Boundary
 export function EvolutionGraphContainer() {
+  const handleReset = () => {
+    // Reset any state if needed
+    window.location.reload();
+  };
+
+  return (
+    <ErrorBoundary onReset={handleReset}>
+      <EvolutionGraphContent />
+    </ErrorBoundary>
+  );
+}
+
+function EvolutionGraphContent() {
   const { data, loading, error, currentDomain, availableDomains, loadDomain } = useEvolutionData();
 
-  const [viewMode, setViewMode] = useState<'timeline' | 'network'>('timeline');
+  // Load viewMode from localStorage
+  const [viewMode, setViewMode] = useState<'timeline' | 'network'>(() => {
+    const saved = localStorage.getItem('evolutionViewMode');
+    return saved === 'network' ? 'network' : 'timeline';
+  });
+
+  // Persist viewMode to localStorage
+  useEffect(() => {
+    localStorage.setItem('evolutionViewMode', viewMode);
+  }, [viewMode]);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedNode, setSelectedNode] = useState<EvolutionNode | null>(null);
   const [currentPeriod, setCurrentPeriod] = useState<string>('2025-04');
+  const [confidenceThreshold, setConfidenceThreshold] = useState<number>(0.8);
+
+  // Tooltip state
+  const [hoveredNode, setHoveredNode] = useState<EvolutionNode | null>(null);
+  const [tooltipPosition, setTooltipPosition] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
 
   // Filter nodes by category
   const filteredNodes = useMemo(() => {
@@ -25,12 +57,18 @@ export function EvolutionGraphContainer() {
     return filterNodesByCategory(data.nodes, selectedCategory);
   }, [data, selectedCategory]);
 
-  // Filter edges to only include visible nodes
+  // Filter edges to only include visible nodes and apply confidence threshold
   const filteredEdges = useMemo(() => {
     if (!data) return [];
     const nodeIds = new Set(filteredNodes.map(n => n.id));
-    return data.edges.filter(e => nodeIds.has(e.source) && nodeIds.has(e.target));
-  }, [data, filteredNodes]);
+    return data.edges.filter(e => {
+      if (!nodeIds.has(e.source) || !nodeIds.has(e.target)) return false;
+      // Always show continued edges
+      if (e.type === 'continued') return true;
+      // Filter diffused edges by confidence
+      return e.confidence >= confidenceThreshold;
+    });
+  }, [data, filteredNodes, confidenceThreshold]);
 
   if (loading) {
     return (
@@ -91,16 +129,42 @@ export function EvolutionGraphContainer() {
           {/* Toolbar */}
           <div className="absolute top-4 left-4 right-4 flex justify-between items-center z-10">
             <BreadcrumbNav path={['Mathematics', selectedCategory === 'all' ? '全部学科' : selectedCategory]} />
-            <CanvasToolbar />
+            <div className="flex items-center gap-4">
+              <ConfidenceSlider
+                value={confidenceThreshold}
+                onChange={setConfidenceThreshold}
+              />
+              <CanvasToolbar />
+            </div>
           </div>
 
-          {/* Timeline Canvas */}
-          <TimelineCanvas
-            nodes={filteredNodes}
-            edges={filteredEdges}
-            selectedNode={selectedNode}
-            onSelectNode={setSelectedNode}
-            currentPeriod={currentPeriod}
+          {/* View Content */}
+          {viewMode === 'timeline' ? (
+            <TimelineCanvas
+              nodes={filteredNodes}
+              edges={filteredEdges}
+              selectedNode={selectedNode}
+              onSelectNode={setSelectedNode}
+              currentPeriod={currentPeriod}
+              onNodeHover={setHoveredNode}
+              onTooltipPositionChange={setTooltipPosition}
+            />
+          ) : (
+            <NetworkView
+              period={currentPeriod}
+              nodes={filteredNodes}
+              edges={filteredEdges}
+              confidenceThreshold={confidenceThreshold}
+              selectedNode={selectedNode}
+              onSelectNode={setSelectedNode}
+            />
+          )}
+
+          {/* Tooltip */}
+          <TopicTooltip
+            node={hoveredNode}
+            position={tooltipPosition}
+            visible={!!hoveredNode}
           />
 
           {/* Timeline Slider */}

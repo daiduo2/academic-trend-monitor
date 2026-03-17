@@ -1,10 +1,10 @@
 import type { TopicMode } from '../types/evolution';
 
 export const MODE_COLORS: Record<TopicMode, string> = {
-  theory: '#3b82f6',   // blue-500
-  method: '#10b981',   // emerald-500
-  problem: '#f59e0b',  // amber-500
-  hybrid: '#8b5cf6'    // violet-500
+  theory: '#4A90D9',   // Blue
+  method: '#5CB85C',   // Green
+  problem: '#F0AD4E',  // Orange
+  hybrid: '#9B59B6'    // Purple
 };
 
 export const MODE_LABELS: Record<TopicMode, string> = {
