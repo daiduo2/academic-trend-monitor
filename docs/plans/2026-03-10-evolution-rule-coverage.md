@@ -273,10 +273,10 @@ notes:
 claude_evaluation:
   required: true
   representative_cases:
-    - "global_51 -> global_951"
-    - "global_75 -> global_951"
-    - "global_339 -> global_951"
-  conclusion: "规则值得保留；`global_51 -> global_951` 作为正例可信，而 `global_75 -> global_951` 这种只差 `axiom` 的对照例说明 `axiom` 应作为必要判别词保留在阈值中。"
+    - "global_51 -> global_951 (bridge-level)"
+    - "global_75 -> global_951 (negative)"
+    - "global_339 -> global_951 (negative)"
+  conclusion: "规则值得保留；`global_51 -> global_951` 作为正例可信，而 `global_75 -> global_951` 这种只差 `axiom` 的对照例说明 `axiom` 应作为必要判别词保留在阈值中。WARNING: 当前正例均为 bridge-level，规则状态应保持 partial，不可升为 ready。"
 ```
 
 ```yaml
@@ -329,13 +329,15 @@ implemented_in:
 notes:
   - "这是比 model-theory 更窄的一条 definability 支路，只覆盖 set-theoretic definability 的跨路径连续性"
   - "当前已刻意避免把 cardinal/cardinals 的词干重复当成双重证据，必须再共享一个更专门的对象词"
+  - "当前规则仅在 bridge-level 可验证，尚未进入 event-level"
+  - "状态保持 partial 直至出现 event-level 正例"
 claude_evaluation:
   required: true
   representative_cases:
-    - "global_75 -> global_778"
-    - "global_167 -> global_778"
-    - "global_361 -> global_778"
-  conclusion: "规则值得保留；`global_75 -> global_778` 是可信正例。阈值应保持‘共享 definable + 共享 cardinal/cardinals + 至少一个 special object（如 woodin/axiom）’，从而避免把只有 definable 或只有 cardinals 的弱联系误判成连续性。"
+    - "global_75 -> global_778 (bridge-level)"
+    - "global_167 -> global_778 (negative)"
+    - "global_361 -> global_778 (negative)"
+  conclusion: "规则值得保留；`global_75 -> global_778` 是可信正例。阈值应保持’共享 definable + 共享 cardinal/cardinals + 至少一个 special object（如 woodin/axiom）’，从而避免把只有 definable 或只有 cardinals 的弱联系误判成连续性。WARNING: 当前所有正例均为 bridge-level，规则状态应保持 partial，不可升为 ready。"
 ```
 
 ## 状态定义
