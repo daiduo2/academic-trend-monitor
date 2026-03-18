@@ -8,7 +8,7 @@ upstream_docs:
   - "/Users/daiduo2/.codex/worktrees/2124/academic-trend-monitor/docs/plans/2026-03-10-evolution-rule-coverage.md"
   - "/Users/daiduo2/.codex/worktrees/2124/academic-trend-monitor/docs/plans/2026-03-12-evolution-task-template.md"
 downstream_docs: []
-last_reviewed: "2026-03-12"
+last_reviewed: "2026-03-18"
 
 # Math Worker Backlog
 
@@ -23,10 +23,11 @@ last_reviewed: "2026-03-12"
 
 ## Scope
 
-当前 backlog 只覆盖：
+当前 backlog 覆盖：
 
 - `math > math.LO`
 - `math > math.AG`
+- `math > math.QA` (数据不足，标记为 gap)
 
 ## Package Template
 
@@ -251,6 +252,76 @@ completion_verify:
   - ✅ 文档明确区分: object_continuity (ready) vs method_continuity (test-only)
   - ✅ 无歧义的 stop condition 已记录
   - ✅ math.AG benchmark 全绿: 6/6 passed
+```
+
+---
+
+## Math.QA Task Packages
+
+### Package MQA-01A: Gap Normalization **[COMPLETED - 2026-03-18]**
+
+**STATUS: ✅ 已完成 - math.QA 已明确为 gap / insufficient data**
+
+```yaml
+tree_path: "math > math.QA"
+task_owner: "doc-worker"
+task_type: "gap_normalization"
+target_rule:
+  - "math_qa_object_continuity"
+  - "math_qa_method_continuity"
+goal: "把 math.QA 在当前数据中的不足状态收口为 gap / insufficient real data"
+data_assessment:
+  total_topics: 2
+  topics:
+    - "global_55: 李代数与Hopf代数 (105 papers, 10 periods)"
+    - "global_301: 等变旗流形环不变量 (10 papers, 1 period)"
+  evolution_cases: 0
+  object_continuity_candidates: "无"
+  method_continuity_candidates: "无"
+actions_completed:
+  - ✅ "更新 registry: math > math.QA 状态从 ready 改为 gap"
+    - 文件: docs/plans/2026-03-10-evolution-rule-coverage.md
+  - ✅ "新增 math_qa_gap_insufficient_data 规则条目"
+    - 文件: docs/plans/2026-03-10-evolution-rule-coverage.md
+  - ✅ "更新 Tree Path Registry 中 math.QA 的 notes"
+  - ✅ "更新 Layer 1/2 Coverage 表格"
+  - ✅ "更新数学方向优先级: math.QA 降级为 P3"
+completion_verify:
+  - ✅ registry 不再暗示 math.QA 已 ready
+  - ✅ math.QA 明确标注为 gap / insufficient data / not benchmark-ready
+  - ✅ 文档明确记录: 当前数据里 math.QA 只有极少 topic
+  - ✅ 文档明确记录: 当前没有足够真实 evolution cases
+  - ✅ 文档明确记录: 现在不适合直接 benchmark 化
+next_package_if_continue: "PKG-QA-01B: longer-window exploration"
+```
+
+### Package MQA-01B: Longer-Window Exploration **[PENDING]**
+
+**STATUS: ⏸️ 待定 - 需要更长数据窗口**
+
+```yaml
+tree_path: "math > math.QA"
+task_owner: "case-worker"
+task_type: "data_exploration"
+target_rule: "math_qa_object_continuity"
+precondition: "必须获得更长周期的 math.QA 数据 (建议 >= 24 个月)"
+goal: "在更长数据窗口中搜索 math.QA 的 evolution cases"
+search_criteria:
+  - "寻找 >=2 个 math.QA topics 之间有 temporal evolution 关系"
+  - "关键词应包含: quantum, affine, crystal, hall, cluster, vertex, hopf, yangian"
+  - "避免只靠泛词 (algebra, group, theory) 区分"
+  - "需要有清晰的 anchor -> target 跨期演化证据"
+stop_conditions:
+  - "搜索后仍无足够 topics (>=4)"
+  - "topics 之间无 temporal 关联"
+  - "无法区分 object continuity vs method continuity"
+decision_fork:
+  option_a:
+    condition: "找到 >=2 个真实 event-level positive cases"
+    action: "进入 MQA-02: benchmark skeleton bootstrap"
+  option_b:
+    condition: "数据仍然不足"
+    action: "保持 gap 状态，等待未来数据"
 ```
 
 ## Dispatch Rules

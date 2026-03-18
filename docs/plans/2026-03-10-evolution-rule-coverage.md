@@ -322,6 +322,35 @@ claude_evaluation:
 ```
 
 ```yaml
+rule_name: "math_qa_gap_insufficient_data"
+tree_path: "math > math.QA"
+path_scope: "prefix"
+status: "gap"
+rule_type: "domain_specific"
+trigger_sketch:
+  - "当前数据不足以建立任何专门规则"
+  - "仅 2 个 topics: global_55 (李代数与Hopf代数), global_301 (等变旗流形环不变量)"
+  - "0 个 evolution cases 涉及 math.QA"
+positive_examples:
+  - "无"
+counter_examples:
+  - "global_55 -> global_301: 不同子领域，无演化关联"
+implemented_in:
+  - "N/A - 未实现"
+notes:
+  - "状态从 'ready' 降级为 'gap' (2026-03-18)"
+  - "原 registry 条目为预期性占位，实际数据不支持"
+  - "如需继续，必须先执行 PKG-QA-01B: longer-window exploration"
+  - "当前最准确评估: 数据不足，不适合 benchmark 化"
+claude_evaluation:
+  required: true
+  representative_cases:
+    - "global_55 (李代数与Hopf代数) - 孤立topic，无演化目标"
+    - "global_301 (等变旗流形环不变量) - 仅10篇论文，1个period"
+  conclusion: "math.QA 在当前数据窗口中不足以建立有意义的演化规则。2个topics不仅数量少，且关键词重叠度低(仅共享categories/categorical泛词)，不构成对象或方法连续性。停止条件合理，应明确标记为gap而非ready。"
+```
+
+```yaml
 rule_name: "math_lo_definability_continuity"
 tree_path: "math > math.LO > 集合论与基数理论"
 path_scope: "prefix"
@@ -389,7 +418,7 @@ claude_evaluation:
 | `math > math.GR` | L1-L2 | 高 | `ready` | `math_gr_object_continuity` | 群论领域规则，共享 ≥2 对象 + ≥1 方法 |
 | `math > math.RT` | L1-L2 | 高 | `ready` | `math_rt_object_continuity` | 表示论领域规则，共享 ≥2 对象 + ≥1 方法 |
 | `math > math.RA` | L1-L2 | 高 | `ready` | `math_ra_object_continuity` | 环与代数领域规则，共享 ≥2 对象 + ≥1 方法 |
-| `math > math.QA` | L1-L2 | 高 | `ready` | `math_qa_object_continuity` | 量子代数领域规则，共享 ≥2 对象 + ≥1 方法 |
+| `math > math.QA` | L1-L2 | 低 | `gap` | - | **数据不足**: 当前仅 2 个 topics (global_55, global_301)，0 个 evolution cases，无法建立 benchmark。需更长数据窗口才能评估。 |
 | `math > math.AT` | L1-L2 | 高 | `ready` | `math_at_object_continuity` | 代数拓扑领域规则，共享 ≥2 对象 + ≥1 方法 |
 | `math > math.GT` | L1-L2 | 高 | `ready` | `math_gt_object_continuity` | 几何拓扑领域规则，共享 ≥2 对象 + ≥1 方法 |
 | `math > math.GN` | L1-L2 | 高 | `ready` | `math_gn_object_continuity` | 一般拓扑领域规则，共享 ≥2 对象 + ≥1 方法 |
@@ -414,7 +443,7 @@ claude_evaluation:
 | Layer 1 | Coverage | Current State | Layer 2 Focus | Notes |
 |---------|----------|---------------|---------------|-------|
 | `cs` | 中 | `partial` | `cs.CV` | 当前只有计算机视觉相关规则，NLP / systems / security 仍是空白 |
-| `math` | 高 | `ready` | 全部核心子域 | 已覆盖 AG, LO, GR, RT, RA, QA, AT, GT, GN, AP, CA, FA, DS, DG, MG, CV 共16个子域，21条专门规则 |
+| `math` | 中 | `partial` | AG, LO 为主 | 已覆盖 AG, LO 有完整规则；QA 数据不足标记为 gap；其余子域 (GR, RT, RA 等) 有 registry 条目但尚未验证 |
 | `hep` | 中 | `partial` | `hep-th` 起步 | 当前与数学共用理论结构连续性规则，仍然偏粗 |
 | `eess` | 中 | `partial` | 与医学影像链路有关 | 当前更多是作为医学影像上游来源域出现 |
 | `stat` | 低 | `gap` | 可优先考虑 `stat.ML` / `stat.ME` | 目前没有独立规则 |
@@ -507,7 +536,8 @@ claude_evaluation:
 | P1 | `math > math.PR`, `math > math.AP` | 概率对象 -> 分析方法 -> 极限行为的链路 |
 | P1 | `math > math.LO` | 模型论 / 类型论 / 范畴论的形式系统连续性 |
 | P2 | `math > math.NA` | 数值方法 -> PDE / 优化 / 计算框架链路 |
-| P2 | `math > math.RT`, `math > math.QA` | 表示论 / 量子代数内部的对象迁移规则 |
+| P2 | `math > math.RT` | 表示论内部的对象迁移规则 |
+| P3 | `math > math.QA` | **需先执行 longer-window exploration**，当前数据不足 (仅2 topics, 0 cases) |
 
 ## 下一批优先级
 
@@ -521,6 +551,17 @@ claude_evaluation:
 | P2 | `q-bio > q-bio.QM`, `q-bio > q-bio.BM` | 分子表示 -> 结合预测 -> 下游设计 |
 
 ## 更新清单
+
+### 2026-03-18 (Math.QA Gap Normalization)
+
+- 更新 `math > math.QA` 状态
+  - 从 `ready` 降级为 `gap`
+  - 原因: 数据不足，仅 2 个 topics (global_55, global_301)，0 个 evolution cases
+  - 新增 `math_qa_gap_insufficient_data` 规则条目，明确记录当前限制
+  - 更新 Tree Path Registry、Layer 1/2 Coverage 表格
+  - 更新数学方向优先级: math.QA 降级为 P3，需先执行 longer-window exploration
+  - 执行包: PKG-QA-01A (gap_normalization)
+  - 后续如需继续，必须先执行 PKG-QA-01B (longer-window exploration)
 
 ### 2026-03-14 (Math.AG)
 

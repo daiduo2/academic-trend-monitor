@@ -6,7 +6,7 @@ source_of_truth: true
 upstream_docs:
   - "docs/plans/2026-03-12-math-worker-backlog.md"
 downstream_docs: []
-last_reviewed: "2026-03-17"
+last_reviewed: "2026-03-18"
 
 # Evolution Analysis Task Packages
 
@@ -195,6 +195,57 @@ result: "新增 lo-n6 negative case"
 | PKG-LO-01 | ✅ Complete | 状态对齐完成 |
 | PKG-LO-02 | ✅ Complete | bridge-level 确认 |
 | PKG-LO-03 | ✅ Complete | negative case 补充 |
+| PKG-QA-01A | ✅ Complete | math.QA 标记为 gap / insufficient data |
+| PKG-QA-01B | ⏸️ Pending | longer-window exploration (conditional) |
+
+---
+
+## Math.QA Task Packages
+
+### PKG-QA-01A: Gap Normalization **[COMPLETED - 2026-03-18]**
+
+**STATUS: ✅ 已完成 - math.QA 已明确为 gap / insufficient data**
+
+```yaml
+tree_path: "math > math.QA"
+owner: "doc-worker"
+task_type: "gap_normalization"
+target_rule:
+  - "math_qa_object_continuity"
+  - "math_qa_method_continuity"
+goal: "把 math.QA 在当前数据中的不足状态收口为 gap / insufficient real data"
+data_assessment:
+  total_topics: 2
+  evolution_cases: 0
+  note: "当前数据不足以支持 benchmark 化"
+actions_completed:
+  - ✅ "更新 registry: math > math.QA 状态从 ready 改为 gap"
+  - ✅ "新增 math_qa_gap_insufficient_data 规则条目"
+  - ✅ "更新 Tree Path Registry、Layer 1/2 Coverage 表格"
+completion_verify:
+  - ✅ registry 不再暗示 math.QA 已 ready
+  - ✅ math.QA 明确标注为 gap / insufficient data / not benchmark-ready
+next_package: "PKG-QA-01B: longer-window exploration (conditional)"
+```
+
+### PKG-QA-01B: Longer-Window Exploration **[PENDING]**
+
+**STATUS: ⏸️ 待定 - 需要更长数据窗口**
+
+```yaml
+tree_path: "math > math.QA"
+owner: "case-worker"
+task_type: "data_exploration"
+precondition: "必须获得更长周期的 math.QA 数据 (建议 >= 24 个月)"
+goal: "在更长数据窗口中搜索 math.QA 的 evolution cases"
+decision_fork:
+  option_a:
+    condition: "找到 >=2 个真实 event-level positive cases"
+    action: "进入 MQA-02: benchmark skeleton bootstrap"
+  option_b:
+    condition: "数据仍然不足"
+    action: "保持 gap 状态，等待未来数据"
+```
 
 ---
 
@@ -217,11 +268,14 @@ result: "新增 lo-n6 negative case"
 1. **进入通用 runner 设计**
    - 抽象 `math_benchmark.py` 统一框架
    - 支持多领域 (math.AG, math.LO, math.GR 等)
+   - **math.QA 暂不包含** (gap 状态，数据不足)
 
 2. **扩展其他数学子域**
    - math.GR, math.RT, math.RA 等已有规则但缺少 benchmark cases
    - 按同样模式: case discovery → benchmark → runner
+   - math.QA 需先执行 PKG-QA-01B longer-window exploration
 
 3. **暂停 evolution-analysis 迭代**
    - 当前基线已稳定
    - 等待新数据或新需求再启动下一轮
+   - math.QA 明确需要更长数据窗口 (>=24 months) 才能重新评估
