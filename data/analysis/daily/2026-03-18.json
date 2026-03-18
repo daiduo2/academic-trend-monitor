@@ -1,0 +1,84 @@
+{
+  "date": "2026-03-18",
+  "risks": [
+    "已启用本地兜底分析：LLM API key not configured"
+  ],
+  "title": "2026-03-18 学术趋势日报",
+  "signals": [
+    {
+      "kind": "emerging",
+      "label": "cs.CV 活跃度上升",
+      "summary": "近 7 天窗口内该方向论文数变化为 462。"
+    },
+    {
+      "kind": "drift",
+      "label": "使用分类回退分析",
+      "summary": "由于缺少已发布主题版本，本日报未使用主题标签趋势，而是使用 primary category 统计。"
+    }
+  ],
+  "summary": "当日共采集到 850 篇论文，主要活跃方向集中在 cs.CV、cs.LG、cs.RO。",
+  "model_meta": {
+    "mode": "daily_analysis",
+    "model": "deterministic-summary",
+    "provider": "local_fallback"
+  },
+  "key_findings": [
+    "当日共采集到 850 篇论文，主要活跃方向集中在 cs.CV、cs.LG、cs.RO。",
+    "当前缺少激活的 topic version，日报基于 primary category 聚合生成。",
+    "最近论文中包括《WorldCam: Interactive Autoregressive 3D Gaming Worlds with Camera Pose as a Unifying Geometric Representation》等值得继续跟踪。"
+  ],
+  "notable_papers": [
+    {
+      "title": "WorldCam: Interactive Autoregressive 3D Gaming Worlds with Camera Pose as a Unifying Geometric Representation",
+      "reason": "基于当日抓取结果自动纳入观察列表。",
+      "arxiv_id": "2603.16871v1"
+    },
+    {
+      "title": "Demystifing Video Reasoning",
+      "reason": "基于当日抓取结果自动纳入观察列表。",
+      "arxiv_id": "2603.16870v1"
+    },
+    {
+      "title": "SegviGen: Repurposing 3D Generative Model for Part Segmentation",
+      "reason": "基于当日抓取结果自动纳入观察列表。",
+      "arxiv_id": "2603.16869v1"
+    }
+  ],
+  "top_rising_topics": [
+    {
+      "change": 462,
+      "topic_id": "cs.CV",
+      "topic_name": "cs.CV",
+      "paper_count": 568,
+      "previous_count": 106
+    },
+    {
+      "change": 285,
+      "topic_id": "cs.LG",
+      "topic_name": "cs.LG",
+      "paper_count": 362,
+      "previous_count": 77
+    },
+    {
+      "change": 154,
+      "topic_id": "cs.RO",
+      "topic_name": "cs.RO",
+      "paper_count": 208,
+      "previous_count": 54
+    },
+    {
+      "change": 176,
+      "topic_id": "quant-ph",
+      "topic_name": "quant-ph",
+      "paper_count": 206,
+      "previous_count": 30
+    },
+    {
+      "change": 165,
+      "topic_id": "cs.CL",
+      "topic_name": "cs.CL",
+      "paper_count": 205,
+      "previous_count": 40
+    }
+  ]
+}
