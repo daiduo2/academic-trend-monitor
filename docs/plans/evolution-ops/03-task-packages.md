@@ -197,6 +197,8 @@ result: "新增 lo-n6 negative case"
 | PKG-LO-03 | ✅ Complete | negative case 补充 |
 | PKG-QA-01A | ✅ Complete | math.QA 标记为 gap / insufficient data |
 | PKG-QA-01B | ⏸️ Pending | longer-window exploration (conditional) |
+| PKG-RA-01 | ✅ Complete | math.RA 标记为 gap / insufficient data |
+| PKG-RA-01B | ⏸️ Pending | longer-window exploration (conditional) |
 
 ---
 
@@ -249,6 +251,87 @@ decision_fork:
 
 ---
 
+## Math.RA Task Packages
+
+### PKG-RA-01: Bootstrap with Decision Fork **[COMPLETED - 2026-03-18]**
+
+**STATUS: ✅ 已完成 - math.RA 已明确为 gap / insufficient data**
+
+```yaml
+tree_path: "math > math.RA"
+owner: "case-worker"
+task_type: "bootstrap_with_decision_fork"
+target_rule:
+  - "math_ra_object_continuity"
+  - "math_ra_method_continuity"
+goal: "判断 math.RA 是否具备 benchmark skeleton 条件；若具备则直接建立 skeleton，若不足则直接收口为 gap"
+data_assessment:
+  total_topics: 3
+  topics:
+    - "global_82: 泊松-巴克斯特李代数 (32 papers, 1 period)"
+    - "global_200: 多项式映射与算法 (14 papers, 1 period)"
+    - "global_214: 随机矩阵与正定性 (46 papers, 1 period)"
+  evolution_cases: 0
+  temporal_pairs: 0
+  object_continuity_candidates: "无 (所有 topics 仅 1 个 period)"
+  method_continuity_candidates: "无 (所有 topics 仅 1 个 period)"
+decision_fork:
+  option_a:
+    condition: "找到 >=2 个可信 object-side candidate positives"
+    action: "建立 math.RA benchmark skeleton"
+  option_b:
+    condition: "case 不足，无法区分 object vs method continuity"
+    action: "收口为 gap"
+  decision: "Option B"
+  reason: "仅3个topics，全部仅1个active month，无法构成temporal evolution，无法形成任何pairs"
+actions_completed:
+  - ✅ "更新 registry: math > math.RA 状态从 ready 改为 gap"
+    - 文件: docs/plans/2026-03-10-evolution-rule-coverage.md
+  - ✅ "新增 math_ra_gap_insufficient_data 规则条目"
+    - 文件: docs/plans/2026-03-10-evolution-rule-coverage.md
+  - ✅ "更新 Tree Path Registry 中 math.RA 的 notes"
+  - ✅ "更新 Layer 1 Coverage 表格"
+completion_verify:
+  - ✅ registry 不再暗示 math.RA 已 ready
+  - ✅ math.RA 明确标注为 gap / insufficient data / not benchmark-ready
+  - ✅ 文档明确记录: 当前数据里 math.RA 只有 3 个 topics
+  - ✅ 文档明确记录: 全部仅 1 个 active period，无法构成跨期演化
+  - ✅ 文档明确记录: 现在不适合直接 benchmark 化
+next_package_if_continue: "PKG-RA-01B: longer-window exploration"
+```
+
+### PKG-RA-01B: Longer-Window Exploration **[PENDING]**
+
+**STATUS: ⏸️ 待定 - 需要更长数据窗口**
+
+```yaml
+tree_path: "math > math.RA"
+owner: "case-worker"
+task_type: "data_exploration"
+target_rule: "math_ra_object_continuity"
+precondition: "必须获得更长周期的 math.RA 数据 (建议 >= 24 个月)"
+goal: "在更长数据窗口中搜索 math.RA 的 evolution cases"
+search_criteria:
+  - "寻找 >=2 个 math.RA topics 之间有 temporal evolution 关系"
+  - "关键词应包含: ring, rings, algebra, algebras, module, modules, ideal, ideals"
+  - "避免只靠泛词 (algebra, module, theory) 区分"
+  - "需要有清晰的 anchor -> target 跨期演化证据"
+  - "需要 topics 有 >=2 个 active periods 才能构成 temporal 关联"
+stop_conditions:
+  - "搜索后仍无足够 topics (>=4)"
+  - "topics 之间无 temporal 关联"
+  - "无法区分 object continuity vs method continuity"
+decision_fork:
+  option_a:
+    condition: "找到 >=2 个真实 event-level positive cases"
+    action: "进入 RA-02: benchmark skeleton bootstrap"
+  option_b:
+    condition: "数据仍然不足"
+    action: "保持 gap 状态，等待未来数据"
+```
+
+---
+
 ## Next Recommended Actions
 
 ### 当前状态 (2026-03-17)
@@ -271,11 +354,13 @@ decision_fork:
    - **math.QA 暂不包含** (gap 状态，数据不足)
 
 2. **扩展其他数学子域**
-   - math.GR, math.RT, math.RA 等已有规则但缺少 benchmark cases
+   - math.GR, math.RT 等已有规则但缺少 benchmark cases
    - 按同样模式: case discovery → benchmark → runner
    - math.QA 需先执行 PKG-QA-01B longer-window exploration
+   - math.RA 需先执行 PKG-RA-01B longer-window exploration
 
 3. **暂停 evolution-analysis 迭代**
    - 当前基线已稳定
    - 等待新数据或新需求再启动下一轮
    - math.QA 明确需要更长数据窗口 (>=24 months) 才能重新评估
+   - math.RA 明确需要更长数据窗口 (>=24 months) 才能重新评估

@@ -351,6 +351,39 @@ claude_evaluation:
 ```
 
 ```yaml
+rule_name: "math_ra_gap_insufficient_data"
+tree_path: "math > math.RA"
+path_scope: "prefix"
+status: "gap"
+rule_type: "domain_specific"
+trigger_sketch:
+  - "当前数据不足以建立任何专门规则"
+  - "仅 3 个 topics: global_82 (泊松-巴克斯特李代数), global_200 (多项式映射与算法), global_214 (随机矩阵与正定性)"
+  - "所有 topics 仅 1 个 active period，无法构成 temporal evolution"
+  - "0 个 evolution cases 涉及 math.RA"
+positive_examples:
+  - "无"
+counter_examples:
+  - "global_82 -> global_200: 不同子领域(李代数 vs 多项式算法)，无演化关联"
+  - "global_200 -> global_214: 不同子领域(多项式算法 vs 随机矩阵)，无演化关联"
+implemented_in:
+  - "N/A - 未实现"
+notes:
+  - "状态从 'ready' 降级为 'gap' (2026-03-18)"
+  - "原 registry 条目为预期性占位，实际数据不支持"
+  - "当前数据: 3 topics, 全部仅 1 个 active month, 0 evolution cases"
+  - "如需继续，必须先执行 longer-window exploration (建议 >= 24 个月数据)"
+  - "当前最准确评估: 数据不足，不适合 benchmark 化"
+claude_evaluation:
+  required: true
+  representative_cases:
+    - "global_82 (泊松-巴克斯特李代数) - 32 papers, 1 period, 无演化目标"
+    - "global_200 (多项式映射与算法) - 14 papers, 1 period, 无演化目标"
+    - "global_214 (随机矩阵与正定性) - 46 papers, 1 period, 无演化目标"
+  conclusion: "math.RA 在当前数据窗口中不足以建立有意义的演化规则。3个topics不仅数量少，且全部仅1个active period，无法构成跨期演化。关键词分别聚焦不同子领域(李代数结构/多项式算法/随机矩阵)，互不重叠，无法形成对象或方法连续性。停止条件合理，应明确标记为gap而非ready。"
+```
+
+```yaml
 rule_name: "math_lo_definability_continuity"
 tree_path: "math > math.LO > 集合论与基数理论"
 path_scope: "prefix"
@@ -417,7 +450,7 @@ claude_evaluation:
 | `math > math.LO` | L1-L2 | 中 | `partial` | `math_lo_formal_system_continuity`, `math_lo_modal_continuity`, `math_lo_type_theory_continuity`, `math_lo_set_theory_continuity`, `math_lo_forcing_continuity`, `math_lo_definability_continuity` | 已从通用形式系统连续性下钻到 modal、type-theory、set theory、forcing、definability 五条子路径；modal 规则已升级为 ready |
 | `math > math.GR` | L1-L2 | 高 | `ready` | `math_gr_object_continuity` | 群论领域规则，共享 ≥2 对象 + ≥1 方法 |
 | `math > math.RT` | L1-L2 | 高 | `ready` | `math_rt_object_continuity` | 表示论领域规则，共享 ≥2 对象 + ≥1 方法 |
-| `math > math.RA` | L1-L2 | 高 | `ready` | `math_ra_object_continuity` | 环与代数领域规则，共享 ≥2 对象 + ≥1 方法 |
+| `math > math.RA` | L1-L2 | 低 | `gap` | - | **数据不足**: 当前仅 3 个 topics (global_82, global_200, global_214)，全部仅 1 个 active period，0 个 evolution cases，无法建立 benchmark。需更长数据窗口才能评估。 |
 | `math > math.QA` | L1-L2 | 低 | `gap` | - | **数据不足**: 当前仅 2 个 topics (global_55, global_301)，0 个 evolution cases，无法建立 benchmark。需更长数据窗口才能评估。 |
 | `math > math.AT` | L1-L2 | 高 | `ready` | `math_at_object_continuity` | 代数拓扑领域规则，共享 ≥2 对象 + ≥1 方法 |
 | `math > math.GT` | L1-L2 | 高 | `ready` | `math_gt_object_continuity` | 几何拓扑领域规则，共享 ≥2 对象 + ≥1 方法 |
@@ -443,7 +476,7 @@ claude_evaluation:
 | Layer 1 | Coverage | Current State | Layer 2 Focus | Notes |
 |---------|----------|---------------|---------------|-------|
 | `cs` | 中 | `partial` | `cs.CV` | 当前只有计算机视觉相关规则，NLP / systems / security 仍是空白 |
-| `math` | 中 | `partial` | AG, LO 为主 | 已覆盖 AG, LO 有完整规则；QA 数据不足标记为 gap；其余子域 (GR, RT, RA 等) 有 registry 条目但尚未验证 |
+| `math` | 中 | `partial` | AG, LO 为主 | 已覆盖 AG, LO 有完整规则；QA 和 RA 数据不足标记为 gap；其余子域 (GR, RT 等) 有 registry 条目但尚未验证 |
 | `hep` | 中 | `partial` | `hep-th` 起步 | 当前与数学共用理论结构连续性规则，仍然偏粗 |
 | `eess` | 中 | `partial` | 与医学影像链路有关 | 当前更多是作为医学影像上游来源域出现 |
 | `stat` | 低 | `gap` | 可优先考虑 `stat.ML` / `stat.ME` | 目前没有独立规则 |
@@ -551,6 +584,16 @@ claude_evaluation:
 | P2 | `q-bio > q-bio.QM`, `q-bio > q-bio.BM` | 分子表示 -> 结合预测 -> 下游设计 |
 
 ## 更新清单
+
+### 2026-03-18 (Math.RA Gap Normalization - PKG-RA-01)
+
+- 更新 `math > math.RA` 状态
+  - 从 `ready` 降级为 `gap`
+  - 原因: 数据不足，仅 3 个 topics (global_82, global_200, global_214)，全部仅 1 个 active period，0 个 evolution cases
+  - 新增 `math_ra_gap_insufficient_data` 规则条目，明确记录当前限制
+  - 更新 Tree Path Registry、Layer 1 Coverage 表格
+  - 执行包: PKG-RA-01 (bootstrap_with_decision_fork)
+  - 决策: 选择 Option B (case 不足，收口为 gap)
 
 ### 2026-03-18 (Math.QA Gap Normalization)
 
