@@ -1,0 +1,107 @@
+{
+  "date": "2026-03-19",
+  "risks": [
+    "论文数量激增可能导致领域内竞争加剧，研究创新难度上升",
+    "大量相似主题论文涌现可能造成研究同质化"
+  ],
+  "title": "学术趋势日报 2026-03-19",
+  "signals": [
+    {
+      "kind": "emerging",
+      "label": "Video VLMs效率优化",
+      "summary": "统一时空token评分方法出现，表明视频理解模型正向高效推理方向发展"
+    },
+    {
+      "kind": "emerging",
+      "label": "自演化AI系统",
+      "summary": "AgentFactory展示AI框架通过子代理累积实现自我进化，为自主智能提供新路径"
+    },
+    {
+      "kind": "cross_disciplinary",
+      "label": "3D视觉与语言融合",
+      "summary": "多篇论文聚焦3D场景的语言定位与推理，Vision-Language Models向空间智能演进"
+    },
+    {
+      "kind": "cooling",
+      "label": "传统视频编辑方法",
+      "summary": "无需训练的视频编辑技术出现，可能对传统基于训练的方法形成挑战"
+    }
+  ],
+  "summary": "今日共收录783篇论文，Computer Vision领域持续爆发式增长，单日新增320篇论文达553篇。Vision-Language Models和3D场景理解成为核心热点，多项研究聚焦于无需训练的通用视频编辑能力。Agent系统与自演化框架展现AI自主学习新范式。",
+  "model_meta": {
+    "mode": "daily_analysis",
+    "model": "sonnet-4-20250514",
+    "provider": "claude_code"
+  },
+  "key_findings": [
+    "Computer Vision领域今日新增320篇论文，占总量70%以上，反映计算机视觉持续高速发展",
+    "Video VLMs和3D场景理解成为双重热点，LoST、Loc3R-VLM、Feeling the Space等研究推动空间智能边界",
+    "无需训练的通用视频编辑技术取得突破，实现内容、动作和动力学的灵活编辑",
+    "AgentFactory展示AI系统自演化能力，通过子代理累积实现框架自我进化",
+    "量子物理领域增长118篇，显示量子计算与机器学习交叉趋势增强"
+  ],
+  "notable_papers": [
+    {
+      "title": "Unified Spatio-Temporal Token Scoring for Efficient Video VLMs",
+      "reason": "提出统一时空token评分方法，提升视频视觉语言模型效率",
+      "arxiv_id": "2603.18004v1"
+    },
+    {
+      "title": "Universal Skeleton Understanding via Differentiable Rendering and MLLMs",
+      "reason": "通过可微分渲染实现通用骨架理解，推动3D人体感知发展",
+      "arxiv_id": "2603.18003v1"
+    },
+    {
+      "title": "Loc3R-VLM: Language-based Localization and 3D Reasoning with Vision-Language Models",
+      "reason": "结合语言定位与3D推理，拓展VLM空间理解能力",
+      "arxiv_id": "2603.18002v1"
+    },
+    {
+      "title": "AgentFactory: A Self-Evolving Framework Through Executable Subagent Accumulation and Reuse",
+      "reason": "展示AI系统自我演化新范式，通过子代理累积实现能力提升",
+      "arxiv_id": "2603.18000v1"
+    },
+    {
+      "title": "Versatile Editing of Video Content, Actions, and Dynamics without Training",
+      "reason": "无需训练的通用视频编辑技术突破，实现内容动作动力学的灵活控制",
+      "arxiv_id": "2603.17989v1"
+    }
+  ],
+  "top_rising_topics": [
+    {
+      "change": 320,
+      "summary": "Vision-Language Models、3D理解、视频生成与编辑技术持续突破，推动论文数量爆发式增长",
+      "topic_id": "cs.CV",
+      "topic_name": "Computer Vision",
+      "paper_count": 553
+    },
+    {
+      "change": 195,
+      "summary": "大模型训练与多模态学习研究持续活跃，带动相关论文数量大幅增长",
+      "topic_id": "cs.LG",
+      "topic_name": "Machine Learning",
+      "paper_count": 346
+    },
+    {
+      "change": 129,
+      "summary": "自然语言处理与多模态语言模型研究保持强劲增长势头",
+      "topic_id": "cs.CL",
+      "topic_name": "Computation and Language",
+      "paper_count": 204
+    },
+    {
+      "change": 118,
+      "summary": "量子计算与机器学习交叉领域研究增加，量子信息处理成为新热点",
+      "topic_id": "quant-ph",
+      "topic_name": "Quantum Physics",
+      "paper_count": 193
+    },
+    {
+      "change": 86,
+      "summary": "机器人感知与运动规划研究持续增长，3D场景理解技术推动应用突破",
+      "topic_id": "cs.RO",
+      "topic_name": "Robotics",
+      "paper_count": 189
+    }
+  ]
+}
