@@ -1,0 +1,76 @@
+{
+  "date": "2026-03-22",
+  "risks": [
+    "数据仅包含主题聚合信息，缺乏具体论文详情",
+    "主题分类粒度较粗，可能掩盖细分领域动态"
+  ],
+  "title": "学术趋势日报 2026-03-22",
+  "signals": [
+    {
+      "kind": "emerging",
+      "label": "计算机视觉持续领涨",
+      "summary": "cs.CV以+51的增幅成为本周增长最快的领域，反映视觉技术在学术界的持续热度"
+    },
+    {
+      "kind": "cooling",
+      "label": "机器人学热度下降",
+      "summary": "cs.RO结束此前增长态势，本周下降18篇，可能进入阶段性调整"
+    },
+    {
+      "kind": "cross_disciplinary",
+      "label": "AI与CL协同增长",
+      "summary": "cs.AI(+23)和cs.CL(+22)同步上升，体现自然语言处理与大模型研究的深度融合趋势"
+    }
+  ],
+  "summary": "计算机视觉(cs.CV)持续强劲增长，本周新增51篇论文达到473篇，显示CV领域热度不减。人工智能(cs.AI)和计算语言学(cs.CL)分别增长23和22篇，呈现上升趋势。机器学习(cs.LG)和机器人学(cs.RO)出现小幅下滑。",
+  "model_meta": {
+    "mode": "daily_analysis",
+    "model": "claude-3-5-sonnet-20241022",
+    "provider": "claude_code"
+  },
+  "key_findings": [
+    "计算机视觉(cs.CV)以473篇论文和+51的增长领跑各领域",
+    "人工智能(cs.AI)和计算语言学(cs.CL)分别增长23和22篇，涨势明显",
+    "传统热门领域机器学习(cs.LG)出现-17的下降",
+    "机器人学(cs.RO)下降18篇，结束此前增长势头",
+    "量子物理(quant-ph)保持稳定，小幅增长3篇"
+  ],
+  "notable_papers": [],
+  "top_rising_topics": [
+    {
+      "change": 51,
+      "summary": "计算机视觉领域持续火热，计算机视觉在自动驾驶、医学影像、AR/VR等应用驱动下保持强劲增长势头，本周新增51篇论文达到473篇，反映学术界对视觉理解和生成技术的持续关注",
+      "topic_id": "cs.CV",
+      "topic_name": "cs.CV",
+      "paper_count": 473
+    },
+    {
+      "change": 23,
+      "summary": "人工智能领域增长23篇，反映大模型、Agent系统等AI研究方向持续受到关注",
+      "topic_id": "cs.AI",
+      "topic_name": "cs.AI",
+      "paper_count": 162
+    },
+    {
+      "change": 22,
+      "summary": "计算语言学增长22篇，可能与多模态大语言模型、文本生成等研究热潮相关",
+      "topic_id": "cs.CL",
+      "topic_name": "cs.CL",
+      "paper_count": 171
+    },
+    {
+      "change": -17,
+      "summary": "机器学习领域小幅下降17篇，论文数量从289降至272",
+      "topic_id": "cs.LG",
+      "topic_name": "cs.LG",
+      "paper_count": 272
+    },
+    {
+      "change": -18,
+      "summary": "机器人学领域下降18篇，从172篇降至154篇",
+      "topic_id": "cs.RO",
+      "topic_name": "cs.RO",
+      "paper_count": 154
+    }
+  ]
+}
