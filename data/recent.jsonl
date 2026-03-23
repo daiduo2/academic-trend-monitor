@@ -1,12 +1,12 @@
 {"i": "2603.19235v1", "t": "Generation Models Know Space: Unleashing Implicit 3D Priors for Scene Understanding", "a": ["Xianjin Wu", "Dingkang Liang", "Tianrui Feng"], "c": "CV", "p": "260319", "g": [], "s": []}
 {"i": "2603.19234v1", "t": "Matryoshka Gaussian Splatting", "a": ["Zhilin Guo", "Boqiao Zhang", "Hakan Aktas"], "c": "CV", "p": "260319", "g": [], "s": []}
-{"i": "2603.19233v1", "t": "Not All Features Are Created Equal: A Mechanistic Study of Vision-Language-Action Models", "a": ["Bryce Grant", "Xijia Zhao", "Peng Wang"], "c": "RO", "p": "260319", "g": [], "s": []}
 {"i": "2603.19232v1", "t": "Cubic Discrete Diffusion: Discrete Visual Generation on High-Dimensional Representation Tokens", "a": ["Yuqing Wang", "Chuofan Ma", "Zhijie Lin"], "c": "CV", "p": "260319", "g": [], "s": []}
+{"i": "2603.19233v1", "t": "Not All Features Are Created Equal: A Mechanistic Study of Vision-Language-Action Models", "a": ["Bryce Grant", "Xijia Zhao", "Peng Wang"], "c": "RO", "p": "260319", "g": [], "s": []}
 {"i": "2603.19231v1", "t": "MonoArt: Progressive Structural Reasoning for Monocular Articulated 3D Reconstruction", "a": ["Haitian Li", "Haozhe Xie", "Junxiang Xu"], "c": "CV", "p": "260319", "g": [], "s": []}
 {"i": "2603.19230v1", "t": "The structure and evolution of the Galactic high-$α$ disc I. Chemical and age orbital cartography", "a": ["Furkan Akbaba", "Danny Horta", "Olcay Plevne"], "c": "astro-ph", "p": "260319", "g": [], "s": []}
+{"i": "2603.19227v1", "t": "Bridging Semantic and Kinematic Conditions with Diffusion-based Discrete Motion Tokenizer", "a": ["Chenyang Gu", "Mingyuan Zhang", "Haozhe Xie"], "c": "CV", "p": "260319", "g": [], "s": []}
 {"i": "2603.19229v1", "t": "NavTrust: Benchmarking Trustworthiness for Embodied Navigation", "a": ["Huaide Jiang", "Yash Chaudhary", "Yuping Wang"], "c": "RO", "p": "260319", "g": [], "s": []}
 {"i": "2603.19228v1", "t": "SAMA: Factorized Semantic Anchoring and Motion Alignment for Instruction-Guided Video Editing", "a": ["Xinyao Zhang", "Wenkai Dong", "Yuxin Song"], "c": "CV", "p": "260319", "g": [], "s": []}
-{"i": "2603.19227v1", "t": "Bridging Semantic and Kinematic Conditions with Diffusion-based Discrete Motion Tokenizer", "a": ["Chenyang Gu", "Mingyuan Zhang", "Haozhe Xie"], "c": "CV", "p": "260319", "g": [], "s": []}
 {"i": "2603.19226v1", "t": "Under One Sun: Multi-Object Generative Perception of Materials and Illumination", "a": ["Nobuo Yoshii", "Xinran Nicole Han", "Ryo Kawahara"], "c": "CV", "p": "260319", "g": [], "s": []}
 {"i": "2603.19225v1", "t": "FinTradeBench: A Financial Reasoning Benchmark for LLMs", "a": ["Yogesh Agrawal", "Aniruddha Dutta", "Md Mahadi Hasan"], "c": "cs", "p": "260319", "g": [], "s": []}
 {"i": "2603.19224v1", "t": "EffectErase: Joint Video Object Removal and Insertion for High-Quality Effect Erasing", "a": ["Yang Fu", "Yike Zheng", "Ziyun Dai"], "c": "CV", "p": "260319", "g": [], "s": []}
@@ -215,8 +215,8 @@
 {"i": "2603.19021v1", "t": "GWTC-4.0: Tests of General Relativity. III. Tests of the Remnants", "a": ["The LIGO Scientific Collaboration", "the Virgo Collaboration", "the KAGRA Collaboration"], "c": "gr-qc", "p": "260319", "g": [], "s": []}
 {"i": "2603.19020v1", "t": "GWTC-4.0: Tests of General Relativity. II. Parameterized Tests", "a": ["The LIGO Scientific Collaboration", "the Virgo Collaboration", "the KAGRA Collaboration"], "c": "gr-qc", "p": "260319", "g": [], "s": []}
 {"i": "2603.19019v1", "t": "GWTC-4.0: Tests of General Relativity. I. Overview and General Tests", "a": ["The LIGO Scientific Collaboration", "the Virgo Collaboration", "the KAGRA Collaboration"], "c": "gr-qc", "p": "260319", "g": [], "s": []}
-{"i": "2603.19017v1", "t": "What Really Controls Temporal Reasoning in Large Language Models: Tokenisation or Representation of Time?", "a": ["Gagan Bhatia", "Ahmad Muhammad Isa", "Maxime Peyrard"], "c": "CL", "p": "260319", "g": [], "s": []}
 {"i": "2603.19018v1", "t": "Generation of Whistler Waves by Reflected Electrons and Their Self-Confinement at Quasi-Perpendicular Shocks", "a": ["Ruolin Wang", "Takanobu Amano"], "c": "physics", "p": "260319", "g": [], "s": []}
+{"i": "2603.19017v1", "t": "What Really Controls Temporal Reasoning in Large Language Models: Tokenisation or Representation of Time?", "a": ["Gagan Bhatia", "Ahmad Muhammad Isa", "Maxime Peyrard"], "c": "CL", "p": "260319", "g": [], "s": []}
 {"i": "2603.19016v1", "t": "Literature Study on Operational Data Analytics Frameworks in Large-scale Computing Infrastructures", "a": ["Shekhar Suman", "Xiaoyu Chu", "Alexandru Iosup"], "c": "cs", "p": "260319", "g": [], "s": []}
 {"i": "2603.19015v1", "t": "Enhanced stability of pressure relief valves: mechanistic design and analysis", "a": ["Hong Tang", "Istvan Erdodi", "Alan R. Champneys"], "c": "math", "p": "260319", "g": [], "s": []}
 {"i": "2603.19014v1", "t": "Acoustic radiation of thermodiffusively unstable turbulent lean premixed hydrogen-air flames", "a": ["Francesco G. Schiavone", "Guillaume Daviller", "Davide Laera"], "c": "physics", "p": "260319", "g": [], "s": []}
@@ -1010,8 +1010,8 @@
 {"i": "2603.17868v1", "t": "Substrate-controlled nucleation and growth kinetics in ultrathin Bi$_2$Te$_3$ films", "a": ["Damian Brzozowski", "Sander R. Hønnås", "Egil Y. Tokle"], "c": "cond-mat", "p": "260318", "g": [], "s": []}
 {"i": "2603.17867v1", "t": "RHYME-XT: A Neural Operator for Spatiotemporal Control Systems", "a": ["Marijn Ruiter", "Miguel Aguiar", "Jake Rap"], "c": "LG", "p": "260318", "g": [], "s": []}
 {"i": "2603.17866v1", "t": "Bayesian multilevel step-and-turn models for evaluating player movement in American football", "a": ["Quang Nguyen", "Ronald Yurko"], "c": "stat", "p": "260318", "g": [], "s": []}
-{"i": "2603.17865v1", "t": "Approximation by Quad Meshes in Laguerre Geometry", "a": ["A. Ramos-Cisneros", "M. Skopenkov", "H. Pottmann"], "c": "cs", "p": "260318", "g": [], "s": []}
 {"i": "2603.17864v1", "t": "Bivariate deconvolution for cancer detection after surgery", "a": ["Nuria Senar", "Stavros Makrodimitris", "Michel H. Hof"], "c": "stat", "p": "260318", "g": [], "s": []}
+{"i": "2603.17865v1", "t": "Approximation by Quad Meshes in Laguerre Geometry", "a": ["A. Ramos-Cisneros", "M. Skopenkov", "H. Pottmann"], "c": "cs", "p": "260318", "g": [], "s": []}
 {"i": "2603.17863v1", "t": "Procedural Generation of Algorithm Discovery Tasks in Machine Learning", "a": ["Alexander D. Goldie", "Zilin Wang", "Adrian Hayler"], "c": "LG", "p": "260318", "g": [], "s": []}
 {"i": "2603.17862v1", "t": "Stronger core results with multidimensional prices", "a": ["Mark Braverman", "Jingyi Liu", "Eric Xue"], "c": "GT", "p": "260318", "g": [], "s": []}
 {"i": "2603.17861v1", "t": "Gaussian concentration, integral probability metrics, and coupling functionals for infinite lattice systems", "a": ["J. -R. Chazottes", "P. Collet", "F. Redig"], "c": "math", "p": "260318", "g": [], "s": []}
@@ -1061,8 +1061,8 @@
 {"i": "2603.17817v1", "t": "Comparison of 60 GHz and 80 GHz Vehicle-to-Vehicle Channels Using Delay and Doppler Characteristics", "a": ["Ales Prokes", "Tomas Mikulasek", "Josef Vychodil"], "c": "eess", "p": "260318", "g": [], "s": []}
 {"i": "2603.17816v1", "t": "Hamiltonian Simulation and Linear Combination of Unitary Decomposition of Structured Matrices", "a": ["Robin Ollive", "Stéphane Louise"], "c": "quant-ph", "p": "260318", "g": [], "s": []}
 {"i": "2603.17815v1", "t": "Process Supervision for Chain-of-Thought Reasoning via Monte Carlo Net Information Gain", "a": ["Corentin Royer", "Debarun Bhattacharjya", "Gaetano Rossiello"], "c": "CL", "p": "260318", "g": [], "s": []}
-{"i": "2603.17814v1", "t": "Giant intrinsic dichroism in \\b{eta}-Ga2O3 enables filter-free, high-fidelity polarization division multiplexing", "a": ["Yonghui Zhang", "Rui Zhu", "Huili Liang"], "c": "physics", "p": "260318", "g": [], "s": []}
 {"i": "2603.17813v1", "t": "M2P: Improving Visual Foundation Models with Mask-to-Point Weakly-Supervised Learning for Dense Point Tracking", "a": ["Qiangqiang Wu", "Tianyu Yang", "Bo Fang"], "c": "CV", "p": "260318", "g": [], "s": []}
+{"i": "2603.17814v1", "t": "Giant intrinsic dichroism in \\b{eta}-Ga2O3 enables filter-free, high-fidelity polarization division multiplexing", "a": ["Yonghui Zhang", "Rui Zhu", "Huili Liang"], "c": "physics", "p": "260318", "g": [], "s": []}
 {"i": "2603.17812v1", "t": "ChopGrad: Pixel-Wise Losses for Latent Video Diffusion via Truncated Backpropagation", "a": ["Dmitriy Rivkin", "Parker Ewen", "Lili Gao"], "c": "CV", "p": "260318", "g": [], "s": []}
 {"i": "2603.17811v1", "t": "Dropout Robustness and Cognitive Profiling of Transformer Models via Stochastic Inference", "a": ["Antônio Junior Alves Caiado", "Michael Hahsler"], "c": "LG", "p": "260318", "g": [], "s": []}
 {"i": "2603.17810v1", "t": "Localization for non-stationary Anderson models in three dimensions", "a": ["Omar Hurtado"], "c": "math-ph", "p": "260318", "g": [], "s": []}
@@ -1111,8 +1111,8 @@
 {"i": "2603.17767v1", "t": "Facial Movement Dynamics Reveal Workload During Complex Multitasking", "a": ["Carter Sale", "Melissa N. Stolar", "Gaurav Patil"], "c": "HC", "p": "260318", "g": [], "s": []}
 {"i": "2603.17766v1", "t": "Vehicle-to-Vehicle Millimeter-Wave Channel Characterization at 60 and 80 GHz", "a": ["Radek Zavorka", "Tomas Mikulasek", "Josef Vychodil"], "c": "eess", "p": "260318", "g": [], "s": []}
 {"i": "2603.17765v1", "t": "Grounded Multimodal Retrieval-Augmented Drafting of Radiology Impressions Using Case-Based Similarity Search", "a": ["Himadri Samanta"], "c": "q-bio", "p": "260318", "g": [], "s": []}
-{"i": "2603.17763v1", "t": "Deep learning topological inference-guided $T_{cc}^{+}$ pole parameter extraction", "a": ["Julius B. Pagayon", "Klarence Tomas R. Cervantes", "Denny Lane B. Sombillo"], "c": "hep-ph", "p": "260318", "g": [], "s": []}
 {"i": "2603.17764v1", "t": "Robust Dynamic Pricing and Admission Control with Fairness Guarantees", "a": ["Yingqing Chen", "Anni Li", "Christos G. Cassandras"], "c": "eess", "p": "260318", "g": [], "s": []}
+{"i": "2603.17763v1", "t": "Deep learning topological inference-guided $T_{cc}^{+}$ pole parameter extraction", "a": ["Julius B. Pagayon", "Klarence Tomas R. Cervantes", "Denny Lane B. Sombillo"], "c": "hep-ph", "p": "260318", "g": [], "s": []}
 {"i": "2603.17762v1", "t": "Fairness-Aware Beamforming for Polarimetric ISAC Systems with Polarization-Reconfigurable Antennas", "a": ["Weijie Xiong", "Jingran Lin", "Di Jiang"], "c": "eess", "p": "260318", "g": [], "s": []}
 {"i": "2603.17761v1", "t": "Evidence Packing for Cross-Domain Image Deepfake Detection with LVLMs", "a": ["Yuxin Liu", "Fei Wang", "Kun Li"], "c": "CV", "p": "260318", "g": [], "s": []}
 {"i": "2603.17760v1", "t": "Affineness of the maximal étale locus", "a": ["Ivan Zelich"], "c": "math", "p": "260318", "g": [], "s": []}
@@ -1187,8 +1187,8 @@
 {"i": "2603.17691v1", "t": "Stochastic set-valued optimization and its application to robust learning", "a": ["Tommaso Giovannelli", "Jingfu Tan", "Luis Nunes Vicente"], "c": "math", "p": "260318", "g": [], "s": []}
 {"i": "2603.17690v1", "t": "Non-equilibrium phase coexistence in conserved chemically active mixtures", "a": ["Florian Raßhofer", "Erwin Frey"], "c": "cond-mat", "p": "260318", "g": [], "s": []}
 {"i": "2603.17689v1", "t": "Neutrino mass variables in 3 active and 2 sterile neutrino scenario", "a": ["Srubabati Goswami", "Hemanth M.", "Debashis Pachhar"], "c": "hep-ph", "p": "260318", "g": [], "s": []}
-{"i": "2603.17687v1", "t": "Objective Mispricing Detection for Shortlisting Undervalued Football Players via Market Dynamics and News Signals", "a": ["Chinenye Omejieke", "Shuyao Chen", "Xia Cui"], "c": "LG", "p": "260318", "g": [], "s": []}
 {"i": "2603.17688v1", "t": "Wake-Tail Effects in Two-Dimensional Time-Reversed Waves", "a": ["Theodoros T. Koutserimpas"], "c": "physics", "p": "260318", "g": [], "s": []}
+{"i": "2603.17687v1", "t": "Objective Mispricing Detection for Shortlisting Undervalued Football Players via Market Dynamics and News Signals", "a": ["Chinenye Omejieke", "Shuyao Chen", "Xia Cui"], "c": "LG", "p": "260318", "g": [], "s": []}
 {"i": "2603.17686v1", "t": "On maximal positive invariant set computation for rank-deficient linear systems", "a": ["Bogdan Gheorghe", "Daniel Ioan", "Cristian Flutur"], "c": "eess", "p": "260318", "g": [], "s": []}
 {"i": "2603.17685v1", "t": "Flow Matching Policy with Entropy Regularization", "a": ["Ting Gao", "Stavros Orfanoudakis", "Nan Lin"], "c": "LG", "p": "260318", "g": [], "s": []}
 {"i": "2603.17684v1", "t": "Does YOLO Really Need to See Every Training Image in Every Epoch?", "a": ["Xingxing Xie", "Jiahua Dong", "Junwei Han"], "c": "CV", "p": "260318", "g": [], "s": []}
@@ -1656,9 +1656,9 @@
 {"i": "2603.17222v1", "t": "Crossover effects on the phase transitions phenomena translated by arborecences and spectral properties", "a": ["Roberto da Silva"], "c": "cond-mat", "p": "260318", "g": [], "s": []}
 {"i": "2603.16871v1", "t": "WorldCam: Interactive Autoregressive 3D Gaming Worlds with Camera Pose as a Unifying Geometric Representation", "a": ["Jisu Nam", "Yicong Hong", "Chun-Hao Paul Huang"], "c": "CV", "p": "260317", "g": [], "s": []}
 {"i": "2603.16870v1", "t": "Demystifing Video Reasoning", "a": ["Ruisi Wang", "Zhongang Cai", "Fanyi Pu"], "c": "CV", "p": "260317", "g": [], "s": []}
+{"i": "2603.16869v1", "t": "SegviGen: Repurposing 3D Generative Model for Part Segmentation", "a": ["Lin Li", "Haoran Feng", "Zehuan Huang"], "c": "CV", "p": "260317", "g": [], "s": []}
 {"i": "2603.16867v1", "t": "Efficient Reasoning on the Edge", "a": ["Yelysei Bondarenko", "Thomas Hehn", "Rob Hesselink"], "c": "LG", "p": "260317", "g": [], "s": []}
 {"i": "2603.16868v1", "t": "MessyKitchens: Contact-rich object-level 3D scene reconstruction", "a": ["Junaid Ahmed Ansari", "Ran Ding", "Fabio Pizzati"], "c": "CV", "p": "260317", "g": [], "s": []}
-{"i": "2603.16869v1", "t": "SegviGen: Repurposing 3D Generative Model for Part Segmentation", "a": ["Lin Li", "Haoran Feng", "Zehuan Huang"], "c": "CV", "p": "260317", "g": [], "s": []}
 {"i": "2603.16866v1", "t": "ManiTwin: Scaling Data-Generation-Ready Digital Object Dataset to 100K", "a": ["Kaixuan Wang", "Tianxing Chen", "Jiawei Liu"], "c": "RO", "p": "260317", "g": [], "s": []}
 {"i": "2603.16865v1", "t": "Prescribed-Time Distributed Generalized Nash Equilibrium Seeking", "a": ["Liraz Mudrik", "Isaac Kaminer", "Sean Kragelund"], "c": "math", "p": "260317", "g": [], "s": []}
 {"i": "2603.16864v1", "t": "SparkVSR: Interactive Video Super-Resolution via Sparse Keyframe Propagation", "a": ["Jiongze Yu", "Xiangbo Gao", "Pooja Verlani"], "c": "CV", "p": "260317", "g": [], "s": []}
@@ -1746,8 +1746,8 @@
 {"i": "2603.16782v1", "t": "Magnetism Induced by Periodically Driven Non-Magnetic Impurities on Surfaces with Spin-Orbit Coupling", "a": ["Malen Etxeberria-Etxaniz", "Andrés Arnau", "Asier Eiguren"], "c": "cond-mat", "p": "260317", "g": [], "s": []}
 {"i": "2603.16781v1", "t": "IOSVLM: A 3D Vision-Language Model for Unified Dental Diagnosis from Intraoral Scans", "a": ["Huimin Xiong", "Zijie Meng", "Tianxiang Hu"], "c": "CV", "p": "260317", "g": [], "s": []}
 {"i": "2603.16780v1", "t": "Quantum-Enabled Probabilistic Optimal Power Flow with Built-in Differential Privacy", "a": ["Yuji Cao", "Tongxin Li", "Yue Chen"], "c": "math", "p": "260317", "g": [], "s": []}
-{"i": "2603.16779v1", "t": "Associative algebras in $CR$-geometry", "a": ["Valerii Beloshapka"], "c": "math", "p": "260317", "g": [], "s": []}
 {"i": "2603.16778v1", "t": "Optimal multi-parameter control of trapped active matter", "a": ["Luke K. Davis"], "c": "cond-mat", "p": "260317", "g": [], "s": []}
+{"i": "2603.16779v1", "t": "Associative algebras in $CR$-geometry", "a": ["Valerii Beloshapka"], "c": "math", "p": "260317", "g": [], "s": []}
 {"i": "2603.16777v1", "t": "Anticipatory Planning for Multimodal AI Agents", "a": ["Yongyuan Liang", "Shijie Zhou", "Yu Gu"], "c": "AI", "p": "260317", "g": [], "s": []}
 {"i": "2603.16776v1", "t": "Cosmic Dipole as a Symmetry Response: From the Ellis--Baldwin Formula to Correlation Function Dipoles", "a": ["Tsutomu T. Takeuchi"], "c": "astro-ph", "p": "260317", "g": [], "s": []}
 {"i": "2603.16775v1", "t": "How compactness curbs entanglement growth in bosonic systems", "a": ["Stefan Aimet", "Philipp Schmoll", "Jens Eisert"], "c": "quant-ph", "p": "260317", "g": [], "s": []}
@@ -1827,8 +1827,8 @@
 {"i": "2603.16700v1", "t": "Nonlinear Information Theory: Characterizing Distributional Uncertainty in Communication Models with Sublinear Expectation", "a": ["Wen-Xuan Lang", "Shaoshi Yang", "Jianhua Zhang"], "c": "cs", "p": "260317", "g": [], "s": []}
 {"i": "2603.16699v1", "t": "Efficient generation of entangled photons in the telecommunications range using nonlinear metasurfaces integrated with ScAlN/GaN heterostructures", "a": ["Jaeyeon Yu", "Jewel Mohajan", "Mikhail Tokman"], "c": "physics", "p": "260317", "g": [], "s": []}
 {"i": "2603.16698v1", "t": "The recording tableaux of the quantum Littlewood-Richardson map and the orthogonal transpose symmetry map", "a": ["Olga Azenhas"], "c": "math", "p": "260317", "g": [], "s": []}
-{"i": "2603.16696v1", "t": "A dense focusing Ablowitz-Ladik soliton gas and its asymptotics", "a": ["Meisen Chen", "Engui Fan", "Zhaoyu Wang"], "c": "math-ph", "p": "260317", "g": [], "s": []}
 {"i": "2603.16697v1", "t": "Cost Trade-offs in Matrix Inversion Updates for Streaming Outlier Detection", "a": ["Florian Grivet", "Louise Travé-Massuyès"], "c": "LG", "p": "260317", "g": [], "s": []}
+{"i": "2603.16696v1", "t": "A dense focusing Ablowitz-Ladik soliton gas and its asymptotics", "a": ["Meisen Chen", "Engui Fan", "Zhaoyu Wang"], "c": "math-ph", "p": "260317", "g": [], "s": []}
 {"i": "2603.16695v1", "t": "Independence polynomials of graphs", "a": ["Takayuki Hibi", "Selvi Kara", "Dalena Vien"], "c": "math", "p": "260317", "g": [], "s": []}
 {"i": "2603.16694v1", "t": "SynthChain: A Synthetic Benchmark and Forensic Analysis of Advanced and Stealthy Software Supply Chain Attacks", "a": ["Zhuoran Tan", "Wenbo Guo", "Taylor Brierley"], "c": "CR", "p": "260317", "g": [], "s": []}
 {"i": "2603.16693v1", "t": "A Compact Broadband Purcell Filter for Superconducting Quantum Circuits in a 3D Flip-Chip Architecture", "a": ["Zhen Luo", "Lea Richard", "Ivan Tsitsilin"], "c": "quant-ph", "p": "260317", "g": [], "s": []}
@@ -1968,8 +1968,8 @@
 {"i": "2603.16559v1", "t": "Observational Constraints on WIMP Mini-Spikes Around Stellar-Mass Primordial Black Holes with 17 Years of Fermi-LAT Data", "a": ["Ana Vitória de Almeida Martinheira Braga", "Murillo Gregorio Grefener da Silva", "Aion Viana"], "c": "astro-ph", "p": "260317", "g": [], "s": []}
 {"i": "2603.16558v1", "t": "Segmentation-Based Attention Entropy: Detecting and Mitigating Object Hallucinations in Large Vision-Language Models", "a": ["Jiale Song", "Jiaxin Luo", "Xue-song Tang"], "c": "CV", "p": "260317", "g": [], "s": []}
 {"i": "2603.16557v1", "t": "BenchPreS: A Benchmark for Context-Aware Personalized Preference Selectivity of Persistent-Memory LLMs", "a": ["Sangyeon Yoon", "Sunkyoung Kim", "Hyesoo Hong"], "c": "AI", "p": "260317", "g": [], "s": []}
-{"i": "2603.16556v1", "t": "Applicability of Radiowave Anechoic Chambers for Acoustic Free-Field Measurements on the Example of the Chamber at ITMO University", "a": ["Farid Bikmukhametov", "Ksenia Razrezova", "Roman Smolnitsky"], "c": "physics", "p": "260317", "g": [], "s": []}
 {"i": "2603.16555v1", "t": "Scattering Symmetries in Diffraction Gratings", "a": ["Karim Achouri"], "c": "physics", "p": "260317", "g": [], "s": []}
+{"i": "2603.16556v1", "t": "Applicability of Radiowave Anechoic Chambers for Acoustic Free-Field Measurements on the Example of the Chamber at ITMO University", "a": ["Farid Bikmukhametov", "Ksenia Razrezova", "Roman Smolnitsky"], "c": "physics", "p": "260317", "g": [], "s": []}
 {"i": "2603.16554v1", "t": "UrbanFlow-3K: A Dataset of 3,000 Lattice-Boltzmann Simulations of Random Building Layouts", "a": ["Hojin Lee", "Andreas Lintermann", "Sangseung Lee"], "c": "physics", "p": "260317", "g": [], "s": []}
 {"i": "2603.16553v1", "t": "EmoLLM: Appraisal-Grounded Cognitive-Emotional Co-Reasoning in Large Language Models", "a": ["Yifei Zhang", "Mingyang Li", "Henry Gao"], "c": "CL", "p": "260317", "g": [], "s": []}
 {"i": "2603.16552v1", "t": "A Correlated Route to Antiferromagnetic Spintronics", "a": ["Joel Bobadilla", "Alberto Camjayi"], "c": "cond-mat", "p": "260317", "g": [], "s": []}
@@ -1991,8 +1991,8 @@
 {"i": "2603.16536v1", "t": "Kamino: GPU-based Massively Parallel Simulation of Multi-Body Systems with Challenging Topologies", "a": ["Vassilios Tsounis", "Guirec Maloisel", "Christian Schumacher"], "c": "RO", "p": "260317", "g": [], "s": []}
 {"i": "2603.16535v1", "t": "SympFormer: Accelerated attention blocks via Inertial Dynamics on Density Manifolds", "a": ["Viktor Stein", "Wuchen Li", "Gabriele Steidl"], "c": "LG", "p": "260317", "g": [], "s": []}
 {"i": "2603.16534v1", "t": "An Extension of Major-Minor Mean Field Game Theory", "a": ["Agustín Muñoz González"], "c": "math", "p": "260317", "g": [], "s": []}
-{"i": "2603.16532v1", "t": "A symplectic geometric origin of universal quartic modified dispersion relations", "a": ["Sanjib Dey", "Mir Faizal"], "c": "math-ph", "p": "260317", "g": [], "s": []}
 {"i": "2603.16533v1", "t": "Testing the Coexistence of Dark Energy and Dark Matter with Late-time Observational Data", "a": ["Shambel Sahlu", "Andronikos Paliathanasis", "Genly Leon"], "c": "astro-ph", "p": "260317", "g": [], "s": []}
+{"i": "2603.16532v1", "t": "A symplectic geometric origin of universal quartic modified dispersion relations", "a": ["Sanjib Dey", "Mir Faizal"], "c": "math-ph", "p": "260317", "g": [], "s": []}
 {"i": "2603.16531v1", "t": "LIMBERO: A Limbed Climbing Exploration Robot Toward Traveling on Rocky Cliffs", "a": ["Kentaro Uno", "Masazumi Imai", "Kazuki Takada"], "c": "RO", "p": "260317", "g": [], "s": []}
 {"i": "2603.16530v1", "t": "Estimation and Hypothesis Testing of Fixed Effects Models-Based Uncertainty for Factor Designs", "a": ["Fan Zhang", "Zhiming Li"], "c": "stat", "p": "260317", "g": [], "s": []}
 {"i": "2603.16529v1", "t": "Liquidity Pools as Mean Field Games with Transaction Costs", "a": ["Agustín Muñoz González"], "c": "math", "p": "260317", "g": [], "s": []}
@@ -2054,8 +2054,8 @@
 {"i": "2603.16473v1", "t": "A Novel Approach for Fault Detection and Failure Analysis of CMOS Copper Metal Stacks", "a": ["Gregor Hieronymus Eberwein", "Gianluca Aglieri Rinella", "Daniela Bortoletto"], "c": "physics", "p": "260317", "g": [], "s": []}
 {"i": "2603.16472v1", "t": "Directivity Enhancement of Movable Antenna Arrays with Mutual Coupling", "a": ["Wei Xu", "Lipeng Zhu", "Wenyan Ma"], "c": "cs", "p": "260317", "g": [], "s": []}
 {"i": "2603.16471v1", "t": "Coverage First Next Best View for Inspection of Cluttered Pipe Networks Using Mobile Manipulators", "a": ["Joshua Raymond Bettles", "Jiaxu Wu", "Bruno Vilhena Adorno"], "c": "RO", "p": "260317", "g": [], "s": []}
-{"i": "2603.16469v1", "t": "Optical Chopping Enhanced Rydberg-Atom-Based Ultra-Low-Frequency Electric Field Measurement", "a": ["Yipeng Xie", "Mingwei Lei", "Wenbo Dong"], "c": "quant-ph", "p": "260317", "g": [], "s": []}
 {"i": "2603.16470v1", "t": "Multi-Agent Reinforcement Learning Counteracts Delayed CSI in Multi-Satellite Systems", "a": ["Marios Aristodemou", "Yasaman Omid", "Sangarapillai Lambotharan"], "c": "cs", "p": "260317", "g": [], "s": []}
+{"i": "2603.16469v1", "t": "Optical Chopping Enhanced Rydberg-Atom-Based Ultra-Low-Frequency Electric Field Measurement", "a": ["Yipeng Xie", "Mingwei Lei", "Wenbo Dong"], "c": "quant-ph", "p": "260317", "g": [], "s": []}
 {"i": "2603.16468v1", "t": "Yet another characterizatione of Birkhoff Billiards inside discs", "a": ["Klaudiusz Czudek", "Jacopo De Simoi", "Andrew Gad"], "c": "math", "p": "260317", "g": [], "s": []}
 {"i": "2603.16467v1", "t": "Tangent measures of self-similar sets satisfying the strong separation condition", "a": ["Yongtao Wang"], "c": "math", "p": "260317", "g": [], "s": []}
 {"i": "2603.16466v1", "t": "Diversity of Type Ia supernova optical light curves among different spectroscopic subclasses", "a": ["R. B. Koshi", "M. Doi", "S. Sako"], "c": "astro-ph", "p": "260317", "g": [], "s": []}
@@ -2145,8 +2145,8 @@
 {"i": "2603.16382v1", "t": "Rotated Robustness: A Training-Free Defense against Bit-Flip Attacks on Large Language Models", "a": ["Deng Liu", "Song Chen"], "c": "CR", "p": "260317", "g": [], "s": []}
 {"i": "2603.16381v1", "t": "Effect of gravity on Neutrino Oscillations in $κ$-deformed space-time", "a": ["Harsha Sreekumar", "E. Harikumar"], "c": "hep-ph", "p": "260317", "g": [], "s": []}
 {"i": "2603.16380v1", "t": "BC Toda chain I: reflection operator and eigenfunctions", "a": ["N. Belousov", "S. Derkachov", "S. Khoroshkin"], "c": "math-ph", "p": "260317", "g": [], "s": []}
-{"i": "2603.16379v1", "t": "First-Principles Investigation of the Pressure Dependent Physical Properties of Intermetallic Kagome ZrRe2", "a": ["Mst. Irin Naher", "A. F. M. Yusuf Haider", "Dholon Kumar Paul"], "c": "cond-mat", "p": "260317", "g": [], "s": []}
 {"i": "2603.16378v1", "t": "A complexity analysis of the F4 Gröbner basis algorithm with tracer data", "a": ["Robin Kouba", "Vincent Neiger", "Mohab Safey El Din"], "c": "SC", "p": "260317", "g": [], "s": []}
+{"i": "2603.16379v1", "t": "First-Principles Investigation of the Pressure Dependent Physical Properties of Intermetallic Kagome ZrRe2", "a": ["Mst. Irin Naher", "A. F. M. Yusuf Haider", "Dholon Kumar Paul"], "c": "cond-mat", "p": "260317", "g": [], "s": []}
 {"i": "2603.16377v1", "t": "Age Predictors Through the Lens of Generalization, Bias Mitigation, and Interpretability: Reflections on Causal Implications", "a": ["Debdas Paul", "Elisa Ferrari", "Irene Gravili"], "c": "LG", "p": "260317", "g": [], "s": []}
 {"i": "2603.16376v1", "t": "Prior-Informed Neural Network Initialization: A Spectral Approach for Function Parameterizing Architectures", "a": ["David Orlando Salazar Torres", "Diyar Altinses", "Andreas Schwung"], "c": "LG", "p": "260317", "g": [], "s": []}
 {"i": "2603.16375v1", "t": "Monoidal categories graded by partial commutative monoids", "a": ["Matthew Earnshaw", "Chad Nester", "Mario Román"], "c": "cs", "p": "260317", "g": [], "s": []}
@@ -2326,8 +2326,8 @@
 {"i": "2603.16201v1", "t": "Robust Generative Audio Quality Assessment: Disentangling Quality from Spurious Correlations", "a": ["Kuan-Tang Huang", "Chien-Chun Wang", "Cheng-Yeh Yang"], "c": "eess", "p": "260317", "g": [], "s": []}
 {"i": "2603.16200v1", "t": "Online Semi-infinite Linear Programming: Efficient Algorithms via Function Approximation", "a": ["Yiming Zong", "Jiashuo Jiang"], "c": "LG", "p": "260317", "g": [], "s": []}
 {"i": "2603.16199v1", "t": "Prediction of Alpha-Decay Half-Lives of Actinide Nuclei Using the DDM3Y Effective Interaction Potential", "a": ["N. Sowmya", "H. C. Manjunatha", "Roshini. K. N"], "c": "nucl-th", "p": "260317", "g": [], "s": []}
-{"i": "2603.16197v1", "t": "Are Large Language Models Truly Smarter Than Humans?", "a": ["Eshwar Reddy M", "Sourav Karmakar"], "c": "AI", "p": "260317", "g": [], "s": []}
 {"i": "2603.16198v1", "t": "Decentralized design of leader-following consensus protocols for asymmetric matrix-weighted heterogeneous multiagent systems", "a": ["Lanhao Zhao", "Yangzhou Chen"], "c": "math", "p": "260317", "g": [], "s": []}
+{"i": "2603.16197v1", "t": "Are Large Language Models Truly Smarter Than Humans?", "a": ["Eshwar Reddy M", "Sourav Karmakar"], "c": "AI", "p": "260317", "g": [], "s": []}
 {"i": "2603.16196v1", "t": "PanguMotion: Continuous Driving Motion Forecasting with Pangu Transformers", "a": ["Quanhao Ren", "Yicheng Li", "Nan Song"], "c": "RO", "p": "260317", "g": [], "s": []}
 {"i": "2603.16195v1", "t": "S-VAM: Shortcut Video-Action Model by Self-Distilling Geometric and Semantic Foresight", "a": ["Haodong Yan", "Zhide Zhong", "Jiaguan Zhu"], "c": "CV", "p": "260317", "g": [], "s": []}
 {"i": "2603.16194v1", "t": "TPMM: Three-component Posterior Mixture Model Enables Robust Inverton Detection in Low-Depth Metagenomes and Suggests Potential Viral Invertons", "a": ["Yi Lu", "Jiaojiao Guan", "Yang Shen"], "c": "q-bio", "p": "260317", "g": [], "s": []}
@@ -2601,8 +2601,8 @@
 {"i": "2603.15527v1", "t": "Are Dilemmas and Conflicts in LLM Alignment Solvable? A View from Priority Graph", "a": ["Zhenheng Tang", "Xiang Liu", "Qian Wang"], "c": "AI", "p": "260316", "g": [], "s": []}
 {"i": "2603.15526v1", "t": "Building Trust in PINNs: Error Estimation through Finite Difference Methods", "a": ["Aleksander Krasowski", "René P. Klausen", "Aycan Celik"], "c": "LG", "p": "260316", "g": [], "s": []}
 {"i": "2603.15525v1", "t": "Clinically Aware Synthetic Image Generation for Concept Coverage in Chest X-ray Models", "a": ["Amy Rafferty", "Rishi Ramaesh", "Ajitha Rajan"], "c": "CV", "p": "260316", "g": [], "s": []}
-{"i": "2603.15523v1", "t": "SlovKE: A Large-Scale Dataset and LLM Evaluation for Slovak Keyphrase Extraction", "a": ["David Števaňák", "Marek Šuppa"], "c": "CL", "p": "260316", "g": [], "s": []}
 {"i": "2603.15524v1", "t": "Characterization of Passive CMOS Strip Detectors After Proton Irradiation", "a": ["Marta Baselga", "Jan-Hendrik Arling", "Naomi Davis"], "c": "physics", "p": "260316", "g": [], "s": []}
+{"i": "2603.15523v1", "t": "SlovKE: A Large-Scale Dataset and LLM Evaluation for Slovak Keyphrase Extraction", "a": ["David Števaňák", "Marek Šuppa"], "c": "CL", "p": "260316", "g": [], "s": []}
 {"i": "2603.15522v1", "t": "Quantum-Inspired Unitary Pooling for Multispectral Satellite Image Classification", "a": ["Georgios Maragkopoulos", "Aikaterini Mandilara", "Ralntion Komini"], "c": "quant-ph", "p": "260316", "g": [], "s": []}
 {"i": "2603.15521v1", "t": "ln(3): A Universal Percolation Constant for Collective Dynamics on One-Dimensional Proximity Networks", "a": ["Jian Ji"], "c": "cs", "p": "260316", "g": [], "s": []}
 {"i": "2603.15520v1", "t": "Umklapp-Enhanced Interlayer Valley Drag in Moiré Bilayers", "a": ["Ritajit Kundu", "Mandar M. Deshmukh", "Herbert A. Fertig"], "c": "cond-mat", "p": "260316", "g": [], "s": []}
@@ -2698,8 +2698,8 @@
 {"i": "2603.15430v1", "t": "Physics-Informed Deep Neural Network Design of Reactively Loaded Metasurfaces", "a": ["Malik Almunif", "John Le", "Anthony Grbic"], "c": "physics", "p": "260316", "g": [], "s": []}
 {"i": "2603.15429v1", "t": "Effects of equilibrium coexisting phases in the first-order chiral transition within the Linear sigma model with quarks", "a": ["R. M. Aguirre"], "c": "hep-ph", "p": "260316", "g": [], "s": []}
 {"i": "2603.15428v1", "t": "Exploring Human Quadruped Locomotion for Exergames", "a": ["Shamit Ahmed", "Perttu Hämäläinen"], "c": "HC", "p": "260316", "g": [], "s": []}
-{"i": "2603.15427v1", "t": "Formalisms for Robotic Mission Specification and Execution: A Comparative Analysis", "a": ["Gianluca Filippone", "Sara Pettinari", "Patrizio Pelliccione"], "c": "SE", "p": "260316", "g": [], "s": []}
 {"i": "2603.15426v1", "t": "Exact and limit results for the CTRW in presence of drift and position dependent noise intensity", "a": ["Marco Bianucci", "Mauro Bologna", "Riccardo Mannella"], "c": "cond-mat", "p": "260316", "g": [], "s": []}
+{"i": "2603.15427v1", "t": "Formalisms for Robotic Mission Specification and Execution: A Comparative Analysis", "a": ["Gianluca Filippone", "Sara Pettinari", "Patrizio Pelliccione"], "c": "SE", "p": "260316", "g": [], "s": []}
 {"i": "2603.15425v1", "t": "Size Bound-Adorned Datalog", "a": ["Christian Fattebert", "Zhekai Jiang", "Christoph Koch"], "c": "DB", "p": "260316", "g": [], "s": []}
 {"i": "2603.15424v1", "t": "A numerical framework for Newtonian-noise estimation at the Einstein Telescope: 2-D simulations beyond the plane-wave approximation", "a": ["Patrick Schillings", "Shi Yao", "Johannes Erdmann"], "c": "astro-ph", "p": "260316", "g": [], "s": []}
 {"i": "2603.15423v1", "t": "Invisible failures in human-AI interactions", "a": ["Christopher Potts", "Moritz Sudhof"], "c": "CL", "p": "260316", "g": [], "s": []}
@@ -2892,8 +2892,8 @@
 {"i": "2603.15232v1", "t": "Decomposing Probabilistic Scores: Reliability, Information Loss and Uncertainty", "a": ["Arthur Charpentier", "Agathe Fernandes-Machado"], "c": "LG", "p": "260316", "g": [], "s": []}
 {"i": "2603.15231v1", "t": "Electric Polarizability of Charged Pions from nHYP Four-Point Functions", "a": ["Benjamin Luke", "Sudip Shiwakoti", "Shayan Nadeem"], "c": "hep-lat", "p": "260316", "g": [], "s": []}
 {"i": "2603.15230v1", "t": "A Formal Physical Framework for the Origin of Life: Dissipation-Driven Selection of Evolving Replicators", "a": ["Shlomo Segal"], "c": "cond-mat", "p": "260316", "g": [], "s": []}
-{"i": "2603.15229v1", "t": "Squarefree powers of closed neighborhood ideals", "a": ["Marie Amalore Nambi", "Ayesha Asloob Qureshi"], "c": "math", "p": "260316", "g": [], "s": []}
 {"i": "2603.15228v1", "t": "HYDRA: Unifying Multi-modal Generation and Understanding via Representation-Harmonized Tokenization", "a": ["Xuerui Qiu", "Yutao Cui", "Guozhen Zhang"], "c": "CV", "p": "260316", "g": [], "s": []}
+{"i": "2603.15229v1", "t": "Squarefree powers of closed neighborhood ideals", "a": ["Marie Amalore Nambi", "Ayesha Asloob Qureshi"], "c": "math", "p": "260316", "g": [], "s": []}
 {"i": "2603.15226v1", "t": "SCAN: Sparse Circuit Anchor Interpretable Neuron for Lifelong Knowledge Editing", "a": ["Yuhuan Liu", "Haitian Zhong", "Xinyuan Xia"], "c": "AI", "p": "260316", "g": [], "s": []}
 {"i": "2603.15227v1", "t": "Bidirectional Chinese and English Passive Sentences Dataset for Machine Translation", "a": ["Xinyue Ma", "Pol Pastells", "Mireia Farrús"], "c": "CL", "p": "260316", "g": [], "s": []}
 {"i": "2603.15225v1", "t": "Nanoscale electronic variations in altermagnetic $α$-MnTe", "a": ["Zeyu Ma", "Yidi Wang", "Gal Tuvia"], "c": "cond-mat", "p": "260316", "g": [], "s": []}
@@ -2992,8 +2992,8 @@
 {"i": "2603.15132v1", "t": "WiT: Waypoint Diffusion Transformers via Trajectory Conflict Navigation", "a": ["Hainuo Wang", "Mingjia Li", "Xiaojie Guo"], "c": "CV", "p": "260316", "g": [], "s": []}
 {"i": "2603.15131v1", "t": "Low-light Image Enhancement with Retinex Decomposition in Latent Space", "a": ["Bolun Zheng", "Qingshan Lei", "Quan Chen"], "c": "CV", "p": "260316", "g": [], "s": []}
 {"i": "2603.15130v1", "t": "Indirect Question Answering in English, German and Bavarian: A Challenging Task for High- and Low-Resource Languages Alike", "a": ["Miriam Winkler", "Verena Blaschke", "Barbara Plank"], "c": "CL", "p": "260316", "g": [], "s": []}
-{"i": "2603.15129v1", "t": "Next-Frame Decoding for Ultra-Low-Bitrate Image Compression with Video Diffusion Priors", "a": ["Yunuo Chen", "Chuqin Zhou", "Jiangchuan Li"], "c": "CV", "p": "260316", "g": [], "s": []}
 {"i": "2603.15128v1", "t": "Graph Path Likelihood for Galaxy Formation on Layered Halo Graphs", "a": ["Daneng Yang"], "c": "astro-ph", "p": "260316", "g": [], "s": []}
+{"i": "2603.15129v1", "t": "Next-Frame Decoding for Ultra-Low-Bitrate Image Compression with Video Diffusion Priors", "a": ["Yunuo Chen", "Chuqin Zhou", "Jiangchuan Li"], "c": "CV", "p": "260316", "g": [], "s": []}
 {"i": "2603.15127v1", "t": "A Data-Driven Regional Model for Skillful Medium-Range Typhoon Prediction", "a": ["Zeyi Niu", "Wei Huang", "Sirong Huang"], "c": "physics", "p": "260316", "g": [], "s": []}
 {"i": "2603.15126v1", "t": "A Novel Camera-to-Robot Calibration Method for Vision-Based Floor Measurements", "a": ["Jan Andre Rudolph", "Dennis Haitz", "Markus Ulrich"], "c": "RO", "p": "260316", "g": [], "s": []}
 {"i": "2603.15125v1", "t": "From Storage to Steering: Memory Control Flow Attacks on LLM Agents", "a": ["Zhenlin Xu", "Xiaogang Zhu", "Yu Yao"], "c": "CR", "p": "260316", "g": [], "s": []}
@@ -3451,8 +3451,8 @@
 {"i": "2603.12266v1", "t": "MM-CondChain: A Programmatically Verified Benchmark for Visually Grounded Deep Compositional Reasoning", "a": ["Haozhan Shen", "Shilin Yan", "Hongwei Xue"], "c": "CV", "p": "260312", "g": [], "s": []}
 {"i": "2603.12265v1", "t": "OmniStream: Mastering Perception, Reconstruction and Action in Continuous Streams", "a": ["Yibin Yan", "Jilan Xu", "Shangzhe Di"], "c": "CV", "p": "260312", "g": [], "s": []}
 {"i": "2603.12264v1", "t": "GRADE: Benchmarking Discipline-Informed Reasoning in Image Editing", "a": ["Mingxin Liu", "Ziqian Fan", "Zhaokai Wang"], "c": "CV", "p": "260312", "g": [], "s": []}
-{"i": "2603.12263v1", "t": "$Ψ_0$: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation", "a": ["Songlin Wei", "Hongyi Jing", "Boqian Li"], "c": "RO", "p": "260312", "g": [], "s": []}
 {"i": "2603.12262v1", "t": "Video Streaming Thinking: VideoLLMs Can Watch and Think Simultaneously", "a": ["Yiran Guan", "Liang Yin", "Dingkang Liang"], "c": "CV", "p": "260312", "g": [], "s": []}
+{"i": "2603.12263v1", "t": "$Ψ_0$: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation", "a": ["Songlin Wei", "Hongyi Jing", "Boqian Li"], "c": "RO", "p": "260312", "g": [], "s": []}
 {"i": "2603.12261v1", "t": "The Latent Color Subspace: Emergent Order in High-Dimensional Chaos", "a": ["Mateusz Pach", "Jessica Bader", "Quentin Bouniot"], "c": "LG", "p": "260312", "g": [], "s": []}
 {"i": "2603.12260v1", "t": "HumDex:Humanoid Dexterous Manipulation Made Easy", "a": ["Liang Heng", "Yihe Tang", "Jiajun Xu"], "c": "RO", "p": "260312", "g": [], "s": []}
 {"i": "2603.12259v1", "t": "Emergent Anomalous Hall Effect from Surface States in the Altermagnet MnTe Thin Films", "a": ["Yufei Zhao", "Saswata Mandal", "Chao-Xing Liu"], "c": "cond-mat", "p": "260312", "g": [], "s": []}
@@ -3480,8 +3480,8 @@
 {"i": "2603.12238v1", "t": "SceneAssistant: A Visual Feedback Agent for Open-Vocabulary 3D Scene Generation", "a": ["Jun Luo", "Jiaxiang Tang", "Ruijie Lu"], "c": "CV", "p": "260312", "g": [], "s": []}
 {"i": "2603.12236v1", "t": "Onset of Ergodicity Across Scales on a Digital Quantum Processor", "a": ["Faisal Alam", "Marcos Crichigno", "Elizabeth Crosson"], "c": "quant-ph", "p": "260312", "g": [], "s": []}
 {"i": "2603.12235v1", "t": "Transition from Statistical to Hardware-Limited Scaling in Photonic Quantum State Reconstruction", "a": ["Attila Baumann", "Zsolt Kis", "János Koltai"], "c": "quant-ph", "p": "260312", "g": [], "s": []}
-{"i": "2603.12233v1", "t": "Permutation invariant multi-scale full quantum neural network wavefunction", "a": ["Pengzhen Cai", "Yubing Qian", "Li Deng"], "c": "physics", "p": "260312", "g": [], "s": []}
 {"i": "2603.12234v1", "t": "Thermalisation as Diffusion in Hilbert Space", "a": ["Aleksey Lunkin"], "c": "cond-mat", "p": "260312", "g": [], "s": []}
+{"i": "2603.12233v1", "t": "Permutation invariant multi-scale full quantum neural network wavefunction", "a": ["Pengzhen Cai", "Yubing Qian", "Li Deng"], "c": "physics", "p": "260312", "g": [], "s": []}
 {"i": "2603.12232v1", "t": "Incremental Neural Network Verification via Learned Conflicts", "a": ["Raya Elsaleh", "Liam Davis", "Haoze Wu"], "c": "cs", "p": "260312", "g": [], "s": []}
 {"i": "2603.12231v1", "t": "Temporal Straightening for Latent Planning", "a": ["Ying Wang", "Oumayma Bounou", "Gaoyue Zhou"], "c": "LG", "p": "260312", "g": [], "s": []}
 {"i": "2603.12230v1", "t": "Security Considerations for Artificial Intelligence Agents", "a": ["Ninghui Li", "Kaiyuan Zhang", "Kyle Polley"], "c": "LG", "p": "260312", "g": [], "s": []}
@@ -4026,8 +4026,8 @@
 {"i": "2603.11691v1", "t": "STAIRS-Former: Spatio-Temporal Attention with Interleaved Recursive Structure Transformer for Offline Multi-task Multi-agent Reinforcement Learning", "a": ["Jiwon Jeon", "Myungsik Cho", "Youngchul Sung"], "c": "AI", "p": "260312", "g": [], "s": []}
 {"i": "2603.11690v1", "t": "Shear-Coupled Grain Growth Statistics", "a": ["Caihao Qiu", "David J. Srolovitz", "Gregory S. Rohrer"], "c": "cond-mat", "p": "260312", "g": [], "s": []}
 {"i": "2603.11689v1", "t": "Explicit Logic Channel for Validation and Enhancement of MLLMs on Zero-Shot Tasks", "a": ["Mei Chee Leong", "Ying Gu", "Hui Li Tan"], "c": "AI", "p": "260312", "g": [], "s": []}
-{"i": "2603.11687v1", "t": "SemBench: A Universal Semantic Framework for LLM Evaluation", "a": ["Mikel Zubillaga", "Naiara Perez", "Oscar Sainz"], "c": "CL", "p": "260312", "g": [], "s": []}
 {"i": "2603.11688v1", "t": "Machine Learning of Topological Insulator and Anderson Insulator in One-Dimensional Extended Su-Schrieffer-Heeger Chain", "a": ["Zhekai Yin", "C. K. Ong"], "c": "cond-mat", "p": "260312", "g": [], "s": []}
+{"i": "2603.11687v1", "t": "SemBench: A Universal Semantic Framework for LLM Evaluation", "a": ["Mikel Zubillaga", "Naiara Perez", "Oscar Sainz"], "c": "CL", "p": "260312", "g": [], "s": []}
 {"i": "2603.11686v1", "t": "In the LLM era, Word Sense Induction remains unsolved", "a": ["Anna Mosolova", "Marie Candito", "Carlos Ramisch"], "c": "CL", "p": "260312", "g": [], "s": []}
 {"i": "2603.11685v1", "t": "On the Unit Teissier Distribution: Properties, Estimation Procedures and Applications", "a": ["Zuber Akhter", "Mohamed A. Abdelaziz", "M. Z. Anis"], "c": "stat", "p": "260312", "g": [], "s": []}
 {"i": "2603.11684v1", "t": "Scalable DNA Ternary Full Adder Enabled by a Competitive Blocking Circuit", "a": ["Enqiang Zhu", "Peize Qiu", "Xianhang Luo"], "c": "q-bio", "p": "260312", "g": [], "s": []}
@@ -4123,8 +4123,8 @@
 {"i": "2603.11594v1", "t": "Leveraging Large Language Models and Survival Analysis for Early Prediction of Chemotherapy Outcomes", "a": ["Muhammad Faisal Shahid", "Asad Afzal", "Abdullah Faiz"], "c": "AI", "p": "260312", "g": [], "s": []}
 {"i": "2603.11593v1", "t": "WeEdit: A Dataset, Benchmark and Glyph-Guided Framework for Text-centric Image Editing", "a": ["Hui Zhang", "Juntao Liu", "Zongkai Liu"], "c": "CV", "p": "260312", "g": [], "s": []}
 {"i": "2603.11592v1", "t": "Limit representation theory on some classes of representations of abelian groups", "a": ["Cheng Meng"], "c": "math", "p": "260312", "g": [], "s": []}
-{"i": "2603.11590v1", "t": "High-pressure phase stability and superconductivity in La-Zr-H hydrides", "a": ["Ijaz shahid", "Maxim A. Grebeniuk", "Jinbin Zhao"], "c": "cond-mat", "p": "260312", "g": [], "s": []}
 {"i": "2603.11591v1", "t": "Relaxed Newton's Method as a Family of Root-finding Methods: Dynamics and Convergence", "a": ["Soumen Pal"], "c": "math", "p": "260312", "g": [], "s": []}
+{"i": "2603.11590v1", "t": "High-pressure phase stability and superconductivity in La-Zr-H hydrides", "a": ["Ijaz shahid", "Maxim A. Grebeniuk", "Jinbin Zhao"], "c": "cond-mat", "p": "260312", "g": [], "s": []}
 {"i": "2603.11589v1", "t": "Toward Complex-Valued Neural Networks for Waveform Generation", "a": ["Hyung-Seok Oh", "Deok-Hyeon Cho", "Seung-Bin Kim"], "c": "SD", "p": "260312", "g": [], "s": []}
 {"i": "2603.11588v1", "t": "Radio Radiance Field: The New Frontier of Spatial Wireless Channel Representation", "a": ["Haijian Sun", "Feng Ye"], "c": "cs", "p": "260312", "g": [], "s": []}
 {"i": "2603.11587v1", "t": "Criticality-enhanced global frequency sensing with a monitored Kerr parametric oscillator via extended Kalman filter", "a": ["Cheng Zhang", "Mauro Cirio", "Xin-Qi Li"], "c": "quant-ph", "p": "260312", "g": [], "s": []}
@@ -4331,9 +4331,9 @@
 {"i": "2603.11047v1", "t": "LiTo: Surface Light Field Tokenization", "a": ["Jen-Hao Rick Chang", "Xiaoming Zhao", "Dorian Chan"], "c": "CV", "p": "260311", "g": [], "s": []}
 {"i": "2603.11048v1", "t": "COMIC: Agentic Sketch Comedy Generation", "a": ["Susung Hong", "Brian Curless", "Ira Kemelmacher-Shlizerman"], "c": "CV", "p": "260311", "g": [], "s": []}
 {"i": "2603.11046v1", "t": "On Utility Maximization under Multivariate Fake Stationary Affine Volterra Models", "a": ["Emmanuel Gnabeyeu"], "c": "math", "p": "260311", "g": [], "s": []}
-{"i": "2603.11044v1", "t": "Agentar-Fin-OCR", "a": ["Siyi Qian", "Xiongfei Bai", "Bingtao Fu"], "c": "CV", "p": "260311", "g": [], "s": []}
 {"i": "2603.11043v1", "t": "An asymptotically optimal bound for the concentration function of a sum of independent integer random variables", "a": ["Valentas Kurauskas"], "c": "math", "p": "260311", "g": [], "s": []}
 {"i": "2603.11045v1", "t": "Neural Field Thermal Tomography: A Differentiable Physics Framework for Non-Destructive Evaluation", "a": ["Tao Zhong", "Yixun Hu", "Dongzhe Zheng"], "c": "LG", "p": "260311", "g": [], "s": []}
+{"i": "2603.11044v1", "t": "Agentar-Fin-OCR", "a": ["Siyi Qian", "Xiongfei Bai", "Bingtao Fu"], "c": "CV", "p": "260311", "g": [], "s": []}
 {"i": "2603.11042v1", "t": "V2M-Zero: Zero-Pair Time-Aligned Video-to-Music Generation", "a": ["Yan-Bo Lin", "Jonah Casebeer", "Long Mai"], "c": "CV", "p": "260311", "g": [], "s": []}
 {"i": "2603.11041v1", "t": "DynVLA: Learning World Dynamics for Action Reasoning in Autonomous Driving", "a": ["Shuyao Shang", "Bing Zhan", "Yunfei Yan"], "c": "CV", "p": "260311", "g": [], "s": []}
 {"i": "2603.11040v1", "t": "On positive definite thresholding of correlation matrices", "a": ["Sujit Sakharam Damase", "James Eldred Pascoe"], "c": "math", "p": "260311", "g": [], "s": []}
@@ -5201,8 +5201,8 @@
 {"i": "2603.09870v1", "t": "Crosstalk in Multi-Qubit Fluxonium Architectures with Transmon Couplers", "a": ["Martijn F. S. Zwanenburg", "Christian Kraglund Andersen"], "c": "quant-ph", "p": "260310", "g": [], "s": []}
 {"i": "2603.09869v1", "t": "Linear Code Equivalence via Plücker Coordinates", "a": ["Gessica Alecci", "Giuseppe D'Alconzo"], "c": "math", "p": "260310", "g": [], "s": []}
 {"i": "2603.09868v1", "t": "CarbonBench: A Global Benchmark for Upscaling of Carbon Fluxes Using Zero-Shot Learning", "a": ["Aleksei Rozanov", "Arvind Renganathan", "Yimeng Zhang"], "c": "LG", "p": "260310", "g": [], "s": []}
-{"i": "2603.09866v1", "t": "FEAST: a NIRSpec/MOS survey of emerging young star clusters in NGC 628", "a": ["Helena Faustino Vieira", "Angela Adamo", "Neville Shane"], "c": "astro-ph", "p": "260310", "g": [], "s": []}
 {"i": "2603.09867v1", "t": "Mass regulates the emerging timescale of young star clusters", "a": ["Alex Pedrini", "Angela Adamo", "Daniela Calzetti"], "c": "astro-ph", "p": "260310", "g": [], "s": []}
+{"i": "2603.09866v1", "t": "FEAST: a NIRSpec/MOS survey of emerging young star clusters in NGC 628", "a": ["Helena Faustino Vieira", "Angela Adamo", "Neville Shane"], "c": "astro-ph", "p": "260310", "g": [], "s": []}
 {"i": "2603.09865v1", "t": "GAST: Gradient-aligned Sparse Tuning of Large Language Models with Data-layer Selection", "a": ["Kai Yao", "Zhenghan Song", "Kaixin Wu"], "c": "LG", "p": "260310", "g": [], "s": []}
 {"i": "2603.09864v1", "t": "Sparse Cuts for the Positive Semidefinite Cone", "a": ["Oktay Günlük", "Paul Jünger", "Jeff Linderoth"], "c": "math", "p": "260310", "g": [], "s": []}
 {"i": "2603.09863v1", "t": "A systematic study of single molecule metallocenes with 4d and 3d transition metal atoms", "a": ["Daniela Herrera-Molina", "Kushantha P. K. Withanage", "Jesus N. Pedroza-Montero"], "c": "cond-mat", "p": "260310", "g": [], "s": []}
@@ -5248,8 +5248,8 @@
 {"i": "2603.09823v1", "t": "Introduction to Spectroscopy of Cr4+:YAG Transparent Ceramics", "a": ["Mykhailo Chaika"], "c": "cond-mat", "p": "260310", "g": [], "s": []}
 {"i": "2603.09822v1", "t": "Layered Dielectric Characterization of Human Skin in the Sub-Terahertz and Terahertz Frequency Ranges", "a": ["Silvia Mura", "Elisabetta Marini", "Maurizio Magarini"], "c": "cs", "p": "260310", "g": [], "s": []}
 {"i": "2603.09821v1", "t": "One-Eval: An Agentic System for Automated and Traceable LLM Evaluation", "a": ["Chengyu Shen", "Yanheng Hou", "Minghui Pan"], "c": "CL", "p": "260310", "g": [], "s": []}
-{"i": "2603.09820v1", "t": "EmoSURA: Towards Accurate Evaluation of Detailed and Long-Context Emotional Speech Captions", "a": ["Xin Jing", "Andreas Triantafyllopoulos", "Jiadong Wang"], "c": "SD", "p": "260310", "g": [], "s": []}
 {"i": "2603.09819v1", "t": "ConfCtrl: Enabling Precise Camera Control in Video Diffusion via Confidence-Aware Interpolation", "a": ["Liudi Yang", "George Eskandar", "Fengyi Shen"], "c": "CV", "p": "260310", "g": [], "s": []}
+{"i": "2603.09820v1", "t": "EmoSURA: Towards Accurate Evaluation of Detailed and Long-Context Emotional Speech Captions", "a": ["Xin Jing", "Andreas Triantafyllopoulos", "Jiadong Wang"], "c": "SD", "p": "260310", "g": [], "s": []}
 {"i": "2603.09818v1", "t": "An Introduction to the Foundations and Interpretations of Quantum Mechanics", "a": ["Theodore McKeever", "Ahsan Nazir"], "c": "quant-ph", "p": "260310", "g": [], "s": []}
 {"i": "2603.09817v1", "t": "How Heavy Can Moduli Be?", "a": ["Mehrdad Mirbabayi", "Giovanni Villadoro"], "c": "hep-th", "p": "260310", "g": [], "s": []}
 {"i": "2603.09816v1", "t": "A Swampland-modified Hod bound for charged black holes with exotic matter", "a": ["S. Saoud", "M. A Rbah", "R. Sammani"], "c": "hep-th", "p": "260310", "g": [], "s": []}
@@ -5263,8 +5263,8 @@
 {"i": "2603.09808v1", "t": "A Hybrid Model-Assisted Approach for Path Loss Prediction in Suburban Scenarios", "a": ["Chenlong Wang", "Bo Ai", "Ruiming Chen"], "c": "eess", "p": "260310", "g": [], "s": []}
 {"i": "2603.09807v1", "t": "Experimental Characterization of Biological Tissue Dielectric Properties through THz Time-Domain Spectroscopy", "a": ["Elisabetta Marini", "Silvia Mura", "Marco Hernandez"], "c": "physics", "p": "260310", "g": [], "s": []}
 {"i": "2603.09806v1", "t": "Expressive Power of Property Graph Constraint Languages", "a": ["Stefania Dumbrava", "Nadime Francis", "Victor Marsault"], "c": "DB", "p": "260310", "g": [], "s": []}
-{"i": "2603.09804v1", "t": "Efficient method for calculation of low-temperature phase boundaries", "a": ["Lucas Svensson", "Babak Sadigh", "Christine Wu"], "c": "cond-mat", "p": "260310", "g": [], "s": []}
 {"i": "2603.09805v1", "t": "POLAR-II: modeling star formation history of galaxies on the 21-cm signal from Epoch of Reionization", "a": ["Qing-Bo Ma", "Raghunath Ghara", "Benedetta Ciardi"], "c": "astro-ph", "p": "260310", "g": [], "s": []}
+{"i": "2603.09804v1", "t": "Efficient method for calculation of low-temperature phase boundaries", "a": ["Lucas Svensson", "Babak Sadigh", "Christine Wu"], "c": "cond-mat", "p": "260310", "g": [], "s": []}
 {"i": "2603.09803v1", "t": "Good Reasoning Makes Good Demonstrations: Implicit Reasoning Quality Supervision via In-Context Reinforcement Learning", "a": ["Tiehua Mei", "Minxuan Lv", "Leiyu Pan"], "c": "LG", "p": "260310", "g": [], "s": []}
 {"i": "2603.09802v1", "t": "A new approach for measurement of Cr4+ concentration in Cr4+:YAG transparent materials: some conceptual difficulties and possible solutions", "a": ["M. Chaika", "R. Lisiecki", "K. Lesniewska-Matys"], "c": "cond-mat", "p": "260310", "g": [], "s": []}
 {"i": "2603.09801v1", "t": "Network modelling of yield-stress fluid flow in randomly disordered porous media", "a": ["Cláudio P. Fonte", "Elliott Sutton", "Kohei Ohie"], "c": "physics", "p": "260310", "g": [], "s": []}
@@ -5457,8 +5457,8 @@
 {"i": "2603.09614v1", "t": "Magic labelling enumeration on pseudo-line graphs and pseudo-cycle graphs", "a": ["Guoce Xin", "Yueming Zhong", "Yangbiao Zhou"], "c": "math", "p": "260310", "g": [], "s": []}
 {"i": "2603.09613v1", "t": "A saccade-inspired approach to image classification using visiontransformer attention maps", "a": ["Matthis Dallain", "Laurent Rodriguez", "Laurent Udo Perrinet"], "c": "CV", "p": "260310", "g": [], "s": []}
 {"i": "2603.09612v1", "t": "Nonlinear Hall Effect in Metal-Organic Frameworks", "a": ["Sarbajit Mazumdar", "Jagadish N S", "Awadhesh Narayan"], "c": "cond-mat", "p": "260310", "g": [], "s": []}
-{"i": "2603.09611v1", "t": "ParTY: Part-Guidance for Expressive Text-to-Motion Synthesis", "a": ["KunHo Heo", "SuYeon Kim", "Yonghyun Gwon"], "c": "CV", "p": "260310", "g": [], "s": []}
 {"i": "2603.09610v1", "t": "Asymptotic behavior of the solution with positive temperature in nonlinear 3D thermoelasticity", "a": ["Chuang Ma", "Bin Guo"], "c": "math", "p": "260310", "g": [], "s": []}
+{"i": "2603.09611v1", "t": "ParTY: Part-Guidance for Expressive Text-to-Motion Synthesis", "a": ["KunHo Heo", "SuYeon Kim", "Yonghyun Gwon"], "c": "CV", "p": "260310", "g": [], "s": []}
 {"i": "2603.09609v1", "t": "Analytic treatment of a polaron in a nonparabolic conduction band", "a": ["S. N. Klimin", "J. Tempere", "M. Houtput"], "c": "cond-mat", "p": "260310", "g": [], "s": []}
 {"i": "2603.09608v1", "t": "The period clustering of magnetars and X-ray dim isolated neutron stars", "a": ["Kazım Yavuz Ekşi"], "c": "astro-ph", "p": "260310", "g": [], "s": []}
 {"i": "2603.09607v1", "t": "Swirl flow in microchannels: patterned slip walls enhance heat transport", "a": ["L. G. Chej", "M. F. Carusela", "A. G. Monastra"], "c": "physics", "p": "260310", "g": [], "s": []}
@@ -5490,8 +5490,8 @@
 {"i": "2603.09581v1", "t": "Towards Understanding Adam Convergence on Highly Degenerate Polynomials", "a": ["Zhiwei Bai", "Jiajie Zhao", "Zhangchen Zhou"], "c": "LG", "p": "260310", "g": [], "s": []}
 {"i": "2603.09580v1", "t": "ZX-Flow: A Flexible Criterion for Deterministic Computation with ZX-Diagrams", "a": ["Aleks Kissinger", "John van de Wetering"], "c": "quant-ph", "p": "260310", "g": [], "s": []}
 {"i": "2603.09579v1", "t": "Low-Rank Cyclostationarity Predictive Routing Is Almost as Good as Real-Time Data-based Routing", "a": ["Oriel-Singer", "Ilai-Bistritz", "Giseung-Park"], "c": "eess", "p": "260310", "g": [], "s": []}
-{"i": "2603.09577v1", "t": "Randomized Distributed Function Computation (RDFC): Ultra-Efficient Semantic Communication Applications to Privacy", "a": ["Onur Günlü"], "c": "cs", "p": "260310", "g": [], "s": []}
 {"i": "2603.09578v1", "t": "Magneto-optical Response of 5-SL MnBi$_2$Te$_4$ in Spin-Flip States", "a": ["Shahid Sattar", "Roman Stepanov", "A. H. MacDonald"], "c": "cond-mat", "p": "260310", "g": [], "s": []}
+{"i": "2603.09577v1", "t": "Randomized Distributed Function Computation (RDFC): Ultra-Efficient Semantic Communication Applications to Privacy", "a": ["Onur Günlü"], "c": "cs", "p": "260310", "g": [], "s": []}
 {"i": "2603.09576v1", "t": "Routing without Forgetting", "a": ["Alessio Masano", "Giovanni Bellitto", "Dipam Goswani"], "c": "LG", "p": "260310", "g": [], "s": []}
 {"i": "2603.09575v1", "t": "On Some Bi-Cayley Graphs over Cyclic Groups of Order $p^2 q^2$ and Related Extensions", "a": ["Iqbal Atmaja", "Yeni Susanti", "Ahmad Erfanian"], "c": "math", "p": "260310", "g": [], "s": []}
 {"i": "2603.09574v1", "t": "SCDP: Learning Humanoid Locomotion from Partial Observations via Mixed-Observation Distillation", "a": ["Milo Carroll", "Tianhu Peng", "Lingfan Bao"], "c": "RO", "p": "260310", "g": [], "s": []}
@@ -5635,8 +5635,8 @@
 {"i": "2603.09436v1", "t": "From Weighting to Modeling: A Nonparametric Estimator for Off-Policy Evaluation", "a": ["Rong J. B. Zhu"], "c": "LG", "p": "260310", "g": [], "s": []}
 {"i": "2603.09435v1", "t": "AI Act Evaluation Benchmark: An Open, Transparent, and Reproducible Evaluation Dataset for NLP and RAG Systems", "a": ["Athanasios Davvetas", "Michael Papademas", "Xenia Ziouvelou"], "c": "AI", "p": "260310", "g": [], "s": []}
 {"i": "2603.09434v1", "t": "Common Sense vs. Morality: The Curious Case of Narrative Focus Bias in LLMs", "a": ["Saugata Purkayastha", "Pranav Kushare", "Pragya Paramita Pal"], "c": "CL", "p": "260310", "g": [], "s": []}
-{"i": "2603.09433v1", "t": "A Critical Pair Enumeration Algorithm for String Diagram Rewriting", "a": ["Anna Matsui", "Innocent Obi", "Guillaume Sabbagh"], "c": "math", "p": "260310", "g": [], "s": []}
 {"i": "2603.09432v1", "t": "Modeling resonance characteristics of the Chang'e-7 lander modulated by solar panel rotation under lunar south-pole thermal environment", "a": ["Lei Zhang", "Jinhai Zhang"], "c": "physics", "p": "260310", "g": [], "s": []}
+{"i": "2603.09433v1", "t": "A Critical Pair Enumeration Algorithm for String Diagram Rewriting", "a": ["Anna Matsui", "Innocent Obi", "Guillaume Sabbagh"], "c": "math", "p": "260310", "g": [], "s": []}
 {"i": "2603.09431v1", "t": "First Steps towards Categorical Algebraic Artificial Chemistry", "a": ["Joe Pratt-Johns", "Toby St. Clere Smithe", "Chris Guiver"], "c": "cs", "p": "260310", "g": [], "s": []}
 {"i": "2603.09430v1", "t": "Composable Uncertainty in Symmetric Monoidal Categories for Design Problems", "a": ["Marius Furter", "Yujun Huang", "Gioele Zardini"], "c": "math", "p": "260310", "g": [], "s": []}
 {"i": "2603.09429v1", "t": "Convex Duality Made Difficult", "a": ["Eigil Fjeldgren Rischel"], "c": "math", "p": "260310", "g": [], "s": []}
@@ -5717,8 +5717,8 @@
 {"i": "2603.09354v1", "t": "How to formulate the $\\mathbb{Z}_8$ topological invariant of Majorana fermion on the lattice", "a": ["Sho Araki", "Hidenori Fukaya", "Tetsuya Onogi"], "c": "hep-lat", "p": "260310", "g": [], "s": []}
 {"i": "2603.09353v1", "t": "Interactive 3D visualization of surface roughness predictions in additive manufacturing: A data-driven framework", "a": ["Engin Deniz Erkan", "Elif Surer", "Ulas Yaman"], "c": "LG", "p": "260310", "g": [], "s": []}
 {"i": "2603.09352v1", "t": "Elementary asymptotic approach to the Landau-Zener problem", "a": ["Eric P. Glasbrenner", "Wolfgang P. Schleich"], "c": "quant-ph", "p": "260310", "g": [], "s": []}
-{"i": "2603.09350v1", "t": "High-Order Matrix Numerov for Singular Potentials", "a": ["Nir Barnea"], "c": "physics", "p": "260310", "g": [], "s": []}
 {"i": "2603.09351v1", "t": "From planetesimals to planets with N-body simulations in the giant-planet formation region", "a": ["Sebastian Lorek", "Michiel Lambrechts"], "c": "astro-ph", "p": "260310", "g": [], "s": []}
+{"i": "2603.09350v1", "t": "High-Order Matrix Numerov for Singular Potentials", "a": ["Nir Barnea"], "c": "physics", "p": "260310", "g": [], "s": []}
 {"i": "2603.09349v1", "t": "TA-GGAD: Testing-time Adaptive Graph Model for Generalist Graph Anomaly Detection", "a": ["Xiong Zhang", "Hong Peng", "Changlong Fu"], "c": "LG", "p": "260310", "g": [], "s": []}
 {"i": "2603.09348v1", "t": "Robust Provably Secure Image Steganography via Latent Iterative Optimization", "a": ["Yanan Li", "Zixuan Wang", "Qiyang Xiao"], "c": "CR", "p": "260310", "g": [], "s": []}
 {"i": "2603.09347v1", "t": "The Virtuous Cycle: AI-Powered Vector Search and Vector Search-Augmented AI", "a": ["Jiuqi Wei", "Quanqing Xu", "Chuanhui Yang"], "c": "DB", "p": "260310", "g": [], "s": []}
@@ -5852,8 +5852,8 @@
 {"i": "2603.09219v1", "t": "AlgoXpert Alpha Research Framework. A Rigorous IS WFA OOS Protocol for Mitigating Overfitting in Quantitative Strategies", "a": ["The Anh Pham", "Bao Chan Nguyen", "Nguyet Nguyen Thi"], "c": "q-fin", "p": "260310", "g": [], "s": []}
 {"i": "2603.09218v1", "t": "Embodied Human Simulation for Quantitative Design and Analysis of Interactive Robotics", "a": ["Chenhui Zuo", "Jinhao Xu", "Michael Qian Vergnolle"], "c": "RO", "p": "260310", "g": [], "s": []}
 {"i": "2603.09217v1", "t": "TubeMLLM: A Foundation Model for Topology Knowledge Exploration in Vessel-like Anatomy", "a": ["Yaoyu Liu", "Minghui Zhang", "Xin You"], "c": "CV", "p": "260310", "g": [], "s": []}
-{"i": "2603.09216v1", "t": "PIM-SHERPA: Software Method for On-device LLM Inference by Resolving PIM Memory Attribute and Layout Inconsistencies", "a": ["Sunjung Lee", "Sanghoon Cha", "Hyeonsu Kim"], "c": "cs", "p": "260310", "g": [], "s": []}
 {"i": "2603.09215v1", "t": "SPAR-K: Scheduled Periodic Alternating Early Exit for Spoken Language Models", "a": ["Hsiao-Ying Huang", "Cheng-Han Chiang", "Hung-yi Lee"], "c": "CL", "p": "260310", "g": [], "s": []}
+{"i": "2603.09216v1", "t": "PIM-SHERPA: Software Method for On-device LLM Inference by Resolving PIM Memory Attribute and Layout Inconsistencies", "a": ["Sunjung Lee", "Sanghoon Cha", "Hyeonsu Kim"], "c": "cs", "p": "260310", "g": [], "s": []}
 {"i": "2603.09214v1", "t": "PrivPRISM: Automatically Detecting Discrepancies Between Google Play Data Safety Declarations and Developer Privacy Policies", "a": ["Bhanuka Silva", "Dishanika Denipitiyage", "Anirban Mahanti"], "c": "AI", "p": "260310", "g": [], "s": []}
 {"i": "2603.09213v1", "t": "Geometry-Aware Metric Learning for Cross-Lingual Few-Shot Sign Language Recognition on Static Hand Keypoints", "a": ["Chayanin Chamachot", "Kanokphan Lertniponphan"], "c": "CV", "p": "260310", "g": [], "s": []}
 {"i": "2603.09212v1", "t": "Acoustic and Semantic Modeling of Emotion in Spoken Language", "a": ["Soumya Dutta"], "c": "eess", "p": "260310", "g": [], "s": []}
@@ -5997,8 +5997,8 @@
 {"i": "2603.09074v1", "t": "Spectral Indicators of Piezomagnetically Induced Symmetry Breaking in Altermagnets", "a": ["N. Sasabe", "H. Koizumi", "Y. Ishii"], "c": "cond-mat", "p": "260310", "g": [], "s": []}
 {"i": "2603.09073v1", "t": "High-Slip-Ratio Control for Peak Tire-Road Friction Estimation Using Automated Vehicles", "a": ["Zhaohui Liang", "Hang Zhou", "Heye Huanh"], "c": "RO", "p": "260310", "g": [], "s": []}
 {"i": "2603.09072v1", "t": "A Text-Native Interface for Generative Video Authoring", "a": ["Xingyu Bruce Liu", "Mira Dontcheva", "Dingzeyu Li"], "c": "HC", "p": "260310", "g": [], "s": []}
-{"i": "2603.09070v1", "t": "3D UAV Trajectory Estimation and Classification from Internet Videos via Language Model", "a": ["Haoxiang Lei", "Daotong Wang", "Shenghai Yuan"], "c": "RO", "p": "260310", "g": [], "s": []}
 {"i": "2603.09071v1", "t": "Toda-like Hamiltonian as a probe for quantized prey-predator dynamics", "a": ["Alex E. Bernardini", "Orfeu Bertolami"], "c": "quant-ph", "p": "260310", "g": [], "s": []}
+{"i": "2603.09070v1", "t": "3D UAV Trajectory Estimation and Classification from Internet Videos via Language Model", "a": ["Haoxiang Lei", "Daotong Wang", "Shenghai Yuan"], "c": "RO", "p": "260310", "g": [], "s": []}
 {"i": "2603.09069v1", "t": "Intelligent Spatial Estimation for Fire Hazards in Engineering Sites: An Enhanced YOLOv8-Powered Proximity Analysis Framework", "a": ["Ammar K. AlMhdawi", "Nonso Nnamoko", "Alaa Mashan Ubaid"], "c": "CV", "p": "260310", "g": [], "s": []}
 {"i": "2603.09068v1", "t": "The Influence of Clouds and Deuterium-Burning on Brown Dwarf Habitable Zones", "a": ["Kayla J. Smith", "Mark S. Marley"], "c": "astro-ph", "p": "260310", "g": [], "s": []}
 {"i": "2603.09067v1", "t": "Verifying Good Regulator Conditions for Hypergraph Observers: Natural Gradient Learning from Causal Invariance via Established Theorems", "a": ["Max Zhuravlev"], "c": "stat", "p": "260310", "g": [], "s": []}
@@ -6046,8 +6046,8 @@
 {"i": "2603.08706v1", "t": "Agentic Critical Training", "a": ["Weize Liu", "Minghui Liu", "Sy-Tuyen Ho"], "c": "AI", "p": "260309", "g": [], "s": []}
 {"i": "2603.08705v1", "t": "A proof of conservation laws in gravitational scattering: tails and breaking of peeling", "a": ["Geoffrey Compère", "Sébastien Robert"], "c": "hep-th", "p": "260309", "g": [], "s": []}
 {"i": "2603.08704v1", "t": "Evaluating Financial Intelligence in Large Language Models: Benchmarking SuperInvesting AI with LLM Engines", "a": ["Akshay Gulati", "Kanha Singhania", "Tushar Banga"], "c": "AI", "p": "260309", "g": [], "s": []}
-{"i": "2603.08703v1", "t": "HiAR: Efficient Autoregressive Long Video Generation via Hierarchical Denoising", "a": ["Kai Zou", "Dian Zheng", "Hongbo Liu"], "c": "CV", "p": "260309", "g": [], "s": []}
 {"i": "2603.08702v1", "t": "Approximate QCAs in one dimension using approximate algebras", "a": ["Daniel Ranard", "Michael Walter", "Freek Witteveen"], "c": "quant-ph", "p": "260309", "g": [], "s": []}
+{"i": "2603.08703v1", "t": "HiAR: Efficient Autoregressive Long Video Generation via Hierarchical Denoising", "a": ["Kai Zou", "Dian Zheng", "Hongbo Liu"], "c": "CV", "p": "260309", "g": [], "s": []}
 {"i": "2603.08701v1", "t": "Very High Energy Gamma Rays from Ultra Fast Outflows", "a": ["B. Le Nagat Neher", "E. Peretti", "P. Cristofari"], "c": "astro-ph", "p": "260309", "g": [], "s": []}
 {"i": "2603.08700v1", "t": "Learning Functions of Halfspaces", "a": ["Josh Alman", "Shyamal Patel", "Rocco A. Servedio"], "c": "DS", "p": "260309", "g": [], "s": []}
 {"i": "2603.08699v1", "t": "Four negations and the spectral presheaf", "a": ["Benjamin Engel", "Ryshard-Pavel Kostecki"], "c": "math", "p": "260309", "g": [], "s": []}
@@ -6585,8 +6585,8 @@
 {"i": "2603.08167v1", "t": "SiPM non-linearity studies in beam tests with scintillating crystals", "a": ["Zhiyu Zhao", "Dejing Du", "Shu Li"], "c": "physics", "p": "260309", "g": [], "s": []}
 {"i": "2603.08166v1", "t": "RexDrug: Reliable Multi-Drug Combination Extraction through Reasoning-Enhanced LLMs", "a": ["Zhijun Wang", "Ling Luo", "Dinghao Pan"], "c": "CL", "p": "260309", "g": [], "s": []}
 {"i": "2603.08165v1", "t": "An explainable hybrid deep learning-enabled intelligent fault detection and diagnosis approach for automotive software systems validation", "a": ["Mohammad Abboush", "Ehab Ghannoum", "Andreas Rausch"], "c": "SE", "p": "260309", "g": [], "s": []}
-{"i": "2603.08164v1", "t": "The Differential Effects of Agreeableness and Extraversion on Older Adults' Perceptions of Conversational AI Explanations in Assistive Settings", "a": ["Niharika Mathur", "Hasibur Rahman", "Smit Desai"], "c": "HC", "p": "260309", "g": [], "s": []}
 {"i": "2603.08163v1", "t": "Covenant-72B: Pre-Training a 72B LLM with Trustless Peers Over-the-Internet", "a": ["Joel Lidin", "Amir Sarfi", "Erfan Miahi"], "c": "cs", "p": "260309", "g": [], "s": []}
+{"i": "2603.08164v1", "t": "The Differential Effects of Agreeableness and Extraversion on Older Adults' Perceptions of Conversational AI Explanations in Assistive Settings", "a": ["Niharika Mathur", "Hasibur Rahman", "Smit Desai"], "c": "HC", "p": "260309", "g": [], "s": []}
 {"i": "2603.08162v1", "t": "Unimode material based low-frequency underwater acoustic isolation", "a": ["Yu Wei", "Binghao Zhao", "Fen Du"], "c": "physics", "p": "260309", "g": [], "s": []}
 {"i": "2603.08161v1", "t": "Unexpected Planar Dislocation Boundary Formation in FCC Metals Captured by Dark-Field X-ray Microscopy and Continuum Dislocation Dynamics", "a": ["Adam André William Cretton", "Khaled SharafEldin", "Axel Henningsson"], "c": "cond-mat", "p": "260309", "g": [], "s": []}
 {"i": "2603.08160v1", "t": "Triplet-Pair Character of the $2^1A_g$ Dark State of Polyenes", "a": ["Alexandru G. Ichert", "William Barford"], "c": "physics", "p": "260309", "g": [], "s": []}
@@ -6706,8 +6706,8 @@
 {"i": "2603.08046v1", "t": "WhispEar: A Bi-directional Framework for Scaling Whispered Speech Conversion via Pseudo-Parallel Whisper Generation", "a": ["Zihao Fang", "Yingda Shen", "Zifan Guan"], "c": "SD", "p": "260309", "g": [], "s": []}
 {"i": "2603.08045v1", "t": "Trajectory Tracking Control Design for Autonomous Helicopters with Guaranteed Error Bounds", "a": ["Philipp Schitz", "Johann C. Dauer", "Paolo Mercorelli"], "c": "eess", "p": "260309", "g": [], "s": []}
 {"i": "2603.08044v1", "t": "Percolation on multifractal, scale-free weighted planar stochastic porous lattice", "a": ["Proshanto Kumar", "Md. Kamrul Hassan"], "c": "cond-mat", "p": "260309", "g": [], "s": []}
-{"i": "2603.08043v1", "t": "Step Automata", "a": ["Yong Wang"], "c": "cs", "p": "260309", "g": [], "s": []}
 {"i": "2603.08042v1", "t": "Asymptotic Analysis of Discrete-Time Hawkes Process", "a": ["Utpal Jyoti Deba Sarma", "Dharmaraja Selvamuthu"], "c": "math", "p": "260309", "g": [], "s": []}
+{"i": "2603.08043v1", "t": "Step Automata", "a": ["Yong Wang"], "c": "cs", "p": "260309", "g": [], "s": []}
 {"i": "2603.08041v1", "t": "A generalization of Kadell's orthogonality ex-conjecture", "a": ["Zihao Huang", "Wenlong Jiang", "Yue Zhou"], "c": "math", "p": "260309", "g": [], "s": []}
 {"i": "2603.08040v1", "t": "Interlayer Error Calibration for Stacked Intelligent Metasurfaces:Modeling, Algorithms, and Future Perspectives", "a": ["Xing Jia", "Hao Liu", "Haoxian Niu"], "c": "eess", "p": "260309", "g": [], "s": []}
 {"i": "2603.08039v1", "t": "Higher operad structure for Fukaya categories", "a": ["Hang Yuan"], "c": "math", "p": "260309", "g": [], "s": []}
@@ -6801,100 +6801,3 @@
 {"i": "2603.07951v1", "t": "Threshold Temperature for Neutron-Star Emergence in a Gravitational Thermodynamic Framework", "a": ["Wen-Xiang Chen"], "c": "gr-qc", "p": "260309", "g": [], "s": []}
 {"i": "2603.07950v1", "t": "Decomposition-Driven Multi-Table Retrieval and Reasoning for Numerical Question Answering", "a": ["Feng Luo", "Hai Lan", "Hui Luo"], "c": "DB", "p": "260309", "g": [], "s": []}
 {"i": "2603.07949v1", "t": "RAPID: Redundancy-Aware and Compatibility-Optimal Edge-Cloud Partitioned Inference for Diverse VLA models", "a": ["Zihao Zheng", "Sicheng Tian", "Hangyu Cao"], "c": "cs", "p": "260309", "g": [], "s": []}
-{"i": "2603.07948v1", "t": "The Li-Chao Tree: Algorithm Specification and Analysis", "a": ["Chao Li"], "c": "DS", "p": "260309", "g": [], "s": []}
-{"i": "2603.07947v1", "t": "Lattice: A Post-Quantum Settlement Layer", "a": ["David Alejandro Trejo Pizzo"], "c": "quant-ph", "p": "260309", "g": [], "s": []}
-{"i": "2603.07946v1", "t": "ELLMob: Event-Driven Human Mobility Generation with Self-Aligned LLM Framework", "a": ["Yusong Wang", "Chuang Yang", "Jiawei Wang"], "c": "LG", "p": "260309", "g": [], "s": []}
-{"i": "2603.07945v1", "t": "Contravariantly infinite resolving subcategories", "a": ["Gen Tanigawa"], "c": "math", "p": "260309", "g": [], "s": []}
-{"i": "2603.07944v1", "t": "Fine Structure and Formation Mechanism of a Sunspot Bipolar Light Bridge in NOAA AR 13663", "a": ["Fangfang Qiao", "Hao Li", "Jiasheng Wang"], "c": "astro-ph", "p": "260309", "g": [], "s": []}
-{"i": "2603.07943v1", "t": "ConnChecker: Automated Root-Cause Analysis for Formal Connectivity Check via Graph", "a": ["Do Ngoc Tiep", "Nguyen Linh Anh", "Luu Danh Minh"], "c": "cs", "p": "260309", "g": [], "s": []}
-{"i": "2603.07942v1", "t": "Visualization of Multi-Qubit Pure States with Separation of Local and Nonlocal Degrees of Freedom", "a": ["Satoru Shoji"], "c": "quant-ph", "p": "260309", "g": [], "s": []}
-{"i": "2603.07941v1", "t": "Terahertz-nanoscale visualization of the microscopic spin-charge architecture of colossal magnetoresistive switching", "a": ["Samuel Haeuser", "Randall K. Chan", "Richard H. J. Kim"], "c": "cond-mat", "p": "260309", "g": [], "s": []}
-{"i": "2603.07940v1", "t": "AI Agents, Language, Deep Learning and the Next Revolution in Science", "a": ["Ke Li", "Beijiang Liu", "Bruce Mellado"], "c": "hep-ex", "p": "260309", "g": [], "s": []}
-{"i": "2603.07939v1", "t": "Unified Structural-Hydrodynamic Modeling of Underwater Underactuated Mechanisms and Soft Robots", "a": ["Chenrui Zhang", "Yiyuan Zhang", "Yunfei Ye"], "c": "RO", "p": "260309", "g": [], "s": []}
-{"i": "2603.07938v1", "t": "Probing Lorentz symmetry violation via the Casimir effect in rectangular cavities", "a": ["M. B. Cruz", "E. R. Bezerra de Mello", "A. Martín-Ruiz"], "c": "hep-th", "p": "260309", "g": [], "s": []}
-{"i": "2603.07937v1", "t": "$L^3$:Scene-agnostic Visual Localization in the Wild", "a": ["Yu Zhang", "Muhua Zhu", "Yifei Xue"], "c": "CV", "p": "260309", "g": [], "s": []}
-{"i": "2603.07936v1", "t": "Text to Automata Diagrams: Comparing TikZ Code Generation with Direct Image Synthesis", "a": ["Ethan Young", "Zichun Wang", "Aiden Taylor"], "c": "CV", "p": "260309", "g": [], "s": []}
-{"i": "2603.07935v1", "t": "Unsupervised Domain Adaptation for Audio Deepfake Detection with Modular Statistical Transformations", "a": ["Urawee Thani", "Gagandeep Singh", "Priyanka Singh"], "c": "SD", "p": "260309", "g": [], "s": []}
-{"i": "2603.07934v1", "t": "A note on small cap square function and decoupling estimates for the parabola", "a": ["Jongchon Kim", "Liang Wang", "Chun Keung Yeung"], "c": "math", "p": "260309", "g": [], "s": []}
-{"i": "2603.07933v1", "t": "Condition-Triggered Cryptographic Asset Control via Dormant Authorization Paths", "a": ["Jian Sheng Wang"], "c": "CR", "p": "260309", "g": [], "s": []}
-{"i": "2603.07932v1", "t": "Hard/Soft NLoS Detection via Combinatorial Data Augmentation for 6G Positioning", "a": ["Sang-Hyeok Kim", "Seung Min Yu", "Jihong Park"], "c": "cs", "p": "260309", "g": [], "s": []}
-{"i": "2603.07931v1", "t": "BRIDGE: Benchmark for multi-hop Reasoning In long multimodal Documents with Grounded Evidence", "a": ["Biao Xiang", "Soyeon Caren Han", "Yihao Ding"], "c": "CL", "p": "260309", "g": [], "s": []}
-{"i": "2603.07930v1", "t": "Quantum information advantage based on Bell inequalities", "a": ["Rahul Jain", "Srijita Kundu"], "c": "quant-ph", "p": "260309", "g": [], "s": []}
-{"i": "2603.07929v1", "t": "A Hybrid Vision Transformer Approach for Mathematical Expression Recognition", "a": ["Anh Duy Le", "Van Linh Pham", "Vinh Loi Ly"], "c": "CV", "p": "260309", "g": [], "s": []}
-{"i": "2603.07928v1", "t": "Omnidirectional Humanoid Locomotion on Stairs via Unsafe Stepping Penalty and Sparse LiDAR Elevation Mapping", "a": ["Yuzhi Jiang", "Yujun Liang", "Junhao Li"], "c": "RO", "p": "260309", "g": [], "s": []}
-{"i": "2603.07927v1", "t": "SWE-Fuse: Empowering Software Agents via Issue-free Trajectory Learning and Entropy-aware RLVR Training", "a": ["Xin-Cheng Wen", "Binbin Chen", "Haoxuan Lan"], "c": "SE", "p": "260309", "g": [], "s": []}
-{"i": "2603.07926v1", "t": "IMSE: Intrinsic Mixture of Spectral Experts Fine-tuning for Test-Time Adaptation", "a": ["Sunghyun Baek", "Jaemyung Yu", "Seunghee Koh"], "c": "CV", "p": "260309", "g": [], "s": []}
-{"i": "2603.07925v1", "t": "First-principles identification of optically efficient erbium centers in GaAs", "a": ["Khang Hoang"], "c": "cond-mat", "p": "260309", "g": [], "s": []}
-{"i": "2603.07924v1", "t": "Semantic Risk Scoring of Aggregated Metrics: An AI-Driven Approach for Healthcare Data Governance", "a": ["Mohammed Omer Shakeel Ahmed"], "c": "LG", "p": "260309", "g": [], "s": []}
-{"i": "2603.07923v1", "t": "Ponderomotive Achromat for Electron Optics: Radially Polarized Annular Focusing and a Round-Lens Corrector Regime", "a": ["Yuuki Uesugi", "Yuichi Kozawa"], "c": "physics", "p": "260309", "g": [], "s": []}
-{"i": "2603.07922v1", "t": "Band modulations and topological transitions in a one-dimensional periodic bead-on-string chain", "a": ["Haocong Pan", "Wei Wang", "Chunling Liu"], "c": "cond-mat", "p": "260309", "g": [], "s": []}
-{"i": "2603.07921v1", "t": "Robust Transfer Learning with Side Information", "a": ["Akram S. Awad", "Shihab Ahmed", "Yue Wang"], "c": "stat", "p": "260309", "g": [], "s": []}
-{"i": "2603.07920v1", "t": "RLPR: Radar-to-LiDAR Place Recognition via Two-Stage Asymmetric Cross-Modal Alignment for Autonomous Driving", "a": ["Zhangshuo Qi", "Jingyi Xu", "Luqi Cheng"], "c": "CV", "p": "260309", "g": [], "s": []}
-{"i": "2603.07919v1", "t": "Social Proof is in the Pudding: The (Non)-Impact of Social Proof on Software Downloads", "a": ["Lucas Shen", "Gaurav Sood"], "c": "cs", "p": "260309", "g": [], "s": []}
-{"i": "2603.07918v1", "t": "Enhancing Unregistered Hyperspectral Image Super-Resolution via Unmixing-based Abundance Fusion Learning", "a": ["Yingkai Zhang", "Tao Zhang", "Jing Nie"], "c": "CV", "p": "260309", "g": [], "s": []}
-{"i": "2603.07917v1", "t": "SageSched: Efficient LLM Scheduling Confronting Demand Uncertainty and Hybridity", "a": ["Zhenghao Gan", "Yichen Bao", "Yifei Liu"], "c": "cs", "p": "260309", "g": [], "s": []}
-{"i": "2603.07916v1", "t": "Rel-MOSS: Towards Imbalanced Relational Deep Learning on Relational Databases", "a": ["Jun Yin", "Peng Huo", "Bangguo Zhu"], "c": "AI", "p": "260309", "g": [], "s": []}
-{"i": "2603.07915v1", "t": "Ares: Adaptive Reasoning Effort Selection for Efficient LLM Agents", "a": ["Jingbo Yang", "Bairu Hou", "Wei Wei"], "c": "AI", "p": "260309", "g": [], "s": []}
-{"i": "2603.07914v1", "t": "Event-Study Designs for Discrete Outcomes under Transition Independence", "a": ["Young Ahn", "Hiroyuki Kasahara"], "c": "econ", "p": "260309", "g": [], "s": []}
-{"i": "2603.07913v1", "t": "Curve Lengthening Bifurcations in Modally Filtered Nonlinear Schrödinger Systems", "a": ["Keith Promislow", "Abba Ramadan"], "c": "math", "p": "260309", "g": [], "s": []}
-{"i": "2603.07912v1", "t": "Geometric Transformation-Embedded Mamba for Learned Video Compression", "a": ["Hao Wei", "Yanhui Zhou", "Chenyang Ge"], "c": "CV", "p": "260309", "g": [], "s": []}
-{"i": "2603.07911v1", "t": "Beyond Heuristic Prompting: A Concept-Guided Bayesian Framework for Zero-Shot Image Recognition", "a": ["Hui Liu", "Kecheng Chen", "Jialiang Wang"], "c": "CV", "p": "260309", "g": [], "s": []}
-{"i": "2603.07910v1", "t": "A Structure-Preserving LOBPCG Algorithm for the Bethe-Salpeter Eigenvalue Problem", "a": ["Xinyu Shan", "Meiyue Shao"], "c": "math", "p": "260309", "g": [], "s": []}
-{"i": "2603.07909v1", "t": "Long-Short Term Agents for Pure-Vision Bronchoscopy Robotic Autonomy", "a": ["Junyang Wu", "Mingyi Luo", "Fangfang Xie"], "c": "RO", "p": "260309", "g": [], "s": []}
-{"i": "2603.07908v1", "t": "Exploring the spin dependence on mass inclination and distance for the newly discovered black hole X-ray binary Swift J151857.0-572147", "a": ["Yujia Song", "James F. Steiner", "Tong Zhao"], "c": "astro-ph", "p": "260309", "g": [], "s": []}
-{"i": "2603.07907v1", "t": "Robust control synthesis for uncertain linear systems with input saturation using mixed IQCs", "a": ["Xu Zhang", "Fen Wu"], "c": "eess", "p": "260309", "g": [], "s": []}
-{"i": "2603.07906v1", "t": "IOTEL: A Tool for Generating IoT-enriched Object-Centric Event Logs", "a": ["Jia Wei", "Xin Su", "Chun Ouyang"], "c": "SE", "p": "260309", "g": [], "s": []}
-{"i": "2603.07905v1", "t": "The Average Age Map of the Galactic Bulge", "a": ["Jialu Nie", "Martín López-Corredoira", "Chao Liu"], "c": "astro-ph", "p": "260309", "g": [], "s": []}
-{"i": "2603.07904v1", "t": "DyQ-VLA: Temporal-Dynamic-Aware Quantization for Embodied Vision-Language-Action Models", "a": ["Zihao Zheng", "Hangyu Cao", "Sicheng Tian"], "c": "LG", "p": "260309", "g": [], "s": []}
-{"i": "2603.07903v1", "t": "Symmetric Trotterization in digital quantum simulation of quantum spin dynamics", "a": ["Yeonghun Lee"], "c": "quant-ph", "p": "260309", "g": [], "s": []}
-{"i": "2603.07902v1", "t": "Designing Extremely Low-Power Topological Transistors with 1T'-MoS2 and HZO for Cryogenic Applications", "a": ["Yosep Park", "Yungyeong Park", "Hyeonseok Choi"], "c": "cond-mat", "p": "260309", "g": [], "s": []}
-{"i": "2603.07901v1", "t": "NaviDriveVLM: Decoupling High-Level Reasoning and Motion Planning for Autonomous Driving", "a": ["Ximeng Tao", "Pardis Taghavi", "Dimitar Filev"], "c": "RO", "p": "260309", "g": [], "s": []}
-{"i": "2603.07900v1", "t": "EveryQuery: Zero-Shot Clinical Prediction via Task-Conditioned Pretraining over Electronic Health Records", "a": ["Payal Chandak", "Gregory Kondas", "Isaac Kohane"], "c": "AI", "p": "260309", "g": [], "s": []}
-{"i": "2603.07899v1", "t": "Bayesian Transformer for Probabilistic Load Forecasting in Smart Grids", "a": ["Sajib Debnath", "Md. Uzzal Mia"], "c": "LG", "p": "260309", "g": [], "s": []}
-{"i": "2603.07898v1", "t": "Revisiting Unknowns: Towards Effective and Efficient Open-Set Active Learning", "a": ["Chen-Chen Zong", "Yu-Qi Chi", "Xie-Yang Wang"], "c": "CV", "p": "260309", "g": [], "s": []}
-{"i": "2603.07897v1", "t": "LeJOT-AutoML: LLM-Driven Feature Engineering for Job Execution Time Prediction in Databricks Cost Optimization", "a": ["Lizhi Ma", "Yi-Xiang Hu", "Yihui Ren"], "c": "LG", "p": "260309", "g": [], "s": []}
-{"i": "2603.07896v1", "t": "SMGI: A Structural Theory of General Artificial Intelligence", "a": ["Aomar Osmani"], "c": "AI", "p": "260309", "g": [], "s": []}
-{"i": "2603.07895v1", "t": "MINT: Molecularly Informed Training with Spatial Transcriptomics Supervision for Pathology Foundation Models", "a": ["Minsoo Lee", "Jonghyun Kim", "Juseung Yun"], "c": "CV", "p": "260309", "g": [], "s": []}
-{"i": "2603.07894v1", "t": "Closed Reeb orbits on contact type hypersurfaces in $T^*S^n$", "a": ["Huagui Duan", "Zihao Qi"], "c": "math", "p": "260309", "g": [], "s": []}
-{"i": "2603.07893v1", "t": "Designing probabilistic AI monsoon forecasts to inform agricultural decision-making", "a": ["Colin Aitken", "Rajat Masiwal", "Adam Marchakitus"], "c": "LG", "p": "260309", "g": [], "s": []}
-{"i": "2603.07892v1", "t": "RoboRouter: Training-Free Policy Routing for Robotic Manipulation", "a": ["Yiteng Chen", "Zhe Cao", "Hongjia Ren"], "c": "RO", "p": "260309", "g": [], "s": []}
-{"i": "2603.07891v1", "t": "A Lightweight Traffic Map for Efficient Anytime LaCAM*", "a": ["Bojie Shen", "Yue Zhang", "Zhe Chen"], "c": "AI", "p": "260309", "g": [], "s": []}
-{"i": "2603.07890v1", "t": "Visualizing Coalition Formation: From Hedonic Games to Image Segmentation", "a": ["Pedro Henrique de Paula França", "Lucas Lopes Felipe", "Daniel Sadoc Menasché"], "c": "AI", "p": "260309", "g": [], "s": []}
-{"i": "2603.07889v1", "t": "Structure and Progress Aware Diffusion for Medical Image Segmentation", "a": ["Siyuan Song", "Guyue Hu", "Chenglong Li"], "c": "CV", "p": "260309", "g": [], "s": []}
-{"i": "2603.07888v1", "t": "VLM-SubtleBench: How Far Are VLMs from Human-Level Subtle Comparative Reasoning?", "a": ["Minkyu Kim", "Sangheon Lee", "Dongmin Park"], "c": "CV", "p": "260309", "g": [], "s": []}
-{"i": "2603.07887v1", "t": "Reject, Resample, Repeat: Understanding Parallel Reasoning in Language Model Inference", "a": ["Noah Golowich", "Fan Chen", "Dhruv Rohatgi"], "c": "LG", "p": "260309", "g": [], "s": []}
-{"i": "2603.07886v1", "t": "CCR-Bench: A Comprehensive Benchmark for Evaluating LLMs on Complex Constraints, Control Flows, and Real-World Cases", "a": ["Xiaona Xue", "Yiqiao Huang", "Jiacheng Li"], "c": "CL", "p": "260309", "g": [], "s": []}
-{"i": "2603.07885v1", "t": "Identifying Influential Actions in Human-Robot Interactions", "a": ["Haoyang Jiang", "Chenfei Xu", "Yuya Okadome"], "c": "RO", "p": "260309", "g": [], "s": []}
-{"i": "2603.07884v1", "t": "The Consistency Correctness in CoPPar Tree", "a": ["Xincheng Yang", "Kyle Hale"], "c": "cs", "p": "260309", "g": [], "s": []}
-{"i": "2603.07883v1", "t": "High-Energy Neutrino Emission in NGC1068 driven by Turbulent Magnetic Reconnection", "a": ["Luana Passos-Reis", "Elisabete M. de Gouveia Dal Pino", "Juan C. Rodríguez-Ramírez"], "c": "astro-ph", "p": "260309", "g": [], "s": []}
-{"i": "2603.07882v1", "t": "LegONet: Plug-and-Play Structure-Preserving Neural Operator Blocks for Compositional PDE Learning", "a": ["Jiahao Zhang", "Yueqi Wang", "Guang Lin"], "c": "math", "p": "260309", "g": [], "s": []}
-{"i": "2603.07881v1", "t": "A Distributed Method for Cooperative Transaction Cost Mitigation", "a": ["Nikhil Devanathan", "Logan Bell", "Dylan Rueter"], "c": "math", "p": "260309", "g": [], "s": []}
-{"i": "2603.07880v1", "t": "What Do AI Agents Talk About? Emergent Communication Structure in the First AI-Only Social Network", "a": ["Taksch Dube", "Jianfeng Zhu", "NHatHai Phan"], "c": "CL", "p": "260309", "g": [], "s": []}
-{"i": "2603.07879v1", "t": "Symmetry-Protected Momentum Exchange between Dark Matter and Dark Energy", "a": ["Mohid Farhan"], "c": "astro-ph", "p": "260309", "g": [], "s": []}
-{"i": "2603.07878v1", "t": "An alternative proof of Miyashita's theorem in a skew polynomial ring II", "a": ["Satoshi Yamanaka"], "c": "math", "p": "260309", "g": [], "s": []}
-{"i": "2603.07877v1", "t": "On a Problem Posed by Brezis and Mironescu", "a": ["Fanghua Lin", "Malkeil Shoshan", "Changyou Wang"], "c": "math", "p": "260309", "g": [], "s": []}
-{"i": "2603.07876v1", "t": "A Generalization of Pretzel Links via Spatial Graphs", "a": ["Kotaro Shoji"], "c": "math", "p": "260309", "g": [], "s": []}
-{"i": "2603.07875v1", "t": "Choose What to Observe: Task-Aware Semantic-Geometric Representations for Visuomotor Policy", "a": ["Haoran Ding", "Liang Ma", "Yaxun Yang"], "c": "RO", "p": "260309", "g": [], "s": []}
-{"i": "2603.07874v1", "t": "Toward Unified Multimodal Representation Learning for Autonomous Driving", "a": ["Ximeng Tao", "Dimitar Filev", "Gaurav Pandey"], "c": "CV", "p": "260309", "g": [], "s": []}
-{"i": "2603.07873v1", "t": "Graded Ehrhart Theory of Unimodular Zonotopes", "a": ["Colin Crowley", "Ethan Partida"], "c": "math", "p": "260309", "g": [], "s": []}
-{"i": "2603.07872v1", "t": "The Dirac sea of phase: Unifying phase paradoxes and Talbot revivals in multimode waveguides", "a": ["N. Korneev", "I. Ramos-Prieto", "H. M. Moya-Cessa"], "c": "quant-ph", "p": "260309", "g": [], "s": []}
-{"i": "2603.07871v1", "t": "Effective and flexible depth-based inference for functional parameters", "a": ["Hyemin Yeon"], "c": "stat", "p": "260309", "g": [], "s": []}
-{"i": "2603.07870v1", "t": "Keller-Segel-Navier-Stokes systems involving general sensitivities with Signal-Dependent Power-Law Decay", "a": ["Jaewook Ahn", "Sukjung Hwang"], "c": "math", "p": "260309", "g": [], "s": []}
-{"i": "2603.07869v1", "t": "On the de Rham flip-flopping in dual towers", "a": ["Gabriel Dospinescu", "Wiesława Nizioł"], "c": "math", "p": "260309", "g": [], "s": []}
-{"i": "2603.07868v1", "t": "Hospitality-VQA: Decision-Oriented Informativeness Evaluation for Vision-Language Models", "a": ["Jeongwoo Lee", "Baek Duhyeong", "Eungyeol Han"], "c": "AI", "p": "260309", "g": [], "s": []}
-{"i": "2603.07867v1", "t": "Slumbering to Precision: Enhancing Artificial Neural Network Calibration Through Sleep-like Processes", "a": ["Jean Erik Delanois", "Aditya Ahuja", "Giri P. Krishnan"], "c": "LG", "p": "260309", "g": [], "s": []}
-{"i": "2603.07866v1", "t": "Viewpoint-Agnostic Grasp Pipeline using VLM and Partial Observations", "a": ["Dilermando Almeida", "Juliano Negri", "Guilherme Lazzarini"], "c": "RO", "p": "260309", "g": [], "s": []}
-{"i": "2603.07865v1", "t": "SoundWeaver: Semantic Warm-Starting for Text-to-Audio Diffusion Serving", "a": ["Ayush Barik", "Sofia Stoica", "Nikhil Sarda"], "c": "SD", "p": "260309", "g": [], "s": []}
-{"i": "2603.07864v1", "t": "An Interpretable Generative Framework for Anomaly Detection in High-Dimensional Financial Time Series", "a": ["Waldyn G Martinez"], "c": "stat", "p": "260309", "g": [], "s": []}
-{"i": "2603.07863v1", "t": "Choice of Collateral Currency in Differential Swaps", "a": ["Yining Ding", "Ruyi Liu", "Marek Rutkowski"], "c": "q-fin", "p": "260309", "g": [], "s": []}
-{"i": "2603.07862v1", "t": "Threshold Dynamics of Voter Radicalization on the Probability Simplex", "a": ["Alexander Omelchenko"], "c": "math", "p": "260309", "g": [], "s": []}
-{"i": "2603.07861v1", "t": "The UK Cyber Security and Resilience Bill: A Practitioner's Guide to Legislative Reform, Compliance, and Organisational Readiness", "a": ["Jonathan Shelby"], "c": "CR", "p": "260309", "g": [], "s": []}
-{"i": "2603.07860v1", "t": "Guess & Guide: Gradient-Free Zero-Shot Diffusion Guidance", "a": ["Abduragim Shtanchaev", "Albina Ilina", "Yazid Janati"], "c": "LG", "p": "260309", "g": [], "s": []}
-{"i": "2603.07859v1", "t": "Impacts of Jet Stream Structure on Cyclone Merging and Persistent Anticyclones: Insights from Dry Idealized Simulations", "a": ["Mingfei Ren", "Gan Zhang", "Kai-Yuan Cheng"], "c": "physics", "p": "260309", "g": [], "s": []}
-{"i": "2603.07858v1", "t": "QED corrections of orders $mα^6$ and $mα^6(m/M)$ for HD$^+$ rovibrational transitions beyond Born-Oppenheimer approximation", "a": ["Zhen-Xiang Zhong", "Ping Yang", "Vladimir I. Korobov"], "c": "physics", "p": "260309", "g": [], "s": []}
-{"i": "2603.07857v1", "t": "Discovery of a 36-minute long-period transient ASKAP J142431.2-612611", "a": ["Joshua Pritchard", "Tara Murphy", "Dougal Dobie"], "c": "astro-ph", "p": "260309", "g": [], "s": []}
-{"i": "2603.07856v1", "t": "Variational Inference for Variable Selection in Scalar-on-Function Regression", "a": ["Ana Carolina da Cruz", "Camila P. E. de Souza", "Pedro H. T. O. Sousa"], "c": "stat", "p": "260309", "g": [], "s": []}
-{"i": "2603.07855v1", "t": "Explicit Construction of Floquet-Bloch States from Arbitrary Solution Bases of the Hill Equation", "a": ["Gregory V Morozov"], "c": "physics", "p": "260309", "g": [], "s": []}
-{"i": "2603.07854v1", "t": "On the stable Hopf invariant", "a": ["John R. Klein"], "c": "math", "p": "260309", "g": [], "s": []}
-{"i": "2603.07853v1", "t": "SynPlanResearch-R1: Encouraging Tool Exploration for Deep Research with Synthetic Plans", "a": ["Hansi Zeng", "Zoey Li", "Yifan Gao"], "c": "AI", "p": "260309", "g": [], "s": []}
-{"i": "2603.07852v1", "t": "Structural aging of a cohesive and amorphous granular solid under cyclic loading", "a": ["William Hobson-Rhoades", "Douglas J Durian", "Yue Fan"], "c": "cond-mat", "p": "260309", "g": [], "s": []}
