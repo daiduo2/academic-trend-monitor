@@ -1,0 +1,75 @@
+{
+  "date": "2026-03-23",
+  "risks": [
+    "机器学习领域出现回落，可能影响相关投资热度",
+    " robotics和材料科学论文数量下降，需关注后续走势"
+  ],
+  "title": "学术趋势日报 2026-03-23",
+  "signals": [
+    {
+      "kind": "emerging",
+      "label": "计算机视觉强劲增长",
+      "summary": "cs.CV新增51篇论文，增幅达12.1%，多模态视觉模型和图像生成技术是主要驱动力"
+    },
+    {
+      "kind": "cooling",
+      "label": "机器学习小幅回落",
+      "summary": "cs.LG下降17篇，结束了近期的增长态势，但整体仍维持在较高水平"
+    },
+    {
+      "kind": "cross_disciplinary",
+      "label": "AI领域整体强势",
+      "summary": "cs.AI、cs.CL、cs.CV三个AI相关领域同步上升，显示人工智能研究的跨领域融合趋势"
+    }
+  ],
+  "summary": "今日计算机视觉（cs.CV）论文数量显著增长至473篇，较昨日增加51篇，展现强劲上升趋势。人工智能（cs.AI）和计算语言学（cs.CL）分别增长23篇和22篇，反映多模态大模型研究持续火热。机器学习（cs.LG）和机器人学（cs.RO）出现小幅下降。",
+  "model_meta": {
+    "mode": "daily_analysis",
+    "model": "sonnet-4-20250514",
+    "provider": "claude_code"
+  },
+  "key_findings": [
+    "计算机视觉（cs.CV）新增51篇论文，领跑各领域增长",
+    "人工智能（cs.AI）增长23篇，计算语言学（cs.CL）增长22篇，AI相关领域整体强劲",
+    "机器学习（cs.LG）下降17篇，结束近期增长势头",
+    "机器人学（cs.RO）下降18篇，材料科学（cond-mat.mtrl-sci）下降16篇"
+  ],
+  "notable_papers": [],
+  "top_rising_topics": [
+    {
+      "change": 51,
+      "summary": "计算机视觉领域持续火热，多模态大模型和视觉生成技术推动论文产出大幅增长",
+      "topic_id": "cs.CV",
+      "topic_name": "cs.CV",
+      "paper_count": 473
+    },
+    {
+      "change": -17,
+      "summary": "机器学习领域结束连续增长，出现小幅回落",
+      "topic_id": "cs.LG",
+      "topic_name": "cs.LG",
+      "paper_count": 272
+    },
+    {
+      "change": 22,
+      "summary": "计算语言学受大语言模型研究推动，论文数量稳步上升",
+      "topic_id": "cs.CL",
+      "topic_name": "cs.CL",
+      "paper_count": 171
+    },
+    {
+      "change": 23,
+      "summary": "人工智能领域增长显著，反映学术界对通用AI和智能体研究的高度关注",
+      "topic_id": "cs.AI",
+      "topic_name": "cs.AI",
+      "paper_count": 162
+    },
+    {
+      "change": -18,
+      "summary": "机器人学领域出现下滑，较前一日减少18篇",
+      "topic_id": "cs.RO",
+      "topic_name": "cs.RO",
+      "paper_count": 154
+    }
+  ]
+}
