@@ -1,0 +1,96 @@
+{
+  "date": "2026-03-24",
+  "risks": [],
+  "title": "学术趋势日报 2026-03-24",
+  "signals": [
+    {
+      "kind": "emerging",
+      "label": "视频World Model爆发",
+      "summary": "WorldCache、VideoDetective、ThinkJEPA等多篇工作同日发布，video understanding与latent world model成为CV新前沿"
+    },
+    {
+      "kind": "emerging",
+      "label": "机器人通用操作突破",
+      "summary": "UniDex与DexDrummer展示从人类视频学习通用机械手控制，robotics从专用向通用演进"
+    },
+    {
+      "kind": "cross_disciplinary",
+      "label": "VLA模型持续进化",
+      "summary": "视觉-语言-动作融合深入，DualCoT-VLA并行推理与UniMotion三模态统一，跨模态推理能力提升"
+    },
+    {
+      "kind": "cooling",
+      "label": "传统NLP任务减少",
+      "summary": "cs.CL增长主要来自LLM相关，传统NLP任务关注度下降"
+    },
+    {
+      "kind": "drift",
+      "label": "AI伦理风险显现",
+      "summary": "可及性与公平性研究开始受到关注，生成式AI社会影响进入学术视野"
+    }
+  ],
+  "summary": "今日共发布834篇论文，CV领域持续领跑，paper数达583篇较昨日增加161篇。视频理解与world model成为核心热点，多个相关工作同日发布。机器人控制(RO)领域增长显著，通用机械手控制取得突破。",
+  "model_meta": {
+    "mode": "daily_analysis",
+    "model": "claude-3-7-sonnet-20250620",
+    "provider": "claude_code"
+  },
+  "key_findings": [
+    "CV领域一日新增161篇论文，占总量70%，视频world model与多模态推理是核心驱动力",
+    "机器人控制爆发：UniDex通用机械手控制框架与DexDrummerDexterous机器人鼓手同日发布",
+    "VLA(视觉-语言-动作)模型再进化：DualCoT-VLA引入并行推理链，ThinkJEPA探索latent world model",
+    "LLM高效适配受关注：Scaling DoRA提出高秩分解适配方法",
+    "量子物理上升38篇，凝聚态物理新增相对称性研究",
+    "生成式AI伦理风险显现：「Greater accessibility can amplify discrimination」揭示可及性提升可能加剧歧视",
+    "数学应用与计算物理各有进展，NMR光谱预测与RNA蛋白结合建模",
+    "CS.AI领域增长53篇至192篇，AI整体研究持续扩张"
+  ],
+  "notable_papers": [
+    {
+      "title": "WorldCache: Content-Aware Caching for Accelerated Video World Models",
+      "reason": "视频world model加速推理提出content-aware caching，video understanding核心突破",
+      "arxiv_id": "2603.22286v1"
+    },
+    {
+      "title": "VideoDetective: Clue Hunting via both Extrinsic Query and Intrinsic Relevance for Long Video Understanding",
+      "reason": "长视频理解新范式，结合外部查询与内在相关性进行线索追踪",
+      "arxiv_id": "2603.22285v1"
+    },
+    {
+      "title": "ThinkJEPA: Empowering Latent World Models with Large Vision-Language Reasoning Model",
+      "reason": "latent world model新思路，融合VL reasoning提升世界模型表示能力",
+      "arxiv_id": "2603.22281v1"
+    },
+    {
+      "title": "DualCoT-VLA: Visual-Linguistic Chain of Thought via Parallel Reasoning for Vision-Language-Action Models",
+      "reason": "VLA模型推理链新设计，parallel reasoning提升多模态决策效率",
+      "arxiv_id": "2603.22280v1"
+    },
+    {
+      "title": "UniMotion: A Unified Framework for Motion-Text-Vision Understanding and Generation",
+      "reason": "运动-文本-视觉统一框架，三模态理解与生成融合",
+      "arxiv_id": "2603.22282v1"
+    },
+    {
+      "title": "UniDex: A Robot Foundation Suite for Universal Dexterous Hand Control from Egocentric Human Videos",
+      "reason": "通用机械手控制foundation model，从人类egocentric video学习",
+      "arxiv_id": "2603.22264v1"
+    },
+    {
+      "title": "DexDrummer: In-Hand, Contact-Rich, and Long-Horizon Dexterous Robot Drumming",
+      "reason": "Dexterous manipulation突破，高接触、长时域机器人演奏任务",
+      "arxiv_id": "2603.22263v1"
+    },
+    {
+      "title": "Scaling DoRA: High-Rank Adaptation via Factored Norms and Fused Kernels",
+      "reason": "DoRA高效微调新方法，高秩分解与融合核提升适配效率",
+      "arxiv_id": "2603.22276v1"
+    },
+    {
+      "title": "Greater accessibility can amplify discrimination in generative AI",
+      "reason": "AI伦理重要工作，揭示可及性提升可能加剧生成式AI中的歧视问题",
+      "arxiv_id": "2603.22260v1"
+    }
+  ],
+  "top_rising_topics": []
+}
