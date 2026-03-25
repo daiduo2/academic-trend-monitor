@@ -1,0 +1,134 @@
+{
+  "date": "2026-03-25",
+  "risks": [
+    "领域过度集中于CV可能导致研究同质化",
+    " diffusion model相关研究泛滥，质量参差不齐"
+  ],
+  "title": "2026年3月25日学术趋势日报",
+  "signals": [
+    {
+      "kind": "emerging",
+      "label": "Foveated/Adaptive Generation",
+      "summary": "空间自适应图像视频生成成为新方向，模拟人眼注视机制提高效率"
+    },
+    {
+      "kind": "cross_disciplinary",
+      "label": "Medical VLMs",
+      "summary": "VLM在医学领域的研究深入，clinical triage场景下的能力差距被揭示"
+    },
+    {
+      "kind": "emerging",
+      "label": "Tactile-Vision-Action",
+      "summary": "引入触觉感知的多模态模型出现，可能推动机器人灵巧操作"
+    },
+    {
+      "kind": "drift",
+      "label": "Security/Cryptography Growth",
+      "summary": "cs.CR论文数大幅增长41篇，安全与密码学研究显著加速"
+    },
+    {
+      "kind": "cooling",
+      "label": "ML Plateau",
+      "summary": "cs.LG小幅下降8篇，机器学习可能进入稳定期"
+    }
+  ],
+  "summary": "今日arXiv共发布850篇论文。计算机视觉(cs.CV)持续领跑，今日发布565篇，较昨日增长119篇，显示视觉生成与理解领域持续火热。人工智能(cs.AI)和密码学(cs.CR)分别增长46和41篇，表明AI基础研究与安全相关工作加速推进。机器学习(cs.LG)小幅下滑8篇。",
+  "model_meta": {
+    "mode": "daily_analysis",
+    "model": "claude-3-5-sonnet-20241022",
+    "provider": "claude_code"
+  },
+  "key_findings": [
+    "计算机视觉(cs.CV)论文数565篇，日增119篇，成为最大增长领域",
+    "人工智能(cs.AI)增长46篇，反映大模型与智能体研究持续升温",
+    "密码学(cs.CR)激增41篇(103篇vs62篇)，安全研究显著升温",
+    "量子物理(quant-ph)增长28篇，量子计算相关研究稳步上升",
+    "机器学习(cs.LG)小幅下降8篇，可能进入平稳期"
+  ],
+  "notable_papers": [
+    {
+      "title": "OccAny: Generalized Unconstrained Urban 3D Occupancy",
+      "reason": "3D场景理解突破，无约束城市环境occupancy estimation对自动驾驶与机器人至关重要",
+      "arxiv_id": "2603.23502v1"
+    },
+    {
+      "title": "MedObvious: Exposing the Medical Moravec's Paradox in VLMs via Clinical Triage",
+      "reason": "揭示VLM在医学领域的莫拉维克悖论，对医疗AI有重要指导意义",
+      "arxiv_id": "2603.23501v1"
+    },
+    {
+      "title": "UniGRPO: Unified Policy Optimization for Reasoning-Driven Visual Generation",
+      "reason": "统一策略优化框架连接推理与视觉生成，可能推动多模态AI进步",
+      "arxiv_id": "2603.23500v1"
+    },
+    {
+      "title": "DA-Flow: Degradation-Aware Optical Flow Estimation with Diffusion Models",
+      "reason": "diffusion model应用于光流估计，提升退化场景下的估计精度",
+      "arxiv_id": "2603.23499v1"
+    },
+    {
+      "title": "Foveated Diffusion: Efficient Spatially Adaptive Image and Video Generation",
+      "reason": "模仿人眼注视点的efficient generation方法，降低计算成本",
+      "arxiv_id": "2603.23491v1"
+    },
+    {
+      "title": "VTAM: Video-Tactile-Action Models for Complex Physical Interaction Beyond VLAs",
+      "reason": "引入触觉模态的具身智能模型，超越传统VLA范式",
+      "arxiv_id": "2603.23481v1"
+    },
+    {
+      "title": "Evidence of political bias in search engines and language models before major elections",
+      "reason": "首次量化LLM在选举前的政治偏见，对AI伦理有重要警示作用",
+      "arxiv_id": "2603.23474v1"
+    },
+    {
+      "title": "Hall Viscosity in the Quark-Gluon Plasma",
+      "reason": "极端条件下的粘滞性研究，对理解QGP物性有重要贡献",
+      "arxiv_id": "2603.23498v1"
+    }
+  ],
+  "top_rising_topics": [
+    {
+      "change": 119,
+      "summary": "视觉生成与理解持续爆发，diffusion model驱动图像视频生成突破，3D场景理解与 occupancy estimation成为新热点",
+      "topic_id": "cs.CV",
+      "topic_name": "cs.CV",
+      "paper_count": 565
+    },
+    {
+      "change": 46,
+      "summary": "大模型推理能力提升，agentic AI与多模态理解成为核心方向",
+      "topic_id": "cs.AI",
+      "topic_name": "cs.AI",
+      "paper_count": 190
+    },
+    {
+      "change": 41,
+      "summary": "加密与安全算法研究大幅增长，可能与后量子密码学需求有关",
+      "topic_id": "cs.CR",
+      "topic_name": "cs.CR",
+      "paper_count": 103
+    },
+    {
+      "change": 38,
+      "summary": "自然语言处理基础研究持续增长，大模型语言理解与生成仍是重点",
+      "topic_id": "cs.CL",
+      "topic_name": "cs.CL",
+      "paper_count": 194
+    },
+    {
+      "change": 29,
+      "summary": "离散数学与组合优化研究增长，可能支撑AI优化算法发展",
+      "topic_id": "math.CO",
+      "topic_name": "math.CO",
+      "paper_count": 90
+    },
+    {
+      "change": 28,
+      "summary": "量子物理基础研究稳步上升，量子信息与计算持续吸引关注",
+      "topic_id": "quant-ph",
+      "topic_name": "quant-ph",
+      "paper_count": 192
+    }
+  ]
+}
