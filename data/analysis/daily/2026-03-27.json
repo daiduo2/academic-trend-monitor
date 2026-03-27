@@ -1,0 +1,85 @@
+{
+  "date": "2026-03-27",
+  "risks": [],
+  "title": "学术趋势日报 2026-03-27",
+  "signals": [
+    {
+      "kind": "cooling",
+      "label": "CS领域整体降温",
+      "summary": "计算机视觉、机器学习、自然语言处理、机器人技术等核心CS领域均出现论文数量下降，AI研究可能进入平台期"
+    },
+    {
+      "kind": "emerging",
+      "label": "密码学强劲上升",
+      "summary": "cs.CR成为唯一大幅上升的CS领域主题，增幅近60%，隐私计算和区块链安全或成新热点"
+    },
+    {
+      "kind": "cross_disciplinary",
+      "label": "数学与物理交叉增长",
+      "summary": "math.AP和hep-ph两个非CS领域保持上升，显示应用数学和高能物理研究热度不减"
+    },
+    {
+      "kind": "drift",
+      "label": "研究热点转移",
+      "summary": "多个传统CS领域下降而密码学上升，暗示学术研究重心正在从通用AI向安全隐私方向偏移"
+    }
+  ],
+  "summary": "今日学术领域整体呈下降趋势，10个热门主题中8个出现论文数量下滑。计算机视觉(cs.CV)下降最显著(-48篇)，机器人技术(cs.RO)降幅达26%。密码学(cs.CR)逆势上升33篇成为最大亮点，数学应用(math.AP)和高能物理(hep-ph)也保持增长。",
+  "model_meta": {
+    "mode": "daily_analysis",
+    "model": "sonnet-4-20250514",
+    "provider": "claude_code"
+  },
+  "key_findings": [
+    "计算机视觉(cs.CV)论文数量大幅下降，从475篇降至427篇，降幅约10%",
+    "密码学(cs.CR)表现强劲，论文数从56篇增至89篇，涨幅近59%",
+    "机器人技术(cs.RO)下降明显，从150篇减至111篇(-26%)",
+    "机器学习(cs.LG)和自然语言处理(cs.CL)分别下降33和19篇",
+    "高能物理(hep-ph)小幅上升14篇至70篇"
+  ],
+  "notable_papers": [],
+  "top_rising_topics": [
+    {
+      "change": 33,
+      "summary": "密码学领域逆势上升，论文数量从56篇增长至89篇(+33)，增幅约59%，可能与隐私计算、区块链安全研究进展相关",
+      "topic_id": "cs.CR",
+      "topic_name": "cs.CR",
+      "paper_count": 89
+    },
+    {
+      "change": 15,
+      "summary": "应用数学方向小幅上升，从71篇增至86篇(+15)，增幅约21%，可能反映数学方法在工程物理领域的应用需求增长",
+      "topic_id": "math.AP",
+      "topic_name": "math.AP",
+      "paper_count": 86
+    },
+    {
+      "change": 14,
+      "summary": "高能物理领域保持上升势头，从56篇增至70篇(+14)，增幅25%，可能与粒子物理实验数据分析及理论模型研究活跃有关",
+      "topic_id": "hep-ph",
+      "topic_name": "hep-ph",
+      "paper_count": 70
+    },
+    {
+      "change": -48,
+      "summary": "计算机视觉领域热度下降最明显，从475篇降至427篇(-48)，降幅约10%，可能进入周期性调整或研究热点转换阶段",
+      "topic_id": "cs.CV",
+      "topic_name": "cs.CV",
+      "paper_count": 427
+    },
+    {
+      "change": -39,
+      "summary": "机器人技术领域明显降温，从150篇减至111篇(-39)，降幅达26%，可能反映该领域从爆发期进入成熟期",
+      "topic_id": "cs.RO",
+      "topic_name": "cs.RO",
+      "paper_count": 111
+    },
+    {
+      "change": -33,
+      "summary": "机器学习领域小幅下滑，从276篇降至243篇(-33)，降幅约12%，可能与研究重心向特定子领域转移有关",
+      "topic_id": "cs.LG",
+      "topic_name": "cs.LG",
+      "paper_count": 243
+    }
+  ]
+}
