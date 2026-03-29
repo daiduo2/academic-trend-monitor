@@ -1,0 +1,78 @@
+{
+  "date": "2026-03-29",
+  "risks": [
+    "多个人工智能核心领域同步放缓，可能反映研究热度阶段性下降",
+    "计算机视觉领域降幅最大，需关注后续走势",
+    "缺乏最新论文数据支撑，趋势判断可能存在滞后"
+  ],
+  "title": "学术趋势日报 2026-03-29",
+  "signals": [
+    {
+      "kind": "cooling",
+      "label": "AI核心领域集体降温",
+      "summary": "计算机视觉、机器学习、自然语言处理等AI核心领域同步出现大幅下降，多个领域降幅超过30%，显示AI研究热度可能进入阶段性调整期。"
+    },
+    {
+      "kind": "emerging",
+      "label": "数学分析逆势上升",
+      "summary": "在整体下行趋势中，数学分析(math.AP)保持8篇的正增长，是为数不多的上升领域，反映纯数学基础研究的稳定性。"
+    },
+    {
+      "kind": "drift",
+      "label": "领域关注点转移",
+      "summary": " cryptography和材料科学(cond-mat.mtrl-sci)相对稳定，可能表明研究重心正从应用型AI领域向基础安全和材料科学方向漂移。"
+    }
+  ],
+  "summary": "今日数据显示计算机科学领域多个主要分类的论文发布量出现显著下降，其中计算机视觉(cs.CV)下降155篇降幅最大，机器学习(cs.LG)下降93篇。数学分析(math.AP)是为数不多保持上升态势的领域(+8篇)。",
+  "model_meta": {
+    "mode": "daily_analysis",
+    "model": "sonnet-4-20250514",
+    "provider": "claude_code"
+  },
+  "key_findings": [
+    "计算机视觉(cs.CV)论文数量大幅下降，从473篇降至318篇，降幅达33%",
+    "机器学习(cs.LG)环比下降34%，从272篇降至179篇",
+    "自然语言处理(cs.CL)下降59篇，降幅同样显著",
+    "机器人(cs.RO)和人工智能(cs.AI)分别下降77篇和76篇",
+    "仅数学分析(math.AP)保持增长趋势",
+    "cryptography(cs.CR)维持稳定，无变化"
+  ],
+  "notable_papers": [],
+  "top_rising_topics": [
+    {
+      "change": 8,
+      "summary": "数学分析是唯一保持上升势头的主要CS/数学分类，论文数从64篇增至72篇(+8)，表明纯数学研究仍保持稳定增长。",
+      "topic_id": "math.AP",
+      "topic_name": "math.AP",
+      "paper_count": 72
+    },
+    {
+      "change": 0,
+      "summary": "密码学论文数量持平于65篇，在整体下降趋势中表现稳定，反映信息安全研究的持续需求。",
+      "topic_id": "cs.CR",
+      "topic_name": "cs.CR",
+      "paper_count": 65
+    },
+    {
+      "change": -155,
+      "summary": "计算机视觉大幅下降155篇(降幅33%)，从473篇降至318篇，为降幅最大的领域。",
+      "topic_id": "cs.CV",
+      "topic_name": "cs.CV",
+      "paper_count": 318
+    },
+    {
+      "change": -93,
+      "summary": "机器学习下降93篇，环比下降34%，从272篇降至179篇。",
+      "topic_id": "cs.LG",
+      "topic_name": "cs.LG",
+      "paper_count": 179
+    },
+    {
+      "change": -59,
+      "summary": "计算语言学下降59篇，降幅35%，从171篇降至112篇。",
+      "topic_id": "cs.CL",
+      "topic_name": "cs.CL",
+      "paper_count": 112
+    }
+  ]
+}
