@@ -1,0 +1,115 @@
+{
+  "date": "2026-03-30",
+  "risks": [
+    "本日论文收录为空(0篇)，数据可能存在采集延迟或接口异常，分析基于领域聚合而非单篇论文",
+    "多个CS核心领域同步大幅下降，可能反映数据周期波动而非真实兴趣衰退，需持续观察"
+  ],
+  "title": "学术趋势日报 | 2026-03-30",
+  "signals": [
+    {
+      "kind": "cooling",
+      "label": "AI核心领域整体降温",
+      "summary": "cs.CV、cs.LG、cs.CL、cs.AI、cs.RO五大领域同步大幅下降，整体降幅超过30%，为近年来罕见的集中回调，可能预示AI论文高产期暂告段落。"
+    },
+    {
+      "kind": "drift",
+      "label": "数学领域逆势独立",
+      "summary": "math.AP在整体下行中逆势增长，与CS/AI领域走势完全背离，数学基础研究可能正在积累新的突破势能。"
+    },
+    {
+      "kind": "emerging",
+      "label": "安全与系统领域抗跌",
+      "summary": "cs.CR(密码学)和eess.SY(系统)在本期下降幅度最小，展现较强抗周期特性，安全与底层基础设施研究需求相对刚性。"
+    },
+    {
+      "kind": "cross_disciplinary",
+      "label": "量子物理同步回落",
+      "summary": "quant-ph的下降与AI领域同步，量子-经典交叉研究热点可能同步进入调整期。"
+    }
+  ],
+  "summary": "本日统计周期内学术论文发布量整体大幅回落，主要CS/AI领域均录得显著下降，其中计算机视觉(cs.CV)较上期减少155篇，机器学习(cs.LG)减少93篇，仅数学分析(math.AP)小幅上升8篇。量子物理(quant-ph)与机器人学(cs.RO)分别下降53和77篇，显示传统热门AI学科可能处于周期性回调阶段。本日无论文详情数据收录，分析基于领域发布量趋势推断。",
+  "model_meta": {
+    "mode": "daily_analysis",
+    "model": "haiku",
+    "provider": "claude_code"
+  },
+  "key_findings": [
+    "计算机视觉(cs.CV)论文量从473篇降至318篇，降幅达32.8%，为本期最大跌幅领域",
+    "机器学习(cs.LG)与人工智能(cs.AI)同步回落，环比分别下降34.2%和46.9%，显示AI核心领域整体收缩",
+    "数学分析(math.AP)逆势增长8篇(+12.5%)，是Top10中唯一上升的领域",
+    "机器人学(cs.RO)跌幅与AI接近(-50%)，量子物理(quant-ph)下降33.3%，传统强势领域同步降温"
+  ],
+  "notable_papers": [],
+  "top_rising_topics": [
+    {
+      "change": 8,
+      "summary": "本期唯一逆势增长的领域，从64篇升至72篇，增幅12.5%。可能与近期偏微分方程与非线性分析方向的研究活跃度提升有关。",
+      "topic_id": "math.AP",
+      "topic_name": "math.AP",
+      "paper_count": 72
+    },
+    {
+      "change": -155,
+      "summary": "虽然绝对数量仍居首位(318篇)，但较上期473篇下降155篇(-32.8%)，为Top10中绝对降幅最大领域。计算机视觉长期占据榜首地位尚未动摇，但增速放缓值得注意。",
+      "topic_id": "cs.CV",
+      "topic_name": "cs.CV",
+      "paper_count": 318
+    },
+    {
+      "change": -93,
+      "summary": "机器学习领域从272篇降至179篇(-34.2%)，与cs.CV同步回落。作为AI基础领域，可能受大模型研究热度周期性调整影响。",
+      "topic_id": "cs.LG",
+      "topic_name": "cs.LG",
+      "paper_count": 179
+    },
+    {
+      "change": -59,
+      "summary": "计算语言学从171篇降至112篇(-34.5%)。NLP相关研究在经历持续高增长后出现回调迹象。",
+      "topic_id": "cs.CL",
+      "topic_name": "cs.CL",
+      "paper_count": 112
+    },
+    {
+      "change": -76,
+      "summary": "通用人工智能领域从162篇降至86篇(-46.9%)，为Top10中跌幅比例最大之一。绝对数量已低于cs.LG和cs.CL。",
+      "topic_id": "cs.AI",
+      "topic_name": "cs.AI",
+      "paper_count": 86
+    },
+    {
+      "change": -77,
+      "summary": "机器人学从154篇降至77篇(-50%)，直接腰斩。与上期机器人和自动驾驶热度形成鲜明对比，回调幅度显著。",
+      "topic_id": "cs.RO",
+      "topic_name": "cs.RO",
+      "paper_count": 77
+    },
+    {
+      "change": -53,
+      "summary": "量子物理从159篇降至106篇(-33.3%)。量子计算与量子信息领域近期热度有所消退。",
+      "topic_id": "quant-ph",
+      "topic_name": "quant-ph",
+      "paper_count": 106
+    },
+    {
+      "change": 0,
+      "summary": "密码学领域维持稳定(65篇，零变化)，在整体下行环境中展现韧性，显示安全与隐私研究需求持续稳定。",
+      "topic_id": "cs.CR",
+      "topic_name": "cs.CR",
+      "paper_count": 65
+    },
+    {
+      "change": -8,
+      "summary": "材料科学领域小幅下降8篇(-11.4%)，绝对数量仍处中游，下降幅度相对温和。",
+      "topic_id": "cond-mat.mtrl-sci",
+      "topic_name": "cond-mat.mtrl-sci",
+      "paper_count": 62
+    },
+    {
+      "change": -5,
+      "summary": "Systems领域小幅下降5篇(-9.1%)，在整体下行中降幅最小，系统与硬件方向研究相对稳定。",
+      "topic_id": "eess.SY",
+      "topic_name": "eess.SY",
+      "paper_count": 50
+    }
+  ]
+}
