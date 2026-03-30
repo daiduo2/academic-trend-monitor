@@ -96,7 +96,7 @@ deploy:
 	@cp -r data/weekly/. frontend/public/data/weekly/ || echo "No weekly data yet"
 	@cp -r data/analysis/daily/. frontend/public/data/analysis/daily/ || echo "No analysis data yet"
 	cd frontend && npm run build
-	@echo "构建完成。请推送代码触发 GitHub Actions 自动部署。"
+	@echo "构建完成。请推送代码触发 GitHub Pages 静态部署。"
 
 clean:
 	@echo "清理生成的数据..."

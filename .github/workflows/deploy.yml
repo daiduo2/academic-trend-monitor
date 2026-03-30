@@ -12,7 +12,7 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   deploy:
@@ -24,17 +24,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-          cache: 'pip'
-
-      - name: Install Python dependencies
-        run: |
-          pip install -r requirements.txt
-          pip install -r graphiti-server/requirements.txt
-
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -42,38 +31,27 @@ jobs:
           cache: 'npm'
           cache-dependency-path: frontend/package-lock.json
 
-      - name: Install Node dependencies
-        run: |
-          cd frontend
-          npm install
+      - name: Install frontend dependencies
+        run: npm ci
+        working-directory: frontend
 
-      - name: Export Graphiti snapshot
-        run: |
-          mkdir -p frontend/public/data
-          PYTHONPATH=$PWD python pipeline/export_graphiti_snapshot.py --output frontend/public/data/graphiti_snapshot.json --domains math cs physics
-        env:
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
-
-      - name: Copy data files
+      - name: Copy tracked static data
         run: |
           mkdir -p frontend/public/data/output frontend/public/data/weekly frontend/public/data/analysis/daily
           cp data/output/*.json frontend/public/data/ 2>/dev/null || echo "No root json files"
           cp data/output/*.json frontend/public/data/output/ 2>/dev/null || echo "No output json files"
+          mkdir -p frontend/public/data/evolution_case_detail
+          cp -r data/output/evolution_case_detail/. frontend/public/data/evolution_case_detail/ 2>/dev/null || echo "No evolution case detail files"
           cp data/recent.jsonl frontend/public/data/ 2>/dev/null || echo "No recent file"
           cp -r data/weekly/. frontend/public/data/weekly/ 2>/dev/null || echo "No weekly files"
           cp -r data/analysis/daily/. frontend/public/data/analysis/daily/ 2>/dev/null || echo "No daily analysis files"
-          cp -r data/output/bertopic frontend/public/data/ 2>/dev/null || echo "No bertopic files"
-          cp -r data/output/hierarchy frontend/public/data/ 2>/dev/null || echo "No hierarchy files"
-          cp -r data/output/bertopic frontend/public/data/output/ 2>/dev/null || echo "No output bertopic files"
-          cp -r data/output/hierarchy frontend/public/data/output/ 2>/dev/null || echo "No output hierarchy files"
           mkdir -p frontend/public/data/output/evolution_graphs
           cp -r data/output/evolution_graphs/. frontend/public/data/output/evolution_graphs/ 2>/dev/null || echo "No evolution_graphs files"
-          ls -la frontend/public/data/
+          find frontend/public/data -maxdepth 3 -type f | sort
 
-      - name: Build
-        run: |
-          cd frontend
-          npm run build
+      - name: Build frontend
+        run: npm run build
+        working-directory: frontend
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

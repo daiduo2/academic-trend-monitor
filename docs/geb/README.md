@@ -45,7 +45,13 @@
 1. 按月对 arXiv 论文进行主题建模
 2. LLM 自动构建主题层次结构
 3. 时间切片和领域切片双视角展示
-4. 部署到 GitHub Pages
+4. 以纯静态文件方式部署到 GitHub Pages
+
+## 部署约束
+
+- 仓库只保留 GitHub Pages 发布 workflow
+- GitHub Actions 不再自动运行日更、周更或月度数据流程
+- 前端发布物来自仓库中已提交的静态 JSON / JSONL 文件
 
 ### 快速链接
 - [项目根目录](../../README.md)

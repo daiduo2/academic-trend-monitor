@@ -1,6 +1,6 @@
 # Academic Trend Monitor
 
-学术热点趋势分析仪表盘。这个项目围绕 arXiv 论文构建一个静态部署的数据产品：月度做主题建模与层级结构构建，周度做滚动趋势统计，日度做新论文打标与 RSS 订阅支持，并通过 PostgreSQL 主存储 + GitHub Pages 静态导出的方式发布。
+学术热点趋势分析仪表盘。这个项目围绕 arXiv 论文构建一个静态部署的数据产品：月度做主题建模与层级结构构建，周度做滚动趋势统计，日度做新论文打标与 RSS 订阅支持，并通过仓库内已提交的静态数据文件发布到 GitHub Pages。
 
 > GEB 文档入口：[`PROJECT.md`](PROJECT.md)、[`docs/geb/`](docs/geb/)
 
@@ -11,7 +11,7 @@
 1. 用 BERTopic + LLM 把连续多个月的 arXiv 论文组织成可浏览的层级主题体系。
 2. 用纯前端的方式展示趋势、支持 drill-down 浏览，并提供轻量 RSS 订阅能力。
 
-项目不引入常驻 API 服务。PostgreSQL 负责承接月度主题版本、日更标签和日报分析，前端继续消费本地或 GitHub Actions 导出的静态 JSON / JSONL 文件。
+项目不引入常驻 API 服务。前端默认直接消费仓库内已提交的静态 JSON / JSONL 文件；如果需要生成日更、周更或数据库导出数据，相关脚本在本地运行后再提交到仓库。
 
 ## 当前能力
 
@@ -202,7 +202,9 @@ npm run build
 make deploy
 ```
 
-`make deploy` 会先把 `data/output/`、`data/recent.jsonl`、`data/weekly/`、`data/analysis/daily/` 同步到 `frontend/public/data/`，再执行前端构建。静态资源推送后可由 GitHub Pages 发布。
+`make deploy` 会先把 `data/output/`、`data/recent.jsonl`、`data/weekly/`、`data/analysis/daily/` 同步到 `frontend/public/data/`，再执行前端构建。
+
+仓库当前只保留一个 GitHub Pages workflow：推送到 `main` 或手动触发后，GitHub Actions 只负责复制已提交的静态数据并构建前端，不再自动执行日更、周更、月度同步或数据库导出任务。
 
 ## 日更 / 周更工作流
 
