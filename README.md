@@ -1,376 +1,262 @@
-# Academic Trend Monitor
+<p align="center">
+  <a href="https://tashan.ac.cn" target="_blank" rel="noopener noreferrer">
+    <img src="docs/assets/tashan.svg" alt="他山 Logo" width="280" />
+  </a>
+</p>
 
-学术热点趋势分析仪表盘。这个项目围绕 arXiv 论文构建一个静态部署的数据产品：月度做主题建模与层级结构构建，周度做滚动趋势统计，日度做新论文打标与 RSS 订阅支持，并通过 PostgreSQL 主存储 + GitHub Pages 静态导出的方式发布。
+<p align="center">
+  <strong>学术趋势监测</strong><br>
+  <em>Academic Trend Monitor</em>
+</p>
 
-> GEB 文档入口：[`PROJECT.md`](PROJECT.md)、[`docs/geb/`](docs/geb/)
+<p align="center">
+  <a href="#项目简介">项目简介</a> •
+  <a href="#功能特性">功能特性</a> •
+  <a href="#快速开始">快速开始</a> •
+  <a href="#数据与可视化">数据与可视化</a> •
+  <a href="#部署">部署</a> •
+  <a href="#代码结构">代码结构</a> •
+  <a href="#生态位置">生态位置</a> •
+  <a href="README.en.md">English</a>
+</p>
 
-## 项目目标
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-这个仓库解决的是两个问题：
+围绕学术主题演化构建的静态趋势分析与可视化仪表盘。
 
-1. 用 BERTopic + LLM 把连续多个月的 arXiv 论文组织成可浏览的层级主题体系。
-2. 用纯前端的方式展示趋势、支持 drill-down 浏览，并提供轻量 RSS 订阅能力。
+---
 
-项目不引入常驻 API 服务。PostgreSQL 负责承接月度主题版本、日更标签和日报分析，前端继续消费本地或 GitHub Actions 导出的静态 JSON / JSONL 文件。
+## 项目简介
 
-## 当前能力
+「人—智能体混合数字世界」研究关心人类知识、智能体工具与数字表达之间如何形成可复查、可积累的协同系统。本项目对应其中的**学术知识观测层**：它把论文数据、主题建模、演化判断与交互式可视化组织成一个可部署的静态数据产品。没有这类观测层，学术热点只能停留在零散检索和主观印象；有了它，研究方向的热度、结构与相似关系可以被持续追踪和复查。
 
-- 月度主题建模：按月对 arXiv 数据做 BERTopic 建模。
-- 层级主题构建：在固定的 Layer 1-2 学科分类之上，生成动态 Layer 3+ 主题层级。
-- 跨月主题对齐：把不同月份的局部主题对齐成全局主题。
-- 领域热度分析：在某个学科 / 子类下 drill-down 浏览主题热度。
-- 时间趋势分析：查看单个主题或聚合主题的历史趋势。
-- RSS 订阅中心：按主题标签过滤最近论文并生成可下载的 feed。
-- 日更 / 周更脚本：支持最近论文更新和滚动 7 天趋势报告生成。
-- PostgreSQL 发布链路：支持把月度主题版本、日更标签和日报分析写入数据库。
-- 日报分析：支持调用 Claude Code / LLM 生成结构化热点解读，并导出到静态页面。
+本仓库最早以 arXiv 数据为基座，使用 BERTopic 与 LLM 构建月度主题、层级结构和跨月趋势；当前版本在保留原有两个 arXiv 仪表盘的基础上，补充了基于 OpenAlex 全量数学论文切片的两个可视化页面：文献点云图与领域热力图。
 
-## 架构概览
+**核心思想**
 
-### 数据侧
+- **静态优先**：所有前端数据均以 JSON / JSONL 静态文件发布，不依赖后端服务。
+- **双数据基座**：arXiv 用于时间序列和层级趋势，OpenAlex 用于更宽的论文空间与领域结构观察。
+- **可读可视化**：前端不只展示图表，还强调颜色区分、空间尺度、候选列表和影响力表达的 human-readable 体验。
 
-```text
-arXiv raw JSONL
-  -> BERTopic（月度局部主题）
-  -> hierarchy / alignment（全局主题与层级）
-  -> PostgreSQL（主题版本 / 标签 / 分析）
-  -> static outputs（JSON）
-  -> frontend/public/data
-  -> GitHub Pages
-```
+**适合以下场景与读者**
 
-### 展示侧
+- 研究者：观察数学和相关方向的主题变化、热点扩散与领域结构。
+- 数据产品设计者：参考静态学术数据产品的前端组织方式。
+- 工程师：复用 React + Vite + D3 / Three.js 的 GitHub Pages 部署模式。
 
-```text
-React + Vite + Recharts
-  -> 领域热度视图
-  -> 趋势追踪视图
-  -> RSS 订阅视图
-```
+---
 
-### 时间粒度分工
+## 功能特性
 
-- 月度：本地运行重型建模与主题对齐。
-- 周度：从 PostgreSQL 导出滚动 7 天趋势报告。
-- 日度：抓取新增论文、做 topic tagging，并生成日报分析。
+- **领域热度分析**：按 arXiv 学科与子类 drill-down 浏览主题层级、论文数和趋势变化。
+- **趋势追踪分析**：查看主题在不同月份中的热度变化和层级上下文。
+- **文献点云图**：基于 OpenAlex 数学论文标题嵌入，展示主题之间的语义相似度与局部论文分布。
+- **领域热力图**：用山峰地形表达 OpenAlex 主题影响力，让高影响力区域在高度和视觉权重上更直观。
+- **统一视觉系统**：四个页面保持独立路由，但共享深色仪表盘风格、指标卡、面板和导航语言。
+- **静态部署**：GitHub Actions 构建 `frontend/dist` 并发布到 GitHub Pages。
 
-## 目录结构
-
-```text
-academic-trend-monitor/
-├── config/                 # 配置与 prompt
-├── data/
-│   ├── raw/                # 原始 arXiv JSONL
-│   └── output/             # 月度建模输出
-├── docs/
-│   ├── geb/                # GEB 自指文档
-│   └── plans/              # 设计与实现计划
-├── frontend/               # React 前端
-├── pipeline/               # Python 数据流水线
-├── tests/                  # Python 测试
-├── Makefile
-└── requirements.txt
-```
-
-## 数据模型
-
-### 固定层级
-
-- Layer 1：学科，如 `cs`、`math`、`physics`
-- Layer 2：arXiv 子类，如 `cs.AI`、`math.OA`
-
-### 动态层级
-
-- Layer 3+：由 BERTopic + LLM 构建的粗主题 / 细主题层级
-- 每个全局 topic 会被放入唯一主路径
-- 树叶节点可能对应 1 个或多个全局 topic
-
-### 关键输出文件
-
-- `data/output/aligned_topics_hierarchy.json`
-  统一前端消费入口，包含结构、趋势、层级树。
-- `data/output/topics.json`
-  RSS / 日更 / 周更流程使用的压缩主题索引。
-- `data/recent.jsonl`
-  最近论文的压缩格式索引。
-- `data/weekly/*.json`
-  滚动 7 天趋势报告。
-- `data/analysis/daily/*.json`
-  每日结构化 LLM 分析结果。
-
-## 环境准备
-
-### 1. Python 依赖
-
-```bash
-make install
-```
-
-### 2. 前端依赖
-
-```bash
-make frontend-install
-```
-
-### 3. LLM 配置
-
-项目默认读取环境变量中的 `LLM_API_KEY`：
-
-```bash
-export LLM_API_KEY=your_deepseek_key
-```
-
-LLM 与主题建模相关参数见 [`config/settings.yaml`](config/settings.yaml)。
-
-如果使用和 `IssueLab` 一致的第三方 Claude / coding-plan 接法，额外需要：
-
-```bash
-export ANTHROPIC_AUTH_TOKEN=your_model_api_token
-export ANTHROPIC_BASE_URL=https://api.minimaxi.com/anthropic
-export ANTHROPIC_MODEL=MiniMax-M2.1
-npm install -g @anthropic-ai/claude-code
-```
-
-当前实现对齐 `IssueLab` 的变量约定：
-
-- `ANTHROPIC_AUTH_TOKEN`
-- `ANTHROPIC_BASE_URL`
-- `ANTHROPIC_MODEL`
-- `PAT_TOKEN`
-
-分析客户端会优先读取这组变量，并兼容映射到本地 SDK 运行环境；失败时再回退到 `CLAUDE_CODE_COMMAND` 或现有 API 客户端。
-
-### 4. PostgreSQL / Neon 配置
-
-推荐直接使用 Neon 提供的 `DATABASE_URL`，保留其池化 host，并确保带有 `sslmode=require`。
-
-示例：
-
-```bash
-export DATABASE_URL='postgresql://user:password@ep-xxx-pooler.ap-southeast-1.aws.neon.tech/dbname?sslmode=require'
-```
-
-### 5. 原始数据
-
-把原始 arXiv 月度 JSONL 放到 `data/raw/`，文件名应为 `YYYY-MM.jsonl`。
-
-示例：
-
-```bash
-cp /path/to/arxiv-trend-monitor/data/raw/*.jsonl data/raw/
-```
+---
 
 ## 快速开始
 
-### 运行完整月度流水线
+### 1. 安装依赖
 
 ```bash
-make pipeline
+# 安装 Python 依赖
+make install
+
+# 安装前端依赖
+make frontend-install
 ```
 
-这个命令按顺序执行：
-
-1. `pipeline/01_bertopic.py`
-2. `pipeline/02_hierarchy.py`
-3. `pipeline/03_alignment.py`
-
-输出写入 `data/output/`。
-
-### 启动本地前端
+### 2. 启动前端
 
 ```bash
 cd frontend
 npm run dev
 ```
 
-默认 Vite 路径基于 GitHub Pages 子路径配置，开发时访问形如：
+默认访问地址：
 
 ```text
-http://127.0.0.1:4173/academic-trend-monitor/
+http://localhost:5173/academic-trend-monitor/
 ```
 
-### 构建前端
+### 3. 运行测试
+
+```bash
+# Python 测试
+make test
+
+# 前端测试
+cd frontend
+npm test
+```
+
+### 4. 构建前端
 
 ```bash
 cd frontend
 npm run build
 ```
 
-### 部署
+构建产物位于 `frontend/dist/`，其中 `404.html` 用于 GitHub Pages 的 SPA 路由 fallback。
+
+---
+
+## 数据与可视化
+
+### arXiv 数据链路
+
+```text
+arXiv raw JSONL
+  -> BERTopic 月度主题建模
+  -> LLM 层级结构构建
+  -> 跨月主题对齐
+  -> data/output/*.json
+  -> frontend/public/data
+  -> GitHub Pages
+```
+
+### OpenAlex 可视化链路
+
+```text
+OpenAlex works
+  -> 数学论文切片
+  -> 标题嵌入与主题结构
+  -> 文献点云 bundle / 主题山峰地形 bundle
+  -> data/output/openalex_full_paper_*
+  -> frontend/public/data/output
+  -> GitHub Pages
+```
+
+### 当前四个主页面
+
+| 页面 | 路由 | 数据基座 | 说明 |
+|------|------|----------|------|
+| 领域热度分析 | `/` | arXiv | 按学科层级查看主题热度 |
+| 趋势追踪分析 | `/trends` | arXiv | 查看主题跨月变化 |
+| 文献点云图 | `/openalex-paper-cloud` | OpenAlex | 查看论文点云与主题相似度 |
+| 领域热力图 | `/openalex-field-heat` | OpenAlex | 查看主题山峰地形与领域影响力 |
+
+---
+
+## 部署
+
+本仓库使用 GitHub Actions 发布 GitHub Pages。部署工作流位于 `.github/workflows/deploy.yml`。
+
+### 本地准备部署产物
 
 ```bash
 make deploy
 ```
 
-`make deploy` 会先把 `data/output/`、`data/recent.jsonl`、`data/weekly/`、`data/analysis/daily/` 同步到 `frontend/public/data/`，再执行前端构建。静态资源推送后可由 GitHub Pages 发布。
+该命令会把 `data/output/` 中的 arXiv 与 OpenAlex 静态数据复制到 `frontend/public/data/`，然后执行前端构建。
 
-## 日更 / 周更工作流
-
-### 日更：抓取并打标最近论文
+### GitHub Pages 自动发布
 
 ```bash
-python -m pipeline.daily_fetch_and_tag
-python -m pipeline.export_recent_static
+git push origin main
 ```
 
-内部步骤：
+当 `main` 更新后，GitHub Actions 会：
 
-1. 从 arXiv 抓取最近论文
-2. 使用 topic index 打标签
-3. 写入 PostgreSQL
-4. 导出 `data/recent.jsonl`
+1. 安装前端依赖。
+2. 复制静态数据到 `frontend/public/data/`。
+3. 运行 `npm run build`。
+4. 上传 `frontend/dist`。
+5. 发布到 GitHub Pages。
 
-### 周更：生成滚动 7 天趋势报告
-
-```bash
-python -m pipeline.export_weekly_static
-```
-
-输出格式为：
+线上入口：
 
 ```text
-data/weekly/YYYY-MM-DD.json
+https://daiduo2.github.io/academic-trend-monitor/
 ```
 
-### 主题索引构建
+---
 
-如果要支持日更打标，需要先有 topic index：
-
-```bash
-python pipeline/build_topic_index.py
-```
-
-当前仓库默认将 topic index 固定发布到同一路径，并由日更任务直接下载：
+## 代码结构
 
 ```text
-https://raw.githubusercontent.com/daiduo2/academic-trend-monitor/main/data/output/topic_index
+academic-trend-monitor/
+├── .github/workflows/          # GitHub Actions，包含 Pages 部署流程
+├── config/                     # Topic modeling 与 LLM prompt 配置
+├── data/
+│   ├── raw/                    # 原始数据，本地生成或下载
+│   └── output/                 # 前端消费的静态 JSON / JSONL 输出
+├── docs/
+│   ├── assets/                 # README 与文档静态资产
+│   ├── geb/                    # GEB 自指文档
+│   ├── plans/                  # 设计、实现与运行记录
+│   └── superpowers/            # 本轮前端设计与实施计划
+├── frontend/                   # React + Vite 前端
+│   ├── public/                 # 构建前复制进入的静态数据目录
+│   └── src/
+│       ├── components/         # 通用组件与 OpenAlex 可视化组件
+│       ├── hooks/              # 静态数据加载 hooks
+│       ├── utils/              # 数据归一化与场景布局算法
+│       └── views/              # 页面级视图
+├── pipeline/                   # arXiv / OpenAlex 数据处理脚本
+├── tests/                      # Python 数据流水线测试
+├── Makefile                    # 常用开发、测试、部署命令
+├── README.md                   # 中文说明
+└── README.en.md                # English README
 ```
 
-也就是每月更新时直接覆盖：
+---
 
-- `data/output/topic_index.faiss`
-- `data/output/topic_index.json`
+## 文档
 
-### 月度发布到 PostgreSQL
+| 文档 | 说明 |
+|------|------|
+| [`PROJECT.md`](PROJECT.md) | 项目更高层的定位说明 |
+| [`docs/geb/`](docs/geb/) | GEB 自指文档入口 |
+| [`docs/plans/`](docs/plans/) | 数据流水线、OpenAlex 迁移与可视化设计记录 |
+| [`docs/superpowers/plans/2026-04-28-github-pages-openalex-deploy.md`](docs/superpowers/plans/2026-04-28-github-pages-openalex-deploy.md) | 本次 Pages 部署计划 |
+| [`frontend/src/views/`](frontend/src/views/) | 四个主要页面入口 |
 
-```bash
-make db-init
-python -m pipeline.publish_topics_to_db \
-  --topics-tree data/output/topics_tree.json \
-  --hierarchy data/output/aligned_topics_hierarchy.json
+---
+
+## 生态位置
+
+本项目是「人—智能体混合数字世界」大项目中的学术知识观测与可视化节点。
+
+```text
+人—智能体混合数字世界
+├── 理论与框架层
+├── 智能体协作与任务执行层
+├── 学术知识观测层
+│   └── Academic Trend Monitor（本仓库）
+└── 面向用户的知识产品层
 ```
 
-### 日报分析
+### 相关仓库
 
-```bash
-python -m pipeline.daily_generate_analysis
-python -m pipeline.export_analysis_static
-```
+| 仓库 | 定位 | 链接 |
+|------|------|------|
+| Academic Trend Monitor | 学术趋势监测与可视化 | 当前页面 |
+| Tashan 相关项目 | 大项目生态入口 | [https://tashan.ac.cn](https://tashan.ac.cn) |
 
-默认优先读取 `ANTHROPIC_AUTH_TOKEN / ANTHROPIC_BASE_URL / ANTHROPIC_MODEL` 调用 Anthropic-compatible Claude 提供方；若 `claude-agent-sdk` 和 Claude CLI 都可用，则优先走 SDK。
+---
 
-## 前端页面说明
+## 贡献
 
-### 领域热度分析
+建议遵循以下流程：
 
-- 入口：`/`
-- 作用：按学科 / 子类浏览主题树
-- 特性：支持 Layer 3/4 drill-down、面包屑、详情弹窗
+1. 从 `main` 创建特性分支，例如 `feature/openalex-visualization`。
+2. 保持提交信息符合 `<类型>(<范围>): <简短描述>` 格式。
+3. 前端改动至少运行相关 Vitest 测试与 `npm run build`。
+4. 数据流水线改动至少运行相关 Python 测试。
+5. 通过 PR 合并到 `main` 后触发 GitHub Pages 自动部署。
 
-### 趋势追踪分析
+---
 
-- 入口：`/trends`
-- 作用：查看单个全局 topic 或聚合主题的历史趋势
-- 特性：支持从领域视图直接跳转并恢复上下文
+## 更新日志
 
-### RSS 订阅
+当前仓库仍处于快速演进阶段。重要变更记录在 `docs/plans/` 与后续 `CHANGELOG.md` 中维护。
 
-- 入口：`/rss`
-- 作用：按 topic tag 过滤最近论文并生成本地可下载 feed
-- 特性：支持从 URL 恢复订阅参数、展示滚动趋势摘要
+---
 
-### 日报分析
+## 许可证
 
-- 入口：`/analysis`
-- 作用：展示每日生成的结构化热点分析、代表论文和关键信号
-- 特性：消费 `data/analysis/daily/*.json`，不依赖在线 API
-
-## 常用命令
-
-| 命令 | 说明 |
-| --- | --- |
-| `make install` | 安装 Python 依赖 |
-| `make frontend-install` | 安装前端依赖 |
-| `make test` | 运行 Python 测试 |
-| `make db-init` | 初始化 PostgreSQL schema |
-| `make pipeline` | 运行月度数据流水线 |
-| `make publish-topics` | 发布月度主题版本到 PostgreSQL |
-| `make daily-tag` | 抓取并打标新论文到 PostgreSQL |
-| `make daily-analysis` | 生成每日结构化分析 |
-| `make export-static` | 从 PostgreSQL 导出静态文件 |
-| `make deploy` | 构建前端并准备部署 |
-| `make clean` | 清理生成物 |
-| `cd frontend && npm test` | 运行前端测试 |
-| `cd frontend && npm run build` | 构建前端 |
-
-## 配置说明
-
-核心配置文件：
-
-- [`config/settings.yaml`](config/settings.yaml)
-  包含 arXiv 分类、BERTopic、LLM、流水线参数。
-- `config/prompts.yaml`
-  包含层级构建与语义对齐相关 prompt。
-
-其中比较关键的配置项：
-
-- `topic_modeling.min_topic_size`
-- `topic_modeling.embedding_model`
-- `llm.provider`
-- `llm.model`
-- `pipeline.alignment.similarity_threshold`
-- `pipeline.tagging.score_threshold`
-- `database.topic_index_path`
-- `analysis.command`
-
-## 测试与校验
-
-### Python
-
-```bash
-make test
-```
-
-### Frontend
-
-```bash
-cd frontend
-npm test
-```
-
-### 推荐的提交前检查
-
-```bash
-make test
-cd frontend && npm test
-cd frontend && npm run build
-```
-
-## 已知约束
-
-- 项目当前依赖静态文件分发，不提供在线后端 API。
-- 日更抓取依赖本地 Python 环境与外部网络可用性。
-- `arxiv` / `requests` 在某些 macOS Python 环境下会出现 LibreSSL 兼容告警；当前代码会输出详细错误日志并在失败时返回空结果，避免污染 daily pipeline。
-- 前端构建产物较大，Vite 可能提示 chunk size warning，但不影响功能。
-
-## 文档与设计记录
-
-如果你要理解这个项目为什么会长成现在这样，优先看这些文档：
-
-- [`docs/plans/2026-03-04-design.md`](docs/plans/2026-03-04-design.md)
-- [`docs/plans/2026-03-06-drill-down-dashboard-design.md`](docs/plans/2026-03-06-drill-down-dashboard-design.md)
-- [`docs/plans/2026-03-07-multi-timeframe-trend-rss-design.md`](docs/plans/2026-03-07-multi-timeframe-trend-rss-design.md)
-
-## License
-
-MIT
+本项目采用 [MIT License](https://opensource.org/licenses/MIT)。

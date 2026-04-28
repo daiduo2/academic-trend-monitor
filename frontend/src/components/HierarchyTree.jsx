@@ -14,29 +14,29 @@ function TreeNode({ node, topics, level = 0 }) {
   return (
     <div className={level > 0 ? "ml-4" : ""}>
       <div
-        className="flex items-center py-2 cursor-pointer hover:bg-gray-50 rounded px-2"
+        className="flex items-center py-2 cursor-pointer hover:bg-slate-900/80 rounded px-2 transition"
         onClick={() => hasChildren && setExpanded(!expanded)}
       >
         {hasChildren && (
-          <span className="mr-2 text-gray-400 w-4">
+          <span className="mr-2 text-slate-500 w-4">
             {expanded ? '▼' : '▶'}
           </span>
         )}
         {!hasChildren && <span className="mr-2 w-4" />}
 
-        <span className={`font-medium ${level === 0 ? 'text-lg text-gray-900' : 'text-gray-700'}`}>
+        <span className={`font-medium ${level === 0 ? 'text-lg text-slate-100' : 'text-slate-300'}`}>
           {node.name}
         </span>
 
         {nodeTopics.length > 0 && (
-          <span className="ml-2 text-sm text-gray-500">
+          <span className="ml-2 text-sm text-slate-500">
             ({nodeTopics.length}主题, {totalPapers}篇)
           </span>
         )}
       </div>
 
       {expanded && hasChildren && (
-        <div className="border-l-2 border-gray-200 ml-2">
+        <div className="border-l-2 border-slate-800 ml-2">
           {node.children.map((child, idx) => (
             <TreeNode key={idx} node={child} topics={topics} level={level + 1} />
           ))}
@@ -49,15 +49,15 @@ function TreeNode({ node, topics, level = 0 }) {
 export default function HierarchyTree({ hierarchy, topics }) {
   if (!hierarchy || !hierarchy.tree) {
     return (
-      <div className="text-gray-500 text-center py-8">
+      <div className="text-slate-500 text-center py-8">
         暂无层次结构数据
       </div>
     );
   }
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4">
-      <h3 className="text-lg font-semibold text-gray-900 mb-4">研究主题层次结构</h3>
+    <div className="rounded-[24px] border border-slate-800 bg-slate-950/88 p-5 text-slate-100 shadow-[0_18px_52px_rgba(2,6,23,0.28)]">
+      <h3 className="text-base font-semibold text-white mb-4">研究主题层次结构</h3>
       <div className="max-h-[500px] overflow-y-auto">
         <TreeNode node={hierarchy.tree} topics={topics} level={0} />
       </div>

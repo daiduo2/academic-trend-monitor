@@ -6,6 +6,11 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 import HierarchyTree from '../components/HierarchyTree';
 import BreadcrumbNav from '../components/BreadcrumbNav';
 import TopicDetailModal from '../components/TopicDetailModal';
+import {
+  DashboardPanel,
+  DashboardSelect,
+  DashboardShell,
+} from '../components/dashboard/DashboardShell';
 import { getNodesAtDepth, findNodeByPath, enrichTreeWithPaperCounts } from '../utils/hierarchyUtils';
 import { resolveHierarchyNodeDetail } from '../utils/topicResolution';
 
@@ -122,6 +127,10 @@ export default function DomainDashboard() {
       index: index
     }));
   }, [currentLevelNodes]);
+  const currentPaperTotal = currentLevelNodes.reduce((sum, n) => sum + (n.paper_count || 0), 0);
+  const averagePapersPerTopic = currentLevelNodes.length > 0
+    ? Math.round(currentPaperTotal / currentLevelNodes.length)
+    : 0;
 
   // Handle chart bar click - drill down or show modal
   const handleBarClick = (data) => {
@@ -150,132 +159,93 @@ export default function DomainDashboard() {
   // Loading state - use conditional rendering instead of early return
   if (loading) {
     return (
-      <div className="flex items-center justify-center h-64">
-        <div className="text-gray-500">加载中...</div>
-      </div>
+      <DashboardPanel className="flex h-64 items-center justify-center text-slate-400">
+        加载中...
+      </DashboardPanel>
     );
   }
 
   // Error state - use conditional rendering instead of early return
   if (error) {
     return (
-      <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
-        <p className="text-red-600">加载失败: {error}</p>
-      </div>
+      <DashboardPanel className="border-rose-500/40 bg-rose-950/30 text-rose-200">
+        加载失败: {error}
+      </DashboardPanel>
     );
   }
 
   return (
-    <div className="space-y-6">
-      {/* Header */}
-      <div>
-        <h2 className="text-2xl font-bold text-gray-900">领域热度分析</h2>
-        <p className="text-gray-500">选择月份和领域，查看该细分领域下的研究主题热度对比</p>
-      </div>
-
+    <DashboardShell
+      eyebrow="arXiv · domain heat"
+      title="领域热度分析"
+      description="选择月份和领域，查看该细分领域下的研究主题热度对比。"
+      metrics={[
+        { label: drillPath.length === 0 ? 'Layer 3 主题数' : '子主题数', value: currentLevelNodes.length.toLocaleString(), tone: 'sky' },
+        { label: '论文总数', value: currentPaperTotal.toLocaleString(), tone: 'emerald' },
+        { label: '平均每主题论文', value: averagePapersPerTopic.toLocaleString(), tone: 'violet' },
+      ]}
+    >
+      <div className="space-y-5">
       {/* Controls */}
-      <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+      <DashboardPanel title="筛选条件" description="按时间、学科和 arXiv 子类切换主题热度切片。">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">月份</label>
-            <select
-              value={selectedPeriod}
-              onChange={(e) => setSelectedPeriod(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              {data.periods?.map(p => (
-                <option key={p} value={p}>{p}</option>
-              ))}
-            </select>
-          </div>
+          <DashboardSelect
+            label="月份"
+            value={selectedPeriod}
+            onChange={(e) => setSelectedPeriod(e.target.value)}
+            options={(data.periods || []).map(p => ({ label: p, value: p }))}
+          />
 
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">学科 (Layer 1)</label>
-            <select
-              value={selectedLayer1}
-              onChange={(e) => {
-                setSelectedLayer1(e.target.value);
-                handleLayerChange();
-              }}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              {layer1Options.map(opt => (
-                <option key={opt.value} value={opt.value}>{opt.label}</option>
-              ))}
-            </select>
-          </div>
+          <DashboardSelect
+            label="学科 (Layer 1)"
+            value={selectedLayer1}
+            onChange={(e) => {
+              setSelectedLayer1(e.target.value);
+              handleLayerChange();
+            }}
+            options={layer1Options}
+          />
 
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">子类 (Layer 2)</label>
-            <select
-              value={selectedLayer2}
-              onChange={(e) => {
-                setSelectedLayer2(e.target.value);
-                handleLayerChange();
-              }}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              {layer2Options.map(opt => (
-                <option key={opt.value} value={opt.value}>{opt.label}</option>
-              ))}
-            </select>
-          </div>
+          <DashboardSelect
+            label="子类 (Layer 2)"
+            value={selectedLayer2}
+            onChange={(e) => {
+              setSelectedLayer2(e.target.value);
+              handleLayerChange();
+            }}
+            options={layer2Options}
+          />
         </div>
-      </div>
-
-      {/* Stats - based on current drill level */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-          <p className="text-sm text-gray-500">{drillPath.length === 0 ? 'Layer 3 主题数' : '子主题数'}</p>
-          <p className="text-2xl font-bold text-blue-600">{currentLevelNodes.length}</p>
-        </div>
-        <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-          <p className="text-sm text-gray-500">论文总数</p>
-          <p className="text-2xl font-bold text-green-600">
-            {currentLevelNodes.reduce((sum, n) => sum + (n.paper_count || 0), 0)}
-          </p>
-        </div>
-        <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-          <p className="text-sm text-gray-500">平均每主题论文</p>
-          <p className="text-2xl font-bold text-purple-600">
-            {currentLevelNodes.length > 0
-              ? Math.round(currentLevelNodes.reduce((sum, n) => sum + (n.paper_count || 0), 0) / currentLevelNodes.length)
-              : 0}
-          </p>
-        </div>
-      </div>
+      </DashboardPanel>
 
       {/* Breadcrumb */}
       {drillPath.length > 0 && (
-        <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+        <DashboardPanel className="p-4">
           <BreadcrumbNav
             path={[TAXONOMY.getLayer2Display(selectedLayer1, selectedLayer2), ...drillPath]}
             onNavigate={(level) => handleBreadcrumbNavigate(level)}
           />
-        </div>
+        </DashboardPanel>
       )}
 
       {/* Chart */}
-      <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">
-          {drillPath.length === 0 ? 'Layer 3 主题热度' : `${drillPath[drillPath.length - 1]} 子主题热度`}
-        </h3>
+      <DashboardPanel title={drillPath.length === 0 ? 'Layer 3 主题热度' : `${drillPath[drillPath.length - 1]} 子主题热度`}>
         {chartData.length > 0 ? (
           <div className="h-96">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={chartData} layout="vertical" margin={{ left: 20, right: 30, top: 10, bottom: 10 }}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis type="number" />
-                <YAxis dataKey="name" type="category" width={120} tick={{ fontSize: 12 }} />
+                <CartesianGrid strokeDasharray="3 3" stroke="rgba(148, 163, 184, 0.16)" />
+                <XAxis type="number" tick={{ fill: '#94a3b8', fontSize: 12 }} axisLine={{ stroke: '#334155' }} tickLine={{ stroke: '#334155' }} />
+                <YAxis dataKey="name" type="category" width={120} tick={{ fill: '#cbd5e1', fontSize: 12 }} axisLine={{ stroke: '#334155' }} tickLine={{ stroke: '#334155' }} />
                 <Tooltip
                   content={({ active, payload }) => {
                     if (active && payload && payload.length) {
                       const data = payload[0].payload;
                       return (
-                        <div className="bg-white p-3 border border-gray-200 rounded shadow-lg">
-                          <p className="font-medium text-gray-900">{data.fullName}</p>
-                          <p className="text-blue-600">论文数: {data.count}</p>
-                          {data.hasChildren && <p className="text-xs text-gray-500">点击查看子主题</p>}
+                        <div className="rounded-2xl border border-slate-700 bg-slate-950/95 p-3 shadow-xl">
+                          <p className="font-medium text-slate-100">{data.fullName}</p>
+                          <p className="text-sky-300">论文数: {data.count}</p>
+                          {data.hasChildren && <p className="text-xs text-slate-500">点击查看子主题</p>}
                         </div>
                       );
                     }
@@ -286,7 +256,7 @@ export default function DomainDashboard() {
                   {chartData.map((entry, index) => (
                     <Cell
                       key={`cell-${index}`}
-                      fill={entry.hasChildren ? `hsl(${210 + index * 5}, 70%, ${50 + index * 2}%)` : '#9ca3af'}
+                      fill={entry.hasChildren ? `hsl(${198 + index * 17}, 82%, ${58 + (index % 4) * 3}%)` : '#64748b'}
                       cursor={entry.hasChildren ? 'pointer' : 'default'}
                     />
                   ))}
@@ -295,46 +265,43 @@ export default function DomainDashboard() {
             </ResponsiveContainer>
           </div>
         ) : (
-          <div className="flex items-center justify-center h-64 text-gray-500">
+          <div className="flex items-center justify-center h-64 text-slate-500">
             该领域暂无数据
           </div>
         )}
-      </div>
+      </DashboardPanel>
 
       {/* Hierarchy Tree */}
       {hierarchy && <HierarchyTree hierarchy={hierarchy} topics={topics} />}
 
       {/* Topic List */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-        <div className="px-6 py-4 border-b border-gray-200">
-          <h3 className="text-lg font-semibold text-gray-900">主题详情</h3>
-        </div>
-        <div className="divide-y divide-gray-200 max-h-96 overflow-y-auto">
+      <DashboardPanel title="主题详情" className="overflow-hidden p-0">
+        <div className="divide-y divide-slate-800 max-h-96 overflow-y-auto">
           {sortedTopics.map(topic => (
-            <div key={topic.id} className="px-6 py-4 hover:bg-gray-50">
+            <div key={topic.id} className="px-6 py-4 transition hover:bg-slate-900/80">
               <div className="flex items-center justify-between">
                 <div className="flex-1">
-                  <h4 className="font-medium text-gray-900">{topic.name}</h4>
+                  <h4 className="font-medium text-slate-100">{topic.name}</h4>
                   {topic.hierarchy_path && topic.hierarchy_path.length > 0 && (
-                    <p className="text-xs text-indigo-600 mt-1">
+                    <p className="text-xs text-sky-300 mt-1">
                       {topic.hierarchy_path.join(' > ')}
                     </p>
                   )}
-                  <p className="text-sm text-gray-500 mt-1">
+                  <p className="text-sm text-slate-500 mt-1">
                     关键词: {topic.keywords?.slice(0, 5).join(', ')}
                   </p>
                 </div>
                 <div className="text-right">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-sky-400/10 text-sky-200 ring-1 ring-sky-300/20">
                     {topic.paper_count} 篇
                   </span>
-                  <p className="text-xs text-gray-400 mt-1">活跃 {topic.active_months} 个月</p>
+                  <p className="text-xs text-slate-500 mt-1">活跃 {topic.active_months} 个月</p>
                 </div>
               </div>
             </div>
           ))}
         </div>
-      </div>
+      </DashboardPanel>
 
       {/* Topic Detail Modal */}
       {selectedTopic && (
@@ -363,6 +330,7 @@ export default function DomainDashboard() {
           }}
         />
       )}
-    </div>
+      </div>
+    </DashboardShell>
   );
 }

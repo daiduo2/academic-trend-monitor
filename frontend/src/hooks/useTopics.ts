@@ -8,9 +8,15 @@ export function useTopics() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    // Use relative path for static deployment compatibility
-    fetch('./data/output/topics.json')
-      .then(res => res.json())
+    const basePath = import.meta.env.BASE_URL || '/';
+
+    fetch(`${basePath}data/output/topics.json`)
+      .then(res => {
+        if (!res.ok) {
+          throw new Error(`Failed to load topics index: ${res.status} ${res.statusText}`);
+        }
+        return res.json();
+      })
       .then((data: TopicIndex) => {
         setTopics(data);
         setLoading(false);

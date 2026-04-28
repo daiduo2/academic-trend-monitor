@@ -1,15 +1,5 @@
 import { useState, useEffect } from 'react';
-
-async function fetchJsonWithFallback(paths) {
-  for (const path of paths) {
-    const response = await fetch(path);
-    if (response.ok) {
-      return response.json();
-    }
-  }
-
-  throw new Error('Failed to load data');
-}
+import { fetchJsonWithFallback } from '../utils/jsonFetch';
 
 export function useData() {
   const [data, setData] = useState(null);

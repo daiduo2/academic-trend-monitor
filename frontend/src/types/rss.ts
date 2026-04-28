@@ -47,31 +47,6 @@ export interface WeeklyReport {
   trends: WeeklyTrend[];
 }
 
-export interface DailyAnalysisHighlight {
-  topic_id?: string;
-  topic_name?: string;
-  summary?: string;
-  paper_count?: number;
-  change?: number;
-  arxiv_id?: string;
-  title?: string;
-  reason?: string;
-  kind?: 'emerging' | 'cooling' | 'cross_disciplinary' | 'drift';
-  label?: string;
-}
-
-export interface DailyAnalysis {
-  date: string;
-  title: string;
-  summary: string;
-  key_findings: string[];
-  risks: string[];
-  top_rising_topics: DailyAnalysisHighlight[];
-  notable_papers: DailyAnalysisHighlight[];
-  signals: DailyAnalysisHighlight[];
-  model_meta: Record<string, string>;
-}
-
 export interface UserPreferences {
   subscribedTags: string[];
   rssFormat: 'atom' | 'json';

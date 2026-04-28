@@ -8,9 +8,15 @@ export function useRecentPapers() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    // Use relative path for static deployment compatibility
-    fetch('./data/recent.jsonl')
-      .then(res => res.text())
+    const basePath = import.meta.env.BASE_URL || '/';
+
+    fetch(`${basePath}data/recent.jsonl`)
+      .then(res => {
+        if (!res.ok) {
+          throw new Error(`Failed to load recent papers: ${res.status} ${res.statusText}`);
+        }
+        return res.text();
+      })
       .then(text => {
         const lines = text.trim().split('\n');
         const parsed = lines.map(line => JSON.parse(line));

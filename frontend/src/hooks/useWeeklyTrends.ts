@@ -20,10 +20,16 @@ export function useWeeklyTrends() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    const basePath = import.meta.env.BASE_URL || '/';
     const filename = getReportFilename();
-    // Use relative path for static deployment compatibility
-    fetch(`./data/weekly/${filename}.json`)
-      .then(res => res.json())
+
+    fetch(`${basePath}data/weekly/${filename}.json`)
+      .then(res => {
+        if (!res.ok) {
+          throw new Error(`Failed to load weekly report ${filename}: ${res.status} ${res.statusText}`);
+        }
+        return res.json();
+      })
       .then((data: WeeklyReport) => {
         setReport(data);
         setLoading(false);

@@ -2,6 +2,12 @@ import { useState, useMemo, useEffect } from 'react';
 import { useDomainData, getLayer1List, getLayer2List, getTopicsWithTrends } from '../hooks/useDomainData';
 import { TAXONOMY } from '../data/taxonomy';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Area, AreaChart } from 'recharts';
+import {
+  DashboardPanel,
+  DashboardSelect,
+  DashboardShell,
+  MetricCard,
+} from '../components/dashboard/DashboardShell';
 import { resolveGlobalTopicsDetail } from '../utils/topicResolution';
 
 export default function TimeDashboard() {
@@ -160,157 +166,128 @@ export default function TimeDashboard() {
   // Now conditional returns
   if (loading) {
     return (
-      <div className="flex items-center justify-center h-64">
-        <div className="text-gray-500">加载中...</div>
-      </div>
+      <DashboardPanel className="flex h-64 items-center justify-center text-slate-400">
+        加载中...
+      </DashboardPanel>
     );
   }
 
   if (error) {
     return (
-      <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
-        <p className="text-red-600">加载失败: {error}</p>
-      </div>
+      <DashboardPanel className="border-rose-500/40 bg-rose-950/30 text-rose-200">
+        加载失败: {error}
+      </DashboardPanel>
     );
   }
 
   return (
-    <div className="space-y-6">
-      {/* Header */}
-      <div>
-        <h2 className="text-2xl font-bold text-gray-900">趋势追踪分析</h2>
-        <p className="text-gray-500">选择研究主题，查看其在连续时间内的热度变化趋势</p>
-      </div>
-
+    <DashboardShell
+      eyebrow="arXiv · trend tracker"
+      title="趋势追踪分析"
+      description="选择研究主题，查看其在连续时间内的热度变化趋势。"
+      metrics={[
+        { label: '可选主题', value: sortedTopics.length.toLocaleString(), tone: 'sky' },
+        { label: '时间段', value: (data?.periods?.length || 0).toLocaleString(), tone: 'violet' },
+      ]}
+    >
+      <div className="space-y-5">
       {/* Controls */}
-      <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+      <DashboardPanel title="筛选条件" description="先选学科和子类，再选一个研究主题查看连续时间热度。">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">学科 (Layer 1)</label>
-            <select
-              value={selectedLayer1}
-              onChange={(e) => {
-                setSelectedLayer1(e.target.value);
-                setSelectedLayer2('');
-                setSelectedTopicId('');
-                setSelectedTopicIds([]);
-                setSelectedTopicLabel('');
-              }}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              {layer1Options.map(opt => (
-                <option key={opt.value} value={opt.value}>{opt.label}</option>
-              ))}
-            </select>
-          </div>
+          <DashboardSelect
+            label="学科 (Layer 1)"
+            value={selectedLayer1}
+            onChange={(e) => {
+              setSelectedLayer1(e.target.value);
+              setSelectedLayer2('');
+              setSelectedTopicId('');
+              setSelectedTopicIds([]);
+              setSelectedTopicLabel('');
+            }}
+            options={layer1Options}
+          />
 
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">子类 (Layer 2)</label>
-            <select
-              value={selectedLayer2}
-              onChange={(e) => {
-                setSelectedLayer2(e.target.value);
-                setSelectedTopicId('');
-                setSelectedTopicIds([]);
-                setSelectedTopicLabel('');
-              }}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              {layer2Options.map(opt => (
-                <option key={opt.value} value={opt.value}>{opt.label}</option>
-              ))}
-            </select>
-          </div>
+          <DashboardSelect
+            label="子类 (Layer 2)"
+            value={selectedLayer2}
+            onChange={(e) => {
+              setSelectedLayer2(e.target.value);
+              setSelectedTopicId('');
+              setSelectedTopicIds([]);
+              setSelectedTopicLabel('');
+            }}
+            options={layer2Options}
+          />
 
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">研究主题</label>
-            <select
-              value={selectedTopicId}
-              onChange={(e) => {
-                setSelectedTopicId(e.target.value);
-                setSelectedTopicIds([]);
-                setSelectedTopicLabel('');
-              }}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              <option value="">请选择主题</option>
-              {sortedTopics.map(topic => {
+          <DashboardSelect
+            label="研究主题"
+            value={selectedTopicId}
+            onChange={(e) => {
+              setSelectedTopicId(e.target.value);
+              setSelectedTopicIds([]);
+              setSelectedTopicLabel('');
+            }}
+            options={[
+              { label: '请选择主题', value: '' },
+              ...sortedTopics.map(topic => {
                 const total = topic.trend.reduce((sum, h) => sum + h.paper_count, 0);
-                return (
-                  <option key={topic.id} value={topic.id}>
-                    {topic.name} ({total}篇)
-                  </option>
-                );
-              })}
-            </select>
-          </div>
+                return {
+                  label: `${topic.name} (${total}篇)`,
+                  value: topic.id,
+                };
+              }),
+            ]}
+          />
         </div>
-      </div>
+      </DashboardPanel>
 
       {/* Topic Info */}
       {selectedTopic && (
-        <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-          <h3 className="text-lg font-semibold text-gray-900">{selectedTopic.name}</h3>
-          <p className="text-sm text-gray-500 mt-1">
+        <DashboardPanel>
+          <h3 className="text-lg font-semibold text-white">{selectedTopic.name}</h3>
+          <p className="text-sm text-slate-500 mt-1">
             关键词: {selectedTopic.keywords?.slice(0, 8).join(', ')}
           </p>
-        </div>
+        </DashboardPanel>
       )}
 
       {/* Trend Stats */}
       {trendStats && (
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-          <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-            <p className="text-sm text-gray-500">初期热度</p>
-            <p className="text-2xl font-bold text-blue-600">{trendStats.first}</p>
-          </div>
-          <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-            <p className="text-sm text-gray-500">最新热度</p>
-            <p className="text-2xl font-bold text-green-600">{trendStats.last}</p>
-          </div>
-          <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-            <p className="text-sm text-gray-500">峰值</p>
-            <p className="text-2xl font-bold text-purple-600">{trendStats.max}</p>
-          </div>
-          <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-            <p className="text-sm text-gray-500">平均值</p>
-            <p className="text-2xl font-bold text-orange-600">{trendStats.avg}</p>
-          </div>
-          <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-            <p className="text-sm text-gray-500">增长率</p>
-            <p className={`text-2xl font-bold ${parseFloat(trendStats.growth) >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-              {trendStats.growth > 0 ? '+' : ''}{trendStats.growth}%
-            </p>
-          </div>
+          <MetricCard label="初期热度" value={trendStats.first} tone="sky" />
+          <MetricCard label="最新热度" value={trendStats.last} tone="emerald" />
+          <MetricCard label="峰值" value={trendStats.max} tone="violet" />
+          <MetricCard label="平均值" value={trendStats.avg} tone="amber" />
+          <MetricCard
+            label="增长率"
+            value={`${trendStats.growth > 0 ? '+' : ''}${trendStats.growth}%`}
+            tone={parseFloat(trendStats.growth) >= 0 ? 'emerald' : 'rose'}
+          />
         </div>
       )}
 
       {/* Trend Chart */}
-      <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">
-          热度趋势变化
-          {selectedTopic && ` - ${selectedTopic.name}`}
-        </h3>
+      <DashboardPanel title={`热度趋势变化${selectedTopic ? ` - ${selectedTopic.name}` : ''}`}>
         {selectedTopic ? (
           <div className="h-80">
             <ResponsiveContainer width="100%" height="100%">
               <AreaChart data={trendChartData} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
                 <defs>
                   <linearGradient id="colorCount" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#3b82f6" stopOpacity={0.3}/>
-                    <stop offset="95%" stopColor="#3b82f6" stopOpacity={0}/>
+                    <stop offset="5%" stopColor="#38bdf8" stopOpacity={0.36}/>
+                    <stop offset="95%" stopColor="#38bdf8" stopOpacity={0}/>
                   </linearGradient>
                 </defs>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="period" tick={{ fontSize: 12 }} />
-                <YAxis />
+                <CartesianGrid strokeDasharray="3 3" stroke="rgba(148, 163, 184, 0.16)" />
+                <XAxis dataKey="period" tick={{ fill: '#94a3b8', fontSize: 12 }} axisLine={{ stroke: '#334155' }} tickLine={{ stroke: '#334155' }} />
+                <YAxis tick={{ fill: '#94a3b8', fontSize: 12 }} axisLine={{ stroke: '#334155' }} tickLine={{ stroke: '#334155' }} />
                 <Tooltip
                   content={({ active, payload, label }) => {
                     if (active && payload && payload.length) {
                       return (
-                        <div className="bg-white p-3 border border-gray-200 rounded shadow-lg">
-                          <p className="font-medium text-gray-900">{label}</p>
-                          <p className="text-blue-600">论文数: {payload[0].value}</p>
+                        <div className="rounded-2xl border border-slate-700 bg-slate-950/95 p-3 shadow-xl">
+                          <p className="font-medium text-slate-100">{label}</p>
+                          <p className="text-sky-300">论文数: {payload[0].value}</p>
                         </div>
                       );
                     }
@@ -320,7 +297,7 @@ export default function TimeDashboard() {
                 <Area
                   type="monotone"
                   dataKey="count"
-                  stroke="#3b82f6"
+                  stroke="#38bdf8"
                   strokeWidth={3}
                   fillOpacity={1}
                   fill="url(#colorCount)"
@@ -329,25 +306,30 @@ export default function TimeDashboard() {
             </ResponsiveContainer>
           </div>
         ) : (
-          <div className="flex items-center justify-center h-64 text-gray-500">
+          <div className="flex items-center justify-center h-64 text-slate-500">
             请选择一个研究主题查看趋势
           </div>
         )}
-      </div>
+      </DashboardPanel>
 
       {/* All Topics Trend Comparison */}
       {sortedTopics.length > 0 && (
-        <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">
-            该领域所有主题趋势对比
-          </h3>
+        <DashboardPanel title="该领域所有主题趋势对比">
           <div className="h-96">
             <ResponsiveContainer width="100%" height="100%">
               <LineChart margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="period" type="category" allowDuplicatedCategory={false} tick={{ fontSize: 12 }} />
-                <YAxis />
-                <Tooltip />
+                <CartesianGrid strokeDasharray="3 3" stroke="rgba(148, 163, 184, 0.16)" />
+                <XAxis dataKey="period" type="category" allowDuplicatedCategory={false} tick={{ fill: '#94a3b8', fontSize: 12 }} axisLine={{ stroke: '#334155' }} tickLine={{ stroke: '#334155' }} />
+                <YAxis tick={{ fill: '#94a3b8', fontSize: 12 }} axisLine={{ stroke: '#334155' }} tickLine={{ stroke: '#334155' }} />
+                <Tooltip
+                  contentStyle={{
+                    background: 'rgba(2, 6, 23, 0.96)',
+                    border: '1px solid #334155',
+                    borderRadius: '14px',
+                    color: '#e2e8f0',
+                  }}
+                  labelStyle={{ color: '#f8fafc' }}
+                />
                 {sortedTopics.slice(0, 5).map((topic, index) => {
                   const chartData = data.periods.map(p => {
                     const historyItem = topic.trend.find(h => h.period === p);
@@ -357,7 +339,7 @@ export default function TimeDashboard() {
                     };
                   });
 
-                  const colors = ['#3b82f6', '#ef4444', '#10b981', '#f59e0b', '#8b5cf6'];
+                  const colors = ['#38bdf8', '#fb7185', '#34d399', '#f59e0b', '#a78bfa'];
 
                   return (
                     <Line
@@ -377,17 +359,18 @@ export default function TimeDashboard() {
           </div>
           <div className="mt-4 flex flex-wrap gap-4">
             {sortedTopics.slice(0, 5).map((topic, index) => {
-              const colors = ['bg-blue-500', 'bg-red-500', 'bg-green-500', 'bg-yellow-500', 'bg-purple-500'];
+              const colors = ['bg-sky-400', 'bg-rose-400', 'bg-emerald-400', 'bg-amber-400', 'bg-violet-400'];
               return (
                 <div key={topic.id} className="flex items-center gap-2">
                   <div className={`w-3 h-3 rounded-full ${colors[index % colors.length]}`} />
-                  <span className="text-sm text-gray-600">{topic.name}</span>
+                  <span className="text-sm text-slate-400">{topic.name}</span>
                 </div>
               );
             })}
           </div>
-        </div>
+        </DashboardPanel>
       )}
-    </div>
+      </div>
+    </DashboardShell>
   );
 }
